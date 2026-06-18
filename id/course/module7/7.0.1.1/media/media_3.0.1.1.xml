@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[]]></text>
+	</component>
+	   
+	<component id="ID_txt01">
+		<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan tujuan dari protokol routing dinamis.</li><li>Jelaskan penggunaan perutean dinamis versus perutean statis.</li><li>Jelaskan bagaimana protokol perutean dinamis berbagi informasi rute dan mencapai konvergensi.</li><li>Bandingkan berbagai kategori protokol perutean.</li><li>Jelaskan algoritma yang digunakan oleh protokol perutean vektor jarak untuk menentukan jalur terbaik.</li><li>Identifikasi jenis protokol perutean vektor jarak.</li><li>Konfigurasikan protokol perutean RIP.</li><li>Konfigurasikan protokol perutean RIPng.</li><li>Jelaskan algoritma yang digunakan oleh protokol routing link-state untuk menentukan jalur terbaik.</li><li>Jelaskan bagaimana protokol perutean link-state menggunakan informasi yang dikirim dalam pembaruan link-state.</li><li>Jelaskan keuntungan dan kerugian menggunakan protokol routing link-state.</li><li>Tentukan sumber rute, jarak administratif, dan metrik untuk rute tertentu.</li><li>Jelaskan konsep hubungan orang tua/anak dalam tabel perutean yang dibangun secara dinamis.</li><li>Bandingkan proses pencarian rute tanpa kelas IPv4 dan proses pencarian IPv6.</li><li>Analisis tabel routing untuk menentukan rute mana yang akan digunakan untuk meneruskan paket.</li></textformat><br/>]]></text>
+	</component>
+	
+</textcomponents>

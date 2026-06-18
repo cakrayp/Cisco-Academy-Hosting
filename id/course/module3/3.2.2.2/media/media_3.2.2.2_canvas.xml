@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+			<element type="TEXT" subType="TABLE" compId="ID_table01" x="8" y="50" width="429.8" height="275" />
+			<element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+ 		</slide>
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title" />		
+			<element type="ROUTER" textId="ID_s2_txt01" x="7.85" y="50" width="424.55" height="310.45"/>
+		</slide>
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s3_title" />		
+			<element type="ROUTER" textId="ID_s3_txt01" x="7.85" y="50" width="424.55" height="228.45"/>
+		</slide>	
+		
+		
+</slide>
+	<text id="ID_s2_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="407"> <tr> <td>S1(konfigurasi)#<strong>antarmuka f0/1</strong></td> </tr> <tr> <td bgcolor="#FACCA8">S1(config-jika)#<strong>tidak ada trunk switchport yang mengizinkan vlan</strong></td> </tr> <tr> <td bgcolor="#FACCA8">S1(config-jika)#<strong>tidak ada vlan asli trunk switchport</strong></td> </tr> <tr> <td>S1(config-jika)#<strong>akhir</strong></td> </tr> <tr> <td>S1 #<strong>tampilkan antarmuka switchport f0/1</strong></td> </tr> <tr> <td>Nama: Fa0/1</td> </tr> <tr> <td>Switchport: Diaktifkan</td> </tr> <tr> <td>Modus Administratif: trunk</td> </tr> <tr> <td>Mode Operasional: bagasi</td> </tr> <tr> <td>Enkapsulasi Trunking Administratif: dot1q</td> </tr> <tr> <td>Enkapsulasi Trunking Operasional: dot1q</td> </tr> <tr> <td>Negosiasi Trunking: Aktif</td> </tr> <tr> <td bgcolor="#FACCA8">Mode Akses VLAN: 1 (default)</td> </tr> <tr> <td>VLAN Mode Asli Trunking: 1 (default)</td> </tr> <tr> <td>Penandaan VLAN Asli Administratif: diaktifkan</td> </tr> <tr> <td>&lt;keluaran dihilangkan&gt;</td> </tr> <tr> <td>Pemetaan trunk vlan pribadi administratif: tidak ada</td> </tr> <tr> <td>Vlan pribadi operasional: tidak ada</td> </tr> <tr> <td bgcolor="#FACCA8">VLAN Trunking Diaktifkan: SEMUA</td> </tr> <tr> <td>Pemangkasan VLAN Diaktifkan: 2-1001</td> </tr> <tr> <td>&lt;keluaran dihilangkan&gt;</td> </tr></table>]]></text>
+
+<text id="ID_s3_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="407"> <tr> <td>S1(konfigurasi)#<strong>antarmuka f0/1</strong></td> </tr> <tr> <td bgcolor="#FACCA8">S1(config-jika)#<strong>akses mode switchport</strong></td> </tr> <tr> <td>S1(config-jika)#<strong>akhir</strong></td> </tr> <tr> <td>S1 #<strong>tampilkan antarmuka switchport f0/1</strong></td> </tr> <tr> <td>Nama: Fa0/1</td> </tr> <tr> <td>Switchport: Diaktifkan</td> </tr> <tr> <td bgcolor="#FACCA8">Mode Administratif: akses statis</td> </tr> <tr> <td>Mode Operasional: akses statis</td> </tr> <tr> <td>Enkapsulasi Trunking Administratif: dot1q</td> </tr> <tr> <td>Enkapsulasi Trunking Operasional: asli</td> </tr> <tr> <td>Negosiasi Trunking : Mati</td> </tr> <tr> <td>Mode Akses VLAN: 1 (default)</td> </tr> <tr> <td>VLAN Mode Asli Trunking: 1 (default)</td> </tr> <tr> <td>Penandaan VLAN Asli Administratif: diaktifkan</td> </tr> <tr> <td>&lt;keluaran dihilangkan&gt;</td> </tr></table>]]></text>
+
+</data>

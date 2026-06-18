@@ -1,0 +1,14 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Proses Perutean Link-State</b>]]></text>
+	</component>
+	
+	<component id="ID_bodyTitle01">
+		<text><![CDATA[<b>Proses Perutean Link-State</b>]]></text> 
+	</component>
+	
+	<component id="ID_bodyText01">
+		<text><![CDATA[<textformat blockindent="-14"><li>Setiap router mempelajari masing-masing jaringannya yang terhubung langsung.</li><li>Setiap router bertanggung jawab untuk "mengucapkan halo" kepada tetangganya di jaringan yang terhubung langsung.</li><li>Setiap router membangun Link-State Packet (LSP) yang berisi status setiap link yang terhubung langsung.</li><li>Setiap router membanjiri LSP ke semua tetangganya yang kemudian menyimpan semua LSP yang diterima dalam database.</li><li>Setiap router menggunakan database untuk membuat peta topologi lengkap dan menghitung jalur terbaik ke setiap jaringan tujuan.</li></textformat>]]></text> 
+	</component>
+
+</textcomponents>

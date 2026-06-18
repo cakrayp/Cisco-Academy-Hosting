@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.0.1.1 Pendahuluan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.0.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perkenalan</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>Setiap perangkat yang terhubung ke jaringan memerlukan alamat IP unik. Administrator jaringan menetapkan alamat IP statis ke router, server, printer, dan perangkat jaringan lainnya yang lokasinya (fisik dan logis) tidak mungkin berubah. Biasanya ini adalah perangkat yang menyediakan layanan kepada pengguna dan perangkat di jaringan; oleh karena itu, alamat yang diberikan kepada mereka harus tetap konstan. Selain itu, alamat statis memungkinkan administrator mengelola perangkat ini dari jarak jauh. Lebih mudah bagi administrator jaringan untuk mengakses perangkat ketika mereka dapat dengan mudah menentukan alamat IP-nya.</p>
+<p></p>
+<p>Namun, komputer dan pengguna dalam suatu organisasi sering berpindah lokasi, secara fisik dan logis. Mungkin sulit dan memakan waktu bagi administrator untuk menetapkan alamat IP baru setiap kali seorang karyawan berpindah. Selain itu, bagi karyawan lapangan yang bekerja dari lokasi terpencil, mengatur parameter jaringan yang benar secara manual dapat menjadi tantangan. Bahkan untuk klien desktop, penetapan alamat IP dan informasi pengalamatan lainnya secara manual menimbulkan beban administratif, terutama seiring dengan pertumbuhan jaringan.</p>
+<p></p>
+<p>Memperkenalkan server Dynamic Host Configuration Protocol (DHCP) ke jaringan lokal menyederhanakan penetapan alamat IP ke desktop dan perangkat seluler. Menggunakan server DHCP terpusat memungkinkan organisasi untuk mengelola semua penetapan alamat IP dinamis dari satu server. Praktik ini menjadikan pengelolaan alamat IP lebih efektif dan memastikan konsistensi di seluruh organisasi, termasuk kantor cabang.</p>
+<p></p>
+<p>DHCP tersedia untuk IPv4 (DHCPv4) dan untuk IPv6 (DHCPv6). Bab ini membahas fungsionalitas, konfigurasi, dan pemecahan masalah DHCPv4 dan DHCPv6.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Topologi Dasar</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Verifikasi Tabel Perutean</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Ringkaslah Jaringan</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Hapus Rute Statis dan Konfigurasikan Ringkasan Rute Statis</b>]]></text>
+</component>
+<component id="ID_s5_title">
+<text><![CDATA[<b>Verifikasi Ringkasan Rute Statis</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Rute yang bisa diringkas</b>]]></text>
+</component>
+<component id="ID_txt02">
+<text><![CDATA[<b>Dirangkum menjadi satu rute</b>]]></text>
+</component>
+<component id="ID_txt03">
+<text><![CDATA[22 bit pertama sama]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Beberapa bagian berbeda]]></text>
+</component>
+<component id="ID_txt05">
+<text><![CDATA[<b>Batasan Ringkasan</b>]]></text>
+</component>
+
+</textcomponents>

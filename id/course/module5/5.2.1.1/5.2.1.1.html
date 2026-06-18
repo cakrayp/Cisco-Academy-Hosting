@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.2.1.1 Masalah Switch Port</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Perutean Antar-VLAN</h1>
+<h2>Masalah Konfigurasi Antar-VLAN</h2>
+</div>
+<div id="content">
+<p>Ada beberapa kesalahan konfigurasi switch yang umum terjadi saat mengkonfigurasi routing antara beberapa VLAN.</p>
+<p></p>
+<p>Saat menggunakan model perutean lama untuk perutean antar-VLAN, pastikan bahwa port switch yang terhubung ke antarmuka router dikonfigurasi dengan VLAN yang benar. Jika port switch tidak dikonfigurasi untuk VLAN yang benar, perangkat yang dikonfigurasi pada VLAN tersebut tidak dapat terhubung ke antarmuka router; oleh karena itu, perangkat tersebut tidak dapat mengirim data ke VLAN lain.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada topologi Gambar 1, antarmuka PC1 dan router R1 G0/0 dikonfigurasikan pada subnet logis yang sama, seperti yang ditunjukkan oleh penetapan alamat IP mereka. Namun, port switch F0/4 yang menghubungkan ke router R1 antarmuka G0/0 belum dikonfigurasi dan tetap dalam VLAN default. Karena router R1 berada pada VLAN yang berbeda dari PC1, mereka tidak dapat berkomunikasi.</p>
+<p></p>
+<p>Untuk memperbaiki masalah ini, jalankan<span class="cmd"><b>akses switchport vlan 10</b></span>perintah mode konfigurasi antarmuka pada port sakelar F0/4 pada sakelar S1. Ketika port switch dikonfigurasi untuk VLAN yang benar, PC1 dapat berkomunikasi dengan antarmuka router R1 G0/0, yang memungkinkannya mengakses VLAN lain yang terhubung ke router R1.</p>
+<p></p>
+<p>Topologi Gambar 2 menunjukkan model routing router-on-a-stick. Namun, antarmuka F0/5 pada saklar S1 tidak dikonfigurasi sebagai trunk dan dibiarkan dalam VLAN default untuk port tersebut. Akibatnya, router tidak dapat merutekan antar VLAN karena masing-masing subinterface yang dikonfigurasi tidak dapat mengirim atau menerima lalu lintas yang diberi tag VLAN.</p>
+<p></p>
+<p>Untuk memperbaiki masalah ini, terbitkan<span class="cmd"><b>bagasi mode switchport</b></span>perintah mode konfigurasi antarmuka pada port switch F0/5 pada S1. Ini mengubah antarmuka menjadi port trunk, memungkinkan trunk dibuat antara R1 dan S1. Ketika trunk berhasil dibuat, perangkat yang terhubung ke masing-masing VLAN dapat berkomunikasi dengan subinterface yang ditugaskan ke VLAN mereka, sehingga memungkinkan routing antar-VLAN.</p>
+<p></p>
+<p>Topologi Gambar 3 menunjukkan link trunk antara S1 dan S2 sedang down. Karena tidak ada koneksi atau jalur redundan antar perangkat, semua perangkat yang terhubung ke S2 ​​tidak dapat menjangkau router R1. Akibatnya, semua perangkat yang terhubung ke S2 ​​tidak dapat melakukan rute ke VLAN lain melalui R1.</p>
+<p></p>
+<p>Untuk mengurangi risiko kegagalan tautan antar-switch yang mengganggu perutean antar-VLAN, tautan redundan dan jalur alternatif harus diperhitungkan dalam desain jaringan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

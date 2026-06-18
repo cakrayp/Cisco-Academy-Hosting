@@ -1,0 +1,14 @@
+<textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>Entering Criteria Statements</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>ACL 1</b>]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>ACL 2</b>]]></text> 
+  </component>
+ <component id="ID_txt03">
+  <text><![CDATA[<b>Company A</b>]]></text> 
+  </component>
+</textcomponents>

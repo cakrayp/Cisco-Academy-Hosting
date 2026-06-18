@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.2.2.1 Errors with IP Addresses and Subnet Masks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshoot Inter-VLAN Routing</h1>
+        <h2>IP Addressing Issues</h2>
+      </div>
+      <div id="content">
+          <p>VLANs correspond to unique subnets on the network. For inter-VLAN routing to operate, a router must be connected to all VLANs, either by separate physical interfaces or by subinterfaces. Each interface, or subinterface, must be assigned an IP address that corresponds to the subnet to which it is connected. This permits devices on the VLAN to communicate with the router interface and enables the routing of traffic to other VLANs connected to the router.</p>
+          <p></p>
+          <p>The following are some common IP addressing errors:</p>
+          <p>
+            <ul>
+              <li>As shown in Figure 1, router R1 has been configured with an incorrect IP address on interface G0/0. This prevents PC1 from being able to communicate with router R1 on VLAN 10. To correct this problem, assign the correct IP address to router R1 interface G0/0 using the<span class="cmd"><b> ip address 172.17.10.1 255.255.255.0 </b></span>command. After the router interface has been assigned the correct IP address, PC1 can use the router interface as a default gateway for accessing other VLANs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>In Figure 2, PC1 has been configured with an incorrect IP address for the subnet associated with VLAN 10. This prevents PC1 from being able to communicate with router R1 on VLAN 10. To correct this problem, assign the correct IP address to PC1. Depending on the type of PC being used, the configuration details may be different.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>In Figure 3, PC1 has been configured with the incorrect subnet mask. According to the subnet mask configured for PC1, PC1 is on the 172.17.0.0 network. The result is that PC1 calculates that PC3, with the IP address 172.17.30.23, is on the same subnet as PC1. PC1 does not forward traffic destined for PC3 to router R1 interface G0/0; therefore, the traffic never reaches PC3. To correct this problem, change the subnet mask on PC1 to 255.255.255.0. Depending on the type of PC being used, the configuration details can be different.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

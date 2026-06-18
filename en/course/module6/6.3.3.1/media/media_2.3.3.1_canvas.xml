@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<data>
+		<slide type="MBAR">
+			<slide>
+				<element type="IMAGE" src="2_3_3_1_A.png" x="0" y="0" width="470" height="400"/>
+				<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+				<element type="TEXT" compId="ID_s1_txt01" width="87.45" x="2.1" y="165.95" align="center" expand="up"/>
+				<element type="TEXT" compId="ID_s1_txt02" width="87.45" x="118.05" y="165.95" align="center" expand="up" />
+				<element type="TEXT" compId="ID_s1_txt03" width="87.45" x="233.35" y="165.95" align="center" expand="up" />
+				<element type="TEXT" compId="ID_s1_txt04" width="87.45" x="349.3" y="165.95" align="center" expand="up" />
+		</slide>
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+			<element type="IMAGE" src="media_2.3.3.1.jpg" x="0" y="2" width="470" height="304"/>
+			<element type="SHAPE" subType="RECT" width="173.15" height="19.95" x="14.6" y="106.35" color="#DBECDA"/>
+			<element type="SHAPE" subType="RECT" width="33" height="19.95" x="189.05" y="106.35" color="#FDE6D4"/>
+			<element type="SHAPE" subType="RECT" width="40" height="19.95" x="222.9" y="106.35" color="#FDE6D4"/>
+			<element type="SHAPE" subType="RECT" width="173.15" height="113.9" x="14.6" y="139.35" color="#DBECDA"/>
+			<element type="SHAPE" subType="RECT" width="33" height="113.9" x="189.05" y="139.35" color="#E0D5E6"/>
+			<element type="SHAPE" subType="RECT" width="40" height="113.9" x="222.9" y="139.35" color="#FDE6D4"/>
+			<element type="TEXT" text="11000000.10101000.00010100" width="168.2" x="14.25" y="108.15" align="center" color=	             "#5FBC21" bold="1" style="font-family:Courier New; letter-spacing:-0.4px !important; font-weight:bold;"/>
+			<element type="TEXT" text=".000" width="30.2" x="189.7" y="108.15" align="center" color="#F68026" bold="1" style="font-family:Courier New; font-weight:bold;" />
+			<element type="TEXT" text="0000" width="36.7" x="223.95" y="108.15" align="center" color="#F68026" bold="1" style="font-family:Courier New; font-weight:bold;" />
+			<element type="TEXT" text="192.168.20.0/24" width="101.7" x="262.9" y="108.15" align="left" color="#000000" style="              font-family:Courier New"/>
+			<element type="TEXT" textId="colText" width="10.7" x="1" y="139" align="left" color="#000000" style="font-family:				              Courier New" />
+			<element type="TEXT" textId="col1Text" width="173.2" x="14.25.7" y="139" align="left" color="#5FBC21" bold="1" style="font-family:Courier New; letter-spacing:-0.4px !important; font-weight:bold;"/>
+			<element type="TEXT" textId="col2Text" width="30.2" x="189.7" y="139" align="left" color="#652C8A" bold="1" style="font-family:Courier New; font-weight:bold; font-weight:bold;" />
+			<element type="TEXT" textId="col3Text" width="36.7" x="223.95" y="139" align="center" color="#F68026" bold="1" style="              font-family:Courier New; font-weight:bold;" />
+			<element type="TEXT" textId="col4Text" width="101.7" x="262.9" y="139" align="left" color="#000000"  style="                  font-family:Courier New;"/>
+			<element type="TEXT" compId="ID_s2_txt01" width="101.5" x="49.55" y="80.95" align="center" expand="up"/>
+			<element type="TEXT" compId="ID_s2_txt02" width="73.9" x="188.85" y="80.95" align="center" expand="up"/>
+			<element type="TEXT" compId="ID_s2_txt03" width="58" x="389.1" y="161.45" align="left" expand="up+down" size="10"/>
+			<element type="TEXT" compId="ID_s2_txt04" width="48" x="389.1" y="208.15" align="left" expand="up+down" size="10" style="letter-spacing:-0.4px;"/>
+			<element type="TEXT" compId="ID_s2_txt05" width="58" x="389.1" y="241.45" align="left" expand="up+down" size="10"/>
+			<element type="TEXT" compId="ID_s2_txt06" width="150" x="68.15" y="289.3" align="left" expand="down" size="11"/>
+			<element type="TEXT" compId="ID_s2_txt07" width="170" x="227.45" y="289.3" align="left" expand="down" size="11"/>
+		</slide>
+		
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>
+			<element type="SHAPE" subType="RECT" width="173.2" height="44.9" x="38.75" y="104.85" color="#DBECDA"/>
+			<element type="SHAPE" subType="RECT" width="33" height="44.9" x="213.2" y="104.85" color="#E0D5E6"/>
+			<element type="SHAPE" subType="RECT" width="40" height="44.9" x="247.05" y="104.85" color="#FDE6D4"/>
+			<element type="TEXT" textId="cols3Text" width="10.7" x="25.15" y="105.25" align="left" color="#000000" style="               font-family:Courier New" />	
+			<element type="TEXT" textId="cols31Text" width="173.2" x="38.4" y="105.55" align="left" color="#5FBC21" bold="1" style="font-family:Courier New; letter-spacing:-0.4px !important; font-weight:bold;" />
+			<element type="TEXT" textId="cols32Text" width="30.2" x="213.85" y="105.55" align="left" color="#652C8A" bold="1" style="font-family:Courier New; letter-spacing:-0.4px !important; font-weight:bold;" />
+			<element type="TEXT" textId="cols33Text" width="36.7" x="246.1" y="105.55" align="center" color="#F68026" bold="1" style="font-family:Courier New; letter-spacing:-0.4px !important; font-weight:bold;" />
+			<element type="TEXT" textId="col34Text" width="114.7" x="287.05" y="105.55" align="left" color="#000000"  style="                  font-family:Courier New"/>
+			<element type="IMAGE" src="arrow.png" x="263.05" y="149.9" width="9.8" height="43.95"/>
+			<element type="TEXT" compId="ID_s3_txt01" width="250" x="143" y="184.9" align="left" expand="down"/>
+			
+		</slide>
+		</slide>
+		<text id="col1Text"><![CDATA[11000000.10101000.00010100<br/>11000000.10101000.00010100<br/>11000000.10101000.00010100<br/>
+		11000000.10101000.00010100<br/>11000000.10101000.00010100<br/>11000000.10101000.00010100<br/>
+		11000000.10101000.00010100<br/>11000000.10101000.00010100]]></text>
+		<text id="colText"><![CDATA[0<br/>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7]]></text>
+		<text id="col2Text"><![CDATA[.000<br/>.001<br/>.010<br/>.011<br/>.100<br/>.101<br/>.110<br/>.111]]></text>
+		<text id="col3Text"><![CDATA[0000<br/>0000<br/>0000<br/>0000<br/>0000<br/>0000<br/>0000<br/>0000]]>
+		</text><text id="col4Text"><![CDATA[192.168.20.0/27<br/>192.168.20.32/27<br/>192.168.20.64/27<br/>192.168.20.96/27<br/>         192.168.20.128/27<br/>192.168.20.160/27<br/>192.168.20.192/27<br/>192.168.20.224/27]]></text>
+		
+		<text id="cols31Text"><![CDATA[11000000.10101000.00010100<br/>11000000.10101000.00010100<br/>11000000.10101000.00010100]]></text>
+		<text id="cols3Text"><![CDATA[4<br/>5<br/>6]]></text>
+		<text id="cols32Text"><![CDATA[.100<br/>.101<br/>.110]]></text>
+		<text id="cols33Text"><![CDATA[0000<br/>0000<br/>0000]]>
+		</text><text id="col34Text"><![CDATA[192.168.20.128/27<br/>192.168.20.160/27<br/>192.168.20.192/27]]></text>
+	</data>

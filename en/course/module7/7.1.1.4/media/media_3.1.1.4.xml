@@ -1,0 +1,244 @@
+<textcomponents>
+<!--Slide 1-->
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity 1 – Classify Routing Protocols</b><br><br>State or Path Vector to match each routing protocol to its classification. If you are correct, the word Correct! will flash on your screen. If you are incorrect, Please try again will flash. The pop up items will continue to display until all have been answered.<br><br>If you wish to complete the entire activity again, click Reset. Otherwise, proceed to Activity 2.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Routing Protocols</b>]]></text>
+</component>
+
+<component id="ID_s1_field01">
+<text><![CDATA[<b>Distance Vector</b>]]></text>
+</component>
+
+<component id="ID_s1_field02">
+<text><![CDATA[<b>Link State</b>]]></text>
+</component>
+
+<component id="ID_s1_field03">
+<text><![CDATA[<b>Path Vector</b>]]></text>
+</component>
+
+<!--answers-->
+<component id="ID_s1_ans01">
+<text><![CDATA[RIPv2 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans02">
+<text><![CDATA[RIPng (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans03">
+<text><![CDATA[EIGRP (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans04">
+<text><![CDATA[EIGRP (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans05">
+<text><![CDATA[OSPFv2 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans06">
+<text><![CDATA[OSPFv3 (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans07">
+<text><![CDATA[IS-IS (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans08">
+<text><![CDATA[IS-IS (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans09">
+<text><![CDATA[BGP-4 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans10">
+<text><![CDATA[BGP-MP (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_break">
+<text><![CDATA[<br><br>]]></text>
+</component>
+
+<!--buttons-->
+<component id="ID_s1_btn01">
+<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!--feedback-->
+<component id='ID_s1_titleCorrect'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_correctText'>
+	<text><![CDATA[<br><p align='center'>Correct!</p>]]></text>
+</component>
+
+<component id='ID_s1_titleIncorrect'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_incorrectText'>
+	<text><![CDATA[Please try again.]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity - Part 1: Identify Components of a Routing Protocol - EIGRP</b><br><br>In this activity, you will focus on the operation of EIGRP, a distance vector routing protocol.<br><br>Read the statement at the top of the matrix. Next, drag a blue checkmark to the field (or fields) next to the items which accurately complete the statement. More than one of the items may be selected. Click Check to verify your answers. If correct, move to Part 2 of this activity. If incorrect, please Reset and try again.]]></text>
+</component>
+
+<component id='ID_s2_question'>
+	<text><![CDATA[In the area of data structure, EIGRP creates and maintains the ____________.]]></text>
+</component>
+
+<component id='ID_s2_ans01'>
+	<text><![CDATA[Topology table]]></text>
+</component>
+
+<component id='ID_s2_ans02'>
+	<text><![CDATA[Neighbor table]]></text>
+</component>
+
+<component id='ID_s2_ans03'>
+	<text><![CDATA[Update table]]></text>
+</component>
+
+<component id='ID_s2_ans04'>
+	<text><![CDATA[Best path(s) in the routing table]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have correctly identified the EIGRP data structure areas! Please continue to Part 2 of this activity.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not correctly identified the EIGRP data structure areas. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!--Slide 3-->
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Activity - Part 2: Identify Components of a Routing Protocol - EIGRP</b><br><br>Read the statement at the top of the matrix. Next, drag a blue checkmark to the field (or fields) next to the items which accurately complete the statement. More than one of the items may be selected. Click Check to verify your answers. If correct, move to Part 3 of this activity. If incorrect, please Reset and try again.]]></text>
+</component>
+
+<component id='ID_s3_question'>
+	<text><![CDATA[In the area of routing protocol messages, EIGRP uses _________.]]></text>
+</component>
+
+<component id='ID_s3_ans01'>
+	<text><![CDATA[Acknowledgements]]></text>
+</component>
+
+<component id='ID_s3_ans02'>
+	<text><![CDATA[Queries]]></text>
+</component>
+
+<component id='ID_s3_ans03'>
+	<text><![CDATA[Updates]]></text>
+</component>
+
+<component id='ID_s3_ans04'>
+	<text><![CDATA[Replies]]></text>
+</component>
+
+<component id='ID_s3_ans05'>
+	<text><![CDATA[Hellos]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[You have correctly identified the EIGRP routing protocol message types! Please continue to Part 3 of this activity.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[You have not correctly identified the EIGRP routing protocol message types. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+<!--Slide 4-->
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Activity - Part 3: Identify Components of a Routing Protocol - EIGRP</b><br><br>Read the statement at the top of the matrix. Next, drag a blue checkmark to the field (or fields) next to the items which accurately complete the statement. More than one of the items may be selected. Click Check to verify your answers. If incorrect, please Reset and try again.]]></text>
+</component>
+
+<component id='ID_s4_question'>
+	<text><![CDATA[To identify the best route to a network, EIGRP uses this algorithm:]]></text>
+</component>
+
+<component id='ID_s4_ans01'>
+	<text><![CDATA[Djikstra]]></text>
+</component>
+
+<component id='ID_s4_ans02'>
+	<text><![CDATA[Bellman-Ford]]></text>
+</component>
+
+<component id='ID_s4_ans03'>
+	<text><![CDATA[DUAL]]></text>
+</component>
+
+<component id='ID_s4_ans04'>
+	<text><![CDATA[ICMP]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[You have correctly identified the EIGRP algorithm.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[You have not correctly identified the EIGRP algorithm. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

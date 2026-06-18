@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.3.2.2 Example: Troubleshooting Layer 3 Switching</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Layer 3 Switching</h1>
+        <h2>Troubleshoot Layer 3 Switching</h2>
+      </div>
+      <div id="content">
+          <p>Company XYZ is adding a new floor, floor 5, to the network. Based on this, the current requirements are to make sure the users on floor 5 can communicate with users on other floors. Currently, users on floor 5 cannot communicate with users on other floors. The following is an implementation plan to install a new VLAN for users on floor 5 and to ensure the VLAN is routing to other VLANs.</p>
+          <p></p>
+          <p>There are four steps to implementing a new VLAN:</p>
+          <p></p>
+          <p>
+            <b>Step 1.</b> Create a new VLAN 500 on the fifth floor switch and on the distribution switches. Name this VLAN.</p>
+          <p></p>
+          <p>
+            <b>Step 2.</b> Identify the ports needed for the users and switches. Set the<span class="cmd"><b> switchport access vlan </b></span>command to<span class="cmd"><b> 500 </b></span>and ensure that the trunk between the distribution switches is properly configured and that VLAN 500 is allowed on the trunk.</p>
+          <p></p>
+          <p>
+            <b>Step 3.</b> Create an SVI interface on the distribution switches and ensure that IP addresses are assigned.</p>
+          <p></p>
+          <p>
+            <b>Step 4.</b> Verify connectivity.</p>
+          <p></p>
+          <p>The troubleshooting plan checks for the following:</p>
+          <p></p>
+          <p>
+            <b>Step 1.</b> Verify that all VLANs have been created:</p>
+          <p>
+            <ul>
+              <li>Was the VLAN created on all the switches?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Verify with the<span class="cmd"><b> show vlan </b></span>command.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Step 2.</b> Ensure that ports are in the right VLAN and trunking is working as expected:</p>
+          <p>
+            <ul>
+              <li>Did all access ports have the<span class="cmd"><b> switchport access VLAN 500 </b></span>command added?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Were there any other ports that should have been added? If so, make those changes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Were these ports previously used? If so, ensure that there are no extra commands enabled on these ports that can cause conflicts. If not, is the port enabled?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Are any user ports set to trunks? If so, issue the<span class="cmd"><b> switchport mode access </b></span>command.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Are the trunk ports set to trunk mode? </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is manual pruning of VLANs configured? If so, ensure that the trunks necessary to carry VLAN 500 traffic have the VLAN in the allowed statements.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Step 3.</b> Verify SVI configurations (if necessary):</p>
+          <p>
+            <ul>
+              <li>Is the SVI already created with the correct IP address and subnet mask?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is it enabled?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is routing enabled?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is this SVI added in the routing protocol?</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Step 4.</b> Verify connectivity:</p>
+          <p>
+            <ul>
+              <li>Are all the links between switches in trunk mode?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is VLAN 500 allowed on all trunks?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Is spanning-tree blocking any of the participating links?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Are the ports enabled?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Do the hosts have the right default gateways assigned?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ensure that the default route or some routing protocol is enabled if necessary.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

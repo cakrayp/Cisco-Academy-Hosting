@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.3.2 Contoh Masker Wildcard</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Masker Wildcard di ACL</h2>
+</div>
+<div id="content">
+<p>
+<b>Masker Wildcard untuk Mencocokkan Subnet IPv4</b>
+</p>
+<p></p>
+<p>Menghitung topeng karakter pengganti memerlukan beberapa latihan. Gambar 1 memberikan tiga contoh masker wildcard.</p>
+<p></p>
+<p>Pada contoh pertama, masker wildcard menetapkan bahwa setiap bit dalam IPv4 192.168.1.1 harus sama persis.</p>
+<p></p>
+<p>Pada contoh kedua, masker wildcard menetapkan bahwa segala sesuatu akan cocok.</p>
+<p></p>
+<p>Pada contoh ketiga, wildcard mask menetapkan bahwa setiap host dalam jaringan 192.168.1.0/24 akan cocok.</p>
+<p></p>
+<p>Contoh-contoh ini cukup sederhana dan mudah dimengerti. Namun, penghitungan masker wildcard bisa jadi lebih rumit.</p>
+<p></p>
+<p>
+<b>Masker Wildcard untuk Mencocokkan Rentang</b>
+</p>
+<p></p>
+<p>Dua contoh pada Gambar 2 lebih kompleks. Dalam contoh 1, dua oktet pertama dan empat bit pertama dari oktet ketiga harus sama persis. Empat bit terakhir pada oktet ketiga dan oktet terakhir dapat berupa bilangan valid apa pun. Hal ini menghasilkan masker yang memeriksa rentang jaringan 192.168.16.0 hingga 192.168.31.0.</p>
+<p></p>
+<p>Contoh 2 menunjukkan masker wildcard yang cocok dengan dua oktet pertama, dan bit paling tidak signifikan pada oktet ketiga. Oktet terakhir dan tujuh bit pertama pada oktet ketiga dapat berupa bilangan valid apa pun. Hasilnya adalah mask yang mengizinkan atau menolak semua host dari subnet ganjil dari jaringan utama 192.168.0.0.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

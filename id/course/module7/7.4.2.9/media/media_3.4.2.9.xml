@@ -1,0 +1,97 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+	<text><![CDATA[<b>Aktivitas – Diagram Topologi: Membangun Pohon SPF</b><br/>Gunakan topologi di halaman ini untuk membuat pohon SPF untuk Bagian 1 dan 2. Klik Tombol 2 untuk melanjutkan. Klik Tombol 1 kapan pun Anda perlu merujuk ke topologi.]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Tombol-tombol ini menunjukkan<br/><br/>(Catatan: Nilai biaya yang tercantum adalah<b>bukan</b>indikasi dari<b>nilai biaya riil</b>untuk tautan pada topologi perutean reguler.)]]></text> 
+</component>
+  
+<component id="ID_s2_txt01">
+  <text><![CDATA[<b>Kegiatan – Bagian 1: Membangun Database Link-State dan Pohon SPF</b><br/><br/>Gunakan topologi dari halaman pertama aktivitas ini. Semua jawaban untuk skenario ini akan didasarkan pada pohon SPF R1 yang dibangun dari topologi.<br/><br/>Hitung biaya terbaik untuk rute tujuan yang tercantum. Tarik jawaban Anda ke kolom Biaya. Klik Tombol 3 untuk melanjutkan.]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+  <text><![CDATA[<b>Skenario 1</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+  <text><![CDATA[<b>Jaringan Tujuan</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+  <text><![CDATA[<b>Biaya</b>]]></text>
+</component>
+
+<component id="ID_s2_CHECK">
+  <text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id="ID_s2_RESET">
+  <text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_TITLE">
+  <text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_BODY">
+  <text><![CDATA[Anda telah berhasil menghitung biaya terbaik untuk setiap rute tujuan. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_TITLE">
+  <text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_BODY">
+  <text><![CDATA[Anda belum berhasil menghitung biaya terbaik untuk setiap rute tujuan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+
+
+
+
+
+
+
+<component id="ID_s3_txt01">
+  <text><![CDATA[<b>Kegiatan – Bagian 2: Membangun Database Link-State dan Pohon SPF</b><br/><br/>Gunakan topologi dari halaman pertama aktivitas ini. Semua jawaban untuk skenario ini akan didasarkan pada pohon SPF R2 yang dibangun dari topologi.<br/><br/>Hitung biaya terbaik untuk rute tujuan yang tercantum. Tarik jawaban Anda ke kolom Biaya.]]></text> 
+</component>
+
+<component id="ID_s3_txt02">
+  <text><![CDATA[<b>Skenario 2</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+  <text><![CDATA[<b>Jaringan Tujuan</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt04">
+  <text><![CDATA[<b>Biaya</b>]]></text>
+</component>
+
+<component id="ID_s3_CHECK">
+  <text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id="ID_s3_RESET">
+  <text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_TITLE">
+  <text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_BODY">
+  <text><![CDATA[Anda telah berhasil menghitung biaya terbaik untuk setiap rute tujuan.]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_TITLE">
+  <text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_BODY">
+  <text><![CDATA[Anda belum berhasil menghitung biaya terbaik untuk setiap rute tujuan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+</textcomponents>

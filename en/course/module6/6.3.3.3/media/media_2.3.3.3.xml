@@ -1,0 +1,53 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>VLSM Subnets</b>]]></text>
+</component>
+
+
+<!-- orange text boxes -->
+
+<component id="ID_s1_txtbox_01">
+<text><![CDATA[10.0.0.0/8 has been subnetted using the subnet mask /16.]]></text>
+</component>
+
+<component id="ID_s1_txtbox_02">
+<text><![CDATA[Any of the /16 subnets can be subnetted further. In this example, 10.1.0.0/16 and 10.2.0.0/16 have been subnetted using the /24 mask.]]></text>
+</component>
+
+<component id="ID_s1_txtbox_03">
+<text><![CDATA[In this example, 10.3.0.0/16 has been subnetted using the /28 mask and 10.4.0.0/16 has been subnetted using the /20 mask.]]></text>
+</component>
+
+<component id="ID_s1_txtbox_04">
+<text><![CDATA[Individual host addresses are assigned from the "sub-subnets".]]></text>
+</component>
+
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.2.1.3 Verifying SSH</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Switch Security: Management and Implementation</h1>
+        <h2>Secure Remote Access</h2>
+      </div>
+      <div id="content">
+          <p>On a PC, an SSH client, such as PuTTY, is used to connect to an SSH server. For the examples in Figures 1 to 3, the following have been configured:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>SSH enabled on switch S1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Interface VLAN 99 (SVI) with IP address 172.17.99.11 on switch S1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>PC1 with IP address 172.17.99.21</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In Figure 1, the PC initiates an SSH connection to the SVI VLAN IP address of S1.</p>
+          <p></p>
+          <p>In Figure 2, the user has been prompted for a username and password. Using the configuration from the previous example, the username<span class="cmd"><b> admin </b></span>and password<span class="cmd"><b> ccna </b></span>are entered. After entering the correct combination, the user is connected via SSH to the CLI on the Catalyst 2960 switch.</p>
+          <p></p>
+          <p>To display the version and configuration data for SSH on the device that you configured as an SSH server, use the<span class="cmd"><b> show ip ssh </b></span>command. In the example, SSH version 2 is enabled. To check the SSH connections to the device, use the<span class="cmd"><b> show ssh </b></span>command (see Figure 3).</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

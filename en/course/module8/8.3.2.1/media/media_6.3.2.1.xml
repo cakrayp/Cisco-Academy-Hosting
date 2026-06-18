@@ -1,0 +1,27 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>OSPFv3 Topology</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Area 0</b>]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[The FE80 address represents the link-local address assigned to each router.]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Configuring Global-Unicast Addresses on R1</b>]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Steps to Configure OSPFv3</b>]]></text>
+</component>
+ 
+<component id="ID_s3_tx01">
+	   <text><![CDATA[<b>Step 1:</b> Enable IPv6 unicast routing:<font face="Courier New" color="#393536"><b> ipv6 unicast-routing</b></font>.<br/><b>Step 2:</b> (Optional) Configure link-local addresses.<br/><b>Step 3:</b> Configure a 32-bit router ID in OSPFv3 router configuration mode using the<font face="Courier New" color="#393536"><b> router-id</b></font> <font face="Courier New">rid</font> command.<br/><b>Step 4:</b> Configure optional routing specifics such as adjusting the reference bandwidth.<br/><b>Step 5:</b> (Optional) Configure OSPFv3 interface specific settings. For example, adjust the interface bandwidth.<br/><b>Step 6:</b> Enable IPv6 routing by using the <font face="Courier New" color="#393536"><b>ipv6 ospf area </b></font>command.]]></text>
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.3.2.1 Advertising IPv6 Networks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>RIP and RIPng Routing</h1>
+        <h2>Configuring the RIPng Protocol</h2>
+      </div>
+      <div id="content">
+          <p>As with its IPv4 counterpart, RIPng is rarely used in modern networks. It is also useful as a foundation for understanding basic network routing.  For this reason, this section provides a brief overview of how to configure basic RIPng.</p>
+          <p></p>
+          <p>Refer to the reference topology in the figure. In this scenario, all routers have been configured with basic management features and all interfaces identified in the reference topology are configured and enabled. There are no static routes configured and no routing protocols enabled; therefore, remote network access is currently impossible. </p>
+          <p></p>
+          <p>To enable an IPv6 router to forward IPv6 packets, the<span class="cmd"><b> ipv6 unicast-routing </b></span>must be configured. </p>
+          <p></p>
+          <p>Unlike RIPv2, RIPng is enabled on an interface and not in router configuration mode.  In fact, there is no<span class="cmd"><b> network </b></span><span class="cmd"><i>network-address </i></span>command available in RIPng.  Instead, use the<span class="cmd"><b> ipv6 rip </b></span><span class="cmd"><i>domain-name</i></span><span class="cmd"><b> enable </b></span>interface configuration command. </p>
+          <p></p>
+          <p>In Figure 1, IPv6 unicast routing is enabled and the Gigabit Ethernet 0/0 and Serial 0/0/0 interfaces are enabled for RIPng using the domain name RIP-AS. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 2 to configure a similar configuration on R2 and R3.</p>
+          <p></p>
+          <p>The process to propagate a default route in RIPng is identical to RIPv2 except that an IPv6 default static route must be specified. For example, assume that R1 had an Internet connection from a Serial 0/0/1 interface to IP address 2001:DB8:FEED:1::1/64. To propagate a default route, R3 would have to be configured with:</p>
+          <p>
+            <ul>
+              <li>A default static route using the<span class="cmd"><b> ipv6 route 0::/0 2001:DB8:FEED:1::1 </b></span>global configuration command.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The<span class="cmd"><b> ipv6 rip </b></span><span class="cmd"><i>domain-name</i></span><span class="cmd"><b> default-information originate </b></span>interface configuration mode command. This instructs R3 to be the source of the default route information and propagate the default static route in RIPng updates sent out of the configured interface.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

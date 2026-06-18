@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+			<element type="TEXT" compId="ID_s1_title" subType="TITLE"/>
+			<element type="IMAGE" src="11.3.1.1.jpg" x="0" y="0" width="470" height="400"/>
+			<element type="TEXT" id="ID_static_1" text="192.168.10.10" x="1" y="78.5" width="74.3" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_2" text="S0/0/0" x="179.9" y="128.65" width="35.95" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_3" text="S0/1/0" x="270.15" y="132.05" width="35.95" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_4" text="209.165.201.1" x="363.55" y="78.5" width="74.3" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_5" text=".225" x="266.75" y="157.05" width="25.55" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_6" text="209.165.200.224/27" x="271.2" y="175.9" width="101.8" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_7" text="192.168.11.10" x="1" y="204.55" width="74.3" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_8" text="209.165.202.129" x="350.95" y="204.55" width="86.5" align="center" color="#393536" />
+			<element type="TEXT" id="ID_static_9" text="NAT pool: 209.165.200.226 to 209.165.200.240" x="123.95" y="300.95" width="236.05" align="center" color="#000000" />
+			<element type="TEXT" compId="ID_s1_txt01" width="240" x="2" y="61.5" align="center" expand="up" bold="1" />
+			<element type="TEXT" compId="ID_s1_txt02" width="190" x="244" y="61.5" align="center" expand="up" bold="1" />
+			<element type="TEXT" compId="ID_s1_txt03" width="71.15" x="328.95" y="142.25" align="center" expand="up+down" />
+			<element type="TEXT" compId="ID_s1_txt05" width="73.4" x="209.35" y="229.2" align="center" expand="left+right" bgColor="#FDE6D4" borderColor="#F68026" corner="5" 
+border="2"/>
+			<element type="TEXT" compId="ID_s1_txt06" width="48" x="347.25" y="105.7" align="right" expand="left" />
+			<element type="TEXT" compId="ID_s1_txt07" width="46	" x="350.25" y="178.5" align="right" expand="left" />
+		</slide>
+	<slide>
+			<element type="TEXT" compId="ID_s2_title" subType="TITLE"/>
+			<element type="ROUTER" textId="ID_r2_txt01" x="3.55" y="5.65" width="433.25" height="390.1"/>
+		</slide>
+	</slide>
+	
+	<text id="ID_r2_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="573"> <tr> <td colspan="2">R2#<strong>hapus statistik ip nat</strong></td> </tr> <tr> <td colspan="2">R2#<strong>terjemahan ip nat yang jelas *</strong></td> </tr> <tr> <td colspan="2">R2#</td> </tr> <tr> <td colspan="2"><span id="ID_s2_txt01"></span></td> </tr> <tr> <td colspan="2">R2#<strong>tampilkan statistik ip nat</strong></td> </tr> <tr> <td colspan="2">Total terjemahan aktif: 1 (0 statistik, 1 dinamis; 1 diperpanjang)</td> </tr> <tr> <td colspan="2">Terjemahan puncak: 1, terjadi 00:00:09 lalu</td> </tr> <tr> <td colspan="2">antarmuka luar:</td> </tr> <tr> <td width="23"> </td> <td width="377">Serial0/0/1</td> </tr> <tr> <td colspan="2">antarmuka bagian dalam:</td> </tr> <tr> <td> </td> <td>Serial0/0/0</td> </tr> <tr> <td colspan="2">Pukulan: 31 Gagal: 0</td> </tr> <tr> <td colspan="2">Paket CEF yang Diterjemahkan: 31, Paket CEF Punted: 0</td> </tr> <tr> <td colspan="2">Terjemahan maksimal: 0</td> </tr> <tr> <td colspan="2">Pemetaan dinamis:</td> </tr> <tr> <td colspan="2">-- Sumber Dalam</td> </tr> <tr> <td colspan="2">[Id: 5] daftar akses 1 kumpulan penghitungan ulang NAT-POOL2 1</td> </tr> <tr> <td colspan="2">kumpulan NAT-POOL2: netmask 255.255.255.224</td> </tr> <tr> <td colspan="2">mulai 209.165.200.226 akhir 209.165.200.240</td> </tr> <tr> <td colspan="2">ketik umum, total alamat 15, dialokasikan 1 (6%), meleset 0</td> </tr> <tr> <td colspan="2"><span id="ID_s2_txt02"></span></td> <td> </td> </tr> <tr> <td colspan="2">R2#<strong>tampilkan terjemahan ip nat</strong></td> </tr> <tr> <td colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td>Pro</td> <td>Di dalam global</td> <td>Di dalam lokal</td> <td>Di luar lokal</td> <td>Di luar global</td> </tr> <tr> <td>tcp</td> <td>209.165.200.226:19005</td> <td>192.168.10.10:19005</td> <td>209.165.201.1:23</td> <td>209.165.201.1:23</td> </tr> </table></td> </tr> <tr> <td colspan="2">R2#</td> </tr></table>]]></text>
+</data>

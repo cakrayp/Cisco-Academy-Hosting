@@ -1,0 +1,156 @@
+<textcomponents>
+
+
+<!-- SCREEN 1 Drag and Drop -->  
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity – Part 1: Identify OSPF Features</b><br/><br/>Drag the OSPF features to the fields next to the corresponding function descriptions. Not all features will be used. Click Button 2 to continue this activity. ]]></text>
+</component>
+
+<component id='ID_s1_header1'>
+	<text><![CDATA[<b>OSPF Features</b>]]></text>
+</component>
+<component id='ID_s1_header2'>
+	<text><![CDATA[<b>Function/Description</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Quickly propagates network changes]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Supports VLSM and CIDR]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Supports MD5 authentication]]></text>
+</component>
+
+<component id='ID_s1_target_header'>
+	<text><![CDATA[<b>R1 Configuration Commands:</b>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[<font color="#393536">Classless</font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[<font color="#393536">Efficient</font>]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[<font color="#393536">Fast Convergence</font>]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[<font color="#393536">Scalable</font>]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[<font color="#393536">Secure</font>]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched the OSPF features to their function descriptions. Click Button 2 to continue.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched the OSPF features to their function descriptions. Please click Reset to try again.
+]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+
+<!--SCREEN 2 Drag and Drop -->  
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity – Part 2: Identify OSPF Terminology</b><br/><br/>Drag the OSPF terminology to the fields next to the appropriate definitions. ]]></text>
+</component>
+
+<component id='ID_s2_header1'>
+	<text><![CDATA[<b>OSPF terminology</b>]]></text>
+</component>
+<component id='ID_s2_header2'>
+	<text><![CDATA[<b>Definitions</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Creates the neighbor table]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Used to compute the SPF cost]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Creates the topology table]]></text>
+</component>
+
+<component id='ID_s2_target_header'>
+	<text><![CDATA[<b>R2 Configuration Commands:</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font color="#393536">Dijksta's Algorithm</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font color="#393536">Link-State Database</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font color="#393536">Routing Protocol Messages</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font color="#393536">Classless</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[<font color="#393536">Adjacency Database</font>]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched the OSPF terms to their definitions.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched the OSPF terms to their definitions. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+</textcomponents>

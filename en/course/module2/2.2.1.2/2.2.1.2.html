@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.2.1.2 Configuring SSH</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Switch Security: Management and Implementation</h1>
+        <h2>Secure Remote Access</h2>
+      </div>
+      <div id="content">
+          <p>Before configuring SSH, the switch must be minimally configured with a unique hostname and the correct network connectivity settings.</p>
+          <p></p>
+          <p>
+            <b>Step 1. Verify SSH support.</b>
+          </p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> show ip ssh </b></span>command to verify that the switch supports SSH. If the switch is not running an IOS that supports cryptographic features, this command is unrecognized. </p>
+          <p></p>
+          <p>
+            <b>Step 2. Configure the IP domain.</b>
+          </p>
+          <p></p>
+          <p>Configure the IP domain name of the network using the<span class="cmd"><b> ip domain-name </b></span><span class="cmd"><i>domain-name </i></span>global configuration mode command. In Figure 1, the<span class="cmd"><i> domain-name </i></span>value is<span class="cmd"><b> cisco.com</b></span>.</p>
+          <p></p>
+          <p>
+            <b>Step 3. Generate RSA key pairs.</b>
+          </p>
+          <p></p>
+          <p>Generating an RSA key pair automatically enables SSH. Use the<span class="cmd"><b> crypto key generate rsa </b></span>global configuration mode command to enable the SSH server on the switch and generate an RSA key pair. When generating RSA keys, the administrator is prompted to enter a modulus length. Cisco recommends a minimum modulus size of 1,024 bits (see the sample configuration in Figure 1). A longer modulus length is more secure, but it takes longer to generate and to use.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: To delete the RSA key pair, use the<span class="cmd"><b> crypto key zeroize rsa </b></span>global configuration mode command. After the RSA key pair is deleted, the SSH server is automatically disabled.</p>
+          <p></p>
+          <p>
+            <b>Step 4. Configure user authentication.</b>
+          </p>
+          <p></p>
+          <p>The SSH server can authenticate users locally or using an authentication server. To use the local authentication method, create a username and password pair using the<span class="cmd"><b> username </b></span><span class="cmd"><i>username</i></span><span class="cmd"><b> password </b></span><span class="cmd"><i>password </i></span>global configuration mode command. In the example, the user<span class="cmd"><b> admin </b></span>is assigned the password<span class="cmd"><b> ccna</b></span>.</p>
+          <p></p>
+          <p>
+            <b>Step 5. Configure the vty lines.</b>
+          </p>
+          <p></p>
+          <p>Enable the SSH protocol on the vty lines using the<span class="cmd"><b> transport input ssh </b></span>line configuration mode command. The Catalyst 2960 has vty lines ranging from 0 to 15. This configuration prevents non-SSH (such as Telnet) connections and limits the switch to accept only SSH connections. Use the<span class="cmd"><b> line vty </b></span>global configuration mode command and then the<span class="cmd"><b> login local </b></span>line configuration mode command to require local authentication for SSH connections from the local username database. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 2 to configure SSH on switch S1.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

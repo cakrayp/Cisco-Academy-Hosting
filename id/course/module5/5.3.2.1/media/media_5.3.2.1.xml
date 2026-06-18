@@ -1,0 +1,23 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Masalah Konfigurasi Saklar Lapisan 3</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[<b>Server (PC4)</b>]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Lapisan 2</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<b>Belalai</b>]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[<b>Lapisan 3</b>]]></text> 
+  </component>
+  <component id="ID_txt05">
+  <text><![CDATA[<b>Belalai</b>]]></text> 
+  </component>
+    <component id="ID_txt06">
+  <text><![CDATA[<b>Lapisan 2</b>]]></text> 
+  </component>
+</textcomponents>

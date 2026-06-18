@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.3.1.3 Ringkasan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.3.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>Semua node di jaringan memerlukan alamat IP unik untuk berkomunikasi dengan perangkat lain. Penugasan statis informasi pengalamatan IP pada jaringan besar menghasilkan beban administratif yang dapat dihilangkan dengan menggunakan DHCPv4 atau DHCPv6 untuk menetapkan informasi pengalamatan IPv4 dan IPv6 secara dinamis.</p>
+<p></p>
+<p>DHCPv4 mencakup tiga mekanisme alokasi alamat yang berbeda untuk memberikan fleksibilitas saat menetapkan alamat IP:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Alokasi Manual</b>- Administrator memberikan alamat IPv4 yang telah dialokasikan sebelumnya kepada klien, dan DHCPv4 hanya mengkomunikasikan alamat IPv4 ke perangkat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alokasi Otomatis</b>- DHCPv4 secara otomatis memberikan alamat IPv4 statis secara permanen ke perangkat, memilihnya dari kumpulan alamat yang tersedia. Tidak ada sewa dan alamat ditetapkan secara permanen ke perangkat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alokasi Dinamis</b>- DHCPv4 secara dinamis menetapkan, atau menyewakan, alamat IPv4 dari kumpulan alamat untuk jangka waktu terbatas seperti yang dikonfigurasi di server, atau hingga klien tidak lagi memerlukan alamat tersebut.</li>
+</ul>
+</p>
+<p></p>
+<p>Alokasi dinamis adalah mekanisme DHCPv4 yang paling umum digunakan dan melibatkan pertukaran beberapa paket berbeda antara server DHCPv4 dan klien DHCPv4 yang menghasilkan penyewaan informasi pengalamatan yang valid untuk jangka waktu yang telah ditentukan.</p>
+<p></p>
+<p>Pesan yang berasal dari klien (DHCPDISCOVER, DHCPREQUEST) disiarkan untuk memungkinkan semua server DHCPv4 di jaringan mendengar permintaan klien, dan penerimaan, informasi pengalamatan. Pesan yang berasal dari server DHCPv4 (DHCPOFFER, DHCPACK) dikirim sebagai unicast langsung ke klien yang meminta informasi.</p>
+<p></p>
+<p>Ada dua metode yang tersedia untuk konfigurasi dinamis alamat unicast global IPv6.</p>
+<p>
+<ul>
+<li>Konfigurasi Otomatis Alamat Tanpa Status (SLAAC )</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Protokol Konfigurasi Host Dinamis untuk IPv6 (Stateful DHCPv6)</li>
+</ul>
+</p>
+<p></p>
+<p>Dengan konfigurasi otomatis stateless, klien menggunakan informasi yang disediakan oleh pesan IPv6 RA untuk secara otomatis memilih dan mengonfigurasi alamat IPv6 unik. Opsi DHCPv6 stateless memberi tahu klien untuk menggunakan informasi dalam pesan RA untuk pengalamatan, namun parameter konfigurasi tambahan tersedia dari server DHCPv6.</p>
+<p></p>
+<p>DHCPv6 berstatus mirip dengan DHCPv4. Dalam hal ini, pesan RA memberitahu klien untuk tidak menggunakan informasi dalam pesan RA. Semua informasi pengalamatan dan informasi konfigurasi diperoleh dari server DHCPv6 stateful. Server DHCPv6 menyimpan informasi status IPv6 serupa dengan server DHCPv4 yang mengalokasikan alamat untuk IPv4.</p>
+<p></p>
+<p>Jika server DHCP terletak di segmen jaringan yang berbeda dari klien DHCP, maka agen relai perlu dikonfigurasi. Agen relai meneruskan pesan siaran tertentu yang berasal dari segmen LAN ke server tertentu yang terletak di segmen LAN berbeda (dalam hal ini, pesan siaran DHCP akan diteruskan ke server DHCP).</p>
+<p></p>
+<p>Pemecahan masalah dengan DHCPv4 dan DHCPv6, melibatkan tugas yang sama:</p>
+<p>
+<ul>
+<li>Selesaikan Konflik Alamat</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Verifikasi Konektivitas Fisik</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Uji Konektivitas menggunakan Alamat IP Statis</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Verifikasi Konfigurasi Switch Port</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Uji Operasi pada Subnet atau VLAN yang Sama</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

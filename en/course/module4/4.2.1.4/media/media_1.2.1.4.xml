@@ -1,0 +1,154 @@
+<textcomponents>
+
+    <component id="ID_title">
+      <text><![CDATA[<b>R2 Forwards the Packet to R3</b>]]></text>
+   </component>
+   
+    <component id="ID_header01">
+      <text><![CDATA[<b>Layer 2 Data Link Frame</b>]]></text>
+   </component>
+
+   <component id="ID_header02">
+      <text><![CDATA[<b>Packet’s Layer 3 data</b>]]></text>
+   </component>
+   
+   
+    <component id="ID_txt01">
+      <text><![CDATA[Dest. MAC 00-10]]></text>
+   </component>
+
+   <component id="ID_txt02">
+      <text><![CDATA[Source MAC 0A-10]]></text>
+   </component> 
+  
+   <component id="ID_txt03">
+      <text><![CDATA[Dest. MAC]]></text>
+   </component>  
+
+   <component id="ID_txt04">
+      <text><![CDATA[<b>Dest MAC 0B-31</b>]]></text>
+   </component>
+   
+      <component id="ID_txt05">
+      <text><![CDATA[<b>Source MAC 00-20</b>]]></text>
+   </component>
+
+    <component id="ID_txt08">
+      <text><![CDATA[<b>Source IP 192.168.1.10</b>]]></text>
+   </component>
+
+   <component id="ID_txt06">
+      <text><![CDATA[Type 0x800]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[<b>Dest. IP 192.168.4.10</b>]]></text>
+   </component>
+    <component id="ID_txt09">
+      <text><![CDATA[IP fields]]></text>
+   </component>
+   
+     <component id="ID_txt10">
+      <text><![CDATA[Data]]></text>
+   </component>
+   
+   <component id="ID_txt11">
+      <text><![CDATA[Trailer]]></text>
+   </component>
+   
+   
+   <component id="ID_txt12">
+      <text><![CDATA[<b>Address 0x8F</b>]]></text>
+   </component>  
+   
+   <component id="ID_txt13">
+      <text><![CDATA[Source MAC]]></text>
+   </component>
+       <component id="ID_txt14">
+      <text><![CDATA[<b>Control<br/>0x00</b>]]></text>
+   </component>
+   
+   <!--R1 ROUTING TABLE-->
+      <component id="ID_txt15">
+      <text><![CDATA[<b>R2’s Routing Table</b>]]></text>
+   </component>
+   <component id="ID_txt16">
+      <text><![CDATA[Network]]></text>
+   </component>
+   <component id="ID_txt17">
+      <text><![CDATA[Hops]]></text>
+   </component>
+   <component id="ID_txt18">
+      <text><![CDATA[Next-hop-IP]]></text>
+   </component>
+   <component id="ID_txt19">
+      <text><![CDATA[Exit Interface]]></text>
+   </component>
+         <component id="ID_txt20">
+      <text><![CDATA[Dir. Connect.]]></text>
+   </component>
+
+   <component id="ID_txt21">
+      <text><![CDATA[Dir. Connect.]]></text>
+   </component>
+
+   
+     
+  
+
+<!-- SPEECH BUBBLES -->
+
+
+   <component id="ID_speech01">
+      <text><![CDATA[A frame was sent to me by MAC address. Let me investigate further.]]></text>
+   </component>
+
+   <component id="ID_speech02">
+      <text><![CDATA[I can see from the type and destination IP address that this packet needs to be forwarded.]]></text>
+   </component>
+
+   <component id="ID_speech03">
+      <text><![CDATA[I have a route out my S0/0/0 interface to reach PC2.]]></text>
+   </component>
+
+   <component id="ID_speech04">
+      <text><![CDATA[Let me rebuild the information in the frame.]]></text>
+   </component>
+
+   <component id="ID_speech05">
+      <text><![CDATA[The packet is being sent over a serial connection; therefore, I must use a Layer 2 broadcast destination address.]]></text>
+   </component>
+
+   <component id="ID_speech06">
+      <text><![CDATA[This is a P2P serial connection, so no source address is required.]]></text>
+   </component>
+
+
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+</textcomponents>

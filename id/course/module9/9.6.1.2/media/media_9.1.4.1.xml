@@ -1,0 +1,39 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Penyaringan Lalu Lintas ACL pada Router</b>]]></text>
+	</component>
+
+	<component id="ID_txt01">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt02">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt01_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt02_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt03">
+		<text><![CDATA[Satu daftar per antarmuka, per arah, dan per protokol]]></text>
+	</component>
+
+	<component id="ID_txt04">
+		<text><![CDATA[Dengan dua antarmuka dan dua protokol yang berjalan, router ini dapat menerapkan total 8 ACL terpisah.]]></text>
+	</component>
+
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Tiga P untuk menggunakan ACL</b>]]></text>
+	</component>
+
+	<component id="ID_txt06">
+		<text><![CDATA[Anda hanya dapat memiliki satu ACL per protokol, per antarmuka, dan per arah:<textformat blockindent="-14"><ul><li>Satu ACL per protokol (mis., IPv4 atau IPv6)</li><li>Satu ACL per arah (yaitu IN atau OUT)</li><li>Satu ACL per antarmuka (mis., FastEthernet0/0)</li></ul></textformat>]]></text>
+	</component>
+
+</textcomponents>

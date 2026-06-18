@@ -1,0 +1,75 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas - identifikasi Langkah-Langkah dalam Operasi DHCPv6</b><br/><br/>Urutkan langkah-langkah untuk mengilustrasikan asal mula DHCPv6.<br/>Seret setiap langkah asal sewa DHCPv6 ke bidang yang sesuai, berdasarkan angka yang dilingkari pada grafik.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[<b>Operasi SLAAC</b>]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Klien DHCPv6]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Server DHCPv6]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Permintaan Router]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Router Iklan]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[<b>Operasi DHCPv6 yang Stateful</b>]]></text>
+</component>
+
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">REQUEST</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">REPLY</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">ADVERTISE</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">SOLICIT</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengurutkan langkah-langkah untuk pembuatan stateful DHCPv6.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengurutkan langkah-langkah untuk pembuatan limbah DHCPv6 stateful. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

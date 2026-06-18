@@ -1,0 +1,52 @@
+﻿<textcomponents>
+  <component id="ID_title">
+    <text><![CDATA[<b>Pengidentifikasi Entri Jaringan Jarak Jauh</b>]]></text>
+  </component>
+ <!-- <component id="ID_txt01">
+    <text><![CDATA[D]]></text>
+  </component>-->
+  
+   <component id="ID_txt01">
+    <text><![CDATA[<b>D</b>]]></text>
+  </component>
+
+     <component id="ID_txt02">
+    <text><![CDATA[<b>Legenda</b>]]></text>
+  </component>
+ 
+
+	 <component id="ID_txt03">
+    <text><![CDATA[- Mengidentifikasi bagaimana jaringan dipelajari oleh router.]]></text>
+  </component>
+ 
+ 
+ 
+	<component id="ID_txt04">
+    <text><![CDATA[- Mengidentifikasi jaringan tujuan.]]></text>
+  </component>
+	
+	<component id="ID_txt05">
+    <text><![CDATA[- Mengidentifikasi jarak administratif (kepercayaan) dari sumber rute.]]></text>
+  </component>
+	
+	<component id="ID_txt06">
+    <text><![CDATA[- Mengidentifikasi metrik untuk menjangkau jaringan jarak jauh.]]></text>
+  </component>
+	
+	<component id="ID_txt07">    
+	<text><![CDATA[- Mengidentifikasi alamat IP hop berikutnya untuk mencapai jaringan jarak jauh.]]></text>
+  </component>
+  
+	<component id="ID_txt08">    
+	<text><![CDATA[- Mengidentifikasi jumlah waktu yang berlalu sejak jaringan ditemukan.]]></text>
+  </component>
+	
+	<component id="ID_txt09">    
+	<text><![CDATA[- Mengidentifikasi antarmuka keluar pada router untuk mencapai jaringan tujuan.]]></text>
+  </component>
+
+
+  
+  
+
+</textcomponents>

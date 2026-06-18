@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.1.8 Mengomentari ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.8_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Konfigurasikan ACL IPv4 Standar</h2>
+</div>
+<div id="content">
+<p>Anda dapat menggunakan<span class="cmd"><b>komentar</b></span>kata kunci untuk menyertakan komentar (komentar) tentang entri dalam standar IP atau ACL yang diperluas. Keterangan tersebut membuat ACL lebih mudah untuk Anda pahami dan pindai. Setiap baris komentar dibatasi hingga 100 karakter.</p>
+<p></p>
+<p>Keterangannya bisa sebelum atau sesudah a<span class="cmd"><b>izin</b></span> or <span class="cmd"><b>membantah</b></span>penyataan. Anda harus konsisten dalam menempatkan pernyataan sehingga jelas pernyataan mana yang menggambarkan pernyataan tersebut<span class="cmd"><b>izin</b></span> or <span class="cmd"><b>membantah</b></span>penyataan. Misalnya, akan membingungkan jika ada beberapa komentar sebelum yang terkait<span class="cmd"><b>izin</b></span> or <span class="cmd"><b>membantah</b></span>pernyataan dan beberapa komentar setelah pernyataan.</p>
+<p></p>
+<p>Untuk menyertakan komentar untuk ACL standar atau diperpanjang bernomor IPv4, gunakan<span class="cmd"><b>daftar akses</b></span><span class="cmd"><i>nomor_daftar akses</i></span><span class="cmd"><b>komentar</b></span><span class="cmd"><i>komentar</i></span>perintah konfigurasi global. Untuk menghapus komentar tersebut, gunakan<span class="cmd"><b>no</b></span>bentuk perintah ini.</p>
+<p></p>
+<p>Pada contoh pertama, ACL yang diberi nomor menolak stasiun kerja tamu 192.168.10.10 keluar dari S0/0/0 namun mengizinkan semua perangkat lain dari 192.168.0.0/16.</p>
+<p></p>
+<p>Untuk entri dalam ACL standar atau diperpanjang bernama, gunakan<span class="cmd"><b>komentar</b></span>perintah konfigurasi daftar akses. Untuk menghapus komentar tersebut, gunakan<span class="cmd"><b>no</b></span>bentuk perintah ini. Contoh 2 menunjukkan standar bernama ACL.  Dalam contoh ini, pernyataan keterangan menunjukkan bahwa stasiun kerja lab dengan alamat host 192.168.11.10 ditolak tetapi perangkat dari semua jaringan lain diizinkan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

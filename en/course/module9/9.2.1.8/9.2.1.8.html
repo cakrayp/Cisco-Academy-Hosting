@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.2.1.8 Commenting ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.8_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Standard IPv4 ACLs </h1>
+        <h2>Configure Standard IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>You can use the <span class="cmd"><b>remark</b></span> keyword to include comments (remarks) about entries in any IP standard or extended ACL. The remarks make the ACL easier for you to understand and scan. Each remark line is limited to 100 characters.</p>
+          <p></p>
+          <p>The remark can go before or after a <span class="cmd"><b>permit</b></span> or <span class="cmd"><b>deny</b></span> statement. You should be consistent about where you put the remark so that it is clear which remark describes which <span class="cmd"><b>permit</b></span> or <span class="cmd"><b>deny</b></span> statement. For example, it would be confusing to have some remarks before the associated <span class="cmd"><b>permit</b></span> or <span class="cmd"><b>deny</b></span> statements and some remarks after the statements.</p>
+          <p></p>
+          <p>To include a comment for IPv4 numbered standard or extended ACLs, use the<span class="cmd"><b> access-list </b></span><span class="cmd"><i>access-list_number</i></span><span class="cmd"><b> remark </b></span><span class="cmd"><i>remark </i></span>global configuration command. To remove the remark, use the <span class="cmd"><b>no</b></span> form of this command.</p>
+          <p></p>
+          <p>In the first example, the numbered ACL denies the 192.168.10.10 guest workstation from exiting S0/0/0 but permits all other devices from 192.168.0.0/16.  </p>
+          <p></p>
+          <p>For an entry in a named standard or extended ACL, use the <span class="cmd"><b>remark</b></span> access-list configuration command. To remove the remark, use the <span class="cmd"><b>no</b></span> form of this command. Example 2 shows a standard named ACL.  In this example, the remark statements indicate that the lab workstation with the host address 192.168.11.10 is denied but devices from all other networks are permitted.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

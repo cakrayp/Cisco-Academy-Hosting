@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Static Routing Scenario</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Router R2 is connected to other networks and to the Internet. It is also my only way out of here. I just use a default static route to reach any network I do not know about.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Router R1 only has two networks that I need to know about so I just use two static routes to reach those networks.]]></text> 
+</component>
+</textcomponents>

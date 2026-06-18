@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Skenario Rute Statis dan Default</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[R2 berfungsi sebagai hop berikutnya untuk semua jaringan, termasuk Internet, yang tidak terhubung langsung ke R1; oleh karena itu, R1 harus memiliki konfigurasi rute default yang menunjuk ke R2.]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[R1 hanya berisi dua jaringan yang terhubung langsung yang perlu diketahui R2. Dua entri rute statis dapat dikonfigurasi pada R2 untuk memungkinkan rute ditambahkan ke tabel rute.]]></text> 
+  </component>
+<component id="transcript">
+  <text><![CDATA[<b>transkrip ada di sini</b>]]></text> 
+  </component>
+</textcomponents>

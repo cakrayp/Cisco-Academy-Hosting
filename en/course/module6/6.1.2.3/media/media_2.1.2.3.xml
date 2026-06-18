@@ -1,0 +1,23 @@
+<textcomponents>
+
+<component id="ID_title">
+	<text><![CDATA[<b>Connecting a Stub Router</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[Stub Network]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Network</b>]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Stub Router</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[All I need to know about are my directly connected networks. For all other networks, I can use a default static route pointing to R2.]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.6.1.1 Aktivitas - Jadikan Statis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.6.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>
+<b>Aktivitas -</b>
+<b>Jadikan Statis!</b>
+</p>
+<p></p>
+<p>Karena penggunaan pengalamatan IPv6 menjadi lebih lazim, penting bagi administrator jaringan untuk dapat mengarahkan lalu lintas jaringan antar router.</p>
+<p></p>
+<p>Untuk membuktikan bahwa Anda mampu mengarahkan lalu lintas IPv6 dengan benar dan meninjau konsep kurikulum rute statis default IPv6, gunakan topologi seperti yang ditunjukkan pada file .pdf yang disediakan, khusus untuk kegiatan ini.</p>
+<p></p>
+<p>Bekerja samalah dengan partner untuk menulis pernyataan IPv6 untuk masing-masing dari tiga skenario. Cobalah untuk menulis pernyataan rute tanpa bantuan laboratorium yang telah selesai, file Packet Tracer, dll.</p>
+<p></p>
+<p>
+<b>Skenario 1</b>
+</p>
+<p>Rute statis default IPv6 dari R2 mengarahkan semua data melalui antarmuka S0/0/0 Anda ke alamat hop berikutnya di R1.</p>
+<p></p>
+<p>
+<b>Skenario 2</b>
+</p>
+<p>Rute statis default IPv6 dari R3 mengarahkan semua data melalui antarmuka S0/0/1 Anda ke alamat hop berikutnya di R2.</p>
+<p></p>
+<p>
+<b>Skenario 3</b>
+</p>
+<p>Rute statis default IPv6 dari R2 mengarahkan semua data melalui antarmuka S0/0/1 Anda ke alamat hop berikutnya di R3.</p>
+<p></p>
+<p>Setelah selesai, berkumpullah dengan kelompok lain dan bandingkan jawaban tertulis Anda. Diskusikan perbedaan apa pun yang ditemukan dalam perbandingan Anda.</p>
+<p></p>
+<p>
+<a href="../../files/6.6.1.1%20Class%20Activity%20-%20Make%20It%20Static%20Instructions.pdf" target="_blank">Aktivitas Kelas - Jadikan Statis! instruksi</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

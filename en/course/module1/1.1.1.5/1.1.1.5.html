@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>1.1.1.5 Core Distribution Access</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.1.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>LAN Design</h1>
+        <h2>Converged Networks</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Access Layer</b>
+          </p>
+          <p></p>
+          <p>The access layer represents the network edge, where traffic enters or exits the campus network. Traditionally, the primary function of an access layer switch is to provide network access to the user. Access layer switches connect to distribution layer switches, which implement network foundation technologies such as routing, quality of service, and security.</p>
+          <p></p>
+          <p>To meet network application and end-user demand, the next-generation switching platforms now provide more converged, integrated, and intelligent services to various types of endpoints at the network edge. Building intelligence into access layer switches allows applications to operate on the network more efficiently and securely.</p>
+          <p></p>
+          <p>
+            <b>Distribution Layer</b>
+          </p>
+          <p></p>
+          <p>The distribution layer interfaces between the access layer and the core layer to provide many important functions, including:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Aggregating large-scale wiring closet networks</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Aggregating Layer 2 broadcast domains and Layer 3 routing boundaries</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Providing intelligent switching, routing, and network access policy functions to access the rest of the network</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Providing high availability through redundant distribution layer switches to the end-user and equal cost paths to the core</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Providing differentiated services to various classes of service applications at the edge of network</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Core Layer</b>
+          </p>
+          <p></p>
+          <p>The core layer is the network backbone. It connects several layers of the campus network. The core layer serves as the aggregator for all of the other campus blocks and ties the campus together with the rest of the network. The primary purpose of the core layer is to provide fault isolation and high-speed backbone connectivity.</p>
+          <p></p>
+          <p>Figure 1 shows a three-tier campus network design for organizations where the access, distribution, and core are each separate layers. To build a simplified, scalable, cost-effective, and efficient physical cable layout design, the recommendation is to build an extended-star physical network topology from a centralized building location to all other buildings on the same campus.</p>
+          <p></p>
+          <p>In some cases, because of a lack of physical or network scalability restrictions, maintaining a separate distribution and core layer is not required. In smaller campus locations where there are fewer users accessing the network or in campus sites consisting of a single building, separate core and distribution layers may not be needed. In this scenario, the recommendation is the alternate two-tier campus network design, also known as the collapsed core network design.</p>
+          <p></p>
+          <p>Figure 2 shows a two-tier campus network design example for an enterprise campus where the distribution and core layers are collapsed into a single layer.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

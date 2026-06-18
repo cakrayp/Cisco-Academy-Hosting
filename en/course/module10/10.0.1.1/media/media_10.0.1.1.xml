@@ -1,0 +1,5 @@
+﻿<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Upon completion of this chapter you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Describe the operation of DHCPv4 in a small- to medium-sized business network.</li><li>Configure a router as a DHCPv4 server.</li><li>Configure a router as a DHCPv4 client.</li><li>Troubleshoot a DHCP configuration for IPv4 in a switched network.</li><li>Explain the operation of DHCPv6.</li><li>Configure stateless DHCPv6 for a small- to medium-sized business.</li><li>Configure stateful DHCPv6 for a small- to medium-sized business.</li><li>Troubleshoot a DHCP configuration for IPv6 in a switched network.</li></textformat><br/>]]></text>
+</component> 
+</textcomponents>

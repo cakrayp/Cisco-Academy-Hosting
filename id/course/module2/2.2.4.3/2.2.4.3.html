@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.4.3 Keamanan Pelabuhan: Operasi</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Ganti Keamanan Port</h2>
+</div>
+<div id="content">
+<p>
+<b>Keamanan Pelabuhan</b>
+</p>
+<p></p>
+<p>Semua port switch (antarmuka) harus diamankan sebelum switch digunakan untuk penggunaan produksi. Salah satu cara untuk mengamankan port adalah dengan menerapkan fitur yang disebut keamanan port. Keamanan port membatasi jumlah alamat MAC valid yang diperbolehkan pada suatu port. Alamat MAC perangkat yang sah diperbolehkan mengaksesnya, sementara alamat MAC lainnya ditolak.</p>
+<p></p>
+<p>Keamanan port dapat dikonfigurasi untuk mengizinkan satu atau lebih alamat MAC. Jika jumlah alamat MAC yang diperbolehkan pada port dibatasi satu, maka hanya perangkat dengan alamat MAC spesifik tersebut yang dapat berhasil terhubung ke port tersebut.</p>
+<p></p>
+<p>Jika suatu port dikonfigurasikan sebagai port aman dan jumlah maksimum alamat MAC tercapai, setiap upaya tambahan untuk menyambung dengan alamat MAC yang tidak diketahui akan menghasilkan pelanggaran keamanan. Gambar 1 merangkum poin-poin ini.</p>
+<p></p>
+<p>
+<b>Jenis Alamat MAC yang Aman</b>
+</p>
+<p></p>
+<p>Ada beberapa cara untuk mengonfigurasi keamanan port. Jenis alamat aman didasarkan pada konfigurasi dan mencakup:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Alamat MAC aman statis</b>- Alamat MAC yang dikonfigurasi secara manual pada port dengan menggunakan<span class="cmd"><b>alamat mac keamanan port switchport</b></span><span class="cmd"><i>alamat mac</i></span>perintah mode konfigurasi antarmuka. Alamat MAC yang dikonfigurasi dengan cara ini disimpan dalam tabel alamat dan ditambahkan ke konfigurasi yang sedang berjalan di switch.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alamat MAC aman dinamis</b>- Alamat MAC yang dipelajari secara dinamis dan disimpan hanya di tabel alamat. Alamat MAC yang dikonfigurasi dengan cara ini akan dihapus ketika sakelar dimulai ulang.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alamat MAC aman yang melekat</b>- Alamat MAC yang dapat dipelajari secara dinamis atau dikonfigurasi secara manual, kemudian disimpan dalam tabel alamat dan ditambahkan ke konfigurasi yang sedang berjalan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Alamat MAC Aman Lengket</b>
+</p>
+<p>Untuk mengonfigurasi antarmuka guna mengonversi alamat MAC yang dipelajari secara dinamis menjadi alamat MAC aman yang melekat dan menambahkannya ke konfigurasi yang sedang berjalan, Anda harus mengaktifkan pembelajaran melekat. Pembelajaran melekat diaktifkan pada antarmuka dengan menggunakan<span class="cmd"><b>alamat mac keamanan port switchport lengket</b></span>perintah mode konfigurasi antarmuka.</p>
+<p></p>
+<p>Saat perintah ini dimasukkan, switch akan mengubah semua alamat MAC yang dipelajari secara dinamis, termasuk alamat yang dipelajari secara dinamis sebelum pembelajaran lengket diaktifkan, menjadi alamat MAC aman yang melekat. Semua alamat MAC aman yang melekat ditambahkan ke tabel alamat dan ke konfigurasi yang berjalan.</p>
+<p></p>
+<p>Alamat MAC yang aman dan melekat juga dapat ditentukan secara manual. Ketika alamat MAC aman lengket dikonfigurasi dengan menggunakan<span class="cmd"><b>alamat mac keamanan port switchport lengket</b></span><span class="cmd"><i>alamat mac</i></span>perintah mode konfigurasi antarmuka, semua alamat yang ditentukan ditambahkan ke tabel alamat dan konfigurasi yang sedang berjalan.</p>
+<p></p>
+<p>Jika alamat MAC aman yang lengket disimpan ke file konfigurasi startup, maka ketika sakelar dimulai ulang atau antarmuka dimatikan, antarmuka tidak perlu mempelajari kembali alamat tersebut. Jika alamat aman yang melekat tidak disimpan, alamat tersebut akan hilang.</p>
+<p></p>
+<p>Jika pembelajaran lengket dinonaktifkan dengan menggunakan<span class="cmd"><b>tidak ada alamat mac keamanan port switchport yang lengket</b></span>perintah mode konfigurasi antarmuka, alamat MAC aman yang lengket tetap menjadi bagian dari tabel alamat, tetapi dihapus dari konfigurasi yang sedang berjalan.</p>
+<p></p>
+<p>Gambar 2 menunjukkan karakteristik alamat MAC stick secure.</p>
+<p></p>
+<p>Perhatikan itu<span class="cmd"><b>keamanan port switchport</b></span>perintah tidak akan berfungsi sampai keamanan port diaktifkan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

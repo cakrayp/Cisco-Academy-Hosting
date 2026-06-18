@@ -1,0 +1,66 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Differences Between OSPFv2 vs. OSPFv3</b>]]></text>
+</component>
+
+<component id="ID_table01">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+<tr class="liner">
+<td colspan='3' bgcolor='#0E6360' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+</tr>
+
+<tr>
+<td width="90" bgcolor='#077A77' valign="top"><font color='#ffffff'><b></b></font></td>
+<td width="175" bgcolor='#077A77' valign="top"><font color='#ffffff'><b>OSPFv2</b></font></td>
+<td width="175" bgcolor='#077A77' valign="top"><font color='#ffffff'><b>OSPFv3</b></font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Advertises</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>IPv4 networks</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>IPv6 prefixes</font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Source Address</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>IPv4 source address</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>IPv6 link-local address</font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Destination Address</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Choice of:<textformat blockindent='-14'>
+<li>Neighbor IPv4 unicast address</li>
+<li>224.0.0.5 all-OSPF-routers multicast address</li>
+<li>224.0.0.6 DR/BDR multicast address</li></textformat>
+</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Choice of:<textformat blockindent='-14'><li>Neighbor IPv6 link-local address</li>
+<li>FF02::5 all-OSPFv3-routers multicast address</li>
+<li>FF02::6 DR/BDR multicast address</li></textformat>
+</font></td>	
+</tr>	
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Advertise Networks</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Configured using the <font face='_typewriter'><b>network </b></font> router configuration command</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Configured using the <font face='_typewriter'><b>ipv6 ospf </b><i>process-id </i><b>area </b><i>area-id </i></font> interface configuration command</font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>IP Unicast Routing</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>IPv4 unicast routing is enabled by default.</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>IPv6 unicast forwarding is not enabled by default. The <font face='_typewriter'><b>ipv6 unicast-routing </b></font>global configuration command must be configured.</font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Authentication</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Plain text and MD5</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>IPv6 authentication</font></td>	
+</tr>
+
+
+</table>]]></text> 
+</component>
+
+</textcomponents>

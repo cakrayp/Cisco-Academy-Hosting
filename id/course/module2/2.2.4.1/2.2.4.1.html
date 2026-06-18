@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.4.1 Mengamankan Port yang Tidak Digunakan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Ganti Keamanan Port</h2>
+</div>
+<div id="content">
+<p>
+<b>Nonaktifkan Port yang Tidak Digunakan</b>
+</p>
+<p></p>
+<p>Metode sederhana yang digunakan banyak administrator untuk membantu mengamankan jaringan dari akses tidak sah adalah dengan menonaktifkan semua port yang tidak digunakan pada switch. Misalnya, jika switch Catalyst 2960 memiliki 24 port dan ada tiga koneksi Fast Ethernet yang digunakan, sebaiknya nonaktifkan 21 port yang tidak digunakan. Arahkan ke setiap port yang tidak digunakan dan keluarkan Cisco IOS<span class="cmd"><b>penutupan</b></span>memerintah. Jika suatu port di kemudian hari perlu diaktifkan kembali, port tersebut dapat diaktifkan dengan<span class="cmd"><b>tidak ada penutupan</b></span>memerintah. Gambar tersebut menunjukkan keluaran parsial untuk konfigurasi ini.</p>
+<p></p>
+<p>Sangat mudah untuk membuat perubahan konfigurasi pada beberapa port pada sebuah switch. Jika serangkaian port harus dikonfigurasi, gunakan<span class="cmd"><b>jangkauan antarmuka</b></span>memerintah.</p>
+<p></p>
+<p>
+<span class="cmd">Beralih(konfigurasi)#</span>
+<span class="cmd">
+<b>jangkauan antarmuka</b>
+</span>
+<span class="cmd"></span>
+<span class="cmd">
+<i>ketik modul/nomor pertama – nomor terakhir</i>
+</span>
+</p>
+<p></p>
+<p>Proses mengaktifkan dan menonaktifkan port dapat memakan waktu, namun hal ini meningkatkan keamanan pada jaringan dan sepadan dengan usaha yang dilakukan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

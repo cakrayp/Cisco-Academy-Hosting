@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Mengapa Mengonfigurasi Rute Statis Mengambang?</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>WAN Pribadi</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Internet</b>]]></text> 
+  </component>
+
+    <component id="ID_txt03">
+  <text><![CDATA[<b>Cabang</b>]]></text> 
+  </component>
+
+      <component id="ID_txt04">
+  <text><![CDATA[<b>ISP</b>]]></text> 
+  </component>
+
+   <component id="ID_txt05">
+  <text><![CDATA[<b>HQ</b>]]></text> 
+  </component>
+
+   <component id="ID_speech01">
+  <text><![CDATA[Saya lebih suka menjangkau router HQ menggunakan tautan WAN pribadi.]]></text> 
+  </component>
+
+   <component id="ID_speech02">
+  <text><![CDATA[Namun, jika tautan itu gagal, saya dapat menggunakan rute statis mengambang yang terhubung ke Internet sebagai cadangan.]]></text> 
+  </component>
+
+
+
+</textcomponents>

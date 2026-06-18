@@ -1,0 +1,29 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Singkatan Masker Bit Wildcard</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Contoh 1</b><br/><br/><textformat blockindent="-14"><ul><li>192.168.10.10 0.0.0.0 cocok dengan semua bit alamat</li><li>Singkat masker wildcard ini menggunakan alamat IP yang diawali dengan kata kunci<font face="_typewriter"><b>tuan rumah</b></font>(<font face="_typewriter"><b>tuan rumah 192.168.10.10</b></font>)</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Masker Karakter Pengganti:</b>]]></text> 
+</component>
+
+<component id="ID_txt03"><text><![CDATA[(Cocokkan Semua Bit)]]></text>
+</component>
+
+
+<component id="ID_txt04"><text><![CDATA[<b>Contoh 2</b><br/><br/><textformat blockindent="-14"><ul><li>0.0.0.0 255.255.255.255 mengabaikan semua bit alamat</li><li>Singkat ekspresi dengan kata kunci<font face="_typewriter"><b>setiap</b></font></li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[<b>Masker Karakter Pengganti:</b>]]></text> 
+</component>
+
+<component id="ID_txt06"><text><![CDATA[(Abaikan Semua Bit)]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.3.1 Subnet Masking Panjang Tetap</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>VLSM</h2>
+</div>
+<div id="content">
+<p>Dengan subnet masking dengan panjang tetap (FLSM), jumlah alamat yang sama dialokasikan untuk setiap subnet. Jika semua subnet memiliki persyaratan yang sama untuk jumlah host, blok alamat berukuran tetap ini sudah cukup. Namun, seringkali hal ini tidak terjadi.</p>
+<p></p>
+<p>
+<b>Catatan</b>: FLSM juga disebut sebagai subnetting tradisional.</p>
+<p></p>
+<p>Topologi yang ditunjukkan pada Gambar 1 mengharuskan alamat jaringan 192.168.20.0/24 disubnet menjadi tujuh subnet: satu subnet untuk masing-masing dari empat LAN (Gedung A hingga D), dan satu untuk masing-masing dari tiga koneksi WAN antar router.</p>
+<p></p>
+<p>Gambar 2 menyoroti bagaimana subnet tradisional dapat meminjam 3 bit dari bagian host pada oktet terakhir untuk memenuhi persyaratan subnet tujuh subnet. Misalnya, pada bagian Host, bagian Subnet menyoroti bagaimana peminjaman 3 bit menghasilkan 8 subnet sedangkan bagian Host menyoroti 5 bit host yang menyediakan 30 alamat IP host yang dapat digunakan per subnet. Skema ini menciptakan subnet yang dibutuhkan dan memenuhi kebutuhan host LAN terbesar.</p>
+<p></p>
+<p>Meskipun subnet tradisional ini memenuhi kebutuhan LAN terbesar dan membagi ruang alamat menjadi sejumlah subnet yang memadai, hal ini mengakibatkan pemborosan alamat yang tidak terpakai secara signifikan.</p>
+<p></p>
+<p>Misalnya, hanya diperlukan dua alamat di setiap subnet untuk tiga link WAN. Karena setiap subnet memiliki 30 alamat yang dapat digunakan, maka terdapat 28 alamat yang tidak terpakai di setiap subnet tersebut. Seperti yang ditunjukkan pada Gambar 3, ini menghasilkan 84 alamat yang tidak terpakai (28 x 3). Lebih jauh lagi, hal ini membatasi pertumbuhan di masa depan dengan mengurangi jumlah total subnet yang tersedia. Penggunaan alamat yang tidak efisien ini merupakan karakteristik subnetting tradisional dari jaringan kelas.</p>
+<p></p>
+<p>Menerapkan skema subnetting tradisional pada skenario ini sangat tidak efisien dan boros. Faktanya, contoh ini adalah model yang baik untuk menunjukkan bagaimana subnet subnet dapat digunakan untuk memaksimalkan pemanfaatan alamat. Membuat subnet subnet, atau menggunakan subnet mask panjang variabel (VLSM), dirancang untuk menghindari pemborosan alamat.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

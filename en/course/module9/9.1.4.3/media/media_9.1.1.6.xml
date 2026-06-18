@@ -1,0 +1,130 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activity – ACL Operation</b><br/><br/>Drag the appropriate word or phrase to complete the ACL operation statements. Not all answers will be used. The first statement requires two words or phrases to complete it.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Discarded</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Before</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Four</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Interface</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Pathway</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">Deny</font>]]></text>
+</component>
+
+<component id='ID_drag07'>
+	<text><![CDATA[<font color="#393536">After</font>]]></text>
+</component>
+
+<component id='ID_drag08'>
+	<text><![CDATA[<font color="#393536">Processing</font>]]></text>
+</component>
+
+<component id='ID_drag09'>
+	<text><![CDATA[<font color="#393536">Six</font>]]></text>
+</component>
+
+<component id='ID_drag10'>
+	<text><![CDATA[<font color="#393536">Protocol</font>]]></text>
+</component>
+<component id='ID_drag11'>
+	<text><![CDATA[<font color="#393536">Firewall</font>]]></text>
+</component>
+<component id='ID_drag12'>
+	<text><![CDATA[<font color="#393536">Twelve</font>]]></text>
+</component>
+<component id='ID_drag13'>
+	<text><![CDATA[<font color="#393536">Forwarded</font>]]></text>
+</component>
+<component id='ID_drag14'>
+	<text><![CDATA[<font color="#393536">Permit</font>]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully completed the ACL operation statements.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully completed the ACL operation statements. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+<component id="ID_txt01">
+	<text><![CDATA[An Access Control List (ACL) controls whether the router will _____ or _____ packet traffic based on packet header criteria.]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[ACLs are often used in routers between internal and external networks to provide a _____.]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[A router with three interfaces and two network protocols (IPv4 and IPv6) can have as many as _____ active ACLs.]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[For inbound ACLs, incoming packets are processed _____ they are sent to the outbound interface.]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[For outbound ACLs, incoming packets are processed _____ they are sent to the outbound interface.]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[For every ACL, there is an implied deny statement. If a packet does not match any of the ACL criteria, it will be _____.]]></text> 
+</component>
+
+<component id="ID_txt07">
+  <text><![CDATA[ACLs can filter data traffic per protocol, per direction, and per _____.]]></text> 
+</component>
+
+<component id="ID_txt08">
+  <text><![CDATA[ACLs can filter traffic based on source/destination address, _____, and port numbers.]]></text> 
+</component>
+
+<component id="ID_txt09">
+  <text><![CDATA[<b>ACL Operation</b>]]></text> 
+</component>
+
+<component id="ID_txt10">
+  <text><![CDATA[<b>Completion</b>]]></text> 
+</component>
+   
+</textcomponents>

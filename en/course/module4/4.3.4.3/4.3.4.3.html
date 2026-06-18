@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.3.4.3 IPv4 Dynamic Routing Examples </title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Router Operation</h1>
+        <h2>Dynamic Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>In this dynamic routing example, assume that R1 and R2 have been configured to support the dynamic routing protocol EIGRP. The routers also advertise directly connected networks. R2 advertises that it is the default gateway to other networks. </p>
+          <p></p>
+          <p>The output in the figure displays the routing table of R1 after the routers have exchanged updates and converged. Along with the connected and link local interfaces, there are three ‘<span class="cmd">D</span>’ entries in the routing table. </p>
+          <p>
+            <ul>
+              <li>The entry beginning with ‘<span class="cmd">D*EX</span>’ identifies that the source of this entry was EIGRP <span class="cmd">(</span>‘<span class="cmd">D</span>’<span class="cmd">)</span>. The route is a candidate to be a default route <span class="cmd">(</span>‘<span class="cmd">*</span>’<span class="cmd">)</span>, and the route is an external route <span class="cmd">(</span>‘<span class="cmd">*EX</span>’<span class="cmd">)</span> forwarded by EIGRP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The other two ‘<span class="cmd">D</span>’ entries are routes installed in the routing table based on the update from R2 advertising its LANs.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Sources of Level 1 Routes</b>]]></text>
+</component>
+
+<component id="ID_s1_header1">
+<text><![CDATA[<b>Level 1 Routes</b>]]></text>
+</component>
+
+<component id="ID_s1_header2">
+<text><![CDATA[<b>Next-hop IP address and/or exit interface</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Network]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Supernet]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Default]]></text> 
+  </component>
+<component id="ID_s1_txt04">
+	<text><![CDATA[Path/Interface]]></text> 
+</component>
+<component id="ID_s1_txt05">
+	<text><![CDATA[Path/Interface]]></text> 
+</component>
+<component id="ID_s1_txt06">
+	<text><![CDATA[Path/Interface]]></text> 
+</component>
+<component id="ID_s1_txt07">
+	<text><![CDATA[192.168.1.0/24]]></text> 
+</component>
+<component id="ID_s1_txt08">
+	<text><![CDATA[192.168.0.0/16]]></text> 
+</component>
+<component id="ID_s1_txt09">
+	<text><![CDATA[0.0.0.0/0]]></text> 
+</component>
+<component id="ID_s1_txt10">
+	<text><![CDATA[Ultimate Route]]></text> 
+</component>
+<component id="ID_s1_txt11">
+	<text><![CDATA[Ultimate Route]]></text> 
+</component>
+<component id="ID_s1_txt12">
+	<text><![CDATA[Ultimate Route]]></text> 
+</component>
+
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Example of Level 1 Routes</b>]]></text>
+</component>
+
+</textcomponents>

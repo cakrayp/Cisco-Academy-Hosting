@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.2.4.2 VLAN Hilang</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.4.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi VLAN</h1>
+<h2>Memecahkan masalah VLAN dan Trunks</h2>
+</div>
+<div id="content">
+<p>Jika masih tidak ada koneksi antar perangkat dalam VLAN, namun masalah pengalamatan IP telah diatasi, lihat diagram alur pada Gambar 1 untuk memecahkan masalah:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Gunakan<span class="cmd"><b>tunjukkan vlan</b></span>perintah untuk memeriksa apakah port tersebut milik VLAN yang diharapkan. Jika port ditetapkan ke VLAN yang salah, gunakan<span class="cmd"><b>vlan akses switchport</b></span>perintah untuk memperbaiki keanggotaan VLAN. Gunakan<span class="cmd"><b>tampilkan tabel alamat mac</b></span>perintah untuk memeriksa alamat mana yang dipelajari pada port tertentu dari switch dan ke VLAN mana port tersebut ditetapkan.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Jika VLAN yang portnya ditetapkan dihapus, port tersebut menjadi tidak aktif. Gunakan<span class="cmd"><b>tunjukkan vlan</b></span>or<span class="cmd"><b>tampilkan antarmuka switchport</b></span>memerintah.</p>
+<p></p>
+<p>Untuk menampilkan tabel alamat MAC, gunakan<span class="cmd"><b>tampilkan tabel-alamat-mac</b></span>memerintah. Contoh pada Gambar 2 menunjukkan alamat MAC yang dipelajari pada antarmuka F0/1. Dapat dilihat alamat MAC itu<span class="cmd">000c.296a.a21c</span>dipelajari pada antarmuka F0/1 di VLAN 10. Jika nomor ini bukan nomor VLAN yang diharapkan, ubah keanggotaan port VLAN menggunakan<span class="cmd"><b>vlan akses switchport</b></span>memerintah.</p>
+<p></p>
+<p>Setiap port di switch milik VLAN. Jika VLAN yang memiliki port tersebut dihapus, port tersebut menjadi tidak aktif. Semua port milik VLAN yang telah dihapus tidak dapat berkomunikasi dengan seluruh jaringan. Gunakan<span class="cmd"><b>tampilkan antarmuka switchport f0/1</b></span>perintah untuk memeriksa apakah port tidak aktif. Jika port tidak aktif, port tersebut tidak akan berfungsi sampai VLAN yang hilang dibuat menggunakan<span class="cmd"><b>vlan</b></span><span class="cmd"><i>vlan_id</i></span>memerintah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

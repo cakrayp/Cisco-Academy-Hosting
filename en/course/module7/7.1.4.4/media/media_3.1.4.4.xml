@@ -1,0 +1,61 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Link-State Protocol Operation</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[R1 Link-state Database]]></text>
+	</component>
+	
+	<component id="ID_txt02">
+		<text><![CDATA[R2 Link-state Database]]></text>
+	</component>
+	
+	<component id="ID_txt03">
+		<text><![CDATA[R3 Link-state Database]]></text>
+	</component>
+	
+	<component id="ID_txt04">
+		<text><![CDATA[R4 Link-state Database]]></text>
+	</component>
+	
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Link update from R1</b>]]></text>
+	</component>
+	
+	<component id="ID_txt06">
+		<text><![CDATA[<b>Link update from R1</b>]]></text>
+	</component>
+	
+	<component id="ID_txt07">
+		<text><![CDATA[Link-state protocols forward updates when the state of a link changes.]]></text>
+	</component>
+	
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+</textcomponents>

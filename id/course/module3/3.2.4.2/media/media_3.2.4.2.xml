@@ -1,0 +1,53 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>VLAN tidak ada</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<font face="_typewriter"><b>tunjukkan vlan<br/>tampilkan tabel alamat mac</b></font>]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[<font face="_typewriter"><b>tunjukkan vlan<br/>tampilkan antarmuka<br/>tampilkan antarmuka switchport</b></font>]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Tidak ada koneksi antar perangkat dalam VLAN yang sama.]]></text> 
+  </component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Apakah port di VLAN benar?]]></text>
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[Ya]]></text> 
+  </component>
+<component id="ID_s1_txt06">
+  <text><![CDATA[VLAN ada di database VLAN?]]></text> 
+  </component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Ya]]></text>
+</component>
+<component id="ID_s1_txt08">
+  <text><![CDATA[Verifikasi koneksi antar perangkat dalam VLAN yang sama.]]></text> 
+  </component>
+<component id="ID_s1_txt09">
+  <text><![CDATA[No]]></text> 
+  </component>
+<component id="ID_s1_txt10">
+<text><![CDATA[No]]></text>
+</component>
+<component id="ID_s1_txt11">
+  <text><![CDATA[Tetapkan port untuk VLAN yang benar.]]></text> 
+  </component>
+<component id="ID_s1_txt12">
+  <text><![CDATA[Buat VLAN di database VLAN.]]></text> 
+  </component>
+  
+  
+  
+  
+<component id="ID_s2_title">
+<text><![CDATA[<b>VLAN tidak ada</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.3.1.4 Enabling RIPv2</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>RIP and RIPng Routing</h1>
+        <h2>Configuring the RIP Protocol</h2>
+      </div>
+      <div id="content">
+          <p>By default, when a RIP process is configured on a Cisco router, it is running RIPv1, as shown in Figure 1. However, even though the router only sends RIPv1 messages, it can interpret both RIPv1 and RIPv2 messages. A RIPv1 router ignores the RIPv2 fields in the route entry. </p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> version 2 </b></span>router configuration mode command to enable RIPv2, as shown in Figure 2. Notice how the<span class="cmd"><b> show ip protocols </b></span>command verifies that R2 is now configured to send and receive version 2 messages only. The RIP process now includes the subnet mask in all updates, making RIPv2 a classless routing protocol.  </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Configuring<span class="cmd"><b> version 1 </b></span>enables RIPv1 only, while configuring<span class="cmd"><b> no version </b></span>returns the router to the default setting of sending version 1 updates but listening for version 1 or version 2 updates. </p>
+          <p></p>
+          <p>Figure 3 verifies that there are no RIP routes still in the routing table. This is because R1 is now only listening for RIPv2 updates. R2 and R3 are still sending RIPv1 updates. Therefore, the<span class="cmd"><b> version 2 </b></span>command must be configured on all routers in the routing domain. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 4 to enable RIPv2 on R2 and R3.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

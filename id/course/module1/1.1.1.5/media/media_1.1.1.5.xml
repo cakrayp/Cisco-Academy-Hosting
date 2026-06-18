@@ -1,0 +1,66 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+<text><![CDATA[Gedung B - Pemasaran dan Penjualan]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Gedung C - Teknik]]></text>
+</component>
+<component id="ID_s1_txt03">
+<text><![CDATA[Mengakses]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Distribusi]]></text>
+</component>
+<component id="ID_s1_txt05">
+<text><![CDATA[Inti]]></text>
+</component>
+<component id="ID_s1_txt06">
+<text><![CDATA[Distribusi]]></text>
+</component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Mengakses]]></text>
+</component>
+<component id="ID_s1_txt08">
+<text><![CDATA[Gedung A - Manajemen]]></text>
+</component>
+<component id="ID_s1_txt09">
+<text><![CDATA[Gedung D - Penelitian dan Pengembangan]]></text>
+</component>
+<component id="ID_s1_txt10">
+<text><![CDATA[Gedung E - Teknologi Informasi]]></text>
+</component>
+<component id="ID_s1_txt11">
+<text><![CDATA[Gedung F - Pusat Data]]></text>
+</component>
+
+
+
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Mengakses]]></text>
+</component>
+<component id="ID_s2_txt02">
+<text><![CDATA[Lantai 6 - Penelitian dan Pengembangan]]></text>
+</component>
+<component id="ID_s2_txt03">
+<text><![CDATA[Lantai 5 - Teknik]]></text>
+</component>
+<component id="ID_s2_txt04">
+<text><![CDATA[Lantai 4 - Server Peternakan]]></text>
+</component>
+<component id="ID_s2_txt05">
+<text><![CDATA[Lantai 3 - Teknologi Informasi]]></text>
+</component>
+<component id="ID_s2_txt06">
+<text><![CDATA[Lantai 2 - Manajemen]]></text>
+</component>
+<component id="ID_s2_txt07">
+<text><![CDATA[<b>Distribusi/ Inti yang Runtuh</b>]]></text>
+</component>
+<component id="ID_s2_txt08">
+<text><![CDATA[LEMAH]]></text>
+</component>
+<component id="ID_s2_txt09">
+<text><![CDATA[PSTN]]></text>
+</component>
+</textcomponents>

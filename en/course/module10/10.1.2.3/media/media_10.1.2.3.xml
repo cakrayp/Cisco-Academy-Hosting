@@ -1,0 +1,78 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>DHCPv4 Problems</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[Sorry, I cannot forward any broadcasts beyond your network...]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Looking for a DHCPv4 server….]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[DNS Server<br/>192.168.11.5]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[DHCPv4 Server<br/>192.168.11.6]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>PC1: No IPv4 Address</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>C:\WINDOWS\system32\cmd.exe</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Configuring DHCPv4 Step 1: Excluding IPv4 Addresses</b>]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>DHCPv4 Relay Commands</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[&lt;output omitted&gt;]]></text>
+</component>
+
+
+<component id="ID_s4_title">
+<text><![CDATA[<b>PC1: Renew IPv4 Address</b>]]></text>
+</component>
+
+
+<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+	</component>
+
+<component id="ID_s5_title">
+		<text><![CDATA[<b>Configure DHCPv4 Relay</b>]]></text>
+	</component>
+	<component id="ID_s5_SC5" fontFace='_typewriter' fontSize="10" class=" font10px">
+		<feedback id="fb" class=" font10px"><![CDATA[<b><font face="_sans" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font face="_sans"><b>Configure the DHCPv4 relay commands on the correct router for PC3 to receive an IPv4 address and other parameters from the DHCPv4 server. Exit configuration mode on any device that needs no configuration.</b></font>]]></existingcommands>
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[exit]]></correctresponse>
+		</command>		
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[exit]]></correctresponse>
+		</command>		
+		<command prompt="R3(config)#">
+			<correctresponse><![CDATA[interface g0/0]]></correctresponse>
+		</command>
+		<command prompt="R3(config-if)#">
+			<correctresponse><![CDATA[ip helper-address 192.168.11.6]]></correctresponse>
+				<deviceresponse><![CDATA[<font face='courier New' size="10" class=" font10px">R3(config-if)#</font>]]></deviceresponse> 					
+			<instruction><![CDATA[<font face="_sans"><b>You successfully configured the DHCPv4 Relay.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+</textcomponents>

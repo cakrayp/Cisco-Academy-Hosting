@@ -1,0 +1,23 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Mengedit ACL Bernomor Menggunakan Editor Teks</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Konfigurasi]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Langkah 1]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Langkah 2]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Langkah 3]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Langkah 4]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[&lt;Editor teks&gt;]]></text> 
+	</component>
+</textcomponents>

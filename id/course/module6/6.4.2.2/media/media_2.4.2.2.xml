@@ -1,0 +1,46 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Identifikasi Bagian yang Alamatnya Berbeda</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Identifikasi Bagian yang Alamatnya Berbeda</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Ubah Bagian dari Hex ke Biner</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Hitung jumlah bit yang cocok paling kiri</b>]]></text>
+</component>
+<component id="ID_s5_title">
+<text><![CDATA[<b>Tambahkan Nol Bit untuk Menentukan Alamat Jaringan yang Diringkas</b>]]></text>
+</component>
+<component id="ID_s6_title">
+<text><![CDATA[<b>Ubah Bagian Biner Kembali ke Hex</b>]]></text>
+</component>
+<component id="ID_s7_title">
+<text><![CDATA[<b>Hitung jumlah bit yang cocok paling kiri</b>]]></text>
+</component>
+
+<!-- slide 4 -->
+<component id='ID_s4_txt01'>
+	<text><![CDATA[16<br/>bit]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[16<br/>bit]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[16<br/>bit]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[13<br/>bit]]></text>
+</component>
+
+
+<component id='ID_s7_txt01'>
+	<text><![CDATA[<font face="_typewriter">2001:0DB8:ACAD:0000::/61</font><br>or<br><font face="_typewriter">2001:DB8:ACAD:0::/61</font><br>or<br><font face="_typewriter">2001:DB8:ACAD::/61</font>]]></text>
+</component>
+
+</textcomponents>

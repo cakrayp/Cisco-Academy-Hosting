@@ -1,0 +1,7 @@
+<textcomponents>
+
+<component id="ID_txt01">
+<text><![CDATA[</br><b>Upon completion of this chapter you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Describe NAT characteristics.</li><li>Describe the benefits and drawbacks of NAT.</li><li>Configure static NAT using the CLI.</li><li>Configure dynamic NAT using the CLI.</li><li>Configure PAT using the CLI.</li><li>Configure port forwarding using the CLI.</li><li>Configure NAT-PT (v6 to v4).</li><li>Use show commands to verify NAT operation.</li></textformat><br/>]]></text>
+</component>
+
+</textcomponents>

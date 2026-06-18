@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		<!-- Slide 1 -->
+			<slide>
+			<!-- Title -->
+				<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>	
+				
+			<!-- Lazy text-->		
+				<element type="TEXT" compId="ID_s1_txt01" width="430" x="5" y="70" align="left" expand="up" />
+				<element type="TEXT" compId="ID_s1_txt02" width="430" x="5" y="220" align="left" expand="up" />				
+				
+			<!-- Router text-->		
+				<element type="ROUTER" textId="ID_r1_txt01" x="3.85" y="94.85" width="433.25" height="74.45" size="10"/>	
+				<element type="ROUTER" textId="ID_r1_txt02" x="3.85" y="239.85" width="433.25" height="74.45" size="10"/>					
+				
+			</slide>
+		<!-- Slide 2 -->
+			<slide>			
+				<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>	
+			<!-- Router text-->		
+				<element type="ROUTER" textId="ID_r2_txt01" x="3.85" y="27.1" width="433.25" height="364.8" size="10"/>
+			</slide>
+		
+	
+	</slide>
+	<!-- Router text -->
+	
+		<text id="ID_r1_txt01"><![CDATA[
+<b>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">persamaan 23</span><br/>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">persamaan 21</span><br/>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">persamaan 20</span><br/></b>
+]]></text>
+		
+		<text id="ID_r1_txt02"><![CDATA[
+<b>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">misalnya telnet</span><br/>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">persamaan ftp</span><br/>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 apa saja<span class="orange">eq ftp-data</span><br/></b>
+]]></text>
+		
+		<text id="ID_r2_txt01"><![CDATA[
+<pre> R1(config)# <b>daftar akses 101 izin tcp ada persamaan apa pun?</b>
+   <b>&lt;0-65535&gt;</b>    Port number
+   <b>bgp</b>          Border Gateway Protocol (179)
+   <b>biaya</b>      Character generator (19)
+   <b>cmd</b>          Remote commands (rcmd, 514)
+   <b>siang hari</b>      Daytime (13)
+   <b>membuang</b>      Discard (9)
+   <b>domain</b>       Domain Name Service (53)
+   <b>menetes</b>         Dynamic Routing Information Protocol (3949)
+   <b>gema</b>         Echo (7)
+   <b>eksekutif</b>         Exec (rsh, 512)
+   <b>jari</b>       Finger (79)
+   <b>ftp</b>          File Transfer Protocol (21)
+   <b>ftp-data</b>     FTP data connections (20)
+   <b>menggali</b>       Gopher (70)
+   <b>nama host</b>     NIC hostname server (101)
+   <b>identitas</b>        Ident Protocol (113)
+   <b>irc</b>          Internet Relay Chat (194)
+   <b>klogin</b>       Kerberos login (543)
+   <b>cangkang</b>       Kerberos shell (544)
+   <b>login</b>        Login (rlogin, 513)
+   <b>lpd</b>          Printer service (515)
+   <b>nntp</b>         Network News Transport Protocol (119)
+   <b>pim-auto-rp</b>  PIM Auto-RP (496)
+   <b>pop2</b>         Post Office Protocol v2 (109)
+   <b>pop3</b>         Post Office Protocol v3 (110)
+   <b>smtp</b>         Simple Mail Transport Protocol (25)
+   <b>sunrpc</b>       Sun Remote Procedure Call (111)
+   <b>tacac</b>       TAC Access Control System (49)
+   <b>bicara</b>         Talk (517)
+   <b>telnet</b>       Telnet (23)
+   <b>waktu</b>         Time (37)
+   <b>uucp</b>         Unix-to-Unix Copy Program (540)
+   <b>siapa yang</b>        Nicname (43)
+   <b>www</b>          World Wide Web (HTTP, 80)
+
+ R1(config)# <b>daftar akses 101 izin tcp apa pun persamaan apa pun</b> 
+ 
+</pre>
+]]></text>
+		
+</data>

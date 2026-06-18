@@ -1,0 +1,23 @@
+<textcomponents>
+
+<component id="ID_title">
+  <text><![CDATA[<b>CIDR = Efisien</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[<b>Kelas A (1<span>–</span>126)</b><br/># kemungkinan jaringan: 126<br/># Host/Net: 16.777.214<br/>Maks. # Tuan rumah: 16.777.214]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[<b>Kelas B (128<span>–</span>191)</b><br/># kemungkinan jaringan: 16.384<br/># Host/Net: 65.534<br/>Maks. # Tuan rumah: 1.073.709.056]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[<b>Kelas C (192<span>–</span>223)</b><br/># kemungkinan jaringan: 2.097.152<br/># Host/Net: 254<br/>Maks. # Tuan rumah: 532.676.608]]></text> 
+</component>
+  
+<component id="ID_txt04">
+  <text><![CDATA[CIDR memungkinkan pelanggan menerima alokasi ruang alamat jaringan berdasarkan kebutuhan sebenarnya, bukan pada blok yang telah ditentukan berdasarkan kelas alamat.]]></text> 
+</component>
+
+</textcomponents>

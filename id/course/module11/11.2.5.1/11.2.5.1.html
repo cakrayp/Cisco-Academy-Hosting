@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.5.1 NAT untuk IPv6?</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.5.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Konfigurasi NAT dan IPv6</h2>
+</div>
+<div id="content">
+<p>Sejak awal tahun 1990an, kekhawatiran mengenai berkurangnya ruang alamat IPv4 telah menjadi prioritas IETF. Kombinasi alamat IPv4 pribadi RFC 1918 dan NAT berperan penting dalam memperlambat penipisan ini. NAT memiliki kelemahan yang signifikan, dan pada bulan Januari 2011, IANA mengalokasikan alamat IPv4 terakhirnya ke RIR.</p>
+<p></p>
+<p>Salah satu manfaat yang tidak disengaja dari NAT untuk IPv4 adalah ia menyembunyikan jaringan pribadi dari Internet publik. NAT memiliki keuntungan dalam memberikan tingkat keamanan yang dirasakan dengan menolak komputer di Internet publik mengakses host internal. Namun, hal ini tidak boleh dianggap sebagai pengganti keamanan jaringan yang tepat, seperti yang disediakan oleh firewall.</p>
+<p></p>
+<p>Dalam RFC 5902, Internet Architecture Board (IAB) menyertakan kutipan berikut mengenai terjemahan alamat jaringan IPv6:</p>
+<p></p>
+<p>"Biasanya dianggap bahwa kotak NAT memberikan satu tingkat perlindungan karena host eksternal tidak dapat secara langsung memulai komunikasi dengan host di belakang NAT. Namun, kita tidak boleh bingung antara kotak NAT dengan firewall. Seperti yang dibahas dalam [RFC4864], Bagian 2.2, tindakan penerjemahan tidak memberikan keamanan itu sendiri. Fungsi pemfilteran stateful dapat memberikan tingkat perlindungan yang sama tanpa memerlukan fungsi terjemahan."</p>
+<p></p>
+<p>IPv6 dengan alamat 128-bit menyediakan 340 alamat undecillion. Oleh karena itu, ruang alamat tidak menjadi masalah. IPv6 dikembangkan dengan tujuan menjadikan NAT untuk IPv4 dan terjemahannya antara alamat IPv4 publik dan privat tidak diperlukan. Namun, IPv6 mengimplementasikan bentuk NAT. IPv6 mencakup ruang alamat pribadi IPv6 dan NAT, yang diterapkan secara berbeda dibandingkan untuk IPv4.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

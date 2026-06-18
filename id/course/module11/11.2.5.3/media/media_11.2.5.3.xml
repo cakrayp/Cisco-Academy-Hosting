@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>NAT64</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Internet IPv4</b>]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Internet IPv6</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<b>Jaringan Khusus IPv6</b>]]></text> 
+  </component>
+  <component id="ID_txt04">
+  <text><![CDATA[<b>IPv4<br/>Paket</b>]]></text> 
+  </component> 
+<component id="ID_txt05">
+  <text><![CDATA[<b>IPv6<br/>Internet</b>]]></text> 
+  </component>  
+<component id="ID_txt06">
+  <text><![CDATA[<b>IPv6<br/>Paket</b>]]></text> 
+  </component>
+  <component id="ID_txt07">
+  <text><![CDATA[<b>IPv6<br/>Paket</b>]]></text> 
+  </component>
+   <component id="ID_txt08">
+  <text><![CDATA[Arus Lalu Lintas yang Diterjemahkan NAT64]]></text> 
+  </component>  
+  <component id="ID_txt09">
+  <text><![CDATA[<b>Perute NAT64</b>]]></text> 
+  </component>
+   <component id="ID_txt10">
+  <text><![CDATA[Arus Lalu Lintas IPv6 Asli]]></text> 
+  </component>
+</textcomponents>

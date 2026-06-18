@@ -1,0 +1,23 @@
+<textcomponents>
+
+<component id="ID_title">
+  <text><![CDATA[<b>CIDR = Efficient</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[<b>Class A (1 <span>–</span> 126)</b><br/># of possible networks: 126<br/># of Hosts/Net: 16,777,214<br/>Max. # Hosts: 16,777,214]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[<b>Class B  (128 <span>–</span> 191)</b><br/># of possible networks: 16,384<br/># of Hosts/Net: 65,534<br/>Max. # Hosts: 1,073,709,056]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[<b>Class C (192 <span>–</span> 223)</b><br/># of possible networks: 2,097,152<br/># of Hosts/Net: 254<br/>Max. # Hosts: 532,676,608]]></text> 
+</component>
+  
+<component id="ID_txt04">
+  <text><![CDATA[CIDR allows customers to receive allocation of network address space based on actual requirements, not on predefined blocks based on address class.]]></text> 
+</component>
+
+</textcomponents>

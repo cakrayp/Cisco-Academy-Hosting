@@ -1,0 +1,42 @@
+<textcomponents>
+<component id="ID_title">
+  <text><![CDATA[<b>What Is an ACL?</b>]]></text> 
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Allow Email Deny Telnet]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[No video to S1<br/>No access to S2 for S1]]></text> 
+</component>
+<component id="ID_txt04">
+  <text><![CDATA[HR access]]></text> 
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[HR Subnet<br/>172.17.0.0/20]]></text> 
+</component>
+<component id="ID_txt06">
+  <text><![CDATA[No updates<br/>No FTP<br/>No web]]></text> 
+</component>
+
+
+
+<component id="ID_acl_txt01">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt02">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt03">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt04">
+  <text><![CDATA[ACL]]></text> 
+</component>
+
+</textcomponents>
+
+
+

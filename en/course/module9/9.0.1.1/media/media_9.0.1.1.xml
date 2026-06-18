@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Explain how ACLs are used to filter traffic.</li><li>Compare standard and extended IPv4 ACLs.</li><li>Explain how ACLs use wildcard masks.</li><li>Explain the guidelines for creating ACLs.</li><li>Explain the guidelines for placement of ACLs.</li><li>Configure standard IPv4 ACLs to filter traffic according to networking requirements.</li><li>Modify a standard IPv4 ACL using sequence numbers.</li><li>Configure a standard ACL to secure vty access.</li><li>Explain the structure of an extended access control entry (ACE).</li><li>Configure extended IPv4 ACLs to filter traffic according to networking requirements.</li><li>Configure an ACL to limit debug output.</li><li>Explain how a router processes packets when an ACL is applied.</li><li>Troubleshoot common ACL errors using CLI commands.</li><li>Compare IPv4 and IPv6 ACL creation.</li><li>Configure IPv6 ACLs to filter traffic according to networking requirements.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.2.2.2 Protokol Perutean Interior-Gateway yang Ditingkatkan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Dinamis Vektor Jarak</h1>
+<h2>Jenis Protokol Perutean Vektor Jarak</h2>
+</div>
+<div id="content">
+<p>Interior Gateway Routing Protocol (IGRP) adalah protokol perutean IPv4 berpemilik pertama yang dikembangkan oleh Cisco pada tahun 1984. Protokol ini menggunakan karakteristik desain berikut:</p>
+<p>
+<ul>
+<li>Bandwidth, penundaan, beban, dan keandalan digunakan untuk membuat metrik komposit.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pembaruan perutean disiarkan setiap 90 detik, secara default.</li>
+</ul>
+</p>
+<p></p>
+<p>Pada tahun 1992, IGRP digantikan oleh Enhanced IGRP (EIGRP). Seperti RIPv2, EIGRP juga memperkenalkan dukungan untuk VLSM dan CIDR. EIGRP meningkatkan efisiensi, mengurangi pembaruan routing, dan mendukung pertukaran pesan yang aman.</p>
+<p></p>
+<p>Tabel pada gambar merangkum perbedaan antara IGRP dan EIGRP.</p>
+<p></p>
+<p>EIGRP juga memperkenalkan:</p>
+<p>
+<ul>
+<li>
+<b>Pembaruan yang dipicu terbatas</b>- Itu tidak mengirimkan pembaruan berkala. Hanya perubahan tabel routing yang disebarkan, setiap kali terjadi perubahan. Hal ini mengurangi jumlah beban yang ditempatkan protokol perutean pada jaringan. Pembaruan yang dipicu terbatas berarti EIGRP hanya mengirimkan ke tetangga yang membutuhkannya. Ini menggunakan lebih sedikit bandwidth, terutama di jaringan besar dengan banyak rute.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Halo mekanisme keepalive</b>- Pesan kecil Hello secara berkala dipertukarkan untuk menjaga kedekatan dengan router tetangga.  Ini berarti penggunaan sumber daya jaringan yang sangat rendah selama pengoperasian normal, dibandingkan pembaruan berkala.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Mempertahankan tabel topologi</b>- Mempertahankan semua rute yang diterima dari tetangga (tidak hanya jalur terbaik) dalam tabel topologi. DUAL dapat memasukkan rute cadangan ke dalam tabel topologi EIGRP.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Konvergensi yang cepat</b>- Dalam sebagian besar kasus, ini adalah IGP tercepat yang melakukan konvergensi karena ia mempertahankan rute alternatif, sehingga memungkinkan konvergensi hampir seketika. Jika rute utama gagal, router dapat menggunakan rute alternatif yang telah diidentifikasi.  Peralihan ke rute alternatif terjadi secara langsung dan tidak melibatkan interaksi dengan router lain.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Dukungan protokol beberapa lapisan jaringan</b>- EIGRP menggunakan Protocol Dependent Modules (PDM), yang berarti bahwa ini adalah satu-satunya protokol yang menyertakan dukungan untuk protokol selain IPv4 dan IPv6, seperti IPX dan AppleTalk lama.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

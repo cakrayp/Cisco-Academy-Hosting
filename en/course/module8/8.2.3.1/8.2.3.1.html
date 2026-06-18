@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.3.1 OSPF Metric = Cost</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Cost</h2>
+      </div>
+      <div id="content">
+          <p>Recall that a routing protocol uses a metric to determine the best path of a packet across a network. A metric gives indication of the overhead that is required to send packets across a certain interface. OSPF uses cost as a metric. A lower cost indicates a better path than a higher cost.</p>
+          <p></p>
+          <p>The cost of an interface is inversely proportional to the bandwidth of the interface. Therefore, a higher bandwidth indicates a lower cost. More overhead and time delays equal a higher cost. Therefore, a 10-Mb/s Ethernet line has a higher cost than a 100-Mb/s Ethernet line.</p>
+          <p></p>
+          <p>The formula used to calculate the OSPF cost is:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>Cost</b>
+                </span>
+                <span class="cmd"> = </span>
+                <span class="cmd">
+                  <i>
+                    <u>reference bandwidth</u>
+                  </i>
+                </span>
+                <span class="cmd"> / </span>
+                <span class="cmd">
+                  <i>
+                    <u>interface bandwidth</u>
+                  </i>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The default reference bandwidth is 10^8 (100,000,000); therefore, the formula is:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>Cost</b>
+                </span>
+                <span class="cmd"> = </span>
+                <span class="cmd">
+                  <u>100,000,000 bps</u>
+                </span>
+                <span class="cmd"> /</span>
+                <span class="cmd">
+                  <b></b>
+                </span>
+                <span class="cmd">
+                  <i>
+                    <u>interface bandwidth in bps</u>
+                  </i>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Refer to the table in the figure for a breakdown of the cost calculation. Notice that FastEthernet, Gigabit Ethernet, and 10 GigE interfaces share the same cost, because the OSPF cost value must be an integer. Consequently, because the default reference bandwidth is set to 100 Mb/s, all links that are faster than Fast Ethernet also have a cost of 1. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

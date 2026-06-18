@@ -1,0 +1,202 @@
+<textcomponents>
+
+<!--SCREEN 1-->  
+
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Topology – Configuring Standard ACLs</b><br/><br/>Use this network topology diagram in answering the three scenarios, you may return to this topology again as needed. Click button 2 to continue this activity.]]></text>
+</component>
+
+<!-- SCREEN 2 Drag and Drop -->  
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Scenario 1 – Configuring Standard ACLs</b><br/><br/>Refer to the network topology diagram as needed to complete this scenario. Drag the commands into the spaces provided in the correct sequence (top to bottom) to configure and apply a standard ACL that will control entry into the 192.168.1.0 LAN. The 192.168.3.77 host should not be able to access this LAN but all other hosts on the 192.168.3.0 and 192.168.4.0 networks should be permitted access.Click button 3 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s2_target_header'>
+	<text><![CDATA[<b>R1 Configuration Commands:</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 44 in</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 44 out</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 permit 192.168.4.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/0</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 deny 192.168.3.77 0.0.0.0</font>]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 permit 192.168.3.0 0.0.0.255</font>]]></text>
+</component>
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully ordered the ACL configuration commands. Click Button 3 to continue.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully ordered the ACL configuration commands. Please click Reset to again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+
+<!--SCREEN 3 Drag and Drop -->  
+
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Scenario 2 – Configuring Standard ACLs</b><br/><br/>Refer to the network topology diagram as needed to complete this scenario. Drag the commands into the spaces provided in the correct sequence (top to bottom) to configure and apply a standard ACL that will control access to host 192.168.4.12. Both the 192.168.1.66 host and all hosts in the 192.168.2.0 LAN should be permitted access to this host. All other networks should not be able to access the 192.168.4.12 host.Click button 4 to continue this activity.
+]]></text>
+</component>
+
+<component id='ID_s3_target_header'>
+	<text><![CDATA[<b>R2 Configuration Commands:</b>]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 permit 192.168.1.66 0.0.0.0</font>]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 permit 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s3_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 deny 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s3_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/1</font>]]></text>
+</component>
+
+<component id='ID_s3_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 66 out</font>]]></text>
+</component>
+<component id='ID_s3_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 66 in</font>]]></text>
+</component>
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[You have successfully ordered the ACL configuration commands. Click Button 4 to continue.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully ordered the ACL configuration commands. Please click Reset to again.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+<!--SCREEN 4 Drag and Drop -->  
+
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Scenario 3 – Configuring Standard ACLs</b><br/><br/>Refer to the network topology diagram as needed to complete this scenario. Drag the commands into the spaces provided in the correct sequence (top to bottom) to configure and apply a standard ACL that will control access to both the 192.168.3.0 LAN and 192.168.4.0 LAN. All hosts in the 192.168.1.0 LAN should be permitted access to these two networks. The 192.168.2.0 network should not have access to these networks.
+]]></text>
+</component>
+
+<component id='ID_s4_target_header'>
+	<text><![CDATA[<b>R2 Configuration Commands:</b>]]></text>
+</component>
+
+<component id='ID_s4_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 permit 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s4_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 88 in</font>]]></text>
+</component>
+
+<component id='ID_s4_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 deny 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s4_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0</font>]]></text>
+</component>
+
+<component id='ID_s4_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/0</font>]]></text>
+</component>
+<component id='ID_s4_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 permit 192.168.1.0 0.0.0.255</font>]]></text>
+</component>
+
+
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[You have successfully ordered the ACL configuration commands. ]]></text>
+</component>
+
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully ordered the ACL configuration commands. Please click Reset to again.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+
+</textcomponents>

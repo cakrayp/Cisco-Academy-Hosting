@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.2.1 Jenis Cisco IPv4 ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>ACL Standar versus IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>Dua jenis Cisco IPv4 ACL adalah standar dan diperluas.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Cisco IPv6 ACL mirip dengan ACL yang diperluas IPv4 dan dibahas di bagian selanjutnya.</p>
+<p></p>
+<p>
+<b>ACL standar</b>
+</p>
+<p></p>
+<p>ACL standar dapat digunakan untuk mengizinkan atau menolak lalu lintas hanya dari alamat IPv4 sumber. Tujuan paket dan port yang terlibat tidak dievaluasi. Contoh pada Gambar 1 mengizinkan semua lalu lintas dari jaringan 192.168.30.0/24. Karena tersirat "tolak apa pun" di akhir, semua lalu lintas lainnya diblokir dengan ACL ini. ACL standar dibuat dalam mode konfigurasi global.</p>
+<p></p>
+<p>
+<b>ACL yang diperluas</b>
+</p>
+<p></p>
+<p>ACL yang diperluas memfilter paket IPv4 berdasarkan beberapa atribut:</p>
+<p>
+<ul>
+<li>Jenis protokol</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Alamat IPv4 sumber</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Alamat IPv4 tujuan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Port sumber TCP atau UDP</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Port TCP atau UDP tujuan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Informasi jenis protokol opsional untuk kontrol yang lebih baik</li>
+</ul>
+</p>
+<p></p>
+<p>Pada Gambar 2, ACL 103 mengizinkan lalu lintas yang berasal dari alamat mana pun di jaringan 192.168.30.0/24 ke jaringan IPv4 mana pun jika port host tujuan adalah 80 (HTTP). ACL yang diperluas dibuat dalam mode konfigurasi global.</p>
+<p></p>
+<p>Perintah untuk ACL dijelaskan dalam beberapa topik berikutnya.</p>
+<p></p>
+<p>
+<b>Catatan</b>: ACL standar dan diperpanjang dibahas lebih rinci nanti di bab ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide type="MBAR">
+	<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+	<element type="ROUTER" textId="ID_static_1" x="5" y="63.1" width="430" height="47.1" />
+	<element type="ROUTER" textId="ID_router_txt1" x="5" y="139.2" width="430" height="55.45" />
+	<element type="ROUTER" textId="ID_router_txt2" x="5" y="216.5" width="430" height="94.75" />	
+	<element type="ROUTER" textId="ID_router_txt3" x="5" y="332.3" width="430" height="64.9" />	
+	<element type="TEXT" compId="ID_txt01" x="5" y="45" width="433.1" expand="up" align="left" />
+	<element type="TEXT" compId="ID_txt02" x="5" y="120" width="433.1" expand="up" align="left" />
+	<element type="TEXT" compId="ID_txt03" x="5" y="200" width="433.1" expand="up" align="left" />
+	<element type="TEXT" compId="ID_txt04" x="5" y="314" width="433.1" expand="up" align="left" />	
+	</slide>	
+	
+	<slide>
+	<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>
+	<element type="IMAGE" src="10_2_3_1.png" x="0" y="0" width="470" height="400" />
+	<element type="ROUTER" textId="ID_router_txt4" x="5" y="149.7" width="430" height="183.55" />	
+	<element type="TEXT" compId="ID_txt06" x="317" y="97" width="114.5" expand="down" align="center" class="font11px" />
+	<element type="TEXT" compId="ID_txt05" x="1" y="97" width="154.6" expand="down" align="center" class="font11px" />
+	<element type="TEXT" id="ID_static_2" text="G0/1" x="86" y="77" align="center" width="22.2" />
+	<element type="TEXT" id="ID_static_3" text="G0/1" x="322" y="77" align="center" width="22.2" />	
+	</slide>
+</slide>
+	<text id="ID_static_1"><![CDATA[<pre>Router(config)# <b>perutean unicast ipv6</b></pre>]]></text>
+	<text id="ID_router_txt1"><![CDATA[<pre>Router(config)# <b>kumpulan dhcp ipv6</b> pool-name
+Router(config-dhcpv6)#</pre>]]></text>
+	<text id="ID_router_txt2"><![CDATA[<pre>Router(config-dhcpv6)# <b>alamat</b><span class="new1">awalan/panjang</span> [<b>seumur hidup</b>
+                       <span class="new1">valid-seumur hidup disukai-seumur hidup</span>
+                       | <b>tak terbatas</b>]         
+Router(config-dhcpv6)# <span class="new"><b>server dns</b></span><span class="new1">alamat-server-dns</span>
+Router(config-dhcpv6)# <span class="new"><b>nama domain</b></span><span class="new1">nama domain</span></pre>]]></text>
+	<text id="ID_router_txt3"><![CDATA[<pre>Router(config)# <b>antarmuka</b> <span class="new1">ketik nomor</span>
+Router(config-if)# <b>server dhcp ipv6</b> <span class="new1">nama kolam</span>
+Router(config-if)# <b>ipv6 dan bendera konfigurasi terkelola</b></pre>]]></text>
+	<text id="ID_router_txt4"><![CDATA[<pre>R1(config)# <b>perutean unicast ipv6</b>
+R1(config)# <b>ipv6 dhcp pool IPV6-STATEFUL</b>
+R1(config-dhcpv6)# <b>awalan alamat 2001:DB8:CAFE:1::/64</b>
+                   <b>seumur hidup tak terbatas</b>
+R1(config-dhcpv6)# <b>dns-server 2001:db8:cafe:aaaa::5</b>
+R1(config-dhcpv6)# <b>contoh nama domain.com</b>
+R1(config-dhcpv6)# <b>KELUAR</b>
+R1(config)# <b>antarmuka g0/1</b>
+R1(config-if)# <b>alamat ipv6 2001:db8:cafe:1::1/64</b>
+R1(config-if)# <b>server dhcp ipv6 IPV6-STATEFUL</b>
+R1(config-if)# <b>ipv6 dan bendera konfigurasi terkelola</b>
+</pre>]]></text>
+</data>

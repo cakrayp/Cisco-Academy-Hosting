@@ -1,0 +1,274 @@
+<textcomponents>
+
+<!--Feedback for use by actionscript-->
+<!--Do not need to duplicate for each activity-->
+
+
+
+<component id="ID_blankTitle">
+<text><![CDATA[<b>Tidak Dijawab</b>]]></text>
+</component>
+
+<component id="ID_blankBody">
+<text><![CDATA[Silakan pilih jawaban.]]></text>
+</component>
+
+<!--slide 1-->
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 1: Identifikasi Solusi untuk Masalah Perutean Antar-VLAN</b><br/><br/>Anda sedang memecahkan masalah antar-VLAN dan perlu memeriksa router dan switch Anda untuk operasi antar-VLAN. Gunakan output yang ditampilkan dan tentukan perintah mana yang menghasilkan output. Klik tombol di sebelah jawaban Anda. Klik Tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+
+
+<component id='ID_s1_output02'>
+	<text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s1_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s1_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s1_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s1_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s1_correctBody">
+<text><![CDATA[Anda telah berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan output yang ditampilkan. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s1_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s1_incorrectBody">
+<text><![CDATA[Anda belum berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan keluaran yang ditampilkan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+<!--slide 2-->
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 2: Identifikasi Solusi untuk Masalah Perutean Antar-VLAN</b><br/><br/>Anda sedang memecahkan masalah antar-VLAN dan perlu memeriksa router dan switch Anda untuk operasi antar-VLAN. Gunakan output yang ditampilkan dan tentukan perintah mana yang menghasilkan output. Klik tombol di sebelah jawaban Anda. Klik Tombol 3 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+<component id='ID_s2_output01'>
+	<text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s2_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s2_correctBody">
+<text><![CDATA[Anda telah berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan output yang ditampilkan. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s2_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s2_incorrectBody">
+<text><![CDATA[Anda belum berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan keluaran yang ditampilkan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+<!--slide 3-->
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 3: Identifikasi Solusi untuk Masalah Perutean Antar-VLAN</b><br/><br/>Anda sedang memecahkan masalah antar-VLAN dan perlu memeriksa router dan switch Anda untuk operasi antar-VLAN. Gunakan output yang ditampilkan dan tentukan perintah mana yang menghasilkan output. Klik tombol di sebelah jawaban Anda. Klik Tombol 4 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+<component id="ID_s3_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s3_correctBody">
+<text><![CDATA[Anda telah berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan output yang ditampilkan. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s3_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s3_incorrectBody">
+<text><![CDATA[Anda belum berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan keluaran yang ditampilkan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+<!--slide 4-->
+<component id="ID_s4_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 4: Identifikasi Solusi untuk Masalah Perutean Antar-VLAN</b><br/><br/>Anda sedang memecahkan masalah antar-VLAN dan perlu memeriksa router dan switch Anda untuk operasi antar-VLAN. Gunakan output yang ditampilkan dan tentukan perintah mana yang menghasilkan output. Klik tombol di sebelah jawaban Anda. Klik Tombol 5 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s4_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s4_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s4_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s4_correctBody">
+<text><![CDATA[Anda telah berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan output yang ditampilkan. Klik Tombol 5 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s4_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s4_incorrectBody">
+<text><![CDATA[Anda belum berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan keluaran yang ditampilkan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+<!--slide 5-->
+<component id="ID_s5_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 5: Identifikasi Solusi untuk Masalah Perutean Antar-VLAN</b><br/><br/>Anda sedang memecahkan masalah antar-VLAN dan perlu memeriksa router dan switch Anda untuk operasi antar-VLAN. Gunakan output yang ditampilkan dan tentukan perintah mana yang menghasilkan output. Klik tombol di sebelah jawaban Anda.]]></text>
+</component>
+
+<component id='ID_s5_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s5_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s5_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s5_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s5_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s5_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s5_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s5_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_s5_correctBody">
+<text><![CDATA[Anda telah berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan output yang ditampilkan.]]></text>
+</component>
+
+<component id="ID_s5_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_s5_incorrectBody">
+<text><![CDATA[Anda belum berhasil mengidentifikasi perintah yang digunakan untuk menghasilkan keluaran yang ditampilkan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+</textcomponents>

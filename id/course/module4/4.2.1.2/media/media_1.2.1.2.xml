@@ -1,0 +1,102 @@
+<textcomponents>
+
+   <component id="ID_title01">
+      <text><![CDATA[<b>PC1 Mengirim Paket ke PC2</b>]]></text>
+   </component>
+
+   <component id="ID_header1">
+      <text><![CDATA[<b>Bingkai Tautan Data Lapisan 2</b>]]></text>
+   </component>
+
+   <component id="ID_header2">
+      <text><![CDATA[<b>Data Layer 3 Paket</b>]]></text>
+   </component>
+   
+   <component id="ID_txt01">
+      <text><![CDATA[<b>Tujuan. MAC 00-10</b>]]></text>
+   </component>
+
+   <component id="ID_txt02">
+      <text><![CDATA[<b>Sumber MAC 0A-10</b>]]></text>
+   </component>
+
+   <component id="ID_txt03">
+      <text><![CDATA[Ketik 0x800]]></text>
+   </component> 
+
+   <component id="ID_txt04">
+      <text><![CDATA[<b>Sumber IP 192.168.1.10</b>]]></text>
+   </component>
+   
+   <component id="ID_txt05">
+      <text><![CDATA[<b>Tujuan. IP 192.168.4.10</b>]]></text>
+   </component>
+
+   <component id="ID_txt06">
+      <text><![CDATA[bidang IP]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[Data]]></text>
+   </component>
+
+   <component id="ID_txt08">
+      <text><![CDATA[Cuplikan]]></text>
+   </component>
+
+   <component id="ID_txt09">
+      <text><![CDATA[<b>Cache ARP PC1 untuk R1</b>]]></text>
+   </component>
+
+   <component id="ID_txt10">
+      <text><![CDATA[<b>Alamat IP</b>]]></text>
+   </component>
+
+   <component id="ID_txt11">
+      <text><![CDATA[<b>Alamat MAC</b>]]></text>
+   </component>
+
+
+<!--SPEECH BUBBLES-->
+   <component id="ID_speech01">
+      <text><![CDATA[Saya punya paket untuk PC2.]]></text>
+   </component>
+
+   <component id="ID_speech02">
+      <text><![CDATA[Jalan apa yang perlu diambil?]]></text>
+   </component>
+
+   <component id="ID_speech03">
+      <text><![CDATA[Saya melihat PC2 berada di jaringan yang berbeda.]]></text>
+   </component>
+
+   <component id="ID_speech04">
+      <text><![CDATA[Karena PC2 berada di jaringan yang berbeda, saya akan merangkum paket tersebut dan mengirimkannya ke router di jaringan SAYA. Biarkan saya menemukan alamat MAC itu….]]></text>
+   </component>
+   
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[Akhir]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Maju Cepat]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Berhenti sebentar]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Bermain]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Memutar ulang]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Awal]]></text>
+	</component>
+
+</textcomponents>

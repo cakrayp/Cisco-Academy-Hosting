@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.0.1.2 Stasiun Liburan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>VLAN</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>
+<b>Stasiun Liburan</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p></p>
+<p>Anda telah membeli rumah liburan di pantai untuk tujuan sewa. Ada tiga lantai identik di setiap tingkat rumah. Setiap lantai menawarkan satu televisi digital untuk digunakan penyewa.</p>
+<p></p>
+<p>Menurut penyedia layanan Internet lokal, hanya tiga stasiun yang dapat ditawarkan dalam satu paket televisi. Tugas Anda adalah memutuskan paket televisi mana yang Anda tawarkan kepada tamu Anda.</p>
+<p>
+<ul>
+<li>Bagilah kelas menjadi beberapa kelompok yang terdiri dari tiga siswa per kelompok.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pilih tiga stasiun berbeda untuk membuat satu paket berlangganan untuk setiap lantai rumah sewaan Anda.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Lengkapi PDF untuk kegiatan ini.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Bagikan jawaban refleksi kelompok Anda yang telah selesai kepada anggota kelas.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<a href="../../files/3.0.1.2%20Vacation%20Station%20Instructions.pdf" target="_blank">Aktivitas Kelas - Petunjuk Stasiun Liburan</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

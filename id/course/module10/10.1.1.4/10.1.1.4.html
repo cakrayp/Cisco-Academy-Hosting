@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.1.4 DHCPv4 Temukan dan Tawarkan Pesan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Operasi DHCPv4</h2>
+</div>
+<div id="content">
+<p>Jika klien dikonfigurasi untuk menerima pengaturan IPv4 secara dinamis dan ingin bergabung dengan jaringan, klien akan meminta nilai pengalamatan dari server DHCPv4. Klien mengirimkan pesan DHCPDISCOVER di jaringan lokalnya saat melakukan booting atau merasakan koneksi jaringan aktif. Karena klien tidak mempunyai cara untuk mengetahui subnet miliknya, pesan DHCPDISCOVER adalah siaran IPv4 (alamat IPv4 tujuan 255.255.255.255). Klien belum memiliki alamat IPv4 yang dikonfigurasi, sehingga alamat IPv4 sumber 0.0.0.0 digunakan.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 1, alamat IPv4 klien (CIADDR), alamat gateway default (GIADDR), dan subnet mask semuanya ditandai untuk menunjukkan bahwa alamat 0.0.0.0 digunakan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Informasi tidak diketahui dikirim sebagai 0.0.0.0.</p>
+<p></p>
+<p>Ketika server DHCPv4 menerima pesan DHCPDISCOVER, server akan merespons dengan pesan DHCPOFFER. Pesan ini berisi informasi konfigurasi awal untuk klien, termasuk alamat IPv4 yang ditawarkan server, subnet mask, durasi sewa, dan alamat IPv4 server DHCPv4 yang memberikan penawaran.</p>
+<p></p>
+<p>Pesan DHCPOFFER dapat dikonfigurasi untuk menyertakan informasi lain, seperti waktu perpanjangan sewa dan alamat DNS.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 2, server DHCP merespons DHCPDISCOVER dengan memberikan nilai ke CIADDR dan subnet mask. Bingkai dibuat menggunakan alamat perangkat keras klien (CHADDR) dan dikirim ke klien yang meminta.</p>
+<p></p>
+<p>Klien dan server mengirim pesan pengakuan, dan prosesnya selesai.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

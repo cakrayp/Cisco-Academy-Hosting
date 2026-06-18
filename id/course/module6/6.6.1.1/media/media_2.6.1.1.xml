@@ -1,0 +1,6 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Rute statis. . .</b><br/> <br/><textformat blockindent="-10"><ul class="bubbleBullets"><li>tidak diiklankan melalui jaringan, sehingga menghasilkan keamanan yang lebih baik.</li><li>menggunakan lebih sedikit bandwidth daripada protokol routing dinamis.</li><li>menggunakan jalur yang diketahui untuk mengirim data.</li></ul></textformat>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.4.1.1 Rencana VLAN</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.4.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>
+<b>Paket VLAN</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p>Anda sedang merancang jaringan switch VLAN untuk bisnis kecil hingga menengah Anda.</p>
+<p>Bisnis Anda memiliki ruang di dua lantai gedung bertingkat tinggi. Elemen berikut memerlukan pertimbangan dan akses VLAN untuk tujuan perencanaan:</p>
+<p>
+<ul>
+<li>Pengelolaan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Keuangan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Penjualan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sumber daya manusia</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Administrator jaringan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pengunjung umum ke lokasi bisnis Anda</li>
+</ul>
+</p>
+<p>Anda memiliki dua switch Cisco 3560-24PS.</p>
+<p>Gunakan program perangkat lunak pengolah kata untuk merancang skema jaringan VLAN Anda.</p>
+<p>Bagian 1 dari desain Anda harus menyertakan nama reguler departemen Anda, nama dan nomor VLAN yang disarankan, dan port switch mana yang akan ditetapkan ke setiap VLAN.</p>
+<p>Bagian 2 dari desain Anda harus mencantumkan bagaimana keamanan akan direncanakan untuk jaringan yang dialihkan ini.</p>
+<p>Ketika rencana VLAN Anda selesai, selesaikan pertanyaan refleksi dari PDF aktivitas ini.</p>
+<p>Simpan pekerjaan Anda.  Mampu menjelaskan dan mendiskusikan desain VLAN Anda dengan kelompok lain atau dengan kelas.</p>
+<p></p>
+<p>
+<a href="../../files/3.4.1.1%20VLAN%20Plan%20Instructions.pdf" target="_blank">Aktivitas Kelas - Petunjuk Rencana VLAN</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

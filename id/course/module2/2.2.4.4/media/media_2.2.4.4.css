@@ -1,0 +1,19 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+.mtitle{color:#0E6360 !important;}
+.tit font{font-size:11px !important;}
+
+@media all and (device-width: 768px) and (device-height: 1024px){
+  li {  margin-left: 8px !important;}
+}

@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[VLAN 18 Data]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[VLAN 17 Voice]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[VLAN 35 Wireless]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[VLAN 18 Data]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[VLAN 17 Voice]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[VLAN 35 Wireless]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[LAN switches can be divided into groups of ports called VLANs to improve network performance, management, and security.]]></text>
+</component>
+
+</textcomponents>

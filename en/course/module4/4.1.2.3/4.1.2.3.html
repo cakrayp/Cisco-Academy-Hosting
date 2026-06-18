@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.2.3 Document Network Addressing</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Connect Devices</h2>
+      </div>
+      <div id="content">
+          <p>When designing a new network or mapping an existing network, document the network. At a minimum, the documentation should identify:</p>
+          <p>
+            <ul>
+              <li>Device names</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Interfaces used in the design</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IP addresses and subnet masks</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Default gateway addresses</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>As the figure shows, this information is captured by creating two useful network documents:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Topology diagram </b>- Provides a visual reference that indicates the physical connectivity and logical Layer 3 addressing. Often created using software, such as Microsoft Visio.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>An addressing table </b>- A table that captures device names, interfaces, IPv4 addresses, subnet masks, and default gateway addresses.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

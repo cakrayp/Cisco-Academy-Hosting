@@ -1,0 +1,83 @@
+<textcomponents>
+
+<component id="ID_title11">
+	<text><![CDATA[<b>Cara Kerja ACL Standar</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[Apakah ada daftar akses standar pada antarmuka ini?]]></text>
+</component>
+
+<component id="ID_txt02">
+	<text><![CDATA[Apakah alamat sumber cocok dengan entri daftar ACL?]]></text> 
+</component>
+  
+<component id="ID_txt03">
+	<text><![CDATA[Mengizinkan atau menolak kondisi]]></text> 
+</component>
+  
+<component id="ID_txt04">
+	<text><![CDATA[Apakah alamat IP tujuan ada di tabel perutean?]]></text> 
+</component>
+  
+<component id="ID_txt05">
+	<text><![CDATA[Kirim ke antarmuka keluar]]></text> 
+</component>
+  
+<component id="ID_txt06">
+	<text><![CDATA[Pindah ke pernyataan berikutnya]]></text> 
+</component>
+  
+<component id="ID_txt07">
+  <text><![CDATA[Apakah ini entri terakhir di ACL?]]></text> 
+</component>
+  
+<component id="ID_txt08">
+  <text><![CDATA[Kirim pesan tujuan tidak ditemukan]]></text> 
+</component>
+  
+<component id="ID_txt11">
+  <text><![CDATA[Ya]]></text> 
+</component>
+  
+<component id="ID_txt12">
+  <text><![CDATA[Ya]]></text> 
+</component>
+  
+<component id="ID_txt13">
+  <text><![CDATA[Izin]]></text> 
+</component>
+  
+<component id="ID_txt14">
+  <text><![CDATA[Ya]]></text> 
+</component>
+  
+<component id="ID_txt15">
+  <text><![CDATA[Ya]]></text> 
+</component>
+  
+<component id="ID_txt16">
+  <text><![CDATA[No]]></text> 
+</component>
+  
+<component id="ID_txt17">
+  <text><![CDATA[No]]></text> 
+</component>
+  
+<component id="ID_txt18">
+  <text><![CDATA[No]]></text> 
+</component>
+  
+<component id="ID_txt19">
+  <text><![CDATA[Membantah]]></text> 
+</component>
+  
+<component id="ID_txt20">
+  <text><![CDATA[Paket masuk]]></text> 
+</component>
+
+<component id="ID_txt21">
+  <text><![CDATA[No]]></text> 
+</component>
+  
+</textcomponents>

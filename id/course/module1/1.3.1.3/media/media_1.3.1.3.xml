@@ -1,0 +1,59 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Jaringan Beralih Tanpa Batas</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Kampus Besar]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Pusat Data]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Blok Layanan]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[Tepi Internet]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[LEMAH]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[PSTN]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[Kampus Sedang]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Pusat Data]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[Blok Layanan]]></text>
+</component>
+
+<component id="ID_s1_txt11">
+<text><![CDATA[Kampus Kecil]]></text>
+</component>
+
+<component id="ID_s1_txt12">
+<text><![CDATA[Pusat Data]]></text>
+</component>
+
+<component id="ID_s1_txt13">
+<text><![CDATA[Blok Layanan]]></text>
+</component>
+
+</textcomponents>

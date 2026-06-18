@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.0.1.2 Vacation Station</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLANs</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Vacation Station</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario</b>
+          </p>
+          <p></p>
+          <p>You have purchased a vacation home at the beach for rental purposes. There are three identical floors on each level of the home. Each floor offers one digital television for renters to use.  </p>
+          <p></p>
+          <p>According to the local Internet service provider, only three stations may be offered within a television package. It is your job to decide which television packages you offer your guests.</p>
+          <p>
+            <ul>
+              <li>Divide the class into groups of three students per group.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Choose three different stations to make one subscription package for each floor of your rental home.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Complete the PDF for this activity.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Share your completed group-reflection answers with the class.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/3.0.1.2%20Vacation%20Station%20Instructions.pdf" target="_blank">Class Activity - Vacation Station Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

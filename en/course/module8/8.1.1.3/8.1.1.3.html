@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.1.3 Components of OSPF</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>Open Shortest Path First</h2>
+      </div>
+      <div id="content">
+          <p>All routing protocols share similar components. They all use routing protocol messages to exchange route information. The messages help build data structures, which are then processed using a routing algorithm. </p>
+          <p></p>
+          <p>The three main components of the OSPF routing protocol include:</p>
+          <p></p>
+          <p>
+            <b>Data Structures </b>
+          </p>
+          <p>OSPF creates and maintains three databases:  (see Figure 1). </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adjacency database </b>- Creates the neighbor table</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Link-state database (LSDB) </b>- Creates the topology table </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Forwarding database </b>- Creates the routing table</li>
+            </ul>
+          </p>
+          <p>These tables contain a list of neighboring routers to exchange routing information with and are kept and maintained in RAM. </p>
+          <p></p>
+          <p>
+            <b>Routing Protocol Messages</b>
+          </p>
+          <p>OSPF exchanges messages to convey routing information using five types of packets. These packets, as shown in Figure 2, are:</p>
+          <p>
+            <ul>
+              <li>Hello packet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Database description packet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Link-state request packet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Link-state update packet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Link-state acknowledgment packet</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>These packets are used to discover neighboring routers and also to exchange routing information to maintain accurate information about the network.</p>
+          <p></p>
+          <p>
+            <b>Algorithm </b>
+          </p>
+          <p>The CPU processes the neighbor and topology tables using Dijkstra’s SPF algorithm. The SPF algorithm is based on the cumulative cost to reach a destination. </p>
+          <p></p>
+          <p>The SPF algorithm creates an SPF tree by placing each router at the root of the tree and calculating the shortest path to each node. The SPF tree is then used to calculate the best routes. OSPF places the best routes into the forwarding database, which is used to make the routing table. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

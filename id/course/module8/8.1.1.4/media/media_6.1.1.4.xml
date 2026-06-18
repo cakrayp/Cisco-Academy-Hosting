@@ -1,0 +1,53 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Router Bertukar Paket Halo</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Router Pertukaran LSA</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>R1 Membuat Database Topologinya</b>]]></text> 
+  </component>
+<component id="ID_s4_title">
+  <text><![CDATA[<b>R1 Menjalankan Algoritma SPF</b>]]></text> 
+  </component>
+  <component id="ID_s5_title">
+  <text><![CDATA[<b>R1 Membuat Pohon SPF</b>]]></text> 
+  </component>
+  <component id="ID_s6_title">
+  <text><![CDATA[<b>Konten Pohon SPF R1</b>]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt01">
+	<text><![CDATA[Halo Paket]]></text> 
+  </component>
+  <component id="ID_s2_txt01">
+	<text><![CDATA[LSA]]></text> 
+  </component>
+  <component id="ID_s3_txt01">
+	<text><![CDATA[Tabel Topologi<br/>(LSDB)]]></text> 
+  </component>
+  <component id="ID_s4_txt01">
+	<text><![CDATA[Tabel Topologi<br/>(LSDB)]]></text> 
+  </component>
+  <component id="ID_s4_txt02">
+	<text><![CDATA[SPF]]></text> 
+  </component>
+  <component id="ID_s5_txt01">
+	<text><![CDATA[Tabel Topologi<br/>(LSDB)]]></text> 
+  </component>
+  <component id="ID_s5_txt02">
+	<text><![CDATA[SPF]]></text> 
+  </component>
+  <component id="ID_s6_txt01">
+	<text><![CDATA[<b>Tujuan</b>]]></text> 
+  </component>
+  <component id="ID_s6_txt02">
+	<text><![CDATA[<b>Jalur Terpendek</b>]]></text> 
+  </component>
+  <component id="ID_s6_txt03">
+	<text><![CDATA[<b>Biaya</b>]]></text> 
+  </component>
+  
+  
+</textcomponents>

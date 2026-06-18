@@ -1,0 +1,40 @@
+<textcomponents>
+   <component id="ID_s1_title">
+      <text><![CDATA[<b>Troubleshooting Switch Media Issues</b>]]></text>
+      </component>
+
+<component id="ID_txt01">
+   <text><![CDATA[Perform a show interface]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[Is the interface up?]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<textformat blockindent="-14"><li>Are there indications of EMI/noise? If yes, remove sources.</li><li>Verify the duplex setting is properly set on both ends.</li></textformat>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<textformat blockindent="-14"><li>Verify proper cables.</li><li>Check cables and connectors for damage.</li><li>Verify speed is properly set on both ends.</li></textformat>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[Is the problem solved?]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[Done]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[Document the work done and escalate the issue. ]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[Yes]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[No]]></text>
+   </component>
+<component id="ID_txt10">
+   <text><![CDATA[Yes]]></text>
+   </component>
+<component id="ID_txt11">
+   <text><![CDATA[No]]></text>
+   </component>
+
+	</textcomponents>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.2.1 Komunikasi Dupleks</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Port Sakelar</h2>
+</div>
+<div id="content">
+<p>Gambar tersebut mengilustrasikan komunikasi full-duplex dan half-duplex.</p>
+<p></p>
+<p>Komunikasi dupleks penuh meningkatkan kinerja LAN yang dialihkan.  Komunikasi full-duplex meningkatkan bandwidth efektif dengan memungkinkan kedua ujung koneksi mengirim dan menerima data secara bersamaan. Ini juga dikenal sebagai dua arah. Metode mengoptimalkan kinerja jaringan ini memerlukan segmentasi mikro.  LAN tersegmentasi mikro dibuat ketika port switch hanya memiliki satu perangkat yang terhubung dan beroperasi pada dupleks penuh. Hal ini menghasilkan domain tabrakan ukuran mikro pada satu perangkat.  Karena hanya ada satu perangkat yang terhubung, LAN tersegmentasi mikro bebas tabrakan.</p>
+<p></p>
+<p>Berbeda dengan komunikasi full-duplex, komunikasi half-duplex bersifat searah. Pengiriman dan penerimaan data tidak terjadi secara bersamaan. Komunikasi setengah dupleks menimbulkan masalah kinerja karena data hanya dapat mengalir dalam satu arah pada satu waktu, yang sering kali mengakibatkan tabrakan. Koneksi setengah dupleks biasanya terlihat pada perangkat keras lama, seperti hub. Komunikasi full-duplex telah menggantikan half-duplex di sebagian besar perangkat keras.</p>
+<p></p>
+<p>Kebanyakan NIC Ethernet dan Fast Ethernet yang dijual saat ini menawarkan kemampuan dupleks penuh. Gigabit Ethernet dan NIC 10Gb memerlukan koneksi dupleks penuh untuk beroperasi. Dalam mode dupleks penuh, sirkuit deteksi tabrakan pada NIC dinonaktifkan. Frame yang dikirimkan oleh dua perangkat yang terhubung tidak dapat bertabrakan karena perangkat tersebut menggunakan dua sirkuit terpisah di kabel jaringan. Koneksi dupleks penuh memerlukan sakelar yang mendukung konfigurasi dupleks penuh, atau koneksi langsung menggunakan kabel Ethernet antara dua perangkat.</p>
+<p></p>
+<p>Efisiensi konfigurasi Ethernet standar berbasis hub bersama biasanya berkisar antara 50 hingga 60 persen dari bandwidth yang disebutkan. Full-duplex menawarkan efisiensi 100 persen di kedua arah (transmisi dan penerimaan). Hal ini menghasilkan potensi penggunaan bandwidth yang dinyatakan sebesar 200 persen.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

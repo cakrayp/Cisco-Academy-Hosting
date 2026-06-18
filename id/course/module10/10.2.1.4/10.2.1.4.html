@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.1.4 Opsi SLAAC</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>SLAAC dan DHCPv6</h2>
+</div>
+<div id="content">
+<p>
+<b>Opsi SLAAC (khusus Iklan Router)</b>
+</p>
+<p></p>
+<p>SLAAC adalah opsi default pada router Cisco. Baik bendera M maupun bendera O diatur ke 0 di RA, seperti yang ditunjukkan pada gambar.</p>
+<p></p>
+<p>Opsi ini menginstruksikan klien untuk menggunakan informasi dalam pesan RA secara eksklusif. Ini termasuk informasi awalan, panjang awalan, server DNS, MTU, dan gateway default. Tidak ada informasi lebih lanjut yang tersedia dari server DHCPv6. Alamat unicast global IPv6 dibuat dengan menggabungkan awalan dari RA dan ID Antarmuka menggunakan EUI-64 atau nilai yang dihasilkan secara acak.</p>
+<p></p>
+<p>Pesan RA dikonfigurasikan pada antarmuka individual router. Untuk mengaktifkan kembali antarmuka SLAAC yang mungkin telah diatur ke opsi lain, flag M dan O perlu diatur ulang ke nilai awalnya 0. Hal ini dilakukan dengan menggunakan perintah mode konfigurasi antarmuka berikut:</p>
+<p></p>
+<p>
+<span class="cmd">Router(konfigurasi-jika)#</span>
+<span class="cmd">
+<b>no</b>
+</span>
+<span class="cmd"></span>
+<span class="cmd">
+<b>ipv6 dan bendera konfigurasi terkelola</b>
+</span>
+<span class="cmd"></span>
+</p>
+<p>
+<span class="cmd">Router(konfigurasi-jika)#</span>
+<span class="cmd">
+<b>tidak ada ipv6 dan bendera konfigurasi lainnya</b>
+</span>
+<span class="cmd"></span>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

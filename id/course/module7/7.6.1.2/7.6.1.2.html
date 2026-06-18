@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.6.1.2 Ringkasan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.6.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>Protokol perutean dinamis digunakan oleh router untuk memfasilitasi pertukaran informasi perutean antar router. Tujuan dari protokol perutean dinamis meliputi: penemuan jaringan jarak jauh, menjaga informasi perutean terkini, memilih jalur terbaik ke jaringan tujuan, dan kemampuan untuk menemukan jalur terbaik baru jika jalur saat ini tidak lagi tersedia. Meskipun protokol perutean dinamis memerlukan lebih sedikit overhead administratif dibandingkan perutean statis, protokol perutean dinamis memerlukan dedikasi sebagian sumber daya router untuk pengoperasian protokol, termasuk waktu CPU dan bandwidth tautan jaringan.</p>
+<p></p>
+<p>Jaringan biasanya menggunakan kombinasi perutean statis dan dinamis. Perutean dinamis adalah pilihan terbaik untuk jaringan besar dan perutean statis lebih baik untuk jaringan stub.</p>
+<p></p>
+<p>Protokol perutean bertanggung jawab untuk menemukan jaringan jarak jauh, serta menjaga keakuratan informasi jaringan. Ketika ada perubahan dalam topologi, protokol perutean menyebarkan informasi tersebut ke seluruh domain perutean. Proses membawa semua tabel routing ke keadaan konsistensi, dimana semua router dalam domain atau area routing yang sama memiliki informasi yang lengkap dan akurat tentang jaringan, disebut konvergensi. Beberapa protokol perutean berkumpul lebih cepat dibandingkan yang lain.</p>
+<p></p>
+<p>Protokol routing dapat diklasifikasikan menjadi classful atau classless, distance-vector atau link-state, dan protokol gateway interior atau protokol gateway eksterior.</p>
+<p></p>
+<p>Protokol vektor jarak menggunakan router sebagai “postingan tanda” di sepanjang jalur menuju tujuan akhir. Satu-satunya informasi yang diketahui router tentang jaringan jarak jauh adalah jarak atau metrik untuk mencapai jaringan tersebut dan jalur atau antarmuka mana yang digunakan untuk sampai ke sana. Protokol perutean vektor jarak tidak memiliki peta topologi jaringan yang sebenarnya.</p>
+<p></p>
+<p>Sebuah router yang dikonfigurasi dengan protokol routing link-state dapat membuat tampilan lengkap atau topologi jaringan dengan mengumpulkan informasi dari semua router lainnya.</p>
+<p></p>
+<p>Metrik digunakan oleh protokol perutean untuk menentukan jalur terbaik atau jalur terpendek untuk mencapai jaringan tujuan. Protokol perutean yang berbeda mungkin menggunakan metrik yang berbeda. Biasanya, metrik yang lebih rendah berarti jalur yang lebih baik. Metrik dapat ditentukan berdasarkan hop, bandwidth, penundaan, keandalan, dan beban.</p>
+<p></p>
+<p>Router terkadang mempelajari beberapa rute ke jaringan yang sama baik dari rute statis maupun protokol perutean dinamis. Ketika router mempelajari jaringan tujuan dari lebih dari satu sumber routing, router Cisco menggunakan nilai jarak administratif untuk menentukan sumber mana yang akan digunakan. Setiap protokol perutean dinamis memiliki nilai administratif unik, bersama dengan rute statis dan jaringan yang terhubung langsung. Semakin rendah nilai administratifnya, semakin disukai sumber rute tersebut. Jaringan yang terhubung langsung selalu menjadi sumber pilihan, diikuti oleh rute statis dan berbagai protokol perutean dinamis.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan protokol ip</b></span>perintah menampilkan pengaturan protokol perutean IPv4 yang saat ini dikonfigurasi pada router. Untuk IPv6, gunakan<span class="cmd"><b>tampilkan protokol ipv6</b></span>.</p>
+<p></p>
+<p>Dengan protokol routing link-state seperti OSPF, link adalah antarmuka pada router. Informasi tentang status tautan tersebut dikenal sebagai status tautan. Semua protokol routing link-state menerapkan algoritma Dijkstra untuk menghitung rute jalur terbaik. Algoritma ini biasa disebut dengan algoritma shortest path first (SPF). Algoritma ini menggunakan akumulasi biaya sepanjang setiap jalur, dari sumber ke tujuan, untuk menentukan total biaya suatu rute.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

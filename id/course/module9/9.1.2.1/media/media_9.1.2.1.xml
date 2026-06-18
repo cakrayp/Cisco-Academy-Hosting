@@ -1,0 +1,23 @@
+<textcomponents>
+
+<!-- slide 1 -->
+<component id="ID_s1_title">
+<text><![CDATA[<b>ACL standar</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<textformat blockindent='-14'>Standard ACLs filter IP packets based on the source address only.</textformat>]]></text>
+</component>
+
+<!-- slide 2 -->
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>ACL yang diperluas</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<textformat blockindent="-14">Extended ACLs filter IP packets based on several attributes, including the following:<li>Alamat IP sumber dan tujuan</li><li>Port TCP dan UDP sumber dan tujuan</li><li>Jenis protokol/Nomor protokol (contoh: IP, ICMP, UDP, TCP, dll.)</li></textformat>]]></text>
+</component>
+
+</textcomponents>
+

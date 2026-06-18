@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.4.3 Mengonfigurasi Port Forwarding dengan IOS</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Penerusan Pelabuhan</h2>
+</div>
+<div id="content">
+<p>Menerapkan penerusan port dengan perintah IOS mirip dengan perintah yang digunakan untuk mengkonfigurasi NAT statis.  Penerusan port pada dasarnya adalah terjemahan NAT statis dengan nomor port TCP atau UDP tertentu.</p>
+<p></p>
+<p>Gambar 1 menunjukkan perintah NAT statis yang digunakan untuk mengkonfigurasi penerusan port menggunakan IOS.</p>
+<p></p>
+<p>Gambar 2 menunjukkan contoh konfigurasi port forwarding menggunakan perintah IOS pada router R2.  192.168.10.254 adalah alamat IPv4 lokal di dalam server web yang mendengarkan pada port 80. Pengguna akan mengakses server web internal ini menggunakan alamat IP global 209.165.200.225, alamat IPv4 publik yang unik secara global. Dalam hal ini, ini adalah alamat antarmuka Serial 0/1/0 R2. Port global dikonfigurasikan sebagai 8080. Ini akan menjadi port tujuan yang digunakan, bersama dengan alamat IPv4 global 209.165.200.225 untuk mengakses server web internal. Perhatikan dalam konfigurasi NAT, parameter perintah berikut:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<i>ip lokal</i>
+</span>= 192.168.10.254</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<i>pelabuhan lokal</i>
+</span>= 80</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<i>global-ip</i>
+</span>= 209.165.200.225</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<i>pelabuhan global</i>
+</span>= 8080</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika nomor port terkenal tidak digunakan, klien harus menentukan nomor port dalam aplikasi.</p>
+<p></p>
+<p>Seperti jenis NAT lainnya, penerusan port memerlukan konfigurasi antarmuka NAT dalam dan luar.</p>
+<p></p>
+<p>Mirip dengan NAT statis, itu<span class="cmd"><b>tampilkan terjemahan ip nat</b></span>perintah dapat digunakan untuk memverifikasi penerusan port, seperti yang ditunjukkan pada Gambar 3.</p>
+<p></p>
+<p>Dalam contoh, ketika router menerima paket dengan alamat IPv4 global dalam 209.165.200.225 dan port tujuan TCP 8080, router melakukan pencarian tabel NAT menggunakan alamat IPv4 tujuan dan port tujuan sebagai kuncinya. Router kemudian menerjemahkan alamat tersebut ke alamat lokal dalam host 192.168.10.254 dan port tujuan 80. R2 kemudian meneruskan paket ke server web. Untuk mengembalikan paket dari server web kembali ke klien, proses ini dibalik.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

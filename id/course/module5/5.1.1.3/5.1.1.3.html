@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.1.3 Perutean Antar-VLAN Router-on-a-Stick</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Operasi Perutean Antar-VLAN</h2>
+</div>
+<div id="content">
+<p>Meskipun perutean antar-VLAN lama memerlukan beberapa antarmuka fisik pada router dan switch, penerapan perutean antar-VLAN yang lebih umum saat ini tidak memerlukannya. Sebaliknya, beberapa perangkat lunak router mengizinkan konfigurasi antarmuka router sebagai link trunk, yang berarti hanya satu antarmuka fisik yang diperlukan pada router dan saklar untuk merutekan paket antara beberapa VLAN.</p>
+<p></p>
+<p>“Router-on-a-stick” adalah jenis konfigurasi router di mana satu antarmuka fisik merutekan lalu lintas antara beberapa VLAN di jaringan. Seperti terlihat pada gambar, router terhubung ke switch S1 menggunakan satu koneksi jaringan fisik (batang).</p>
+<p>Antarmuka router dikonfigurasi untuk beroperasi sebagai link trunk dan terhubung ke port switch yang dikonfigurasi dalam mode trunk. Router melakukan perutean antar-VLAN dengan menerima lalu lintas yang diberi tag VLAN pada antarmuka trunk yang berasal dari sakelar yang berdekatan, dan kemudian melakukan perutean secara internal antar VLAN menggunakan subantarmuka. Router kemudian meneruskan lalu lintas yang dirutekan, yang diberi tag VLAN untuk VLAN tujuan, keluar dari antarmuka fisik yang sama seperti yang digunakan untuk menerima lalu lintas.</p>
+<p></p>
+<p>Subinterface adalah antarmuka virtual berbasis perangkat lunak, yang dikaitkan dengan satu antarmuka fisik. Subinterface dikonfigurasikan dalam perangkat lunak pada router dan setiap subinterface dikonfigurasi secara independen dengan alamat IP dan penetapan VLAN. Subinterface dikonfigurasikan untuk subnet berbeda sesuai dengan penetapan VLAN-nya untuk memfasilitasi perutean logis. Setelah keputusan routing dibuat berdasarkan VLAN tujuan, frame data diberi tag VLAN dan dikirim kembali keluar antarmuka fisik.</p>
+<p></p>
+<p>Klik tombol Putar pada gambar untuk melihat animasi bagaimana router-on-a-stick menjalankan fungsi peruteannya.</p>
+<p></p>
+<p>Seperti yang terlihat dalam animasi:</p>
+<p></p>
+<p>1. PC1 di VLAN 10 berkomunikasi dengan PC3 di VLAN 30 melalui router R1 menggunakan satu antarmuka router fisik.</p>
+<p></p>
+<p>2. PC1 mengirimkan lalu lintas unicastnya ke switch S2.</p>
+<p></p>
+<p>3. Switch S2 kemudian menandai lalu lintas unicast sebagai berasal dari VLAN 10 dan meneruskan lalu lintas unicast keluar dari link utama ke switch S1.</p>
+<p></p>
+<p>4. Switch S1 meneruskan lalu lintas yang diberi tag keluar dari antarmuka trunk lainnya pada port F0/5 ke antarmuka pada router R1.</p>
+<p></p>
+<p>5. Router R1 menerima lalu lintas unicast yang diberi tag pada VLAN 10 dan merutekannya ke VLAN 30 menggunakan subinterface yang dikonfigurasi.</p>
+<p></p>
+<p>6. Lalu lintas unicast ditandai dengan VLAN 30 saat dikirim keluar antarmuka router ke switch S1.</p>
+<p></p>
+<p>7. Switch S1 meneruskan lalu lintas unicast yang diberi tag keluar dari link utama lainnya ke switch S2.</p>
+<p></p>
+<p>8. Switch S2 menghapus tag VLAN dari frame unicast dan meneruskan frame keluar ke PC3 pada port F0/6.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Metode perutean antar-VLAN router-on-a-stick tidak melebihi 50 VLAN.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

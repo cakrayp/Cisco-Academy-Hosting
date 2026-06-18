@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan fungsi dan fitur utama router.</li><li>Hubungkan perangkat untuk jaringan kecil yang dirutekan.</li><li>Menggunakan CLI, konfigurasikan pengaturan dasar pada router untuk merutekan antara dua jaringan yang terhubung langsung.</li><li>Verifikasi konektivitas antara dua jaringan yang terhubung langsung ke router.</li><li>Jelaskan proses enkapsulasi dan de-enkapsulasi yang digunakan oleh router saat berpindah paket antar antarmuka.</li><li>Jelaskan fungsi penentuan jalur pada router.</li><li>Jelaskan entri tabel perutean untuk jaringan yang terhubung langsung.</li><li>Jelaskan bagaimana router membangun tabel routing dari jaringan yang terhubung langsung.</li><li>Jelaskan bagaimana router membangun tabel routing menggunakan rute statis.</li><li>Jelaskan bagaimana router membangun tabel routing menggunakan protokol routing dinamis.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

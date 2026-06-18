@@ -1,0 +1,50 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Activity – Placing Standard and Extended ACLs</b>]]></text>
+</component>
+
+<component id="ID_drag01">
+  <text><![CDATA[Standard ACL]]></text> 
+  </component>
+  
+<component id="ID_drag02">
+  <text><![CDATA[Extended ACL]]></text> 
+  </component>
+
+  
+  <component id="ID_CHECK">
+  <text><![CDATA[Check]]></text> 
+</component>
+
+<component id="ID_RESET">
+  <text><![CDATA[Reset]]></text> 
+</component>
+
+  <component id="ID_server_txt">
+  <text><![CDATA[WEB/TFTP Server]]></text> 
+</component>
+
+<component id="ID_instruction">
+  <text><![CDATA[<b>Activity</b><br/><br/>Evaluate the network policies and determine the best placement for the ACLs. Drag and drop the ACL label to the appropriate place in the graphic.<br/><br/><b>Network Policy #1:</b> Use a standard ACL to stop the 192.168.10.0/24 network from accessing the Internet through ISP.<br/><br/><b>Network Policy #2:</b> Use an extended ACL to stop the 192.168.30.0/24 network from accessing the Web/TFTP Server.]]></text> 
+</component>
+
+
+  <component id="ID_s1_CORRECT_TITLE">
+  <text><![CDATA[<b>Correct</b>]]></text> 
+</component>
+
+ <component id="ID_s1_CORRECT_BODY">
+  <text><![CDATA[You have successfully determined the placement of the standard ACL and the extended ACL based on the topology and the network policies.]]></text> 
+</component>
+  <component id="ID_s1_INCORRECT_TITLE">
+  <text><![CDATA[<b>Incorrect</b>]]></text> 
+</component>
+
+  <component id="ID_s1_INCORRECT_BODY">
+  <text><![CDATA[You have not successfully determined the placement of the standard ACL and the extended ACL based on the topology and the network policies. Please click Reset to try again.]]></text> 
+</component>
+
+
+
+</textcomponents>

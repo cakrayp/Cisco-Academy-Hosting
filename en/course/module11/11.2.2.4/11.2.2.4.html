@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.2.4 Verifying Dynamic NAT</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Configuring Dynamic NAT</h2>
+      </div>
+      <div id="content">
+          <p>The output of the<span class="cmd"><b> show ip nat translations </b></span>command shown in Figure 1 displays the details of the two previous NAT assignments. The command displays all static translations that have been configured and any dynamic translations that have been created by traffic. </p>
+          <p></p>
+          <p>Adding the <span class="cmd"><b>verbose</b></span> keyword displays additional information about each translation, including how long ago the entry was created and used. </p>
+          <p></p>
+          <p>By default, translation entries time out after 24 hours, unless the timers have been reconfigured with the<span class="cmd"><b> ip nat translation timeout </b></span><span class="cmd"><i>timeout-seconds</i></span> command in global configuration mode.</p>
+          <p></p>
+          <p>To clear dynamic entries before the timeout has expired, use the<span class="cmd"> clear ip nat translation </span>global configuration mode command (Figure 2).  It is useful to clear the dynamic entries when testing the NAT configuration. As shown in the table, this command can be used with keywords and variables to control which entries are cleared. Specific entries can be cleared to avoid disrupting active sessions. Use the<span class="cmd"><b> clear ip nat translation * </b></span>global configuration command to clear all translations from the table. </p>
+          <p></p>
+          <p>
+            <b>Note</b>:<b></b>Only the dynamic translations are cleared from the table. Static translations cannot be cleared from the translation table.</p>
+          <p></p>
+          <p>In Figure 3, the<span class="cmd"><b> show ip nat statistics </b></span>command displays information about the total number of active translations, NAT configuration parameters, the number of addresses in the pool, and how many of the addresses have been allocated.</p>
+          <p></p>
+          <p>Alternatively, use the<span class="cmd"><b> show running-config </b></span>command and look for NAT, ACL, interface, or pool commands with the required values. Examine these carefully and correct any errors discovered.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

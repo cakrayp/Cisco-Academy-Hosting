@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.4.1.3 Summary</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.4.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>This chapter introduced VLANS. VLANs are based on logical connections, instead of physical connections. VLANs are a mechanism to allow network administrators to create logical broadcast domains that can span across a single switch or multiple switches, regardless of physical proximity. This function is useful to reduce the size of broadcast domains or to allow groups or users to be logically grouped without the need to be physically located in the same place.</p>
+          <p></p>
+          <p>There are several types of VLANs: </p>
+          <p>
+            <ul>
+              <li>Default VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Management VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Native VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>User/Data VLANs</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Black Hole VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Voice VLAN</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>On a Cisco switch, VLAN 1 is the default Ethernet VLAN, the default native VLAN, and the default management VLAN. Best practices suggest that the native and management VLANs be moved to another distinct VLAN and that unused switch ports be moved to a “black hole” VLAN for increased security.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> switchport access vlan </b></span>command is used to create a VLAN on a switch. After creating a VLAN, the next step is to assign ports to the VLAN. The<span class="cmd"><b> show vlan brief </b></span>command displays the VLAN assignment and membership type for all switch ports. Each VLAN must correspond to a unique IP subnet.</p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> show vlan </b></span>command to check whether the port belongs to the expected VLAN. If the port is assigned to the wrong VLAN, use the<span class="cmd"><b> switchport access vlan </b></span>command to correct the VLAN membership. Use the<span class="cmd"><b> show mac address-table </b></span>command to check which addresses were learned on a particular port of the switch and to which VLAN that port is assigned.</p>
+          <p>A port on a switch is either an access port or a trunk port. Access ports carry traffic from a specific VLAN assigned to the port. A trunk port by default is a member of all VLANs; therefore, it carries traffic for all VLANs.</p>
+          <p></p>
+          <p>VLAN trunks facilitate inter-switch communication by carrying traffic associated with multiple VLANs. IEEE 802.1Q frame tagging differentiates between Ethernet frames associated with distinct VLANs as they traverse common trunk links. To enable trunk links, use the<span class="cmd"><b> switchport mode trunk </b></span>command. Use the<span class="cmd"><b> show interfaces trunk </b></span>command to check whether a trunk has been established between switches.</p>
+          <p></p>
+          <p>Trunk negotiation is managed by the Dynamic Trunking Protocol (DTP), which operates on a point-to-point basis only, between network devices. DTP is a Cisco proprietary protocol that is automatically enabled on Catalyst 2960 and Catalyst 3560 Series switches.</p>
+          <p></p>
+          <p>To place a switch into its factory default condition with 1 default VLAN, use the command delete <span class="cmd"><b>flash:vlan.dat and</b></span></p>
+          <p>
+            <span class="cmd">
+              <b>erase startup-config.</b>
+            </span>
+          </p>
+          <p></p>
+          <p>This chapter also examined the configuration, verification, and troubleshooting of VLANs and trunks using the Cisco IOS CLI and explored basic security and design considerations in the context of VLANs.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

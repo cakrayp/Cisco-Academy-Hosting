@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		<slide>
+			<element type="ROUTER" textId="ID_router_txt1" x="2" y="56" width="436" height="304" />
+			<element type="TEXT" compId="ID_s1_title" subType="TITLE"/>
+			
+		</slide>
+		<slide>
+			<element type="ROUTER" textId="ID_router_txt2" x="2" y="56" width="436" height="89.05" />
+			<element type="TEXT" subType="TABLE" compId="ID_table" x="4.35" y="169.35" width="431" height="196" />
+			<element type="TEXT" compId="ID_s2_title" subType="TITLE"/>
+		</slide>	
+		<slide>
+			<element type="ROUTER" textId="ID_router_txt3" x="2" y="39" width="436" height="357.95" />
+			<element type="TEXT" compId="ID_s3_title" subType="TITLE"/>
+			
+		</slide>		
+	</slide>
+	
+	<text id="ID_router_txt1"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="416"> <tr> <td colspan="6">R2#<strong>tampilkan terjemahan ip nat</strong></td> </tr> <tr> <td>Pro</td> <td>Di dalam global</td> <td>Di dalam lokal</td> <td colspan="2">Di luar lokal</td> <td>Di luar global</td> </tr> <tr> <td width="26">---</td> <td width="110">209.165.200.226</td> <td width="76">192.168.10.10</td> <td colspan="2">---</td> <td width="84">---</td> </tr> <tr> <td>---</td> <td>209.165.200.227</td> <td>192.168.11.10</td> <td colspan="2">---</td> <td>---</td> </tr> <tr> <td colspan="6">R2#</td> </tr> <tr> <td colspan="6">R2#<strong>tampilkan terjemahan ip nat verbose</strong></td> </tr> <tr> <td>Pro</td> <td>Di dalam global</td> <td>Di dalam lokal</td> <td colspan="2">Di luar lokal</td> <td>Di luar global</td> </tr> <tr> <td>---</td> <td>209.165.200.226</td> <td>192.168.10.10</td> <td colspan="2">---</td> <td>---</td> </tr> <tr> <td> </td> <td>buat 00:17:25,</td> <td colspan="4">gunakan batas waktu 00:01:54:86400000, kiri</td> </tr> <tr> <td colspan="6">23:58:05, Id Peta (Dalam): 1,</td> </tr> <tr> <td> </td> <td>bendera:</td> <td> </td> <td colspan="2"> </td> <td> </td> </tr> <tr> <td colspan="6">tidak ada, use_count: 0, entry-id: 32, lc_entries: 0</td> </tr> <tr> <td>---</td> <td>209.165.200.227</td> <td>192.168.11.10</td> <td width="22"> </td> <td width="53">---</td> <td>---</td> </tr> <tr> <td> </td> <td>buat 00:17:22,</td> <td colspan="4">gunakan batas waktu 00:01:51:86400000, kiri</td> </tr> <tr> <td colspan="6">23:58:08, Id Peta (Dalam): 1,</td> </tr> <tr> <td> </td> <td>bendera:</td> <td> </td> <td colspan="2"> </td> <td> </td> </tr> <tr> <td colspan="6">tidak ada, use_count: 0, entry-id: 34, lc_entries: 0</td> </tr> <tr> <td colspan="6">R2#</td> </tr></table>]]></text>
+
+<text id="ID_router_txt2"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="400"> <tr> <td>R2#<strong>terjemahan ip nat yang jelas *</strong></td> </tr> <tr> <td>R2#<strong>tampilkan terjemahan ip nat</strong></td> </tr> <tr> <td> </td> </tr> <tr> <td>R2#</td> </tr></table>]]></text>
+
+<text id="ID_router_txt3"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="416"> <tr> <td colspan="2">R2#<strong>hapus statistik ip nat</strong></td> </tr> <tr> <td width="19"> </td> <td width="381"> </td> </tr> <tr> <td colspan="2"><strong>PC1 dan PC2 membuat sesi dengan server</strong></td> </tr> <tr> <td> </td> <td> </td> </tr> <tr> <td colspan="2">R2#<strong>tampilkan statistik ip nat</strong></td> </tr> <tr> <td colspan="2">Total terjemahan aktif: 2 (0 statistik,<span>2 dinamis;</span>0 diperpanjang)</td> </tr> <tr> <td colspan="2">Terjemahan puncak: 6, terjadi 00:27:07 lalu</td> </tr> <tr> <td colspan="2">antarmuka luar:</td> </tr> <tr> <td> </td> <td>Serial0/0/1</td> </tr> <tr> <td colspan="2">antarmuka bagian dalam:</td> </tr> <tr> <td> </td> <td>Serial0/1/0</td> </tr> <tr> <td colspan="2">Pukulan: 24 Gagal: 0</td> </tr> <tr> <td colspan="2">Paket CEF yang Diterjemahkan: 24, Paket CEF Punted: 0</td> </tr> <tr> <td colspan="2">Terjemahan lengkapnya: 4</td> </tr> <tr> <td colspan="2">Pemetaan dinamis:</td> </tr> <tr> <td colspan="2">-- Sumber Dalam</td> </tr> <tr> <td colspan="2">[Id: 1] daftar akses 1 kumpulan penghitungan ulang NAT-POOL1 2</td> </tr> <tr> <td colspan="2"><span>KOLAM NAT-KOLAM 1:</span>masker jaring 255.255.255.224</td> </tr> <tr> <td colspan="2"><span>mulai 209.165.200.226 akhir 209.165.200.240</span></td> </tr> <tr> <td colspan="2">ketik umum, total alamat 15,<span>dipilih 2</span>(13%), meleset 0</td> </tr> <tr> <td> </td> <td> </td> </tr> <tr> <td colspan="2">Jumlah pintu: 0</td> </tr> <tr> <td colspan="2">Pintu aplikasi: 0</td> </tr> <tr> <td colspan="2">Pintu biasa: 0</td> </tr> <tr> <td colspan="2">Paket Antrian: 0</td> </tr> <tr> <td colspan="2">R2#</td> </tr></table>]]></text>
+
+
+</data>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.5.2.1 Memecahkan Masalah Rute yang Hilang</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.5.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Rute Statis dan Default</h1>
+<h2>Memecahkan Masalah Konfigurasi Rute Statis dan Default IPv4</h2>
+</div>
+<div id="content">
+<p>Jaringan tunduk pada kekuatan yang dapat menyebabkan statusnya sering berubah:</p>
+<p>
+<ul>
+<li>Antarmuka gagal.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Penyedia layanan memutuskan koneksi.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Tautan menjadi terlalu jenuh.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Administrator memasukkan konfigurasi yang salah.</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika ada perubahan dalam jaringan, konektivitas mungkin terputus. Administrator jaringan bertanggung jawab untuk menentukan dan memecahkan masalah. Untuk menemukan dan mengatasi masalah ini, administrator jaringan harus memahami alat untuk membantu mengisolasi masalah perutean dengan cepat.</p>
+<p></p>
+<p>Perintah pemecahan masalah IOS yang umum meliputi:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>ping</b>
+</span>
+</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>traceroute</b>
+</span>
+</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan rute ip</b>
+</span>
+</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan antarmuka ip secara singkat</b>
+</span>
+</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan detail tetangga cdp</b>
+</span>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 1 menampilkan hasil ping yang diperluas dari antarmuka sumber R1 ke antarmuka LAN R3. Ping yang diperluas adalah ketika antarmuka sumber atau alamat IP sumber ditentukan.</p>
+<p></p>
+<p>Gambar 2 menampilkan hasil traceroute dari R1 ke LAN R3.</p>
+<p></p>
+<p>Gambar 3 menampilkan tabel routing R1.</p>
+<p></p>
+<p>Gambar 4 memberikan status cepat semua antarmuka pada router.</p>
+<p></p>
+<p>Gambar 5 memberikan daftar perangkat Cisco yang terhubung langsung. Perintah ini memvalidasi konektivitas Lapisan 2 (dan karenanya Lapisan 1). Misalnya, jika perangkat tetangga terdaftar dalam output perintah, namun tidak dapat di-ping, maka pengalamatan Layer 3 harus diselidiki.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

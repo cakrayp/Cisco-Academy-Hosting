@@ -1,0 +1,16 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Skenario Perutean Dinamis</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[Halo, saya R1 dan saya menggunakan EIGRP untuk memberi tahu tetangga saya bahwa saya dapat menjangkau jaringan berikut:<br/><textformat blockindent="-18"><li>192.168.10.0/24</li><li>192.168.11.0/24</li><li>209.165.200.224/30</li></textformat>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[Halo R1, saya R2 dan saya juga menggunakan EIGRP untuk memberi tahu tetangga saya bahwa saya dapat menjangkau jaringan berikut:<br/><textformat blockindent="-18"><li>10.1.1.0/24</li><li>10.1.2.0/24</li><li>209.165.200.224/30</li>I am also the default gateway to the Internet.</textformat>]]></text> 
+  </component>
+
+</textcomponents>

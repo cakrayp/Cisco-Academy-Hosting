@@ -1,0 +1,77 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>CISCO 1941 LEDs</b>]]></text>
+	</component>
+
+	<component id="ID_table">		
+		<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	<tr class="liner">
+		<td colspan='5' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+	</tr>
+	
+	<tr>
+		<td width="25" bgcolor='#077A77' valign="top" class="mtitle"><font color='#ffffff'><b>#</b></font></td>
+		<td width="70" bgcolor='#077A77' valign="top" class="mtitle"><font color='#ffffff'><b>Port</b></font></td>
+		<td width="70" bgcolor='#077A77' valign="top" class="mtitle"><font color='#ffffff'><b>LED</b></font></td>
+		<td width="100" bgcolor='#077A77' valign="top" class="mtitle"><font color='#ffffff'><b>Color</b></font></td>
+		<td bgcolor='#077A77' valign="top" class="mtitle"><font color='#ffffff'><b>Description</b></font></td>
+	</tr>
+	
+	<tr>
+		<td rowspan="5"  bgcolor="#EFF8F7" valign="top"><font color='#393536'>1</font></td>		
+		<td rowspan="5"  bgcolor="#EFF8F7" valign="top" class="col2"><font color='#393536'>GE0/0 and GE0/1</font></td>	
+		<td rowspan="3"  bgcolor="#EFF8F7" valign="top"><font color='#393536'>S (Speed)</font></td>
+		<td  bgcolor='#EFF8F7' valign="top"><font color='#393536'>1 blink + pause</font></td>		
+		<td  bgcolor="#EFF8F7" valign="top"><font color='#393536'>Port operating at 10 Mb/s</font></td>	 
+	</tr>
+    
+	<tr>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>2 blink + pause</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Port operating at 100 Mb/s</font></td>
+	</tr>
+	
+	<tr>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>3 blink + pause</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Port operating at 1000 Mb/s</font></td>
+	</tr>
+	
+	<tr>
+		<td rowspan="2" bgcolor="#EFF8F7" valign="top"><font color='#393536'>L (Link)</font></td>	
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Green</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Link is active</font></td>
+	</tr>	
+	
+	<tr>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Off</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Link is inactive</font></td>
+	</tr>	
+	
+	<tr>
+		<td rowspan="2" bgcolor="#ffffff" valign="top"><font color='#393536'>2</font></td>
+		<td rowspan="2" bgcolor="#ffffff" valign="top"><font color='#393536'>Console</font></td>
+		<td rowspan="2" bgcolor="#ffffff" valign="top"><font color='#393536'>EN</font></td>	
+		<td bgcolor="#ffffff" valign="top"><font color='#393536'>Green</font></td>
+		<td bgcolor="#ffffff" valign="top"><font color='#393536'>Port is active</font></td>
+	</tr>
+		
+	<tr>
+		<td bgcolor="#ffffff" valign="top"><font color='#393536'>Off</font></td>
+		<td bgcolor="#ffffff" valign="top"><font color='#393536'>Port is inactive</font></td>
+	</tr>	
+	
+	<tr>
+		<td rowspan="2" bgcolor="#EFF8F7" valign="top"><font color='#393536'>3</font></td>
+		<td rowspan="2" bgcolor="#EFF8F7" valign="top"><font color='#393536'>USB</font></td>
+		<td rowspan="2" bgcolor="#EFF8F7" valign="top"><font color='#393536'>EN</font></td>	
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Green</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Port is active</font></td>
+	</tr>
+	
+	<tr>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Off</font></td>
+		<td bgcolor="#EFF8F7" valign="top"><font color='#393536'>Port is inactive</font></td>
+	</tr>	
+	
+</table>]]></text> 
+	</component>
+</textcomponents>

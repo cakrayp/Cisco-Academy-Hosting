@@ -1,0 +1,19 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Voice VLAN</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Switch port configured to support voice traffic:<textformat blockindent="-14"><li>Port sends CDP frames to provide information used by the IP phone</li><li>Port forwards frames associated with VLAN 150</li></textformat>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[<b>Student<br/>VLAN 20 - 172.17.20.25</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[Switch configured to support voice traffic:<textformat blockindent="-14"><li>Uses VLAN 150 for voice VLAN</li><li>Prioritizes voice traffic</li></textformat>]]></text>
+</component>
+
+</textcomponents>

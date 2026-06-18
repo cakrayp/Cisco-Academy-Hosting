@@ -1,0 +1,71 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>PAT Process</b>]]></text>
+ </component>
+<!--table data-->
+<component id="ID_txt01">
+   <text><![CDATA[<b>NAT Table with Overload</b>]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>Inside Global IP Address</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Inside Local IP Address</b>]]></text>
+   </component>
+
+<component id="ID_txt05">
+   <text><![CDATA[<b>Outside Local IP Address</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Outside Global IP Address</b>]]></text>
+   </component>
+
+   <component id="ID_txt04">
+   <text><![CDATA[<b>NAT Table with Overload</b>]]></text>
+   </component>
+   
+   <component id="ID_txt07">
+      <text><![CDATA[<b>Inside</b>]]></text>
+      </component>
+<component id="ID_txt08">
+   <text><![CDATA[<b>Outside</b>]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[Internet]]></text>
+   </component>
+
+   <component id="ID_txt10">
+   <text><![CDATA[Svr1]]></text>
+   </component>
+
+     <component id="ID_txt11">
+   <text><![CDATA[Svr2]]></text>
+   </component>
+ 
+ 
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>
+</textcomponents>

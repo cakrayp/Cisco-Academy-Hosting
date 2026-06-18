@@ -1,0 +1,102 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Router Subinterfaces and Inter-VLAN Routing</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[G0/0.10]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[G0/0.30]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[<b>R1 Subinterfaces</b><br/>G0/0.10: 172.17.10.1<br/>G0/0.20: 172.17.20.1<br/>G0/0.30: 172.17.30.1]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Trunk]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[Trunk]]></text>
+</component>
+<component id="ID_txt06">
+	<text><![CDATA[Trunk]]></text> 
+</component>
+<component id="ID_txt07">
+  <text><![CDATA[Trunk]]></text> 
+</component>
+
+<component id="ID_txt08">
+	<text><![CDATA[<b>Unicast Frame</b>]]></text>
+</component>
+<component id="ID_txt09">
+	<text><![CDATA[<b>Unicast Frame VLAN 10</b>]]></text>
+</component>
+<component id="ID_txt10">
+	<text><![CDATA[<b>Unicast Frame VLAN 30</b>]]></text>
+</component>
+<component id="ID_txt11">
+	<text><![CDATA[<b>Unicast Frame</b> ]]></text>
+</component>
+<component id="ID_txt12">
+	<text><![CDATA[VLAN Tagged Frame]]></text>
+</component>
+<component id="ID_txt13">
+	<text><![CDATA[VLAN Tagged Frame]]></text>
+</component>  
+  
+<!----PURPLE TEXT BOXES----->
+<component id="ID_tbox01">
+  <text><![CDATA[PC1 sends a unicast frame to PC3.]]></text>
+</component>
+<component id="ID_tbox02">
+  <text><![CDATA[S2 receives the frame on VLAN 10 and tags it before sending to S1. ]]></text>
+</component>
+<component id="ID_tbox03">
+  <text><![CDATA[S1 maintains the VLAN tag and forwards the frame to R1.]]></text>
+</component>
+<component id="ID_tbox04">
+  <text><![CDATA[The VLAN tag informs R1 that the frame was received on G0/0.10.]]></text>
+</component>
+<component id="ID_tbox05">
+  <text><![CDATA[R1 examines the route table. The destination network is directly connected to R1 G0/0.30.]]></text>
+</component>
+<component id="ID_tbox06">
+  <text><![CDATA[R1 forwards the packet from G0/0.10 to G0/0.30.]]></text>
+</component>
+<component id="ID_tbox07">
+  <text><![CDATA[R1 forwards the frame out of its physical interface, tagged with VLAN 30.]]></text>
+</component>
+<component id="ID_tbox08">
+  <text><![CDATA[S1 maintains the VLAN tag and forwards the frame to S2.]]></text>
+</component>
+<component id="ID_tbox09">
+  <text><![CDATA[S2 strips the VLAN tag and forwards the frame to PC3.]]></text>
+</component>
+
+
+<!---ANIMATION CONTROLLER--->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>
+	
+</textcomponents>

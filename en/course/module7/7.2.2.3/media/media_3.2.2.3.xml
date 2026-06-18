@@ -1,0 +1,147 @@
+<textcomponents>  
+
+
+
+<!-- slide01 content-->
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Activity – Part 1: Compare RIP and EIGRP</b><br/>Drag the distance vector routing protocol that matches each description to the field provided. Click Button 2 to continue the activity.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[<b>distance vector Routing Protocol Description</b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+	<text><![CDATA[<b>RIP OR EIGRP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+	<text><![CDATA[Sends hello packets]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Version 2 supports VLSM and classless routing]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+	<text><![CDATA[Maximum limit of 255 hops]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+	<text><![CDATA[Maximum limit of 15 hops]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+	<text><![CDATA[Forms neighbor adjacencies]]></text>
+</component>
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[RIP]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each distance vector routing protocol to its description. Click Button 2 to continue.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each distance vector routing protocol to its description. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!-- slide02 content-->
+
+  
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Activity – Part 2: Compare RIP and EIGRP</b><br/>Drag the distance vector routing protocol that matches each description to the field provided.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+	<text><![CDATA[<b>distance vector Routing Protocol Description</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+	<text><![CDATA[<b>RIP OR EIGRP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+	<text><![CDATA[Broadcasts routing updates to 255.255.255.255]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+	<text><![CDATA[Multicasts bounded, triggered updates to 224.0.0.10]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+	<text><![CDATA[Uses administrative distance of 120]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+	<text><![CDATA[Routing updates sent every 30 seconds]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+	<text><![CDATA[Uses DUAL algorithm]]></text>
+</component>
+
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[RIP]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each distance vector routing protocol to its description.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each distance vector routing protocol to its description. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

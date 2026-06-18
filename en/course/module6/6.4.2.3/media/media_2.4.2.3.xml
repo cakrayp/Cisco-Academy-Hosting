@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Remove Static Routes and Configure Summary IPv6 Route</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Verify the Summary IPv6 Route</b>]]></text> 
+</component>
+</textcomponents>

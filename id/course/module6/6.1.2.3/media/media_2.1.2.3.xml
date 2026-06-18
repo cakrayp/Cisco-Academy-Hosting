@@ -1,0 +1,23 @@
+<textcomponents>
+
+<component id="ID_title">
+	<text><![CDATA[<b>Menghubungkan Router Stub</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[Jaringan Rintisan]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Jaringan]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Router Rintisan]]></text> 
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[Yang perlu saya ketahui hanyalah jaringan saya yang terhubung langsung. Untuk semua jaringan lain, saya dapat menggunakan rute statis default yang menunjuk ke R2.]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,34 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>R1 Forwards a Classless Update to R2</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>R2 Adds the Entry for 172.16.0.0 via R1</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>R3 Forwards a Classless Update to R2</b>]]></text> 
+  </component>
+ <component id="ID_s4_title">
+  <text><![CDATA[<b>R2 Adds the Entry for 172.16.0.0 via R3</b>]]></text> 
+  </component>
+  <component id="ID_s5_title">
+  <text><![CDATA[<b>Connectivity Success</b>]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt01">
+  <text><![CDATA[<b>Routing update:<br/>172.16.1.0/24</b>]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt02">
+  <text><![CDATA[My 30 seconds are up. I am sending an update to my RIP neighbor(s).]]></text> 
+  </component>
+
+    <component id="ID_s3_txt01">
+  <text><![CDATA[<b>Routing update:<br/>172.16.2.0/24</b>]]></text> 
+  </component>
+  
+  <component id="ID_s3_txt02">
+  <text><![CDATA[My 30 seconds are up. I am sending an update to my RIP neighbor(s).]]></text> 
+  </component>
+  
+</textcomponents>

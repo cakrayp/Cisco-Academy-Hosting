@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.4.3 Filter Tampilkan Output Perintah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Verifikasi Konektivitas Jaringan yang Terhubung Langsung</h2>
+</div>
+<div id="content">
+<p>Perintah yang menghasilkan beberapa layar keluaran, secara default, dijeda setelah 24 baris. Di akhir keluaran yang dijeda, teks --More-- ditampilkan. Mendesak<b>Memasuki</b>menampilkan baris berikutnya dan menekan spasi akan menampilkan rangkaian baris berikutnya. Gunakan<span class="cmd"><b>panjang terminal</b></span><span class="cmd"><i>nomor</i></span>perintah untuk menentukan jumlah baris yang akan ditampilkan. Nilai 0 (nol) mencegah router berhenti sejenak di antara layar keluaran.</p>
+<p></p>
+<p>Fitur lain yang sangat berguna yang meningkatkan pengalaman pengguna di antarmuka baris perintah (CLI) adalah pemfilteran<span class="cmd"><b>menunjukkan</b></span>keluaran. Perintah pemfilteran dapat digunakan untuk menampilkan bagian keluaran tertentu. Untuk mengaktifkan perintah pemfilteran, masukkan pipa (<span class="cmd"><b>|</b></span>) karakter setelah<span class="cmd"><b>menunjukkan</b></span>perintah lalu masukkan parameter pemfilteran dan ekspresi pemfilteran.</p>
+<p></p>
+<p>Parameter pemfilteran yang dapat dikonfigurasi setelah pipa meliputi:</p>
+<p>
+<ul>
+<li>
+<b>bagian</b>- Menampilkan seluruh bagian yang dimulai dengan ekspresi pemfilteran</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>termasuk</b>- Menyertakan semua jalur keluaran yang cocok dengan ekspresi pemfilteran</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>mengecualikan</b>- Tidak termasuk semua jalur keluaran yang cocok dengan ekspresi pemfilteran</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>mulai</b>- Menampilkan semua jalur keluaran dari titik tertentu, dimulai dengan garis yang cocok dengan ekspresi pemfilteran</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Filter keluaran dapat digunakan dalam kombinasi dengan apa pun<span class="cmd"><b>menunjukkan</b></span>memerintah.</p>
+<p></p>
+<p>Gambar 1 sampai 4 memberikan contoh berbagai filter keluaran.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 5 untuk memfilter keluaran.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

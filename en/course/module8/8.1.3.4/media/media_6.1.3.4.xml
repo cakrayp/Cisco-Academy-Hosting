@@ -1,0 +1,65 @@
+<textcomponents>
+
+<!-- Slide 1 -->
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>Decide Which Router Sends the First DBD</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[ExStart State]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[R2 has the highest router ID, becoming the master, and therefore it prepares to send a LSDB in a DBD packet.]]></text>
+</component>
+
+
+
+<!-- Slide 2 -->
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Exchange DBD Packets</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Exchange State]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Here is a summary of my LSDB.]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Thanks for the information!]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Here is a summary of my LSDB.]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Thanks for the information!]]></text>
+</component>
+
+
+<!-- Slide 3 -->
+<component id='ID_s3_title'>
+	<text><![CDATA[<b>Getting Additional Route Information</b>]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[Loading State]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[I need more information on the 172.16.6.0 network.]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[Here is the entry for 172.16.6.0/24.]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Thanks for the information!]]></text>
+</component>
+
+</textcomponents>

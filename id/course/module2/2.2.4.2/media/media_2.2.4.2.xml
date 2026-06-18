@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Operasi Pengintaian DHCP</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+  <text><![CDATA[DHCP Nakal Penyerang]]></text> 
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Klien DHCP]]></text> 
+</component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Pelabuhan Tidak Terpercaya]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[Pelabuhan Tepercaya]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[Server DHCP]]></text> 
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Konfigurasi Pengintaian DHCP</b>]]></text>
+</component>
+
+<component id="ID_Title_txt01">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Pengintaian DHCP memungkinkan konfigurasi port sebagai tepercaya atau tidak tepercaya:</li></ul></textformat><textformat blockindent="5"><li style="margin-left:35px">Port tepercaya dapat mengirimkan permintaan dan pengakuan DHCP.</li><li style="margin-left:35px">Port yang tidak tepercaya hanya dapat meneruskan permintaan DHCP.</li></textformat><textformat blockindent="-14"><li>Pengintaian DHCP memungkinkan switch untuk membuat tabel pengikatan DHCP yang memetakan alamat MAC klien, alamat IP, VLAN, dan ID port.</li></textformat>]]></text> 
+</component>
+
+
+
+
+</textcomponents>

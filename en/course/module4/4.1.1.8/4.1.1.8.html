@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.1.8 Packet Tracer - Using Traceroute to Discover the Network</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.1.8_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Functions of a Router</h2>
+      </div>
+      <div id="content">
+          <p>The company you work for has acquired a new branch location. You asked for a topology map of the new location, but apparently one does not exist. However, you have username and password information for the new branch’s networking devices and you know the web address for the new branch’s server. Therefore, you will verify connectivity and use the<span class="cmd"><b> tracert </b></span>command to determine the path to the location. You will connect to the edge router of the new location to determine the devices and networks attached. As a part of this process, you will use various<span class="cmd"><b> show </b></span>commands to gather the necessary information to finish documenting the IP addressing scheme and create a diagram of the topology.</p>
+          <p></p>
+          <p>
+            <a href="../../files/4.1.1.8%20Packet%20Tracer%20-%20Using%20Traceroute%20to%20Discover%20the%20Network%20instructions.pdf" target="_blank">Packet Tracer - Using Traceroute to Discover the Network Instructions</a>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/4.1.1.8%20Packet%20Tracer%20-%20Using%20Traceroute%20to%20Discover%20the%20Network.pka" target="_blank">Packet Tracer - Using Traceroute to Discover the Network – PKA</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

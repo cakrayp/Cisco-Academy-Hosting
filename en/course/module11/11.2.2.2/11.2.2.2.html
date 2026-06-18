@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.2.2 Configuring Dynamic NAT</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Configuring Dynamic NAT</h2>
+      </div>
+      <div id="content">
+          <p>Figure 1 shows the steps and the commands used to configure dynamic NAT.  </p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Define the pool of addresses that will be used for translation using the <span class="cmd"><b>ip nat pool</b></span> command. This pool of addresses is typically a group of public addresses. The addresses are defined by indicating the starting IP address and the ending IP address of the pool. The <span class="cmd"><b>netmask</b></span> or <span class="cmd"><b>prefix-length</b></span> keyword indicates which address bits belong to the network and which bits belong to the host for the range of addresses. </p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>Configure a standard ACL to identify (permit) only those addresses that are to be translated. An ACL that is too permissive can lead to unpredictable results. Remember there is an implicit <b>deny all</b> statement at the end of each ACL.</p>
+          <p></p>
+          <p>
+            <b>Step 3. </b>Bind the ACL to the pool. The<span class="cmd"><b> ip nat inside source list </b></span><span class="cmd"><i>access-list-number </i></span><span class="cmd"><b>number pool </b></span><span class="cmd"><i>pool name </i></span>command is used to bind the ACL to the pool. This configuration is used by the router to identify which devices (<span class="cmd"><b>list</b></span>) receive which addresses (<span class="cmd"><b>pool</b></span>).</p>
+          <p></p>
+          <p>
+            <b>Step 4. </b>Identify which interfaces are inside, in relation to NAT; that is, any interface that connects to the inside network.</p>
+          <p></p>
+          <p>
+            <b>Step 5.</b> Identify which interfaces are outside, in relation to NAT; that is, any interface that connects to the outside network.</p>
+          <p></p>
+          <p>Figure 2 shows an example topology and configuration. This configuration allows translation for all hosts on the 192.168.0.0/16 network, which includes the 192.168.10.0 and 192.168.11.0 LANs, when they generate traffic that enters S0/0/0 and exits S0/1/0. These hosts are translated to an available address in the pool in the range 209.165.200.226 - 209.165.200.240.</p>
+          <p></p>
+          <p>Figure 3 shows the topology used for the Syntax Checker configuration. Use the Syntax Checker in Figure 4 to configure dynamic NAT on R2. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

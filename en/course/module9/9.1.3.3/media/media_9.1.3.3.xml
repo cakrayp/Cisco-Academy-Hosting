@@ -1,0 +1,21 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Wildcard Mask Calculation</b>]]></text>
+</component>
+
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Example 1]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Example 2]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Example 3]]></text>
+</component>
+
+
+</textcomponents>

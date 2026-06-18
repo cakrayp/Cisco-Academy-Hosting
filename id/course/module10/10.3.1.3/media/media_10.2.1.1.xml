@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>Konfigurasi Otomatis Alamat Tanpa Status ICMPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Klien]]></text> 
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Multicast semua router IPv6]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[<b>Permintaan Router (RS)</b><br/>"Saya memerlukan Iklan Router dari router."]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Multicast semua node IPv6]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[<b>Iklan Router (RA)</b><br/>"Ini awalan Anda, panjang awalan, dan informasi lainnya."]]></text> 
+</component>
+</textcomponents>

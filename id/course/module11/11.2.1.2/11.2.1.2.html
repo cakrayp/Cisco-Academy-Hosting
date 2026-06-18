@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.1.2 Menganalisis NAT Statis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Mengonfigurasi NAT Statis</h2>
+</div>
+<div id="content">
+<p>Menggunakan konfigurasi sebelumnya, gambar tersebut mengilustrasikan proses penerjemahan NAT statis antara klien dan server web. Biasanya terjemahan statis digunakan ketika klien di jaringan luar (Internet) perlu menjangkau server di jaringan dalam (internal).</p>
+<p></p>
+<p>1. Klien ingin membuka koneksi ke web server. Klien mengirimkan paket ke server web menggunakan alamat tujuan IPv4 publik 209.165.201.5. Ini adalah alamat global bagian dalam server web.</p>
+<p>2. Paket pertama yang diterima R2 dari klien pada antarmuka luar NAT-nya menyebabkan R2 memeriksa tabel NAT-nya. Alamat IPv4 tujuan terletak di tabel NAT dan diterjemahkan.</p>
+<p>3. R2 menggantikan alamat global dalam 209.165.201.5 dengan alamat lokal dalam 192.168.10.254. R2 kemudian meneruskan paket menuju web server.</p>
+<p>4. Server web menerima paket dan merespons klien menggunakan alamat lokal di dalam, 192.168.10.254.</p>
+<p>5a. R2 menerima paket dari server web pada antarmuka bagian dalam NAT dengan alamat sumber dari alamat lokal bagian dalam server web, 192.168.10.254.</p>
+<p>5b. R2 memeriksa tabel NAT untuk terjemahan alamat lokal di dalam. Alamatnya ditemukan di tabel NAT. R2 menerjemahkan alamat sumber ke alamat global dalam 209.165.201.5 dan meneruskan paket keluar dari antarmuka serial 0/1/0 menuju klien.</p>
+<p>6. Klien menerima paket dan melanjutkan percakapan. Router NAT melakukan Langkah 2 hingga 5b untuk setiap paket. (Langkah 6 tidak ditampilkan pada gambar.)</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

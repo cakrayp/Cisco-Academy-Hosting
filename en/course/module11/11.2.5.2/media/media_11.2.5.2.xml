@@ -1,0 +1,67 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>IPv6 Unique Local Address</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Global ID</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Subnet ID</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Interface ID</b>]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Pseudo-Random Algorithm]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[EUI-64, Random, or Manual Configuration]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[7]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[40]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[16]]></text>
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[64]]></text>
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[<b>Prefix<b>]]></text>
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[1]]></text>
+</component>
+
+
+<component id="ID_txt12">
+<text><![CDATA[Bits]]></text>
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[<b>L</b>]]></text>
+</component>
+
+<component id="ID_txt14">
+<text><![CDATA[1 or 0]]></text>
+</component>
+
+
+
+
+
+</textcomponents>

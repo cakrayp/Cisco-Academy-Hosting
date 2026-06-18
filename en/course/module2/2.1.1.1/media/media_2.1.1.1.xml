@@ -1,0 +1,21 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Configure BOOT Environment Variable</b>]]></text> 
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Command]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Storage Device]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Path to location in file system]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[Filename of IOS]]></text> 
+</component>
+</textcomponents>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.3.4 Mengonfigurasi Router sebagai Agen Relai DHCPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>Server DHCPv6 berstatus</h2>
+</div>
+<div id="content">
+<p>Jika server DHCPv6 terletak di jaringan yang berbeda dari klien, maka router IPv6 dapat dikonfigurasi sebagai agen relai DHCPv6. Konfigurasi agen relai DHCPv6 mirip dengan konfigurasi router IPv4 sebagai relai DHCPv4.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Meskipun konfigurasi agen relai DHCPv6 mirip dengan DHCPv4, router IPv6 atau agen relai meneruskan pesan DHCPv6 sedikit berbeda dari relai DHCPv4. Pesan dan prosesnya berada di luar cakupan kurikulum ini.</p>
+<p></p>
+<p>Gambar 1 menunjukkan contoh topologi di mana server DHCPv6 terletak di jaringan 2001:DB8:CAFE:1::/64. Administrator jaringan ingin menggunakan server DHCPv6 ini sebagai server DHCPv6 stateful pusat untuk mengalokasikan alamat IPv6 ke semua klien. Oleh karena itu, klien di jaringan lain seperti PC1 pada jaringan 2001:DB8:CAFE:A::/64, harus berkomunikasi dengan server DHCPv6.</p>
+<p></p>
+<p>Pesan DHCPv6 dari klien dikirim ke alamat multicast IPv6 FF02::1:2. Alamat All_DHCPv6_Relay_Agents_and_Servers. Alamat ini memiliki cakupan link-local yang berarti router tidak meneruskan pesan-pesan ini. Router harus dikonfigurasi sebagai agen relai DHCPv6 agar klien dan server DHCPv6 dapat berkomunikasi.</p>
+<p></p>
+<p>
+<b>Mengonfigurasi Agen Relai DHCPv6</b>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 2, agen relai DHCPv6 dikonfigurasi menggunakan<span class="cmd"><b>tujuan relai dhcp ipv6</b></span>memerintah. Perintah ini dikonfigurasi pada antarmuka yang menghadap klien DHCPv6 menggunakan alamat server DHCPv6 sebagai tujuan.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan antarmuka ipv6 dhcp</b></span>perintah memverifikasi antarmuka G0/0 dalam mode relai dengan 2001:DB8:CAFE:1::6 dikonfigurasi sebagai server DHCPv6.</p>
+<p></p>
+<p>Dengan menggunakan Pemeriksa Sintaks pada Gambar 3, konfigurasikan perintah relai DHCPv6 pada router yang benar sehingga PC3 dapat menerima informasi pengalamatan IPv6 dari server DHCPv6. Lihat Gambar 1 untuk melihat topologi jaringan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

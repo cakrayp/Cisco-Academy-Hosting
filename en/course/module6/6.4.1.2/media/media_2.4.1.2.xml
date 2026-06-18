@@ -1,0 +1,64 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Calculating a Route Summary</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Step 1:</b> List the networks in binary format.]]></text>
+</component>
+
+
+
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Calculating a Route Summary</b>]]></text> 
+  </component>
+  
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Step 1:</b> List the networks in binary format.]]></text>
+</component> 
+  
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Step 2:</b> Count the number of far-left matching bits to determine the mask.]]></text>
+</component>
+  <component id="ID_s2_txt03">
+<text><![CDATA[<b>Answer:</b> 14 matching bits = /14 or 255.252.0.0]]></text>
+</component>
+
+
+
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Calculating a Route Summary</b>]]></text> 
+  </component>
+
+ 
+ <component id="ID_s3_txt01">
+<text><![CDATA[<b>Step 1:</b> List the networks in binary format.]]></text>
+</component> 
+  
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Step 2:</b> Count the number of far-left matching bits to determine the mask.]]></text>
+</component>
+  <component id="ID_s3_txt03">
+<text><![CDATA[<b>Answer:</b> 14 matching bits = /14 or 255.252.0.0]]></text>
+</component>
+<component id="ID_s3_txt04">
+  <text><![CDATA[<b>Step 3:</b> Copy the matching bits and then add zero bits to determine the summarized network address.]]></text> 
+  </component>
+  
+ <component id="ID_s3_txt05">
+  <text><![CDATA[Copy]]></text> 
+  </component>
+  <component id="ID_s3_txt06">
+  <text><![CDATA[Add zero bits]]></text> 
+  </component>
+  <component id="ID_s3_txt07">
+  <text><![CDATA[<b>Answer:</b>  172.20.0.0]]></text> 
+  </component>
+ 
+ 
+ 
+  <component id="ID_s4_title">
+  <text><![CDATA[<b>One Summary Static Route</b>]]></text> 
+  </component>
+  
+</textcomponents>

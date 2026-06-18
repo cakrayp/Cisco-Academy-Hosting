@@ -1,0 +1,5 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>OSPF steps…</b><textformat blockindent="-14"><ul><li>Neighbor adjacency</li><li>Link state advertisements</li><li>Topology table</li><li>Routing table</li></ul></textformat>]]></text>
+</component>
+</textcomponents>

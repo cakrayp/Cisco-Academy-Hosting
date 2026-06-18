@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.4.1 Pedoman Umum Pembuatan ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Pedoman pembuatan ACL</h2>
+</div>
+<div id="content">
+<p>Menulis ACL bisa menjadi tugas yang rumit. Untuk setiap antarmuka mungkin terdapat beberapa kebijakan yang diperlukan untuk mengelola jenis lalu lintas yang diizinkan masuk atau keluar dari antarmuka tersebut. Router pada gambar memiliki dua antarmuka yang dikonfigurasi untuk IPv4 dan IPv6. Jika kita membutuhkan ACL untuk kedua protokol, pada kedua antarmuka dan di kedua arah, ini akan memerlukan delapan ACL terpisah. Setiap antarmuka akan memiliki empat ACL; dua ACL untuk IPv4 dan dua ACL untuk IPv6. Untuk setiap protokol, satu ACL untuk lalu lintas masuk dan satu lagi untuk lalu lintas keluar.</p>
+<p></p>
+<p>
+<b>Catatan</b>: ACL tidak harus dikonfigurasi di kedua arah. Jumlah ACL dan arahnya yang diterapkan pada antarmuka akan bergantung pada persyaratan yang diterapkan.</p>
+<p></p>
+<p>Berikut adalah beberapa pedoman untuk menggunakan ACL:</p>
+<p></p>
+<p>
+<ul>
+<li>Gunakan ACL di router firewall yang ditempatkan di antara jaringan internal Anda dan jaringan eksternal seperti Internet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Gunakan ACL pada router yang ditempatkan di antara dua bagian jaringan Anda untuk mengontrol lalu lintas yang masuk atau keluar dari bagian tertentu jaringan internal Anda.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Konfigurasikan ACL pada router perbatasan, yaitu router yang terletak di tepi jaringan Anda. Ini menyediakan buffer yang sangat mendasar dari jaringan luar, atau antara area yang kurang terkontrol di jaringan Anda dan area yang lebih sensitif di jaringan Anda.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Konfigurasikan ACL untuk setiap protokol jaringan yang dikonfigurasi pada antarmuka router perbatasan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Tiga Ps</b>
+</p>
+<p></p>
+<p>Aturan umum untuk menerapkan ACL pada router dapat diingat dengan mengingat tiga Ps. Anda dapat mengkonfigurasi satu ACL per protokol, per arah, per antarmuka:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Satu ACL per protokol</b>- Untuk mengontrol arus lalu lintas pada antarmuka, ACL harus ditentukan untuk setiap protokol yang diaktifkan pada antarmuka.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Satu ACL per arah</b>- ACL mengontrol lalu lintas dalam satu arah pada satu waktu pada antarmuka. Dua ACL terpisah harus dibuat untuk mengontrol lalu lintas masuk dan keluar.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Satu ACL per antarmuka</b>- ACL mengontrol lalu lintas untuk suatu antarmuka, misalnya GigabitEthernet 0/0.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

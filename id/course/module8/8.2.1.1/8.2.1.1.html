@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.1.1 Topologi Jaringan OSPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>ID Perute OSPF</h2>
+</div>
+<div id="content">
+<p>Diperkenalkan pada tahun 1991, OSPFv2 adalah protokol routing link-state untuk IPv4. OSPF dirancang sebagai alternatif protokol routing IPv4 lainnya, RIP.</p>
+<p></p>
+<p>Gambar menunjukkan topologi yang digunakan untuk mengkonfigurasi OSPFv2 di bagian ini. Jenis antarmuka serial dan bandwidth yang terkait belum tentu mencerminkan jenis koneksi yang lebih umum ditemukan dalam jaringan saat ini. Bandwidth dari link serial yang digunakan dalam topologi ini dipilih untuk membantu menjelaskan perhitungan metrik protokol routing dan proses pemilihan jalur terbaik.</p>
+<p></p>
+<p>Router dalam topologi memiliki konfigurasi awal, termasuk alamat antarmuka. Saat ini tidak ada perutean statis atau perutean dinamis yang dikonfigurasi pada router mana pun. Semua antarmuka pada router R1, R2, dan R3 (kecuali loopback pada R2) berada dalam area backbone OSPF. Router ISP digunakan sebagai gerbang domain perutean ke Internet.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Dalam topologi ini antarmuka loopback digunakan untuk mensimulasikan link WAN ke Internet.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

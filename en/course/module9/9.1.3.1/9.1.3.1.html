@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.3.1 Introducing ACL Wildcard Masking</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Wildcard Masks in ACLs</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Wildcard Masking</b>
+          </p>
+          <p></p>
+          <p>IPv4 ACEs include the use of wildcard masks. A wildcard mask is a string of 32 binary digits used by the router to determine which bits of the address to examine for a match. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Unlike IPv4 ACLs, IPv6 ACLs do not use wildcard masks. Instead, the prefix-length is used to indicate how much of an IPv6 source or destination address should be matched. IPv6 ACLs are discussed later in this chapter.</p>
+          <p></p>
+          <p>As with subnet masks, the numbers 1 and 0 in the wildcard mask identify how to treat the corresponding IP address bits. However, in a wildcard mask, these bits are used for different purposes and follow different rules. </p>
+          <p></p>
+          <p>Subnet masks use binary 1s and 0s to identify the network, subnet, and host portion of an IP address. Wildcard masks use binary 1s and 0s to filter individual IP addresses or groups of IP addresses to permit or deny access to resources. </p>
+          <p></p>
+          <p>Wildcard masks and subnet masks differ in the way they match binary 1s and 0s. Wildcard masks use the following rules to match binary 1s and 0s:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Wildcard mask bit 0 - Match the corresponding bit value in the address. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Wildcard mask bit 1 - Ignore the corresponding bit value in the address.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Figure 1 shows how different wildcard masks filter IP addresses. In the example, remember that binary 0 signifies a bit that must match, and binary 1 signifies a bit that can be ignored. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Wildcard masks are often referred to as an inverse mask. The reason is that, unlike a subnet mask in which binary 1 is equal to a match and binary 0 is not a match, in a wildcard mask the reverse is true. </p>
+          <p></p>
+          <p>
+            <b>Using a Wildcard Mask</b>
+          </p>
+          <p></p>
+          <p>The table in Figure 2 shows the results of applying a 0.0.255.255 wildcard mask to a 32-bit IPv4 address. Remember that a binary 0 indicates a value that is matched.</p>
+          <p></p>
+          <p>Wildcard masks are also used when configuring some IPv4 routing protocols, such as OSPF, to enable the protocol on specific interfaces.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

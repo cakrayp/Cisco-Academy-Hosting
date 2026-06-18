@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Advantages of Link-State Routing Protocols</b>]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Each router builds its own topological map of the network to determine the shortest path.</li><li>Immediate flooding of LSPs achieves faster convergence.</li><li>LSPs are sent only when there is a change in the topology and contain only the information regarding that change.</li><li>Hierarchical design used when implementing multiple areas.</li></ul></textformat>]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Disadvantages of Link-State Routing Protocols</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Maintaining a link-state database and SPF tree requires additional memory.</li><li>Calculating the SPF algorithm also requires additional CPU processing.</li><li>Bandwidth can be adversely affected by link-state packet flooding.</li></ul></textformat>]]></text> 
+</component>
+
+</textcomponents>

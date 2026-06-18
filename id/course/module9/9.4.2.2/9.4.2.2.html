@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.4.2.2 Mengatasi Masalah Kesalahan Umum ACL - Contoh 2</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.4.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan masalah ACL</h1>
+<h2>Kesalahan ACL Umum</h2>
+</div>
+<div id="content">
+<p>
+<b>Contoh Kesalahan 2</b>
+</p>
+<p></p>
+<p>Pada gambar, jaringan 192.168.10.0/24 tidak dapat menggunakan TFTP untuk terhubung ke jaringan 192.168.30.0/24.</p>
+<p></p>
+<p>
+<b>Larutan</b>- Jaringan 192.168.10.0/24 tidak dapat menggunakan TFTP untuk terhubung ke jaringan 192.168.30.0/24 karena TFTP menggunakan protokol transport UDP. Pernyataan 30 dalam daftar akses 120 mengizinkan semua lalu lintas TCP lainnya. Namun, karena TFTP menggunakan UDP dan bukan TCP, maka secara implisit ditolak. Ingatlah bahwa pernyataan penolakan apa pun yang tersirat tidak muncul dalam<span class="cmd"><b>tampilkan daftar akses</b></span>keluaran dan oleh karena itu kecocokan tidak ditampilkan.</p>
+<p></p>
+<p>Pernyataan 30 seharusnya<span class="cmd"><b>ip apa saja</b></span>.</p>
+<p></p>
+<p>ACL ini berfungsi apakah diterapkan pada G0/0 dari R1, atau S0/0/1 dari R3, atau S0/0/0 dari R2 pada arah masuk. Namun, berdasarkan aturan tentang menempatkan ACL yang diperluas paling dekat dengan sumbernya, pilihan terbaik adalah menempatkannya masuk pada G0/0 dari R1 karena memungkinkan lalu lintas yang tidak diinginkan disaring tanpa melintasi infrastruktur jaringan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

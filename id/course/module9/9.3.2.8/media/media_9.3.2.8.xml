@@ -1,0 +1,171 @@
+<textcomponents>
+
+<!-- slide 1-->
+<component id='ID_inst'>
+<text><![CDATA[<b>Aktivitas – Mengevaluasi Pernyataan ACL yang Diperluas</b><br/><br/>Klik Tombol 2, 3, dan 4 untuk menyelesaikan aktivitas. Klik Tombol 1 untuk meninjau topologi kapan saja.]]></text>
+</component>
+
+<component id='ID_txt01'>
+<text><![CDATA[ACL 103 diterapkan pada Fa0/0 masuk]]></text>
+</component>
+
+<!-- slide 2-->
+<component id='ID_s1_inst'>
+<text><![CDATA[<b>Aktivitas – Mengevaluasi Pernyataan ACL yang Diperluas</b><br/><br/><b>Skenario 1</b>– Lihat topologi pada gambar pertama. Skenario ini menyediakan ACL 103 yang diperluas serta kombinasi sumber dan tujuan dalam tabel. Berdasarkan informasi ini, tentukan apakah paket akan diizinkan atau ditolak. Seret Izinkan atau Tolak ke bidang di samping setiap kombinasi sumber dan tujuan. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Sumber</b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>Tujuan</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[<b>Izin atau Tolak</b>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+<text><![CDATA[<font color="#393536">Permit</font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+<text><![CDATA[<font color="#393536">Deny</font>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+<!-- slide 3-->
+<component id='ID_s2_inst'>
+<text><![CDATA[<b>Aktivitas – Mengevaluasi Pernyataan ACL yang Diperluas</b><br/><br/><b>Skenario 2</b>– Lihat topologi pada gambar pertama. Skenario ini menyediakan ACL 104 yang diperluas serta kombinasi sumber dan tujuan dalam tabel. Berdasarkan informasi ini, tentukan apakah paket akan diizinkan atau ditolak. Seret Izinkan atau Tolak ke bidang di samping setiap kombinasi sumber dan tujuan. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Sumber</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Tujuan</b>]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[<b>Protokol</b>]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[<b>Izin atau Tolak</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+<text><![CDATA[<font color="#393536">Permit</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+<text><![CDATA[<font color="#393536">Deny</font>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+<!-- slide 4-->
+<component id='ID_s3_inst'>
+<text><![CDATA[<b>Aktivitas – Mengevaluasi Pernyataan ACL yang Diperluas</b><br/><br/><b>Skenario 3</b>– Lihat topologi pada gambar pertama. Skenario ini menyediakan ACL 105 yang diperluas serta kombinasi sumber dan tujuan dalam tabel. Berdasarkan informasi ini, tentukan apakah paket akan diizinkan atau ditolak. Beri tanda centang pada kolom Izin atau Tolak yang sesuai pada tabel.]]></text>
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Sumber</b>]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Tujuan</b>]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[<b>Protokol</b>]]></text>
+</component>
+
+<component id="ID_s3_txt04">
+<text><![CDATA[<b>Izin atau Tolak</b>]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+<text><![CDATA[<font color="#393536">Permit</font>]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+<text><![CDATA[<font color="#393536">Deny</font>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

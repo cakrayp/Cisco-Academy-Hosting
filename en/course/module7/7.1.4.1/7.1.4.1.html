@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.1.4.1 Classifying Routing Protocols</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Routing Protocols</h1>
+        <h2>Types of Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>Routing protocols can be classified into different groups according to their characteristics. Specifically, routing protocols can be classified by their:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Purpose </b>- Interior Gateway Protocol (IGP) or Exterior Gateway Protocol (EGP)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Operation </b>- Distance vector, link-state protocol, or path-vector protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Behavior</b>
+                <b></b>- Classful (legacy) or classless protocol</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>For example, IPv4 routing protocols are classified as follows: </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv1 (legacy) </b>- IGP, distance vector, classful protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IGRP (legacy) </b>- IGP, distance vector, classful protocol developed by Cisco (deprecated from 12.2 IOS and later)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv2 </b>-  IGP, distance vector, classless protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EIGRP </b>- IGP, distance vector, classless protocol developed by Cisco</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF </b>- IGP, link-state, classless protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS </b>- IGP, link-state, classless protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>BGP </b>- EGP, path-vector, classless protocol</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The classful routing protocols, RIPv1 and IGRP, are legacy protocols and are only used in older networks. These routing protocols have evolved into the classless routing protocols, RIPv2 and EIGRP, respectively. Link-state routing protocols are classless by nature. </p>
+          <p></p>
+          <p>Figure 1 displays a hierarchical view of dynamic routing protocol classification.  </p>
+          <p></p>
+          <p>Figures 2 to 5 highlight the purpose, operation, and behavior of the various routing protocols.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

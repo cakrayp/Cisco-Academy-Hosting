@@ -1,0 +1,39 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>ACL Traffic Filtering on a Router</b>]]></text>
+	</component>
+
+	<component id="ID_txt01">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt02">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt01_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt02_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt03">
+		<text><![CDATA[One list per interface, per direction, and per protocol]]></text>
+	</component>
+
+	<component id="ID_txt04">
+		<text><![CDATA[With two interfaces and two protocols running, this router could have a total of 8 separate ACLs applied.]]></text>
+	</component>
+
+	<component id="ID_txt05">
+		<text><![CDATA[<b>The three Ps for using ACLs</b>]]></text>
+	</component>
+
+	<component id="ID_txt06">
+		<text><![CDATA[You can only have one ACL per protocol, per interface, and per direction:<textformat blockindent="-14"><ul><li>One ACL per protocol (e.g., IPv4 or IPv6)</li><li>One ACL per direction (i.e., IN or OUT)</li><li>One ACL per interface (e.g., FastEthernet0/0)</li></ul></textformat>]]></text>
+	</component>
+
+</textcomponents>

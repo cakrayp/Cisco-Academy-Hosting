@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.3.1 Mengonfigurasi ACL Standar untuk Mengamankan Port VTY</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Mengamankan port VTY dengan ACL IPv4 Standar</h2>
+</div>
+<div id="content">
+<p>
+<b>Menggunakan ACL untuk Mengontrol Akses VTY</b>
+</p>
+<p></p>
+<p>Cisco merekomendasikan penggunaan SSH untuk koneksi administratif ke router dan switch. Jika image perangkat lunak Cisco IOS di router Anda tidak mendukung SSH, Anda dapat meningkatkan keamanan jalur administratif dengan membatasi akses VTY. Membatasi akses VTY adalah teknik yang memungkinkan Anda menentukan alamat IP mana yang diperbolehkan mengakses Telnet ke proses EXEC router. Anda dapat mengontrol stasiun kerja atau jaringan administratif mana yang mengelola router Anda dengan ACL dan<span class="cmd"><b>kelas akses</b></span>pernyataan yang dikonfigurasi pada baris VTY Anda. Anda juga dapat menggunakan teknik ini dengan SSH untuk lebih meningkatkan keamanan akses administratif.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>kelas akses</b></span>perintah yang dikonfigurasi dalam mode konfigurasi baris membatasi koneksi masuk dan keluar antara VTY tertentu (ke dalam perangkat Cisco) dan alamat dalam daftar akses.</p>
+<p></p>
+<p>Daftar akses standar dan diperpanjang berlaku untuk paket yang berjalan melalui router. Mereka tidak dirancang untuk memblokir paket yang berasal dari dalam router. ACL perluasan Telnet keluar tidak mencegah sesi Telnet yang dimulai oleh router, secara default.</p>
+<p></p>
+<p>Memfilter lalu lintas Telnet atau SSH biasanya dianggap sebagai fungsi IP ACL yang diperluas karena menyaring protokol tingkat yang lebih tinggi. Namun, karena<span class="cmd"><b>kelas akses</b></span>perintah digunakan untuk memfilter sesi Telnet/SSH masuk atau keluar berdasarkan alamat sumber, ACL standar dapat digunakan.</p>
+<p></p>
+<p>Sintaks perintah dari<span class="cmd"><b>kelas akses</b></span>perintahnya adalah:</p>
+<p></p>
+<p>
+<span class="cmd">Router(baris konfigurasi)#</span>
+<span class="cmd">
+<b>kelas akses</b>
+</span>
+<span class="cmd"></span>
+<span class="cmd">
+<i>nomor daftar akses</i>
+</span>
+<span class="cmd"> {</span>
+<span class="cmd">
+<b>in </b>
+</span>
+<span class="cmd">[</span>
+<span class="cmd">
+<b>vrf-juga</b>
+</span>
+<span class="cmd">]</span>
+<span class="cmd">
+<b></b>
+</span>
+<span class="cmd">|</span>
+<span class="cmd">
+<b>keluar</b>
+</span>
+<span class="cmd">}</span>
+</p>
+<p></p>
+<p>Parameternya<span class="cmd"><b>in</b></span>membatasi koneksi masuk antara alamat dalam daftar akses dan perangkat Cisco, sedangkan parameternya<span class="cmd"><b>keluar</b></span>membatasi koneksi keluar antara perangkat Cisco tertentu dan alamat dalam daftar akses.</p>
+<p></p>
+<p>Contoh yang mengizinkan rentang alamat untuk mengakses jalur VTY 0 - 4 ditunjukkan pada Gambar 1. ACL pada gambar dikonfigurasi untuk mengizinkan jaringan 192.168.10.0 mengakses jalur VTY 0 - 4 tetapi menolak semua jaringan lainnya.</p>
+<p></p>
+<p>Hal berikut harus dipertimbangkan ketika mengkonfigurasi daftar akses pada VTY:</p>
+<p></p>
+<p>
+<ul>
+<li>Hanya daftar akses bernomor yang dapat diterapkan pada VTY.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pembatasan yang sama harus ditetapkan pada semua VTY, karena pengguna dapat mencoba menyambung ke salah satu VTY tersebut.</li>
+</ul>
+</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 2 untuk berlatih mengamankan akses VTY.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

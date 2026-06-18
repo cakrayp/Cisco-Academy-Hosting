@@ -1,0 +1,24 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#ID_s4_txt01{line-height:16px;padding:0 0 0 3px;margin:2px 0 0 0px}
+#ID_s4_txt01 span{padding-left:10px;}
+#ID_s4_txt01 b {font-weight:800;}
+
+#ID_s5_txt01{line-height:16px;padding:0 0 0 3px;margin:2px 0 0 0px}
+#ID_s5_txt01 span{padding-left:10px;}
+#ID_s5_txt01 b {font-weight:800;}
+
+#ID_s6_txt01{line-height:16px;padding:0 0 0 3px;margin:2px 0 0 0px}
+#ID_s6_txt01 span{padding-left:10px;}
+#ID_s6_txt01 b {font-weight:800;}

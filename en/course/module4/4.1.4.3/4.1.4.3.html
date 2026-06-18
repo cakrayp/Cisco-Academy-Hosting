@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.4.3 Filter Show Command Output</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Verify Connectivity of Directly Connected Networks</h2>
+      </div>
+      <div id="content">
+          <p>Commands that generate multiple screens of output are, by default, paused after 24 lines. At the end of the paused output, the --More-- text displays. Pressing <b>Enter</b> displays the next line and pressing the spacebar displays the next set of lines. Use the<span class="cmd"><b> terminal length </b></span><span class="cmd"><i>number </i></span>command to specify the number of lines to be displayed. A value of 0 (zero) prevents the router from pausing between screens of output. </p>
+          <p></p>
+          <p>Another very useful feature that improves the user experience in the command-line interface (CLI) is the filtering of<span class="cmd"><b> show </b></span>output. Filtering commands can be used to display specific sections of output. To enable the filtering command, enter a pipe (<span class="cmd"><b>|</b></span>) character after the<span class="cmd"><b> show </b></span>command and then enter a filtering parameter and a filtering expression.</p>
+          <p></p>
+          <p>The filtering parameters that can be configured after the pipe include:</p>
+          <p>
+            <ul>
+              <li>
+                <b>section </b>- Shows entire section that starts with the filtering expression</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>include </b>- Includes all output lines that match the filtering expression</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>exclude </b>- Excludes all output lines that match the filtering expression</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>begin </b>- Shows all the output lines from a certain point, starting with the line that matches the filtering expression</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Output filters can be used in combination with any<span class="cmd"><b> show </b></span>command. </p>
+          <p></p>
+          <p>Figures 1 to 4 provide examples of the various output filters.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 5 to filter output.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

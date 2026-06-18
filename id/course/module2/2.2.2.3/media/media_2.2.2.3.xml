@@ -1,0 +1,10 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Serangan CDP</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Wireshark menangkap versi perangkat lunak dari bingkai CDP.<br/><br/>Perangkat Lunak Cisco IOS, Perangkat Lunak C2960 (C2960-LANBASEK9-M), Versi 12.2(44)SE, PERANGKAT LUNAK RELEASE (fc1)…]]></text>
+</component>
+
+</textcomponents>

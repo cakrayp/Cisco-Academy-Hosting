@@ -1,0 +1,33 @@
+<textcomponents>
+
+	<component id="ID_s1_title">
+	<text><![CDATA[<b>Prosedur untuk Mengonfigurasi ACL Standar</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_title">
+	<text><![CDATA[<b>Izinkan Subnet Tertentu</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+  <text><![CDATA[Langkah 1: Gunakan<font color="#393536" face="_typewriter"><b>daftar akses</b></font>perintah konfigurasi global untuk membuat entri dalam IPv4 ACL standar.]]></text> 
+  </component>
+	<component id="ID_s1_txt02">
+  <text><![CDATA[Pernyataan contoh cocok dengan alamat mana pun yang dimulai dengan 192.168.10.x. Gunakan<font color="#393536" face="_typewriter"><b>komentar</b></font>opsi untuk menambahkan deskripsi ke ACL Anda.]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt03">
+ <text><![CDATA[Langkah 2: Gunakan<font color="#393536" face="_typewriter"><b>antarmuka</b></font>perintah konfigurasi untuk memilih antarmuka untuk menerapkan ACL.]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt04">   
+ <text><![CDATA[Langkah 3: Gunakan<font color="#393536" face="_typewriter"><b>grup akses ip</b></font>perintah konfigurasi antarmuka untuk mengaktifkan ACL yang ada pada suatu antarmuka.]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt05">   
+ <text><![CDATA[Contoh ini mengaktifkan standar IPv4 ACL 1 pada antarmuka sebagai filter keluar.]]></text> 
+  </component>
+  
+   <component id="ID_s2_txt01">   
+ <text><![CDATA[<b>Perusahaan A</b>]]></text> 
+  </component>
+</textcomponents>

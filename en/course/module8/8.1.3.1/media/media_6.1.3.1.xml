@@ -1,0 +1,104 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>Transitioning Through the OSPF States</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+ <text><![CDATA[Down State]]></text>
+</component>
+
+<component id="ID_txt02">
+ <text><![CDATA[Init State]]></text> 
+</component>
+  
+<component id="ID_txt03">
+  <text><![CDATA[Two-Way State]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[ExStart State]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[Exchange State]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Loading State]]></text> 
+</component>
+  
+<component id="ID_txt07">
+  <text><![CDATA[Full State]]></text> 
+</component>
+  
+<component id="ID_txt08">
+  <text><![CDATA[Establish Neighbor Adjacencies]]></text> 
+</component>
+  
+<component id="ID_txt09">
+  <text><![CDATA[Synchronize OSPF Databases]]></text> 
+</component>
+  
+  
+<component id="ID_btn01_body">
+<text><![CDATA[<textformat blockindent='-18'><ul><li>No Hello packets received = Down.</li><li>Router sends Hello packets.</li><li>Transition to Init state.</li></ul></textformat>]]></text>
+</component>
+
+
+<component id="ID_btn02_body">
+<text><![CDATA[<textformat blockindent='-18'><ul><li>Hello packets are received from the neighbor.</li><li>They contain the sending router’s Router ID.</li><li>Transition to Two-Way state.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn03_body">
+<text><![CDATA[<textformat blockindent='-18'><ul><li>On Ethernet links, elect a DR, and a BDR.</li><li>Transition to ExStart state.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn04_body">
+<text><![CDATA[<textformat blockindent='-18'><ul><li>Negotiate master / slave relationship and DBD packet sequence number.</li><li>The master initiates the DBD packet exchange.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn05_body">
+<text><![CDATA[<textformat blockindent='-18'><ul><li>Routers exchange DBD packets.</li><li>If additional router information is required then transition to Loading; otherwise, transition to Full.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn06_body">
+<text>
+<![CDATA[<textformat blockindent='-18'><ul><li>LSRs and LSUs are used to gain additional route information.</li><li>Routes are processed using the SPF algorithm.</li><li>Transition to the Full state.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn07_body">
+<text>
+<![CDATA[Routers have converged.]]>
+</text>
+</component>
+
+<component id="ID_btn01_header">
+	<text><![CDATA[<b>Down State</b>]]></text>
+</component>
+
+<component id="ID_btn02_header">
+	<text><![CDATA[<b>Init State</b>]]></text> 
+ </component>
+ 
+<component id="ID_btn03_header">
+ 	<text><![CDATA[<b>Two-Way State</b>]]></text> 
+ </component>
+ 
+<component id="ID_btn04_header">
+ 	<text><![CDATA[<b>ExStart State</b>]]></text> 
+</component>
+
+<component id="ID_btn05_header">
+	<text><![CDATA[<b>Exchange State</b>]]></text> 
+</component>
+
+<component id="ID_btn06_header">
+	<text><![CDATA[<b>Loading State</b>]]></text> 
+</component>
+  
+<component id="ID_btn07_header">
+	<text><![CDATA[<b>Full State</b>]]></text> 
+</component>
+
+</textcomponents>

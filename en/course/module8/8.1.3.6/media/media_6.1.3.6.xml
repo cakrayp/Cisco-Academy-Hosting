@@ -1,0 +1,136 @@
+<textcomponents>
+
+
+<!-- SCREEN 1 -->  
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity – Select the Router ID</b><br/><br/>Use the topology on this page to determine each Router’s ID.  On Page 2, drag the correct Router ID number to the hostname it represents.  Click on the Page 2 button to continue this activity. Click the Topology Diagram button whenever you need to refer to the topology.
+]]></text>
+</component>
+
+
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Lo0<br/>192.168.10.5/32]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Lo0<br/>192.168.10.1/32]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Lo0<br/>192.168.10.3/32]]></text>
+</component>
+
+
+
+
+<!--SCREEN 2 Drag and Drop -->  
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity – Select the Router ID, Page 2</b><br/><br/>Use the topology diagram provided with this activity to drag the correct router ID number to the hostname it represents.]]></text>
+</component>
+
+<component id='ID_s2_header1'>
+	<text><![CDATA[<b>Router Hostname</b>]]></text>
+</component>
+<component id='ID_s2_header2'>
+	<text><![CDATA[<b>Router ID</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Router A]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Router B]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Router C]]></text>
+</component>
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Router D]]></text>
+</component>
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Router E]]></text>
+</component>
+<component id='ID_s2_txt06'>
+	<text><![CDATA[Router F]]></text>
+</component>
+
+<component id='ID_s2_target_header'>
+	<text><![CDATA[<b>Router ID Numbers</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font color="#393536">10.1.16.2</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font color="#393536">192.168.10.5</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font color="#393536">10.1.13.1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font color="#393536">192.168.10.1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[<font color="#393536">209.165.201.2</font>]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[<font color="#393536">10.1.13.2</font>]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[<font color="#393536">10.1.10.1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag08'>
+	<text><![CDATA[<font color="#393536">10.1.10.4</font>]]></text>
+</component>
+
+<component id='ID_s2_drag09'>
+	<text><![CDATA[<font color="#393536">10.1.19.1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag10'>
+	<text><![CDATA[<font color="#393536">209.165.201.10</font>]]></text>
+</component>
+
+<component id='ID_s2_drag11'>
+	<text><![CDATA[<font color="#393536">192.168.10.3</font>]]></text>
+</component>
+
+<component id='ID_s2_drag12'>
+	<text><![CDATA[<font color="#393536">10.1.10.3</font>]]></text>
+</component>
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully selected the router IDs for each hostname.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully selected the router IDs for each hostname. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+</textcomponents>

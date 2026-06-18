@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.1.4 Jaringan Interkoneksi Router</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Fungsi Router</h2>
+</div>
+<div id="content">
+<p>Sebagian besar pengguna tidak menyadari keberadaan banyak router di jaringan mereka sendiri atau di Internet. Pengguna berharap dapat mengakses halaman web, mengirim email, dan mengunduh musik, terlepas dari apakah server yang diakses berada di jaringan mereka sendiri atau di jaringan lain. Para profesional jaringan tahu bahwa routerlah yang bertanggung jawab meneruskan paket dari jaringan ke jaringan, dari sumber asli ke tujuan akhir.</p>
+<p></p>
+<p>Sebuah router menghubungkan beberapa jaringan, yang berarti ia memiliki banyak antarmuka yang masing-masing milik jaringan IP berbeda. Ketika router menerima paket IP pada satu antarmuka, ia menentukan antarmuka mana yang akan digunakan untuk meneruskan paket ke tujuan. Antarmuka yang digunakan router untuk meneruskan paket mungkin merupakan tujuan akhir, atau mungkin jaringan yang terhubung ke router lain yang digunakan untuk mencapai jaringan tujuan.</p>
+<p></p>
+<p>Dalam animasi pada Gambar 1, R1 dan R2 bertanggung jawab untuk menerima paket di satu jaringan dan meneruskan paket tersebut keluar jaringan lain menuju jaringan tujuan.</p>
+<p></p>
+<p>Setiap jaringan yang dihubungkan oleh router biasanya memerlukan antarmuka terpisah. Antarmuka ini digunakan untuk menghubungkan kombinasi jaringan area lokal (LAN) dan jaringan area luas (WAN). LAN umumnya merupakan jaringan Ethernet yang berisi perangkat, seperti PC, printer, dan server. WAN digunakan untuk menghubungkan jaringan di wilayah geografis yang luas. Misalnya saja koneksi WAN yang biasa digunakan untuk menghubungkan LAN ke jaringan penyedia layanan Internet (ISP).</p>
+<p></p>
+<p>Perhatikan bahwa setiap situs pada Gambar 2 memerlukan penggunaan router untuk melakukan interkoneksi ke situs lain. Bahkan Home Office memerlukan router. Dalam topologi ini, router yang terletak di Home Office adalah perangkat khusus yang melakukan banyak layanan untuk jaringan rumah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

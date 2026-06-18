@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.2.4.3 Introduction to Troubleshooting Trunks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Implementations</h1>
+        <h2>Troubleshoot VLANs and Trunks</h2>
+      </div>
+      <div id="content">
+          <p>A common task of a network administrator is to troubleshoot trunk link formation or links incorrectly behaving as trunk links. Sometimes a switch port may behave like a trunk port even if it is not configured as a trunk port. For example, an access port might accept frames from VLANs different from the VLAN to which it is assigned. This is called VLAN leaking.</p>
+          <p></p>
+          <p>Figure 1 displays a flowchart of general trunk troubleshooting guidelines.</p>
+          <p></p>
+          <p>To troubleshoot issues when a trunk is not forming or when VLAN leaking is occurring, proceed as follows:</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Use the<span class="cmd"><b> show interfaces trunk </b></span>command to check whether the local and peer native VLANs match. If the native VLAN does not match on both sides, VLAN leaking occurs.</p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>Use the<span class="cmd"><b> show interfaces trunk </b></span>command to check whether a trunk has been established between switches. Statically configure trunk links whenever possible. Cisco Catalyst switch ports use DTP by default and attempt to negotiate a trunk link.</p>
+          <p></p>
+          <p>To display the status of the trunk, the native VLAN used on that trunk link, and verify trunk establishment, use the<span class="cmd"><b> show interfaces trunk </b></span>command. The example in Figure 2 shows that the native VLAN on one side of the trunk link was changed to VLAN 2. If one end of the trunk is configured as native VLAN 99 and the other end is configured as native VLAN 2, a frame sent from VLAN 99 on one side is received on VLAN 2 on the other side. VLAN 99 leaks into the VLAN 2 segment. </p>
+          <p></p>
+          <p>CDP displays a notification of a native VLAN mismatch on a trunk link with this message:</p>
+          <p></p>
+          <p>
+            <span class="cmd">*Mar  1 06:45:26.232: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on FastEthernet0/1 (2), with S2 FastEthernet0/1 (99).</span>
+          </p>
+          <p></p>
+          <p>Connectivity issues occur in the network if a native VLAN mismatch exists. Data traffic for VLANs, other than the two native VLANs configured, successfully propagates across the trunk link, but data associated with either of the native VLANs does not successfully propagate across the trunk link. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: The output in Figure 2 indicates that there is an active trunk despite the native VLAN mismatch. Configure the native VLAN to be the same VLAN on both sides of the link to correct this behavior.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

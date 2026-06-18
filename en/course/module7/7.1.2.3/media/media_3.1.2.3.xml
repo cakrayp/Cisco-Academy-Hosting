@@ -1,0 +1,26 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Dynamic Routing Scenario</b>]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Dynamic Routing Scenario</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Region 1]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Region 2]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Region 3]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[Region 4]]></text>
+</component>
+</textcomponents>

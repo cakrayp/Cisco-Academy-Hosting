@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.2.2.1 Routing Information Protocol</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Distance Vector Dynamic Routing</h1>
+        <h2>Types of Distance Vector Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>The Routing Information Protocol (RIP) was a first generation routing protocol for IPv4 originally specified in RFC 1058. It is easy to configure, making it a good choice for small networks. </p>
+          <p></p>
+          <p>RIPv1 has the following key characteristics:</p>
+          <p>
+            <ul>
+              <li>Routing updates are broadcasted (255.255.255.255) every 30 seconds. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The hop count is used as the metric for path selection.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>A hop count greater than 15 hops is deemed infinite (too far). That 15th hop router would not propagate the routing update to the next router. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In 1993, RIPv1 evolved to a classless routing protocol known as RIP version 2 (RIPv2). RIPv2 introduced the following improvements:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Classless routing protocol </b>- It supports VLSM and CIDR, because it includes the subnet mask in the routing updates. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Increased efficiency </b>- It forwards updates to multicast address 224.0.0.9, instead of the broadcast address 255.255.255.255. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Reduced routing entries </b>- It supports manual route summarization on any interface.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Secure </b>- It supports an authentication mechanism to secure routing table updates between neighbors. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The table in the figure summarizes the differences between RIPv1 and RIPv2. </p>
+          <p></p>
+          <p>RIP updates are encapsulated into a UDP segment, with both source and destination port numbers set to UDP port 520.  </p>
+          <p>In 1997, the IPv6 enabled version of RIP was released. RIPng is based on RIPv2. It still has a 15 hop limitation and the administrative distance is 120.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

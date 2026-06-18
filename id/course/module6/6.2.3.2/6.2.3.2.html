@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.3.2 Opsi Hop Berikutnya</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Statis IPv6</h2>
+</div>
+<div id="content">
+<p>Dalam contoh ini, Gambar 1 sampai 3 menampilkan tabel routing R1, R2, dan R3. Setiap router hanya memiliki entri untuk jaringan yang terhubung langsung dan alamat lokal terkaitnya. Tak satu pun dari router memiliki pengetahuan tentang jaringan apa pun di luar antarmuka yang terhubung langsung.</p>
+<p></p>
+<p>Misalnya, R1 tidak memiliki pengetahuan tentang jaringan:</p>
+<p>
+<ul>
+<li>2001:DB8:ACAD:2::/64 - LAN di R2</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>2001:DB8:ACAD:5::/64 - Jaringan serial antara R2 dan R3</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>2001:DB8:ACAD:3::/64 - LAN di R3</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 4 menampilkan ping yang berhasil dari R1 ke R2. Gambar 5 menampilkan ping yang gagal ke LAN R3. Hal ini karena R1 tidak memiliki entri dalam tabel routing untuk jaringan tersebut.</p>
+<p></p>
+<p>Hop berikutnya dapat diidentifikasi berdasarkan alamat IPv6, antarmuka keluar, atau keduanya. Cara tujuan ditentukan akan menciptakan salah satu dari tiga jenis rute:</p>
+<p>
+<ul>
+<li>
+<b>Rute IPv6 statis lompatan berikutnya</b>- Hanya alamat IPv6 hop berikutnya yang ditentukan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Rute IPv6 statis yang terhubung langsung</b>- Hanya antarmuka keluar router yang ditentukan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Rute IPv6 statis yang ditentukan sepenuhnya</b>- Alamat IPv6 hop berikutnya dan antarmuka keluar ditentukan.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

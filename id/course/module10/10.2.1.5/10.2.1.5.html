@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.1.5 Opsi DHCPv6 Tanpa Status</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>SLAAC dan DHCPv6</h2>
+</div>
+<div id="content">
+<p>Meskipun DHCPv6 mirip dengan DHCPv4 dalam hal penyediaannya, kedua protokol tersebut tidak bergantung satu sama lain. DHCPv6 didefinisikan dalam RFC 3315. Ada banyak pekerjaan yang dilakukan pada spesifikasi ini selama bertahun-tahun sebagaimana ditunjukkan oleh fakta bahwa DHCPv6 RFC memiliki jumlah revisi tertinggi dari semua rancangan Internet.</p>
+<p></p>
+<p>
+<b>Opsi DHCPv6 Tanpa Status (Iklan Router dan DHCPv6)</b>
+</p>
+<p></p>
+<p>Opsi DHCPv6 stateless memberi tahu klien untuk menggunakan informasi dalam pesan RA untuk pengalamatan, namun parameter konfigurasi tambahan tersedia dari server DHCPv6.</p>
+<p></p>
+<p>Menggunakan awalan dan panjang awalan dalam pesan RA, bersama dengan EUI-64 atau IID yang dibuat secara acak, klien membuat alamat unicast global IPv6.</p>
+<p></p>
+<p>Klien kemudian akan berkomunikasi dengan server DHCPv6 stateless untuk mendapatkan informasi tambahan yang tidak disediakan dalam pesan RA. Ini mungkin daftar alamat IPv6 server DNS, misalnya. Proses ini dikenal sebagai DHCPv6 tanpa kewarganegaraan karena server tidak menyimpan informasi status klien apa pun (yaitu daftar alamat IPv6 yang tersedia dan dialokasikan). Server DHCPv6 stateless hanya menyediakan parameter konfigurasi untuk klien, bukan alamat IPv6.</p>
+<p></p>
+<p>Untuk DHCPv6 stateless, flag O diatur ke 1 dan flag M dibiarkan pada pengaturan default 0. Nilai flag O 1 digunakan untuk memberi tahu klien bahwa informasi konfigurasi tambahan tersedia dari server DHCPv6 stateless.</p>
+<p></p>
+<p>Untuk mengubah pesan RA yang dikirim pada antarmuka router agar menunjukkan DHCPv6 tanpa kewarganegaraan, gunakan perintah berikut:</p>
+<p></p>
+<p>
+<span class="cmd">Router(konfigurasi-jika)#</span>
+<span class="cmd">
+<b>ipv6 dan bendera konfigurasi lainnya</b>
+</span>
+<span class="cmd"></span>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

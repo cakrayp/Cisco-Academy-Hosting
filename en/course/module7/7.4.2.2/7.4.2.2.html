@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.4.2.2 Link and Link-State</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.4.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Link-State Dynamic Routing</h1>
+        <h2>Link-State Updates</h2>
+      </div>
+      <div id="content">
+          <p>The first step in the link-state routing process is that each router learns about its own links, its own directly connected networks. When a router interface is configured with an IP address and subnet mask, the interface becomes part of that network.  </p>
+          <p></p>
+          <p>Refer to the topology in Figure 1. For purposes of this discussion, assume that R1 was previously configured and had full connectivity to all neighbors. However, R1 lost power briefly and had to restart. </p>
+          <p></p>
+          <p>During boot up R1 loads the saved startup configuration file. As the previously configured interfaces become active, R1 learns about its own directly connected networks. Regardless of the routing protocols used, these directly connected networks are now entries in the routing table. </p>
+          <p></p>
+          <p>As with distance vector protocols and static routes, the interface must be properly configured with an IPv4 address and subnet mask, and the link must be in the up state before the link-state routing protocol can learn about a link. Also, like distance vector protocols, the interface must be included in one of the<span class="cmd"><b> network </b></span>router configuration statements before it can participate in the link-state routing process. </p>
+          <p></p>
+          <p>Figure 1 shows R1 linked to four directly connected networks: </p>
+          <p>
+            <ul>
+              <li>FastEthernet 0/0 - 10.1.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/0/0 - 10.2.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/0/1 - 10.3.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Serial 0/1/0 - 10.4.0.0/16 </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>As shown in Figures 2 to 5, the link-state information includes:</p>
+          <p>
+            <ul>
+              <li>The interface's IPv4 address and subnet mask</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The type of network, such as Ethernet (broadcast) or Serial point-to-point link</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The cost of that link</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Any neighbor routers on that link</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Cisco’s implementation of OSPF specifies the OSPF routing metric as the cost of the link based on the bandwidth of the outgoing interface. For the purposes of this chapter, we are using arbitrary cost values to simplify the demonstration.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

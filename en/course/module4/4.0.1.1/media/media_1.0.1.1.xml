@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Describe the primary functions and features of a router.</li><li>Connect devices for a small routed network.</li><li>Using CLI, configure basic settings on a router to route between two directly connected networks.</li><li>Verify connectivity between two networks that are directly connected to a router.</li><li>Explain the encapsulation and de-encapsulation process used by routers when switching packets between interfaces.</li><li>Explain the path determination function of a router.</li><li>Explain routing table entries for directly connected networks.</li><li>Explain how a router builds a routing table of directly connected networks.</li><li>Explain how a router builds a routing table using static routes.</li><li>Explain how a router builds a routing table using a dynamic routing protocol.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

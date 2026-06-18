@@ -1,0 +1,23 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Numbering and Naming ACLs</b>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt01">
+		<text><![CDATA[<b>Numbered ACL:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14' >Assign a number based on protocol to be filtered.<li>(1 to 99) and (1300 and 1999): Standard IP ACL </li><li>(100 to 199) and (2000 to 2699): Extended IP ACL</li></textformat>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt02">
+		<text><![CDATA[<b>Named ACL:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt02">
+		<text><![CDATA[<textformat blockindent='-14'>Assign a name to identify the ACL.<li>Names can contain alphanumeric characters.</li><li>It is suggested that the name be written in CAPITAL LETTERS.</li><li>Names cannot contain spaces or punctuation.</li><li>Entries can be added or deleted within the ACL.</li></textformat>]]></text>
+	</component>
+
+
+</textcomponents>

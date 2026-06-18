@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.3.2.1 Pedoman Perancangan VLAN</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Keamanan dan Desain VLAN</h1>
+<h2>Rancang Praktik Terbaik untuk VLAN</h2>
+</div>
+<div id="content">
+<p>Switch Cisco memiliki konfigurasi pabrik di mana VLAN default telah dikonfigurasikan sebelumnya untuk mendukung berbagai jenis media dan protokol. VLAN Ethernet default adalah VLAN 1. Ini adalah praktik keamanan terbaik untuk mengkonfigurasi semua port pada semua switch untuk dikaitkan dengan VLAN selain VLAN 1. Hal ini biasanya dilakukan dengan mengkonfigurasi semua port yang tidak digunakan ke VLAN lubang hitam yang tidak digunakan untuk apa pun di jaringan. Semua port yang digunakan dikaitkan dengan VLAN yang berbeda dari VLAN 1 dan berbeda dari VLAN lubang hitam. Ini juga merupakan praktik yang baik untuk mematikan port switch yang tidak digunakan untuk mencegah akses yang tidak sah.</p>
+<p></p>
+<p>Praktik keamanan yang baik adalah dengan memisahkan manajemen dan lalu lintas data pengguna. VLAN manajemen, yang secara default adalah VLAN 1, harus diubah menjadi VLAN terpisah dan berbeda. Untuk berkomunikasi jarak jauh dengan switch Cisco untuk tujuan manajemen, switch harus memiliki alamat IP yang dikonfigurasi pada VLAN manajemen. Pengguna di VLAN lain tidak akan dapat membuat sesi akses jarak jauh ke switch kecuali mereka dialihkan ke VLAN manajemen, sehingga memberikan lapisan keamanan tambahan. Selain itu, sakelar harus dikonfigurasi untuk hanya menerima sesi SSH terenkripsi untuk manajemen jarak jauh.</p>
+<p></p>
+<p>Semua lalu lintas kontrol dikirim pada VLAN 1. Oleh karena itu, ketika VLAN asli diubah menjadi selain VLAN 1, semua lalu lintas kontrol ditandai pada trunk VLAN IEEE 802.1Q (ditandai dengan VLAN ID 1). Praktik keamanan yang disarankan adalah mengubah VLAN asli ke VLAN yang berbeda dari VLAN 1. VLAN asli juga harus berbeda dari semua VLAN pengguna. Pastikan VLAN asli untuk trunk 802.1Q sama di kedua ujung link trunk.</p>
+<p></p>
+<p>DTP menawarkan empat mode port switch: akses, trunk, otomatis dinamis, dan dinamis yang diinginkan. Pedoman umumnya adalah menonaktifkan autonegosiasi. Sebagai praktik terbaik keamanan port, jangan gunakan mode port switch dinamis otomatis atau dinamis yang diinginkan.</p>
+<p></p>
+<p>Terakhir, lalu lintas suara memiliki persyaratan QoS yang ketat. Jika PC pengguna dan telepon IP berada pada VLAN yang sama, masing-masing mencoba menggunakan bandwidth yang tersedia tanpa mempertimbangkan perangkat lainnya. Untuk menghindari konflik ini, sebaiknya gunakan VLAN terpisah untuk telepon IP dan lalu lintas data.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

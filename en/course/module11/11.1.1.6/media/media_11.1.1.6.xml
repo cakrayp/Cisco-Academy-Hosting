@@ -1,0 +1,51 @@
+<textcomponents>
+<component id="ID_inst">
+<text><![CDATA[<b>Activity - Identify NAT Terminology</b><br/><br/>PC1 is communicating with the Web Server through a NAT-enabled router (R1). Drag each type of NAT address to its corresponding field in the topology.]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Web Server]]></text> 
+  </component>
+  
+  
+<!--Drag and drop-->
+
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Inside Global</font>]]></text>
+</component>
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Outside Global</font>]]></text>
+</component>
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Outside Local</font>]]></text>
+</component>
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Inside Local</font>]]></text>
+</component>
+
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched the NAT address types to the network topology.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched the NAT address types to the network topology. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+</textcomponents>

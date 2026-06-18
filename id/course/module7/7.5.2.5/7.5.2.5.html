@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.5.2.5 Rute Anak Level 2</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.5.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Tabel Perutean</h1>
+<h2>Rute IPv4 yang Dipelajari Secara Dinamis</h2>
+</div>
+<div id="content">
+<p>Rute anak tingkat 2 adalah rute yang merupakan subnet dari alamat jaringan berkelas. Seperti diilustrasikan pada Gambar 1, rute induk level 1 adalah rute jaringan level 1 yang disubnet. Rute induk level 1 berisi rute anak level 2, seperti yang ditunjukkan pada Gambar 2.</p>
+<p></p>
+<p>Seperti rute level 1, sumber rute level 2 dapat berupa jaringan yang terhubung langsung, rute statis, atau rute yang dipelajari secara dinamis. Rute anak level 2 juga merupakan rute pamungkas.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Hierarki tabel routing di Cisco IOS memiliki skema routing yang berkelas. Rute induk tingkat 1 adalah alamat jaringan kelas dari rute subnet. Hal ini terjadi bahkan jika protokol perutean tanpa kelas adalah sumber rute subnet.</p>
+<p></p>
+<p>Gambar 3 menyoroti rute anak dalam tabel routing R1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

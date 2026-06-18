@@ -1,0 +1,147 @@
+<textcomponents>
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 1: Mengidentifikasi Jenis Perutean Antar-VLAN</b><br/>Identifikasi topologi ini sebagai perutean antar-VLAN warisan, router-on-a-stick, atau saklar multilayer dengan menyeret jawaban yang sesuai ke bidang yang tersedia. Klik Bagian 2 untuk melanjutkan aktivitas ini.]]></text></component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Antarmuka R1</b><br/>Tautan Batang Gi0/0<br/><br/> <b>Subantarmuka R1</b><br/>Gi0/0.10 10.17.10.1/28<br/>Gi0/0.20 10.17.20.1/28<br/>Gi0/0,30 10.17.30.1/28<br/><br/><b>S1 Pelabuhan</b><br/>Tautan Batang Gi0/1<br/>Gi0/3 = VLAN 10<br/>Gi0/9 = VLAN 20<br/>Gi0/17 = VLAN 30<br/><br/><b>Perangkat Akhir</b><br/>PC1 – VLAN 10 10.17.10.4/28<br/>PC2 – VLAN 20 10.17.20.4/28<br/>PC3 – VLAN 30 10.17.30.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>Jenis Perutean Antar-VLAN</b>]]></text> 
+ </component>
+ 
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Warisan]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Sakelar Multilapis]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan pada topologi ini. Klik Bagian 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan dalam topologi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 2: Mengidentifikasi Jenis Perutean Antar-VLAN</b><br/>Identifikasi topologi ini sebagai perutean antar-VLAN warisan, router-on-a-stick, atau saklar multilayer dengan menyeret jawaban yang sesuai ke bidang yang tersedia. Klik Bagian 3 untuk melanjutkan aktivitas ini.]]></text></component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>S1 Pelabuhan</b><br/>Gi0/1-Gi0/4 = Batang<br/>VLAN 10 172.17.10.1<br/>VLAN 20 172.17.20.1<br/><br/><b>Pelabuhan S2</b><br/>Gi0/1-Gi0/2 – Batang<br/>Gi0/5-Gi0/6 – Batang<br/>VLAN 10 – Gi0/11<br/><br/><b>Pelabuhan S3</b><br/>Gi0/3-Gi0/6 = Batang<br/>VLAN 20 – Gi0/18<br/><br/><b>Perangkat Akhir</b><br/>PC1 – VLAN 10<br/>10.17.10.4/28<br/>PC2 – VLAN 20<br/>10.17.20.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Jenis Perutean Antar-VLAN</b>]]></text> 
+ </component>
+ 
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Warisan]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[Sakelar Multilapis]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan pada topologi ini. Klik Bagian 3 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan dalam topologi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Aktivitas – Bagian 3: Mengidentifikasi Jenis Perutean Antar-VLAN</b><br/>Identifikasi topologi ini sebagai perutean antar-VLAN warisan, router-on-a-stick, atau saklar multilayer dengan menyeret jawaban yang sesuai ke bidang yang tersedia.]]></text></component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Antarmuka R1</b><br/>Gi0/0 10.17.10.1/28<br/>Gi0/1 10.17.20.1/28<br/><br/><b>S1 Pelabuhan</b><br/>Gi0/3 = VLAN 10<br/>Gi0/17 = VLAN 20<br/><br/><b>Perangkat Akhir</b><br/>PC1 – VLAN 10<br/>10.17.10.4/28<br/><br/>PC2 – VLAN 20<br/>10.17.20.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Jenis Perutean Antar-VLAN</b>]]></text> 
+ </component>
+ 
+<component id='ID_s3_drag01'>
+	<text><![CDATA[Warisan]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s3_drag03'>
+	<text><![CDATA[Sakelar Multilapis]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan pada topologi ini.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi jenis perutean antar-VLAN yang digunakan dalam topologi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.2.2.1 Domain Tabrakan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Lingkungan yang Beralih</h1>
+<h2>Beralih Domain</h2>
+</div>
+<div id="content">
+<p>Pada segmen Ethernet berbasis hub, perangkat jaringan bersaing untuk mendapatkan media, karena perangkat harus bergantian saat melakukan transmisi. Segmen jaringan yang berbagi bandwidth yang sama antar perangkat dikenal sebagai domain tabrakan, karena ketika dua atau lebih perangkat dalam segmen tersebut mencoba berkomunikasi pada saat yang sama, tabrakan dapat terjadi.</p>
+<p></p>
+<p>Namun, dimungkinkan untuk menggunakan perangkat jaringan lain (contohnya mencakup switch dan router) yang beroperasi pada lapisan akses jaringan model TCP/IP dan di atasnya untuk membagi jaringan menjadi beberapa segmen dan mengurangi jumlah perangkat yang bersaing untuk mendapatkan bandwidth. Setiap segmen baru menghasilkan domain tabrakan baru. Lebih banyak bandwidth tersedia untuk perangkat di suatu segmen, dan tabrakan di satu domain tabrakan tidak mengganggu segmen lainnya. Ini juga dikenal sebagai mikrosegmentasi.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, setiap port switch terhubung ke satu PC atau server, dan setiap port switch mewakili domain tabrakan terpisah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.2.6 Akses Konsol</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Hubungkan Perangkat</h2>
+</div>
+<div id="content">
+<p>Dalam lingkungan produksi, perangkat infrastruktur biasanya diakses dari jarak jauh menggunakan Secure Shell (SSH) atau HyperText Transfer Protocol Secure (HTTPS). Akses konsol sebenarnya hanya diperlukan saat pertama kali mengonfigurasi perangkat, atau jika akses jarak jauh gagal.</p>
+<p></p>
+<p>Akses konsol memerlukan:</p>
+<p>
+<ul>
+<li>
+<b>Kabel konsol</b>- Kabel konsol RJ-45-ke-DB-9</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Perangkat lunak emulasi terminal</b>- Jangka Tera, Putty, HyperTerminal</li>
+</ul>
+</p>
+<p></p>
+<p>Kabel terhubung antara port serial host dan port konsol pada perangkat. Sebagian besar komputer dan notebook tidak lagi dilengkapi port serial bawaan. Jika host tidak memiliki port serial, port USB dapat digunakan untuk membuat koneksi konsol. Adaptor port serial khusus yang kompatibel dengan USB-ke-RS-232 diperlukan saat menggunakan port USB.</p>
+<p></p>
+<p>Cisco ISR G2 mendukung koneksi konsol serial USB. Untuk menjalin konektivitas, diperlukan USB Tipe-A ke USB Tipe-B (USB mini-B), serta driver perangkat sistem operasi. Driver perangkat ini tersedia dari<a href="http://www.cisco.com/" target="_blank">www.cisco.com</a>. Meskipun router ini memiliki dua port konsol, hanya satu port konsol yang dapat aktif dalam satu waktu. Saat kabel dicolokkan ke port konsol USB, port RJ-45 menjadi tidak aktif. Ketika kabel USB dicabut dari port USB, port RJ-45 menjadi aktif.</p>
+<p></p>
+<p>Tabel pada Gambar 1 merangkum persyaratan koneksi konsol. Gambar 2 menampilkan berbagai port dan kabel yang dibutuhkan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

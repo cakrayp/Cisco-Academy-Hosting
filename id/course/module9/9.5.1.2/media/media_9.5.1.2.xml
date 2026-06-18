@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Penemuan Tetangga IPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Pesan Permintaan Tetangga ICMP]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[Pesan Iklan Tetangga ICMP]]></text> 
+  </component>
+<component id="ID_speech01">
+  <text><![CDATA[Saya tahu alamat IPv6 Anda, tapi saya memerlukan alamat MAC Anda.]]></text> 
+  </component>
+  
+<component id="ID_speech02">
+  <text><![CDATA[Saya memiliki alamat IPv6 itu. Ini alamat MAC saya.]]></text> 
+  </component>  
+  
+</textcomponents>

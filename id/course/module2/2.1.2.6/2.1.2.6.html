@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.2.6 Mengatasi Masalah Lapisan Akses Jaringan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Port Sakelar</h2>
+</div>
+<div id="content">
+<p>Sebagian besar masalah yang mempengaruhi jaringan switch ditemui selama implementasi awal. Secara teoritis, setelah diinstal, jaringan terus beroperasi tanpa masalah. Namun, kabel menjadi rusak, konfigurasi berubah, dan perangkat baru tersambung ke sakelar yang memerlukan perubahan konfigurasi sakelar. Diperlukan pemeliharaan dan pemecahan masalah infrastruktur jaringan secara berkelanjutan.</p>
+<p></p>
+<p>Untuk memecahkan masalah ini ketika Anda tidak memiliki koneksi atau koneksi buruk antara switch dan perangkat lain, ikuti proses umum ini:</p>
+<p></p>
+<p>Gunakan<span class="cmd"><b>tampilkan antarmuka</b></span>perintah untuk memeriksa status antarmuka.</p>
+<p></p>
+<p>Jika antarmuka tidak berfungsi:</p>
+<p></p>
+<p>
+<ul>
+<li>Periksa untuk memastikan bahwa kabel yang tepat digunakan. Selain itu, periksa kabel dan konektor apakah ada kerusakan. Jika diduga ada kabel yang rusak atau salah, gantilah kabel tersebut.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<ul>
+<li>Jika antarmuka masih tidak berfungsi, masalahnya mungkin disebabkan oleh ketidaksesuaian dalam pengaturan kecepatan. Kecepatan antarmuka biasanya dinegosiasikan secara otomatis; oleh karena itu, meskipun dikonfigurasi secara manual pada satu antarmuka, antarmuka penghubung harus melakukan negosiasi otomatis.  Jika ketidakcocokan kecepatan terjadi karena kesalahan konfigurasi atau masalah perangkat keras atau perangkat lunak, hal ini dapat mengakibatkan antarmuka tidak berfungsi. Atur kecepatan yang sama secara manual pada kedua ujung koneksi jika diduga ada masalah.</li>
+</ul>
+</p>
+<p></p>
+<p>Jika antarmuka aktif, namun masalah konektivitas masih terjadi:</p>
+<p>
+<ul>
+<li>Menggunakan<span class="cmd"><b>tampilkan antarmuka</b></span>perintah, periksa indikasi kebisingan yang berlebihan. Indikasinya mungkin termasuk peningkatan penghitung untuk kesalahan kerdil, raksasa, dan CRC. Jika terdapat kebisingan yang berlebihan, cari dulu dan hilangkan sumber kebisingan tersebut, jika memungkinkan. Pastikan juga kabel tidak melebihi panjang kabel maksimal dan periksa jenis kabel yang digunakan. Untuk kabel tembaga disarankan menggunakan minimal Kategori 5.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<ul>
+<li>Jika kebisingan tidak menjadi masalah, periksa apakah ada benturan yang berlebihan. Jika terjadi tabrakan atau tabrakan yang terlambat, verifikasi pengaturan dupleks di kedua ujung sambungan. Sama seperti pengaturan kecepatan, pengaturan dupleks biasanya dinegosiasikan secara otomatis. Jika tampaknya ada ketidakcocokan dupleks, atur dupleks secara manual pada kedua ujung sambungan. Disarankan untuk menggunakan full-duplex jika kedua sisi mendukungnya.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

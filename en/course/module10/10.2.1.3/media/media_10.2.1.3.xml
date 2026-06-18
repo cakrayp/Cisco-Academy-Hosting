@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>SLAAC and DHCPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Client]]></text> 
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[<b>RS</b>]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA["I need an RA from R1."]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[<b>RA Options</b>]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[SLAAC Only (Default)]]></text> 
+</component>
+<component id="ID_txt06">
+	<text><![CDATA["Only use this RA."]]></text> 
+</component>
+<component id="ID_txt07">
+	<text><![CDATA[Stateless DCHP: SLAAC and DHCPv6]]></text> 
+</component>
+<component id="ID_txt08">
+	<text><![CDATA["Use this RA and a DHCPv6 server."]]></text> 
+</component>
+<component id="ID_txt09">
+	<text><![CDATA[Stateful DHCPv6: DHCPv6 Only]]></text> 
+</component>
+<component id="ID_txt10">
+	<text><![CDATA["Use a DHCPv6 server."]]></text> 
+</component>
+</textcomponents>

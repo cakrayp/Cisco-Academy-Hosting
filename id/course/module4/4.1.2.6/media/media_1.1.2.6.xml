@@ -1,0 +1,101 @@
+<textcomponents>
+<!--  Slide 1  -->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Persyaratan Koneksi Konsol</b>]]></text>
+</component>
+
+<component id="ID_s1_header1">
+  <text><![CDATA[<b>Port di Komputer</b>]]></text> 
+</component>
+<component id="ID_s1_header2">
+  <text><![CDATA[<b>Diperlukan Kabel</b>]]></text> 
+</component>
+<component id="ID_s1_header3">
+  <text><![CDATA[<b>Pelabuhan di ISR</b>]]></text> 
+</component>
+<component id="ID_s1_header4">
+  <text><![CDATA[<b>Emulasi Terminal</b>]]></text> 
+</component>
+
+
+<component id="ID_s1_txt01">
+  <text><![CDATA[Pelabuhan Seri]]></text> 
+  </component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[USB<br/>Pelabuhan Tipe-A]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[<textformat blockindent="-14">RJ-45-to-DB-9 Console Cable</textformat>]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[<ul><textformat blockindent="-14"><li>Adaptor port serial yang kompatibel dengan USB-ke-RS-232</li></textformat><br/><textformat blockindent="-14"><li>Adaptor mungkin memerlukan driver perangkat lunak</li></textformat><br/><textformat blockindent="-14"><li>Kabel konsol RJ-45-ke-DB-9</li></textformat></ul>]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[<ul><textformat blockindent="-14"><li>USB Tipe-A ke USB Tipe-B (USB Mini-B)</li></textformat><br/><textformat blockindent="-14"><li>Driver perangkat diperlukan dan tersedia dari cisco.com.</li></textformat></ul>]]></text> 
+</component>
+<component id="ID_s1_txt06">
+  <text><![CDATA[Port Konsol RJ-45]]></text> 
+</component>
+<component id="ID_s1_txt07">
+  <text><![CDATA[USB Tipe-B<br/>(USB Mini-B)]]></text> 
+</component>
+<component id="ID_s1_txt08">
+  <text><![CDATA[Istilah Tera]]></text> 
+</component>
+<component id="ID_s1_txt09">
+  <text><![CDATA[Dempul]]></text> 
+</component>
+
+
+
+<!--  Slide 2  -->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Port dan Kabel</b>]]></text>
+</component>
+
+<component id="ID_s2_header1">
+  <text><![CDATA[<b>Port di Komputer</b>]]></text> 
+</component>
+<component id="ID_s2_header2">
+  <text><![CDATA[<b>Diperlukan Kabel</b>]]></text> 
+</component>
+<component id="ID_s2_header3">
+  <text><![CDATA[<b>Pelabuhan di ISR</b>]]></text> 
+</component>
+<component id="ID_s2_header4">
+  <text><![CDATA[<b>Emulasi Terminal</b>]]></text> 
+</component>
+
+
+<component id="ID_s2_txt01">
+  <text><![CDATA[Pelabuhan Seri]]></text> 
+  </component>
+<component id="ID_s2_txt02">
+  <text><![CDATA[USB<br/>Pelabuhan Tipe-A]]></text> 
+  </component>
+<component id="ID_s2_txt03">
+  <text><![CDATA[Kabel Konsol]]></text> 
+</component>
+<component id="ID_s2_txt04">
+  <text><![CDATA[USB-ke-RS-232<br/>Adaptor Port Serial]]></text> 
+</component>
+<component id="ID_s2_txt04A">
+  <text><![CDATA[Kabel Konsol]]></text> 
+</component>
+<component id="ID_s2_txt05">
+  <text><![CDATA[USB Tipe-A ke USB Tipe-B<br/>(Mini-B) Kabel]]></text> 
+</component>
+<component id="ID_s2_txt06">
+  <text><![CDATA[Port Konsol RJ-45]]></text> 
+</component>
+<component id="ID_s2_txt07">
+  <text><![CDATA[USB Tipe-B<br/>Port Konsol (Mini-B USB).]]></text> 
+</component>
+<component id="ID_s2_txt08">
+  <text><![CDATA[Istilah Tera]]></text> 
+</component>
+<component id="ID_s2_txt09">
+  <text><![CDATA[Dempul]]></text> 
+</component>
+
+</textcomponents>

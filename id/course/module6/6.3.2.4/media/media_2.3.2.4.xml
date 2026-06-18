@@ -1,0 +1,11 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Pembaruan Perutean Tanpa Kelas</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Ringkasan<br/>Rute]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Memperbarui]]></text> 
+  </component>
+</textcomponents>

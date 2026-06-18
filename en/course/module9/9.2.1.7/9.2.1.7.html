@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.2.1.7 Creating Named Standard ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.7_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Standard IPv4 ACLs </h1>
+        <h2>Configure Standard IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>Naming an ACL makes it easier to understand its function. For example, an ACL configured to deny FTP could be called NO_FTP. When you identify your ACL with a name instead of with a number, the configuration mode and command syntax are slightly different.</p>
+          <p></p>
+          <p>Figure 1 shows the steps required to create a standard named ACL.</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Starting from the global configuration mode, use the <span class="cmd"><b>ip access-list</b></span> command to create a named ACL. ACL names are alphanumeric, case sensitive, and must be unique. The <span class="cmd"><b>ip access-list standard </b></span><span class="cmd"><i>name</i></span> is used to create a standard named ACL, whereas the command <span class="cmd"><b>ip access-list extended </b></span><span class="cmd"><i>name</i></span> is for an extended access list. After entering the command, the router is in named standard ACL configuration mode as indicated by the prompt.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: Numbered ACLs use the global configuration command <span class="cmd"><b>access-list</b></span> whereas named IPv4 ACLs use the <span class="cmd"><b>ip access-list</b></span> command.</p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>From the named ACL configuration mode, use <span class="cmd"><b>permit</b></span> or <span class="cmd"><b>deny</b></span> statements to specify one or more conditions for determining whether a packet is forwarded or dropped.</p>
+          <p></p>
+          <p>
+            <b>Step 3. </b>Apply the ACL to an interface using the<span class="cmd"><b> ip access-group </b></span>command. Specify if the ACL should be applied to packets as they enter into the interface (<span class="cmd"><b>in</b></span>) or applied to packets as they exit the interface (<span class="cmd"><b>out</b></span>).</p>
+          <p></p>
+          <p>Figure 2 shows the commands used to configure a standard named ACL on router R1, interface G0/0 that denies host 192.168.11.10 access to the 192.168.10.0 network. The ACL is named NO_ACCESS.</p>
+          <p></p>
+          <p>Capitalizing ACL names is not required, but makes them stand out when viewing the running-config output. It also makes it less likely that you will accidentally create two different ACLs with the same name but with different uses of capitalization. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.3.1.1 Ini Waktu Akses Jaringan</title>
+<!-- -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>
+<b>Ini Waktu Akses Jaringan</b>
+</p>
+<p></p>
+<p>Gunakan Packet Tracer untuk aktivitas ini. Konektivitas internet tidak diperlukan dalam desain ini. Bekerjalah dengan teman sekelas untuk membuat dua desain jaringan untuk mengakomodasi skenario berikut:</p>
+<p></p>
+<p>
+<b>Skenario 1 – Desain Ruang Kelas (LAN)</b>
+</p>
+<p>
+<ul>
+<li>15 perangkat akhir siswa diwakili oleh 1 atau 2 PC</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>1 perangkat akhir instruktur sebaiknya diwakili oleh server</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Streaming presentasi video melalui koneksi LAN</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Skenario 2 – Desain Administratif (WAN)</b>
+</p>
+<p>
+<ul>
+<li>Semua persyaratan sebagaimana tercantum dalam Skenario 1</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Akses ke dan dari server administratif jarak jauh untuk presentasi video dan pembaruan yang didorong untuk perangkat lunak aplikasi jaringan</li>
+</ul>
+</p>
+<p></p>
+<p>Baik desain LAN dan WAN harus cocok pada satu layar file Packet Tracer. Semua perangkat perantara harus diberi label dengan model switch (atau nama) dan model router (atau nama).</p>
+<p></p>
+<p>Simpan pekerjaan Anda dan bersiaplah untuk membenarkan keputusan dan tata letak perangkat Anda kepada instruktur dan kelas.</p>
+<p></p>
+<p>
+<a href="../../files/1.3.1.1%20It's%20Network%20Access%20Time%20Instructions.pdf" target="_blank">Aktivitas Kelas - Ini Petunjuk Waktu Akses Jaringan</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

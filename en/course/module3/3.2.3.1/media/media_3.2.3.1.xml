@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Initial DTP Configuration</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+  <text><![CDATA[Port F0/1 is configured with <br/><font face="Courier New"><b>switchport mode trunk</b></font>]]></text> 
+  </component>
+  <component id="ID_s1_txt02">
+  <text><![CDATA[Port F0/3 is configured with <br/><font face="Courier New"><b>switchport mode dynamic auto</b></font>]]></text> 
+  </component>
+  <component id="ID_s1_txt03">
+  <text><![CDATA[Port F0/1 is configured with <br/><font face="Courier New"><b>switchport mode trunk</b></font>]]></text> 
+  </component>
+   <component id="ID_s1_txt04">
+  <text><![CDATA[Port F0/3 is configured with <br/><font face="Courier New"><b>switchport mode dynamic auto</b></font>]]></text> 
+  </component>
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>DTP Interaction Results</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+  <text><![CDATA[This link is a trunk. <br/><br/>Both ports configured with <font face="Courier New"><b>switchport mode trunk</b></font> effectively forces both ports to stay in trunk mode. ]]></text> 
+  </component>
+  <component id="ID_s2_txt02">
+  <text><![CDATA[This link is not a trunk. <br/><br/>Both ports configured with <font face="Courier New"><b>switchport mode dynamic auto</b></font> results in an inactive trunk link. ]]></text> 
+  </component>
+</textcomponents>

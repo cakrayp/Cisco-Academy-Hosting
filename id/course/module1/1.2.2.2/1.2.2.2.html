@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.2.2.2 Domain Siaran</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Lingkungan yang Beralih</h1>
+<h2>Beralih Domain</h2>
+</div>
+<div id="content">
+<p>Meskipun switch memfilter sebagian besar frame berdasarkan alamat MAC, switch tidak memfilter frame siaran. Agar switch lain di LAN dapat menerima frame siaran, switch harus membanjiri frame ini keluar semua port. Kumpulan switch yang saling berhubungan membentuk satu domain siaran. Hanya perangkat lapisan jaringan, seperti router, yang dapat membagi domain siaran Layer 2. Router digunakan untuk mensegmentasi domain tabrakan dan domain siaran.</p>
+<p></p>
+<p>Ketika perangkat mengirimkan siaran Layer 2, alamat MAC tujuan dalam frame diatur ke semua biner. Sebuah frame dengan alamat MAC tujuan semua biner diterima oleh semua perangkat di domain siaran.</p>
+<p></p>
+<p>Domain siaran Layer 2 disebut sebagai domain siaran MAC. Domain siaran MAC terdiri dari semua perangkat di LAN yang menerima frame siaran dari sebuah host.</p>
+<p></p>
+<p>Klik Mainkan pada gambar untuk melihatnya di paruh pertama animasi.</p>
+<p></p>
+<p>Saat switch menerima frame siaran, switch meneruskan frame tersebut ke luar masing-masing portnya, kecuali port masuk tempat frame siaran diterima. Setiap perangkat yang terhubung ke switch menerima salinan frame siaran dan memprosesnya. Siaran terkadang diperlukan untuk menemukan perangkat dan layanan jaringan lain pada awalnya, namun siaran juga mengurangi efisiensi jaringan. Bandwidth jaringan digunakan untuk menyebarkan lalu lintas siaran. Terlalu banyak siaran dan beban lalu lintas yang padat pada jaringan dapat mengakibatkan kemacetan: penurunan kinerja jaringan.</p>
+<p></p>
+<p>Saat dua sakelar dihubungkan bersama, domain siarannya ditingkatkan, seperti yang terlihat di paruh kedua animasi. Dalam hal ini, frame siaran diteruskan ke semua port yang terhubung pada saklar S1. Saklar S1 dihubungkan ke saklar S2. Frame tersebut kemudian juga disebarkan ke semua perangkat yang terhubung ke switch S2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

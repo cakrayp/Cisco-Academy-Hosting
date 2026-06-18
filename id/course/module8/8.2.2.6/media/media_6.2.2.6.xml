@@ -1,0 +1,46 @@
+	<textcomponents>
+	<component id="ID_inst">
+		<text><![CDATA[<b>Aktivitas – Hitung Subnet dan Wildcard Mask</b><br/><br/>Hitung subnet mask dan wildcard mask yang diperlukan untuk mengiklankan alamat jaringan yang ditentukan di OSPF. Ketik jawaban Anda pada kolom yang tersedia. Klik Periksa untuk memverifikasi jawaban Anda. Klik Tunjukkan pada Saya untuk melihat jawaban yang benar.<br/><br/>Klik Masalah Baru untuk melanjutkan aktivitas.]]></text>
+	</component>
+		
+	<component id="txt_correct">
+		<text><![CDATA[<b>Benar</b>]]></text>
+	</component>
+	
+	<component id="txt_incorrect">
+		<text><![CDATA[<b>Salah</b>]]></text>
+	</component>
+	
+	<component id="txt_body_correct">
+		<text><![CDATA[Anda telah berhasil menghitung subnet mask dan wildcard mask untuk jaringan yang ditentukan. Klik Masalah Baru untuk melanjutkan aktivitas.]]></text>
+	</component>
+	
+	<component id="txt_body_incorrect">
+		<text><![CDATA[Anda belum berhasil menghitung subnet mask dan wildcard mask untuk jaringan yang ditentukan. Silakan klik Tunjukkan pada Saya untuk melihat jawaban yang benar. Klik Masalah Baru untuk melanjutkan aktivitas.]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+	<text><![CDATA[<b>Jaringan / Subnet / Host</b>]]></text>
+	</component>
+	
+	<component id="ID_txt02">
+	<text><![CDATA[Subnet Mask Desimal]]></text>
+	</component>
+	
+	<component id="ID_txt03">
+	<text><![CDATA[Masker Wildcard]]></text>
+	</component>
+	
+	<component id="txt_check">
+	<text><![CDATA[Memeriksa]]></text>
+	</component>
+	
+	<component id="txt_show">
+	<text><![CDATA[Tunjukkan padaku]]></text>
+	</component>
+	
+	<component id="txt_newnumber">
+	<text><![CDATA[Masalah Baru]]></text>
+	</component>
+
+</textcomponents>

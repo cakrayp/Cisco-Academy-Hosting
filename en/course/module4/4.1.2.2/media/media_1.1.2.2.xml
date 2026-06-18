@@ -1,0 +1,109 @@
+﻿<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Getting the Pieces to the Correct Network</b>]]></text> 
+</component>
+
+
+<component id="ID_caption">
+<text><![CDATA[The Protocol Data Unit header also contains the network address.]]></text> 
+</component>
+
+<!--Topology text-->
+<component id='ID_t_txt01'>
+	<text><![CDATA[<b>PC1</b><br>192.168.1.110<br>AA-AA-AA-AA-AA-AA]]></text>
+</component>
+
+<component id='ID_t_txt02'>
+	<text><![CDATA[<b>R1</b><br>192.168.1.1<br>11-11-11-11-11-11]]></text>
+</component>
+
+<component id='ID_t_txt02a'>
+	<text><![CDATA[<b>R2</b><br>172.16.1.1<br>22-22-22-22-22-22]]></text>
+</component>
+
+<component id='ID_t_txt02b'>
+	<text><![CDATA[<b>Web Server</b><br>172.16.1.99<br>AB-CD-EF-12-34-56]]></text>
+</component>
+
+<component id='ID_t_txt03'>
+	<text><![CDATA[172.16.1.99<br>22-22-22-22-22-22]]></text>
+</component>
+
+<component id='ID_t_txt04'>
+	<text><![CDATA[<br>172.16.1.99<br>AB-CD-EF-12-34-56]]></text>
+</component>
+
+<component id='ID_t_txt05'>
+	<text><![CDATA[<b>PC2</b><br>192.168.1.111<br>BB-BB-BB-BB-BB-BB]]></text>
+</component>
+
+<component id='ID_t_txt06'>
+	<text><![CDATA[<b>FTP Server</b><br>192.168.1.9<br>CC-CC-CC-CC-CC-CC]]></text>
+</component>
+
+<component id='ID_t_txt07'>
+	<text><![CDATA[My default gateway is 192.168.1.1.]]></text>
+</component>
+
+<component id='ID_t_txt08'>
+	<text><![CDATA[I am the default gateway for this LAN.]]></text>
+</component>
+
+<component id='ID_t_txt09'>
+	<text><![CDATA[My default gateway is 192.168.1.1.]]></text>
+</component>
+
+<component id='ID_t_txt10'>
+	<text><![CDATA[My default gateway is 192.168.1.1.]]></text>
+</component>
+
+<!--Table text-->
+<component id="ID_table01">
+<text><![CDATA[Destination MAC Address]]></text> 
+</component>
+<component id="ID_table01A">
+<text><![CDATA[11-11-11-11-11-11]]></text> 
+</component>
+<component id="ID_table02">
+<text><![CDATA[Source MAC Address]]></text> 
+</component>
+<component id="ID_table02A">
+<text><![CDATA[AA-AA-AA-AA-AA-AA]]></text> 
+</component>
+<component id="ID_table03">
+<text><![CDATA[Source IP Address]]></text> 
+</component>
+<component id="ID_table03A">
+<text><![CDATA[192.168.1.110]]></text> 
+</component>
+<component id="ID_table04">
+<text><![CDATA[Destination IP Address]]></text> 
+</component>
+<component id="ID_table04A">
+<text><![CDATA[172.16.1.99]]></text> 
+</component>
+<component id="ID_table05">
+<text><![CDATA[Data]]></text> 
+</component>
+
+
+
+
+	<component id="ID_s1_txt01">
+	<text><![CDATA[<b>IP Address</b><br>192.168.1.110]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt02">
+	<text><![CDATA[<b>MAC Address</b><br>AA-AA-AA-AA-AA-AA]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt03">
+	<text><![CDATA[<b>IP Address</b><br>172.16.1.99]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt04">
+	<text><![CDATA[<b>MAC Address</b><br>11.11.11.11.11.11]]></text> 
+	</component>
+
+</textcomponents>

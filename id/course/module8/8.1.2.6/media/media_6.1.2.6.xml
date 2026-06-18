@@ -1,0 +1,145 @@
+<textcomponents> 
+
+
+<!-- slide01 content-->
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Aktivitas - Bagian 1: Mengidentifikasi Jenis Paket OSPF</b><br/>Seret jenis paket OSPF ke kolom di bawah deskripsi fungsinya yang sesuai. Tidak semua jenis paket OSPF akan digunakan. Klik Tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Meminta catatan link-state tertentu dari router ke router]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+	<text><![CDATA[Mengirim catatan status tautan yang diminta secara khusus]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+	<text><![CDATA[Menemukan tetangga dan membangun kedekatan di antara mereka]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Halo]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Deskripsi Basis Data (DBD)]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Permintaan Link-State (LSR)]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Pembaruan Link-State (LSU)]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Pengakuan Link-State (LSAck)]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap jenis paket OSPF dengan deskripsi fungsinya. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap jenis paket OSPF dengan deskripsi fungsinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!-- slide02 content-->
+
+
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Aktivitas - Bagian 2: Mengidentifikasi Jenis Paket OSPF</b><br/>Seret jenis paket OSPF ke kolom di bawah deskripsi fungsinya yang sesuai. Tidak semua jenis paket OSPF akan digunakan.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+	<text><![CDATA[Memeriksa sinkronisasi database antar router]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+	<text><![CDATA[Mempertahankan kedekatan dengan router OSPF lainnya]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+	<text><![CDATA[Mengonfirmasi penerimaan paket pembaruan status tautan]]></text>
+</component>
+
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Halo]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[Deskripsi Basis Data (DBD)]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[Permintaan Link-State (LSR)]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[Pembaruan Link-State (LSU)]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[Pengakuan Link-State (LSAck)]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[IGRP]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap jenis paket OSPF dengan deskripsi fungsinya.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap jenis paket OSPF dengan deskripsi fungsinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+</textcomponents>
+
+

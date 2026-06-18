@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.3.1.1 Aktivitas – Beralih Trio</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>
+<b>Ganti Trio</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p>Anda adalah administrator jaringan untuk bisnis skala kecil hingga menengah. Kantor pusat perusahaan untuk bisnis Anda telah mengamanatkan bahwa keamanan harus diterapkan pada semua sakelar di semua kantor. Memorandum yang dikirimkan kepada Anda pagi ini menyatakan:</p>
+<p>
+<i>“Pada hari Senin, 18 April 20xx, tiga port pertama dari semua switch yang dapat dikonfigurasi yang terletak di semua kantor harus diamankan dengan alamat MAC — satu alamat akan dicadangkan untuk PC, satu alamat akan dicadangkan untuk laptop di kantor, dan satu alamat akan dicadangkan untuk server kantor.</i>
+</p>
+<p>
+<i>Jika keamanan pelabuhan dilanggar, kami meminta Anda untuk menutupnya sampai alasan pelanggaran tersebut dapat dipastikan.</i>
+</p>
+<p>
+<i>Mohon penerapan kebijakan ini selambat-lambatnya pada tanggal yang tercantum dalam memorandum ini. Untuk pertanyaan, hubungi 1.800.555.1212. Terima kasih. Tim Manajemen Jaringan”</i>
+</p>
+<p>Bekerja samalah dengan partner di kelas tersebut dan buat contoh Packet Tracer untuk menguji kebijakan keamanan baru ini. Setelah Anda membuat file, ujilah dengan, setidaknya, satu perangkat untuk memastikan file tersebut beroperasi atau divalidasi.</p>
+<p>Simpan pekerjaan Anda dan bersiaplah untuk membagikannya kepada seluruh kelas.</p>
+<p></p>
+<p>
+<a href="../../files/2.3.1.1%20Switch%20Trio%20Instructions.pdf" target="_blank">Aktivitas Kelas - Instruksi Ganti Trio</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

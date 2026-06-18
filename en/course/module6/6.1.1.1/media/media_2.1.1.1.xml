@@ -1,0 +1,37 @@
+<textcomponents>
+
+<!-- slide 1 -->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Static and Default Route Scenario</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Router R2 is connected to other networks and to the Internet. It is also my only way out of here. I just need a default static route to reach any network that I do not know about.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Router R1 only has two networks that I need to know about, so I just need two static routes to reach those networks.]]></text> 
+</component>
+
+<!-- slide 2 -->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Dynamic Routing Scenario</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Hey I am R1 and I am using EIGRP to let my neighbors know that I can reach the following networks:<br/><textformat blockindent='-18'><li>192.168.10.0/24</li><li>192.168.11.0/24</li><li>209.165.200.224/30</li></textformat>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Hey R1, I am R2 and I am also using EIGRP to let my neighbors know that I can reach the following networks:<br/><textformat blockindent='-18'><li>10.1.1.0/24</li><li>10.1.2.0/24</li><li>209.165.200.224/30</li>I am also the default gateway to the Internet.</textformat>]]></text> 
+</component>
+
+</textcomponents>

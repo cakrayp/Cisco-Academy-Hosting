@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.1.3 Router Adalah Komputer</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Fungsi Router</h2>
+</div>
+<div id="content">
+<p>Sebagian besar perangkat berkemampuan jaringan (yaitu komputer, tablet, dan ponsel cerdas) memerlukan komponen berikut untuk beroperasi, seperti yang ditunjukkan pada Gambar 1:</p>
+<p>
+<ul>
+<li>Unit pemrosesan pusat (CPU)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sistem operasi (OS)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Memori dan penyimpanan (RAM, ROM, NVRAM, Flash, hard drive)</li>
+</ul>
+</p>
+<p></p>
+<p>Router pada dasarnya adalah komputer khusus. Dibutuhkan CPU dan memori untuk menyimpan data sementara dan permanen untuk menjalankan instruksi sistem operasi, seperti inisialisasi sistem, fungsi perutean, dan fungsi peralihan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Perangkat Cisco menggunakan Cisco Internetwork Operating System (IOS) sebagai perangkat lunak sistem.</p>
+<p></p>
+<p>Tabel pada Gambar 2 merangkum jenis memori router, volatilitas, dan contoh apa yang disimpan di masing-masing memori.</p>
+<p></p>
+<p>Router menyimpan data menggunakan:</p>
+<p>
+<ul>
+<li>
+<b>Memori Akses Acak (RAM)</b>- Menyediakan penyimpanan sementara untuk berbagai aplikasi dan proses termasuk IOS yang sedang berjalan, file konfigurasi yang sedang berjalan, berbagai tabel (yaitu, tabel routing IP, tabel Ethernet ARP) dan buffer untuk pemrosesan paket. RAM disebut volatil karena kehilangan isinya ketika listrik dimatikan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Memori Hanya-Baca (ROM)</b>- Menyediakan penyimpanan permanen untuk instruksi bootup, perangkat lunak diagnostik dasar, dan IOS terbatas jika router tidak dapat memuat IOS berfitur lengkap. ROM merupakan firmware dan disebut non-volatile karena tidak kehilangan isinya ketika listrik dimatikan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Memori Akses Acak Non-Volatil (NVRAM)</b>- Menyediakan penyimpanan permanen untuk file konfigurasi startup (startup-config). NVRAM bersifat non-volatile dan tidak kehilangan isinya saat listrik dimatikan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Kilatan</b>- Menyediakan penyimpanan permanen untuk IOS dan file terkait sistem lainnya. IOS disalin dari flash ke RAM selama proses bootup. Flash bersifat non-volatile dan tidak kehilangan isinya saat listrik dimatikan.</li>
+</ul>
+</p>
+<p></p>
+<p>Berbeda dengan komputer, router tidak memiliki adaptor video atau adaptor kartu suara. Sebaliknya, router memiliki port khusus dan kartu antarmuka jaringan untuk menghubungkan perangkat ke jaringan lain. Gambar 3 mengidentifikasi beberapa port dan antarmuka ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

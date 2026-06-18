@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.4.1 Port Forwarding</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Port Forwarding</h2>
+      </div>
+      <div id="content">
+          <p>Port forwarding (sometimes referred to as tunneling) is the act of forwarding a network port from one network node to another. This technique allows an external user to reach a port on a private IPv4 address (inside a LAN) from the outside, through a NAT-enabled router. </p>
+          <p></p>
+          <p>Typically, peer-to-peer file-sharing programs and operations, such as web serving and outgoing FTP, require that router ports be forwarded or opened to allow these applications to work, as shown in Figure 1. Because NAT hides internal addresses, peer-to-peer only works from the inside out where NAT can map outgoing requests against incoming replies. </p>
+          <p></p>
+          <p>The problem is that NAT does not allow requests initiated from the outside. This situation can be resolved with manual intervention. Port forwarding can be configured to identify specific ports that can be forwarded to inside hosts.</p>
+          <p></p>
+          <p>Recall that Internet software applications interact with user ports that need to be open or available to those applications. Different applications use different ports. This makes it predictable for applications and routers to identify network services. For example, HTTP operates through the well-known port 80. When someone enters the <b>http://cisco.com </b>address, the browser displays the Cisco Systems, Inc. website. Notice that they do not have to specify the HTTP port number for the page request, because the application assumes port 80. </p>
+          <p></p>
+          <p>If a different port number is required, it can be appended to the URL separated by a colon (:). For example, if the web server is listening on port 8080, the user would type <b>http://www.example.com:8080</b>.</p>
+          <p></p>
+          <p>Port forwarding allows users on the Internet to access internal servers by using the WAN port address of the router and the matched external port number. The internal servers are typically configured with RFC 1918 private IPv4 addresses. When a request is sent to the IPv4 address of the WAN port via the Internet, the router forwards the request to the appropriate server on the LAN. For security reasons, broadband routers do not by default permit any external network request to be forwarded to an inside host. </p>
+          <p></p>
+          <p>Figure 2 shows a small business owner using a point of sale (PoS) server to track sales and inventories at the store. The server can be accessed within the store but, because it has a private IPv4 address, it is not publically accessible from the Internet. Enabling the local router for port forwarding allows the owner to access the point of sale server from anywhere on the Internet. Port forwarding on the router is configured using the destination port number and the private IPv4 address of the point of sale server. To access the server, the client software would use the public IPv4 address of the router and the destination port of the server.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

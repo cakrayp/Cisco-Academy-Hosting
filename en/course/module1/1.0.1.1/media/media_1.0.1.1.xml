@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Describe convergence of data, voice, and video in the context of switched networks.</li><li>Describe a switched network in a small to medium-sized business.</li><li>Explain the process of frame forwarding in a switched network.</li><li>Compare a collision domain to a broadcast domain.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.2.4.6 Daftar VLAN salah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.4.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi VLAN</h1>
+<h2>Memecahkan masalah VLAN dan Trunks</h2>
+</div>
+<div id="content">
+<p>Agar lalu lintas dari VLAN dapat ditransmisikan melalui trunk, lalu lintas tersebut harus diizinkan di trunk. Untuk melakukannya, gunakan<span class="cmd"><b>trunk switchport mengizinkan vlan</b></span><span class="cmd"><i>vlan-id</i></span>memerintah.</p>
+<p></p>
+<p>Pada Gambar 1, VLAN 20 (Student) dan PC5 telah ditambahkan ke jaringan. Dokumentasi telah diperbarui untuk menunjukkan bahwa VLAN yang diperbolehkan pada trunk adalah 10, 20, dan 99. Dalam skenario ini, PC5 tidak dapat menyambung ke server email siswa.</p>
+<p></p>
+<p>Periksa port trunk pada saklar S1 menggunakan<span class="cmd"><b>tampilkan antarmuka bagasi</b></span>perintah seperti yang ditunjukkan pada Gambar 2. Perintah tersebut mengungkapkan bahwa antarmuka F0/3 pada sakelar S3 dikonfigurasi dengan benar untuk mengizinkan VLAN 10, 20, dan 99. Pemeriksaan antarmuka F0/3 pada sakelar S1 mengungkapkan bahwa antarmuka F0/1 dan F0/3 hanya mengizinkan VLAN 10 dan 99. Seseorang memperbarui dokumentasi tetapi lupa mengkonfigurasi ulang port pada sakelar S1.</p>
+<p></p>
+<p>Konfigurasi ulang F0/1 dan F0/3 pada saklar S1 menggunakan<span class="cmd"><b>trunk switchport mengizinkan vlan 10,20,99</b></span>perintah seperti yang ditunjukkan pada Gambar 3. Outputnya menunjukkan bahwa VLAN 10, 20, dan 99 sekarang ditambahkan ke port F0/1 dan F0/3 pada sakelar S1. Itu<span class="cmd"><b>tampilkan antarmuka bagasi</b></span>command adalah alat yang luar biasa untuk mengungkap masalah trunking yang umum. PC5 telah mendapatkan kembali konektivitas ke server email siswa yang ditemukan di alamat IP 172.17.20.10.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

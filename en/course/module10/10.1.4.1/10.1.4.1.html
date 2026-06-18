@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.1.4.1 Troubleshooting Tasks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v4</h1>
+        <h2>Troubleshoot DHCPv4</h2>
+      </div>
+      <div id="content">
+          <p>DHCPv4 problems can arise for a multitude of reasons, such as software defects in operating systems, NIC drivers, or DHCP relay agents, but the most common are configuration issues. Because of the number of potentially problematic areas, a systematic approach to troubleshooting is required, as shown in the figure.</p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 1: Resolve IPv4 Address Conflicts</b>
+          </p>
+          <p></p>
+          <p>An IPv4 address lease can expire on a client still connected to a network. If the client does not renew the lease, the DHCPv4 server can reassign that IPv4 address to another client. When the client reboots, it requests an IPv4 address. If the DHCPv4 server does not respond quickly, the client uses the last IPv4 address. The situation then arises where two clients are using the same IPv4 address, creating a conflict.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> show ip dhcp conflict </b></span>command displays all address conflicts recorded by the DHCPv4 server. The server uses the<span class="cmd"><b> ping </b></span>command to detect clients. The client uses Address Resolution Protocol (ARP) to detect conflicts. If an address conflict is detected, the address is removed from the pool and not assigned until an administrator resolves the conflict. </p>
+          <p></p>
+          <p>This output displays IP addresses that have conflicts with the DHCP server.  It shows the detection method and detection time for conflicting IP addresses that the DHCP server has offered.</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1# </span>
+            <span class="cmd">
+              <b>show ip dhcp conflict</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">IP address Detection Method Detection time</span>
+          </p>
+          <p>
+            <span class="cmd">192.168.10.32 Ping Feb 16 2013 12:28 PM</span>
+          </p>
+          <p>
+            <span class="cmd">192.168.10.64 Gratuitous ARP Feb 23 2013 08:12 AM</span>
+          </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 2: Verify Physical Connectivity</b>
+          </p>
+          <p></p>
+          <p>First, use the<span class="cmd"><b> show interface </b></span><span class="cmd"><i>interface </i></span>command to confirm that the router interface acting as the default gateway for the client is operational. If the state of the interface is anything other than up, the port does not pass traffic, including DHCP client requests. </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 3: Test Connectivity using a Static IP Address</b>
+          </p>
+          <p></p>
+          <p>When troubleshooting any DHCPv4 issue, verify network connectivity by configuring static IPv4 address information on a client workstation. If the workstation is unable to reach network resources with a statically configured IPv4 address, the root cause of the problem is not DHCPv4. At this point, network connectivity troubleshooting is required.</p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 4: Verify Switch Port Configuration</b>
+          </p>
+          <p></p>
+          <p>If the DHCPv4 client is unable to obtain an IPv4 address from the DHCPv4 server on startup, attempt to obtain an IPv4 address from the DHCPv4 server by manually forcing the client to send a DHCPv4 request.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: If there is a switch between the client and the DHCPv4 server, and the client is unable to obtain the DHCP configuration, switch port configuration issues may be the cause. These causes may include issues from trunking and channeling, STP, and RSTP.  PortFast configuration and edge port configurations resolve the most common DHCPv4 client issues that occur with an initial installation of a Cisco switch. </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 5: Test DHCPv4 Operation on the Same Subnet or VLAN</b>
+          </p>
+          <p></p>
+          <p>It is important to distinguish whether DHCPv4 is functioning correctly when the client is on the same subnet or VLAN as the DHCPv4 server. If DHCPv4 is working correctly when the client is on the same subnet or VLAN, the problem may be the DHCP relay agent. If the problem persists even with testing DHCPv4 on the same subnet or VLAN as the DHCPv4 server, the problem may actually be with the DHCPv4 server.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><ul><li>Jelaskan kelebihan dan kekurangan routing statis.</li><li>Jelaskan tujuan dari berbagai jenis rute statis.</li><li>Konfigurasikan rute statis IPv4 dan IPv6 dengan menentukan alamat hop berikutnya.</li><li>Konfigurasikan rute default IPv4 dan IPv6.</li><li>Jelaskan penggunaan pengalamatan classful lama dalam implementasi jaringan.</li><li>Jelaskan tujuan CIDR dalam menggantikan pengalamatan classful.</li><li>Merancang dan mengimplementasikan skema pengalamatan hierarki.</li><li>Konfigurasikan alamat jaringan ringkasan IPv4 dan IPv6 untuk mengurangi jumlah pembaruan tabel perutean.</li><li>Konfigurasikan rute statis mengambang untuk menyediakan koneksi cadangan.</li><li>Jelaskan bagaimana router memproses paket ketika rute statis dikonfigurasi.</li><li>Memecahkan masalah umum konfigurasi rute statis dan default.</li></ul></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

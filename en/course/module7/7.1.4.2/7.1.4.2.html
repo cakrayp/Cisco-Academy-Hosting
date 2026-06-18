@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.1.4.2 IGP and EGP Routing Protocols</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.4.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Routing Protocols</h1>
+        <h2>Types of Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>An autonomous system (AS) is a collection of routers under a common administration such as a company or an organization. An AS is also known as a routing domain. Typical examples of an AS are a company’s internal network and an ISP’s network.  </p>
+          <p></p>
+          <p>The Internet is based on the AS concept; therefore, two types of routing protocols are required: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interior Gateway Protocols (IGP) </b>- Used for routing within an AS. It is also referred to as intra-AS routing. Companies, organizations, and even service providers use an IGP on their internal networks. IGPs include RIP, EIGRP, OSPF, and IS-IS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Exterior Gateway Protocols (EGP) </b>- Used for routing between AS. It is also referred to as inter-AS routing. Service providers and large companies may interconnect using an EGP. The Border Gateway Protocol (BGP) is the only currently-viable EGP and is the official routing protocol used by the Internet.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Because BGP is the only EGP available, the term EGP is rarely used; instead, most engineers simply refer to BGP. </p>
+          <p></p>
+          <p>The example in the figure provides simple scenarios highlighting the deployment of IGPs, BGP, and static routing: </p>
+          <p>
+            <ul>
+              <li>
+                <b>ISP-1 </b>- This is an AS and it uses IS-IS as the IGP. It interconnects with other autonomous systems and service providers using BGP to explicitly control how traffic is routed. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ISP-2 </b>- This is an AS and it uses OSPF as the IGP. It interconnects with other autonomous systems and service providers using BGP to explicitly control how traffic is routed. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-1 </b>- This is a large organization and it uses EIGRP as the IGP. Because it is multihomed (i.e., connects to two different service providers), it uses BGP to explicitly control how traffic enters and leaves the AS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-2 </b>- This is a medium-sized organization and it uses OSPF as the IGP.  It is also multihomed; therefore, it uses BGP to explicitly control how traffic enters and leaves the AS. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>AS-3 </b>- This is a small organization with older routers within the AS; it uses RIP as the IGP. BGP is not required because it is single-homed (i.e., connects to one service provider).  Instead, static routing is implemented between the AS and the service provider. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: BGP is beyond the scope of this course and is not discussed in detail. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

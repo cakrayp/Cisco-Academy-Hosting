@@ -1,0 +1,17 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Deny a Specific Host and Permit a Specific Subnet
+</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Deny a Specific Host</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Company A</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+  <text><![CDATA[<b>Company A</b>]]></text> 
+</component>
+
+</textcomponents>

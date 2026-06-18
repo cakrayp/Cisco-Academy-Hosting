@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.1.1 Konfigurasi Otomatis Alamat Tanpa Status (SLAAC)</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>SLAAC dan DHCPv6</h2>
+</div>
+<div id="content">
+<p>Mirip dengan IPv4, alamat unicast global IPv6 dapat dikonfigurasi secara manual atau dinamis. Namun, ada dua metode di mana alamat unicast global IPv6 dapat ditetapkan secara dinamis:</p>
+<p></p>
+<p>
+<ul>
+<li>Konfigurasi Otomatis Alamat Tanpa Status (SLAAC), seperti yang ditunjukkan pada gambar</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Protokol Konfigurasi Host Dinamis untuk IPv6 (Stateful DHCPv6)</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Memperkenalkan SLAAC</b>
+</p>
+<p></p>
+<p>SLAAC adalah metode di mana perangkat dapat memperoleh alamat unicast global IPv6 tanpa layanan server DHCPv6. Inti dari SLAAC adalah ICMPv6. ICMPv6 mirip dengan ICMPv4 tetapi mencakup fungsionalitas tambahan dan merupakan protokol yang jauh lebih kuat. SLAAC menggunakan pesan ICMPv6 Router Solicitation dan Router Advertisement untuk memberikan pengalamatan dan informasi konfigurasi lainnya yang biasanya disediakan oleh server DHCP:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Pesan Permintaan Router (RS).</b>- Ketika klien dikonfigurasi untuk mendapatkan informasi pengalamatan secara otomatis menggunakan SLAAC, klien mengirimkan pesan RS ke router. Pesan RS dikirim ke alamat multicast semua router IPv6 FF02::2.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Pesan Iklan Router (RA).</b>- Pesan RA dikirim oleh router untuk memberikan informasi pengalamatan kepada klien yang dikonfigurasi untuk mendapatkan alamat IPv6 mereka secara otomatis. Pesan RA menyertakan awalan dan panjang awalan segmen lokal. Klien menggunakan informasi ini untuk membuat alamat unicast global IPv6 miliknya sendiri. Router mengirimkan pesan RA secara berkala, atau sebagai respons terhadap pesan RS. Secara default, router Cisco mengirim pesan RA setiap 200 detik. Pesan RA selalu dikirim ke alamat multicast semua node IPv6 FF02::1.</li>
+</ul>
+</p>
+<p></p>
+<p>Sesuai dengan namanya, SLAAC tidak memiliki kewarganegaraan. Layanan tanpa kewarganegaraan berarti tidak ada server yang menyimpan informasi alamat jaringan. Tidak seperti DHCP, tidak ada server SLAAC yang mengetahui alamat IPv6 mana yang digunakan dan mana yang tersedia.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

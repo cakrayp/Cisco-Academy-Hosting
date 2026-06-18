@@ -1,0 +1,14 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Memverifikasi ACL yang Diperluas</b>]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[&lt;output dihilangkan agar singkatnya&gt;]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[&lt;output dihilangkan agar singkatnya&gt;]]></text>
+</component>
+
+</textcomponents>

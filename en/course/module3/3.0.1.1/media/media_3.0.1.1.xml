@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Explain the purpose of VLANs in a switched network.</li><li>Analyze how a switch forwards frames based on VLAN configuration in a multi-switched environment.</li><li>Configure a switch port to be assigned to a VLAN based on requirements.</li><li>Configure a trunk port on a LAN switch.</li><li>Configure Dynamic Trunking Protocol (DTP).</li><li>Troubleshoot VLAN and trunk configurations in a switched network.</li><li>Configure security features to mitigate attacks in a VLAN-segmented environment.</li><li>Explain security best practices for a VLAN-segmented environment.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

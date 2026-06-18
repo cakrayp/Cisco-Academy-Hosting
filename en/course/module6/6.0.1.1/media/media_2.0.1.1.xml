@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><ul><li>Explain the advantages and disadvantages of static routing.</li><li>Explain the purpose of different types of static routes.</li><li>Configure IPv4 and IPv6 static routes by specifying a next-hop address.</li><li>Configure an IPv4 and IPv6 default routes.</li><li>Explain the use of legacy classful addressing in network implementation.</li><li>Explain the purpose of CIDR in replacing classful addressing.</li><li>Design and implement a hierarchical addressing scheme.</li><li>Configure an IPv4 and IPv6 summary network address to reduce the number of routing table updates.</li><li>Configure a floating static route to provide a backup connection.</li><li>Explain how a router processes packets when a static route is configured.</li><li>Troubleshoot common static and default route configuration issues.</li></ul></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

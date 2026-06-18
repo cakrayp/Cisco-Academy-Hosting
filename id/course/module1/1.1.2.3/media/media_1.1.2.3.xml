@@ -1,0 +1,127 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas - Memilih Switch Hardware</b><br/>Baca kriteria pemilihan saklar dan temukan nama kategori saklar yang paling mewakili kriteria tersebut. Seret nama kategori yang mewakili kriteria ke bidang yang sesuai.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Stackable</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Power</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Reliability</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Scalability</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Port Density</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">Price</font>]]></text>
+</component>
+
+<component id='ID_drag07'>
+	<text><![CDATA[<font color="#393536">Modular</font>]]></text>
+</component>
+
+<component id='ID_drag08'>
+	<text><![CDATA[<font color="#393536">Port Speed</font>]]></text>
+</component>
+
+<component id='ID_drag09'>
+	<text><![CDATA[<font color="#393536">Frame Buffers</font>]]></text>
+</component>
+
+<component id='ID_drag10'>
+	<text><![CDATA[<font color="#393536">Fixed Configuration</font>]]></text>
+</component>
+
+
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Benar]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum memilih nama kategori kriteria pemilihan saklar dengan benar. Silakan Reset dan coba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+
+<component id='ID_target_header'>
+	<text><![CDATA[<b>Nama Kategori</b>]]></text>
+</component>
+<component id='ID_text_header'>
+	<text><![CDATA[<b>Beralih Kriteria Seleksi</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[Dipengaruhi oleh jumlah perangkat jaringan yang didukung]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Redundansi melalui PoE]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Prosesnya cepat antarmuka akan memproses data jaringan]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[Akses berkelanjutan ke jaringan]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[Dipengaruhi oleh jumlah antarmuka, fitur, dan kemampuan luas]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Kapasitas untuk menyimpan frame dalam cache]]></text> 
+</component>
+
+<component id="ID_txt07">
+  <text><![CDATA[Kemampuan untuk menyesuaikan diri dengan pertumbuhan pengguna jaringan]]></text> 
+</component>
+
+<component id="ID_txt08">
+  <text><![CDATA[Sakelar dengan jalur singgah/kartu pelabuhan yang dapat disesuaikan]]></text> 
+</component>
+
+<component id="ID_txt09">
+  <text><![CDATA[Beralih dengan fitur atau opsi yang telah ditentukan sebelumnya]]></text> 
+</component>
+
+<component id="ID_txt10">
+  <text><![CDATA[Sakelar rantai Daisy dengan throughput bandwidth tinggi]]></text> 
+</component>
+
+  
+</textcomponents>

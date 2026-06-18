@@ -1,0 +1,55 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>NAT Beraksi</b>]]></text>
+ </component>
+<!--table data-->
+
+
+ <component id="ID_table">
+  <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtitle">
+<td bgcolor="#98D3D1" class="mtitle" colspan="4"><font color="#1C3635" size="12"><b>Tabel NAT</b></font></td>
+</tr>
+<tr class="mtable_top"><td bgcolor="#0E6360" class="mtable_top" colspan="4"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr colspan="6">
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11">Inside Global</font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11">Inside Local</font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11">Outside Local</font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11">Outside Global</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">192.168.10.10</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.200.226</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.201.1</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.201.1</font></td>
+</tr>
+</table>]]></text>
+  </component>
+ 
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[Akhir]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Maju Cepat]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Berhenti sebentar]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Bermain]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Memutar ulang]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Awal]]></text>
+	</component>
+</textcomponents>

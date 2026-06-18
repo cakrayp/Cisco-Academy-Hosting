@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.1.1.1 Menjangkau Jaringan Jarak Jauh</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi Perutean Statis</h1>
+<h2>Perutean Statis</h2>
+</div>
+<div id="content">
+<p>Router dapat mempelajari jaringan jarak jauh dengan salah satu dari dua cara berikut:</p>
+<p>
+<ul>
+<li>
+<b>Secara manual</b>- Jaringan jarak jauh dimasukkan secara manual ke dalam tabel rute menggunakan rute statis.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Secara dinamis</b>- Rute jarak jauh secara otomatis dipelajari menggunakan protokol perutean dinamis.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 1 memberikan contoh skenario perutean statis. Gambar 2 memberikan contoh skenario perutean dinamis menggunakan EIGRP.</p>
+<p></p>
+<p>Administrator jaringan dapat secara manual mengkonfigurasi rute statis untuk menjangkau jaringan tertentu. Berbeda dengan protokol perutean dinamis, rute statis tidak diperbarui secara otomatis dan harus dikonfigurasi ulang secara manual setiap kali topologi jaringan berubah. Rute statis tidak berubah sampai administrator mengkonfigurasi ulang secara manual.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

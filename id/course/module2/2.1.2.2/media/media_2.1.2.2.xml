@@ -1,0 +1,97 @@
+﻿<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Konfigurasikan Dupleks dan Kecepatan</b>]]></text>
+</component>
+
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Mode Dupleks Penuh<br/>100 Mb/dtk]]></text>
+   </component>
+
+
+   <component id="ID_s1_txt02">
+   <text><![CDATA[Mode Dupleks Penuh<br/>100 Mb/dtk]]></text>
+   </component>
+
+   <component id="ID_s1_table01">
+  <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="title" colspan="2"><font class="font12px" color="#393536" size="12"><b>Cisco Beralih Perintah IOS</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" size="11">Enter global configuration mode.</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1#  <b>konfigurasikan terminal</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" size="11">Enter interface configuration mode.</font></td>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1(config)#  <b>antarmuka FastEthernet 0/1</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" size="11">Configure the interface duplex.</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1(config-if)#  <b>dupleks penuh</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" size="11">Configure the interface speed.</font></td>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1(config-if)#  <b>kecepatan 100</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" size="11">Return to the privileged EXEC mode.</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1(config-if)#  <b>akhir</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" size="11">Save the running config to the startup config.</font></td>
+<td bgcolor="#ffffff" valign="top"><font class="font11px" color="#393536" face="_typewriter" size="11">S1#  <b>salin menjalankan-config startup-config</b></font></td>
+</tr>
+</table>]]></text>
+  </component>
+<component id="ID_sc_reset">
+		<text><![CDATA[Mengatur ulang]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Tunjukkan padaku]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Tampilkan Semua]]></text>
+	</component>
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+
+<component id="ID_s2_SC01" fontFace='Courier New' fontSize="10">
+		<feedback id="fb"><![CDATA[<b><font size = '10' class="font10px" face="Arial" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		
+		<existingcommands><![CDATA[<font  face="Arial"><b>Enter configuration mode and set FastEthernet0/1 duplex to full and speed 100.</b></font>]]></existingcommands>
+		<command prompt="S1#">
+		    <correctresponse><![CDATA[configure terminal]]></correctresponse>
+				<deviceresponse><![CDATA[<font Face='Courier New' Size="10" class="font10px">Enter configuration commands, one per line.  End with CNTL/Z.</font>]]></deviceresponse> 					
+		</command>
+		<command prompt="S1(config)#">
+			<correctresponse><![CDATA[interface FastEthernet0/1]]></correctresponse>
+		</command>
+		<command prompt="S1(config-if)#">
+			<correctresponse><![CDATA[duplex full]]></correctresponse>
+		</command>
+		<command prompt="S1(config-if)#">
+			<correctresponse><![CDATA[speed 100]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>End out of configuration mode and save the configuration to NVRAM.</b></font>]]></instruction>
+		</command>
+		<command prompt="S1(config-if)#">
+			<correctresponse><![CDATA[end]]></correctresponse>
+				<deviceresponse><![CDATA[<font Face='Courier New' Size="10" class="font10px">S1#<br>%SYS-5-CONFIG_I: Configured from console by console</font>]]></deviceresponse> 					
+		</command>
+		<command prompt="S1#">
+			<correctresponse><![CDATA[copy running-config startup-config]]></correctresponse>
+			<instruction><![CDATA[<font  face="Arial"><b>You successfully configured the switch port duplex and speed settings.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+
+</textcomponents>

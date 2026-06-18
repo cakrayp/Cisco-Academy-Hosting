@@ -1,0 +1,50 @@
+<textcomponents>
+<!--Slide 1-->
+   
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Voice VLAN Tagging</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Switch port configured to support voice traffic:<textformat blockindent="-14"><li>Instructs phone to tag voice frames with VLAN 150</li><li>Prioritizes voice frames</li><li>Forwards data frames on VLAN 20</li></textformet>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[Configured to send tagged data traffic.]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[Configured to send untagged data traffic.]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+   <text><![CDATA[Configured to tag voice traffic frames with VLAN 150.</textcomponents>]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+	<text><![CDATA[Cisco IP Phone]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+	<text><![CDATA[Phone ASIC]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+   <text><![CDATA[Access port]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+   <text><![CDATA[3-port switch]]></text>
+</component>
+
+<!--Slide 2-->
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Sample Configuration</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+   <text><![CDATA[&lt;output omitted&gt;]]></text>
+</component>
+
+</textcomponents>

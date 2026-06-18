@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.2.2.2 Enhanced Interior-Gateway Routing Protocol</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Distance Vector Dynamic Routing</h1>
+        <h2>Types of Distance Vector Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>The Interior Gateway Routing Protocol (IGRP) was the first proprietary IPv4 routing protocol developed by Cisco in 1984. It used the following design characteristics:</p>
+          <p>
+            <ul>
+              <li>Bandwidth, delay, load, and reliability are used to create a composite metric.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Routing updates are broadcast every 90 seconds, by default.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In 1992, IGRP was replaced by Enhanced IGRP (EIGRP). Like RIPv2, EIGRP also introduced support for VLSM and CIDR. EIGRP increases efficiency, reduces routing updates, and supports secure message exchange.  </p>
+          <p></p>
+          <p>The table in the figure summarizes the differences between IGRP and EIGRP. </p>
+          <p></p>
+          <p>EIGRP also introduced:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Bounded triggered updates </b>- It does not send periodic updates. Only routing table changes are propagated, whenever a change occurs. This reduces the amount of load the routing protocol places on the network. Bounded triggered updates means that EIGRP only sends to the neighbors that need it. It uses less bandwidth, especially in large networks with many routes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hello keepalive mechanism </b>- A small Hello message is periodically exchanged to maintain adjacencies with neighboring routers.  This means a very low usage of network resources during normal operation, instead of the periodic updates. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Maintains a topology table </b>- Maintains all the routes received from neighbors (not only the best paths) in a topology table. DUAL can insert backup routes into the EIGRP topology table. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rapid convergence </b>- In most cases, it is the fastest IGP to converge because it maintains alternate routes, enabling almost instantaneous convergence. If a primary route fails, the router can use the alternate route identified.  The switchover to the alternate route is immediate and does not involve interaction with other routers.   </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Multiple network layer protocol support </b>- EIGRP uses Protocol Dependent Modules (PDM), which means that it is the only protocol to include support for protocols other than IPv4 and IPv6, such as legacy IPX and AppleTalk. </li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

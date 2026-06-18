@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.3.3 Konfigurasikan Rute IPv6 Statis Next-Hop</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Statis IPv6</h2>
+</div>
+<div id="content">
+<p>Dalam rute statis hop berikutnya, hanya alamat IPv6 hop berikutnya yang ditentukan. Antarmuka keluaran berasal dari hop berikutnya. Misalnya, pada Gambar 1, tiga rute statis next-hop dikonfigurasi pada R1.</p>
+<p></p>
+<p>Seperti halnya IPv4, sebelum paket apa pun diteruskan oleh router, proses tabel routing harus menyelesaikan rute untuk menentukan antarmuka keluar yang akan digunakan untuk meneruskan paket. Proses penyelesaian rute akan bervariasi tergantung pada jenis mekanisme penerusan yang digunakan oleh router. CEF (Cisco Express Forwarding) adalah perilaku default pada sebagian besar platform yang menjalankan IOS 12.0 atau lebih baru.</p>
+<p></p>
+<p>Gambar 2 merinci proses resolvabilitas rute penerusan paket dasar dalam tabel routing untuk R1 tanpa menggunakan CEF. Ketika sebuah paket ditujukan untuk jaringan 2001:DB8:ACAD:3::/64, R1:</p>
+<p></p>
+<p>1. Mencari kecocokan dalam tabel routing dan menemukan bahwa ia harus meneruskan paket ke alamat IPv6 hop berikutnya 2001:DB8:ACAD:4::2. Setiap rute yang hanya mereferensikan alamat IPv6 hop berikutnya dan tidak mereferensikan antarmuka keluar harus memiliki alamat IPv6 hop berikutnya yang diselesaikan menggunakan rute lain dalam tabel perutean dengan antarmuka keluar.</p>
+<p></p>
+<p>2. R1 sekarang harus menentukan cara mencapai 2001:DB8:ACAD:4::2; oleh karena itu, ia mencari untuk kedua kalinya mencari kecocokan. Dalam hal ini, alamat IPv6 cocok dengan rute untuk jaringan yang terhubung langsung 2001:DB8:ACAD:4::/64 dengan antarmuka keluar Serial 0/0/0. Pencarian ini memberitahu proses tabel routing bahwa paket ini diteruskan keluar dari antarmuka tersebut.</p>
+<p></p>
+<p>Oleh karena itu, sebenarnya dibutuhkan dua proses pencarian tabel perutean untuk meneruskan paket apa pun ke jaringan 2001:DB8:ACAD:3::/64. Ketika router harus melakukan beberapa pencarian di tabel routing sebelum meneruskan sebuah paket, ia melakukan proses yang dikenal sebagai pencarian rekursif.</p>
+<p></p>
+<p>Rute IPv6 statis rekursif valid (yaitu, kandidat untuk dimasukkan ke dalam tabel routing) hanya ketika hop berikutnya yang ditentukan diselesaikan, baik secara langsung atau tidak langsung, ke antarmuka keluar yang valid.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 dan Gambar 4 untuk mengonfigurasi rute IPv6 statis hop berikutnya.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

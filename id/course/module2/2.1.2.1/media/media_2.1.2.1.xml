@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_txt01">
+   <text><![CDATA[<b>Komunikasi Dupleks Penuh</b>]]></text>
+   </component>
+
+<component id="ID_txt02">
+   <text><![CDATA[kirim DAN terima secara bersamaan]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Komunikasi Setengah Dupleks</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[kirim ATAU terima]]></text>
+   </component>
+
+
+
+</textcomponents>

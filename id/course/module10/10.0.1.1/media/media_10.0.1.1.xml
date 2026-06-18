@@ -1,0 +1,5 @@
+﻿<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Menjelaskan pengoperasian DHCPv4 dalam jaringan bisnis skala kecil hingga menengah.</li><li>Konfigurasikan router sebagai server DHCPv4.</li><li>Konfigurasikan router sebagai klien DHCPv4.</li><li>Memecahkan masalah konfigurasi DHCP untuk IPv4 di jaringan yang diaktifkan.</li><li>menjelaskan pengoperasian DHCPv6.</li><li>Konfigurasikan DHCPv6 stateless untuk bisnis skala kecil hingga menengah.</li><li>Konfigurasikan DHCPv6 stateful untuk bisnis skala kecil hingga menengah.</li><li>Memecahkan masalah konfigurasi DHCP untuk IPv6 di jaringan yang dialihkan.</li></textformat><br/>]]></text>
+</component> 
+</textcomponents>

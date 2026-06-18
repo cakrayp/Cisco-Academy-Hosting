@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.1.4 Configuring an OSPF Router ID</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Router ID</h2>
+      </div>
+      <div id="content">
+          <p>Use the<span class="cmd"><b> router-id </b></span><span class="cmd"><i>rid </i></span>router configuration mode command to manually assign a 32-bit value expressed as an IPv4 address to a router. An OSPF router identifies itself to other routers using this router ID. </p>
+          <p></p>
+          <p>As shown in Figure 1, R1 is configured with a router ID of 1.1.1.1, R2 with 2.2.2.2, and R3 with 3.3.3.3. </p>
+          <p></p>
+          <p>In Figure 2, the router ID 1.1.1.1 is assigned to R1. Use the<span class="cmd"><b> show ip protocols </b></span>command to verify the router ID.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: R1 had never been configured with an OSPF router ID. If it had, then the router ID would have to be modified.</p>
+          <p></p>
+          <p>If the router ID is the same on two neighboring routers, the router displays an error message similar to the one below: </p>
+          <p></p>
+          <p>
+            <span class="cmd">%OSPF-4-DUP_RTRID1: Detected router with duplicate router ID. </span>
+          </p>
+          <p></p>
+          <p>To correct this problem, configure all routers so that they have unique OSPF router IDs.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to assign the router ID to R2 and R3.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

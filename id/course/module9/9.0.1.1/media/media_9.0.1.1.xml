@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan bagaimana ACL digunakan untuk memfilter lalu lintas.</li><li>Bandingkan ACL IPv4 standar dan diperpanjang.</li><li>Jelaskan bagaimana ACL menggunakan masker wildcard.</li><li>Jelaskan pedoman untuk membuat ACL.</li><li>Jelaskan pedoman penempatan ACL.</li><li>Konfigurasikan ACL IPv4 standar untuk memfilter lalu lintas sesuai dengan kebutuhan jaringan.</li><li>Ubah ACL IPv4 standar menggunakan nomor urut.</li><li>Konfigurasikan ACL standar untuk mengamankan akses vty.</li><li>Jelaskan struktur entri kontrol akses yang diperluas (ACE).</li><li>Konfigurasikan ACL IPv4 yang diperluas untuk memfilter lalu lintas sesuai dengan kebutuhan jaringan.</li><li>Konfigurasikan ACL untuk membatasi keluaran debug.</li><li>Jelaskan bagaimana router memproses paket ketika ACL diterapkan.</li><li>Pecahkan masalah kesalahan ACL yang umum menggunakan perintah CLI.</li><li>Bandingkan pembuatan ACL IPv4 dan IPv6.</li><li>Konfigurasikan ACL IPv6 untuk memfilter lalu lintas sesuai dengan kebutuhan jaringan.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

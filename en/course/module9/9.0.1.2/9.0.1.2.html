@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.0.1.2 Permit Me to Assist You</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Access Control Lists</h1>
+        <h2>Access Control Lists</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Permit Me to Assist You</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario </b>
+          </p>
+          <p></p>
+          <p>Each individual in the class will record five questions they would ask a candidate who is applying for a security clearance for a network assistant position within a small- to medium-sized business. The list of questions should be listed in order of importance to selecting a good candidate for the job. The preferred answers will also be recorded.</p>
+          <p></p>
+          <p>Two interviewers from the class will be selected. The interview process will begin.  Candidates will be allowed or denied the opportunity to move to the next level of questions based upon their answers to the interviewer’s questions.</p>
+          <p></p>
+          <p>Refer to the accompanying PDF for further instructions for this activity. </p>
+          <p></p>
+          <p>The entire class will then get together and discuss their observations regarding the process to permit or deny them the opportunity to continue on to the next level of interviews.</p>
+          <p></p>
+          <p>
+            <a href="../../files/9.0.1.2%20Permit%20Me%20to%20Assist%20You%20Instructions.pdf" target="_blank">Class Activity - Permit Me to Assist You Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

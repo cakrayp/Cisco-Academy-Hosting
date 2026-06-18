@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.1.5 Mengonfigurasi Akses Manajemen Switch Dasar dengan IPv4</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Switch dengan Pengaturan Awal</h2>
+</div>
+<div id="content">
+<p>
+<b>Langkah 1. Konfigurasikan Antarmuka Manajemen</b>
+</p>
+<p></p>
+<p>Alamat IP dan subnet mask dikonfigurasi pada SVI manajemen peralihan dari mode konfigurasi antarmuka VLAN. Seperti yang ditunjukkan pada Gambar 1,<span class="cmd"><b>antarmuka vlan 99</b></span>perintah digunakan untuk masuk ke mode konfigurasi antarmuka. Itu<span class="cmd"><b>alamat IP</b></span>perintah digunakan untuk mengkonfigurasi alamat IP. Itu<span class="cmd"><b>tidak ada penutupan</b></span>perintah mengaktifkan antarmuka. Dalam contoh ini, VLAN 99 dikonfigurasi dengan alamat IP 172.17.99.11.</p>
+<p></p>
+<p>SVI untuk VLAN 99 tidak akan muncul sebagai "up/up" sampai VLAN 99 dibuat dan ada perangkat yang terhubung ke port switch yang terkait dengan VLAN 99. Untuk membuat VLAN dengan vlan_id 99, dan mengaitkannya ke antarmuka, gunakan perintah berikut:</p>
+<p>
+<span class="cmd">S1(konfigurasi)#</span>
+<span class="cmd">
+<b>vlan</b>
+</span>
+<span class="cmd">
+<i>vlan_id</i>
+</span>
+</p>
+<p>
+<span class="cmd">S1(config-vlan)#</span>
+<span class="cmd">
+<b>nama</b>
+</span>
+<span class="cmd">
+<i>vlan_nama</i>
+</span>
+</p>
+<p>
+<span class="cmd">S1(konfigurasi)#</span>
+<span class="cmd">
+<b>akhir</b>
+</span>
+</p>
+<p>
+<span class="cmd">S1(konfigurasi)#</span>
+<span class="cmd">
+<b>antarmuka</b>
+</span>
+<span class="cmd">
+<i>antarmuka_id</i>
+</span>
+<span class="cmd">
+<b></b>
+</span>
+</p>
+<p>
+<span class="cmd">S1(config-jika)#</span>
+<span class="cmd">
+<b></b>
+</span>
+<span class="cmd">
+<b>vlan akses switchport</b>
+</span>
+<span class="cmd">
+<i>vlan_id</i>
+</span>
+</p>
+<p></p>
+<p>
+<b>Langkah 2. Konfigurasikan Gerbang Default</b>
+</p>
+<p></p>
+<p>Switch harus dikonfigurasi dengan gateway default jika akan dikelola dari jarak jauh dari jaringan yang tidak terhubung langsung. Gateway default adalah router yang terhubung dengan switch. Switch akan meneruskan paket IP dengan alamat IP tujuan di luar jaringan lokal ke gateway default. Seperti yang ditunjukkan pada Gambar 2, R1 adalah gateway default untuk S1. Antarmuka pada R1 yang terhubung ke sakelar memiliki alamat IP 172.17.99.1. Alamat ini adalah alamat gateway default untuk S1.</p>
+<p></p>
+<p>Untuk mengonfigurasi gateway default untuk sakelar, gunakan<span class="cmd"><b>ip gateway default</b></span>memerintah. Masukkan alamat IP gateway default. Gateway default adalah alamat IP antarmuka router yang terhubung dengan switch. Gunakan<span class="cmd"><b>salin menjalankan-config startup-config</b></span>perintah untuk membuat cadangan konfigurasi Anda.</p>
+<p></p>
+<p>
+<b>Langkah 3. Verifikasi Konfigurasi</b>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3,<span class="cmd"><b>tampilkan antarmuka ip secara singkat</b></span>perintah berguna saat menentukan status antarmuka fisik dan virtual. Output yang ditunjukkan pada gambar mengonfirmasi bahwa antarmuka VLAN 99 telah dikonfigurasi dengan alamat IP dan subnet mask, dan port Fast Ethernet F0/18 telah ditetapkan ke antarmuka manajemen VLAN 99. Kedua antarmuka sekarang “naik/naik” dan beroperasi.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

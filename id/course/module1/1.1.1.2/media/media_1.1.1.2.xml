@@ -1,0 +1,11 @@
+<textcomponents>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Banyak jenis lalu lintas...]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[...satu jaringan.]]></text> 
+</component>
+
+
+</textcomponents>

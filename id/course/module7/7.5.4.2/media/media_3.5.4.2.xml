@@ -1,0 +1,40 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Tabel Perutean IPv6 dari R1</b>]]></text>
+</component>
+
+  <component id="ID_s1_txt01">
+  <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text> 
+  </component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Rute Terhubung Langsung di R1</b>]]></text> 
+  </component>
+  
+  
+  <component id="ID_s2_txt01">
+  <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text> 
+  </component>
+  
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Rute Terhubung Langsung di R1</b>]]></text> 
+  </component>
+<component id="ID_s3_txt01">
+  <text><![CDATA[Sumber Rute]]></text> 
+  </component>
+<component id="ID_s3_txt02">
+  <text><![CDATA[Jaringan Terhubung Langsung]]></text> 
+  </component>
+<component id="ID_s3_txt03">
+  <text><![CDATA[Jarak Administratif]]></text> 
+  </component>
+<component id="ID_s3_txt04">
+  <text><![CDATA[Metrik]]></text> 
+  </component>
+<component id="ID_s3_txt05">
+  <text><![CDATA[Antarmuka Keluar]]></text> 
+  </component>
+  
+    <component id="ID_s3_txt06">
+  <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text> 
+  </component>
+</textcomponents>

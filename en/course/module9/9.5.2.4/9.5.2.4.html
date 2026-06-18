@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.5.2.4 IPv6 ACL Examples </title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.5.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IPv6 ACLs</h1>
+        <h2>Configuring IPv6 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Deny FTP</b>
+          </p>
+          <p></p>
+          <p>The topology for the examples is shown in Figure 1.</p>
+          <p></p>
+          <p>In the first example shown in Figure 2, router R1 is configured with an IPv6 access list to deny FTP traffic to 2001:DB8:CAFE:11::/64. Ports for both FTP data (port 20) and FTP control (port 21) need to be blocked. Because he filter is applied inbound on the G0/0 interface on R1 only traffic from the 2001:DB8:CAFE:10::/64 network will be denied.</p>
+          <p></p>
+          <p>
+            <b>Restricted Access</b>
+          </p>
+          <p></p>
+          <p>In the second example shown in Figure 3, an IPv6 ACL is configured to give the LAN on R3 limited access to the LANs on R1. Comments are added in the configuration to document the ACL. The following features have been labelled in the ACL:</p>
+          <p></p>
+          <p>1. The first two permit statements allow access from any device to the web server at 2001:DB8:CAFE:10::10. </p>
+          <p></p>
+          <p>2. All other devices are denied access to the 2001:DB8:CAFE:10::/64 network.</p>
+          <p></p>
+          <p>3. PC3 at 2001:DB8:CAFE:30::12 is permitted Telnet access to PC2 which has the IPv6 address 2001:DB8:CAFE:11::11.</p>
+          <p></p>
+          <p>4. All other devices are denied Telnet access to PC2.</p>
+          <p></p>
+          <p>5. All other IPv6 traffic is permitted to all other destinations.</p>
+          <p></p>
+          <p>6. The IPv6 access list is applied to interface G0/0 in the inbound direction, so only the 2001:DB8:CAFE:30::/64 network is affected.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

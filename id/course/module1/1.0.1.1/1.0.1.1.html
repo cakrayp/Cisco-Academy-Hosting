@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.0.1.1 Pendahuluan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.0.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perkenalan</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>Jaringan modern terus berkembang untuk mengimbangi perubahan cara organisasi menjalankan bisnis sehari-hari. Pengguna kini mengharapkan akses cepat ke sumber daya perusahaan dari mana saja dan kapan saja. Sumber daya ini tidak hanya mencakup data tradisional tetapi juga video dan suara. Ada juga peningkatan kebutuhan akan teknologi kolaborasi yang memungkinkan pembagian sumber daya secara real-time antara beberapa individu jarak jauh seolah-olah mereka berada di lokasi fisik yang sama.</p>
+<p></p>
+<p>Perangkat yang berbeda harus bekerja sama secara lancar untuk menyediakan koneksi antar host yang cepat, aman, dan andal. Switch LAN menyediakan titik koneksi bagi pengguna akhir ke dalam jaringan perusahaan dan juga bertanggung jawab untuk mengendalikan informasi dalam lingkungan LAN. Router memfasilitasi pergerakan informasi antar LAN dan umumnya tidak mengetahui host individu. Semua layanan tingkat lanjut bergantung pada ketersediaan infrastruktur perutean dan peralihan yang kuat yang dapat mereka bangun. Infrastruktur ini harus dirancang, diterapkan, dan dikelola dengan hati-hati untuk menyediakan platform stabil yang diperlukan.</p>
+<p></p>
+<p>Bab ini mengawali pemeriksaan arus lalu lintas dalam jaringan modern. Ini mengkaji beberapa model desain jaringan saat ini dan cara switch LAN membangun tabel penerusan dan menggunakan informasi alamat MAC untuk mengalihkan data antar host secara efisien.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

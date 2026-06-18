@@ -1,0 +1,52 @@
+<textcomponents>
+	<component id='ID_inst'>
+		<text><![CDATA[<b>Activity – Identify Parent and Child IPv4 Routes</b><br/><br/>Using the routing table below; locate the networks listed in the chart. Determine whether the networks are classified as Level 1, Level 1 Parent, or Level 2 Child routes. Drag the appropriate term to the Route Type field provided.</b>]]></text>
+	</component>
+
+
+<!--Drag and Drop-->
+	<component id='ID_drag01'>
+		<text><![CDATA[<font color="#393536">Level 1</font>]]></text>
+	</component>
+
+	<component id='ID_drag02'>
+		<text><![CDATA[<font color="#393536">Level 1 Parent</font>]]></text>
+	</component>
+
+	<component id='ID_drag03'>
+		<text><![CDATA[<font color="#393536">Level 2 Child</font>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_TITLE'>
+		<text><![CDATA[<span class="font10px"><b>Correct</b></span>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_BODY'>
+		<text><![CDATA[<span class="font10px">You have successfully classified the route types for each network.</span>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_TITLE'>
+		<text><![CDATA[<span class="font10px"><b>Incorrect</b></span>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_BODY'>
+		<text><![CDATA[<span class="font10px">You have not successfully classified the route types for each network. Please click Reset to try again.</span>]]></text>
+	</component>
+
+	<component id='ID_CHECK'>
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+	<component id='ID_RESET'>
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[<b>Specified Network</b>]]></text>
+	</component> 
+	
+	<component id='ID_txt02'>
+		<text><![CDATA[<b>Route Type</b>]]></text>
+	</component> 
+	
+</textcomponents>

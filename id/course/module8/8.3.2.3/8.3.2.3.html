@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.3.2.3 Menetapkan Alamat Link-Lokal</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan OSPFv3 Area Tunggal</h1>
+<h2>Mengonfigurasi OSPFv3</h2>
+</div>
+<div id="content">
+<p>Alamat tautan lokal yang dibuat menggunakan format EUI-64 atau dalam beberapa kasus, ID antarmuka acak, menyulitkan untuk mengenali dan mengingat alamat tersebut. Karena protokol perutean IPv6 menggunakan alamat link-lokal IPv6 untuk pengalamatan unicast dan informasi alamat hop berikutnya dalam tabel perutean, praktik umum adalah menjadikannya alamat yang mudah dikenali.</p>
+<p></p>
+<p>Mengonfigurasi alamat link-local secara manual memberikan kemampuan untuk membuat alamat yang mudah dikenali dan diingat. Selain itu, router dengan beberapa antarmuka dapat menetapkan alamat link-local yang sama untuk setiap antarmuka IPv6. Hal ini karena alamat link-local hanya diperlukan untuk komunikasi lokal.</p>
+<p></p>
+<p>Alamat link-lokal dapat dikonfigurasi secara manual menggunakan perintah antarmuka yang sama yang digunakan untuk membuat alamat unicast global IPv6, tetapi menambahkan<span class="cmd"><b>tautan-lokal</b></span>kata kunci ke<span class="cmd"><b>alamat ipv6</b></span>memerintah.</p>
+<p></p>
+<p>Alamat link-lokal memiliki awalan dalam rentang FE80 hingga FEBF. Ketika sebuah alamat dimulai dengan hextet ini (segmen 16-bit) maka<span class="cmd"><b>tautan-lokal</b></span>kata kunci harus mengikuti alamat.</p>
+<p></p>
+<p>Contoh pada Gambar 1 mengkonfigurasi alamat link-local yang sama FE80::1 pada tiga antarmuka R1. FE80::1 dipilih untuk memudahkan mengingat alamat link-lokal R1.</p>
+<p></p>
+<p>Sekilas antarmuka seperti yang ditunjukkan pada Gambar 2 mengonfirmasi bahwa alamat link-lokal antarmuka R1 telah diubah menjadi FE80::1.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk mengonfigurasi dan memverifikasi alamat link-lokal FE80::2 di R2, dan alamat link-lokal FE80::3 di R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

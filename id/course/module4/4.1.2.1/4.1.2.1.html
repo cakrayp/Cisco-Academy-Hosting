@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.2.1 Menyambungkan ke Jaringan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Hubungkan Perangkat</h2>
+</div>
+<div id="content">
+<p>Perangkat jaringan dan pengguna akhir biasanya terhubung ke jaringan menggunakan Ethernet kabel atau koneksi nirkabel. Lihat gambar sebagai contoh topologi referensi. LAN pada gambar berfungsi sebagai contoh bagaimana pengguna dan perangkat jaringan dapat terhubung ke jaringan.</p>
+<p></p>
+<p>Perangkat kantor rumah dapat terhubung sebagai berikut:</p>
+<p>
+<ul>
+<li>Laptop dan tablet terhubung secara nirkabel ke router rumah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Printer jaringan terhubung menggunakan kabel Ethernet ke port switch pada router rumah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router rumah terhubung ke modem kabel penyedia layanan menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Modem kabel terhubung ke jaringan penyedia layanan Internet (ISP).</li>
+</ul>
+</p>
+<p></p>
+<p>Perangkat situs Cabang terhubung sebagai berikut:</p>
+<p>
+<ul>
+<li>Sumber daya perusahaan (yaitu, server file dan printer) terhubung ke switch Layer 2 menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>PC desktop dan telepon voice over IP (VoIP) terhubung ke switch Layer 2 menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Laptop dan ponsel cerdas terhubung secara nirkabel ke titik akses nirkabel (WAP).</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>WAP terhubung ke switch menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sakelar lapisan 2 terhubung ke antarmuka Ethernet di router tepi menggunakan kabel Ethernet. Router tepi adalah perangkat yang berada di tepi atau batas jaringan dan merutekan antara jaringan tersebut dan jaringan lainnya, seperti antara LAN dan WAN.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router tepi terhubung ke penyedia layanan WAN (SP).</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router edge juga terhubung ke ISP untuk tujuan pencadangan.</li>
+</ul>
+</p>
+<p></p>
+<p>Perangkat situs Pusat terhubung sebagai berikut:</p>
+<p>
+<ul>
+<li>PC Desktop dan telepon VoIP terhubung ke switch Layer 2 menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sakelar lapisan 2 terhubung secara redundan ke sakelar lapisan 3 multilapis menggunakan kabel serat optik Ethernet (koneksi oranye).</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sakelar multilapis lapisan 3 terhubung ke antarmuka Ethernet di router tepi menggunakan kabel Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Server situs web perusahaan terhubung menggunakan kabel Ethernet ke antarmuka router edge.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router tepi terhubung ke WAN SP.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router edge juga terhubung ke ISP untuk tujuan pencadangan.</li>
+</ul>
+</p>
+<p></p>
+<p>Di LAN Cabang dan Pusat, host terhubung baik secara langsung atau tidak langsung (melalui WAP) ke infrastruktur jaringan menggunakan switch Layer 2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

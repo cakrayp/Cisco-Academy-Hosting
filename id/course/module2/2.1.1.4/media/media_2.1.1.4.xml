@@ -1,0 +1,13 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Mempersiapkan Manajemen Jarak Jauh</b>]]></text>
+	</component>	
+	
+	<component id="ID_txt01">
+		<text><![CDATA[Kabel Konsol]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent="-14"><ul><li>Kabel konsol digunakan untuk menghubungkan PC ke port konsol switch untuk konfigurasi.</li><li>Untuk mengelola saklar dari jarak jauh, saklar harus dikonfigurasi terlebih dahulu melalui port konsol.</li></ul></textformat>]]></text>
+	</component>	
+</textcomponents>

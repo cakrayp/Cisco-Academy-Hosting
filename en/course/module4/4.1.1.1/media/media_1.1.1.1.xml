@@ -1,0 +1,31 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Network Characteristics</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Topology]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Speed]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Cost]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Security]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Availability]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Scalability]]></text> 
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Reliability]]></text> 
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[<b>Network Characteristics</b>]]></text> 
+	</component>
+
+</textcomponents>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.2.1.5 Deleting VLANs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Implementations</h1>
+        <h2>VLAN Assignment</h2>
+      </div>
+      <div id="content">
+          <p>In the figure, the<span class="cmd"><b> no vlan </b></span><span class="cmd"><i>vlan-id </i></span>global configuration mode command is used to remove VLAN 20 from the switch. Switch S1 had a minimal configuration with all ports in VLAN 1 and an unused VLAN 20 in the VLAN database. The<span class="cmd"><b> show vlan brief </b></span>command verifies that VLAN 20 is no longer present in the vlan.dat file after using the<span class="cmd"><b> no vlan 20 </b></span>command.</p>
+          <p></p>
+          <p>
+            <b>Caution</b>: Before deleting a VLAN, be sure to first reassign all member ports to a different VLAN. Any ports that are not moved to an active VLAN are unable to communicate with other hosts after the VLAN is deleted and until they are assigned to an active VLAN.</p>
+          <p></p>
+          <p>Alternatively, the entire vlan.dat file can be deleted using the<span class="cmd"><b> delete flash:vlan.dat </b></span>privileged EXEC mode command. The abbreviated command version (<span class="cmd"><b>delete vlan.dat</b></span>) can be used if the vlan.dat file has not been moved from its default location. After issuing this command and reloading the switch, the previously configured VLANs are no longer present. This effectively places the switch into its factory default condition concerning VLAN configurations.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: For a Catalyst switch, the<span class="cmd"><b> erase startup-config </b></span>command must accompany the<span class="cmd"><b> delete vlan.dat </b></span>command prior to reload to restore the switch to its factory default condition.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

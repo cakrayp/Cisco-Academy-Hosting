@@ -1,0 +1,65 @@
+<textcomponents>
+
+<!-- Slide 1 -->
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>Putuskan Router Mana yang Mengirim DBD Pertama</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Status ExStart]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[R2 memiliki ID router tertinggi, menjadi master, dan oleh karena itu ia bersiap untuk mengirim LSDB dalam paket DBD.]]></text>
+</component>
+
+
+
+<!-- Slide 2 -->
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Tukarkan Paket DBD</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Negara Pertukaran]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Berikut ini ringkasan LSDB saya.]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Terima kasih atas informasinya!]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Berikut ini ringkasan LSDB saya.]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Terima kasih atas informasinya!]]></text>
+</component>
+
+
+<!-- Slide 3 -->
+<component id='ID_s3_title'>
+	<text><![CDATA[<b>Mendapatkan Informasi Rute Tambahan</b>]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[Memuat Status]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[Saya memerlukan informasi lebih lanjut tentang jaringan 172.16.6.0.]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[Ini entri untuk 172.16.6.0/24.]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Terima kasih atas informasinya!]]></text>
+</component>
+
+</textcomponents>

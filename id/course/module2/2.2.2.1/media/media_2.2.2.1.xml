@@ -1,0 +1,150 @@
+<textcomponents>
+
+<!--envelope text-->
+<component id="ID_envelopeAB-1">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-2">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-3">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-4">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-5">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-6">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-7">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-8">
+   <text><![CDATA[<b>A ke B</b>]]></text>
+</component>
+<component id="ID_envelopeBA-1">
+   <text><![CDATA[<b>B ke A</b>]]></text>
+</component>
+<component id="ID_envelopeBA-2">
+   <text><![CDATA[<b>B ke A</b>]]></text>
+</component>
+<component id="ID_envelopeX">
+   <text><![CDATA[<b>X ke ?</b>]]></text>
+</component>
+<component id="ID_envelopeY">
+   <text><![CDATA[<b>kamu ke ?</b>]]></text>
+</component>
+
+
+<!--Slide 1-->
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Ganti Bingkai Banjir untuk MAC Tidak Diketahui</b>]]></text>
+</component>
+<component id="ID_s1_bubble01">
+   <text><![CDATA[Tabel alamat MAC tidak lengkap.]]></text>
+</component>
+<component id="ID_s1_bubble02">
+   <text><![CDATA[Host B tidak diketahui sehingga switch akan membanjiri frame.]]></text>
+</component>
+<component id="ID_s1_bubble03">
+   <text><![CDATA[Host C melihat lalu lintas ke Host B.]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Beralih Catatan Alamat MAC</b>]]></text>
+</component>
+<component id="ID_s2_bubble01">
+   <text><![CDATA[Tabel alamat MAC mengetahui bahwa Host B ada di Port 2.]]></text>
+</component>
+<component id="ID_s2_bubble02">
+   <text><![CDATA[Host C mengirimkan paket yang dialamatkan ke Host B.]]></text>
+</component>
+
+
+<!--Slide 3-->
+<component id="ID_s3_title">
+	<text><![CDATA[<b>Switch Menggunakan Tabel Alamat MAC untuk Meneruskan Lalu Lintas</b>]]></text>
+</component>
+<component id="ID_s3_bubble01">
+   <text><![CDATA[Tabel alamat MAC terbatas ukurannya.]]></text>
+</component>
+<component id="ID_s3_bubble02">
+   <text><![CDATA[Tabel alamat MAC telah mengetahui bahwa Host B ada di Port 2.]]></text>
+</component>
+<component id="ID_s3_bubble03">
+   <text><![CDATA[Host C tidak lagi melihat lalu lintas ke Host B.]]></text>
+</component>
+
+
+<!--Slide 4-->
+<component id="ID_s4_title">
+	<text><![CDATA[<b>Serangan Banjir Alamat MAC</b>]]></text>
+</component>
+<component id="ID_s4_bubble01">
+   <text><![CDATA[Alamat untuk host fiktif ditambahkan ke tabel alamat MAC.]]></text>
+</component>
+<component id="ID_s4_bubble02">
+   <text><![CDATA[Host Fiktif X dan Y ada di Port 3 dan tabel alamat MAC diperbarui.]]></text>
+</component>
+<component id="ID_s4_bubble03">
+   <text><![CDATA[Penyerang mulai mengirimkan alamat MAC palsu yang tidak diketahui.]]></text>
+</component>
+<component id="ID_s4_txt01">
+      <text><![CDATA[Penyusup menjalankan alat serangan pada Host C.]]></text>
+</component>
+
+<!--Slide 5-->
+<component id="ID_s5_title">
+	<text><![CDATA[<b>Serangan Banjir Alamat MAC</b>]]></text>
+</component>
+<component id="ID_s5_bubble01">
+   <text><![CDATA[Tabel alamat MAC sudah penuh.]]></text>
+</component>
+<component id="ID_s5_bubble02">
+   <text><![CDATA[Host B tidak diketahui, karena tabel alamat MAC penuh. Oleh karena itu, saklar membanjiri frame untuk mencari Host B.]]></text>
+</component>
+<component id="ID_s5_txt01">
+	<text><![CDATA[Penyusup menjalankan alat serangan pada Host C.]]></text>
+</component>
+
+
+
+
+<component id="ID_txt01">
+   <text><![CDATA[<b>MAC</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<b>Pelabuhan</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+   <text><![CDATA[Tuan rumah A]]></text>
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[Tuan rumah B]]></text>
+</component>
+
+<component id="ID_txt05">
+   <text><![CDATA[Tuan rumah C]]></text>
+</component>
+
+<component id="ID_txt06">
+   <text><![CDATA[Pelabuhan 1]]></text>
+</component>
+
+<component id="ID_txt07">
+   <text><![CDATA[Pelabuhan 2]]></text>
+</component>
+
+<component id="ID_txt08">
+   <text><![CDATA[Pelabuhan 3]]></text>
+</component>
+
+</textcomponents>

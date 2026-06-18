@@ -1,0 +1,69 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Routing Protocols and Their Metrics</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Hop Count versus Bandwidth</b>]]></text> 
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[RIP chooses best path based on hop count.<br/>OSPF chooses best path based on bandwidth.]]></text> 
+</component>
+  <!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>
+<!--Table-->
+   <component id="ID_table">
+  <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+	<tr>
+		<td colspan='3' bgcolor='#0E6360' class="liner_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'  valign="top" width="100"><font color='#ffffff' size="11"><b>Routing Protocol</b></font></td>
+		<td bgcolor='#077A77'  valign="top" width="100" ><font color='#ffffff' size="11"><b>Default Metric</b></font></td>
+		<td bgcolor='#077A77'  valign="top"><font color='#ffffff' size="11"><b>Description</b></font></td>
+	</tr>
+	<tr>
+	<td bgcolor='#FFFFFF'><font color='#393536'><b>RIP</b></font></td>
+	<td bgcolor='#FFFFFF'><font color='#393536'><b>Hop count</b></font></td>
+	<td bgcolor='#FFFFFF'><font color='#393536'><textformat blockindent='-18'>A simple metric that counts the number of routers a packet must traverse.</textformat></font></td>
+	</tr>
+	<tr>
+	<td bgcolor='#EFF8F7'><font color='#393536'><b>EIGRP</b></font></td>
+	<td bgcolor='#EFF8F7'><font color='#393536'><b>Bandwidth and delay</b></font></td>
+	<td bgcolor='#EFF8F7'><font color='#393536'><textformat blockindent='-18'>
+					<li>Bandwidth is one factor in determining path selection.</li>
+					<li>Delay considers the time a packet takes to traverse a path.</li>
+					<li>Optionally, load (traffic utilization of a certain link) and reliability (probability of a link failure) can also be included in the metric calculation.</li>			
+				</textformat></font></td>
+	</tr>
+	<tr>
+	<td bgcolor='#FFFFFF'><font color='#393536'><b>OSPF</b></font></td>
+	<td bgcolor='#FFFFFF'><font color='#393536'><b>Cost</b></font></td>
+	<td bgcolor='#FFFFFF'>
+				<font color='#393536'>
+					A value based on the cumulative link bandwidths.</font></td>
+	</tr>
+</table>]]></text>
+  </component>
+</textcomponents>

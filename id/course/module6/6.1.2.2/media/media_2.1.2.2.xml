@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Menghubungkan ke Jaringan Stub</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Jaringan Rintisan]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Jaringan]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Router Rintisan]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[Tidak perlu menggunakan protokol routing dinamis dengan R1 untuk mencapai 172.16.3.0/24.<br/><br/>Saya cukup menggunakan rute statis untuk mencapai jaringan rintisan.]]></text> 
+  </component>
+
+</textcomponents>

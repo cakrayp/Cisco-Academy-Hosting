@@ -1,0 +1,11 @@
+<textcomponents>
+
+<component id="ID_title_txt">
+<text><![CDATA[<b>Disadvantages of NAT</b>]]></text>
+</component>
+
+<component id="ID_body_txt">
+<text><![CDATA[<li>Performance is degraded.</li><li>End-to-end functionality is degraded.</li><li>End-to-end IP traceability is lost.</li><li>Tunneling becomes more complicated.</li><li>Initiating TCP connections can be disrupted.</li>]]></text>
+</component>
+
+</textcomponents>

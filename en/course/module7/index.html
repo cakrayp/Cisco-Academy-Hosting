@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="module-index" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8"/>
+    <title>Routing and Switching</title>
+    <link rel="stylesheet" type="text/css" href="../common-ext/styles/index.css"/>
+    <script type="text/javascript" src="../common-ext/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../common-ext/scripts/index.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo" title="Cisco Systems, Inc. - Cisco Networking Academy"></div>
+      <a id="home-btn" href="../../index.html" title="Home">Home</a>
+      <h1>Chapter 7: Routing Dynamically <span id="title"></span></h1>
+    </div>
+    <div id="nav">
+      <ul class="sections"><li><span class="icon"></span><span class="section-title">7.0 Routing Dynamically</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.0.1 Introduction</span><ul class="pages"><li><a data-ident="7.0.1.1" class="page-title" href="7.0.1.1/7.0.1.1.html" target="frame">7.0.1.1 Introduction</a></li>
+<li><a data-ident="7.0.1.2" class="page-title" href="7.0.1.2/7.0.1.2.html" target="frame">7.0.1.2 How Much Does This Cost</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.1 Dynamic Routing Protocols</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.1.1 Dynamic Routing Protocol Operation</span><ul class="pages"><li><a data-ident="7.1.1.1" class="page-title" href="7.1.1.1/7.1.1.1.html" target="frame">7.1.1.1 The Evolution of Dynamic Routing Protocols</a></li>
+<li><a data-ident="7.1.1.2" class="page-title" href="7.1.1.2/7.1.1.2.html" target="frame">7.1.1.2 Purpose of Dynamic Routing Protocols</a></li>
+<li><a data-ident="7.1.1.3" class="page-title" href="7.1.1.3/7.1.1.3.html" target="frame">7.1.1.3 The Role of Dynamic Routing Protocols</a></li>
+<li><a data-ident="7.1.1.4" class="page-title" href="7.1.1.4/7.1.1.4.html" target="frame">7.1.1.4 Activity - Identify Components of a Routing Protocol</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.1.2 Dynamic versus Static Routing</span><ul class="pages"><li><a data-ident="7.1.2.1" class="page-title" href="7.1.2.1/7.1.2.1.html" target="frame">7.1.2.1 Using Static Routing </a></li>
+<li><a data-ident="7.1.2.2" class="page-title" href="7.1.2.2/7.1.2.2.html" target="frame">7.1.2.2 Static Routing Scorecard</a></li>
+<li><a data-ident="7.1.2.3" class="page-title" href="7.1.2.3/7.1.2.3.html" target="frame">7.1.2.3 Using Dynamic Routing Protocols</a></li>
+<li><a data-ident="7.1.2.4" class="page-title" href="7.1.2.4/7.1.2.4.html" target="frame">7.1.2.4 Dynamic Routing Scorecard</a></li>
+<li><a data-ident="7.1.2.5" class="page-title" href="7.1.2.5/7.1.2.5.html" target="frame">7.1.2.5 Activity - Compare Static and Dynamic Routing</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.1.3 Routing Protocol Operating Fundamentals</span><ul class="pages"><li><a data-ident="7.1.3.1" class="page-title" href="7.1.3.1/7.1.3.1.html" target="frame">7.1.3.1 Dynamic Routing Protocol Operation</a></li>
+<li><a data-ident="7.1.3.2" class="page-title" href="7.1.3.2/7.1.3.2.html" target="frame">7.1.3.2 Cold Start</a></li>
+<li><a data-ident="7.1.3.3" class="page-title" href="7.1.3.3/7.1.3.3.html" target="frame">7.1.3.3 Network Discovery</a></li>
+<li><a data-ident="7.1.3.4" class="page-title" href="7.1.3.4/7.1.3.4.html" target="frame">7.1.3.4 Exchanging the Routing Information</a></li>
+<li><a data-ident="7.1.3.5" class="page-title" href="7.1.3.5/7.1.3.5.html" target="frame">7.1.3.5 Achieving Convergence</a></li>
+<li><a data-ident="7.1.3.6" class="page-title" href="7.1.3.6/7.1.3.6.html" target="frame">7.1.3.6 Packet Tracer - Investigating Convergence</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.1.4 Types of Routing Protocols</span><ul class="pages"><li><a data-ident="7.1.4.1" class="page-title" href="7.1.4.1/7.1.4.1.html" target="frame">7.1.4.1 Classifying Routing Protocols</a></li>
+<li><a data-ident="7.1.4.2" class="page-title" href="7.1.4.2/7.1.4.2.html" target="frame">7.1.4.2 IGP and EGP Routing Protocols</a></li>
+<li><a data-ident="7.1.4.3" class="page-title" href="7.1.4.3/7.1.4.3.html" target="frame">7.1.4.3 Distance Vector Routing Protocols</a></li>
+<li><a data-ident="7.1.4.4" class="page-title" href="7.1.4.4/7.1.4.4.html" target="frame">7.1.4.4 Link-State Routing Protocols</a></li>
+<li><a data-ident="7.1.4.5" class="page-title" href="7.1.4.5/7.1.4.5.html" target="frame">7.1.4.5 Classful Routing Protocols</a></li>
+<li><a data-ident="7.1.4.6" class="page-title" href="7.1.4.6/7.1.4.6.html" target="frame">7.1.4.6 Classless Routing Protocols</a></li>
+<li><a data-ident="7.1.4.7" class="page-title" href="7.1.4.7/7.1.4.7.html" target="frame">7.1.4.7 Routing Protocol Characteristics</a></li>
+<li><a data-ident="7.1.4.8" class="page-title" href="7.1.4.8/7.1.4.8.html" target="frame">7.1.4.8 Routing Protocol Metrics</a></li>
+<li><a data-ident="7.1.4.9" class="page-title" href="7.1.4.9/7.1.4.9.html" target="frame">7.1.4.9 Activity - Classify Dynamic Routing Protocols</a></li>
+<li><a data-ident="7.1.4.10" class="page-title" href="7.1.4.10/7.1.4.10.html" target="frame">7.1.4.10 Activity - Compare Routing Protocols</a></li>
+<li><a data-ident="7.1.4.11" class="page-title" href="7.1.4.11/7.1.4.11.html" target="frame">7.1.4.11 Activity - Match the Metric to the Protocol</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.2 Distance Vector Dynamic Routing</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.2.1 Distance Vector Routing Protocol Operation</span><ul class="pages"><li><a data-ident="7.2.1.1" class="page-title" href="7.2.1.1/7.2.1.1.html" target="frame">7.2.1.1 Distance Vector Technologies</a></li>
+<li><a data-ident="7.2.1.2" class="page-title" href="7.2.1.2/7.2.1.2.html" target="frame">7.2.1.2 Distance Vector Algorithm</a></li>
+<li><a data-ident="7.2.1.3" class="page-title" href="7.2.1.3/7.2.1.3.html" target="frame">7.2.1.3 Activity - Identify Distance Vector Terminology </a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.2.2 Types of Distance Vector Routing Protocols</span><ul class="pages"><li><a data-ident="7.2.2.1" class="page-title" href="7.2.2.1/7.2.2.1.html" target="frame">7.2.2.1 Routing Information Protocol</a></li>
+<li><a data-ident="7.2.2.2" class="page-title" href="7.2.2.2/7.2.2.2.html" target="frame">7.2.2.2 Enhanced Interior-Gateway Routing Protocol</a></li>
+<li><a data-ident="7.2.2.3" class="page-title" href="7.2.2.3/7.2.2.3.html" target="frame">7.2.2.3 Activity - Compare RIP and EIGRP </a></li>
+<li><a data-ident="7.2.2.4" class="page-title" href="7.2.2.4/7.2.2.4.html" target="frame">7.2.2.4 Packet Tracer - Comparing RIP and EIGRP Path Selection</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.3 RIP and RIPng Routing</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.3.1 Configuring the RIP Protocol</span><ul class="pages"><li><a data-ident="7.3.1.1" class="page-title" href="7.3.1.1/7.3.1.1.html" target="frame">7.3.1.1 Router RIP Configuration Mode</a></li>
+<li><a data-ident="7.3.1.2" class="page-title" href="7.3.1.2/7.3.1.2.html" target="frame">7.3.1.2 Advertising Networks</a></li>
+<li><a data-ident="7.3.1.3" class="page-title" href="7.3.1.3/7.3.1.3.html" target="frame">7.3.1.3 Examining Default RIP Settings</a></li>
+<li><a data-ident="7.3.1.4" class="page-title" href="7.3.1.4/7.3.1.4.html" target="frame">7.3.1.4 Enabling RIPv2</a></li>
+<li><a data-ident="7.3.1.5" class="page-title" href="7.3.1.5/7.3.1.5.html" target="frame">7.3.1.5 Disabling Auto Summarization</a></li>
+<li><a data-ident="7.3.1.6" class="page-title" href="7.3.1.6/7.3.1.6.html" target="frame">7.3.1.6 Configuring Passive Interfaces</a></li>
+<li><a data-ident="7.3.1.7" class="page-title" href="7.3.1.7/7.3.1.7.html" target="frame">7.3.1.7 Propagating a Default Route</a></li>
+<li><a data-ident="7.3.1.8" class="page-title" href="7.3.1.8/7.3.1.8.html" target="frame">7.3.1.8 Packet Tracer - Configuring RIPv2</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.3.2 Configuring the RIPng Protocol</span><ul class="pages"><li><a data-ident="7.3.2.1" class="page-title" href="7.3.2.1/7.3.2.1.html" target="frame">7.3.2.1 Advertising IPv6 Networks</a></li>
+<li><a data-ident="7.3.2.2" class="page-title" href="7.3.2.2/7.3.2.2.html" target="frame">7.3.2.2 Examining the RIPng Configuration</a></li>
+<li><a data-ident="7.3.2.3" class="page-title" href="7.3.2.3/7.3.2.3.html" target="frame">7.3.2.3 Packet Tracer - Configuring RIPng</a></li>
+<li><a data-ident="7.3.2.4" class="page-title" href="7.3.2.4/7.3.2.4.html" target="frame">7.3.2.4 Lab - Configuring RIPv2 </a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.4 Link-State Dynamic Routing</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.4.1 Link-State Routing Protocol Operation</span><ul class="pages"><li><a data-ident="7.4.1.1" class="page-title" href="7.4.1.1/7.4.1.1.html" target="frame">7.4.1.1 Shortest Path First Protocols</a></li>
+<li><a data-ident="7.4.1.2" class="page-title" href="7.4.1.2/7.4.1.2.html" target="frame">7.4.1.2 Dijkstra&#x0027;s Algorithm</a></li>
+<li><a data-ident="7.4.1.3" class="page-title" href="7.4.1.3/7.4.1.3.html" target="frame">7.4.1.3 SPF Example</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.4.2 Link-State Updates</span><ul class="pages"><li><a data-ident="7.4.2.1" class="page-title" href="7.4.2.1/7.4.2.1.html" target="frame">7.4.2.1 Link-State Routing Process</a></li>
+<li><a data-ident="7.4.2.2" class="page-title" href="7.4.2.2/7.4.2.2.html" target="frame">7.4.2.2 Link and Link-State</a></li>
+<li><a data-ident="7.4.2.3" class="page-title" href="7.4.2.3/7.4.2.3.html" target="frame">7.4.2.3 Say Hello</a></li>
+<li><a data-ident="7.4.2.4" class="page-title" href="7.4.2.4/7.4.2.4.html" target="frame">7.4.2.4 Building the Link-State Packet</a></li>
+<li><a data-ident="7.4.2.5" class="page-title" href="7.4.2.5/7.4.2.5.html" target="frame">7.4.2.5 Flooding the LSP</a></li>
+<li><a data-ident="7.4.2.6" class="page-title" href="7.4.2.6/7.4.2.6.html" target="frame">7.4.2.6 Building the Link-State Database</a></li>
+<li><a data-ident="7.4.2.7" class="page-title" href="7.4.2.7/7.4.2.7.html" target="frame">7.4.2.7 Building the SPF Tree</a></li>
+<li><a data-ident="7.4.2.8" class="page-title" href="7.4.2.8/7.4.2.8.html" target="frame">7.4.2.8 Adding OSPF Routes to the Routing Table</a></li>
+<li><a data-ident="7.4.2.9" class="page-title" href="7.4.2.9/7.4.2.9.html" target="frame">7.4.2.9 Activity - Building the Link-State Database and SPF Tree</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.4.3 Why Use Link-State Routing Protocols</span><ul class="pages"><li><a data-ident="7.4.3.1" class="page-title" href="7.4.3.1/7.4.3.1.html" target="frame">7.4.3.1 Why Use Link-State Protocols?</a></li>
+<li><a data-ident="7.4.3.2" class="page-title" href="7.4.3.2/7.4.3.2.html" target="frame">7.4.3.2 Disadvantages of Link-State Protocols</a></li>
+<li><a data-ident="7.4.3.3" class="page-title" href="7.4.3.3/7.4.3.3.html" target="frame">7.4.3.3 Protocols that Use Link-State</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.5 The Routing Table</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.5.1 Parts of an IPv4 Route Entry</span><ul class="pages"><li><a data-ident="7.5.1.1" class="page-title" href="7.5.1.1/7.5.1.1.html" target="frame">7.5.1.1 Routing Table Entries</a></li>
+<li><a data-ident="7.5.1.2" class="page-title" href="7.5.1.2/7.5.1.2.html" target="frame">7.5.1.2 Directly Connected Entries</a></li>
+<li><a data-ident="7.5.1.3" class="page-title" href="7.5.1.3/7.5.1.3.html" target="frame">7.5.1.3 Remote Network Entries</a></li>
+<li><a data-ident="7.5.1.4" class="page-title" href="7.5.1.4/7.5.1.4.html" target="frame">7.5.1.4 Activity - Identify Parts of an IPv4 Routing Table Entry</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.5.2 Dynamically Learned IPv4 Routes</span><ul class="pages"><li><a data-ident="7.5.2.1" class="page-title" href="7.5.2.1/7.5.2.1.html" target="frame">7.5.2.1 Routing Table Terms</a></li>
+<li><a data-ident="7.5.2.2" class="page-title" href="7.5.2.2/7.5.2.2.html" target="frame">7.5.2.2 Ultimate Route</a></li>
+<li><a data-ident="7.5.2.3" class="page-title" href="7.5.2.3/7.5.2.3.html" target="frame">7.5.2.3 Level 1 Route</a></li>
+<li><a data-ident="7.5.2.4" class="page-title" href="7.5.2.4/7.5.2.4.html" target="frame">7.5.2.4 Level 1 Parent Route</a></li>
+<li><a data-ident="7.5.2.5" class="page-title" href="7.5.2.5/7.5.2.5.html" target="frame">7.5.2.5 Level 2 Child Route</a></li>
+<li><a data-ident="7.5.2.6" class="page-title" href="7.5.2.6/7.5.2.6.html" target="frame">7.5.2.6 Activity - Identify Parent and Child IPv4 Routes</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.5.3 The IPv4 Route Lookup Process</span><ul class="pages"><li><a data-ident="7.5.3.1" class="page-title" href="7.5.3.1/7.5.3.1.html" target="frame">7.5.3.1 Route Lookup Process</a></li>
+<li><a data-ident="7.5.3.2" class="page-title" href="7.5.3.2/7.5.3.2.html" target="frame">7.5.3.2 Best Route = Longest Match</a></li>
+<li><a data-ident="7.5.3.3" class="page-title" href="7.5.3.3/7.5.3.3.html" target="frame">7.5.3.3 Activity - Determine the Longest Match Route</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">7.5.4 Analyze an IPv6 Routing Table</span><ul class="pages"><li><a data-ident="7.5.4.1" class="page-title" href="7.5.4.1/7.5.4.1.html" target="frame">7.5.4.1 IPv6 Routing Table Entries</a></li>
+<li><a data-ident="7.5.4.2" class="page-title" href="7.5.4.2/7.5.4.2.html" target="frame">7.5.4.2 Directly Connected Entries</a></li>
+<li><a data-ident="7.5.4.3" class="page-title" href="7.5.4.3/7.5.4.3.html" target="frame">7.5.4.3 Remote IPv6 Network Entries</a></li>
+<li><a data-ident="7.5.4.4" class="page-title" href="7.5.4.4/7.5.4.4.html" target="frame">7.5.4.4 Activity - Identify Parts of an IPv6 Routing Table Entry</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">7.6 Summary</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">7.6.1 Summary</span><ul class="pages"><li><a data-ident="7.6.1.1" class="page-title" href="7.6.1.1/7.6.1.1.html" target="frame">7.6.1.1 IPv6 - Details, Details…</a></li>
+<li><a data-ident="7.6.1.2" class="page-title" href="7.6.1.2/7.6.1.2.html" target="frame">7.6.1.2 Summary</a></li>
+</ul></li>
+</ul></li>
+</ul>
+    </div>
+    <ul id="nav-menu" class="contextmenu">
+      <li id="nav-menu-expand">Expand All</li>
+      <li id="nav-menu-collapse">Collapse All</li>
+    </ul>
+    <div id="content">
+      <div id="container"></div>
+      <button id="prev-btn" type="button" title="Previous" disabled><span class="icon">Previous</span></button>
+      <input id="jump-box" type="text" value=""/>
+      <button id="next-btn" type="button" title="Next" disabled><span class="icon">Next</span></button>
+      <button id="mini-btn" type="button" title="Toggle"><span class="icon">Toggle</span></button>
+    </div>
+  </body>
+</html>
+

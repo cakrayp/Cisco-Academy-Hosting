@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.1.3 Saklar Indikator LED</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Switch dengan Pengaturan Awal</h2>
+</div>
+<div id="content">
+<p>Sakelar Cisco Catalyst memiliki beberapa lampu indikator LED status.  Anda dapat menggunakan LED sakelar untuk memantau aktivitas sakelar dan kinerjanya dengan cepat. Sakelar dengan model dan rangkaian fitur berbeda akan memiliki LED berbeda dan penempatannya di panel depan sakelar juga mungkin berbeda.</p>
+<p></p>
+<p>Gambar tersebut menunjukkan LED sakelar dan tombol Mode untuk sakelar Cisco Catalyst 2960. Tombol Mode digunakan untuk beralih status port, dupleks port, kecepatan port, dan status PoE (jika didukung) pada LED port. Berikut penjelasan tentang kegunaan indikator LED dan arti warnanya:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>LED Sistem</b>- Menunjukkan apakah sistem menerima daya dan berfungsi dengan baik. Jika LED mati berarti sistem tidak dihidupkan. Jika LED berwarna hijau, sistem beroperasi secara normal. Jika LED berwarna kuning, berarti sistem menerima daya tetapi tidak berfungsi dengan baik.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>LED Sistem Tenaga Redundan (RPS).</b>- Menampilkan status RPS. Jika LED mati berarti RPS mati atau tidak tersambung dengan benar. Jika LED berwarna hijau, RPS terhubung dan siap memberikan daya cadangan. Jika LED berkedip hijau, RPS tersambung namun tidak tersedia karena menyediakan daya ke perangkat lain. Jika LED berwarna kuning, RPS dalam mode siaga atau dalam kondisi rusak. Jika LED berkedip kuning, catu daya internal pada sakelar gagal, dan RPS menyediakan daya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>LED Status Pelabuhan</b>- Menunjukkan bahwa mode status port dipilih ketika LED berwarna hijau. Ini adalah modus bawaan. Saat dipilih, LED port akan menampilkan warna dengan arti berbeda. Jika LED mati, tidak ada tautan, atau port dimatikan secara administratif. Jika LED berwarna hijau, berarti ada tautan. Jika LED berkedip hijau berarti ada aktivitas dan port sedang mengirim atau menerima data. Jika LED bergantian hijau-kuning, berarti ada kesalahan tautan. Jika LED berwarna kuning, port diblokir untuk memastikan tidak ada loop di domain penerusan dan tidak meneruskan data (biasanya, port akan tetap dalam kondisi ini selama 30 detik pertama setelah diaktifkan). Jika LED berkedip kuning, port diblokir untuk mencegah kemungkinan loop di domain penerusan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>LED Dupleks Port</b>- Menunjukkan mode dupleks port dipilih saat LED berwarna hijau. Jika dipilih, LED port yang mati berada dalam mode setengah dupleks. Jika LED port berwarna hijau, port berada dalam mode dupleks penuh.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>LED Kecepatan Pelabuhan</b>- Menunjukkan mode kecepatan port yang dipilih. Saat dipilih, LED port akan menampilkan warna dengan arti berbeda. Jika LED mati, port beroperasi pada 10 Mb/s. Jika LED berwarna hijau, port beroperasi pada 100 Mb/s. Jika LED berkedip hijau, port beroperasi pada 1000 Mb/s.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>LED Mode Daya melalui Ethernet (PoE).</b>- Jika PoE didukung; LED mode PoE akan muncul. Jika LED mati, ini menunjukkan mode PoE tidak dipilih dan tidak ada port yang ditolak dayanya atau berada dalam kondisi rusak. Jika LED berkedip kuning, mode PoE tidak dipilih tetapi setidaknya salah satu port tidak diberi daya, atau ada kesalahan PoE. Jika LED berwarna hijau, ini menunjukkan mode PoE dipilih dan LED port akan menampilkan warna dengan arti berbeda. Jika LED port mati, PoE mati. Jika LED port berwarna hijau, PoE menyala. Jika LED port menyala hijau-kuning secara bergantian, PoE ditolak karena penyediaan daya ke perangkat yang diberi daya akan melebihi kapasitas daya sakelar. Jika LED berkedip kuning, PoE mati karena ada masalah. Jika LED berwarna kuning, PoE untuk port tersebut telah dinonaktifkan.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

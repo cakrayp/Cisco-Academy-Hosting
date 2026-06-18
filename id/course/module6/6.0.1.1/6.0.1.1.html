@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.0.1.1 Pendahuluan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.0.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Statis</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>Perutean adalah inti dari setiap jaringan data, memindahkan informasi melintasi internetwork dari sumber ke tujuan. Router adalah perangkat yang bertanggung jawab untuk mentransfer paket dari satu jaringan ke jaringan berikutnya.</p>
+<p></p>
+<p>Router belajar tentang jaringan jarak jauh baik secara dinamis, menggunakan protokol perutean, atau secara manual, atau menggunakan rute statis. Dalam banyak kasus, router menggunakan kombinasi protokol routing dinamis dan rute statis. Bab ini berfokus pada perutean statis.</p>
+<p></p>
+<p>Rute statis sangat umum dan tidak memerlukan jumlah pemrosesan dan overhead yang sama seperti protokol perutean dinamis.</p>
+<p></p>
+<p>Dalam bab ini, contoh topologi akan digunakan untuk mengkonfigurasi rute statis IPv4 dan IPv6 dan untuk menyajikan teknik pemecahan masalah. Dalam prosesnya, beberapa perintah penting IOS dan output yang dihasilkan akan diperiksa. Pengenalan tabel routing menggunakan jaringan yang terhubung langsung dan rute statis akan disertakan.</p>
+<p></p>
+<p>Bab ini juga akan membedakan perutean kelas dan metode perutean tanpa kelas yang diterapkan secara luas. Ini akan mencakup metode Perutean Antar-Domain Tanpa Kelas (CIDR) dan metode subnet mask panjang variabel (VLSM). CIDR dan VLSM telah membantu menghemat ruang alamat IPv4 menggunakan teknik subnetting dan summarization.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

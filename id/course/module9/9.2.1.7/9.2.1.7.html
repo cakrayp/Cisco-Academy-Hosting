@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.1.7 Membuat ACL Standar Bernama</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.7_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Konfigurasikan ACL IPv4 Standar</h2>
+</div>
+<div id="content">
+<p>Memberi nama pada ACL memudahkan untuk memahami fungsinya. Misalnya, ACL yang dikonfigurasi untuk menolak FTP dapat disebut NO_FTP. Saat Anda mengidentifikasi ACL Anda dengan nama dan bukan dengan nomor, mode konfigurasi dan sintaks perintahnya sedikit berbeda.</p>
+<p></p>
+<p>Gambar 1 menunjukkan langkah-langkah yang diperlukan untuk membuat standar bernama ACL.</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Mulai dari mode konfigurasi global, gunakan<span class="cmd"><b>daftar akses ip</b></span>perintah untuk membuat ACL bernama. Nama ACL bersifat alfanumerik, peka huruf besar-kecil, dan harus unik. Itu<span class="cmd"><b>standar daftar akses ip</b></span><span class="cmd"><i>nama</i></span>digunakan untuk membuat standar bernama ACL, sedangkan perintahnya<span class="cmd"><b>daftar akses ip diperluas</b></span><span class="cmd"><i>nama</i></span>adalah untuk daftar akses yang diperluas. Setelah memasukkan perintah, router berada dalam mode konfigurasi ACL standar seperti yang ditunjukkan oleh prompt.</p>
+<p></p>
+<p>
+<b>Catatan</b>: ACL bernomor menggunakan perintah konfigurasi global<span class="cmd"><b>daftar akses</b></span>sedangkan ACL bernama IPv4 menggunakan<span class="cmd"><b>daftar akses ip</b></span>memerintah.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Dari mode konfigurasi ACL bernama, gunakan<span class="cmd"><b>izin</b></span> or <span class="cmd"><b>membantah</b></span>pernyataan untuk menentukan satu atau lebih kondisi untuk menentukan apakah suatu paket diteruskan atau dijatuhkan.</p>
+<p></p>
+<p>
+<b>Langkah 3.</b>Terapkan ACL ke antarmuka menggunakan<span class="cmd"><b>grup akses ip</b></span>memerintah. Tentukan apakah ACL harus diterapkan pada paket saat mereka masuk ke antarmuka (<span class="cmd"><b>in</b></span>) atau diterapkan pada paket saat mereka keluar dari antarmuka (<span class="cmd"><b>keluar</b></span>).</p>
+<p></p>
+<p>Gambar 2 menunjukkan perintah yang digunakan untuk mengkonfigurasi standar bernama ACL pada router R1, antarmuka G0/0 yang menolak akses host 192.168.11.10 ke jaringan 192.168.10.0. ACL diberi nama NO_ACCESS.</p>
+<p></p>
+<p>Penggunaan huruf besar pada nama ACL tidak diperlukan, tetapi membuatnya menonjol saat melihat keluaran konfigurasi yang sedang berjalan. Hal ini juga memperkecil kemungkinan Anda secara tidak sengaja membuat dua ACL berbeda dengan nama yang sama namun dengan penggunaan huruf besar yang berbeda.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

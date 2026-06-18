@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.1.3 Router IDs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Router ID</h2>
+      </div>
+      <div id="content">
+          <p>Every router requires a router ID to participate in an OSPF domain. The router ID can be defined by an administrator or automatically assigned by the router. The router ID is used by the OSPF-enabled router to: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uniquely identify the router </b>- The router ID is used by other routers to uniquely identify each router within the OSPF domain and all packets that originate from them. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Participate in the election of the DR </b>- In a multiaccess LAN environment, the election of the DR occurs during initial establishment of the OSPF network. When OSPF links become active, the routing device configured with the highest priority is elected the DR. Assuming there is no priority configured, or there is a tie, then the router with the highest router ID is elected the DR. The routing device with the second highest router ID is elected the BDR. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>But how does the router determine the router ID? As illustrated in the figure, Cisco routers derive the router ID based on one of three criteria, in the following preferential order:</p>
+          <p>
+            <ul>
+              <li>The router ID is explicitly configured using the OSPF<span class="cmd"><b> router-id </b></span><span class="cmd"><i>rid </i></span>router configuration mode command. The<span class="cmd"><i> rid </i></span>value is any 32-bit value expressed as an IPv4 address. This is the recommended method to assign a router ID.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>If the router ID is not explicitly configured, the router chooses the highest IPv4 address of any of configured loopback interfaces. This is the next best alternative to assigning a router ID.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>If no loopback interfaces are configured, then the router chooses the highest active IPv4 address of any of its physical interfaces. This is the least recommended method because it makes it more difficult for administrators to distinguish between specific routers.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>If the router uses the highest IPv4 address for the router ID, the interface does not need to be OSPF-enabled. This means that the interface address does not need to be included in one of the OSPF<span class="cmd"><b> network</b></span> commands for the router to use that IP address as the router ID. The only requirement is that the interface is active and in the up state.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The router ID looks like an IP address, but it is not routable and, therefore, is not included in the routing table, unless the OSPF routing process chooses an interface (physical or loopback) that is appropriately defined by a<span class="cmd"><b> network </b></span>command.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

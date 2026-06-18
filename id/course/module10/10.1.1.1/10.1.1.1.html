@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.1.1 Memperkenalkan DHCPv4</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Operasi DHCPv4</h2>
+</div>
+<div id="content">
+<p>DHCPv4 memberikan alamat IPv4 dan informasi konfigurasi jaringan lainnya secara dinamis. Karena klien desktop biasanya membentuk sebagian besar node jaringan, DHCPv4 adalah alat yang sangat berguna dan menghemat waktu bagi administrator jaringan.</p>
+<p></p>
+<p>Server DHCPv4 khusus dapat diskalakan dan relatif mudah dikelola. Namun, di cabang kecil atau lokasi SOHO, router Cisco dapat dikonfigurasi untuk menyediakan layanan DHCPv4 tanpa memerlukan server khusus. Kumpulan fitur Cisco IOS (disebut "IP Mudah)" menawarkan server DHCPv4 berfitur lengkap opsional.</p>
+<p></p>
+<p>DHCPv4 mencakup tiga mekanisme alokasi alamat yang berbeda untuk memberikan fleksibilitas saat menetapkan alamat IP:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Alokasi Manual</b>- Administrator memberikan alamat IPv4 yang telah dialokasikan sebelumnya kepada klien, dan DHCPv4 hanya mengkomunikasikan alamat IPv4 ke perangkat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alokasi Otomatis</b>- DHCPv4 secara otomatis memberikan alamat IPv4 statis secara permanen ke perangkat, memilihnya dari kumpulan alamat yang tersedia. Tidak ada sewa dan alamat ditetapkan secara permanen ke perangkat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alokasi Dinamis</b>- DHCPv4 secara dinamis menetapkan, atau menyewakan, alamat IPv4 dari kumpulan alamat untuk jangka waktu terbatas yang dipilih oleh server, atau hingga klien tidak lagi memerlukan alamat tersebut.</li>
+</ul>
+</p>
+<p></p>
+<p>Alokasi dinamis adalah mekanisme DHCPv4 yang paling umum digunakan dan merupakan fokus dari bagian ini. Saat menggunakan alokasi dinamis, klien menyewa informasi dari server untuk jangka waktu yang ditentukan secara administratif, seperti yang ditunjukkan pada gambar. Administrator mengkonfigurasi server DHCPv4 untuk mengatur waktu sewa pada interval yang berbeda. Sewa biasanya berkisar antara 24 jam hingga seminggu atau lebih. Ketika masa sewa berakhir, klien harus meminta alamat lain, meskipun klien biasanya diberi alamat yang sama.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.3.1.4 Ringkasan</title>
+<!-- -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+    	myLayout = $('body').layout({
+          west__size:300,
+          stateManagement__enabled: true,
+          maskContents: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>Saat switch Cisco LAN pertama kali dinyalakan, switch tersebut akan melalui urutan boot berikut:</p>
+<p></p>
+<p>
+<b>1. </b>Pertama, saklar memuat program power-on self-test (POST) yang disimpan dalam ROM.  POST memeriksa subsistem CPU. Ini menguji CPU, DRAM, dan bagian perangkat flash yang membentuk sistem file flash.</p>
+<p>
+<b>2. </b>Selanjutnya, saklar memuat perangkat lunak boot loader. Boot loader adalah program kecil yang disimpan dalam ROM dan dijalankan segera setelah POST berhasil diselesaikan.</p>
+<p>
+<b>3. </b>Boot loader melakukan inisialisasi CPU tingkat rendah. Ini menginisialisasi register CPU, yang mengontrol di mana memori fisik dipetakan, jumlah memori, dan kecepatannya.</p>
+<p>
+<b>4. </b>Boot loader menginisialisasi sistem file flash pada board sistem.</p>
+<p>
+<b>5. </b>Terakhir, boot loader menemukan dan memuat image perangkat lunak sistem operasi IOS default ke dalam memori dan menyerahkan kendali peralihan ke IOS.</p>
+<p>
+<ul>
+<li></li>
+</ul>
+</p>
+<p>File Cisco IOS spesifik yang dimuat ditentukan oleh variabel lingkungan BOOT. Setelah Cisco IOS dimuat, ia menggunakan perintah yang ditemukan di file konfigurasi startup untuk menginisialisasi dan mengkonfigurasi antarmuka. Jika file Cisco IOS hilang atau rusak, program boot loader dapat digunakan untuk memuat ulang atau memulihkan masalah.</p>
+<p></p>
+<p>Status operasional sakelar ditampilkan melalui serangkaian LED di panel depan. LED ini menampilkan hal-hal seperti status port, dupleks, dan kecepatan.</p>
+<p></p>
+<p>Alamat IP dikonfigurasi pada SVI VLAN manajemen untuk memungkinkan konfigurasi perangkat jarak jauh. Gateway default milik VLAN manajemen harus dikonfigurasi pada switch menggunakan<span class="cmd"><b>ip gateway default</b></span>memerintah. Jika gateway default tidak dikonfigurasi dengan benar, manajemen jarak jauh tidak dapat dilakukan. Direkomendasikan agar Secure Shell (SSH) digunakan asalkan ada koneksi manajemen yang aman (terenkripsi) ke perangkat jarak jauh untuk mencegah pengendusan nama pengguna dan kata sandi yang tidak terenkripsi yang mungkin terjadi saat menggunakan protokol seperti Telnet.</p>
+<p></p>
+<p>Salah satu keuntungan dari switch adalah memungkinkan komunikasi dupleks penuh antar perangkat yang secara efektif menggandakan kecepatan komunikasi. Meskipun dimungkinkan untuk menentukan pengaturan kecepatan dan dupleks dari antarmuka sakelar, disarankan agar sakelar diizinkan untuk menyetel parameter ini secara otomatis untuk menghindari kesalahan.</p>
+<p>.</p>
+<p>Keamanan port switch merupakan persyaratan untuk mencegah serangan seperti MAC Address Flooding dan DHCP Spoofing.  Port switch harus dikonfigurasi untuk hanya mengizinkan frame dengan alamat MAC sumber tertentu untuk masuk. Frame dari alamat MAC sumber yang tidak diketahui harus ditolak dan menyebabkan port dimatikan untuk mencegah serangan lebih lanjut.</p>
+<p></p>
+<p>Keamanan port hanyalah salah satu pertahanan terhadap gangguan jaringan. Ada 10 praktik terbaik yang mewakili asuransi terbaik untuk suatu jaringan:</p>
+<p></p>
+<p>1. Mengembangkan kebijakan keamanan tertulis untuk organisasi.</p>
+<p>2. Matikan layanan dan port yang tidak digunakan.</p>
+<p>3. Gunakan kata sandi yang kuat dan sering-seringlah mengubahnya.</p>
+<p>4. Kontrol akses fisik ke perangkat.</p>
+<p>5. Hindari penggunaan situs web HTTP standar yang tidak aman, terutama untuk layar login.  Sebaliknya gunakan HTTPS yang lebih aman.</p>
+<p>6. Lakukan backup dan uji file yang dibackup secara berkala.</p>
+<p>7. Mendidik karyawan tentang serangan rekayasa sosial, dan mengembangkan kebijakan untuk memvalidasi identitas melalui telepon, email, dan secara langsung.</p>
+<p>8. Enkripsi dan lindungi data sensitif dengan kata sandi.</p>
+<p>9. Menerapkan keamanan perangkat keras dan perangkat lunak: seperti firewall.</p>
+<p>10. Selalu perbarui perangkat lunak iOS dengan menginstal patch keamanan setiap minggu atau setiap hari, jika memungkinkan.</p>
+<p></p>
+<p>Metode-metode ini hanyalah titik awal untuk manajemen keamanan. Organisasi harus tetap waspada setiap saat untuk mempertahankan diri dari ancaman yang terus berkembang.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" longdesc="media_2.3.1.4_longdesc.txt" name="mainFrame" src="media/index.html"></iframe>
+</body>
+</html>

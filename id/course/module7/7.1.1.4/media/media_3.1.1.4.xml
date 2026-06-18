@@ -1,0 +1,244 @@
+<textcomponents>
+<!--Slide 1-->
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Aktivitas 1 – Mengklasifikasikan Protokol Perutean</b><br/><br/>Status atau Jalur Vektor untuk mencocokkan setiap protokol perutean dengan klasifikasinya. Jika Anda benar, kata Benar! akan berkedip di layar Anda. Jika Anda salah, Silakan coba lagi akan berkedip. Item pop up akan terus ditampilkan hingga semuanya terjawab.<br/><br/>Jika Anda ingin menyelesaikan seluruh aktivitas lagi, klik Reset. Jika tidak, lanjutkan ke Aktivitas 2.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Protokol Perutean</b>]]></text>
+</component>
+
+<component id="ID_s1_field01">
+<text><![CDATA[<b>Vektor Jarak</b>]]></text>
+</component>
+
+<component id="ID_s1_field02">
+<text><![CDATA[<b>Status Tautan</b>]]></text>
+</component>
+
+<component id="ID_s1_field03">
+<text><![CDATA[<b>Vektor Jalur</b>]]></text>
+</component>
+
+<!--answers-->
+<component id="ID_s1_ans01">
+<text><![CDATA[RIPv2 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans02">
+<text><![CDATA[RIPng (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans03">
+<text><![CDATA[EIGRP (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans04">
+<text><![CDATA[EIGRP (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans05">
+<text><![CDATA[OSPFv2 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans06">
+<text><![CDATA[OSPFv3 (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans07">
+<text><![CDATA[ADALAH ADALAH (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans08">
+<text><![CDATA[ADALAH ADALAH (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_ans09">
+<text><![CDATA[BGP-4 (IPv4)]]></text>
+</component>
+
+<component id="ID_s1_ans10">
+<text><![CDATA[BGP-MP (IPv6)]]></text>
+</component>
+
+<component id="ID_s1_break">
+<text><![CDATA[<br><br>]]></text>
+</component>
+
+<!--buttons-->
+<component id="ID_s1_btn01">
+<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!--feedback-->
+<component id='ID_s1_titleCorrect'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_correctText'>
+	<text><![CDATA[<br/><p align="center">Benar!</p>]]></text>
+</component>
+
+<component id='ID_s1_titleIncorrect'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_incorrectText'>
+	<text><![CDATA[Silakan coba lagi.]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas - Bagian 1: Identifikasi Komponen Protokol Perutean - EIGRP</b><br/><br/>Dalam kegiatan ini, Anda akan fokus pada pengoperasian EIGRP, protokol perutean vektor jarak.<br/><br/>Bacalah pernyataan di bagian atas matriks. Selanjutnya, seret tanda centang biru ke bidang (atau beberapa bidang) di sebelah item yang melengkapi pernyataan secara akurat. Lebih dari satu item dapat dipilih. Klik Periksa untuk memverifikasi jawaban Anda. Jika benar, lanjutkan ke Bagian 2 aktivitas ini. Jika salah, silakan Reset dan coba lagi.]]></text>
+</component>
+
+<component id='ID_s2_question'>
+	<text><![CDATA[Di bidang struktur data, EIGRP membuat dan memelihara ____________.]]></text>
+</component>
+
+<component id='ID_s2_ans01'>
+	<text><![CDATA[Tabel topologi]]></text>
+</component>
+
+<component id='ID_s2_ans02'>
+	<text><![CDATA[Meja tetangga]]></text>
+</component>
+
+<component id='ID_s2_ans03'>
+	<text><![CDATA[Perbarui tabel]]></text>
+</component>
+
+<component id='ID_s2_ans04'>
+	<text><![CDATA[Jalur terbaik dalam tabel routing]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah mengidentifikasi area struktur data EIGRP dengan benar! Silakan lanjutkan ke Bagian 2 kegiatan ini.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum mengidentifikasi area struktur data EIGRP dengan benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!--Slide 3-->
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Aktivitas - Bagian 2: Identifikasi Komponen Protokol Perutean - EIGRP</b><br/><br/>Bacalah pernyataan di bagian atas matriks. Selanjutnya, seret tanda centang biru ke bidang (atau beberapa bidang) di sebelah item yang melengkapi pernyataan secara akurat. Lebih dari satu item dapat dipilih. Klik Periksa untuk memverifikasi jawaban Anda. Jika benar, lanjutkan ke Bagian 3 aktivitas ini. Jika salah, silakan Reset dan coba lagi.]]></text>
+</component>
+
+<component id='ID_s3_question'>
+	<text><![CDATA[Di bidang pesan protokol perutean, EIGRP menggunakan _________.]]></text>
+</component>
+
+<component id='ID_s3_ans01'>
+	<text><![CDATA[Ucapan Terima Kasih]]></text>
+</component>
+
+<component id='ID_s3_ans02'>
+	<text><![CDATA[Pertanyaan]]></text>
+</component>
+
+<component id='ID_s3_ans03'>
+	<text><![CDATA[Pembaruan]]></text>
+</component>
+
+<component id='ID_s3_ans04'>
+	<text><![CDATA[Balasan]]></text>
+</component>
+
+<component id='ID_s3_ans05'>
+	<text><![CDATA[Halo]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah mengidentifikasi jenis pesan protokol perutean EIGRP dengan benar! Silakan lanjutkan ke Bagian 3 kegiatan ini.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum mengidentifikasi jenis pesan protokol perutean EIGRP dengan benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+<!--Slide 4-->
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Aktivitas - Bagian 3: Identifikasi Komponen Protokol Perutean - EIGRP</b><br/><br/>Bacalah pernyataan di bagian atas matriks. Selanjutnya, seret tanda centang biru ke bidang (atau beberapa bidang) di sebelah item yang melengkapi pernyataan secara akurat. Lebih dari satu item dapat dipilih. Klik Periksa untuk memverifikasi jawaban Anda. Jika salah, silakan Reset dan coba lagi.]]></text>
+</component>
+
+<component id='ID_s4_question'>
+	<text><![CDATA[Untuk mengidentifikasi rute terbaik ke jaringan, EIGRP menggunakan algoritma ini:]]></text>
+</component>
+
+<component id='ID_s4_ans01'>
+	<text><![CDATA[Djikstra]]></text>
+</component>
+
+<component id='ID_s4_ans02'>
+	<text><![CDATA[Bellman-Ford]]></text>
+</component>
+
+<component id='ID_s4_ans03'>
+	<text><![CDATA[GANDA]]></text>
+</component>
+
+<component id='ID_s4_ans04'>
+	<text><![CDATA[ICMP]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Anda telah mengidentifikasi algoritma EIGRP dengan benar.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum mengidentifikasi algoritma EIGRP dengan benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

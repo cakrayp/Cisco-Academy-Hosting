@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.2.1.1 Fungsi Peralihan Router</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Keputusan Perutean</h1>
+<h2>Peralihan Paket Antar Jaringan</h2>
+</div>
+<div id="content">
+<p>Fungsi utama router adalah meneruskan paket menuju tujuannya. Hal ini dicapai dengan menggunakan fungsi switching, yaitu proses yang digunakan oleh router untuk menerima paket pada satu antarmuka dan meneruskannya keluar dari antarmuka lain. Tanggung jawab utama dari fungsi switching adalah untuk merangkum paket dalam tipe frame data link yang sesuai untuk data link keluar.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Dalam konteks ini, istilah “switching” secara harfiah berarti memindahkan paket dari sumber ke tujuan dan berbeda dengan fungsi switch Layer 2.</p>
+<p></p>
+<p>Setelah router menentukan antarmuka keluar menggunakan fungsi penentuan jalur, router harus merangkum paket ke dalam bingkai data link dari antarmuka keluar.</p>
+<p></p>
+<p>Apa yang dilakukan router terhadap paket yang diterima dari satu jaringan dan ditujukan ke jaringan lain? Router melakukan tiga langkah utama berikut:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>De-enkapsulasi paket Layer 3 dengan menghapus header dan trailer frame Layer 2.</p>
+<p>
+<b>Langkah 2.</b>Memeriksa alamat IP tujuan paket IP untuk menemukan jalur terbaik dalam tabel routing.</p>
+<p>
+<b>Langkah 3.</b>Jika router menemukan jalur ke tujuan, ia merangkum paket Layer 3 ke dalam frame Layer 2 baru dan meneruskan frame tersebut keluar antarmuka keluar.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, perangkat memiliki alamat IPv4 Layer 3 dan antarmuka Ethernet memiliki alamat tautan data Layer 2. Misalnya, PC1 dikonfigurasi dengan alamat IPv4 192.168.1.10 dan contoh alamat MAC 0A-10. Saat paket berpindah dari perangkat sumber ke perangkat tujuan akhir, alamat IP Layer 3 tidak berubah. Namun, alamat data link Layer 2 berubah pada setiap hop saat paket dide-enkapsulasi dan dienkapsulasi ulang dalam frame baru oleh setiap router. Sangat mungkin bahwa paket tersebut dienkapsulasi dalam jenis bingkai Layer 2 yang berbeda dari yang diterimanya. Misalnya, frame yang dienkapsulasi Ethernet mungkin diterima oleh router pada antarmuka FastEthernet, dan kemudian diproses untuk diteruskan keluar dari antarmuka serial sebagai frame yang dienkapsulasi Point-to-Point Protocol (PPP).</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

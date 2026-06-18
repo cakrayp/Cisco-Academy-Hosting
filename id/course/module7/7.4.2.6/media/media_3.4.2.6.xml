@@ -1,0 +1,55 @@
+<textcomponents>
+<component id="ID_title01">
+<text><![CDATA[<b>Isi Basis Data Link-State</b>]]></text>
+</component>
+
+<component id="ID_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000" width="443">
+<tr class="liner">
+<td bgcolor="#0E6360" class="mtable_top" colspan="1"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff"><b>Basis Data Link-State R1</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536"><b>Status Tautan R1:</b><ul>
+<li><textformat blockindent="-14">Connected to network 10.1.0.0/16, cost = 2</textformat></li>
+<li><textformat blockindent="-14">Connected to R2 on network 10.2.0.0/16, cost = 20</textformat></li>
+<li><textformat blockindent="-14">Connected to R3 on network 10.3.0.0/16, cost = 5</textformat></li>
+<li><textformat blockindent="-14">Connected to R4 on network 10.4.0.0/16, cost = 20</textformat></li>
+</ul></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536"><b>Status Tautan R2:</b><ul>
+<li><textformat blockindent="-14">Connected to network 10.5.0.0/16, cost = 2</textformat></li>
+<li><textformat blockindent="-14">Connected to R1 on network 10.2.0.0/16, cost = 20</textformat></li>
+<li><textformat blockindent="-14">Connected to R5 on network 10.9.0.0/16, cost = 10</textformat></li>
+</ul></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536"><b>Status Tautan R3:</b><ul>
+<li><textformat blockindent="-14">Connected to network 10.6.0.0/16, cost = 2</textformat></li>
+<li><textformat blockindent="-14">Connected to R1 on network 10.3.0.0/16, cost = 5</textformat></li>
+<li><textformat blockindent="-14">Connected to R4 on network 10.7.0.0/16, cost = 10</textformat></li>
+</ul></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536"><b>Status Tautan R4:</b><ul>
+<li><textformat blockindent="-14">Connected to network 10.8.0.0/16, cost = 2</textformat></li>
+<li><textformat blockindent="-14">Connected to R1 on network 10.4.0.0/16, cost = 20</textformat></li>
+<li><textformat blockindent="-14">Connected to R3 on network 10.7.0.0/16, cost = 10</textformat></li>
+<li><textformat blockindent="-14">Connected to R5 on network 10.10.0.0/16, cost = 10</textformat></li>
+</ul></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536"><b>Status Tautan R5:</b><ul>
+<li><textformat blockindent="-14">Connected to network 10.11.0.0/16, cost = 2</textformat></li>
+<li><textformat blockindent="-14">Connected to R2 on network 10.9.0.0/16, cost = 10</textformat></li>
+<li><textformat blockindent="-14">Connected to R4 on network 10.10.0.0/16, cost = 10</textformat></li>
+</ul></font></td>
+</tr>
+</table>]]>
+	</text> 
+	</component>
+	
+</textcomponents>

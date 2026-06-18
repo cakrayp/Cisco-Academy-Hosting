@@ -1,0 +1,15 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Jaringan Stub dan Router Stub</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Jaringan Rintisan]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Jaringan]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Router Rintisan]]></text> 
+  </component>
+
+</textcomponents>

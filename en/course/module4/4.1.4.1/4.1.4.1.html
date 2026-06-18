@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.4.1 Verify Interface Settings</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Verify Connectivity of Directly Connected Networks</h2>
+      </div>
+      <div id="content">
+          <p>There are several<span class="cmd"><b> show </b></span>commands that can be used to verify the operation and configuration of an interface. The following three commands are especially useful to quickly identify an interface status:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip interface brief </b>
+                </span>- Displays a summary for all interfaces including the IPv4 address of the interface and current operational status. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip route </b>
+                </span>- Displays the contents of the IPv4 routing table stored in RAM. In Cisco IOS 15, active interfaces should appear in the routing table with two related entries identified by the code ‘<span class="cmd">C</span>’ (Connected) or ‘<span class="cmd">L</span>’ (Local). In previous IOS versions, only a single entry with the code ‘<span class="cmd">C</span>’ will appear.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show running-config interface </b>
+                </span>
+                <span class="cmd">
+                  <i>interface-id</i>
+                </span>
+                <span class="cmd">
+                  <b></b>
+                </span>- Displays the commands configured on the specified interface. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Figure 1 displays the output of the<span class="cmd"><b> show ip interface brief </b></span>command. The output reveals that the LAN interfaces and the WAN link are all activated and operational as indicated by the Status of “up” and Protocol of “up”. A different output would indicate a problem with either the configuration or the cabling.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: In Figure 1, the Embedded-Service-Engine0/0 interface is displayed because Cisco ISRs G2 have dual core CPUs on the motherboard. The Embedded-Service-Engine0/0 interface is outside the scope of this course.</p>
+          <p></p>
+          <p>Figure 2 displays the output of the<span class="cmd"><b> show ip route </b></span>command. Notice the three directly connected network entries and the three local host route interface entries. A local host route has an administrative distance of 0. It also has a /32 mask for IPv4, and a /128 mask for IPv6. The local host route is for routes on the router owning the IP address. It is used to allow the router to process packets destined to that IP.</p>
+          <p></p>
+          <p>Figure 3 displays the output of the<span class="cmd"><b> show running-config interface </b></span>command. The output displays the current commands configured on the specified interface. </p>
+          <p></p>
+          <p>The following two commands are used to gather more detailed interface information: </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show interfaces </b>
+                </span>- Displays interface information and packet flow count for all interfaces on the device. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip interface </b>
+                </span>- Displays the IPv4 related information for all interfaces on a router.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figures 4 and 5 to verify the interfaces on R1.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

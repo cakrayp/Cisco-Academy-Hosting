@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.1.3 ID Perute</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>ID Perute OSPF</h2>
+</div>
+<div id="content">
+<p>Setiap router memerlukan ID router untuk berpartisipasi dalam domain OSPF. ID router dapat ditentukan oleh administrator atau ditetapkan secara otomatis oleh router. ID router digunakan oleh router yang mendukung OSPF untuk:</p>
+<p>
+<ul>
+<li>
+<b>Identifikasi router secara unik</b>- ID router digunakan oleh router lain untuk mengidentifikasi secara unik setiap router dalam domain OSPF dan semua paket yang berasal darinya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Ikut serta dalam pemilihan DR</b>- Dalam lingkungan LAN multiakses, pemilihan DR terjadi pada saat awal pembentukan jaringan OSPF. Ketika link OSPF menjadi aktif, perangkat routing yang dikonfigurasi dengan prioritas tertinggi dipilih sebagai DR. Dengan asumsi tidak ada prioritas yang dikonfigurasi, atau ada seri, maka router dengan ID router tertinggi dipilih sebagai DR. Perangkat perutean dengan ID router tertinggi kedua dipilih sebagai BDR.</li>
+</ul>
+</p>
+<p></p>
+<p>Tapi bagaimana cara router menentukan ID router? Seperti yang diilustrasikan dalam gambar, router Cisco memperoleh ID router berdasarkan salah satu dari tiga kriteria, dalam urutan preferensi berikut:</p>
+<p>
+<ul>
+<li>ID router dikonfigurasi secara eksplisit menggunakan OSPF<span class="cmd"><b>router-id</b></span><span class="cmd"><i>menyingkirkan</i></span>perintah mode konfigurasi router. Itu<span class="cmd"><i>menyingkirkan</i></span>value adalah nilai 32-bit apa pun yang dinyatakan sebagai alamat IPv4. Ini adalah metode yang disarankan untuk menetapkan ID router.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika ID router tidak dikonfigurasi secara eksplisit, router memilih alamat IPv4 tertinggi dari semua antarmuka loopback yang dikonfigurasi. Ini adalah alternatif terbaik berikutnya untuk menetapkan ID router.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika tidak ada antarmuka loopback yang dikonfigurasi, maka router memilih alamat IPv4 aktif tertinggi dari semua antarmuka fisiknya. Ini adalah metode yang paling tidak direkomendasikan karena mempersulit administrator untuk membedakan router tertentu.</li>
+</ul>
+</p>
+<p></p>
+<p>Jika router menggunakan alamat IPv4 tertinggi untuk ID router, antarmuka tidak perlu mengaktifkan OSPF. Artinya alamat antarmuka tidak perlu dicantumkan dalam salah satu OSPF<span class="cmd"><b>jaringan</b></span>perintah agar router menggunakan alamat IP tersebut sebagai ID router. Satu-satunya persyaratan adalah antarmuka aktif dan dalam keadaan aktif.</p>
+<p></p>
+<p>
+<b>Catatan</b>: ID router terlihat seperti alamat IP, namun tidak dapat dirutekan dan, oleh karena itu, tidak disertakan dalam tabel perutean, kecuali proses perutean OSPF memilih antarmuka (fisik atau loopback) yang ditentukan dengan tepat oleh a<span class="cmd"><b>jaringan</b></span>memerintah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

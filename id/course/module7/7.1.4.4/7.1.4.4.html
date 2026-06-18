@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.1.4.4 Protokol Perutean Link-State</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.4.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Perutean Dinamis</h1>
+<h2>Jenis Protokol Perutean</h2>
+</div>
+<div id="content">
+<p>Berbeda dengan operasi protokol perutean vektor jarak, router yang dikonfigurasi dengan protokol perutean link-state dapat membuat tampilan lengkap atau topologi jaringan dengan mengumpulkan informasi dari semua router lainnya.</p>
+<p></p>
+<p>Untuk melanjutkan analogi kita tentang postingan tanda, menggunakan protokol perutean link-state seperti memiliki peta topologi jaringan yang lengkap.  Posting tanda sepanjang perjalanan dari sumber ke tujuan tidak diperlukan, karena semua router link-state menggunakan peta jaringan yang identik.  Router link-state menggunakan informasi link-state untuk membuat peta topologi dan memilih jalur terbaik ke semua jaringan tujuan dalam topologi tersebut.</p>
+<p></p>
+<p></p>
+<p>Router yang mendukung RIP mengirimkan pembaruan informasi perutean secara berkala ke tetangganya. Protokol perutean link-state tidak menggunakan pembaruan berkala. Setelah jaringan konvergen, pembaruan link-state hanya dikirim ketika ada perubahan topologi. Misalnya, pembaruan status tautan dalam animasi tidak dikirim hingga jaringan 172.16.3.0 mati.</p>
+<p></p>
+<p>Klik Mainkan pada gambar untuk melihat operasi link-state.</p>
+<p></p>
+<p>Protokol link-state bekerja paling baik dalam situasi di mana:</p>
+<p>
+<ul>
+<li>Desain jaringan bersifat hierarkis, biasanya terjadi pada jaringan besar</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Konvergensi jaringan yang cepat sangatlah penting</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Administrator memiliki pengetahuan yang baik tentang protokol routing link-state yang diterapkan</li>
+</ul>
+</p>
+<p></p>
+<p>Ada dua IGP IPv4 link-state:</p>
+<p>
+<ul>
+<li>
+<b>OSPF</b>- Protokol perutean berbasis standar populer</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>ADALAH</b>- Populer di jaringan penyedia</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

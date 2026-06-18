@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.4.1 Verifikasi OSPF Neighbors</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>Verifikasi OSPF</h2>
+</div>
+<div id="content">
+<p>Gambar 1 menunjukkan topologi referensi.</p>
+<p></p>
+<p>Gunakan<span class="cmd"><b>tampilkan ip ospf tetangga</b></span>perintah untuk memverifikasi bahwa router telah membentuk kedekatan dengan router tetangganya. Jika ID router dari router tetangga tidak ditampilkan, atau jika tidak ditampilkan dalam keadaan FULL, kedua router belum membentuk kedekatan OSPF.</p>
+<p></p>
+<p>Jika dua router tidak membangun kedekatan, informasi link-state tidak dipertukarkan. LSDB yang tidak lengkap dapat menyebabkan pohon SPF dan tabel perutean tidak akurat. Rute ke jaringan tujuan mungkin tidak ada, atau mungkin bukan jalur yang paling optimal.</p>
+<p></p>
+<p>Gambar 2 menampilkan kedekatan tetangga R1. Untuk setiap tetangga, perintah ini menampilkan keluaran berikut:</p>
+<p>
+<ul>
+<li>
+<b>ID Tetangga</b>- ID router dari router tetangga.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Pri</b>- Prioritas antarmuka OSPF. Nilai ini digunakan pada pemilu DR dan BDR.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Negara</b>- Status antarmuka OSPF. Status LENGKAP berarti router dan tetangganya memiliki OSPF LSDB yang identik. Pada jaringan multiakses, seperti Ethernet, dua router yang berdekatan mungkin menampilkan statusnya sebagai 2WAY. Tanda hubung menunjukkan bahwa DR atau BDR tidak diperlukan karena jenis jaringan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Waktu Mati</b>- Jumlah waktu yang tersisa di mana router menunggu untuk menerima paket OSPF Hello dari tetangganya sebelum mendeklarasikan tetangganya down. Nilai ini direset ketika antarmuka menerima paket Hello.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Alamat</b>- Alamat IPv4 dari antarmuka tetangga yang terhubung langsung dengan router ini.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Antarmuka</b>- Antarmuka tempat router ini membentuk kedekatan dengan tetangganya.</li>
+</ul>
+</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk memverifikasi tetangga R2 dan R3 menggunakan<span class="cmd"><b>tampilkan ip ospf tetangga</b></span>memerintah.</p>
+<p>Dua router mungkin tidak membentuk kedekatan OSPF jika:</p>
+<p>
+<ul>
+<li>Subnet mask tidak cocok, menyebabkan router berada di jaringan terpisah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>OSPF Hello atau Dead Timer tidak cocok.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jenis Jaringan OSPF tidak cocok.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Ada OSPF yang hilang atau salah<span class="cmd"><b>jaringan</b></span>memerintah.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

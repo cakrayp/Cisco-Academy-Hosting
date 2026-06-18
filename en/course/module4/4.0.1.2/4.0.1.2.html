@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.0.1.2 Activity - Do We Really Need a Map?</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Routing Concepts</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity -</b>
+            <b>Do We Really Need a Map?</b>
+          </p>
+          <p></p>
+          <p>This modeling activity asks you to research travel directions from source to destination. Its purpose is to compare those types of directions to network routing directions.</p>
+          <p></p>
+          <p>
+            <b>Scenario</b>
+          </p>
+          <p></p>
+          <p>Using the Internet and Google Maps, located at <a href="http://maps.google.com/" target="_blank">http://maps.google.com</a>, find a route between the capital city of your country and some other distant town or between two places within your own city. Pay close attention to the driving or walking directions Google Maps suggests. </p>
+          <p></p>
+          <p>Notice that in many cases, Google Maps suggests more than one route between the two locations you chose. It also allows you to put additional constraints on the route, such as avoiding highways or tolls.</p>
+          <p></p>
+          <p>Copy at least two route instructions supplied by Google Maps for this activity.  Place your copies into a word processing document and save it for use with the next step.</p>
+          <p></p>
+          <p>Open the .pdf accompanying this modeling activity and complete it with a fellow student. Discuss the reflection questions listed on the .pdf and record your answers. </p>
+          <p></p>
+          <p>Be prepared to present your answers to the class.</p>
+          <p></p>
+          <p>
+            <a href="../../files/4.0.1.2%20Do%20We%20Really%20Need%20a%20Map%20Instructions.pdf" target="_blank">Class Activity - Do We Really Need a Map? Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

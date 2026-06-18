@@ -1,0 +1,66 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+<text><![CDATA[Building B - Marketing and Sales]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Building C - Engineering]]></text>
+</component>
+<component id="ID_s1_txt03">
+<text><![CDATA[Access]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Distribution]]></text>
+</component>
+<component id="ID_s1_txt05">
+<text><![CDATA[Core]]></text>
+</component>
+<component id="ID_s1_txt06">
+<text><![CDATA[Distribution]]></text>
+</component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Access]]></text>
+</component>
+<component id="ID_s1_txt08">
+<text><![CDATA[Building A - Management]]></text>
+</component>
+<component id="ID_s1_txt09">
+<text><![CDATA[Building D - Research and Development]]></text>
+</component>
+<component id="ID_s1_txt10">
+<text><![CDATA[Building E - Information Technology]]></text>
+</component>
+<component id="ID_s1_txt11">
+<text><![CDATA[Building F - Data Center]]></text>
+</component>
+
+
+
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Access]]></text>
+</component>
+<component id="ID_s2_txt02">
+<text><![CDATA[Floor 6 - Research and Development]]></text>
+</component>
+<component id="ID_s2_txt03">
+<text><![CDATA[Floor 5 - Engineering]]></text>
+</component>
+<component id="ID_s2_txt04">
+<text><![CDATA[Floor 4 - Server Farm]]></text>
+</component>
+<component id="ID_s2_txt05">
+<text><![CDATA[Floor 3 - Information Technology]]></text>
+</component>
+<component id="ID_s2_txt06">
+<text><![CDATA[Floor 2 - Management]]></text>
+</component>
+<component id="ID_s2_txt07">
+<text><![CDATA[<b>Collapsed Distribution/ Core</b>]]></text>
+</component>
+<component id="ID_s2_txt08">
+<text><![CDATA[WAN]]></text>
+</component>
+<component id="ID_s2_txt09">
+<text><![CDATA[PSTN]]></text>
+</component>
+</textcomponents>

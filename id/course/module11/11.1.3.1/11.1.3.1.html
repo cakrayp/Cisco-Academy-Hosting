@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.1.3.1 Manfaat NAT</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.1.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi NAT</h1>
+<h2>Manfaat NAT</h2>
+</div>
+<div id="content">
+<p>NAT memberikan banyak manfaat, antara lain:</p>
+<p>
+<ul>
+<li>NAT melestarikan skema pengalamatan yang terdaftar secara hukum dengan mengizinkan privatisasi intranet. NAT menyimpan alamat melalui multiplexing tingkat port aplikasi. Dengan kelebihan NAT, host internal dapat berbagi satu alamat IPv4 publik untuk semua komunikasi eksternal. Dalam konfigurasi jenis ini, sangat sedikit alamat eksternal yang diperlukan untuk mendukung banyak host internal.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>NAT meningkatkan fleksibilitas koneksi ke jaringan publik. Beberapa kumpulan, kumpulan cadangan, dan kumpulan penyeimbang beban dapat diterapkan untuk memastikan koneksi jaringan publik yang andal.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>NAT memberikan konsistensi untuk skema pengalamatan jaringan internal. Pada jaringan yang tidak menggunakan alamat IPv4 privat dan NAT, mengubah skema alamat IPv4 publik memerlukan pengalamatan ulang semua host di jaringan yang ada. Biaya untuk melakukan pengalamatan ulang host bisa sangat besar. NAT memungkinkan skema alamat IPv4 privat yang ada tetap ada sekaligus memungkinkan perubahan yang mudah ke skema pengalamatan publik yang baru. Ini berarti suatu organisasi dapat mengubah ISP dan tidak perlu mengubah klien internalnya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>NAT menyediakan keamanan jaringan. Karena jaringan pribadi tidak mengiklankan alamat atau topologi internalnya, jaringan tersebut tetap cukup aman ketika digunakan bersama dengan NAT untuk mendapatkan akses eksternal yang terkontrol. Namun, NAT tidak menggantikan firewall.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

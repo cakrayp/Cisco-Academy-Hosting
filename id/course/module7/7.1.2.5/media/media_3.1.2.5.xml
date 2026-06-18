@@ -1,0 +1,97 @@
+<textcomponents>
+
+	<component id='ID_s1_inst'>
+		<text><![CDATA[<b>Aktivitas – Bandingkan Perutean Statis dan Dinamis</b><br/><br/>Setiap deskripsi jenis perutean dalam tabel dapat diklasifikasikan sebagai Perutean Statis atau Perutean Dinamis. Tandai klasifikasi yang sesuai di samping setiap deskripsi jenis perutean.]]></text>
+	</component>
+
+	<!--Number of rows in the table-->
+
+	<component id="ID_Button01">
+		<text><![CDATA[<b>Memeriksa</b>]]></text>
+	</component>
+
+	<component id="ID_Button02">
+		<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+	</component>
+
+	<component id="txt_numrows">
+		<text><![CDATA[5]]></text>
+	</component>
+
+	<!--Number of columns for the answers in the table. Do not count the question column-->
+	<component id="txt_numcols">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<!--Answer column headers-->
+	<component id="txt_col1">
+		<text><![CDATA[<b>Perutean Statis</b>]]></text>
+	</component>
+
+	<component id="txt_col2">
+		<text><![CDATA[<b>Perutean Dinamis</b>]]></text>
+	</component>
+
+
+	<!--Question text - blockindent code moves the text away from the left edge a bit-->
+	<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+	<component id="txt_q1">
+		<text><![CDATA[Cocok untuk beberapa topologi router.]]></text>
+	</component>
+
+	<component id="txt_q2">
+		<text><![CDATA[Beradaptasi dengan perubahan topologi untuk mengubah rute lalu lintas, bila memungkinkan.]]></text>
+	</component>
+
+	<component id="txt_q3">
+		<text><![CDATA[Mudah diimplementasikan dalam jaringan kecil.]]></text>
+	</component>
+
+	<component id="txt_q4">
+		<text><![CDATA[Membutuhkan lebih banyak CPU, RAM, dan bandwidth tautan.]]></text>
+	</component>
+
+	<component id="txt_q5">
+		<text><![CDATA[Rute menuju tujuan selalu sama.]]></text>
+	</component>
+
+	<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+	<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+	<component id="txt_a1">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a2">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a3">
+		<text><![CDATA[1]]></text>
+	</component>
+
+	<component id="txt_a4">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a5">
+		<text><![CDATA[1]]></text>
+	</component>
+
+	<!-- Correct Feedback -->
+	<component id="ID_titleCorrect">
+		<text><![CDATA[<b>Benar</b>]]></text>
+	</component>
+
+	<component id="ID_correctText">
+		<text><![CDATA[Anda telah berhasil mengklasifikasikan setiap deskripsi jenis perutean.]]></text>
+	</component>
+
+	<!--Incorrect Feedback -->
+	<component id="ID_titleIncorrect">
+		<text><![CDATA[<b>Salah</b>]]></text>
+	</component>
+
+	<component id="ID_IncorrectText">
+		<text><![CDATA[Anda belum berhasil mengklasifikasikan setiap deskripsi jenis perutean. Silakan klik Reset untuk mencoba lagi.]]></text>
+	</component>
+</textcomponents>

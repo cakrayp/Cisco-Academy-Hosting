@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.4.4 Verifikasi Pengaturan Antarmuka OSPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.4.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>Verifikasi OSPF</h2>
+</div>
+<div id="content">
+<p>Cara tercepat untuk memverifikasi pengaturan antarmuka OSPF adalah dengan menggunakan<span class="cmd"><b>tampilkan antarmuka ip ospf</b></span>memerintah. Perintah ini memberikan daftar rinci untuk setiap antarmuka yang mendukung OSPF. Perintah tersebut berguna untuk menentukan apakah<span class="cmd"><b>jaringan</b></span>pernyataan telah disusun dengan benar.</p>
+<p></p>
+<p>Untuk mendapatkan ringkasan antarmuka yang mendukung OSPF, gunakan<span class="cmd"><b>tampilkan antarmuka ip ospf secara singkat</b></span>perintah, seperti yang ditunjukkan pada Gambar 1.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 2 untuk mengambil dan melihat ringkasan antarmuka berkemampuan OSPF di R2 menggunakan<span class="cmd"><b>tampilkan antarmuka ip ospf secara singkat</b></span>memerintah. Perhatikan bahwa menentukan nama antarmuka seperti yang dilakukan di<span class="cmd"><b>tampilkan antarmuka ip ospf serial 0/0/1</b></span>perintah memberikan informasi OSPF rinci.</p>
+<p></p>
+<p>Lanjutkan menggunakan Pemeriksa Sintaks pada Gambar 2 untuk mendapatkan ringkasan antarmuka yang mendukung OSPF di R3 menggunakan<span class="cmd"><b>tampilkan antarmuka ip ospf secara singkat</b></span>memerintah. Ambil dan lihat informasi tambahan untuk antarmuka Serial 0/0/0 menggunakan<span class="cmd"><b>tampilkan antarmuka ip ospf serial 0/0/0</b></span>memerintah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

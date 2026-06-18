@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Static and Default Route Scenario</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[R2 serves as a next hop for all networks, including the Internet, that are not directly connected to R1; therefore, R1 should have default route configured pointing to R2.]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[R1 only contains two directly connected networks that R2 needs to know about. Two static route entries can be configured on R2 to allow the routes to be added to the route table.]]></text> 
+  </component>
+<component id="transcript">
+  <text><![CDATA[<b>transcript goes here</b>]]></text> 
+  </component>
+</textcomponents>

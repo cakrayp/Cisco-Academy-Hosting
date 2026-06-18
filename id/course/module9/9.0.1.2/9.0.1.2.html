@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.0.1.2 Izinkan Saya Membantu Anda</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Daftar Kontrol Akses</h1>
+<h2>Daftar Kontrol Akses</h2>
+</div>
+<div id="content">
+<p>
+<b>Izinkan Saya untuk Membantu Anda</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p></p>
+<p>Setiap individu di kelas akan mencatat lima pertanyaan yang akan mereka ajukan kepada kandidat yang melamar izin keamanan untuk posisi asisten jaringan dalam bisnis skala kecil hingga menengah. Daftar pertanyaan harus diurutkan berdasarkan kepentingannya dalam memilih kandidat yang baik untuk pekerjaan itu. Jawaban yang disukai juga akan dicatat.</p>
+<p></p>
+<p>Dua pewawancara dari kelas akan dipilih. Proses wawancara akan dimulai.  Kandidat akan diizinkan atau ditolak kesempatan untuk melanjutkan ke pertanyaan tingkat berikutnya berdasarkan jawaban mereka terhadap pertanyaan pewawancara.</p>
+<p></p>
+<p>Lihat PDF terlampir untuk petunjuk lebih lanjut mengenai kegiatan ini.</p>
+<p></p>
+<p>Seluruh kelas kemudian akan berkumpul dan mendiskusikan pengamatan mereka mengenai proses untuk mengizinkan atau menolak kesempatan mereka untuk melanjutkan ke wawancara tingkat berikutnya.</p>
+<p></p>
+<p>
+<a href="../../files/9.0.1.2%20Permit%20Me%20to%20Assist%20You%20Instructions.pdf" target="_blank">Kegiatan Kelas - Izinkan Saya Membantu Anda Memberi Petunjuk</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

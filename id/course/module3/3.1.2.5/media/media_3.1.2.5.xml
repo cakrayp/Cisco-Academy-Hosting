@@ -1,0 +1,50 @@
+<textcomponents>
+<!--Slide 1-->
+   
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Penandaan VLAN Suara</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Switch port dikonfigurasi untuk mendukung lalu lintas suara:<textformat blockindent="-14"><li>Menginstruksikan ponsel untuk menandai bingkai suara dengan VLAN 150</li><li>Memprioritaskan bingkai suara</li><li>Meneruskan frame data pada VLAN 20</li></textformat>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[Dikonfigurasi untuk mengirim lalu lintas data yang diberi tag.]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[Dikonfigurasi untuk mengirim lalu lintas data yang tidak diberi tag.]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+   <text><![CDATA[Dikonfigurasi untuk menandai frame lalu lintas suara dengan VLAN 150.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+	<text><![CDATA[Telepon IP Cisco]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+	<text><![CDATA[Telepon ASIC]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+   <text><![CDATA[Akses pelabuhan]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+   <text><![CDATA[Sakelar 3 port]]></text>
+</component>
+
+<!--Slide 2-->
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Konfigurasi Sampel</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+   <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+</component>
+
+</textcomponents>

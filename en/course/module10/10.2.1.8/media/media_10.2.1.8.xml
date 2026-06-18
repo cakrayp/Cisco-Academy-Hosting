@@ -1,0 +1,75 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activity - Identify the Steps in DHCPv6 Operation</b><br><br>Order the steps to illustrate a DHCPv6 lease origination.<br/>Drag each of the DHCPv6 lease origination steps to its appropriate field, based on the circled numbers in the graphic.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[<b>SLAAC Operations</b>]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[DHCPv6 Client]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[DHCPv6 Server]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Router Solicitation]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Router Advertisement]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[<b>Stateful DHCPv6 Operations</b>]]></text>
+</component>
+
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">REQUEST</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">REPLY</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">ADVERTISE</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">SOLICIT</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully ordered the steps for a stateful DHCPv6 lease origination.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully ordered the steps for a stateful DHCPv6 lease origination. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

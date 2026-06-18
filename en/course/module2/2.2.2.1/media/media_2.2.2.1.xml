@@ -1,0 +1,150 @@
+<textcomponents>
+
+<!--envelope text-->
+<component id="ID_envelopeAB-1">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-2">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-3">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-4">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-5">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-6">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-7">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeAB-8">
+   <text><![CDATA[<b>A to B</b>]]></text>
+</component>
+<component id="ID_envelopeBA-1">
+   <text><![CDATA[<b>B to A</b>]]></text>
+</component>
+<component id="ID_envelopeBA-2">
+   <text><![CDATA[<b>B to A</b>]]></text>
+</component>
+<component id="ID_envelopeX">
+   <text><![CDATA[<b>X to ?</b>]]></text>
+</component>
+<component id="ID_envelopeY">
+   <text><![CDATA[<b>Y to ?</b>]]></text>
+</component>
+
+
+<!--Slide 1-->
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Switch Floods Frame for Unknown MAC</b>]]></text>
+</component>
+<component id="ID_s1_bubble01">
+   <text><![CDATA[The MAC address table is incomplete.]]></text>
+</component>
+<component id="ID_s1_bubble02">
+   <text><![CDATA[Host B is unknown so the switch will flood the frame.]]></text>
+</component>
+<component id="ID_s1_bubble03">
+   <text><![CDATA[Host C sees traffic to Host B.]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Switch Records MAC Address</b>]]></text>
+</component>
+<component id="ID_s2_bubble01">
+   <text><![CDATA[MAC address table learns that Host B is on Port 2.]]></text>
+</component>
+<component id="ID_s2_bubble02">
+   <text><![CDATA[Host C drops the packet addressed to Host B.]]></text>
+</component>
+
+
+<!--Slide 3-->
+<component id="ID_s3_title">
+	<text><![CDATA[<b>Switch Uses MAC Address Table to Forward Traffic</b>]]></text>
+</component>
+<component id="ID_s3_bubble01">
+   <text><![CDATA[MAC address tables are limited in size.]]></text>
+</component>
+<component id="ID_s3_bubble02">
+   <text><![CDATA[MAC address table has learned that Host B is on Port 2.]]></text>
+</component>
+<component id="ID_s3_bubble03">
+   <text><![CDATA[Host C does not see traffic to Host B anymore.]]></text>
+</component>
+
+
+<!--Slide 4-->
+<component id="ID_s4_title">
+	<text><![CDATA[<b>MAC Address Flooding Attack</b>]]></text>
+</component>
+<component id="ID_s4_bubble01">
+   <text><![CDATA[Addresses for fictitious hosts are added to the MAC address table.]]></text>
+</component>
+<component id="ID_s4_bubble02">
+   <text><![CDATA[Fictitious Hosts X and Y are on Port 3 and the MAC address table is updated.]]></text>
+</component>
+<component id="ID_s4_bubble03">
+   <text><![CDATA[Attacker starts sending unknown bogus MAC addresses.]]></text>
+</component>
+<component id="ID_s4_txt01">
+      <text><![CDATA[Intruder runs an attack tool on Host C.]]></text>
+</component>
+
+<!--Slide 5-->
+<component id="ID_s5_title">
+	<text><![CDATA[<b>MAC Address Flooding Attack</b>]]></text>
+</component>
+<component id="ID_s5_bubble01">
+   <text><![CDATA[The MAC address table is full.]]></text>
+</component>
+<component id="ID_s5_bubble02">
+   <text><![CDATA[Host B is unknown, because the MAC address table is full. Therefore, the switch floods the frame looking for Host B.]]></text>
+</component>
+<component id="ID_s5_txt01">
+	<text><![CDATA[Intruder runs an attack tool on Host C.]]></text>
+</component>
+
+
+
+
+<component id="ID_txt01">
+   <text><![CDATA[<b>MAC</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<b>Port</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+   <text><![CDATA[Host A]]></text>
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[Host B]]></text>
+</component>
+
+<component id="ID_txt05">
+   <text><![CDATA[Host C]]></text>
+</component>
+
+<component id="ID_txt06">
+   <text><![CDATA[Port 1]]></text>
+</component>
+
+<component id="ID_txt07">
+   <text><![CDATA[Port 2]]></text>
+</component>
+
+<component id="ID_txt08">
+   <text><![CDATA[Port 3]]></text>
+</component>
+
+</textcomponents>

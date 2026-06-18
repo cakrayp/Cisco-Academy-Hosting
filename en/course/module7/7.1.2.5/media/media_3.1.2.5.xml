@@ -1,0 +1,97 @@
+<textcomponents>
+
+	<component id='ID_s1_inst'>
+		<text><![CDATA[<b>Activity – Compare Static and Dynamic Routing</b><br><br>Each routing type description in the table can be classified as Static Routing or Dynamic Routing. Mark the appropriate classification next to each routing type description.]]></text>
+	</component>
+
+	<!--Number of rows in the table-->
+
+	<component id="ID_Button01">
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+	<component id="ID_Button02">
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+
+	<component id="txt_numrows">
+		<text><![CDATA[5]]></text>
+	</component>
+
+	<!--Number of columns for the answers in the table. Do not count the question column-->
+	<component id="txt_numcols">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<!--Answer column headers-->
+	<component id="txt_col1">
+		<text><![CDATA[<b>Static Routing</b>]]></text>
+	</component>
+
+	<component id="txt_col2">
+		<text><![CDATA[<b>Dynamic Routing</b>]]></text>
+	</component>
+
+
+	<!--Question text - blockindent code moves the text away from the left edge a bit-->
+	<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+	<component id="txt_q1">
+		<text><![CDATA[Suitable for multiple router topologies.]]></text>
+	</component>
+
+	<component id="txt_q2">
+		<text><![CDATA[Adapts to topology changes to reroute traffic, when possible.]]></text>
+	</component>
+
+	<component id="txt_q3">
+		<text><![CDATA[Easy to implement in a small network.]]></text>
+	</component>
+
+	<component id="txt_q4">
+		<text><![CDATA[Requires more CPU, RAM, and link bandwidth.]]></text>
+	</component>
+
+	<component id="txt_q5">
+		<text><![CDATA[Route to the destination is always the same.]]></text>
+	</component>
+
+	<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+	<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+	<component id="txt_a1">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a2">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a3">
+		<text><![CDATA[1]]></text>
+	</component>
+
+	<component id="txt_a4">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a5">
+		<text><![CDATA[1]]></text>
+	</component>
+
+	<!-- Correct Feedback -->
+	<component id="ID_titleCorrect">
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id="ID_correctText">
+		<text><![CDATA[You have successfully classified each routing type description.]]></text>
+	</component>
+
+	<!--Incorrect Feedback -->
+	<component id="ID_titleIncorrect">
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id="ID_IncorrectText">
+		<text><![CDATA[You have not successfully classified each routing type description. Please click Reset to try again.]]></text>
+	</component>
+</textcomponents>

@@ -1,0 +1,6 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Static routes . . .</b><br/> <br/><textformat blockindent='-10'><ul class="bubbleBullets"><li>are not advertised over the network, resulting in better security.</li><li>use less bandwidth than dynamic routing protocols.</li><li>use known paths to send data.</li></ul></textformat>]]></text>
+</component>
+
+</textcomponents>

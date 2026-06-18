@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Pertimbangan Keamanan</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[tembok api]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Kontrol Akses Fisik]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Tambalan dan Pembaruan]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Kembangkan Kebijakan Keamanan]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Lindungi Data Sensitif dengan Kata Sandi]]></text> 
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Anti Virus]]></text> 
+</component>
+
+</textcomponents>

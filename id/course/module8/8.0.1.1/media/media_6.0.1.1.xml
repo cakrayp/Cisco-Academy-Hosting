@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan proses dimana router link-state mempelajari jaringan lain.</li><li>Jelaskan jenis paket yang digunakan oleh router Cisco IOS untuk membangun dan memelihara jaringan OSPF.</li><li>Jelaskan bagaimana router Cisco IOS mencapai konvergensi dalam jaringan OSPF.</li><li>Konfigurasikan ID router OSPF.</li><li>Konfigurasikan OSPFv2 area tunggal dalam jaringan IPv4 kecil yang dirutekan.</li><li>Jelaskan bagaimana OSPF menggunakan biaya untuk menentukan jalur terbaik.</li><li>Verifikasi OSPFv2 area tunggal dalam jaringan kecil yang dirutekan.</li><li>Bandingkan karakteristik dan operasi OSPFv2 dengan OSPFv3.</li><li>Konfigurasikan OSPFv3 area tunggal dalam jaringan kecil yang dirutekan.</li><li>Verifikasi OSPFv3 area tunggal dalam jaringan kecil yang dirutekan.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

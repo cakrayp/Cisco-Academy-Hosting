@@ -1,0 +1,34 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Basic Topology</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Verify the Routing Table</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Summarize the Networks</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Remove Static Routes and Configure Summary Static Route</b>]]></text>
+</component>
+<component id="ID_s5_title">
+<text><![CDATA[<b>Verify the Summary Static Route</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Routes that can be summarized</b>]]></text>
+</component>
+<component id="ID_txt02">
+<text><![CDATA[<b>Summarized into one route</b>]]></text>
+</component>
+<component id="ID_txt03">
+<text><![CDATA[First 22 bits are the same]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Some bits are different]]></text>
+</component>
+<component id="ID_txt05">
+<text><![CDATA[<b>Summary Boundary</b>]]></text>
+</component>
+
+</textcomponents>

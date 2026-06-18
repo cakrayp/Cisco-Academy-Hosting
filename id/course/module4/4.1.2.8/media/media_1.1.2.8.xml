@@ -1,0 +1,98 @@
+<textcomponents>
+	<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas - Mendokumentasikan Pengalamatan Jaringan</b><br/><br/>Dari kumpulan alamat, seret alamat ke tabel dan ke topologi untuk menetapkan alamat untuk setiap perangkat.]]></text>
+</component>
+
+
+<!--Drag and Drop-->
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">172.16.10.1</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">172.16.20.10</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">172.16.20.1</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">10.10.10.1</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">172.16.20.1</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">172.16.10.10</font>]]></text>
+</component>
+
+<component id='ID_drag07'>
+	<text><![CDATA[<font color="#393536">172.16.20.10</font>]]></text>
+</component>
+
+<component id='ID_drag08'>
+	<text><![CDATA[<font color="#393536">10.10.10.2</font>]]></text>
+</component>
+
+<component id='ID_drag09'>
+	<text><![CDATA[<font color="#393536">10.10.10.2</font>]]></text>
+</component>
+
+<component id='ID_drag10'>
+	<text><![CDATA[<font color="#393536">172.16.20.1</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menetapkan semua alamat IP yang diperlukan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menetapkan semua alamat IP yang diperlukan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+<component id='ID_txt01'>
+	<text><![CDATA[<b>Perangkat</b>]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[<b>Antarmuka</b>]]></text>
+</component>
+
+
+<component id='ID_txt03'>
+	<text><![CDATA[<b>Alamat IPv4</b>]]></text>
+</component>
+
+
+<component id='ID_txt04'>
+	<text><![CDATA[<b>Subnet Masker</b>]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[<b>Gerbang Bawaan</b>]]></text>
+</component> 
+  
+</textcomponents>

@@ -1,0 +1,9 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>ADALAH</b>]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>ISO 10589</li><li>IS-IS terintegrasi, Dual IS-IS mendukung jaringan IP</li><li>Digunakan terutama oleh ISP dan operator</li></ul></textformat>]]></text> 
+</component>
+</textcomponents>

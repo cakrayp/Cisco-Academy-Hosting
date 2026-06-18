@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.2.5 Configuring Passive Interfaces</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>Configure Single-Area OSPFv2</h2>
+      </div>
+      <div id="content">
+          <p>Use the<span class="cmd"><b> passive-interface </b></span>router configuration mode command to prevent the transmission of routing messages through a router interface, but still allow that network to be advertised to other routers, as shown in Figure 1. Specifically, the command stops routing messages from being sent out the specified interface. However, the network that the specified interface belongs to is still advertised in routing messages that are sent out other interfaces. </p>
+          <p></p>
+          <p>For instance, there is no need for R1, R2, and R3 to forward OSPF messages out of their LAN interfaces. The configuration identifies the R1 G0/0 interface as passive. </p>
+          <p></p>
+          <p>It is important to know that a neighbor adjacency cannot be formed over a passive interface. This is because link-state packets cannot be sent or acknowledged.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> show ip protocols </b></span>command is then used to verify that the Gigabit Ethernet interface was passive, as shown in Figure 2. Notice that the G0/0 interface is now listed under the Passive Interface(s) section. The network 172.16.1.0 is still listed under Routing for Networks, which means that this network is still included as a route entry in OSPF updates that are sent to R2 and R3.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: OSPFv2 and OSPFv3 both support the<span class="cmd"><b> passive-interface </b></span>command. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to configure the LAN interface as a passive interface on R2.</p>
+          <p></p>
+          <p>As an alternative, all interfaces can be made passive using the<span class="cmd"><b> passive-interface default </b></span>command. Interfaces that should not be passive can be re-enabled using the<span class="cmd"><b> no passive-interface </b></span>command.</p>
+          <p></p>
+          <p>Continue using the Syntax Checker in Figure 3 and configure the LAN interface as a passive interface on R3.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: While completing the syntax checker, notice the OSPF informational state messages as the interfaces are all rendered passive and then the two serial interfaces are made non-passive.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

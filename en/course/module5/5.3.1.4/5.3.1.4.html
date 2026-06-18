@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.3.1.4 Inter-VLAN Routing with Routed Ports</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Layer 3 Switching</h1>
+        <h2>Layer 3 Switching Operation and Configuration</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Routed Ports and Access Ports on a Switch</b>
+          </p>
+          <p></p>
+          <p>A routed port is a physical port that acts similarly to an interface on a router. Unlike an access port, a routed port is not associated with a particular VLAN. A routed port behaves like a regular router interface. Also, because Layer 2 functionality has been removed, Layer 2 protocols, such as STP, do not function on a routed interface. However, some protocols, such as LACP and EtherChannel, do function at Layer 3.</p>
+          <p></p>
+          <p>Unlike Cisco IOS routers, routed ports on a Cisco IOS switch do not support subinterfaces.</p>
+          <p></p>
+          <p>Routed ports are used for point-to-point links. Connecting WAN routers and security devices are examples of the use of routed ports. In a switched network, routed ports are mostly configured between switches in the core and distribution layer. The figure illustrates an example of routed ports in a campus switched network.</p>
+          <p></p>
+          <p>To configure routed ports, use the<span class="cmd"><b> no switchport </b></span>interface configuration mode command on the appropriate ports. For example, the default configuration of the interfaces on Catalyst 3560 switches are Layer 2 interfaces, so they must be manually configured as routed ports. In addition, assign an IP address and other Layer 3 parameters as necessary. After assigning the IP address, verify that IP routing is globally enabled and that applicable routing protocols are configured. </p>
+          <p></p>
+          <p>Following are some of the advantages of routed ports:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>A multilayer switch can have both SVI and routed ports in a single switch.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Multilayer switches forward either Layer 2 or Layer 3 traffic in hardware, helping to perform routing faster.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Routed ports are not supported on Catalyst 2960 Series switches.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

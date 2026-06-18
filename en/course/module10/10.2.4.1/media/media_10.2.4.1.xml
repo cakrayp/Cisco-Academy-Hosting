@@ -1,0 +1,35 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Troubleshooting DHCPv6</b>]]></text>
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+	<tr>
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top">Troubleshooting Task 1:</td>
+		<td bgcolor='#EFF8F7' valign="top">Resolve address conflicts.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#ffffff' valign="top">Troubleshooting Task 2:</td>
+		<td bgcolor='#ffffff' valign="top">Verify allocation method.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top">Troubleshooting Task 3:</td>
+		<td bgcolor='#EFF8F7' valign="top">Test with a static IPv6 address.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#ffffff' valign="top">Troubleshooting Task 4:</td>
+		<td bgcolor='#ffffff' valign="top">Verify switch port configuration.</td>
+	</tr>
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top">Troubleshooting Task 5:</td>
+		<td bgcolor='#EFF8F7' valign="top">Test from the same subnet or VLAN.</td>
+	</tr>
+</table>]]></text>
+</component>
+</textcomponents>
+

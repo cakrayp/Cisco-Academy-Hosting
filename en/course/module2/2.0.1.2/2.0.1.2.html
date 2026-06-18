@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.0.1.2 Activity – Stand By Me</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Basic Switching Concepts and Configuration</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Stand By Me</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario </b>
+            <br/>When you arrived to class today, you were given a number by your instructor to use for this introductory class activity.</p>
+          <p></p>
+          <p>When class begins, your instructor will ask certain students with specific numbers to stand. Your job is to record the standing students’ numbers for each scenario.</p>
+          <p></p>
+          <p>
+            <b>Scenario 1</b>
+            <br/>Students with numbers <b><u>starting</u></b> with the number <b><u>5</u></b> should stand. Record the numbers of the standing students.</p>
+          <p></p>
+          <p>
+            <b>Scenario 2</b>
+            <br/>Students with numbers <b><u>ending</u></b> in <b><u>B</u></b> should stand. Record the numbers of the standing students.  </p>
+          <p></p>
+          <p>
+            <b>Scenario 3</b>
+            <br/>Students with the number <b><u>504C</u></b> should stand. Record the number of the standing student.</p>
+          <p></p>
+          <p>At the end of this activity, divide into small groups and record answers to the Reflection questions on the PDF for this activity.</p>
+          <p></p>
+          <p>Save your work and be prepared to share it with another student or the entire class.</p>
+          <p></p>
+          <p>
+            <a href="../../files/2.0.1.2%20Stand%20By%20Me%20Instructions.pdf" target="_blank">Class Activity - Stand By Me Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

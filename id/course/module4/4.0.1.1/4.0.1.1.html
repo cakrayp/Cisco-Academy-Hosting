@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.0.1.1 Pendahuluan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.0.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konsep Perutean</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>Jaringan memungkinkan orang untuk berkomunikasi, berkolaborasi, dan berinteraksi dalam banyak cara. Jaringan digunakan untuk mengakses halaman web, berbicara menggunakan telepon IP, berpartisipasi dalam konferensi video, berkompetisi dalam permainan interaktif, berbelanja menggunakan Internet, menyelesaikan kursus online, dan banyak lagi.</p>
+<p></p>
+<p>Switch Ethernet berfungsi pada lapisan data link, Layer 2, dan digunakan untuk meneruskan frame Ethernet antar perangkat dalam jaringan yang sama.</p>
+<p>Namun, ketika IP sumber dan alamat IP tujuan berada di jaringan yang berbeda, frame Ethernet harus dikirim ke router.</p>
+<p></p>
+<p>Router menghubungkan satu jaringan ke jaringan lain. Router bertanggung jawab atas pengiriman paket melalui jaringan yang berbeda. Tujuan paket IP mungkin adalah server web di negara lain atau server email di jaringan area lokal.</p>
+<p></p>
+<p>Router menggunakan tabel routingnya untuk menentukan jalur terbaik yang digunakan untuk meneruskan paket. Merupakan tanggung jawab router untuk mengirimkan paket-paket tersebut secara tepat waktu. Efektivitas komunikasi internetwork sangat bergantung pada kemampuan router untuk meneruskan paket dengan cara seefisien mungkin.</p>
+<p></p>
+<p>Ketika sebuah host mengirimkan paket ke perangkat di jaringan IP yang berbeda, paket tersebut diteruskan ke gateway default karena perangkat host tidak dapat berkomunikasi secara langsung dengan perangkat di luar jaringan lokal. Gateway default adalah tujuan yang merutekan lalu lintas dari jaringan lokal ke perangkat di jaringan jarak jauh. Ini sering digunakan untuk menghubungkan jaringan lokal ke Internet.</p>
+<p></p>
+<p>Bab ini juga akan menjawab pertanyaan, “Apa yang dilakukan router terhadap paket yang diterima dari satu jaringan dan ditujukan ke jaringan lain?” Detail tabel routing akan diperiksa termasuk rute terhubung, statis, dan dinamis.</p>
+<p></p>
+<p>Karena router dapat merutekan paket antar jaringan, perangkat di jaringan berbeda dapat berkomunikasi. Bab ini akan memperkenalkan router, perannya dalam jaringan, komponen perangkat keras dan perangkat lunak utamanya, dan proses routing. Latihan yang mendemonstrasikan cara mengakses router, mengkonfigurasi pengaturan dasar router, dan memverifikasi pengaturan akan disediakan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

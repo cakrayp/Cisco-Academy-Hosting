@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.1.1.1 Evolusi Protokol Perutean Dinamis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Perutean Dinamis</h1>
+<h2>Operasi Protokol Perutean Dinamis</h2>
+</div>
+<div id="content">
+<p>Protokol routing dinamis telah digunakan dalam jaringan sejak akhir tahun 1980an. Salah satu protokol routing pertama adalah Routing Information Protocol (RIP). RIP versi 1 (RIPv1) dirilis pada tahun 1988, namun beberapa algoritma dasar dalam protokol tersebut digunakan pada Advanced Research Projects Agency Network (ARPANET) sejak tahun 1969.</p>
+<p></p>
+<p>Ketika jaringan berevolusi dan menjadi lebih kompleks, protokol routing baru muncul. Protokol perutean RIP diperbarui untuk mengakomodasi pertumbuhan lingkungan jaringan, menjadi RIPv2.  Namun, versi RIP yang lebih baru masih belum dapat diterapkan pada implementasi jaringan yang lebih besar saat ini.  Untuk memenuhi kebutuhan jaringan yang lebih besar, dua protokol perutean tingkat lanjut dikembangkan: Open Shortest Path First (OSPF) dan Intermediate System-to-Intermediate System (IS-IS). Cisco mengembangkan Interior Gateway Routing Protocol (IGRP) dan Enhanced IGRP (EIGRP), yang juga dapat diterapkan dengan baik dalam implementasi jaringan yang lebih besar.</p>
+<p></p>
+<p>Selain itu, ada kebutuhan untuk menghubungkan internetwork yang berbeda dan menyediakan routing di antara mereka. Border Gateway Protocol (BGP) sekarang digunakan antara penyedia layanan Internet (ISP).  BGP juga digunakan antara ISP dan klien pribadinya yang lebih besar untuk bertukar informasi perutean.</p>
+<p></p>
+<p>Gambar 1 menampilkan garis waktu kapan berbagai protokol diperkenalkan.</p>
+<p></p>
+<p>Gambar 2 mengklasifikasikan protokol.</p>
+<p></p>
+<p>Dengan munculnya banyak perangkat konsumen yang menggunakan IP, ruang pengalamatan IPv4 hampir habis; dengan demikian, IPv6 telah muncul. Untuk mendukung komunikasi berbasis IPv6, versi terbaru dari protokol perutean IP telah dikembangkan, lihat baris IPv6 pada gambar.</p>
+<p></p>
+<p>RIP adalah protokol perutean dinamis yang paling sederhana dan digunakan di bagian ini untuk memberikan pemahaman protokol perutean tingkat dasar.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

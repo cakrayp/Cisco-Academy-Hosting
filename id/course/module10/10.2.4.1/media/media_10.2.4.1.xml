@@ -1,0 +1,35 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Memecahkan masalah DHCPv6</b>]]></text>
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top">Pemecahan Masalah Tugas 1:</td>
+<td bgcolor="#EFF8F7" valign="top">Menyelesaikan konflik-konflik yang ada.</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top">Tugas Pemecahan Masalah 2:</td>
+<td bgcolor="#ffffff" valign="top">Verifikasi metode alokasi.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top">Pemecahan Masalah Tugas 3:</td>
+<td bgcolor="#EFF8F7" valign="top">Uji dengan alamat statistik IPv6.</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top">Pemecahan Masalah Tugas 4:</td>
+<td bgcolor="#ffffff" valign="top">Verifikasi konfigurasi port saklar.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top">Pemecahan Masalah Tugas 5:</td>
+<td bgcolor="#EFF8F7" valign="top">Uji dari subnet atau VLAN yang sama.</td>
+</tr>
+</table>]]></text>
+</component>
+</textcomponents>
+

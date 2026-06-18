@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.5.4.3 Entri Jaringan IPv6 Jarak Jauh</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.5.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Tabel Perutean</h1>
+<h2>Analisis Tabel Perutean IPv6</h2>
+</div>
+<div id="content">
+<p>Gambar 1 menyoroti entri tabel routing untuk tiga jaringan jarak jauh (yaitu, R2 LAN, R3 LAN, dan link antara R2 dan R3). Ketiga entri tersebut ditambahkan oleh EIGRP.</p>
+<p></p>
+<p>Gambar 2 menampilkan entri tabel routing pada R1 untuk rute ke jaringan jarak jauh 2001:DB8:CAFE:3::/64 pada R3. Entri tersebut mengidentifikasi informasi berikut:</p>
+<p>
+<ul>
+<li>
+<b>Sumber rute</b>- Mengidentifikasi bagaimana rute itu dipelajari. Kode umum termasuk O (OSPF), D (EIGRP), R (RIP), dan S (Rute statis).</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Jaringan tujuan</b>- Mengidentifikasi alamat jaringan IPv6 jarak jauh.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Jarak administratif</b>- Mengidentifikasi seberapa dapat dipercayanya sumber rute. IPv6 menggunakan jarak yang sama dengan IPv4.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Metrik</b>- Mengidentifikasi nilai yang ditetapkan untuk menjangkau jaringan jarak jauh. Nilai yang lebih rendah menunjukkan rute pilihan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Lompatan berikutnya</b>- Mengidentifikasi alamat IPv6 dari router berikutnya untuk meneruskan paket.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Antarmuka keluar</b>- Mengidentifikasi antarmuka keluar yang digunakan untuk meneruskan paket menuju tujuan akhir.</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika paket IPv6 tiba di antarmuka router, router memeriksa header IPv6 dan mengidentifikasi alamat IPv6 tujuan. Router kemudian melanjutkan melalui proses pencarian router berikut.</p>
+<p></p>
+<p>Router memeriksa rute jaringan level 1 untuk mendapatkan kecocokan terbaik dengan alamat tujuan paket IPv6. Sama seperti IPv4, kecocokan terlama adalah kecocokan terbaik. Misalnya, jika ada beberapa kecocokan dalam tabel routing, router akan memilih rute dengan kecocokan terpanjang.  Pencocokan dilakukan dengan mencocokkan bit paling kiri dari alamat IPv6 tujuan paket dengan awalan IPv6 dan panjang awalan di tabel perutean IPv6.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

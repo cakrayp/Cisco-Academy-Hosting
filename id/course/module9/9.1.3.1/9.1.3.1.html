@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.3.1 Memperkenalkan Masking ACL Wildcard</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Masker Wildcard di ACL</h2>
+</div>
+<div id="content">
+<p>
+<b>Penyembunyian Wildcard</b>
+</p>
+<p></p>
+<p>IPv4 ACE mencakup penggunaan masker wildcard. Wildcard mask adalah rangkaian 32 digit biner yang digunakan oleh router untuk menentukan bit alamat mana yang akan diperiksa kecocokannya.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Berbeda dengan ACL IPv4, ACL IPv6 tidak menggunakan masker wildcard. Sebaliknya, panjang awalan digunakan untuk menunjukkan berapa banyak alamat sumber atau tujuan IPv6 yang harus cocok. ACL IPv6 dibahas nanti di bab ini.</p>
+<p></p>
+<p>Seperti halnya subnet mask, angka 1 dan 0 pada wildcard mask mengidentifikasi cara menangani bit alamat IP yang sesuai. Namun, dalam masker wildcard, bit-bit ini digunakan untuk tujuan berbeda dan mengikuti aturan berbeda.</p>
+<p></p>
+<p>Subnet mask menggunakan biner 1 dan 0 untuk mengidentifikasi jaringan, subnet, dan bagian host dari alamat IP. Masker wildcard menggunakan biner 1 dan 0 untuk memfilter alamat IP individual atau grup alamat IP untuk mengizinkan atau menolak akses ke sumber daya.</p>
+<p></p>
+<p>Masker wildcard dan subnet mask berbeda dalam cara mencocokkan biner 1 dan 0. Masker wildcard menggunakan aturan berikut untuk mencocokkan biner 1 dan 0:</p>
+<p></p>
+<p>
+<ul>
+<li>Wildcard mask bit 0 - Cocokkan nilai bit yang sesuai di alamat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Wildcard mask bit 1 - Abaikan nilai bit yang sesuai di alamat.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 1 menunjukkan bagaimana masker wildcard yang berbeda memfilter alamat IP. Dalam contoh ini, ingatlah bahwa biner 0 menandakan bit yang harus cocok, dan biner 1 menandakan bit yang dapat diabaikan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Masker wildcard sering disebut sebagai masker terbalik. Alasannya adalah, tidak seperti subnet mask di mana biner 1 sama dengan kecocokan dan biner 0 tidak cocok, dalam wildcard mask yang terjadi adalah kebalikannya.</p>
+<p></p>
+<p>
+<b>Menggunakan Masker Wildcard</b>
+</p>
+<p></p>
+<p>Tabel pada Gambar 2 menunjukkan hasil penerapan masker wildcard 0.0.255.255 ke alamat IPv4 32-bit. Ingatlah bahwa biner 0 menunjukkan nilai yang cocok.</p>
+<p></p>
+<p>Masker wildcard juga digunakan saat mengonfigurasi beberapa protokol perutean IPv4, seperti OSPF, untuk mengaktifkan protokol pada antarmuka tertentu.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

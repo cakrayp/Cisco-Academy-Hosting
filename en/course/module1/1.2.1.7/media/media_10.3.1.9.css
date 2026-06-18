@@ -1,0 +1,29 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media.css');
+
+html, body {
+	margin:0;
+	height:98%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+
+#Helpfeedback{background: url("10.3.1.9.png") no-repeat scroll left top transparent;
+    font-size: 11px;
+    height: 307px;
+    width: 476px;}
+	
+#Helpfeedback img { float:right;}
+#Helpfeedback p{padding: 5px 0 0 12px !important;
+    width: 457px !important;}
+#Checkfeedback{background:url(feedback4.png) left top no-repeat;font-size:11px; width:180px;height:104px; color:#442557;}
+
+#Checkfeedback p{padding:3px 0 0 5px}
+#ID_HELP_BODY{height:258px;overflow-y:scroll;}
+#ccloseBtn{float:right; display:inline;}
+#hcloseBtn{padding:5px 2px 0 38px}

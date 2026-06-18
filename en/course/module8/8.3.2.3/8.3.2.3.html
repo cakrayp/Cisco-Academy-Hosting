@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.3.2.3 Assigning Link-Local Addresses</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Single-Area OSPFv3</h1>
+        <h2>Configuring OSPFv3</h2>
+      </div>
+      <div id="content">
+          <p>Link-local addresses created using the EUI-64 format or in some cases, random interface IDs, make it difficult to recognize and remember those addresses. Because IPv6 routing protocols use IPv6 link-local addresses for unicast addressing and next-hop address information in the routing table, it is common practice to make it an easily recognizable address. </p>
+          <p></p>
+          <p>Configuring the link-local address manually provides the ability to create an address that is recognizable and easier to remember. As well, a router with several interfaces can assign the same link-local address to each IPv6 interface. This is because the link-local address is only required for local communications. </p>
+          <p></p>
+          <p>Link-local addresses can be configured manually using the same interface command used to create IPv6 global unicast addresses, but appending the<span class="cmd"><b> link-local </b></span>keyword to the<span class="cmd"><b> ipv6 address </b></span>command. </p>
+          <p></p>
+          <p>A link-local address has a prefix within the range FE80 to FEBF. When an address begins with this hextet (16-bit segment) the<span class="cmd"><b> link-local </b></span>keyword must follow the address. </p>
+          <p></p>
+          <p>The example in Figure 1 configures the same link-local address FE80::1 on the three R1 interfaces. FE80::1 was chosen to make it easy to remember the link-local addresses of R1. </p>
+          <p></p>
+          <p>A quick look at the interfaces as shown in Figure 2 confirms that the R1 interface link-local addresses have been changed to FE80::1.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to configure and verify link-local address FE80::2 on R2, and the link-local address FE80::3 on R3.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.3.2.1 Case Study</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+    	myLayout = $('body').layout({
+          west__size:300,
+          stateManagement__enabled: true,
+          maskContents: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshooting NAT</h1>
+        <h2>Troubleshooting NAT Case Study</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Case Study 1</b>
+          </p>
+          <p>Figure 1 shows that hosts from the 192.168.0.0/16 LANs, PC1 and PC2 cannot ping servers on the outside network, Svr1 and Svr2.</p>
+          <p></p>
+          <p>To begin troubleshooting the problem, use the <span class="cmd"><b>show ip nat translations</b></span> command to see if any translations are currently in the NAT table. The output in the figure shows that no translations are in the table.</p>
+          <p></p>
+          <p>The <span class="cmd"><b>show ip nat statistics</b></span> command is used to determine whether any translations have ever taken place and identify the interfaces between which translation should be occurring. </p>
+          <p></p>
+          <p>As shown in the output of Figure 2, the NAT counters are at 0, verifying that no translation has occurred. By comparing the output with the topology shown in Figure 1, notice that the router interfaces are incorrectly defined as NAT inside or NAT outside. The incorrect configuration can also be verified using the <span class="cmd"><b>show running-config</b></span> command.</p>
+          <p></p>
+          <p>The current NAT interface configuration must be deleted from the interfaces before applying the correct configuration.</p>
+          <p></p>
+          <p>After correctly defining the NAT inside and outside interfaces, another ping from PC1 to Svr1 fails. Using the <span class="cmd"><b>show ip nat translations</b></span> and <span class="cmd"><b>show ip nat statistics</b></span> commands again verifies that translations are still not occurring.</p>
+          <p></p>
+          <p>As shown in Figure 3, the <span class="cmd"><b>show access-lists</b></span> command is used to determine whether the ACL that the NAT command references is permitting all of the necessary networks. Examining the output indicates that an incorrect wildcard bit mask has been used in the ACL that defines the addresses that need to be translated. The wildcard mask is only permitting the 192.168.0.0/24 subnet.</p>
+          <p></p>
+          <p>As shown in the figure, the access list is first removed and then reconfigured using the correct wildcard mask.</p>
+          <p></p>
+          <p>Next, another ping is generated from PC1 to Svr1 and this time the ping succeeds. </p>
+          <p></p>
+          <p>As shown in Figure 4, the <span class="cmd"><b>show ip nat translations</b></span> and <span class="cmd"><b>show ip nat statistics</b></span> commands are used to verify that the NAT translation is occurring.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" src="media/index.html" frameborder="0" class="ui-layout-center" alt="interactive graphic" longdesc="media_11.3.2.1_longdesc.txt"></iframe>
+  </body>
+</html>

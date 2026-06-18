@@ -1,0 +1,100 @@
+<textcomponents>
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>IPv6 Topology</b>]]></text>
+</component>
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Statically Assign an IPv6 Address to PC1</b>]]></text>
+</component>
+<component id='ID_s3_title'>
+	<text><![CDATA[<b>Configure the R1 G0/0 Interface</b>]]></text>
+</component>
+<component id='ID_s4_title'>
+	<text><![CDATA[<b>Configure the R1 G0/1 Interface</b>]]></text>
+</component>
+<component id='ID_s5_title'>
+	<text><![CDATA[<b>Configure the R1 Serial 0/0/0 Interface</b>]]></text>
+</component>
+<component id='ID_s6_title'>
+	<text><![CDATA[<b>Configure the R2 Interfaces</b>]]></text>
+</component>
+
+
+
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Considerations and requirements process</b>]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Determine end-user requirements</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<b>Determine choices and select OS</b>]]></text> 
+  </component>
+<component id="transcript">
+  <text><![CDATA[<b>transcript goes here</b>]]></text> 
+  </component>
+
+
+<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+	</component>
+
+
+<component id="ID_SC" fontFace='Courier New' fontSize="10">
+		<text></text>		
+		<feedback id="fb"><![CDATA[<b>***</b><font size = '10' face="Arial" color="#0000FF" >You must enter the exact and full command.</font><b>***</b> 
+		]]></feedback>		
+		<existingcommands><![CDATA[<font size = '10' face="Arial" class="font10px"><b>Configure the GigabitEthernet 0/0 interface with the IPv6 address 2001:db8:acad:4::1/64. Describe the link as 'Link to LAN 3' and activate the interface.</b></font>]]></existingcommands>
+		<command prompt="R2(config)#">
+		    <correctresponse><![CDATA[interface gigabitethernet 0/0]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ipv6 address 2001:db8:acad:4::1/64]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[description Link to LAN 3]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+		    <deviceresponse><![CDATA[<font size='10' class="font10px">%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up<br>%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up<br/></font>]]></deviceresponse>
+		    <instruction><![CDATA[<font size = '10' face="Arial" class="font10px"><b>Configure the GigabitEthernet 0/1 interface with the IPv6 address 2001:db8:acad:5::1/64. Describe the link as 'Link to LAN 4' and activate the interface.</b></font>]]></instruction>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[interface gigabitethernet 0/1]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ipv6 address 2001:db8:acad:5::1/64]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[description Link to LAN 4]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+		    <deviceresponse><![CDATA[<font size='10' class="font10px">%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up<br>%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up<br></font>]]></deviceresponse>
+		    <instruction><![CDATA[<font size = '10' face="Arial" class="font10px"><b>Configure the Serial 0/0/0 interface with the IP address 2001:db8:acad:3::2/64. Describe the link as 'Link to R1' and activate the interface.</b></font>]]></instruction>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[interface Serial 0/0/0]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ip address 2001:db8:acad:3::2/64]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[description Link to R1]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+		    <deviceresponse><![CDATA[<font size='10' class="font10px">%LINK-5-CHANGED: Interface Serial0/0/0, changed state to up<br>%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/0, changed state to up<br><br></font>]]></deviceresponse>
+		    <instruction><![CDATA[<font size = '10' face="Arial"  class="syntaxBottomLine"><b>You successfully configured the R2 IPv6 Router interfaces.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+
+</textcomponents>

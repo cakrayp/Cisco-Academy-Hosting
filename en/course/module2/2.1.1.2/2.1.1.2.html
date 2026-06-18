@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.1.1.2 Recovering From a System Crash</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Basic Switch Configuration</h1>
+        <h2>Configure a Switch with Initial Settings</h2>
+      </div>
+      <div id="content">
+          <p>The boot loader provides access into the switch if the operating system cannot be used because of missing or damaged system files. The boot loader has a command-line that provides access to the files stored in flash memory. </p>
+          <p></p>
+          <p>The boot loader can be accessed through a console connection following these steps:</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Connect a PC by console cable to the switch console port. Configure terminal emulation software to connect to the switch.</p>
+          <p>
+            <b>Step 2. </b>Unplug the switch power cord. </p>
+          <p>
+            <b>Step 3. </b>Reconnect the power cord to the switch and, within 15 seconds, press and hold down the <b>Mode</b> button while the System LED is still flashing green. </p>
+          <p>
+            <b>Step 4. </b>Continue pressing the <b>Mode</b> button until the System LED turns briefly amber and then solid green; then release the <b>Mode</b> button.</p>
+          <p>
+            <b>Step 5. </b>The boot loader<span class="cmd"><b> switch: </b></span>prompt appears in the terminal emulation software on the PC.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> boot loader </b></span>command line supports commands to format the flash file system, reinstall the operating system software, and recover from a lost or forgotten password. For example, the<span class="cmd"><b> dir </b></span>command can be used to view a list of files within a specified directory as shown in the figure. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

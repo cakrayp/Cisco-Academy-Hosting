@@ -1,0 +1,49 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Sintaks Rute Statis Default</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="mtitle" width="70px"><font color="#ffffff"><b>Parameter</b></font></td>
+<td bgcolor="#077A77" class="mtitle" width="380px"><font color="#ffffff"><b>Keterangan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" face="Courier New">0.0.0.0</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536">Matches any network address.</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" face="Courier New">0.0.0.0</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536">Matches any subnet mask.</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" face="Courier New">ip-address</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536">
+<textformat blockindent="-18">
+<li>Biasanya disebut sebagai alamat IP router hop berikutnya.</li>
+<li>Biasanya digunakan saat menghubungkan ke media penyiaran (yaitu Ethernet).</li>
+<li>Biasanya membuat pencarian rekursif.</li>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" face="Courier New">exit-intf</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536">
+<textformat blockindent="-18">
+<li>Gunakan antarmuka keluar untuk meneruskan paket ke jaringan tujuan.</li>
+<li>Juga disebut sebagai rute statis yang terpasang langsung.</li>
+<li>Biasanya digunakan saat menghubungkan dalam konfigurasi point-to-point.</li>
+</textformat></font></td>
+</tr>
+</table>
+]]>
+		</text>
+	</component>
+
+
+</textcomponents>

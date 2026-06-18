@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.2.1.2 Verify Switch Configuration</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshoot Inter-VLAN Routing</h1>
+        <h2>Inter-VLAN Configuration Issues</h2>
+      </div>
+      <div id="content">
+          <p>When a problem is suspected with a switch configuration, use the various verification commands to examine the configuration and identify the problem.</p>
+          <p></p>
+          <p>The screen output in Figure 1 shows the results of the<span class="cmd"><b> show interfaces </b></span><span class="cmd"><i>interface-id</i></span><span class="cmd"><b> switchport </b></span>command. Assume that you have issued these commands because you suspect that VLAN 10 has not been assigned to port F0/4 on switch S1. The top highlighted area shows that port F0/4 on switch S1 is in access mode, but it does not show that it has been directly assigned to VLAN 10. The bottom highlighted area confirms that port F0/4 is still set to the default VLAN. The<span class="cmd"><b> show running-config </b></span>and the<span class="cmd"><b> show interface </b></span><span class="cmd"><i>interface-id</i></span><span class="cmd"><b> switchport </b></span>commands are useful for identifying VLAN assignment and port configuration issues.</p>
+          <p></p>
+          <p>Figure 2 shows that after a device configuration has changed, communication between router R1 and switch S1 has stopped. The link between the router and the switch is supposed to be a trunk link. The screen output shows the results of the<span class="cmd"><b> show interface </b></span><span class="cmd"><i>interface_id</i></span><span class="cmd"><b> switchport </b></span>and the<span class="cmd"><b> show running-config </b></span>commands. The top highlighted area confirms that port F0/4 on switch S1 is in access mode, not trunk mode. The bottom highlighted area also confirms that port F0/4 has been configured for access mode.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

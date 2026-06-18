@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Connecting to a Stub Network</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Stub Network]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Network]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Stub Router]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[No need to use a dynamic routing protocol with R1 to reach 172.16.3.0/24.<br/><br/>I can simply use a static route to reach the stub network.]]></text> 
+  </component>
+
+</textcomponents>

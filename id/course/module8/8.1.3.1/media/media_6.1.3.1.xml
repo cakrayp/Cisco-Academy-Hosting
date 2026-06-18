@@ -1,0 +1,104 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>Transisi Melalui Negara-negara OSPF</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+ <text><![CDATA[Negara Bagian Bawah]]></text>
+</component>
+
+<component id="ID_txt02">
+ <text><![CDATA[Negara Init]]></text> 
+</component>
+  
+<component id="ID_txt03">
+  <text><![CDATA[Keadaan Dua Arah]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[Status ExStart]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[Negara Pertukaran]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Memuat Status]]></text> 
+</component>
+  
+<component id="ID_txt07">
+  <text><![CDATA[Negara Penuh]]></text> 
+</component>
+  
+<component id="ID_txt08">
+  <text><![CDATA[Membangun Kedekatan Tetangga]]></text> 
+</component>
+  
+<component id="ID_txt09">
+  <text><![CDATA[Sinkronisasi Database OSPF]]></text> 
+</component>
+  
+  
+<component id="ID_btn01_body">
+<text><![CDATA[<textformat blockindent="-18"><ul><li>Tidak ada paket Hello yang diterima = Turun.</li><li>Router mengirimkan paket Hello.</li><li>Transisi ke status Init.</li></ul></textformat>]]></text>
+</component>
+
+
+<component id="ID_btn02_body">
+<text><![CDATA[<textformat blockindent="-18"><ul><li>Paket halo diterima dari tetangga.</li><li>Mereka berisi ID Router router pengirim.</li><li>Transisi ke keadaan Dua Arah.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn03_body">
+<text><![CDATA[<textformat blockindent="-18"><ul><li>Pada tautan Ethernet, pilih DR, dan BDR.</li><li>Transisi ke status ExStart.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn04_body">
+<text><![CDATA[<textformat blockindent="-18"><ul><li>Negosiasikan hubungan master / slave dan nomor urut paket DBD.</li><li>Master memulai pertukaran paket DBD.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn05_body">
+<text><![CDATA[<textformat blockindent="-18"><ul><li>Router menukar paket DBD.</li><li>Jika informasi router tambahan diperlukan maka transisi ke Memuat; jika tidak, transisi ke Penuh.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn06_body">
+<text>
+<![CDATA[<textformat blockindent="-18"><ul><li>LSR dan LSU digunakan untuk mendapatkan informasi rute tambahan.</li><li>Rute diproses menggunakan algoritma SPF.</li><li>Transisi ke status Penuh.</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_btn07_body">
+<text>
+<![CDATA[Router telah berkumpul.]]>
+</text>
+</component>
+
+<component id="ID_btn01_header">
+	<text><![CDATA[<b>Negara Bagian Bawah</b>]]></text>
+</component>
+
+<component id="ID_btn02_header">
+	<text><![CDATA[<b>Negara Init</b>]]></text> 
+ </component>
+ 
+<component id="ID_btn03_header">
+ 	<text><![CDATA[<b>Keadaan Dua Arah</b>]]></text> 
+ </component>
+ 
+<component id="ID_btn04_header">
+ 	<text><![CDATA[<b>Status ExStart</b>]]></text> 
+</component>
+
+<component id="ID_btn05_header">
+	<text><![CDATA[<b>Negara Pertukaran</b>]]></text> 
+</component>
+
+<component id="ID_btn06_header">
+	<text><![CDATA[<b>Memuat Status</b>]]></text> 
+</component>
+  
+<component id="ID_btn07_header">
+	<text><![CDATA[<b>Negara Penuh</b>]]></text> 
+</component>
+
+</textcomponents>

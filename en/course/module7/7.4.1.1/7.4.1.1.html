@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.4.1.1 Shortest Path First Protocols</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.4.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Link-State Dynamic Routing</h1>
+        <h2>Link-State Routing Protocol Operation</h2>
+      </div>
+      <div id="content">
+          <p>Link-state routing protocols are also known as shortest path first protocols and are built around Edsger Dijkstra's shortest path first (SPF) algorithm.  The SPF algorithm is discussed in more detail in a later section. </p>
+          <p></p>
+          <p>The IPv4 link-state routing protocols are shown in the figure:</p>
+          <p>
+            <ul>
+              <li>Open Shortest Path First (OSPF)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Intermediate System-to-Intermediate System (IS-IS)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Link-state routing protocols have the reputation of being much more complex than their distance vector counterparts. However, the basic functionality and configuration of link-state routing protocols is equally straight-forward.</p>
+          <p></p>
+          <p>Just like RIP and EIGRP, basic OSPF operations can be configured using the:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>router ospf </b>
+                </span>
+                <span class="cmd">
+                  <i>process-id</i>
+                </span>
+                <span class="cmd">
+                  <b></b>
+                </span>global configuration command  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>network </b>
+                </span>command to advertise networks</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

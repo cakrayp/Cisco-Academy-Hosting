@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.4.3 Configuring Port Forwarding with IOS</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Port Forwarding</h2>
+      </div>
+      <div id="content">
+          <p>Implementing port forwarding with IOS commands is similar to the commands used to configure static NAT.  Port forwarding is essentially a static NAT translation with a specified TCP or UDP port number.</p>
+          <p></p>
+          <p>Figure 1 shows the static NAT command used to configure port forwarding using IOS. </p>
+          <p></p>
+          <p>Figure 2 shows an example of configuring port forwarding using IOS commands on router R2.  192.168.10.254 is the inside local IPv4 address of the web server listening on port 80. Users will access this internal web server using the global IP address 209.165.200.225, a globally unique public IPv4 address. In this case, it is the address of the Serial 0/1/0 interface of R2. The global port is configured as 8080. This will be the destination port used, along with the global IPv4 address of 209.165.200.225 to access the internal web server. Notice within the NAT configuration, the following command parameters:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>local-ip</i>
+                </span> = 192.168.10.254</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>local-port</i>
+                </span> = 80</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>global-ip</i>
+                </span> = 209.165.200.225</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>global-port</i>
+                </span> = 8080</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>When a well-known port number is not being used, the client must specify the port number in the application.</p>
+          <p></p>
+          <p>Like other types of NAT, port forwarding requires the configuration of both the inside and outside NAT interfaces.</p>
+          <p></p>
+          <p>Similar to static NAT, the <span class="cmd"><b>show ip nat translations</b></span> command can be used to verify the port forwarding, as shown in Figure 3. </p>
+          <p></p>
+          <p>In the example, when the router receives the packet with the inside global IPv4 address of 209.165.200.225 and a TCP destination port 8080, the router performs a NAT table lookup using the destination IPv4 address and destination port as the key. The router then translates the address to the inside local address of host 192.168.10.254 and destination port 80. R2 then forwards the packet to the web server. For return packets from the web server back to the client, this process is reversed.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

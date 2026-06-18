@@ -1,0 +1,58 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+/*#flashContent,#flashContent div {border:1px solid red;}*/
+
+/*#commonMediaText #slide_1 {font-size:10px;}*/
+
+#ID_s2_01 {font-size:10px !important;line-height: 15px;}
+#ID_s3_01 { font-size:10px !important; line-height:18px;}
+.flooter { float:left;}
+.connect {
+    background-image: url("connector.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 21px;
+    margin-left: 3px;
+    margin-top: 5px;
+    width: 10px;
+}
+.num1 {
+   background-color: #FB9652;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    display: block;
+    float: left;
+    font-weight: bolder;
+    height: 16px;
+    margin-top: 6px;
+    text-align: center;
+    width: 18px;
+}
+
+.num2 {
+    background-color: #FB9652;
+    border-radius: 14px 14px 14px 14px;
+    color: white;
+    display: block;
+    float: left;
+    font-weight: bolder;
+    height: 16px;
+    margin-left: 7px;
+    margin-top: 0;
+    text-align: center;
+    width: 18px;
+}

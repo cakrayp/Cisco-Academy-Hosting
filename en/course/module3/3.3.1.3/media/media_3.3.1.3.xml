@@ -1,0 +1,72 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>PVLAN Edge</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Unprotected Port]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Protected Port]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Protected Port]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[Data traffic is not permitted.]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Data traffic is permitted.]]></text>
+</component>
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>PVLAN Edge</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[&lt;output omitted&gt;]]></text>
+</component>
+
+<!--Slide 3-->
+<component id="ID_s3_title">
+<text><![CDATA[<b>PVLAN Edge</b>]]></text>
+</component>
+<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+</component>
+<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+</component>
+<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+</component>
+<component id="ID_SC3" fontFace='Courier New' fontSize="10">
+		<feedback id="fb"><![CDATA[<b><font  face="Arial" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font  face="Arial"><b>Configure the PVLAN Edge feature on g0/1. Return directly to privileged EXEC mode when complete.</b></font>]]></existingcommands>
+		<command prompt="S1(config)#">
+			<correctresponse><![CDATA[interface g0/1]]></correctresponse>
+		</command>
+		<command prompt="S1(config-if)#">
+			<correctresponse><![CDATA[switchport protected]]></correctresponse>
+		</command>
+		<command prompt="S1(config-if)#">
+			<correctresponse><![CDATA[end]]></correctresponse>
+				<deviceresponse><![CDATA[<font face="Courier New">S1#<br>*Mar 31, 09:34:24.3434: %SYS-5-CONFIG_I: Configured from console by console<br>S1#</font>]]></deviceresponse>
+			<instruction><![CDATA[<font  face="Arial"><b>Verify the the PVLAN Edge configuration by displaying the switchport information for g0/1.</font>]]></instruction>
+		</command>
+		<command prompt="S1#">
+			<correctresponse><![CDATA[show interfaces g0/1 switchport]]></correctresponse>
+				<deviceresponse><![CDATA[<font face="Courier New">Name: Gi0/1 <br>Switchport: Enabled <br>Administrative Mode: dynamic auto <br>Operational Mode: down <br>Administrative Trunking Encapsulation: dot1q <br>Negotiation of Trunking: On <br>Access Mode VLAN: 1 (default) <br>Trunking Native Mode VLAN: 1 (default) <br>Administrative Native VLAN tagging: enabled <br>Voice VLAN: none <br>Administrative private-vlan host-association: none <br>Administrative private-vlan mapping: none <br>Administrative private-vlan trunk native VLAN: none <br>Administrative private-vlan trunk Native VLAN tagging: enabled <br>Administrative private-vlan trunk encapsulation: dot1q <br>Administrative private-vlan trunk normal VLANs: none <br>Administrative private-vlan trunk associations: none <br>Administrative private-vlan trunk mappings: none <br>Operational private-vlan: none <br>Trunking VLANs Enabled: ALL <br>Pruning VLANs Enabled: 2-1001 <br>Capture Mode Disabled <br>Capture VLANs Allowed: ALL <br> <br>Protected: true <br>Unknown unicast blocked: disabled <br>Unknown multicast blocked: disabled <br>Appliance trust: none</font>]]></deviceresponse>
+			<instruction><![CDATA[<font  face="Arial"><b>You successfully configured and verified the PVLAN Edge feature.</font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+</textcomponents>

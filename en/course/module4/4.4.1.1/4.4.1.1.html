@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.4.1.1 Activity - We Really Could Use a Map!</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.4.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity -</b>
+            <b>We Really Could Use a Map!</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario</b>
+          </p>
+          <p></p>
+          <p>Use the Ashland and Richmond routing tables shown in the file provided with this activity. </p>
+          <p>With the help of a classmate, draw a network topology using the information from the tables.  </p>
+          <p>To assist you with this activity, follow these guidelines:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Start with the Ashland router</b> - use its routing table to identify ports and IP addresses/networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Add the Richmond router</b> - use its routing table to identify ports and IP addresses/networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Add any other intermediary and end devices as specified by the tables.</li>
+            </ul>
+          </p>
+          <p>In addition, record answers from your group to the reflection questions provided with this activity.</p>
+          <p>Be prepared to share your work with another group and/or the class.</p>
+          <p></p>
+          <p>
+            <a href="../../files/4.4.1.1%20We%20Really%20Could%20Use%20A%20Map%20Instructions.pdf" target="_blank">Class Activity - We Really Could Use A Map! Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

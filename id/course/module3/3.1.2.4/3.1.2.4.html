@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.1.2.4 VLAN Asli dan Penandaan 802.1Q</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Segmentasi VLAN</h1>
+<h2>VLAN dalam Lingkungan Multi-Switched</h2>
+</div>
+<div id="content">
+<p>
+<b>Bingkai yang Ditandai pada VLAN Asli</b>
+</p>
+<p></p>
+<p>Beberapa perangkat yang mendukung trunking, menambahkan tag VLAN ke lalu lintas VLAN asli. Lalu lintas kontrol yang dikirim pada VLAN asli tidak boleh diberi tag. Jika port trunk 802.1Q menerima frame yang diberi tag dengan ID VLAN yang sama dengan VLAN asli, maka frame tersebut akan dibuang. Akibatnya, ketika mengkonfigurasi port switch pada switch Cisco, konfigurasikan perangkat sehingga mereka tidak mengirimkan frame yang diberi tag pada VLAN asli. Perangkat dari vendor lain yang mendukung frame yang diberi tag pada VLAN asli termasuk telepon IP, server, router, dan switch non-Cisco.</p>
+<p></p>
+<p>
+<b>Bingkai Tanpa Tanda pada VLAN Asli</b>
+</p>
+<p></p>
+<p>Ketika port trunk switch Cisco menerima frame yang tidak diberi tanda (yang tidak biasa dalam jaringan yang dirancang dengan baik), port tersebut meneruskan frame tersebut ke VLAN asli. Jika tidak ada perangkat yang terkait dengan VLAN asli (hal ini biasa terjadi) dan tidak ada port trunk lainnya (hal ini biasa terjadi), maka frame akan dibuang. VLAN asli default adalah VLAN 1. Saat mengonfigurasi port trunk 802.1Q, ID VLAN Port default (PVID) ditetapkan dengan nilai ID VLAN asli. Semua lalu lintas tanpa tanda yang masuk atau keluar dari port 802.1Q diteruskan berdasarkan nilai PVID. Misalnya, jika VLAN 99 dikonfigurasi sebagai VLAN asli, PVID adalah 99 dan semua lalu lintas yang tidak diberi tanda diteruskan ke VLAN 99. Jika VLAN asli belum dikonfigurasi ulang, nilai PVID diatur ke VLAN 1.</p>
+<p></p>
+<p>Pada gambar, PC1 dihubungkan melalui hub ke link trunk 802.1Q. PC1 mengirimkan lalu lintas yang tidak diberi tanda yang dihubungkan oleh switch dengan VLAN asli yang dikonfigurasi pada port trunk, dan meneruskannya sesuai dengan itu. Lalu lintas yang diberi tag pada trunk yang diterima oleh PC1 dihilangkan. Skenario ini mencerminkan desain jaringan yang buruk karena beberapa alasan: menggunakan hub, memiliki host yang terhubung ke link trunk, dan ini menyiratkan bahwa switch memiliki port akses yang ditetapkan ke VLAN asli. Namun hal ini menggambarkan motivasi spesifikasi IEEE 802.1Q untuk VLAN asli sebagai sarana menangani skenario lama.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

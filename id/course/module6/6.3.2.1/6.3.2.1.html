@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.2.1 Perutean Antar-Domain Tanpa Kelas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>CIDR</h2>
+</div>
+<div id="content">
+<p>Sama seperti Internet yang tumbuh pada tingkat eksponensial di awal tahun 1990an, demikian pula ukuran tabel perutean yang dikelola oleh router Internet dengan pengalamatan IP berkelas. Untuk alasan ini, IETF memperkenalkan CIDR di RFC 1517 pada tahun 1993.</p>
+<p></p>
+<p>CIDR menggantikan penetapan jaringan berkelas dan kelas alamat (A, B, dan C) menjadi usang. Dengan menggunakan CIDR, alamat jaringan tidak lagi ditentukan oleh nilai oktet pertama. Sebaliknya, bagian jaringan dari alamat ditentukan oleh subnet mask, yang juga dikenal sebagai awalan jaringan, atau panjang awalan (yaitu, /8, /19, dll.).</p>
+<p></p>
+<p>ISP tidak lagi terbatas pada subnet mask /8, /16, atau /24. Mereka sekarang dapat mengalokasikan ruang alamat dengan lebih efisien menggunakan panjang awalan apa pun, dimulai dengan /8 dan lebih besar (yaitu, /8, /9, /10, dll.). Gambar tersebut menunjukkan bagaimana blok alamat IP dapat ditetapkan ke jaringan berdasarkan kebutuhan pelanggan, mulai dari beberapa host hingga ratusan atau ribuan host.</p>
+<p></p>
+<p>CIDR juga mengurangi ukuran tabel perutean dan mengelola ruang alamat IPv4 dengan lebih efisien menggunakan:</p>
+<p>
+<ul>
+<li>
+<b>Peringkasan rute</b>- Juga dikenal sebagai agregasi awalan, rute diringkas menjadi satu rute untuk membantu mengurangi ukuran tabel perutean. Misalnya, satu ringkasan rute statis dapat menggantikan beberapa pernyataan rute statis tertentu.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Supernet</b>- Terjadi bila nilai masker peringkasan rute lebih kecil dibandingkan masker classful tradisional default.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Supernet selalu merupakan ringkasan rute, namun ringkasan rute tidak selalu merupakan supernet.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

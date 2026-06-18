@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.3.4 Default Interface Bandwidths</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Cost</h2>
+      </div>
+      <div id="content">
+          <p>All interfaces have default bandwidth values assigned to them. As with reference bandwidth, interface bandwidth values do not actually affect the speed or capacity of the link. Instead, they are used by OSPF to compute the routing metric. Therefore, it is important that the bandwidth value reflect the actual speed of the link so that the routing table has accurate best path information.</p>
+          <p></p>
+          <p>Although the bandwidth values of Ethernet interfaces usually match the link speed, some other interfaces may not. For instance, the actual speed of serial interfaces is often different than the default bandwidth. On Cisco routers, the default bandwidth on most serial interfaces is set to 1.544 Mb/s. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Older serial interfaces may default to 128 kb/s. </p>
+          <p></p>
+          <p>Refer to the example in Figure 1. Notice that the link between:</p>
+          <p>
+            <ul>
+              <li>R1 and R2 should be set to 1,544 kb/s (default value) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 and R3 should be set to 1,024 kb/s</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R1 and R3 should be set to 64 kb/s</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> show interfaces </b></span>command to view the interface bandwidth setting. Figure 2 displays the serial interface 0/0/0 settings for R1. The bandwidth setting is accurate and therefore the serial interface does not have to be adjusted. </p>
+          <p></p>
+          <p>Figure 3 displays the serial interface 0/0/1 settings for R1. It also confirms that the interface is using the default interface bandwidth 1,544 kb/s. According to the reference topology, this should be set to 64 kb/s. Therefore, the R1 serial 0/0/1 interface must be adjusted.</p>
+          <p></p>
+          <p>Figure 4 displays the resulting cost metric of 647, which is based on the reference bandwidth set to 1,000,000,000 bps and the default interface bandwidth of 1,544 kb/s (1,000,000,000 / 1,544,000).</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

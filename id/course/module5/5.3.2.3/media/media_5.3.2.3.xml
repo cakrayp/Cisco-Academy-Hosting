@@ -1,0 +1,246 @@
+<textcomponents>
+<!--Slide 1-->
+
+<component id='ID_s1_inst'>
+<text><![CDATA[<b>Topologi: Memecahkan Masalah Peralihan Lapisan 3</b><br/><br/>Gunakan dan lihat kembali diagram topologi jaringan ini untuk menjawab dengan benar tiga skenario yang diberikan.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[VLAN 4]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[Sakelar Lapisan 2 (SW1)]]></text>
+</component>
+
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[VLAN 3]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+   <text><![CDATA[pelayan]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+   <text><![CDATA[VLAN 3]]></text>
+</component>
+
+
+<component id="ID_s1_txt06">
+   <text><![CDATA[Sakelar Lapisan 2 (SW2)]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+   <text><![CDATA[VLAN 2]]></text>
+</component>
+
+
+<component id="ID_s1_txt08">
+   <text><![CDATA[Sakelar Lapisan 3 (SW3)]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+   <text><![CDATA[L2 Batang]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+   <text><![CDATA[L2 Batang]]></text>
+</component>
+
+
+<component id="ID_s1_table">
+  <text><![CDATA[<table  class="mtable" header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+<tr class="mtable_top"><td colspan='2'class="mtable_top" bgcolor='#0E6360' class="liner_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr colspan='2'>
+		<td bgcolor='#077A77' class="mtitle"  valign="top" ><font color='#ffffff' size="11" style="font-size:11px">VLAN</font></td>
+		<td bgcolor='#077A77'  class="mtitle" valign="top" ><font color='#ffffff' size="11" style="font-size:11px">Subnet</font></td>
+		
+	</tr>
+
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">2</font></td>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">10.2.0.0 /24</font></td>
+		
+		
+	</tr>
+
+	   <tr>
+		<td bgcolor='#FFFFFF' valign="top"><font color='#393536' size="11" style="font-size:11px">3</font></td>
+		<td bgcolor='#FFFFFF' valign="top"><font color='#393536' size="11" style="font-size:11px">10.3.0.0 /24</font></td>
+		
+	</tr>
+
+	   <tr>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">4</font></td>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">10.4.0.0 /24</font></td>
+		
+		
+	</tr>
+	
+	
+	</table>]]></text>
+  </component>
+
+
+
+<!--Slide 2-->
+
+<component id='ID_s2_inst'>
+<text><![CDATA[<b>Skenario 1: Memecahkan Masalah Peralihan Lapisan 3</b><br/><br/>PC2 tidak dapat berkomunikasi dengan PC3, namun dapat berkomunikasi dengan semua perangkat lainnya. Klik di bawah untuk memilih kemungkinan besar penyebab masalah ini. Pilihan jawaban boleh dipilih lebih dari satu. Gunakan output perintah switch Layer 3 dan lihat kembali diagram topologi jaringan untuk menjawab skenario ini dengan benar.]]></text>
+</component>
+<!--answers-->
+<component id="ID_s2_ans01">
+<text><![CDATA[VLAN 3 dan 4 dimatikan]]></text>
+</component>
+
+<component id="ID_s2_ans02">
+<text><![CDATA[Alamat IP VLAN 3 salah]]></text>
+</component>
+
+<component id="ID_s2_ans03">
+<text><![CDATA[VLAN 4 tidak memiliki alamat IP]]></text>
+</component>
+
+<component id="ID_s2_ans04">
+<text><![CDATA[VLAN 2 tidak dikonfigurasi]]></text>
+</component>
+
+<component id="ID_s2_ans05">
+<text><![CDATA[Alamat IP VLAN 5 salah]]></text>
+</component>
+
+
+<!--feedback-->
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi masalah peralihan Lapisan 3. Silakan klik tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi masalah peralihan Lapisan 3. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!--Slide 3-->
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Skenario 2: Memecahkan Masalah Peralihan Lapisan 3</b><br/><br/>PC2 tidak dapat berkomunikasi dengan perangkat lain mana pun, termasuk gatewaynya sendiri. Klik di bawah untuk memilih kemungkinan besar penyebab masalah ini. Pilihan jawaban boleh dipilih lebih dari satu. Gunakan output perintah switch Layer 3 dan lihat kembali diagram topologi jaringan untuk menjawab skenario ini dengan benar.]]></text>
+</component>
+
+<component id='ID_s3_ans01'>
+	<text><![CDATA[Subnetmask VLAN 2 tidak benar]]></text>
+</component>
+
+<component id='ID_s3_ans02'>
+	<text><![CDATA[Alamat IP VLAN 3 salah]]></text>
+</component>
+
+<component id='ID_s3_ans03'>
+	<text><![CDATA[Subnetmask VLAN 4 tidak benar]]></text>
+</component>
+
+<component id='ID_s3_ans04'>
+	<text><![CDATA[VLAN 2 tidak dikonfigurasi]]></text>
+</component>
+
+<component id='ID_s3_ans05'>
+	<text><![CDATA[Alamat IP VLAN 4 salah]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi masalah peralihan Lapisan 3. Silakan klik tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi masalah peralihan Lapisan 3. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+<!--Slide 4-->
+
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Skenario 3: Memecahkan Masalah Peralihan Lapisan 3</b><br/><br/>PC1 tidak dapat berkomunikasi dengan PC2 atau PC3, namun dapat berkomunikasi dengan server. Klik di bawah untuk memilih kemungkinan besar penyebab masalah ini. Pilihan jawaban boleh dipilih lebih dari satu. Gunakan output perintah switch Layer 3 dan lihat kembali diagram topologi jaringan untuk menjawab skenario ini dengan benar.]]></text>
+</component>
+
+
+<component id='ID_s4_ans01'>
+	<text><![CDATA[Enkapsulasi bagasi tidak benar]]></text>
+</component>
+
+<component id='ID_s4_ans02'>
+	<text><![CDATA[VLAN 2 dan 3 sedang dipangkas dari link trunk]]></text>
+</component>
+
+<component id='ID_s4_ans03'>
+	<text><![CDATA[Port gigabit 0/1 tidak dikonfigurasi sebagai trunk]]></text>
+</component>
+<component id='ID_s4_ans04'>
+	<text><![CDATA[VLAN 2 tidak dikonfigurasi]]></text>
+</component>
+
+<component id='ID_s4_ans05'>
+	<text><![CDATA[Port gigabit 0/2 tidak dikonfigurasi sebagai trunk]]></text>
+</component>
+
+<component id='ID_s4_ans06'>
+	<text><![CDATA[SW2 dimatikan]]></text>
+</component>
+
+
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi masalah peralihan Lapisan 3.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi masalah peralihan Lapisan 3. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>-->
+
+
+
+</textcomponents>

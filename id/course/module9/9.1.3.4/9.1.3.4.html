@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.3.4 Kata Kunci Masker Wildcard</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Masker Wildcard di ACL</h2>
+</div>
+<div id="content">
+<p>
+<b>Kata Kunci Masker Bit Wildcard</b>
+</p>
+<p></p>
+<p>Bekerja dengan representasi desimal bit topeng wildcard biner bisa jadi membosankan. Untuk menyederhanakan tugas ini, kata kuncinya<span class="cmd"><b>tuan rumah</b></span>Dan<span class="cmd"><b>setiap</b></span>membantu mengidentifikasi penggunaan paling umum dari penyembunyian wildcard. Kata kunci ini menghilangkan memasukkan masker wildcard ketika mengidentifikasi host tertentu atau seluruh jaringan. Kata kunci ini juga memudahkan pembacaan ACL dengan memberikan petunjuk visual mengenai sumber atau tujuan kriteria.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tuan rumah</b></span>pengganti kata kunci untuk topeng 0.0.0.0. Mask ini menyatakan bahwa semua bit alamat IPv4 harus cocok atau hanya satu host yang cocok.</p>
+<p>Itu<span class="cmd"><b>setiap</b></span>opsi pengganti alamat IP dan topeng 255.255.255.255. Masker ini mengatakan untuk mengabaikan seluruh alamat IPv4 atau menerima alamat apa pun.</p>
+<p></p>
+<p>
+<b>Contoh 1: Proses Masking Wildcard dengan Satu Alamat IP</b>
+</p>
+<p></p>
+<p>Pada Contoh 1 pada gambar, bukannya masuk<span class="cmd"><b>192.168.10.10 0.0.0.0</b></span>, Anda dapat menggunakan<span class="cmd"><b>tuan rumah 192.168.10.10</b></span>. </p>
+<p></p>
+<p>
+<b>Contoh 2: Proses Masking Wildcard dengan Alamat IP yang Cocok dengan Semua</b>
+</p>
+<p></p>
+<p>Pada Contoh 2 pada gambar, alih-alih masuk<span class="cmd"><b>0.0.0.0 255.255.255.255</b></span>, Anda dapat menggunakan kata kunci<span class="cmd"><b>setiap</b></span>dengan sendirinya.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Kata kunci<span class="cmd"><b>tuan rumah</b></span>Dan<span class="cmd"><b>setiap</b></span>juga dapat digunakan saat mengkonfigurasi IPv6 ACL.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

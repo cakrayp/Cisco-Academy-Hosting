@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.2.1.1 VLAN Ranges on Catalyst Switches</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Implementations</h1>
+        <h2>VLAN Assignment</h2>
+      </div>
+      <div id="content">
+          <p>Different Cisco Catalyst switches support various numbers of VLANs. The number of supported VLANs is large enough to accommodate the needs of most organizations. For example, the Catalyst 2960 and 3560 Series switches support over 4,000 VLANs. Normal range VLANs on these switches are numbered 1 to 1,005 and extended range VLANs are numbered 1,006 to 4,094. The figure illustrates the available VLANs on a Catalyst 2960 switch running Cisco IOS Release 15.x.</p>
+          <p></p>
+          <p>
+            <b>Normal Range VLANs</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Used in small- and medium-sized business and enterprise networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Identified by a VLAN ID between 1 and 1005. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IDs 1002 through 1005 are reserved for Token Ring and FDDI VLANs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IDs 1 and 1002 to 1005 are automatically created and cannot be removed.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configurations are stored within a VLAN database file, called vlan.dat. The vlan.dat file is located in the flash memory of the switch. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The VLAN Trunking Protocol (VTP), which helps manage VLAN configurations between switches, can only learn and store normal range VLANs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Extended Range VLANs</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Enable service providers to extend their infrastructure to a greater number of customers. Some global enterprises could be large enough to need extended range VLAN IDs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Are identified by a VLAN ID between 1006 and 4094.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configurations are not written to the vlan.dat file.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Support fewer VLAN features than normal range VLANs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Are, by default, saved in the running configuration file. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VTP does not learn extended range VLANs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: 4096 is the upper boundary for the number of VLANs available on Catalyst switches, because there are 12 bits in the VLAN ID field of the IEEE 802.1Q header.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

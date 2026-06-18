@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan tujuan VLAN dalam jaringan switch.</li><li>Analisis bagaimana switch meneruskan frame berdasarkan konfigurasi VLAN di lingkungan multi-switch.</li><li>Konfigurasikan port switch untuk ditetapkan ke VLAN berdasarkan kebutuhan.</li><li>Konfigurasikan port trunk pada switch LAN.</li><li>Konfigurasikan Protokol Trunking Dinamis (DTP).</li><li>Memecahkan masalah VLAN dan konfigurasi trunk di jaringan yang diaktifkan.</li><li>Konfigurasikan fitur keamanan untuk mengurangi serangan di lingkungan tersegmentasi VLAN.</li><li>Jelaskan praktik terbaik keamanan untuk lingkungan tersegmentasi VLAN.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

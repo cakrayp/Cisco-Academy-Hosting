@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.3.1.1 Troubleshooting NAT: show commands</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshooting NAT</h1>
+        <h2>Troubleshooting NAT</h2>
+      </div>
+      <div id="content">
+          <p>Figure 1 shows R2 enabled for PAT, using the range of addresses 209.165.200.226 to 209.165.200.240. </p>
+          <p></p>
+          <p>When there are IPv4 connectivity problems in a NAT environment, it is often difficult to determine the cause of the problem. The first step in solving the problem is to rule out NAT as the cause. Follow these steps to verify that NAT is operating as expected:</p>
+          <p></p>
+          <p>
+            <b>Step 1.</b> Based on the configuration, clearly define what NAT is supposed to achieve. This may reveal a problem with the configuration.</p>
+          <p></p>
+          <p>
+            <b>Step 2.</b> Verify that correct translations exist in the translation table using the <span class="cmd"><b>show ip nat translations</b></span> command.</p>
+          <p></p>
+          <p>
+            <b>Step 3.</b> Use the <span class="cmd"><b>clear</b></span> and <span class="cmd"><b>debug</b></span> commands to verify that NAT is operating as expected. Check to see if dynamic entries are recreated after they are cleared.</p>
+          <p></p>
+          <p>
+            <b>Step 4.</b> Review in detail what is happening to the packet, and verify that routers have the correct routing information to move the packet.</p>
+          <p></p>
+          <p></p>
+          <p>Figure 2 shows the output of the <span class="cmd"><b>show ip nat statistics</b></span> and <span class="cmd"><b>show ip nat translations</b></span> commands. Prior to using the<span class="cmd"><b> show </b></span>commands, the NAT statistics and entries in the NAT table are cleared with the <span class="cmd"><b>clear ip nat statistics</b></span> and <span class="cmd"><b>clear ip nat translation * </b></span>commands. After the host at 192.168.10.10 Telnets to the server at 209.165.201.1, the NAT statistics and NAT table are displayed to verify NAT is working as expected. </p>
+          <p></p>
+          <p>In a simple network environment, it is useful to monitor NAT statistics with the <span class="cmd"><b>show ip nat statistics</b></span> command. The <span class="cmd"><b>show ip nat statistics</b></span> command displays information about the total number of active translations, NAT configuration parameters, the number of addresses in the pool, and the number that have been allocated. However, in a more complex NAT environment, with several translations taking place, this command may not clearly identify the issue. It may be necessary to run <span class="cmd"><b>debug</b></span> commands on the router.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

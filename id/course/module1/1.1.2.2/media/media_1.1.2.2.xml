@@ -1,0 +1,48 @@
+<textcomponents>
+
+<!-- SLIDE 1 -->
+	<component id="ID_s1_title">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt01">
+		<text><![CDATA[<b>Pertimbangan Bisnis Umum Saat Memilih Peralatan Switch:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent="-14"><ul><li><b>Biaya</b>- Biaya sebuah switch akan tergantung pada jumlah dan kecepatan antarmuka, fitur yang didukung, dan kemampuan ekspansi.</li><li><b>Kepadatan Pelabuhan</b>- Sakelar jaringan harus mendukung jumlah perangkat yang sesuai di jaringan.</li><li><b>Kekuatan</b>- Sekarang sudah umum untuk memberi daya pada titik akses, telepon IP, dan bahkan saklar kompak menggunakan Power over Ethernet (PoE). Selain pertimbangan PoE, beberapa saklar berbasis sasis mendukung catu daya redundan.</li><li><b>Keandalan</b>- Switch harus menyediakan akses berkelanjutan ke jaringan.</li><li><b>Kecepatan Pelabuhan</b>- Kecepatan koneksi jaringan menjadi perhatian utama bagi pengguna akhir.</li><li><b>Penyangga Bingkai</b>- Kemampuan switch untuk menyimpan frame penting dalam jaringan dimana mungkin terdapat port yang padat ke server atau area lain di jaringan.</li><li><b>Skalabilitas</b>- Jumlah pengguna di jaringan biasanya bertambah seiring waktu; Oleh karena itu, investasi ini harus memberikan peluang untuk pertumbuhan.</li></ul></textformat>]]></text>
+	</component>
+	
+	
+<!-- SLIDE 2 -->
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Sakelar Konfigurasi Tetap</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt01">
+	  <text><![CDATA[Fitur dan opsi terbatas pada fitur yang disertakan dengan saklar.]]></text> 
+	</component>
+
+
+<!-- SLIDE 3 -->
+
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Sakelar Konfigurasi Modular</b>]]></text> 
+	</component>
+	
+	<component id="ID_s3_txt01">
+	  <text><![CDATA[Sasis menerima kartu garis yang berisi port.]]></text> 
+	</component>
+	
+	
+<!-- SLIDE 4 -->
+	
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>Sakelar Konfigurasi yang Dapat Ditumpuk</b>]]></text> 
+	</component>
+	
+	<component id="ID_s4_txt01">
+	  <text><![CDATA[Sakelar yang dapat ditumpuk, dihubungkan dengan kabel khusus, beroperasi secara efektif sebagai satu saklar besar.]]></text> 
+	</component>
+</textcomponents>

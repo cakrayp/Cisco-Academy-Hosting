@@ -1,0 +1,212 @@
+<textcomponents>
+
+<!-- Slide 1 -->
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 1: Mengidentifikasi Jenis Memori Router</b><br/><br/>Tunjukkan pengetahuan Anda tentang memori router. Seret fungsi memori ke bidang yang sesuai untuk mencocokkan jenis memori.<br/><br/>Periksa keakuratan jawaban Anda dengan mengklik tombol Periksa. Jika jawaban Anda benar, klik Tombol 2 untuk melanjutkan aktivitas ini. Jika jawaban Anda salah, silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_header01'>
+	<text><![CDATA[<b>Tipe Memori</b>]]></text>
+</component>
+
+<component id='ID_s1_header02'>
+	<text><![CDATA[<b>Fungsi Memori</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[NVRAM]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Kilatan]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[ROM]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[RAM]]></text>
+</component>
+
+<!-- Drag and Drop -->
+<component id='ID_mf1_DS'>
+	<text><![CDATA[<font color="#393536">Startup configuration</font>]]></text>
+</component>
+
+<component id='ID_mf2_DS'>
+	<text><![CDATA[<font color="#393536">IOS and system files</font>]]></text>
+</component>
+
+<component id='ID_mf3_DS'>
+	<text><![CDATA[<font color="#393536">Diagnostics and boot instructions</font>]]></text>
+</component>
+
+<component id='ID_mf4_DS'>
+	<text><![CDATA[<font color="#393536">Running configuration</font>]]></text>
+</component>
+
+<component id='ID_mf5_DS'>
+	<text><![CDATA[<font color="#393536">Virus, worm or Trojan horse</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap fungsi memori dengan tipenya. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap fungsi memori dengan tipenya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+<!-- Slide 2 -->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 2: Mengidentifikasi Komponen Router</b><br/><br/>Identifikasi port/slot pada router Cisco 1941 Series ini. Cocokkan nama port atau slot dengan huruf yang sesuai dengan lokasi panel belakang yang sesuai. Tarik huruf lokasi ke kolom yang tersedia.]]></text>
+</component>
+
+<component id='ID_s2_circ01'>
+	<text><![CDATA[<b>A</b>]]></text>
+</component>
+
+<component id='ID_s2_circ02'>
+	<text><![CDATA[<b>B</b>]]></text>
+</component>
+
+<component id='ID_s2_circ03'>
+	<text><![CDATA[<b>C</b>]]></text>
+</component>
+
+<component id='ID_s2_circ04'>
+	<text><![CDATA[<b>D</b>]]></text>
+</component>
+
+<component id='ID_s2_circ05'>
+	<text><![CDATA[<b>E</b>]]></text>
+</component>
+
+<component id='ID_s2_circ06'>
+	<text><![CDATA[<b>F</b>]]></text>
+</component>
+
+<component id='ID_s2_circ07'>
+	<text><![CDATA[<b>G</b>]]></text>
+</component>
+
+<component id='ID_s2_header01'>
+	<text><![CDATA[<b>Nama Port atau Slot Panel Belakang</b>]]></text>
+</component>
+
+<component id='ID_s2_header02'>
+	<text><![CDATA[<b>Lokasi Panel Belakang</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Antarmuka LAN]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Port USB Mini-B konsol]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Pelabuhan AUX]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Slot Kartu Flash 4 GB]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Slot eHWIC Lebar Ganda]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[Port RJ-45 konsol]]></text>
+</component>
+
+<component id='ID_s2_txt07'>
+	<text><![CDATA[slot eHWIC 0]]></text>
+</component>
+
+<!-- Drag and Drop -->
+
+<component id='ID_sTwo1_DS'>
+
+	<text><![CDATA[A]]></text>
+</component>
+<component id='ID_sTwo2_DS'>
+
+	<text><![CDATA[B]]></text>
+</component>
+
+<component id='ID_sTwo3_DS'>
+
+	<text><![CDATA[C]]></text>
+</component>
+
+<component id='ID_sTwo4_DS'>
+
+	<text><![CDATA[D]]></text>
+</component>
+
+<component id='ID_sTwo5_DS'>
+
+	<text><![CDATA[E]]></text>
+</component>
+
+<component id='ID_sTwo6_DS'>
+
+	<text><![CDATA[F]]></text>
+</component>
+
+<component id='ID_sTwo7_DS'>
+
+	<text><![CDATA[G]]></text>
+
+</component>
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap nama port atau slot panel belakang dengan lokasinya.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap port panel belakang atau nama slot dengan lokasinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+</textcomponents>

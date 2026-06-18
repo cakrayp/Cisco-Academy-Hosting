@@ -1,0 +1,48 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Dynamic versus Static Routing</b>]]></text> 
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'  cellspacing="2">
+	<tr class="liner">
+		<td colspan='3' bgcolor='#0E6360' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77' valign="top" width='105'><font bgcolor='#097A76' color='#EFF8F7'> </font></td>
+		<td bgcolor='#077A77' valign="top" width='175'><font bgcolor='#097A76' color='#EFF8F7'><b>Dynamic Routing</b></font></td>
+		<td bgcolor='#077A77' valign="top" width='175'><font bgcolor='#097A76' color='#EFF8F7'><b>Static Routing</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Configuration Complexity</font></b></td>
+		<td bgcolor='#EFF8F7'>Generally independent of the network size</td>
+		<td bgcolor='#EFF8F7'>Increases with network size</td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Topology Changes</font></b></td>
+		<td bgcolor='#FFFFFF'>Automatically adapts to topology changes</td>
+		<td bgcolor='#FFFFFF'>Administrator intervention required</td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Scaling</font></b></td>
+		<td bgcolor='#EFF8F7'>Suitable for simple and complex topologies</td>
+		<td bgcolor='#EFF8F7'>Suitable for simple topologies</td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Security</font></b></td>
+		<td bgcolor='#FFFFFF'>Less secure</td>
+		<td bgcolor='#FFFFFF'>More secure</td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Resource Usage</font></b></td>
+		<td bgcolor='#EFF8F7'>Uses CPU, memory, link bandwith</td>
+		<td bgcolor='#EFF8F7'>No extra resources needed</td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'><b><font color='#FFFFFF'>Predictability</font></b></td>
+		<td bgcolor='#FFFFFF'>Route depends on the current topology</td>
+		<td bgcolor='#FFFFFF'>Route to destination is always the same</td>
+	</tr>
+</table>]]></text>
+</component>
+</textcomponents>

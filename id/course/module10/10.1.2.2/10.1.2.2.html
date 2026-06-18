@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.2.2 Memverifikasi DHCPv4</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Mengonfigurasi Server DHCPv4 Dasar</h2>
+</div>
+<div id="content">
+<p>Topologi yang ditunjukkan pada Gambar 1 digunakan dalam contoh keluaran. Dalam contoh ini, R1 telah dikonfigurasi untuk menyediakan layanan DHCPv4. PC1 belum dinyalakan dan oleh karena itu, tidak memiliki alamat IP.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 2,<span class="cmd"><b>tampilkan konfigurasi yang sedang berjalan | bagian dhcp</b></span>output perintah menampilkan perintah DHCPv4 yang dikonfigurasi pada R1. Itu<span class="cmd"><b>| bagian</b></span>parameter hanya menampilkan perintah yang terkait dengan konfigurasi DHCPv4.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3, pengoperasian DHCPv4 dapat diverifikasi menggunakan<span class="cmd"><b>tampilkan pengikatan ip dhcp</b></span>memerintah. Perintah ini menampilkan daftar semua pengikatan alamat IPv4 ke alamat MAC yang telah disediakan oleh layanan DHCPv4. Perintah kedua pada Gambar 3,<span class="cmd"><b>tampilkan statistik server ip dhcp</b></span>, digunakan untuk memverifikasi bahwa pesan diterima atau dikirim oleh router. Perintah ini menampilkan informasi hitungan mengenai jumlah pesan DHCPv4 yang telah dikirim dan diterima.</p>
+<p></p>
+<p>Seperti yang terlihat pada keluaran perintah ini, saat ini tidak ada ikatan dan statistik menunjukkan tidak ada pesan yang dikirim atau diterima. Saat ini belum ada perangkat yang meminta layanan DHCPv4 dari router R1.</p>
+<p></p>
+<p>Pada Gambar 4, perintah dikeluarkan setelah PC1 dan PC2 dihidupkan dan proses booting telah selesai.</p>
+<p></p>
+<p>Perhatikan bahwa informasi pengikatan sekarang menampilkan bahwa alamat IPv4 192.168.10.10 dan 192.168.11.10 telah terikat ke alamat MAC. Statistik juga menampilkan aktivitas DHCPDISCOVER, DHCPREQUEST, DHCPOFFER, dan DHCPACK.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 5,<span class="cmd"><b>ipconfig /semua</b></span>perintah, ketika dikeluarkan pada PC1, menampilkan parameter TCP/IP. Karena PC1 terhubung ke segmen jaringan 192.168.10.0/24, maka secara otomatis menerima akhiran DNS, alamat IPv4, subnet mask, gateway default, dan alamat server DNS dari kumpulan tersebut. Tidak diperlukan konfigurasi antarmuka router. Jika PC terhubung ke segmen jaringan yang memiliki kumpulan DHCPv4, PC dapat memperoleh alamat IPv4 dari kumpulan yang sesuai secara otomatis.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

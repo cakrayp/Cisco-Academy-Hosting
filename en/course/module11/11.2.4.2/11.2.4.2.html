@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.4.2 SOHO Example </title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.4.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Port Forwarding</h2>
+      </div>
+      <div id="content">
+          <p>The figure shows the Single Port Forwarding configuration window of a Linksys EA6500 SOHO router. By default, port forwarding is not enabled on the router.</p>
+          <p></p>
+          <p>Port forwarding can be enabled for applications by specifying the inside local address that requests should be forwarded to. In the figure, HTTP service requests, coming into this Linksys router, are forwarded to the web server with the inside local address of 192.168.1.254. If the external WAN IPv4 address of the SOHO router is 209.165.200.225, the external user can enter <b>http://www.example.com</b> and the Linksys router redirects the HTTP request to the internal web server at IPv4 address 192.168.1.254, using the default port number 80.</p>
+          <p></p>
+          <p>A port other than the default port 80 can be specified. However, the external user would have to know the specific port number to use. To specify a different port, the value of the External Port in the Single Port Forwarding window would be modified.</p>
+          <p></p>
+          <p>The approach taken to configure port forwarding depends on the brand and model of the broadband router in the network. However, there are some generic steps to follow. If the instructions supplied by the ISP, or those that came with the router, do not provide adequate guidance, the website <a href="http://www.portforward.com/" target="_blank">http://www.portforward.com</a> provides guides for several broadband routers. You can follow the instructions to add or delete ports as required to meet the needs of any applications you want to allow or deny.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

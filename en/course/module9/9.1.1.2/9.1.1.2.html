@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.1.2 A TCP Conversation</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Purpose of ACLs</h2>
+      </div>
+      <div id="content">
+          <p>ACLs enable administrators to control traffic into and out of a network. This control can be as simple as permitting or denying traffic based on network addresses or as complex as controlling network traffic based on the TCP port being requested. It is easier to understand how an ACL filters traffic by examining the dialogue that occurs during a TCP conversation, such as when requesting a webpage.</p>
+          <p></p>
+          <p>
+            <b>TCP Communication</b>
+          </p>
+          <p>When a client requests data from a web server, IP manages the communication between the PC (source) and the server (destination). TCP manages the communication between the web browser (application) and the network server software. </p>
+          <p></p>
+          <p>When you send an email, look at a webpage, or download a file, TCP is responsible for breaking data down into segments for IP before they are sent. TCP also manages assembling the data from the segments when they arrive. The TCP process is very much like a conversation in which two nodes on a network agree to pass data between one another. </p>
+          <p></p>
+          <p>TCP provides a connection-oriented, reliable, byte stream service. Connection-oriented means that the two applications must establish a TCP connection prior to exchanging data. TCP is a full-duplex protocol, meaning that each TCP connection supports a pair of byte streams, each stream flowing in one direction. TCP includes a flow-control mechanism for each byte stream that allows the receiver to limit how much data the sender can transmit. TCP also implements a congestion-control mechanism.</p>
+          <p></p>
+          <p>The animation shown in Figure 1 illustrates how a TCP/IP conversation takes place. TCP segments are marked with flags that denote their purpose: a SYN starts (synchronizes) the session; an ACK is an acknowledgment that an expected segment was received, and a FIN finishes the session. A SYN/ACK acknowledges that the transfer is synchronized. TCP data segments include the higher level protocol needed to direct the application data to the correct application. </p>
+          <p></p>
+          <p>The TCP data segment also identifies the port which matches the requested service. For example, HTTP is port 80, SMTP is port 25, and FTP is port 20 and port 21. Figure 2 shows ranges of UDP and TCP ports.</p>
+          <p></p>
+          <p>Figures 3 through 5 explore TCP/UDP ports.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

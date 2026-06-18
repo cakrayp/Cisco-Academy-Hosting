@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.4.1 Tugas Pemecahan Masalah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Pecahkan masalah DHCPv4</h2>
+</div>
+<div id="content">
+<p>Masalah DHCPv4 dapat muncul karena berbagai alasan, seperti kerusakan perangkat lunak pada sistem operasi, driver NIC, atau agen relai DHCP, namun yang paling umum adalah masalah konfigurasi. Karena banyaknya area yang berpotensi bermasalah, diperlukan pendekatan pemecahan masalah yang sistematis, seperti yang ditunjukkan pada gambar.</p>
+<p></p>
+<p>
+<b>Pemecahan Masalah Tugas 1: Menyelesaikan Konflik Alamat IPv4</b>
+</p>
+<p></p>
+<p>Sewa alamat IPv4 dapat berakhir pada klien yang masih terhubung ke jaringan. Jika klien tidak memperbarui sewa, server DHCPv4 dapat menetapkan ulang alamat IPv4 tersebut ke klien lain. Saat klien di-boot ulang, ia meminta alamat IPv4. Jika server DHCPv4 tidak merespons dengan cepat, klien menggunakan alamat IPv4 terakhir. Situasi kemudian muncul ketika dua klien menggunakan alamat IPv4 yang sama, sehingga menimbulkan konflik.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan konflik ip dhcp</b></span>perintah menampilkan semua konflik alamat yang dicatat oleh server DHCPv4. Server menggunakan<span class="cmd"><b>ping</b></span>perintah untuk mendeteksi klien. Klien menggunakan Address Resolusi Protocol (ARP) untuk mendeteksi konflik. Jika konflik alamat terdeteksi, alamat tersebut dihapus dari kumpulan dan tidak ditetapkan sampai administrator menyelesaikan konflik tersebut.</p>
+<p></p>
+<p>Output ini menampilkan alamat IP yang mengalami konflik dengan server DHCP.  Ini menunjukkan metode deteksi dan waktu deteksi untuk alamat IP konflik yang ditawarkan server DHCP.</p>
+<p></p>
+<p>
+<span class="cmd">R1#</span>
+<span class="cmd">
+<b>tampilkan konflik ip dhcp</b>
+</span>
+</p>
+<p>
+<span class="cmd">Alamat IP Metode Deteksi Waktu Deteksi</span>
+</p>
+<p>
+<span class="cmd">192.168.10.32 Ping 16 Februari 2013 12:28</span>
+</p>
+<p>
+<span class="cmd">192.168.10.64 ARP Gratis 23 Feb 2013 08:12</span>
+</p>
+<p></p>
+<p>
+<b>Pemecahan Masalah Tugas 2: Memverifikasi Konektivitas Fisik</b>
+</p>
+<p></p>
+<p>Pertama, gunakan<span class="cmd"><b>tampilkan antarmuka</b></span><span class="cmd"><i>antarmuka</i></span>perintah untuk mengonfirmasi bahwa antarmuka router yang bertindak sebagai gateway default untuk klien beroperasi. Jika keadaan antarmuka selain naik, port tidak meneruskan lalu lintas, termasuk permintaan klien DHCP.</p>
+<p></p>
+<p>
+<b>Pemecahan Masalah Tugas 3: Menguji Konektivitas menggunakan Alamat IP Statis</b>
+</p>
+<p></p>
+<p>Saat memecahkan masalah DHCPv4 apa pun, verifikasi konektivitas jaringan dengan mengonfigurasi informasi alamat IPv4 statis di stasiun kerja klien. Jika stasiun kerja tidak dapat menjangkau sumber daya jaringan dengan alamat IPv4 yang dikonfigurasi secara statis, akar penyebab masalahnya bukan pada DHCPv4. Pada titik ini, pemecahan masalah konektivitas jaringan diperlukan.</p>
+<p></p>
+<p>
+<b>Pemecahan Masalah Tugas 4: Verifikasi Konfigurasi Port Switch</b>
+</p>
+<p></p>
+<p>Jika klien DHCPv4 tidak dapat memperoleh alamat IPv4 dari server DHCPv4 saat startup, cobalah untuk mendapatkan alamat IPv4 dari server DHCPv4 dengan memaksa klien secara manual untuk mengirimkan permintaan DHCPv4.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Jika ada peralihan antara klien dan server DHCPv4, dan klien tidak dapat memperoleh konfigurasi DHCP, masalah konfigurasi port peralihan mungkin menjadi penyebabnya. Penyebab ini mungkin mencakup masalah dari trunking dan channeling, STP, dan RSTP.  Konfigurasi PortFast dan konfigurasi port edge menyelesaikan masalah klien DHCPv4 paling umum yang terjadi dengan instalasi awal switch Cisco.</p>
+<p></p>
+<p>
+<b>Pemecahan Masalah Tugas 5: Menguji Operasi DHCPv4 pada Subnet atau VLAN yang Sama</b>
+</p>
+<p></p>
+<p>Penting untuk membedakan apakah DHCPv4 berfungsi dengan benar ketika klien berada pada subnet atau VLAN yang sama dengan server DHCPv4. Jika DHCPv4 berfungsi dengan benar saat klien berada di subnet atau VLAN yang sama, masalahnya mungkin ada pada agen relai DHCP. Jika masalah tetap ada bahkan dengan pengujian DHCPv4 pada subnet atau VLAN yang sama dengan server DHCPv4, masalahnya mungkin sebenarnya ada pada server DHCPv4.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.4.3.2 Konfigurasikan Rute Statis Mengambang</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Ringkasan dan Rute Statis Mengambang</h1>
+<h2>Konfigurasikan Rute Statis Mengambang</h2>
+</div>
+<div id="content">
+<p>Rute statis IPv4 dikonfigurasi menggunakan<span class="cmd"><b>rute ip</b></span>perintah konfigurasi global dan menentukan jarak administratif. Jika tidak ada jarak administratif yang dikonfigurasi, nilai default (1) digunakan.</p>
+<p></p>
+<p>Lihat topologi pada Gambar 1. Dalam skenario ini, rute pilihan dari R1 adalah ke R2. Koneksi ke R3 sebaiknya digunakan untuk cadangan saja.</p>
+<p></p>
+<p>R1 dikonfigurasi dengan rute statis default yang menunjuk ke R2. Karena tidak ada jarak administratif yang dikonfigurasi, nilai default (1) digunakan untuk rute statis ini. R1 juga dikonfigurasi dengan default statis mengambang yang menunjuk ke R3 dengan jarak administratif 5. Nilai ini lebih besar dari nilai default 1 dan, oleh karena itu, rute ini mengambang dan tidak ada dalam tabel perutean, kecuali rute pilihan gagal.</p>
+<p></p>
+<p>Gambar 2 memverifikasi bahwa rute default ke R2 dipasang di tabel routing. Perhatikan bahwa rute cadangan ke R3 tidak ada dalam tabel routing.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk mengkonfigurasi R3 mirip dengan R1.</p>
+<p></p>
+<p></p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

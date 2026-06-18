@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.3.1.3 Summary</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.3.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>All nodes on a network require a unique IP address to communicate with other devices. The static assignment of IP addressing information on a large network results in an administrative burden that can be eliminated by using DHCPv4 or DHCPv6 to dynamically assign IPv4 and IPv6 addressing information respectively.</p>
+          <p></p>
+          <p>DHCPv4 includes three different address allocation mechanisms to provide flexibility when assigning IP addresses: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Manual Allocation </b>- The administrator assigns a pre-allocated IPv4 address to the client, and DHCPv4 communicates only the IPv4 address to the device. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Automatic Allocation </b>- DHCPv4 automatically assigns a static IPv4 address permanently to a device, selecting it from a pool of available addresses. There is no lease and the address is permanently assigned to the device. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dynamic Allocation </b>- DHCPv4 dynamically assigns, or leases, an IPv4 address from a pool of addresses for a limited period of time as configured on the server, or until the client no longer needs the address. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dynamic allocation is the most commonly used DHCPv4 mechanism and involves the exchange of several different packets between the DHCPv4 server and the DHCPv4 client resulting in the lease of valid addressing information for a predefined period of time.</p>
+          <p></p>
+          <p>Messages originating from the client (DHCPDISCOVER, DHCPREQUEST) are broadcast to allow all DHCPv4 servers on the network to hear the client request for, and receipt of, addressing information. Messages originating from the DHCPv4 server (DHCPOFFER, DHCPACK) are sent as unicasts directly to the client requesting the information.</p>
+          <p></p>
+          <p>There are two methods available for the dynamic configuration of IPv6 global unicast addresses. </p>
+          <p>
+            <ul>
+              <li>Stateless Address Autoconfiguration (SLAAC )</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dynamic Host Configuration Protocol for IPv6 (Stateful DHCPv6)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>With stateless autoconfiguration, the client uses information provided by the IPv6 RA message to automatically select and configure a unique IPv6 address. The stateless DHCPv6 option informs the client to use the information in the RA message for addressing, but additional configuration parameters are available from a DHCPv6 server. </p>
+          <p></p>
+          <p>Stateful DHCPv6 is similar to DHCPv4. In this case, the RA message informs the client not to use the information in the RA message. All addressing information and configuration information is obtained from a stateful DHCPv6 server. The DHCPv6 server maintains IPv6 state information similar to a DHCPv4 server allocating addresses for IPv4.</p>
+          <p></p>
+          <p>If the DHCP server is located on a different network segment than the DHCP client then it is necessary to configure a relay agent. The relay agent forwards specific broadcast messages originating from a LAN segment to a specified server located on a different LAN segment (in this case, a DHCP broadcast message would be forwarded to a DHCP server).</p>
+          <p></p>
+          <p>Troubleshooting issues with DHCPv4 and DHCPv6, involves the same tasks:</p>
+          <p>
+            <ul>
+              <li>Resolve Address Conflicts</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Verify Physical Connectivity</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Test Connectivity using a Static IP Address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Verify Switch Port Configuration</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Test Operation on the Same Subnet or VLAN</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

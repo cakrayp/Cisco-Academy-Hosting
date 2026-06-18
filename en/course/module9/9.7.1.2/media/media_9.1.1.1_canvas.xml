@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+			<element type="IMAGE" src="9_1_1_1.jpg" x="55" y="63.5" width="411.45" height="325.47"/>
+			<element type="TEXT" subType="TITLE" compId="ID_title" />
+			<element type="TEXT" compId="ID_txt01" width="90" x="189" y="44.95" align="left" expand="up"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" 
+border="2"/>
+			<element type="TEXT" compId="ID_txt02" width="98.05" x="328.5" y="94.5" align="center" expand="up+down" />
+			<element type="TEXT" compId="ID_txt03" width="75" x="10" y="232.5" align="left" expand="up"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" 
+border="2"/>
+<element type="TEXT" compId="ID_txt04" width="90" x="239" y="157.5" align="left" expand="up"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" 
+border="2"/>
+			<element type="TEXT" compId="ID_txt05" width="90.05" x="365.5" y="196.5" align="center" expand="up+down" />
+			<element type="TEXT" compId="ID_txt06" width="90.05" x="267.95" y="262.15" align="left" expand="up"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" 
+border="2"/>
+			<element type="TEXT" compId="ID_acl_txt01" width="40" x="198" y="82.5" align="center" expand="down"  bgColor="#E9E7E8" borderColor="#7B797A" 
+border="2"/>
+			<element type="TEXT" compId="ID_acl_txt02" width="40" x="257.35" y="187.5" align="center" expand="down"  bgColor="#E9E7E8" borderColor="#7B797A" 
+border="2"/>
+			<element type="TEXT" compId="ID_acl_txt03" width="40" x="210.8" y="262.15" align="center" expand="down"  bgColor="#E9E7E8" borderColor="#7B797A" 
+border="2"/>
+			<element type="TEXT" compId="ID_acl_txt04" width="40" x="65.35" y="262.15" align="center" expand="down"  bgColor="#E9E7E8" borderColor="#7B797A" 
+border="2"/>
+			<element type="TEXT" text="R2" width="31" x="164.15" y="98.6" align="center" bold="1" color="#fff"/>			
+			<element type="TEXT" text="R1" width="31" x="104.4" y="205.5" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="R3" width="31" x="222.4" y="205.5" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="S1" width="17.6" x="64.95" y="311.5" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="S2" width="17.6" x="146.45" y="311.5" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="S3" width="17.6" x="225.95" y="311.5" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="PC1" width="25.6" x="61.05" y="357.95" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="PC2" width="25.6" x="143.1" y="357.95" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="PC3" width="25.6" x="223.05" y="357.95" align="center" bold="1" color="#fff"/>
+
+	
+</slide>
+</data>

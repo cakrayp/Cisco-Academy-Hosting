@@ -1,0 +1,23 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Desain LAN Tiga Tingkat</b>]]></text>
+</component>
+<component id="ID_txt02">
+<text><![CDATA[<b>Desain LAN Dua Tingkat</b>]]></text>
+</component>
+<component id="ID_txt03">
+<text><![CDATA[Inti]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Distribusi]]></text>
+</component>
+<component id="ID_txt05">
+<text><![CDATA[Mengakses]]></text>
+</component>
+<component id="ID_txt06">
+<text><![CDATA[Inti/Distribusi Runtuh]]></text>
+</component>
+<component id="ID_txt07">
+<text><![CDATA[Mengakses]]></text>
+</component>
+</textcomponents>

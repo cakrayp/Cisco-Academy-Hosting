@@ -1,0 +1,32 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Praktik Terbaik ACL</b>]]></text>
+</component>
+
+  <component id="ID_table">
+  <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#0E6360" class="liner_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="200"><font color="#ffffff" size="11"><b>Pedoman</b></font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11"><b>Keuntungan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Dasarkan ACL Anda pada kebijakan keamanan organisasi.</td>
+<td bgcolor="#FFFFFF">Ini akan memastikan Anda menerapkan pedoman keamanan organisasi.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Siapkan deskripsi tentang apa yang Anda ingin ACL Anda lakukan.</td>
+<td bgcolor="#EFF8F7">Ini akan membantu Anda menghindari potensi masalah akses secara tidak sengaja.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Gunakan editor teks untuk membuat, mengedit, dan menyimpan ACL.</td>
+<td bgcolor="#FFFFFF">Ini akan membantu Anda membuat perpustakaan ACL yang dapat digunakan kembali.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Uji ACL Anda di jaringan pengembangan sebelum menerapkannya di jaringan produksi.</td>
+<td bgcolor="#EFF8F7">Ini akan membantu Anda menghindari kesalahan yang merugikan.</td>
+</tr></table>]]></text>
+  </component>
+</textcomponents>

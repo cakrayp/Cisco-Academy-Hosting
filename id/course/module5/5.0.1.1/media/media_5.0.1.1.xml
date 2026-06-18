@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Jelaskan tiga opsi utama untuk mengaktifkan perutean antar-VLAN.</li><li>Konfigurasikan perutean antar-VLAN lama.</li><li>Konfigurasikan perutean antar-VLAN router-on-a-stick.</li><li>Memecahkan masalah umum konfigurasi antar-VLAN.</li><li>Memecahkan masalah umum pengalamatan IP di lingkungan yang dirutekan antar-VLAN.</li><li>Konfigurasikan perutean antar-VLAN menggunakan peralihan Lapisan 3.</li><li>Memecahkan masalah perutean antar-VLAN di lingkungan switch Layer 3.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

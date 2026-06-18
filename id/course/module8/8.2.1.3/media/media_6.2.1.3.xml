@@ -1,0 +1,40 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Urutan Prioritas ID Router</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[ID router dikonfigurasi secara eksplisit?]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Antarmuka loopback IPv4 dikonfigurasi?]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Gunakan alamat IPv4 terkonfigurasi aktif tertinggi.]]></text>
+</component>
+
+
+<component id="ID_txt04">
+<text><![CDATA[Gunakan itu sebagai ID router.]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Ya]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Ya]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[No]]></text>
+</component>
+
+
+</textcomponents>

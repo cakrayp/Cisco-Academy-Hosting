@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.3.2.1 Topologi Jaringan OSPFv3</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan OSPFv3 Area Tunggal</h1>
+<h2>Mengonfigurasi OSPFv3</h2>
+</div>
+<div id="content">
+<p>Gambar 1 menampilkan topologi jaringan yang digunakan untuk mengkonfigurasi OSPFv3.</p>
+<p></p>
+<p>Gambar 2 menunjukkan perutean unicast IPv6 dan konfigurasi alamat unicast global R1, seperti yang diidentifikasi dalam topologi referensi. Asumsikan bahwa antarmuka R2 dan R3 juga telah dikonfigurasi dengan alamat unicast globalnya, seperti yang diidentifikasi dalam topologi yang direferensikan.</p>
+<p></p>
+<p>Dalam topologi ini, tidak ada router yang memiliki alamat IPv4 yang dikonfigurasi. Jaringan dengan antarmuka router yang dikonfigurasi dengan alamat IPv4 dan IPv6 disebut sebagai dual-stacked. Jaringan bertumpuk ganda dapat mengaktifkan OSPFv2 dan OSPFv3 secara bersamaan.</p>
+<p></p>
+<p>Gambar 3 menampilkan langkah-langkah untuk mengkonfigurasi OSPFv3 dasar dalam satu area.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

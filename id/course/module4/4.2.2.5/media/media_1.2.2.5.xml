@@ -1,0 +1,256 @@
+﻿<textcomponents>
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Aktivitas - Mengurutkan Langkah-Langkah dalam Proses Penerusan Paket</b><br/><br/>Dalam aktivitas ini, Anda diberikan empat skenario penerusan paket. Seret pernyataan jawaban yang paling menyelesaikan proses penerusan paket untuk setiap skenario ke bidang yang sesuai.<span class="new">Periksa jawaban Anda dengan menggunakan tombol Periksa - jika benar, lanjutkan ke skenario berikutnya dengan memilih tombol di sebelah kanan. Jika salah, klik Reset dan coba lagi.</span>]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[<b>Skenario Penerusan Paket 1</b>]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[<b>Langkah Selanjutnya</b>]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Router Anda menerima paket yang ditujukan untuk alamat IP di jaringan lain. Alamat IP tujuan tidak berada di jaringan lokal dan tidak cocok dengan apa pun di tabel perutean Anda. Tidak ada gerbang pilihan terakhir yang tersedia.]]></text>
+</component>
+
+
+
+
+<!--Drag and Drop-->
+<component id='ID_s1_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulate the frame and forward out of the exit interface to the next hop</font>]]></text>
+</component>
+
+<component id='ID_s1_target02'>
+	<text><![CDATA[<font color="#393536">Check the ARP cache and forward to the host on the local subnet</font>]]></text>
+</component>
+
+<component id='ID_s1_target03'>
+	<text><![CDATA[<font color="#393536">Drop the packet and send an ICMP message back to the source IP address</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Benar! Silakan klik Tombol 2 untuk skenario baru.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Itu tidak benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+
+<!--slide02-->
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas - Mengurutkan Langkah-Langkah dalam Proses Penerusan Paket</b><br/><br/>Dalam aktivitas ini, Anda diberikan empat skenario penerusan paket. Seret pernyataan jawaban yang paling menyelesaikan proses penerusan paket untuk setiap skenario ke bidang yang sesuai.<span class="new">Periksa jawaban Anda dengan menggunakan tombol Periksa - jika benar, lanjutkan ke skenario berikutnya dengan memilih tombol di sebelah kanan. Jika salah, klik Reset dan coba lagi.</span>]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[<b>Skenario Penerusan Paket 2</b>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[<b>Langkah Selanjutnya</b>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Router Anda menerima paket yang ditujukan untuk alamat IP di jaringan jarak jauh. Router Anda memiliki entri tabel perutean untuk jaringan jarak jauh.]]></text>
+</component>
+
+
+
+
+<!--Drag and Drop-->
+<component id='ID_s2_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulate the frame and forward out of the exit interface to the next hop</font>]]></text>
+</component>
+
+<component id='ID_s2_target02'>
+	<text><![CDATA[<font color="#393536">Check the ARP cache and forward to the host on the local subnet</font>]]></text>
+</component>
+
+<component id='ID_s2_target03'>
+	<text><![CDATA[<font color="#393536">Drop the packet and send an ICMP message back to the source IP address</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Benar! Silakan klik Tombol 3 untuk skenario baru.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Itu tidak benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<!--slide03-->
+
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Aktivitas - Mengurutkan Langkah-Langkah dalam Proses Penerusan Paket</b><br/><br/>Dalam aktivitas ini, Anda diberikan empat skenario penerusan paket. Seret pernyataan jawaban yang paling menyelesaikan proses penerusan paket untuk setiap skenario ke bidang yang sesuai.<span class="new">Periksa jawaban Anda dengan menggunakan tombol Periksa - jika benar, lanjutkan ke skenario berikutnya dengan memilih tombol di sebelah kanan. Jika salah, klik Reset dan coba lagi.</span>]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[<b>Skenario Penerusan Paket 3</b>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[<b>Langkah Selanjutnya</b>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Router Anda menerima paket yang ditujukan untuk alamat IP di jaringan lain. Alamat IP tujuan tidak berada di jaringan lokal, tidak cocok dengan apa pun di tabel perutean Anda, tetapi ada gateway pilihan terakhir.]]></text>
+</component>
+
+
+
+
+<!--Drag and Drop-->
+<component id='ID_s3_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulate the frame and forward out of the exit interface to the next hop</font>]]></text>
+</component>
+
+<component id='ID_s3_target02'>
+	<text><![CDATA[<font color="#393536">Check the ARP cache and forward to the host on the local subnet</font>]]></text>
+</component>
+
+<component id='ID_s3_target03'>
+	<text><![CDATA[<font color="#393536">Drop the packet and send an ICMP message back to the source IP address</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Benar! Silakan klik Tombol 4 untuk skenario baru.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Itu tidak benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+
+
+<!--slide03-->
+
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Aktivitas - Mengurutkan Langkah-Langkah dalam Proses Penerusan Paket</b><br/><br/>Dalam aktivitas ini, Anda diberikan empat skenario penerusan paket. Seret pernyataan jawaban yang paling menyelesaikan proses penerusan paket untuk setiap skenario ke bidang yang sesuai.<span class="new">Periksa jawaban Anda dengan menggunakan tombol Periksa - jika benar, lanjutkan ke skenario berikutnya dengan memilih tombol di sebelah kanan. Jika salah, klik Reset dan coba lagi.</span>]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[<b>Skenario Penerusan Paket 4</b>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[<b>Langkah Selanjutnya</b>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[Router Anda telah menerima paket yang ditujukan untuk alamat IP subnet lokal. Router Anda memiliki rekaman entri tabel perutean untuk subnet ini, dan berada pada antarmuka yang terhubung langsung.]]></text>
+</component>
+
+
+
+
+<!--Drag and Drop-->
+<component id='ID_s4_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulate the frame and forward out of the exit interface to the next hop</font>]]></text>
+</component>
+
+<component id='ID_s4_target02'>
+	<text><![CDATA[<font color="#393536">Check the ARP cache and forward to the host on the local subnet</font>]]></text>
+</component>
+
+<component id='ID_s4_target03'>
+	<text><![CDATA[<font color="#393536">Drop the packet and send an ICMP message back to the source IP address</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Benar!]]></text>
+</component>
+
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Itu tidak benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+</textcomponents>

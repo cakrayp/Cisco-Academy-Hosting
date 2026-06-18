@@ -1,0 +1,345 @@
+<textcomponents>
+
+<!-- Slide 1-->
+
+	<component id='ID_s1_inst'>
+		<text><![CDATA[<b>Activity – Part 1: Compare Routing Protocols</b><br/><br/>Drag each item to the appropriate routing protocol that matches the characteristic. Click Button 2 to continue.]]></text>
+	</component>
+<!--Drag and Drop-->
+	<component id='ID_s1_drag01'>
+		<text><![CDATA[<font color="#393536">Slow</font>]]></text>
+	</component>
+
+	<component id='ID_s1_drag02'>
+		<text><![CDATA[<font color="#393536">Fast</font>]]></text>
+	</component>
+
+	<component id='ID_s1_drag03'>
+		<text><![CDATA[<font color="#393536">Yes</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag04'>
+		<text><![CDATA[<font color="#393536">No</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag05'>
+		<text><![CDATA[<font color="#393536">Small</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag06'>
+		<text><![CDATA[<font color="#393536">Large</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag07'>
+		<text><![CDATA[<font color="#393536">Low</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag08'>
+		<text><![CDATA[<font color="#393536">Medium</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag09'>
+		<text><![CDATA[<font color="#393536">High</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag10'>
+		<text><![CDATA[<font color="#393536">Simple</font>]]></text>
+	</component>
+	
+	<component id='ID_s1_drag11'>
+		<text><![CDATA[<font color="#393536">Complex</font>]]></text>
+	</component>	
+
+
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_BODY'>
+		<text><![CDATA[You have successfully matched the legacy distance vector routing protocol characteristic to the correct routing protocol. Click Button 2 to continue.]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_BODY'>
+		<text><![CDATA[You have not successfully matched the legacy distance vector routing protocol characteristic to the correct routing protocol. Please click Reset to try again.
+]]></text>
+	</component>
+	
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[<b>Distance Vector Routing Protocols (legacy)</b>]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[<b>Routing Protocol Characteristic</b>]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[<b>RIPv1</b>]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt04'>
+		<text><![CDATA[<b>IGRP</b>]]></text>
+	</component> 
+	
+		
+	<component id='ID_s1_txt05'>
+		<text><![CDATA[Speed of Convergence (slow or fast)]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt06'>
+		<text><![CDATA[Scalability of Network (small or large)]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt07'>
+		<text><![CDATA[Supports VLSM (yes or no)]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt08'>
+		<text><![CDATA[Resource Usage (high, medium, or low)]]></text>
+	</component> 
+	
+	<component id='ID_s1_txt09'>
+		<text><![CDATA[Implementation and Maintenance (simple or complex)]]></text>
+	</component>
+	
+	
+<!-- Slide 2 -->
+
+	<component id='ID_s2_inst'>
+		<text><![CDATA[<b>Activity – Part 2: Compare Routing Protocols</b><br/><br/>Drag each item to the appropriate routing protocol that matches the characteristic. Click Button 3 to continue.
+]]></text>
+	</component>
+	
+<!--Drag and Drop-->
+	<component id='ID_s2_drag01'>
+		<text><![CDATA[<font color="#393536">Slow</font>]]></text>
+	</component>
+
+	<component id='ID_s2_drag02'>
+		<text><![CDATA[<font color="#393536">Fast</font>]]></text>
+	</component>
+
+	<component id='ID_s2_drag03'>
+		<text><![CDATA[<font color="#393536">Yes</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag04'>
+		<text><![CDATA[<font color="#393536">No</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag05'>
+		<text><![CDATA[<font color="#393536">Small</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag06'>
+		<text><![CDATA[<font color="#393536">Large</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag07'>
+		<text><![CDATA[<font color="#393536">Low</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag08'>
+		<text><![CDATA[<font color="#393536">Medium</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag09'>
+		<text><![CDATA[<font color="#393536">High</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag10'>
+		<text><![CDATA[<font color="#393536">Simple</font>]]></text>
+	</component>
+	
+	<component id='ID_s2_drag11'>
+		<text><![CDATA[<font color="#393536">Complex</font>]]></text>
+	</component>	
+
+
+	<component id='ID_s2_CHECK'>
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+	<component id='ID_s2_RESET'>
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+	
+	<component id='ID_s2_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s2_CORRECT_BODY'>
+		<text><![CDATA[You have successfully matched the current distance vector routing protocol characteristic to the correct routing protocol. Click Button 3 to continue.
+]]></text>
+	</component>
+
+	<component id='ID_s2_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s2_INCORRECT_BODY'>
+		<text><![CDATA[You have not successfully matched the current distance vector routing protocol characteristic to the correct routing protocol. Please click Reset to try again.
+]]></text>
+	</component>
+	
+	<component id='ID_s2_txt01'>
+		<text><![CDATA[<b>Distance Vector Routing Protocols (current)</b>]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt02'>
+		<text><![CDATA[<b>Routing Protocol Characteristic</b>]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt03'>
+		<text><![CDATA[<b>RIPv2</b>]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt04'>
+		<text><![CDATA[<b>EIGRP</b>]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt05'>
+		<text><![CDATA[Speed of Convergence (slow or fast)]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt06'>
+		<text><![CDATA[Scalability of Network (small or large)]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt07'>
+		<text><![CDATA[Supports VLSM (yes or no)]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt08'>
+		<text><![CDATA[Resource Usage (high, medium, or low)]]></text>
+	</component> 
+	
+	<component id='ID_s2_txt09'>
+		<text><![CDATA[Implementation and Maintenance (simple or complex)]]></text>
+	</component>
+	
+<!-- Slide 3 -->
+
+	<component id='ID_s3_inst'>
+		<text><![CDATA[<b>Activity – Part 3: Compare Routing Protocols</b><br/><br/>Drag each item to the appropriate routing protocol that matches the characteristic.  
+]]></text>
+	</component>
+	
+<!--Drag and Drop-->
+	<component id='ID_s3_drag01'>
+		<text><![CDATA[<font color="#393536">Slow</font>]]></text>
+	</component>
+
+	<component id='ID_s3_drag02'>
+		<text><![CDATA[<font color="#393536">Fast</font>]]></text>
+	</component>
+
+	<component id='ID_s3_drag03'>
+		<text><![CDATA[<font color="#393536">Yes</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag04'>
+		<text><![CDATA[<font color="#393536">No</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag05'>
+		<text><![CDATA[<font color="#393536">Small</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag06'>
+		<text><![CDATA[<font color="#393536">Large</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag07'>
+		<text><![CDATA[<font color="#393536">Low</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag08'>
+		<text><![CDATA[<font color="#393536">Medium</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag09'>
+		<text><![CDATA[<font color="#393536">High</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag10'>
+		<text><![CDATA[<font color="#393536">Simple</font>]]></text>
+	</component>
+	
+	<component id='ID_s3_drag11'>
+		<text><![CDATA[<font color="#393536">Complex</font>]]></text>
+	</component>	
+
+
+	<component id='ID_s3_CHECK'>
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+	<component id='ID_s3_RESET'>
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+	
+	<component id='ID_s3_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s3_CORRECT_BODY'>
+		<text><![CDATA[You have successfully matched the link-state routing protocol characteristic to the correct routing protocol.]]></text>
+	</component>
+
+	<component id='ID_s3_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s3_INCORRECT_BODY'>
+		<text><![CDATA[You have not successfully matched the link-state routing protocol characteristic to the correct routing protocol. Please click Reset to try again.]]></text>
+	</component>
+	
+	<component id='ID_s3_txt01'>
+		<text><![CDATA[<b>Link-State Routing Protocols</b>]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt02'>
+		<text><![CDATA[<b>Routing Protocol Characteristic</b>]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt03'>
+		<text><![CDATA[<b>OSPF</b>]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt04'>
+		<text><![CDATA[<b>IS-IS</b>]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt05'>
+		<text><![CDATA[Speed of Convergence (slow or fast)]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt06'>
+		<text><![CDATA[Scalability of Network (small or large)]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt07'>
+		<text><![CDATA[Supports VLSM (yes or no)]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt08'>
+		<text><![CDATA[Resource Usage (high, medium, or low)]]></text>
+	</component> 
+	
+	<component id='ID_s3_txt09'>
+		<text><![CDATA[Implementation and Maintenance (simple or complex)]]></text>
+	</component>
+	
+</textcomponents>

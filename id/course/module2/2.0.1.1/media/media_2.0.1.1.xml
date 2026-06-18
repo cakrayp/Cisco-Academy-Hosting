@@ -1,0 +1,10 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>Konfigurasikan pengaturan awal pada switch Cisco.</li><li>Konfigurasikan port switch untuk memenuhi persyaratan jaringan.</li><li>Konfigurasikan antarmuka virtual saklar manajemen.</li><li>Menjelaskan serangan keamanan dasar di lingkungan yang diaktifkan.</li><li>menjelaskan praktik terbaik keamanan di lingkungan yang diaktifkan.</li><li>Konfigurasikan fitur keamanan port untuk membatasi akses jaringan.</li></textformat><br/>]]></text>
+</component>
+
+</textcomponents>

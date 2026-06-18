@@ -1,0 +1,56 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>RIPv1 versus RIPv2</b>]]></text>
+</component>
+
+
+<component id="ID_header1">
+<text><![CDATA[Karakteristik dan Fitur]]></text> 
+</component>
+
+<component id="ID_header2">
+<text><![CDATA[RIPv1]]></text> 
+</component>
+
+<component id="ID_header3">
+<text><![CDATA[RIPv2]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Metrik]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Pembaruan Diteruskan ke Alamat]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Mendukung VLSM]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Mendukung CIDR]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Mendukung Peringkasan]]></text> 
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Mendukung Otentikasi]]></text> 
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Keduanya menggunakan jumlah hop sebagai metrik sederhana. Jumlah hop maksimum adalah 15.]]></text> 
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[255.255.255.255]]></text> 
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[224.0.0.9]]></text> 
+</component>
+
+
+</textcomponents>

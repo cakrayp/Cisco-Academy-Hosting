@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.2.4.1 Troubleshooting Tasks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v6</h1>
+        <h2>Troubleshoot DHCPv6</h2>
+      </div>
+      <div id="content">
+          <p>Troubleshooting DHCPv6 is similar to troubleshooting DHCPv4. </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 1. Resolve Conflicts</b>
+          </p>
+          <p></p>
+          <p>Similar to IPv4 addresses, an IPv6 address lease can expire on a client that still needs to connect to the network. The <span class="cmd"><b>show ipv6 dhcp conflict</b></span> command displays any address conflicts logged by the stateful DHCPv6 server. If an IPv6 address conflict is detected, the client typically removes the address and generates a new address using either SLAAC or stateful DHCPv6. </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 2. Verify Allocation Method</b>
+          </p>
+          <p></p>
+          <p>The <span class="cmd"><b>show ipv6 interface </b></span><span class="cmd"><i>interface </i></span>command can be used to verify the method of address allocation indicated in the RA message as indicated by the settings of the M and O flags. This information is displayed in the last lines of the output. If a client is not receiving its IPv6 address information from a stateful DHCPv6 server, it could be due to incorrect M and O flags in the RA message.</p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 3. Test with a Static IPv6 Address</b>
+          </p>
+          <p></p>
+          <p>When troubleshooting any DHCP issue, whether it is DHCPv4 or DHCPv6, network connectivity can be verified by configuring a static IP address on a client workstation. In the case of IPv6, if the workstation is unable to reach network resources with a statically configured IPv6 address, the root cause of the problem is not SLAAC or DHCPv6. At this point, network connectivity troubleshooting is required.</p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 4. Verify Switch Port Configuration</b>
+          </p>
+          <p></p>
+          <p>If the DHCPv6 client is unable to obtain information from a DHCPv6 server, verify that the switch port is enabled and is operating correctly. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: If there is a switch between the client and the DHCPv6 server, and the client is unable to obtain the DHCP configuration, switch port configuration issues may be the cause. These causes may include issues from trunking and channeling, STP, and RSTP.  PortFast and edge port configurations resolve the most common DHCPv6 client issues that occur with an initial installation of a Cisco switch. </p>
+          <p></p>
+          <p>
+            <b>Troubleshooting Task 5. Test DHCPv6 Operation on the Same Subnet or VLAN</b>
+          </p>
+          <p></p>
+          <p>If the stateless or stateful DHCPv6 server is functioning correctly, but is on a different IPv6 network or VLAN than the client, the problem may be with the DHCPv6 relay agent. The client facing interface on the router must be configured with the<span class="cmd"><b> ipv6 dhcp relay destination </b></span>command.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

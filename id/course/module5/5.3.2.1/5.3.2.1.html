@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.3.2.1 Masalah Konfigurasi Saklar Lapisan 3</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Peralihan Lapisan 3</h1>
+<h2>Memecahkan Masalah Peralihan Lapisan 3</h2>
+</div>
+<div id="content">
+<p>Masalah yang umum terjadi pada perutean antar-VLAN lama dan perutean antar-VLAN router-on-a-stick juga terwujud dalam konteks peralihan Lapisan 3. Untuk memecahkan masalah peralihan Lapisan 3, item berikut harus diperiksa keakuratannya:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>VLAN</b>- VLAN harus didefinisikan di semua switch. VLAN harus diaktifkan pada port trunk. Port harus berada di VLAN yang tepat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>SVI</b>- SVI harus memiliki alamat IP atau subnet mask yang benar. SVI harus naik. SVI harus sesuai dengan nomor VLAN.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Rute</b>- Perutean harus diaktifkan. Setiap antarmuka atau jaringan harus ditambahkan ke protokol routing.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tuan rumah</b>- Host harus memiliki alamat IP atau subnet mask yang benar. Host harus memiliki gateway default yang terkait dengan SVI atau port yang dirutekan.</li>
+</ul>
+</p>
+<p></p>
+<p>Untuk memecahkan masalah peralihan Lapisan 3, pahami implementasi dan tata letak desain topologi.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.0.1.2 Aktivitas - Milik atau Disewakan?</title>
+<!-- -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perkenalan</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>
+<b>Aktivitas -</b>
+<b>Milik Sendiri atau Sewa?</b>
+</p>
+<p></p>
+<p>Bab ini menyajikan konsep penggunaan proses DHCP dalam jaringan bisnis kecil dan menengah.  Aktivitas pemodelan ini menjelaskan cara kerja perangkat ISR nirkabel dasar menggunakan proses DHCP.</p>
+<p></p>
+<p>Mengunjungi<a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">http://</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">ui.linksys.com</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">/WRT54GL/4.30.0/</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">Setup.htm</a>yang merupakan simulator berbasis web yang membantu Anda mempelajari konfigurasi DHCP menggunakan router nirkabel Linksys 54GL. Di sebelah kanan simulator (di kolom deskripsi berwarna biru), Anda bisa klik<b>Lagi</b>untuk membaca informasi tentang mengonfigurasi pengaturan DHCP pada simulator router layanan terintegrasi (ISR) khusus ini.</p>
+<p></p>
+<p>Berlatih mengonfigurasi ISR:</p>
+<p>
+<ul>
+<li>Nama host</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Alamat IP lokal dengan subnet mask</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>DHCP (aktifkan dan nonaktifkan)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Alamat IP awal</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jumlah maksimum pengguna untuk menerima alamat IP DHCP</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Waktu sewa</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Zona waktu (gunakan zona waktu Anda atau favorit sebagai alternatif)</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika Anda telah selesai mengonfigurasi pengaturan seperti yang tercantum untuk tugas ini, ambil cuplikan layar pengaturan Anda dengan menggunakan<b>PrtScrn</b>perintah kunci. Salin dan tempatkan tangkapan layar Anda ke dalam dokumen pengolah kata. Simpan dan bersiaplah untuk mendiskusikan pilihan konfigurasi Anda dengan kelas.</p>
+<p></p>
+<p>
+<a href="../../files/10.0.1.2%20Own%20or%20Lease%20Instructions.pdf" target="_blank">Kegiatan Kelas - Milik atau Disewakan? instruksi</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

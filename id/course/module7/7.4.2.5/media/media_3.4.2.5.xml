@@ -1,0 +1,54 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Membanjiri LSP</b>]]></text>
+</component>
+
+  
+<component id="ID_Title_txt01">
+<text><![CDATA[<b>Isi Status Tautan R1</b>]]></text> 
+</component>
+
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent="-14"><li>R1; jaringan Ethernet; 10.1.0.0/16; Biaya 2</li><li>R1 -&gt; R2; Jaringan serial titik-ke-titik; 10.2.0.0/16; Biaya 20</li><li>R1 -&gt; R3; Jaringan serial titik-ke-titik; 10.3.0.0/16; Biaya 5</li><li>R1 -&gt; R4; Jaringan serial titik-ke-titik; 10.4.0.0/16; Biaya 20</li></textformat>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+.
+<component id="ID_txt02">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+<component id="ID_txt03">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+
+</textcomponents>

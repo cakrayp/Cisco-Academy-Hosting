@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.3.1 Mengonfigurasi PAT: Kumpulan Alamat</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Mengonfigurasi Terjemahan Alamat Port (PAT)</h2>
+</div>
+<div id="content">
+<p>PAT (juga disebut kelebihan NAT) menghemat alamat di dalam kumpulan alamat global dengan mengizinkan router menggunakan satu alamat global di dalam untuk banyak alamat lokal di dalam. Dengan kata lain, satu alamat IPv4 publik dapat digunakan untuk ratusan, bahkan ribuan alamat IPv4 pribadi internal. Ketika jenis terjemahan ini dikonfigurasi, router menyimpan informasi yang cukup dari protokol tingkat yang lebih tinggi, nomor port TCP atau UDP, misalnya, untuk menerjemahkan alamat global dalam kembali ke alamat lokal dalam yang benar. Ketika beberapa alamat lokal dalam dipetakan ke satu alamat global dalam, nomor port TCP atau UDP dari masing-masing host dalam membedakan alamat lokal.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Jumlah total alamat internal yang dapat diterjemahkan ke satu alamat eksternal secara teori bisa mencapai 65.536 per alamat IP. Namun, jumlah alamat internal yang dapat diberikan satu alamat IP adalah sekitar 4.000.</p>
+<p></p>
+<p>Ada dua cara untuk mengkonfigurasi PAT, bergantung pada bagaimana ISP mengalokasikan alamat IPv4 publik. Pada contoh pertama, ISP mengalokasikan lebih dari satu alamat IPv4 publik ke organisasi, dan pada contoh lainnya, ISP mengalokasikan satu alamat IPv4 publik yang diperlukan agar organisasi dapat terhubung ke ISP.</p>
+<p></p>
+<p>
+<b>Mengonfigurasi PAT untuk Kumpulan Alamat IP Publik</b>
+</p>
+<p></p>
+<p>Jika suatu situs telah mengeluarkan lebih dari satu alamat IPv4 publik, alamat ini dapat menjadi bagian dari kumpulan yang digunakan oleh PAT. Hal ini mirip dengan NAT dinamis, hanya saja tidak terdapat cukup alamat publik untuk pemetaan satu-ke-satu dari alamat dalam ke alamat luar. Kumpulan kecil alamat dibagikan ke sejumlah besar perangkat.</p>
+<p></p>
+<p>Gambar 1 menunjukkan langkah-langkah untuk mengkonfigurasi PAT agar menggunakan kumpulan alamat. Perbedaan utama antara konfigurasi ini dan konfigurasi untuk NAT dinamis satu-ke-satu adalah<span class="cmd"><b>kelebihan muatan</b></span>kata kunci digunakan. Itu<span class="cmd"><b>kelebihan muatan</b></span>kata kunci mengaktifkan PAT.</p>
+<p></p>
+<p>Contoh konfigurasi yang ditunjukkan pada Gambar 2 menetapkan terjemahan kelebihan beban untuk kumpulan NAT bernama NAT-POOL2. NAT-POOL2 berisi alamat 209.165.200.226 hingga 209.165.200.240.  Host di jaringan 192.168.0.0/16 dapat diterjemahkan. Antarmuka S0/0/0 diidentifikasi sebagai antarmuka dalam dan antarmuka S0/1/0 diidentifikasi sebagai antarmuka luar.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk mengonfigurasi PAT menggunakan kumpulan alamat di R2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

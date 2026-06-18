@@ -1,0 +1,44 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>IP Issue Within VLAN</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Faculty<br/>VLAN 10<br/>172.172.10.21</b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>Web/TFTP server<br/>VLAN 10<br/>172.17.10.30</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[<b>Faculty<br/>VLAN 10<br/>172.17.10.24</b>]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA["I cannot connect to the Web server."]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[VLAN Trunks<br/>Allowed - 10, 99<br/>Native VLAN - 99]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Problem: Incorrect IP Address</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Output from PC1</b>]]></text>
+</component>
+
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Solution: Change PC IP Address</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Output from Computer PC1</b>]]></text>
+</component>
+
+</textcomponents>

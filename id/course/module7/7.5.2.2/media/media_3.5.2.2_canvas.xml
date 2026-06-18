@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	
+		<slide>		
+			<element type="TEXT" subType="TITLE" compId="ID_s1_title" />	
+			<element type="ROUTER" textId="ID_s4_txt01" x="1.55" y="23.7" width="467" height="365"/>		
+		</slide>
+			
+<text id="ID_s4_txt01"><![CDATA[
+<code><span clss="spa">R1#<b>tampilkan rute ip | mulai Gerbang</b>Gerbang pilihan terakhir adalah 209.165.200.234 ke jaringan 0.0.0.0</span>
+<span class="color">S* 0.0.0.0/0 [1/0] melalui 209.165.200.234, Serial0/0/1
+                terhubung langsung, Serial0/0/1</span>
+      172.16.0.0/16 is variably subnetted, 5 subnets, 3 masks
+<span class="color">C 172.16.1.0/24 terhubung langsung, GigabitEthernet0/0
+L 172.16.1.1/32 terhubung langsung, GigabitEthernet0/0
+R 172.16.2.0/24 [120/1] melalui 209.165.200.226, 00:00:12,
+         Serial0/0/0
+R 172.16.3.0/24 [120/2] melalui 209.165.200.226, 00:00:12,   
+          Serial0/0/0    
+R 172.16.4.0/28 [120/2] melalui 209.165.200.226, 00:00:12,
+         Serial0/0/0</span>
+<span class="color1">R 192.168.0.0/16 [120/2] melalui 209.165.200.226, 00:00:03,
+      Serial0/0/0</span>
+      209.165.200.0/24 is variably subnetted, 5 subnets, 2 masks
+<span class="color">C 209.165.200.224/30 terhubung langsung, Serial0/0/0
+L 209.165.200.225/32 terhubung langsung, Serial0/0/0
+R 209.165.200.228/30 [120/1] melalui 209.165.200.226, 00:00:12,
+         Serial0/0/0
+C 209.165.200.232/30 terhubung langsung, Serial0/0/1
+L 209.165.200.233/32 terhubung langsung, Serial0/0/1</span>
+R1#</code>
+]]></text>		
+</data>

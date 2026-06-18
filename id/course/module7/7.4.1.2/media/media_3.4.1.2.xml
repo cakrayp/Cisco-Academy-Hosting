@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Algoritma Jalur Terpendek Dijkstra Pertama</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Jalur Terpendek untuk host di R2 LAN untuk mencapai host di R3 LAN:<br/>R2 ke R1 (20) + R1 ke R3 (5) + R3 ke LAN (2) = 27]]></text> 
+  </component>
+</textcomponents>

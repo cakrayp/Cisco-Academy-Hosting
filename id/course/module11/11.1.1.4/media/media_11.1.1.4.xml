@@ -1,0 +1,75 @@
+<textcomponents>
+<component id="ID_title">
+ <text><![CDATA[<b>Contoh Alamat NAT</b>]]></text>
+ </component>
+ <component id="ID_txt01">
+ <text><![CDATA[<b>SA</b><br/>Di dalam Lokal<br/><font color="#00918E"><b>192.168.10.10</b></font>]]></text>
+ </component>
+<component id="ID_txt02">
+ <text><![CDATA[<b>DA</b><br/>Luar Lokal<br/><font color="#DC7183"><b>209.165.201.1</b></font>]]></text>
+ </component>
+<component id="ID_txt03">
+ <text><![CDATA[<b>SA</b><br/>Di dalam Global<br/><font color="#652C8A"><b>209.165.200.226</b></font>]]></text>
+ </component>
+ <component id="ID_txt04">
+ <text><![CDATA[<b>DA</b><br/>Di Luar Global<br/><font color="#808521"><b>209.165.201.1</b></font>]]></text>
+ </component> 
+ <component id="ID_txt05">
+ <text><![CDATA[<b>DA</b><br/>Di dalam Lokal<br/><font color="#00918E"><b>192.168.10.10</b></font>]]></text>
+ </component>
+<component id="ID_txt06">
+ <text><![CDATA[<b>SA</b><br/>Luar Lokal<br/><font color="#DC7183"><b>209.165.201.1</b></font>]]></text>
+ </component>
+<component id="ID_txt07">
+ <text><![CDATA[<b>DA</b><br/>Di dalam Global<br/><font color="#652C8A"><b>209.165.200.226</b></font>]]></text>
+ </component>
+ <component id="ID_txt08">
+ <text><![CDATA[<b>SA</b><br/>Di Luar Global<br/><font color="#808521"><b>209.165.201.1</b></font>]]></text>
+ </component>
+<component id="ID_txt09">
+ <text><![CDATA[<b>Jaringan Dalam</b>]]></text>
+ </component>
+<component id="ID_txt10">
+ <text><![CDATA[<b>Jaringan Luar</b>]]></text>
+ </component>
+
+
+<component id="ID_txt11">
+   <text><![CDATA[Server Web<br/>209.165.201.1]]></text>
+</component>
+
+<component id="ID_txt12">
+   <text><![CDATA[ISP]]></text>
+</component>
+   
+<component id="ID_txt13">
+   <text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_table">
+		<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="mtitle" colspan="4" valign="top"><font color="#1C3635"><b>Tabel NAT R2</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="4"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" colspan="2" valign="top"><font color="#ffffff"><b>PC1</b></font></td>
+<td bgcolor="#077A77" colspan="2" valign="top"><font color="#ffffff"><b>Server Web</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Di dalam Alamat Global</b></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Di dalam Alamat Lokal</b></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Di Luar Alamat Lokal</b></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Di Luar Alamat Global</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#652C8A"><b>209.165.200.226</b></font></td>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#00918E"><b>192.168.10.10</b></font></td>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#DC7183"><b>209.165.201.1</b></font></td>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#808521"><b>209.165.201.1</b></font></td>
+</tr>
+</table>]]></text> 
+	</component>
+</textcomponents>

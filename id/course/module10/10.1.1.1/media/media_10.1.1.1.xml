@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Protokol Host Konfigurasi Dinamis (DHCP)</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Server DHCP]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[Klien DHCP]]></text> 
+  </component>
+<component id="ID_speech01">
+  <text><![CDATA[Saya dapat memberi Anda alamat IP dan informasi lainnya.]]></text> 
+  </component>
+  
+<component id="ID_speech02">
+  <text><![CDATA[Saya memerlukan layanan server DHCP untuk pengalamatan IP dan informasi lainnya.]]></text> 
+  </component>  
+  
+</textcomponents>

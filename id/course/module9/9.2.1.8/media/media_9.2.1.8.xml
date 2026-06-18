@@ -1,0 +1,13 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Mengomentari ACL</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Contoh 1: Mengomentari ACL yang bernomor]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Contoh 2: Mengomentari nama ACL]]></text>
+</component>
+</textcomponents>

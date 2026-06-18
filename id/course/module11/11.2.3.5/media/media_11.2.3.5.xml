@@ -1,0 +1,397 @@
+<textcomponents>
+<!--slide 1-->
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas - identifikasi Informasi Alamat di Setiap Hop</b><br/><br/>PC1 berkomunikasi dengan Server Web melalui router yang mendukung NAT (R1). Ikuti komunikasi ini satu per satu untuk menentukan bagaimana alamat sumber (SA), alamat tujuan (DA), dan nomor port berubah sepanjang proses. Pilih Tombol 2 sekarang untuk memulai.]]></text>
+</component>
+
+<component id='ID_s1_top01'>
+	<text><![CDATA[Topologi Jaringan]]></text>
+</component>
+
+<component id="ID_s1_top02">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_s1_top03">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s1_top04">
+<text><![CDATA[Server Web]]></text> 
+</component>
+
+
+<!--slide 2-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas – identifikasi Informasi Alamat di Setiap Hop<br/>Hop 1: PC 1 ke Router yang Mendukung NAT (R1)</b><br/><br/>Seret alamat paket NAT IP sumber dan tujuan yang sesuai ke bidang yang sesuai untuk hop komunikasi ini.]]></text>
+</component>
+
+<component id="ID_s2_top01">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_s2_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_top03">
+<text><![CDATA[Server Web]]></text> 
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[SA]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Pelabuhan Sumber]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Pelabuhan Tujuan]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s2_dragsrc01'>
+	<text><![CDATA[64.100.10.2]]></text>
+</component>
+
+<component id='ID_s2_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s2_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s2_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s2_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s2_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s2_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s2_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[Benar]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi alamat paket IP NAT untuk hop komunikasi ini. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[Salah]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi alamat paket IP NAT untuk kemacetan komunikasi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+
+
+<!--slide 3-->
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Aktivitas – identifikasi Informasi Alamat di Setiap Hop<br/>Hop 2: Router yang Diaktifkan NAT (R1) ke Server Web</b><br/><br/>Seret pengalamatan SA, DA, dan port tujuan yang sesuai dengan bidang yang sesuai untuk penghentian komunikasi ini.]]></text>
+</component>
+
+<component id="ID_s3_top01">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_s3_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s3_top03">
+<text><![CDATA[Server Web]]></text> 
+</component>
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[SA]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[Pelabuhan Sumber]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Pelabuhan Tujuan]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s3_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s3_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s3_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s3_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s3_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s3_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s3_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s3_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[Benar]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi alamat paket IP NAT untuk hop komunikasi ini. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[Salah]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi alamat paket IP NAT untuk kemacetan komunikasi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+
+<!--slide 4-->
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Aktivitas – identifikasi Informasi Alamat di Setiap Hop<br/>Hop 3: Server Web ke Router yang Mendukung NAT (R1)</b><br/><br/>Seret pengalamatan port SA, DA, sumber, dan tujuan yang sesuai ke bidang yang sesuai untuk gangguan komunikasi ini.]]></text>
+</component>
+
+<component id="ID_s4_top01">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_s4_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s4_top03">
+<text><![CDATA[Server Web]]></text> 
+</component>
+
+<component id='ID_s4_txt01'>
+	<text><![CDATA[SA]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[Pelabuhan Sumber]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[Pelabuhan Tujuan]]></text>
+</component>
+
+<component id='ID_s4_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s4_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s4_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s4_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s4_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s4_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s4_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s4_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[Benar]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi alamat paket IP NAT untuk hop komunikasi ini. Klik Tombol 5 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[Salah]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi alamat paket IP NAT untuk kemacetan komunikasi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+
+<!--slide 5-->
+<component id='ID_s5_inst'>
+	<text><![CDATA[<b>Aktivitas – identifikasi Informasi Alamat di Setiap Hop<br/>Hop 4: Router Berkemampuan NAT (R1) ke PC 1</b><br/><br/>Seret pengalamatan port SA, DA, sumber, dan tujuan yang sesuai ke bidang yang sesuai untuk gangguan komunikasi ini.]]></text>
+</component>
+
+<component id="ID_s5_top01">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_s5_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s5_top03">
+<text><![CDATA[Server Web]]></text> 
+</component>
+
+<component id='ID_s5_txt01'>
+	<text><![CDATA[SA]]></text>
+</component>
+
+<component id='ID_s5_txt02'>
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id='ID_s5_txt03'>
+	<text><![CDATA[Pelabuhan Sumber]]></text>
+</component>
+
+<component id='ID_s5_txt04'>
+	<text><![CDATA[Pelabuhan Tujuan]]></text>
+</component>
+
+<component id='ID_s5_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s5_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s5_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s5_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s5_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s5_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s5_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s5_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s5_CORRECT_TITLE'>
+	<text><![CDATA[Benar]]></text>
+</component>
+
+<component id='ID_s5_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi alamat paket IP NAT untuk hop komunikasi ini.]]></text>
+</component>
+
+<component id='ID_s5_INCORRECT_TITLE'>
+	<text><![CDATA[Salah]]></text>
+</component>
+
+<component id='ID_s5_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi alamat paket IP NAT untuk kemacetan komunikasi ini. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s5_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s5_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+
+</textcomponents>

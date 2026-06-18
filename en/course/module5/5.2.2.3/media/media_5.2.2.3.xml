@@ -1,0 +1,274 @@
+<textcomponents>
+
+<!--Feedback for use by actionscript-->
+<!--Do not need to duplicate for each activity-->
+
+
+
+<component id="ID_blankTitle">
+<text><![CDATA[<b>Not Answered</b>]]></text>
+</component>
+
+<component id="ID_blankBody">
+<text><![CDATA[Please choose an answer.]]></text>
+</component>
+
+<!--slide 1-->
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activity –  Part 1: Identify the Solution to the Inter-VLAN Routing Issue</b><br><br>You are troubleshooting an inter-VLAN issue and need to check your router(s) and switches for inter-VLAN operation. Use the output shown and determine which command produced the output. Click the button next to your answer. Click Button 2 to continue this activity.]]></text>
+</component>
+
+
+
+<component id='ID_s1_output02'>
+	<text><![CDATA[&lt;output omitted&gt;]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s1_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s1_check'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s1_reset'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+<component id="ID_s1_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s1_correctBody">
+<text><![CDATA[You have successfully identified the command used to produce the output shown. Click Button 2 to continue.]]></text>
+</component>
+
+<component id="ID_s1_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s1_incorrectBody">
+<text><![CDATA[You have not successfully identified the command used to produce the output shown. Please click Reset to try again.]]></text>
+</component>
+
+
+<!--slide 2-->
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activity –  Part 2: Identify the Solution to the Inter-VLAN Routing Issue</b><br><br>You are troubleshooting an inter-VLAN issue and need to check your router(s) and switches for inter-VLAN operation. Use the output shown and determine which command produced the output. Click the button next to your answer. Click Button 3 to continue this activity.]]></text>
+</component>
+<component id='ID_s2_output01'>
+	<text><![CDATA[&lt;output omitted&gt;]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+<component id="ID_s2_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s2_correctBody">
+<text><![CDATA[You have successfully identified the command used to produce the output shown. Click Button 3 to continue.]]></text>
+</component>
+
+<component id="ID_s2_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s2_incorrectBody">
+<text><![CDATA[You have not successfully identified the command used to produce the output shown. Please click Reset to try again.]]></text>
+</component>
+
+
+<!--slide 3-->
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Activity –  Part 3: Identify the Solution to the Inter-VLAN Routing Issue</b><br><br>You are troubleshooting an inter-VLAN issue and need to check your router(s) and switches for inter-VLAN operation. Use the output shown and determine which command produced the output. Click the button next to your answer. Click Button 4 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[Reset]]></text>
+</component>
+<component id="ID_s3_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s3_correctBody">
+<text><![CDATA[You have successfully identified the command used to produce the output shown. Click Button 4 to continue.]]></text>
+</component>
+
+<component id="ID_s3_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s3_incorrectBody">
+<text><![CDATA[You have not successfully identified the command used to produce the output shown. Please click Reset to try again.]]></text>
+</component>
+
+
+<!--slide 4-->
+<component id="ID_s4_inst">
+<text><![CDATA[<b>Activity –  Part 4: Identify the Solution to the Inter-VLAN Routing Issue</b><br><br>You are troubleshooting an inter-VLAN issue and need to check your router(s) and switches for inter-VLAN operation. Use the output shown and determine which command produced the output. Click the button next to your answer. Click Button 5 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s4_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s4_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+<component id="ID_s4_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s4_correctBody">
+<text><![CDATA[You have successfully identified the command used to produce the output shown. Click Button 5 to continue.]]></text>
+</component>
+
+<component id="ID_s4_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s4_incorrectBody">
+<text><![CDATA[You have not successfully identified the command used to produce the output shown. Please click Reset to try again.]]></text>
+</component>
+
+
+<!--slide 5-->
+<component id="ID_s5_inst">
+<text><![CDATA[<b>Activity –  Part 5: Identify the Solution to the Inter-VLAN Routing Issue </b><br><br>You are troubleshooting an inter-VLAN issue and need to check your router(s) and switches for inter-VLAN operation. Use the output shown and determine which command produced the output. Click the button next to your answer.]]></text>
+</component>
+
+<component id='ID_s5_txt01'>
+<text><![CDATA[<font face="Courier New">show interface  Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s5_txt02'>
+<text><![CDATA[<font face="Courier New">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s5_txt03'>
+<text><![CDATA[<font face="Courier New">show run</font>]]></text>
+</component>
+
+<component id='ID_s5_txt04'>
+<text><![CDATA[<font face="Courier New">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s5_txt05'>
+<text><![CDATA[<font face="Courier New">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s5_check'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s5_reset'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+<component id="ID_s5_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s5_correctBody">
+<text><![CDATA[You have successfully identified the command used to produce the output shown.]]></text>
+</component>
+
+<component id="ID_s5_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s5_incorrectBody">
+<text><![CDATA[You have not successfully identified the command used to produce the output shown. Please click Reset to try again.]]></text>
+</component>
+
+
+</textcomponents>

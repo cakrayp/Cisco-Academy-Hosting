@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.1.3 Packet Filtering</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Purpose of ACLs</h2>
+      </div>
+      <div id="content">
+          <p>So how does an ACL use the information passed during a TCP/IP conversation to filter traffic?</p>
+          <p></p>
+          <p>Packet filtering, sometimes called static packet filtering, controls access to a network by analyzing the incoming and outgoing packets and passing or dropping them based on given criteria, such as the source IP address, destination IP addresses, and the protocol carried within the packet.</p>
+          <p></p>
+          <p>A router acts as a packet filter when it forwards or denies packets according to filtering rules. When a packet arrives at the packet-filtering router, the router extracts certain information from the packet header. Using this information, the router makes decisions, based on configured filter rules, as to whether the packet can pass through or be discarded. As shown in the figure, packet filtering can work at different layers of the OSI model, or at the internet layer of TCP/IP.</p>
+          <p></p>
+          <p>A packet-filtering router uses rules to determine whether to permit or deny traffic. A router can also perform packet filtering at Layer 4, the transport layer. The router can filter packets based on the source port and destination port of the TCP or UDP segment. These rules are defined using ACLs. </p>
+          <p></p>
+          <p>An ACL is a sequential list of permit or deny statements, known as access control entries (ACEs). ACEs are also commonly called ACL statements. ACEs can be created to filter traffic based on certain criteria such as: the source address, destination address, the protocol, and port numbers. When network traffic passes through an interface configured with an ACL, the router compares the information within the packet against each ACE, in sequential order, to determine if the packet matches one of the statements. If a match is found, the packet is processed accordingly. In this way, ACLs can be configured to control access to a network or subnet.</p>
+          <p></p>
+          <p>To evaluate network traffic, the ACL extracts the following information from the Layer 3 packet header:</p>
+          <p>
+            <ul>
+              <li>Source IP address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Destination IP address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>ICMP message type</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The ACL can also extract upper layer information from the Layer 4 header, including:</p>
+          <p>
+            <ul>
+              <li>TCP/UDP source port</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>TCP/UDP destination port</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

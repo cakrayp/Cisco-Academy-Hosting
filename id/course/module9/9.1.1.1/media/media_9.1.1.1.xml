@@ -1,0 +1,42 @@
+<textcomponents>
+<component id="ID_title">
+  <text><![CDATA[<b>Apa itu ACL?</b>]]></text> 
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Izinkan Email Masuk<br/>Tolak Telnet Masuk]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Tolak video ke S1<br/>Tolak akses ke S2 ​​untuk S1]]></text> 
+</component>
+<component id="ID_txt04">
+  <text><![CDATA[Tolak akses HR]]></text> 
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Subnet SDM<br/>172.17.0.0/20]]></text> 
+</component>
+<component id="ID_txt06">
+  <text><![CDATA[Tolak pembaruan<br/>Tolak FTP<br/>Tolak web]]></text> 
+</component>
+
+
+
+<component id="ID_acl_txt01">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt02">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt03">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt04">
+  <text><![CDATA[ACL]]></text> 
+</component>
+
+</textcomponents>
+
+
+

@@ -1,0 +1,143 @@
+﻿<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Using the<font face="_typewriter"> show vlan </font>Command</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Using the<font face="_typewriter"> show interfaces vlan </font>Command</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Using the<font face="_typewriter"> show interfaces </font>Command</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<font face="_typewriter"><b>show vlan </b></font>Command]]></text> 
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[<font face="_typewriter"><b>show interfaces </b></font>Command]]></text> 
+</component>
+
+
+<component id="ID_s1_table01">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' 
+glow='true' glowcolor='#808080' cellpadding='4'>
+
+
+<tr>
+<td colspan='2' bgcolor='#98D3D1' class="title"><font size='12'  color='#393536'><b>Cisco IOS CLI Command Syntax</b></font></td>
+</tr>
+<tr>
+<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360' ><span 
+style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign="top" width="300" ><font face='_typewriter' size="11" color='#393536'><b>show vlan</b> [<b>brief </b> | <b>id </b><i> vlan-id </i> | <b>name </b><i> vlan-name </i> | <b>summary</b>].</font></td>
+<td bgcolor='#EFF8F7' valign="top"><font face='_typewriter'><b></b></font></td>
+</tr>
+<tr>
+<td bgcolor='#ffffff' valign="top" width="300" ><font color='#393536' size="11">Display one line for each VLAN with the VLAN name, status, and its ports. </font></td>
+<td bgcolor='#ffffff' valign="top"><font face='_typewriter' size="11" color='#393536'><b>brief</b></font></td>
+</tr>
+
+
+
+<tr>
+<td bgcolor='#EFF8F7' valign="top" width="300" ><font color='#393536' size="11" >Display information about a single VLAN identified by VLAN ID number.<br/>For vlan-id, the range is 1 to 4094. </font></td>
+<td bgcolor='#EFF8F7' valign="top"><font face='_typewriter' size="11" color='#393536'><b>id </b><i>vlan-id</i></font></td>
+</tr>
+<tr>
+<td bgcolor='#ffffff' valign="top" width="300" ><font color='#393536' size="11" >Display information about a single VLAN identified by VLAN name. The VLAN name is an ASCII string from 1 to 32 characters.</font></td>
+<td bgcolor='#ffffff' valign="top"><font face='_typewriter' size="11" color='#393536'><b>name </b><i>vlan-name</i></font></td>
+</tr>
+
+
+
+
+<tr>
+<td bgcolor='#EFF8F7' valign="top" width="300"><font color='#393536' size="11">Display VLAN summary information.</font></td>
+<td bgcolor='#EFF8F7' valign="top"><font face='_typewriter'size="11" color='#393536'><b>summary</b></font></td>
+</tr>
+
+
+
+</table>]]></text>
+</component>
+
+
+
+<component id="ID_s1_table02">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' 
+glow='true' glowcolor='#808080' cellpadding='4'>
+
+<tr>
+<td colspan='2' bgcolor='#98D3D1' class="title"><font size='12' color='#393536'><b>Cisco IOS CLI Command Syntax</b></font></td>
+</tr>
+
+<tr>
+<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span 
+style="color:#98D3D1">.</span></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#EFF8F7' valign="top" width="300" ><font face='_typewriter' size="11" color='#393536'><b>show interfaces </b>[<i>interface-id </i> <b> | vlan </b><i>vlan-id </i>] <b> | switchport</b> </font></td>
+<td bgcolor='#EFF8F7' valign="top"><font face='_typewriter' size="11" color='#393536'><b></b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top" width="300" ><font color='#393536' size="11">Valid interfaces include physical ports (including type, module, and port number) and port channels. The port-channel range is 1 to 6.</font></td>
+<td bgcolor='#ffffff' valign="top"><font face='_typewriter' size="11" color='#393536'><i>interface-id </i></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#EFF8F7' valign="top" width="300" ><font color='#393536' size="11" >VLAN identification. The range is 1 to 4094. </font></td>
+<td bgcolor='#EFF8F7' valign="top"><font face='_typewriter' size="11" color='#393536'><b>vlan </b><i>vlan-id</i></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top" width="300" ><font color='#393536' size="11" >Display the administrative and operational status of a switching port, including port blocking and port protection settings.</font></td>
+<td bgcolor='#ffffff' valign="top"><font face='_typewriter' size="11" color='#393536'><b>switchport</b></font></td>
+</tr>
+
+</table>]]></text>
+</component>
+
+<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+	</component>
+
+<component id="ID_SC5" fontFace='Courier New' fontSize="9" class="font9px">
+<feedback id="fb"><![CDATA[<b><font face="Arial" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+]]></feedback>
+<existingcommands><![CDATA[<font face="Arial"><b>Ports Fa0/11 and Fa0/18 have been assigned to VLAN 20. Display the vlan information specifically for the Student vlan.</b></font>]]></existingcommands>
+<command prompt="S1#">
+<correctresponse><![CDATA[show vlan name student]]></correctresponse>
+	<deviceresponse><![CDATA[<font face="Courier New"><br>VLAN Name                             Status    Ports <br>---- -------------------------------- --------- ----- <br>20   student                          active    Fa0/11, Fa0/18 <br> <br>VLAN Type SAID MTU Parent RingNo BridgeNo Stp BrdgMode Trans1 Trans2<br>---- ----- ---- ---- ----- ------ ------ ------ <span id="spacer4">----   ------  ---- <br>20  enet 100020 1500  -      -      -        -    -        0      0   <br> <br>Remote SPAN VLAN <br>---------------- <br>Disabled <br> <br>Primary Secondary Type              Ports <br>------- --------- ----------------- ----------------------------</font><br>S1#]]></deviceresponse>
+<instruction><![CDATA[<font face="Arial"><b>Display summary information for VLANs.</font>]]></instruction>
+</command>
+<command prompt="S1#">
+<correctresponse><![CDATA[show vlan summary]]></correctresponse>
+	<deviceresponse><![CDATA[<font face="Courier New">Number of existing VLANs               <span id="spacer1">: 7 </span><br> Number of existing VTP VLANs          <span id="spacer2">: 7 </span><br> Number of existing extended VLANS     <span id="spacer3">: 0 </span><br> <br>S1#</font>]]></deviceresponse>
+<instruction><![CDATA[<font face="Arial"><b>Display the interface information for VLAN 20.</font>]]></instruction>
+</command>
+<command prompt="S1#">
+<correctresponse><![CDATA[show interfaces vlan 20]]></correctresponse>
+	<deviceresponse><![CDATA[<font face="Courier New">Vlan20 is up, line protocol is up <br>  Hardware is CPU Interface, address is 0007.ec74.61d3 (bia 0007.ec74.61d3) <br>  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec, <br>     reliability 255/255, txload 1/255, rxload 1/255 <br>  Encapsulation ARPA, loopback not set <br>  ARP type: ARPA, ARP Timeout 04:00:00 <br>  Last input 21:40:21, output never, output hang never <br>  Last clearing of "show interface" counters never <br>  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0 <br>  Queueing strategy: fifo <br>  Output queue: 0/40 (size/max) <br>  5 minute input rate 0 bits/sec, 0 packets/sec <br>  5 minute output rate 0 bits/sec, 0 packets/sec <br>     1682 packets input, 530955 bytes, 0 no buffer <br>     Received 0 broadcasts (0 IP multicast) <br>     0 runts, 0 giants, 0 throttles <br>     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored <br>     563859 packets output, 0 bytes, 0 underruns <br>     0 output errors, 23 interface resets <br>     0 output buffer failures, 0 output buffers swapped out <br>S1#</font>]]></deviceresponse>
+<instruction><![CDATA[<font face="Arial"><b>Display the switchport information for f0/18.</font>]]></instruction>
+</command>
+<command prompt="S1#">
+<correctresponse><![CDATA[show interfaces f0/18 switchport]]></correctresponse>
+	<deviceresponse><![CDATA[<font face="Courier New">Name: Fa0/18 <br>Switchport: Enabled <br>Administrative Mode: static access <br>Operational Mode: down <br>Administrative Trunking Encapsulation: dot1q <br>Operational Trunking Encapsulation: native <br>Negotiation of Trunking: Off <br>Access Mode VLAN: 20 (Students) <br>Trunking Native Mode VLAN: 1 (default) <br>Voice VLAN: none <br> <br>&lt;output omitted&gt;</font>]]></deviceresponse>
+<instruction><![CDATA[<font  face="Arial"><b>You successfully verified VLAN information.</font>]]></instruction>
+</command>
+<command prompt=""/>
+</component>
+
+
+</textcomponents>

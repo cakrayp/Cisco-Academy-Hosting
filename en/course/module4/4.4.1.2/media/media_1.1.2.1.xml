@@ -1,0 +1,48 @@
+﻿<textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>Sample LAN and WAN Connections</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Home Office</b>]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Internet]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Cloud]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[<b>Central</b>]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[<b>Branch</b>]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[LAN]]></text>
+</component>
+
+<component id='ID_txt07'>
+	<text><![CDATA[WAN]]></text>
+</component>
+
+<component id="ID_txt08">
+   <text><![CDATA[Corporate Srvr]]></text>
+</component>
+
+<component id="ID_txt09">
+   <text><![CDATA[File Srvr]]></text>
+</component>
+
+<component id="ID_txt10">
+   <text><![CDATA[WAP]]></text>
+</component>
+
+
+</textcomponents>

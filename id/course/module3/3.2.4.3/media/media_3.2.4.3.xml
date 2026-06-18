@@ -1,0 +1,53 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Pemecahan Masalah Batang</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<font face="_typewriter"><b>tampilkan antarmuka bagasi</b></font>]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[<font face="_typewriter"><b>tampilkan antarmuka bagasi</b></font>]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Memecahkan masalah trunk.]]></text> 
+  </component>
+<component id="ID_s1_txt04">
+<text><![CDATA[VLAN asli pada port lokal dan port peer cocok?]]></text>
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[Ya]]></text> 
+  </component>
+<component id="ID_s1_txt06">
+  <text><![CDATA[Mode trunk pada port lokal dan peer cocok?]]></text> 
+  </component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Ya]]></text>
+</component>
+<component id="ID_s1_txt08">
+  <text><![CDATA[Bagasi operasional.]]></text> 
+  </component>
+<component id="ID_s1_txt09">
+  <text><![CDATA[No]]></text> 
+  </component>
+<component id="ID_s1_txt10">
+<text><![CDATA[No]]></text>
+</component>
+<component id="ID_s1_txt11">
+  <text><![CDATA[Ubah VLAN asli agar cocok.]]></text> 
+  </component>
+<component id="ID_s1_txt12">
+  <text><![CDATA[Konfigurasikan port secara statis pada kedua perangkat ke trunk.]]></text> 
+  </component>
+  
+  
+  
+  
+<component id="ID_s2_title">
+<text><![CDATA[<b>Pemecahan Masalah Batang</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+</component>
+
+
+</textcomponents>

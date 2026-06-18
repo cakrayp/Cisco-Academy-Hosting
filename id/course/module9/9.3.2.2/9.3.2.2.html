@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.3.2.2 Menerapkan ACL yang Diperluas ke Antarmuka</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 yang diperluas</h1>
+<h2>Konfigurasikan ACL IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>Dalam contoh sebelumnya, administrator jaringan mengonfigurasi ACL untuk memungkinkan pengguna dari jaringan 192.168.10.0/24 menelusuri situs web yang tidak aman dan terlindungi. Meskipun telah dikonfigurasi, ACL tidak akan memfilter lalu lintas sampai diterapkan ke antarmuka. Untuk menerapkan ACL ke antarmuka, pertama-tama pertimbangkan apakah lalu lintas yang akan difilter masuk atau keluar. Ketika pengguna di LAN internal mengakses situs web di Internet, lalu lintas adalah lalu lintas yang keluar ke Internet. Ketika pengguna internal menerima email dari Internet, lalu lintas masuk ke router lokal. Namun, ketika menerapkan ACL ke antarmuka, masuk dan keluar memiliki arti yang berbeda. Dari pertimbangan ACL, masuk dan keluar mengacu pada antarmuka router.</p>
+<p></p>
+<p>Pada topologi pada gambar, R1 memiliki tiga antarmuka. Ini memiliki antarmuka serial, S0/0/0, dan dua antarmuka Gigabit Ethernet, G0/0 dan G0/1. Ingatlah bahwa ACL yang diperluas biasanya harus diterapkan dekat dengan sumbernya. Pada topologi ini antarmuka yang paling dekat dengan sumber trafik target adalah antarmuka G0/0.</p>
+<p></p>
+<p>Lalu lintas permintaan web dari pengguna di LAN 192.168.10.0/24 masuk ke antarmuka G0/0. Lalu lintas kembali dari koneksi yang dibuat ke pengguna di LAN keluar dari antarmuka G0/0. Contoh ini menerapkan ACL ke antarmuka G0/0 di kedua arah. ACL masuk, 103, memeriksa jenis lalu lintas. ACL keluar, 104, memeriksa lalu lintas kembali dari koneksi yang sudah ada. Ini akan membatasi akses Internet 192.168.10.0 untuk hanya mengizinkan penjelajahan situs web.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Daftar akses dapat diterapkan pada antarmuka S0/0/0 tetapi dalam kasus ini, proses ACL router harus memeriksa semua paket yang masuk ke router, tidak hanya lalu lintas ke dan dari 192.168.11.0. Hal ini akan menyebabkan pemrosesan yang tidak perlu oleh router.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

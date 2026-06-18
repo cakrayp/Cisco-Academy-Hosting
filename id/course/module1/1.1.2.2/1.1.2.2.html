@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.1.2.2 Faktor Bentuk</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Desain LAN</h1>
+<h2>Jaringan Beralih</h2>
+</div>
+<div id="content">
+<p>Ada berbagai jenis switch yang digunakan dalam jaringan bisnis. Penting untuk menerapkan jenis sakelar yang sesuai berdasarkan kebutuhan jaringan. Gambar 1 menyoroti beberapa pertimbangan bisnis umum ketika memilih peralatan saklar.</p>
+<p></p>
+<p>Saat memilih jenis switch, perancang jaringan harus memilih antara konfigurasi tetap atau modular, dan dapat ditumpuk atau tidak dapat ditumpuk. Pertimbangan lainnya adalah ketebalan saklar, yang dinyatakan dalam jumlah unit rak. Hal ini penting untuk sakelar yang dipasang di rak. Misalnya, sakelar konfigurasi tetap yang ditunjukkan pada Gambar 2 semuanya 1 unit rak (1U). Opsi ini terkadang disebut sebagai faktor bentuk peralihan.</p>
+<p></p>
+<p>
+<b>Sakelar Konfigurasi Tetap</b>
+</p>
+<p></p>
+<p>Sakelar konfigurasi tetap tidak mendukung fitur atau opsi di luar yang awalnya disertakan dengan sakelar (Gambar 2). Model tertentu menentukan fitur dan opsi yang tersedia. Misalnya, sakelar tetap gigabit 24 port tidak dapat mendukung port tambahan. Biasanya terdapat pilihan konfigurasi berbeda yang bervariasi dalam jumlah dan jenis port apa yang disertakan dengan sakelar konfigurasi tetap.</p>
+<p></p>
+<p>
+<b>Sakelar Konfigurasi Modular</b>
+</p>
+<p></p>
+<p>Sakelar konfigurasi modular menawarkan lebih banyak fleksibilitas dalam konfigurasinya. Sakelar konfigurasi modular biasanya dilengkapi dengan sasis dengan ukuran berbeda yang memungkinkan pemasangan sejumlah kartu jalur modular yang berbeda (Gambar 3). Kartu garis sebenarnya berisi port. Kartu saluran masuk ke dalam sasis sakelar seperti kartu ekspansi masuk ke dalam PC. Semakin besar sasisnya, semakin banyak modul yang dapat didukungnya. Ada banyak ukuran sasis yang berbeda untuk dipilih. Sakelar modular dengan kartu jalur 24 port mendukung kartu jalur 24 port tambahan, sehingga jumlah total port menjadi 48.</p>
+<p></p>
+<p>
+<b>Sakelar Konfigurasi yang Dapat Ditumpuk</b>
+</p>
+<p></p>
+<p>Sakelar konfigurasi yang dapat ditumpuk dapat dihubungkan menggunakan kabel khusus yang menyediakan throughput bandwidth tinggi antar sakelar (Gambar 4). Teknologi Cisco StackWise memungkinkan interkoneksi hingga sembilan switch. Sakelar dapat ditumpuk satu di atas yang lain dengan kabel yang menghubungkan sakelar secara rantai daisy. Sakelar bertumpuk secara efektif beroperasi sebagai satu sakelar yang lebih besar. Sakelar yang dapat ditumpuk diinginkan jika toleransi kesalahan dan ketersediaan bandwidth sangat penting dan sakelar modular terlalu mahal untuk diterapkan. Dengan menggunakan koneksi yang saling terhubung, jaringan dapat pulih dengan cepat jika satu saklar gagal. Sakelar yang dapat ditumpuk menggunakan port khusus untuk interkoneksi. Banyak switch Cisco yang dapat ditumpuk juga mendukung teknologi StackPower, yang memungkinkan pembagian daya di antara anggota tumpukan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

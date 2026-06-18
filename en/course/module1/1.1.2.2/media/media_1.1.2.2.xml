@@ -1,0 +1,48 @@
+<textcomponents>
+
+<!-- SLIDE 1 -->
+	<component id="ID_s1_title">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt01">
+		<text><![CDATA[<b>Common Business Considerations When Selecting Switch Equipment:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14' ><ul><li><b>Cost</b> - The cost of a switch will depend on the number and speed of the interfaces, supported features, and expansion capability.</li><li><b>Port Density</b> - Network switches must support the appropriate number of devices on the network.</li><li><b>Power</b> - It is now common to power access points, IP phones, and even compact switches using Power over Ethernet (PoE). In addition to PoE considerations, some chassis-based switches support redundant power supplies. </li><li><b>Reliability</b> - The switch should provide continuous access to the network.</li><li><b>Port Speed</b> - The speed of the network connection is of primary concern to end users.</li><li><b>Frame Buffers</b> - The ability of the switch to store frames is important in a network where there may be congested ports to servers or other areas of the network.</li><li><b>Scalability</b> - The number of users on a network typically grows over time; therefore, the switch should provide the opportunity for growth.</li></ul></textformat>]]></text>
+	</component>
+	
+	
+<!-- SLIDE 2 -->
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Fixed Configuration Switches</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt01">
+	  <text><![CDATA[Features and options are limited to those that originally come with the switch.]]></text> 
+	</component>
+
+
+<!-- SLIDE 3 -->
+
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Modular Configuration Switches</b>]]></text> 
+	</component>
+	
+	<component id="ID_s3_txt01">
+	  <text><![CDATA[The chassis accepts line cards that contain the ports.]]></text> 
+	</component>
+	
+	
+<!-- SLIDE 4 -->
+	
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>Stackable Configuration Switches</b>]]></text> 
+	</component>
+	
+	<component id="ID_s4_txt01">
+	  <text><![CDATA[Stackable switches, connected by a special cable, effectively operate as one large switch.]]></text> 
+	</component>
+</textcomponents>

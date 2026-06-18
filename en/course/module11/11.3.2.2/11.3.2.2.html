@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.3.2.2 More Case Studies</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+    	myLayout = $('body').layout({
+          west__size:300,
+          stateManagement__enabled: true,
+          maskContents: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshooting NAT</h1>
+        <h2>Troubleshooting NAT Case Study</h2>
+      </div>
+      <div id="content">
+          <p>The following animations demonstrate verifying and troubleshooting NAT:</p>
+          <p></p>
+          <p>
+            <b>Flash Animation Case Study </b>- Can Ping Host, but Cannot Telnet: This is a seven-minute Flash animation on why a device can ping the host, but cannot telnet: http://www.cisco.com/warp/public/556/index.swf. </p>
+          <p></p>
+          <p>
+            <b>Click Button 2 in the figure.</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Flash Animation Case Study </b>- Cannot Ping Beyond NAT: This is a ten-minute Flash animation on why a device cannot ping beyond NAT: http://www.cisco.com/warp/public/556/TS_NATcase2/index.swf.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" src="media/index.html" frameborder="0" class="ui-layout-center" alt="interactive graphic" longdesc="media_11.3.2.2_longdesc.txt"></iframe>
+  </body>
+</html>

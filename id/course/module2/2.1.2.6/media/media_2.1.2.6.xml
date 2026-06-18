@@ -1,0 +1,40 @@
+<textcomponents>
+   <component id="ID_s1_title">
+      <text><![CDATA[<b>Memecahkan Masalah Peralihan Media</b>]]></text>
+      </component>
+
+<component id="ID_txt01">
+   <text><![CDATA[Lakukan antarmuka pertunjukan]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[Apakah antarmuka sudah aktif?]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<textformat blockindent="-14"><li>Apakah ada indikasi EMI/noise? Jika ya, hapus sumbernya.</li><li>Pastikan pengaturan dupleks diatur dengan benar di kedua ujungnya.</li></textformat>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<textformat blockindent="-14"><li>Verifikasi kabel yang tepat.</li><li>Periksa kabel dan konektor dari kerusakan.</li><li>Pastikan kecepatan diatur dengan benar di kedua ujungnya.</li></textformat>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[Apakah masalahnya terpecahkan?]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[Selesai]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[Dokumentasikan pekerjaan yang telah dilakukan dan tingkatkan masalahnya.]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[Ya]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[No]]></text>
+   </component>
+<component id="ID_txt10">
+   <text><![CDATA[Ya]]></text>
+   </component>
+<component id="ID_txt11">
+   <text><![CDATA[No]]></text>
+   </component>
+
+	</textcomponents>

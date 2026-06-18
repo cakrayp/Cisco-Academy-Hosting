@@ -1,0 +1,39 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Static Routing Advantages and Disadvantages</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+						 <table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+								<tr class="mtable_top">
+									<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+								</tr> 
+								<tr>
+								  <td bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Advantages</b></font></td>
+								  <td bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Disadvantages</b></font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#EFF8F7' valign="top">Easy to implement in a small network.</td>
+								  <td bgcolor='#EFF8F7' valign="top">Suitable only for simple topologies or for special purposes such as a default static route. Configuration complexity increases dramatically as network grows.</td>
+								</tr>
+								<tr>
+								  <td bgcolor='#ffffff' valign="top">Very secure. No advertisements are sent as compared to dynamic routing protocols.</td>
+								  <td bgcolor='#ffffff' valign="top">&nbsp;</td>
+								</tr> 
+								<tr>
+								  <td bgcolor='#EFF8F7' valign="top">Route to destination is always the same.</td>
+								  <td bgcolor='#EFF8F7' valign="top">Manual intervention required to re-route traffic.</td>
+								</tr>	
+                                <tr>
+								  <td bgcolor='#ffffff' valign="top">No routing algorithm or update mechanism required; therefore, extra resources (CPU or RAM) are not required.</td>
+								  <td bgcolor='#ffffff' valign="top">&nbsp;</td>
+								</tr>
+							  </table>
+					]]>
+		</text>
+</component>
+
+
+</textcomponents>

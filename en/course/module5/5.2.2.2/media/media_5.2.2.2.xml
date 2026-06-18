@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Router Issue</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+   <text><![CDATA[&lt;output omitted&gt;]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[&lt;output omitted&gt;]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[&lt;output omitted&gt;]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[&lt;output omitted&gt;]]></text>
+   </component>
+
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>PC IP Addressing Issue</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[This PC1 should be in the VLAN 10 subnet<br/>So this should be: <font face = "_typewriter">172.17.10.21</font> with a subnet mask of <font face = "_typewriter">255.255.255.0</font>]]></text>
+</component>
+</textcomponents>

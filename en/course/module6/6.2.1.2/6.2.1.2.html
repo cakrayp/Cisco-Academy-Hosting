@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.2.1.2 Next-Hop Options</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Static and Default Routes</h1>
+        <h2>Configure IPv4 Static Routes</h2>
+      </div>
+      <div id="content">
+          <p>In this example, Figures 1 to 3 display the routing tables of R1, R2, and R3. Notice that each router has entries only for directly connected networks and their associated local addresses. None of the routers have any knowledge of any networks beyond their directly connected interfaces.</p>
+          <p></p>
+          <p>For example, R1 has no knowledge of networks:</p>
+          <p>
+            <ul>
+              <li>172.16.1.0/24 - LAN on R2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.1.0/24 - Serial network between R2 and R3</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.2.0/24 - LAN on R3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Figure 4 displays a successful ping from R1 to R2. Figure 5 displays an unsuccessful ping to the R3 LAN. This is because R1 does not have an entry in its routing table for the R3 LAN network.</p>
+          <p></p>
+          <p>The next hop can be identified by an IP address, exit interface, or both. How the destination is specified creates one of the three following route types: </p>
+          <p>
+            <ul>
+              <li>
+                <b>Next-hop route </b>- Only the next-hop IP address is specified.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Directly connected static route </b>- Only the router exit interface is specified.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fully specified static route </b>- The next-hop IP address and exit interface are specified.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

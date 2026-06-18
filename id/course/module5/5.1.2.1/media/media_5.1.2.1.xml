@@ -1,0 +1,110 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Antarmuka Router dan Perutean Antar-VLAN</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[G0/0,10]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[G0/0,30]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Antarmuka R1</b><br/>G0/0: 172.17.10.1<br/>G0/1: 172.17.30.1]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Belalai]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Belalai]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Belalai]]></text> 
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Belalai]]></text> 
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[<b>Bingkai Unicast</b>]]></text>
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[<b>Bingkai Unicast VLAN 10</b>]]></text>
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[<b>Bingkai Unicast VLAN 30</b>]]></text>
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Bingkai Bertanda VLAN]]></text>
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[Bingkai Bertanda VLAN]]></text>
+</component>
+
+  
+  
+<!----PURPLE TEXT BOXES----->
+<component id="ID_tbox01">
+  <text><![CDATA[PC1 mengirimkan frame unicast ke PC3.]]></text>
+</component>
+<component id="ID_tbox02">
+  <text><![CDATA[S2 menerima frame pada VLAN 10 dan menandainya sebelum dikirim ke S1.]]></text>
+</component>
+<component id="ID_tbox03">
+  <text><![CDATA[S1 menghapus tag VLAN dan meneruskan frame ke R1.]]></text>
+</component>
+<component id="ID_tbox04">
+  <text><![CDATA[R1 menerima frame pada G0/0.]]></text>
+</component>
+<component id="ID_tbox05">
+  <text><![CDATA[R1 memeriksa tabel rute. Jaringan tujuan terhubung langsung ke R1 G0/1.]]></text>
+</component>
+<component id="ID_tbox06">
+  <text><![CDATA[R1 meneruskan paket keluar dari antarmuka G0/1.]]></text>
+</component>
+<component id="ID_tbox07">
+  <text><![CDATA[S1 menerima frame pada VLAN 10 dan menandainya sebelum dikirim ke S2.]]></text>
+</component>
+<component id="ID_tbox08">
+  <text><![CDATA[S2 menghapus tag VLAN dan meneruskan frame ke PC3.]]></text>
+</component>
+
+
+
+<!---ANIMATION CONTROLLER--->
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+
+</textcomponents>

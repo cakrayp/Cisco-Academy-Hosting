@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Why Configure a Floating Static Route?</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Private WAN</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Internet</b>]]></text> 
+  </component>
+
+    <component id="ID_txt03">
+  <text><![CDATA[<b>Branch</b>]]></text> 
+  </component>
+
+      <component id="ID_txt04">
+  <text><![CDATA[<b>ISP</b>]]></text> 
+  </component>
+
+   <component id="ID_txt05">
+  <text><![CDATA[<b>HQ</b>]]></text> 
+  </component>
+
+   <component id="ID_speech01">
+  <text><![CDATA[I prefer to reach the HQ router using the private WAN link.]]></text> 
+  </component>
+
+   <component id="ID_speech02">
+  <text><![CDATA[However, if that link ever fails, I can use a floating static route connecting to the Internet as a back up.]]></text> 
+  </component>
+
+
+
+</textcomponents>

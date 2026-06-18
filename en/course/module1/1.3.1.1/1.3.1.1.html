@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>1.3.1.1 It&#x0027;s Network Access Time</title>
+    <!--  -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>It’s Network Access Time</b>
+          </p>
+          <p></p>
+          <p>Use Packet Tracer for this activity. Internet connectivity is not required in this design. Work with a classmate to create two network designs to accommodate the following scenarios:</p>
+          <p></p>
+          <p>
+            <b>Scenario 1 – Classroom Design (LAN)</b>
+          </p>
+          <p>
+            <ul>
+              <li>15 student end devices represented by 1 or 2 PCs</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>1 instructor end device preferably represented by a server</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stream video presentations over LAN connection </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario 2 – Administrative Design (WAN)</b>
+          </p>
+          <p>
+            <ul>
+              <li>All requirements as listed in Scenario 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Access to and from a remote administrative server for video presentations and pushed updates for network application software</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Both the LAN and WAN designs should fit on to one Packet Tracer file screen. All intermediary devices should be labeled with the switch model (or name) and the router model (or name).  </p>
+          <p></p>
+          <p>Save your work and be ready to justify your device decisions and layout to your instructor and the class.</p>
+          <p></p>
+          <p>
+            <a href="../../files/1.3.1.1%20It's%20Network%20Access%20Time%20Instructions.pdf" target="_blank">Class Activity - It's Network Access Time Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

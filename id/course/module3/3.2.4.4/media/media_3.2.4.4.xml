@@ -1,0 +1,38 @@
+<textcomponents>
+
+<component id="ID_title">
+  <text><![CDATA[<b>Masalah Umum pada Batang</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<b>Tentukan pilihan dan pilih OS</b>]]></text> 
+ </component>
+ 
+ <component id="ID_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="3"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="mtitle" valign="top" width="130"><font color="#ffffff"><b>Masalah</b></font></td>
+<td bgcolor="#077A77" class="mtitle" valign="top" width="150"><font color="#ffffff"><b>Hasil</b></font></td>
+<td bgcolor="#077A77" class="mtitle" valign="top" width="150"><font color="#ffffff"><b>Contoh</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Native VLAN Mismatches</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Poses a security risk and creates unintended results.</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">For example, one port is defined as VLAN 99 and the other is defined as VLAN 100.</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Trunk Mode Mismatches</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Causes loss of network connectivity.</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">For example, one port is configured as trunk mode "off" and the other as trunk mode "on".</font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Allowed VLANs on Trunks</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Causes unexpected traffic or no traffic to be sent over the trunk.</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">The list of allowed VLANs does not support current VLAN trunking requirements.</font></td>
+</tr>
+</table>]]></text> 
+</component>
+ 
+</textcomponents>

@@ -1,0 +1,86 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activity – Identify Common Security Attacks</b><br><br>Match the name of the common security attack to the description.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Allows the attacker to see surrounding IP addresses, software versions, and native VLAN information to enact a DoS attack.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Floods the DHCP server with DHCP requests to use all the available addresses – simulates a DoS attack on the switch.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Uses a “dictionary” to find common passwords – tries to initiate a Telnet session using what the “dictionary” suggests for the passwords.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Uses fake MAC addresses to overflow the MAC address table.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Allows an attacker to configure a fake DHCP server on the network to issue DHCP addresses to clients.]]></text>
+</component>
+
+   <component id="ID_txt06">
+   <text><![CDATA[<b>Security Attack Type</b>]]></text>
+   </component>
+
+<component id="ID_txt07">
+   <text><![CDATA[<b>Common Security Attack Description</b>]]></text>
+   </component>
+
+
+
+
+<!--Drag and Drop-->
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">MAC flooding</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">DHCP snooping</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">CDP</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">DHCP starvation</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Brute force</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each common security attack description to its type.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each common security attack description to its type. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

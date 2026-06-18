@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.3.2.1 Periklanan Jaringan IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean RIP dan RIPng</h1>
+<h2>Konfigurasi Protokol RIPng</h2>
+</div>
+<div id="content">
+<p>Seperti halnya IPv4, RIPng jarang digunakan di jaringan modern. Hal ini juga berguna sebagai landasan untuk memahami perutean jaringan dasar.  Oleh karena itu, bagian ini memberikan gambaran singkat tentang cara mengkonfigurasi RIPng dasar.</p>
+<p></p>
+<p>Lihat topologi referensi pada gambar. Dalam skenario ini, semua router telah dikonfigurasi dengan fitur manajemen dasar dan semua antarmuka yang diidentifikasi dalam topologi referensi dikonfigurasi dan diaktifkan. Tidak ada rute statis yang dikonfigurasi dan tidak ada protokol perutean yang diaktifkan; oleh karena itu, akses jaringan jarak jauh saat ini tidak mungkin dilakukan.</p>
+<p></p>
+<p>Untuk mengaktifkan router IPv6 untuk meneruskan paket IPv6,<span class="cmd"><b>perutean unicast ipv6</b></span>harus dikonfigurasi.</p>
+<p></p>
+<p>Berbeda dengan RIPv2, RIPng diaktifkan pada antarmuka dan bukan pada mode konfigurasi router.  Faktanya, tidak ada<span class="cmd"><b>jaringan</b></span><span class="cmd"><i>alamat jaringan</i></span>perintah tersedia di RIPng.  Sebagai gantinya, gunakan<span class="cmd"><b>robekan ipv6</b></span><span class="cmd"><i>nama domain</i></span><span class="cmd"><b>memungkinkan</b></span>perintah konfigurasi antarmuka.</p>
+<p></p>
+<p>Pada Gambar 1, perutean unicast IPv6 diaktifkan dan antarmuka Gigabit Ethernet 0/0 dan Serial 0/0/0 diaktifkan untuk RIPng menggunakan nama domain RIP-AS.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 2 untuk mengonfigurasi konfigurasi serupa pada R2 dan R3.</p>
+<p></p>
+<p>Proses untuk menyebarkan rute default di RIPng identik dengan RIPv2 kecuali rute statis default IPv6 harus ditentukan. Misalnya, asumsikan bahwa R1 memiliki koneksi Internet dari antarmuka Serial 0/0/1 ke alamat IP 2001:DB8:FEED:1::1/64. Untuk menyebarkan rute default, R3 harus dikonfigurasi dengan:</p>
+<p>
+<ul>
+<li>Rute statis default menggunakan<span class="cmd"><b>rute ipv6 0::/0 2001:DB8:FEED:1::1</b></span>perintah konfigurasi global.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Itu<span class="cmd"><b>robekan ipv6</b></span><span class="cmd"><i>nama domain</i></span><span class="cmd"><b>informasi default berasal</b></span>perintah mode konfigurasi antarmuka. Ini menginstruksikan R3 untuk menjadi sumber informasi rute default dan menyebarkan rute statis default dalam pembaruan RIPng yang dikirim dari antarmuka yang dikonfigurasi.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

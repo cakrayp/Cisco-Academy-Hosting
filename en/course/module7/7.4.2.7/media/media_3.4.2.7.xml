@@ -1,0 +1,335 @@
+<textcomponents>
+
+
+<!--screen 1-->
+	<component id="ID_s1_title">
+			<text><![CDATA[<b>Identify the Directly Connected Networks</b>]]></text>
+	</component>
+	<component id="ID_s1_text01">
+			<text><![CDATA[<b>R1 Link-State Database</b>]]></text>
+	</component>
+	<component id="ID_s1_text02">
+			 <text><![CDATA[<b>SPF Tree</b>]]></text> 
+	</component>
+	
+	<component id="ID_s1_Table_01">
+	<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='false' glowcolor='#808080' cellpadding='4'>
+		
+		<tr>
+			<td bgcolor="#FACCA8" valign="top"><font color='#393536' class="font10px" ><b>R1 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.1.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.4.0.0/16, cost = 20</li></ul>
+			</textformat></font></td>
+		</tr>
+			
+			<tr>
+			<td bgcolor="#ffffff" valign="top"><font color='#393536' class="font10px"><b>R2 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.5.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R5 on network 10.9.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R3 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.6.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.7.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#ffffff" valign="top"><font color='#393536' class="font10px"><b>R4 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.8.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.4.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.7.0.0/16, cost = 10</li>
+				<li>Connected to R5 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R5 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.11.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.9.0.0/16, cost = 10</li>
+				<li>Connected to R4 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+	</table>]]></text> 
+		</component>
+<!--screen 2-->	
+	<component id="ID_s2_title">
+			<text><![CDATA[<b>Identify Unknown Networks and Costs from R2</b>]]></text>
+	</component>
+	<component id="ID_s2_text01">
+			<text><![CDATA[<b>R1 Link-State Database</b>]]></text>
+	</component>
+		
+	<component id="ID_s2_text02">
+			 <text><![CDATA[<b>SPF Tree</b>]]></text> 
+	</component>
+	
+	<component id="ID_s2_Table_01">
+			<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='false' glowcolor='#808080' cellpadding='4'>
+		
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536'  class="font10px"><b>R1 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.1.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.4.0.0/16, cost = 20</li></ul>
+			</textformat></font></td>
+		</tr>
+			
+			<tr>
+			<td bgcolor="#FACCA8" valign="top"><font color='#393536' class="font10px"><b>R2 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.5.0.0/16, cost = 2</li>
+				<font color="#D0A98B"><li>Connected to R1 on network 10.2.0.0/16, cost = 20</li></font>
+				<li>Connected to R5 on network 10.9.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R3 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.6.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.7.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#ffffff" valign="top"><font color='#393536' class="font10px"><b>R4 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.8.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.4.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.7.0.0/16, cost = 10</li>
+				<li>Connected to R5 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R5 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.11.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.9.0.0/16, cost = 10</li>
+				<li>Connected to R4 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+	</table>]]></text> 
+		</component>
+	
+<!--screen 3-->		
+	<component id="ID_s3_title">
+			<text><![CDATA[<b>Identify Unknown Networks and Costs from R3</b>]]></text>
+	</component>
+	<component id="ID_s3_text01">
+			<text><![CDATA[<b>R1 Link-State Database</b>]]></text>
+		</component>
+		
+	<component id="ID_s3_text02">
+			 <text><![CDATA[<b>SPF Tree</b>]]></text> 
+	</component>
+	
+	<component id="ID_s3_Table_01">
+			<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='false' glowcolor='#808080' cellpadding='4'>
+		
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px" ><b>R1 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.1.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.4.0.0/16, cost = 20</li></ul>
+			</textformat></font></td>
+		</tr>
+			
+			<tr>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536' class="font10px"><b>R2 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.5.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R5 on network 10.9.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#FACCA8" valign="top"><font color='#393536' class="font10px"><b>R3 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.6.0.0/16, cost = 2</li>
+				<font color="#D0A98B"><li>Connected to R1 on network 10.3.0.0/16, cost = 5</li></font>
+				<li>Connected to R4 on network 10.7.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#ffffff" valign="top"><font color='#393536' class="font10px"><b>R4 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.8.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.4.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.7.0.0/16, cost = 10</li>
+				<li>Connected to R5 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R5 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.11.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.9.0.0/16, cost = 10</li>
+				<li>Connected to R4 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+	</table>]]></text> 
+		</component>
+	
+<!--screen 4-->		
+	<component id="ID_s4_title">
+			<text><![CDATA[<b>Identify Unknown Networks and Costs from R4</b>]]></text>
+	</component>
+	<component id="ID_s4_text01">
+			<text><![CDATA[<b>R1 Link-State Database</b>]]></text>
+	</component>
+		
+	<component id="ID_s4_text02">
+			 <text><![CDATA[<b>SPF Tree</b>]]></text> 
+	</component>
+	
+	<component id="ID_s4_Table_01">
+			<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='false' glowcolor='#808080' cellpadding='4'>
+		
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px" ><b>R1 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.1.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.4.0.0/16, cost = 20</li></ul>
+			</textformat></font></td>
+		</tr>
+			
+			<tr>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536' class="font10px"><b>R2 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.5.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R5 on network 10.9.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R3 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.6.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.7.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#FACCA8" valign="top"><font color='#393536' class="font10px"><b>R4 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.8.0.0/16, cost = 2</li>
+				<font color="#D0A98B"><li>Connected to R1 on network 10.4.0.0/16, cost = 20</li></font>
+				<font color="#D0A98B"><li>Connected to R3 on network 10.7.0.0/16, cost = 10</li></font>
+				<li>Connected to R5 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R5 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.11.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.9.0.0/16, cost = 10</li>
+				<li>Connected to R4 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+	</table>]]></text> 
+		</component>
+	
+<!--screen 5-->	
+	
+	<component id="ID_s5_title">
+			<text><![CDATA[<b>Identify Unknown Networks and Costs from R5</b>]]></text>
+	</component>
+	<component id="ID_s5_text01">
+			<text><![CDATA[<b>R1 Link-State Database</b>]]></text>
+		</component>
+		
+	<component id="ID_s5_text02">
+			 <text><![CDATA[<b>SPF Tree</b>]]></text> 
+	</component>
+	
+	<component id="ID_s5_Table_01">
+			<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='false' glowcolor='#808080' cellpadding='4'>
+		
+		<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px" ><b>R1 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.1.0.0/16, cost = 2</li>
+				<li>Connected to R2 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.4.0.0/16, cost = 20</li></ul>
+			</textformat></font></td>
+		</tr>
+			
+			<tr>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536' class="font10px"><b>R2 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.5.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.2.0.0/16, cost = 20</li>
+				<li>Connected to R5 on network 10.9.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#EFF8F7" valign="top"><font color='#393536' class="font10px"><b>R3 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.6.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.3.0.0/16, cost = 5</li>
+				<li>Connected to R4 on network 10.7.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		
+			<tr>
+			<td bgcolor="#FFFFFF" valign="top"><font color='#393536' class="font10px"><b>R4 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.8.0.0/16, cost = 2</li>
+				<li>Connected to R1 on network 10.4.0.0/16, cost = 20</li>
+				<li>Connected to R3 on network 10.7.0.0/16, cost = 10</li>
+				<li>Connected to R5 on network 10.10.0.0/16, cost = 10</li></ul>
+			</textformat></font></td>
+		</tr>
+		<tr>
+			<td bgcolor="#FACCA8" valign="top"><font color='#393536' class="font10px"><b>R5 Link-states:</b>
+			<textformat blockindent='-18'>
+				<ul class="bulletIndent15"><li>Connected to network 10.11.0.0/16, cost = 2</li>
+				<font color="#D0A98B"><li>Connected to R2 on network 10.9.0.0/16, cost = 10</li></font>
+				<font color="#D0A98B"><li>Connected to R4 on network 10.10.0.0/16, cost = 10</li></font></ul>
+			</textformat></font></td>
+		</tr>
+	</table>]]></text> 
+		</component>
+	
+	<component id="ID_s6_title">
+			<text><![CDATA[<b>Resulting SPF Tree of R1</b>]]></text>
+	</component>
+	
+<!--screen 6-->			
+
+	<component id="ID_s6_text01">
+			<text><![CDATA[<b>Destination</b>]]></text>
+		</component>
+		
+	<component id="ID_s6_text02">
+			 <text><![CDATA[<b>Shortest Path</b>]]></text> 
+	</component>
+	
+	<component id="ID_s6_text03">
+			 <text><![CDATA[<b>Cost</b>]]></text> 
+	</component>
+	</textcomponents>

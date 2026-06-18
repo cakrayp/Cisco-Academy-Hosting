@@ -1,0 +1,315 @@
+<textcomponents>
+
+
+<!--screen 1-->
+	<component id="ID_s1_title">
+			<text><![CDATA[<b>Identifikasi Jaringan yang Terhubung Langsung</b>]]></text>
+	</component>
+	<component id="ID_s1_text01">
+			<text><![CDATA[<b>Basis Data Link-State R1</b>]]></text>
+	</component>
+	<component id="ID_s1_text02">
+			 <text><![CDATA[<b>Pohon SPF</b>]]></text> 
+	</component>
+	
+	<component id="ID_s1_Table_01">
+	<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="false" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R1:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.1.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.4.0.0/16, biaya = 20</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R2:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.5.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R5 di jaringan 10.9.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R3:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.6.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.7.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R4:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.8.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.4.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.7.0.0/16, biaya = 10</li>
+<li>Terhubung ke R5 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R5:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.11.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.9.0.0/16, biaya = 10</li>
+<li>Terhubung ke R4 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+</table>]]></text> 
+		</component>
+<!--screen 2-->	
+	<component id="ID_s2_title">
+			<text><![CDATA[<b>Identifikasi Jaringan dan Biaya Tidak Dikenal dari R2</b>]]></text>
+	</component>
+	<component id="ID_s2_text01">
+			<text><![CDATA[<b>Basis Data Link-State R1</b>]]></text>
+	</component>
+		
+	<component id="ID_s2_text02">
+			 <text><![CDATA[<b>Pohon SPF</b>]]></text> 
+	</component>
+	
+	<component id="ID_s2_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="false" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R1:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.1.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.4.0.0/16, biaya = 20</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R2:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.5.0.0/16, biaya = 2</li>
+<font color="#D0A98B"><li>Terhubung ke R1 di jaringan 10.2.0.0/16, biaya = 20</li></font>
+<li>Terhubung ke R5 di jaringan 10.9.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R3:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.6.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.7.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R4:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.8.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.4.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.7.0.0/16, biaya = 10</li>
+<li>Terhubung ke R5 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R5:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.11.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.9.0.0/16, biaya = 10</li>
+<li>Terhubung ke R4 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+</table>]]></text> 
+		</component>
+	
+<!--screen 3-->		
+	<component id="ID_s3_title">
+			<text><![CDATA[<b>Identifikasi Jaringan dan Biaya Tidak Diketahui dari R3</b>]]></text>
+	</component>
+	<component id="ID_s3_text01">
+			<text><![CDATA[<b>Basis Data Link-State R1</b>]]></text>
+		</component>
+		
+	<component id="ID_s3_text02">
+			 <text><![CDATA[<b>Pohon SPF</b>]]></text> 
+	</component>
+	
+	<component id="ID_s3_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="false" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R1:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.1.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.4.0.0/16, biaya = 20</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R2:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.5.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R5 di jaringan 10.9.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R3:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.6.0.0/16, biaya = 2</li>
+<font color="#D0A98B"><li>Terhubung ke R1 di jaringan 10.3.0.0/16, biaya = 5</li></font>
+<li>Terhubung ke R4 di jaringan 10.7.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R4:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.8.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.4.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.7.0.0/16, biaya = 10</li>
+<li>Terhubung ke R5 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R5:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.11.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.9.0.0/16, biaya = 10</li>
+<li>Terhubung ke R4 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+</table>]]></text> 
+		</component>
+	
+<!--screen 4-->		
+	<component id="ID_s4_title">
+			<text><![CDATA[<b>Identifikasi Jaringan dan Biaya Tidak Diketahui dari R4</b>]]></text>
+	</component>
+	<component id="ID_s4_text01">
+			<text><![CDATA[<b>Basis Data Link-State R1</b>]]></text>
+	</component>
+		
+	<component id="ID_s4_text02">
+			 <text><![CDATA[<b>Pohon SPF</b>]]></text> 
+	</component>
+	
+	<component id="ID_s4_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="false" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R1:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.1.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.4.0.0/16, biaya = 20</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R2:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.5.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R5 di jaringan 10.9.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R3:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.6.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.7.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R4:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.8.0.0/16, biaya = 2</li>
+<font color="#D0A98B"><li>Terhubung ke R1 di jaringan 10.4.0.0/16, biaya = 20</li></font>
+<font color="#D0A98B"><li>Terhubung ke R3 di jaringan 10.7.0.0/16, biaya = 10</li></font>
+<li>Terhubung ke R5 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R5:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.11.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.9.0.0/16, biaya = 10</li>
+<li>Terhubung ke R4 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+</table>]]></text> 
+		</component>
+	
+<!--screen 5-->	
+	
+	<component id="ID_s5_title">
+			<text><![CDATA[<b>Identifikasi Jaringan dan Biaya Tidak Diketahui dari R5</b>]]></text>
+	</component>
+	<component id="ID_s5_text01">
+			<text><![CDATA[<b>Basis Data Link-State R1</b>]]></text>
+		</component>
+		
+	<component id="ID_s5_text02">
+			 <text><![CDATA[<b>Pohon SPF</b>]]></text> 
+	</component>
+	
+	<component id="ID_s5_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="false" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R1:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.1.0.0/16, biaya = 2</li>
+<li>Terhubung ke R2 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.4.0.0/16, biaya = 20</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R2:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.5.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.2.0.0/16, biaya = 20</li>
+<li>Terhubung ke R5 di jaringan 10.9.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R3:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.6.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.3.0.0/16, biaya = 5</li>
+<li>Terhubung ke R4 di jaringan 10.7.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R4:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.8.0.0/16, biaya = 2</li>
+<li>Terhubung ke R1 di jaringan 10.4.0.0/16, biaya = 20</li>
+<li>Terhubung ke R3 di jaringan 10.7.0.0/16, biaya = 10</li>
+<li>Terhubung ke R5 di jaringan 10.10.0.0/16, biaya = 10</li></ul>
+</textformat></font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font class="font10px" color="#393536"><b>Status Tautan R5:</b>
+<textformat blockindent="-18">
+<ul class="bulletIndent15"><li>Terhubung ke jaringan 10.11.0.0/16, biaya = 2</li>
+<font color="#D0A98B"><li>Terhubung ke R2 di jaringan 10.9.0.0/16, biaya = 10</li></font>
+<font color="#D0A98B"><li>Terhubung ke R4 di jaringan 10.10.0.0/16, biaya = 10</li></font></ul>
+</textformat></font></td>
+</tr>
+</table>]]></text> 
+		</component>
+	
+	<component id="ID_s6_title">
+			<text><![CDATA[<b>Pohon SPF yang dihasilkan sebesar R1</b>]]></text>
+	</component>
+	
+<!--screen 6-->			
+
+	<component id="ID_s6_text01">
+			<text><![CDATA[<b>Tujuan</b>]]></text>
+		</component>
+		
+	<component id="ID_s6_text02">
+			 <text><![CDATA[<b>Jalur Terpendek</b>]]></text> 
+	</component>
+	
+	<component id="ID_s6_text03">
+			 <text><![CDATA[<b>Biaya</b>]]></text> 
+	</component>
+	</textcomponents>

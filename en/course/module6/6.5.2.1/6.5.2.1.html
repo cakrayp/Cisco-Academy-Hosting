@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.5.2.1 Troubleshoot a Missing Route</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.5.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshoot Static and Default Route Issues</h1>
+        <h2>Troubleshoot IPv4 Static and Default Route Configuration</h2>
+      </div>
+      <div id="content">
+          <p>Networks are subject to forces that can cause their status to change quite often:</p>
+          <p>
+            <ul>
+              <li>An interface fails. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>A service provider drops a connection.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Links become oversaturated.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>An administrator enters a wrong configuration.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>When there is a change in the network, connectivity may be lost. Network administrators are responsible for pinpointing and solving the problem. To find and solve these issues, a network administrator must be familiar with tools to help isolate routing problems quickly. </p>
+          <p></p>
+          <p>Common IOS troubleshooting commands include: </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>ping</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>traceroute</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip route</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip interface brief </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show cdp neighbors detail </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Figure 1 displays the result of an extended ping from the source interface of R1 to the LAN interface of R3. An extended ping is when the source interface or source IP address is specified. </p>
+          <p></p>
+          <p>Figure 2 displays the result of a traceroute from R1 to the R3 LAN.</p>
+          <p></p>
+          <p>Figure 3 displays the routing table of R1. </p>
+          <p></p>
+          <p>Figure 4 provides a quick status of all interfaces on the router. </p>
+          <p></p>
+          <p>Figure 5 provides a list of directly connected Cisco devices. This command validates Layer 2 (and therefore Layer 1) connectivity. For example, if a neighbor device is listed in the command output, but it cannot be pinged, then Layer 3 addressing should be investigated.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

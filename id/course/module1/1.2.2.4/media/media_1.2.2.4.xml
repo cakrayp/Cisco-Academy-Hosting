@@ -1,0 +1,306 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Aktivitas – Lingkari Domain</b><br/><br/><textformat blockindent="-14"><li>Gunakan mouse untuk menggambar bentuk di sekitar beberapa, atau semua, perangkat di setiap diagram. Menggambarkan bentuk di sekitar sekelompok perangkat akan menunjukkan bahwa perangkat tersebut adalah bagian dari domain siaran atau tabrakan. Untuk melibatkan antarmuka perangkat, namun tidak keseluruhan perangkat, sertakan bagian perangkat dengan antarmuka yang ingin Anda sertakan.</li><li>Untuk menggambar bentuk, gerakkan mouse ke atas diagram, tahan tombol mouse, dan gambar lingkaran di sekitar perangkat yang ingin Anda pilih. Saat menggambar, kursor akan tampak seperti pensil. Bentuk yang dihasilkan bukanlah lingkaran sempurna, namun poligon berbayang yang mencakup perangkat yang Anda pilih. Latihan menggunakan alat gambar, lalu Klik<b>mengatur ulang</b>kapan saja untuk membersihkan layar.</li><li>Anda dapat menggambar lebih dari satu bentuk untuk mencakup kelompok perangkat yang berbeda. Saat digambar, bentuk tidak dapat diubah, tetapi Anda dapat mengklik<b>Membuka</b>Untuk menghapus satu bentuk pada satu waktu, atau klik<b>mengatur ulang</b>untuk memulai dari awal lagi. Jika sudah siap, klik<b>Memeriksa</b>dan solusi Anda akan dievaluasi. Klik<b>Menjawab</b>untuk melihat jawaban yang benar-benar diambil untuk Anda.</li><li>Klik tombol bernomor untuk melihat setiap skenario dalam aktivitas.</li></textformat>]]></text>
+</component>
+
+
+<component id="ID_check1">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset1">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo1">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer1">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide1">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check2">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset2">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo2">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer2">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide2">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check3">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset3">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo3">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer3">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide3">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check4">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset4">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo4">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer4">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide4">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check5">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset5">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo5">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer5">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide5">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check6">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset6">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo6">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer6">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide6">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check7">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset7">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo7">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer7">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide7">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check8">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset8">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo8">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer8">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide8">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+<component id="ID_check9">
+  <text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+<component id="ID_reset9">
+  <text><![CDATA[<b>mengatur ulang</b>]]></text> 
+</component>
+<component id="ID_undo9">
+  <text><![CDATA[<b>Membuka</b>]]></text> 
+</component>
+<component id="ID_answer9">
+  <text><![CDATA[<b>Menjawab</b>]]></text> 
+</component>
+<component id="ID_hide9">
+  <text><![CDATA[<b>Sembunyikan Jawaban</b>]]></text> 
+</component>
+
+
+<component id="ID_s1_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain siaran. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s2_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain siaran. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s3_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain tumbukan. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s4_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain tumbukan. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s5_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain tumbukan. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s6_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain siaran. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s7_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain tumbukan. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s8_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain siaran. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+<component id="ID_s9_title">
+  <text><![CDATA[Gambarlah bentuk individu di sekitar setiap domain tumbukan. (Petunjuk: Dalam beberapa kasus, terdapat lebih dari satu.)]]></text> 
+</component>
+
+
+
+    <component id="ID_s1_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s1_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi domain siaran dengan benar.]]></text>
+    </component>
+    <component id="ID_s1_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s1_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+    <component id="ID_s2_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s2_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi domain siaran dengan benar.]]></text>
+    </component>
+    <component id="ID_s2_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s2_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s3_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s3_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi tabrakan domain dengan benar.]]></text>
+    </component>
+    <component id="ID_s3_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s3_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s4_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s4_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi tabrakan domain dengan benar.]]></text>
+    </component>
+    <component id="ID_s4_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s4_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s5_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s5_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi tabrakan domain dengan benar.]]></text>
+    </component>
+    <component id="ID_s5_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s5_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s6_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s6_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi domain siaran dengan benar.]]></text>
+    </component>
+    <component id="ID_s6_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s6_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s7_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s7_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi tabrakan domain dengan benar.]]></text>
+    </component>
+    <component id="ID_s7_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s7_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s8_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s8_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi domain siaran dengan benar.]]></text>
+    </component>
+    <component id="ID_s8_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s8_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+
+    <component id="ID_s9_CorrectTitle">
+      <text><![CDATA[<b>Benar</b>]]></text>
+  </component>
+  <component id="ID_s9_CorrectText">
+    <text><![CDATA[Kerja bagus. Anda telah mengidentifikasi tabrakan domain dengan benar.]]></text>
+    </component>
+    <component id="ID_s9_InCorrectTitle">
+      <text><![CDATA[<b>Salah</b>]]></text>
+  </component>
+  <component id="ID_s9_InCorrectText">
+    <text><![CDATA[Kegiatan ini belum selesai. Silakan coba lagi.]]></text>
+    </component>
+	
+</textcomponents>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.1.2.5 Membandingkan NAT dan PAT</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi NAT</h1>
+<h2>Jenis NAT</h2>
+</div>
+<div id="content">
+<p>Meringkas perbedaan antara NAT dan PAT membantu Anda memahami masing-masingnya.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, NAT menerjemahkan alamat IPv4 dengan basis 1:1 antara alamat IPv4 privat dan alamat IPv4 publik. Namun, PAT mengubah alamat dan nomor port.</p>
+<p></p>
+<p>NAT meneruskan paket masuk ke tujuannya dengan mengacu pada alamat IPv4 sumber masuk yang diberikan oleh host di jaringan publik. Dengan PAT, umumnya hanya ada satu atau beberapa alamat IPv4 yang terekspos secara publik. Paket masuk dari jaringan publik dirutekan ke tujuannya di jaringan pribadi dengan mengacu pada tabel di router NAT. Tabel ini melacak pasangan port publik dan privat. Ini disebut pelacakan koneksi.</p>
+<p></p>
+<p>
+<b>Paket tanpa Segmen Layer 4</b>
+</p>
+<p></p>
+<p>Bagaimana dengan paket IPv4 yang membawa data selain segmen TCP atau UDP? Paket-paket ini tidak berisi nomor port Layer 4. PAT menerjemahkan sebagian besar protokol umum yang dibawa oleh IPv4 yang tidak menggunakan TCP atau UDP sebagai protokol lapisan transport. Yang paling umum adalah ICMPv4. Masing-masing jenis protokol ditangani secara berbeda oleh PAT. Misalnya, pesan kueri ICMPv4, permintaan gema, dan balasan gema menyertakan ID Kueri. ICMPv4 menggunakan ID Kueri untuk mengidentifikasi permintaan gema dengan balasan gema yang sesuai. ID Kueri bertambah dengan setiap permintaan gema yang dikirim. PAT menggunakan ID Kueri alih-alih nomor port Layer 4.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Pesan ICMPv4 lainnya tidak menggunakan ID Kueri. Pesan-pesan ini dan protokol lain yang tidak menggunakan nomor port TCP atau UDP bervariasi dan berada di luar cakupan kurikulum ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

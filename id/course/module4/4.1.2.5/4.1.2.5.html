@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.2.5 LED perangkat</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Hubungkan Perangkat</h2>
+</div>
+<div id="content">
+<p>Komputer host terhubung ke jaringan kabel menggunakan antarmuka jaringan dan kabel Ethernet RJ-45. Sebagian besar antarmuka jaringan memiliki satu atau dua indikator tautan LED di sebelah antarmuka. Biasanya, LED hijau berarti koneksi yang baik, sedangkan LED hijau berkedip menunjukkan aktivitas jaringan.</p>
+<p></p>
+<p>Jika lampu tautan tidak menyala, mungkin ada masalah pada kabel jaringan atau jaringan itu sendiri. Port sakelar tempat koneksi diakhiri juga akan memiliki indikator LED yang menyala. Jika salah satu atau kedua ujungnya tidak menyala, coba kabel jaringan lain.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Fungsi sebenarnya dari LED bervariasi antar produsen komputer.</p>
+<p></p>
+<p>Demikian pula, perangkat infrastruktur jaringan biasanya menggunakan beberapa indikator LED untuk memberikan tampilan status cepat. Misalnya, switch Cisco Catalyst 2960 memiliki beberapa LED status untuk membantu memantau aktivitas dan kinerja sistem. LED ini umumnya menyala hijau jika sakelar berfungsi normal dan menyala kuning jika terjadi malfungsi.</p>
+<p></p>
+<p>Cisco ISR menggunakan berbagai indikator LED untuk memberikan informasi status. Router Cisco 1941 ditunjukkan pada gambar. LED pada router membantu administrator jaringan melakukan beberapa pemecahan masalah dasar. Setiap perangkat memiliki serangkaian LED unik. Konsultasikan dokumentasi khusus perangkat untuk deskripsi LED yang akurat.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

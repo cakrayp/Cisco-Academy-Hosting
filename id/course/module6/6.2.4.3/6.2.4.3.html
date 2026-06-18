@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.4.3 Verifikasi Rute Statis Default</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Default IPv6</h2>
+</div>
+<div id="content">
+<p>Pada Gambar 1,<span class="cmd"><b>tampilkan rute ipv6 statis</b></span>output perintah menampilkan isi tabel routing.</p>
+<p></p>
+<p>Berbeda dengan IPv4, IPv6 tidak secara eksplisit menyatakan bahwa IPv6 default adalah Gateway of Last Resort.</p>
+<p></p>
+<p>Kunci dari konfigurasi ini adalah<span class="cmd"><b>::/0</b></span>masker. Ingatlah bahwa panjang awalan ipv6 dalam tabel perutean menentukan berapa banyak bit yang harus cocok antara alamat IP tujuan paket dan rute dalam tabel perutean. Itu<span class="cmd"><b>::/0</b></span>mask menunjukkan bahwa tidak ada bit yang diperlukan untuk cocok. Selama kecocokan yang lebih spesifik tidak ada, rute IPv6 statis default cocok dengan semua paket.</p>
+<p></p>
+<p>Gambar 2 menampilkan ping yang berhasil ke antarmuka LAN R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

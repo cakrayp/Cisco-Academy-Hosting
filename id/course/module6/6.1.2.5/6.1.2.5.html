@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.1.2.5 Rute Statis Terapung</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi Perutean Statis</h1>
+<h2>Jenis Rute Statis</h2>
+</div>
+<div id="content">
+<p>Tipe lain dari rute statis adalah rute statis mengambang. Rute statis mengambang adalah rute statis yang digunakan untuk menyediakan jalur cadangan ke rute statis atau dinamis utama, jika terjadi kegagalan tautan. Rute statis mengambang hanya digunakan ketika rute utama tidak tersedia.</p>
+<p></p>
+<p>Untuk mencapai hal ini, rute statis mengambang dikonfigurasikan dengan jarak administratif yang lebih tinggi daripada rute utama. Ingatlah bahwa jarak administratif mewakili kepercayaan suatu rute. Jika ada beberapa jalur ke tujuan, router akan memilih jalur dengan jarak administratif terendah.</p>
+<p></p>
+<p>Misalnya, asumsikan bahwa administrator ingin membuat rute statis mengambang sebagai cadangan ke rute yang dipelajari EIGRP. Rute statis mengambang harus dikonfigurasi dengan jarak administratif yang lebih tinggi daripada EIGRP. EIGRP memiliki jarak administratif 90. Jika rute statis mengambang dikonfigurasi dengan jarak administratif 95, rute dinamis yang dipelajari melalui EIGRP lebih disukai daripada rute statis mengambang.  Jika rute yang dipelajari EIGRP hilang, rute statis mengambang digunakan sebagai gantinya.</p>
+<p></p>
+<p>Pada gambar, router Cabang biasanya meneruskan semua lalu lintas ke router HQ melalui link WAN pribadi. Dalam contoh ini, router bertukar informasi rute menggunakan EIGRP. Rute statis mengambang, dengan jarak administratif 91 atau lebih tinggi, dapat dikonfigurasi untuk berfungsi sebagai rute cadangan. Jika link WAN privat gagal dan rute EIGRP hilang dari tabel routing, router memilih rute statis mengambang sebagai jalur terbaik untuk mencapai LAN HQ.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

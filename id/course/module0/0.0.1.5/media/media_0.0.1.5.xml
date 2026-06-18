@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[Latihan Menghasilkan Penguasaan]]></text>
+   </component>
+
+<component id="ID_txt01">
+   <text><![CDATA[<b>1. Tidak:</b>Contoh yang Dikerjakan (Teks + Media)]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>2. Coba:</b>Latihan (Pemeriksa Sintaks)]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>3. Lakukan:</b>Contoh Pengerjaan Sebagian (Packet Tracer atau peralatan nyata)]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>4. Sintesis:</b>Pemecahan masalah (Packet Tracer atau peralatan nyata)]]></text>
+   </component>
+
+</textcomponents>

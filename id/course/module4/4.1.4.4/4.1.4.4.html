@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.4.4 Fitur Riwayat Perintah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.4.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Verifikasi Konektivitas Jaringan yang Terhubung Langsung</h2>
+</div>
+<div id="content">
+<p>Fitur riwayat perintah berguna karena menyimpan sementara daftar perintah yang dijalankan untuk dipanggil kembali.</p>
+<p></p>
+<p>Untuk memanggil kembali perintah di buffer riwayat, tekan<b>Ctrl</b>+<b>P </b>atau itu<b>Panah Atas</b>kunci. Output perintah dimulai dengan perintah terbaru. Ulangi urutan tombol untuk memanggil kembali perintah lama secara berturut-turut. Untuk kembali ke perintah terbaru di buffer riwayat, tekan<b>Ctrl</b>+<b>N</b>atau itu<b>Panah Bawah</b>kunci. Ulangi urutan tombol untuk memanggil kembali perintah-perintah terbaru secara berturut-turut.</p>
+<p></p>
+<p>Secara default, riwayat perintah diaktifkan dan sistem menangkap 10 baris perintah terakhir dalam buffer riwayatnya. Gunakan<span class="cmd"><b>menunjukkan sejarah</b></span>perintah EXEC istimewa untuk menampilkan isi buffer.</p>
+<p></p>
+<p>Hal ini juga praktis untuk menambah jumlah baris perintah yang dicatat oleh buffer sejarah selama sesi terminal saat ini saja. Gunakan<span class="cmd"><b>ukuran riwayat terminal</b></span>perintah pengguna EXEC untuk menambah atau mengurangi ukuran buffer.</p>
+<p></p>
+<p>Gambar 1 menampilkan contoh<span class="cmd"><b>ukuran riwayat terminal</b></span>Dan<span class="cmd"><b>menunjukkan sejarah</b></span>perintah.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 2 untuk mempraktikkan dua perintah EXEC.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

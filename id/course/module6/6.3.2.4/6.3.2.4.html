@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.2.4 Contoh Protokol Routing Tanpa Kelas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>CIDR</h2>
+</div>
+<div id="content">
+<p>Protokol perutean berkelas tidak dapat mengirimkan rute supernet. Hal ini karena router penerima secara otomatis menerapkan subnet mask classful default ke alamat jaringan dalam pembaruan perutean. Jika topologi pada gambar berisi protokol perutean berkelas, maka R3 hanya akan menginstal 172.16.0.0/16 pada tabel perutean.</p>
+<p></p>
+<p>Menyebarkan rute VLSM dan supernet memerlukan protokol perutean tanpa kelas seperti RIPv2, OSPF, atau EIGRP. Protokol perutean tanpa kelas mengiklankan alamat jaringan dengan subnet mask yang terkait. Dengan protokol perutean tanpa kelas, R2 dapat meringkas jaringan 172.16.0.0/16, 172.17.0.0/16, 172.18.0.0/16, dan 172.19.0.0/16, dan mengiklankan rute statis ringkasan supernet 172.16.0.0/14 ke R3. R3 kemudian menginstal rute supernet 172.16.0.0/14 di tabel routingnya.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Ketika rute supernet ada dalam tabel perutean, misalnya, sebagai rute statis, protokol perutean kelas tidak menyertakan rute tersebut dalam pembaruannya.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

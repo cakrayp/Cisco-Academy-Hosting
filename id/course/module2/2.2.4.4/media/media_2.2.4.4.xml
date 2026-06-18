@@ -1,0 +1,61 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Mode Pelanggaran Keamanan</b>]]></text>
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" colspan="6"><font color="#1C3635" size="12"><b>Mode Pelanggaran Keamanan</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="6"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Modus Pelanggaran</b></font></td>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Lalu Lintas Ke Depan</b></font></td>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Mengirim Pesan Syslog</b></font></td>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Menampilkan Pesan Kesalahan</b></font></td>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Meningkatkan Kontra Pelanggaran</b></font></td>
+<td bgcolor="#077A77" class="tit" valign="top"><font color="#ffffff" size="11"><b>Mematikan Pelabuhan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Melindungi</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Membatasi</td>
+<td bgcolor="#EFF8F7">No</td>
+<td bgcolor="#EFF8F7">Ya</td>
+<td bgcolor="#EFF8F7">No</td>
+<td bgcolor="#EFF8F7">Ya</td>
+<td bgcolor="#EFF8F7">No</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Penutupan</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">No</td>
+<td bgcolor="#FFFFFF">Ya</td>
+<td bgcolor="#FFFFFF">Ya</td>
+</tr></table>]]></text>
+</component>
+
+<component id="ID_Title_txt01">
+<text><![CDATA[<b>Pelanggaran keamanan terjadi dalam situasi berikut:</b>]]></text>
+</component>
+
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent="-14"><li>Stasiun dengan alamat MAC yang tidak ada dalam tabel alamat mencoba mengakses antarmuka ketika tabel sudah penuh.</li><li>Sebuah alamat sedang digunakan pada dua antarmuka aman di VLAN yang sama.</li></textformat>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Modus pelanggaran keamanan meliputi: Lindungi, Batasi, dan Matikan.]]></text>
+</component>
+
+</textcomponents>

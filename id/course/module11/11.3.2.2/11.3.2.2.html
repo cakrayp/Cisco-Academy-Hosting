@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.3.2.2 Studi Kasus Lebih Lanjut</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+    	myLayout = $('body').layout({
+          west__size:300,
+          stateManagement__enabled: true,
+          maskContents: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan masalah NAT</h1>
+<h2>Pemecahan Masalah Studi Kasus NAT</h2>
+</div>
+<div id="content">
+<p>Animasi berikut menunjukkan verifikasi dan pemecahan masalah NAT:</p>
+<p></p>
+<p>
+<b>Studi Kasus Animasi Flash</b>- Dapat melakukan Ping Host, tetapi Tidak Dapat Telnet: Ini adalah animasi Flash tujuh menit tentang mengapa perangkat dapat melakukan ping ke host, tetapi tidak dapat melakukan telnet: http://www.cisco.com/warp/public/556/index.swf.</p>
+<p></p>
+<p>
+<b>Klik Tombol 2 pada gambar.</b>
+</p>
+<p></p>
+<p>
+<b>Studi Kasus Animasi Flash</b>- Tidak Dapat Melakukan Ping Melampaui NAT: Ini adalah animasi Flash sepuluh menit tentang mengapa perangkat tidak dapat melakukan ping melampaui NAT: http://www.cisco.com/warp/public/556/TS_NATcase2/index.swf.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" longdesc="media_11.3.2.2_longdesc.txt" name="mainFrame" src="media/index.html"></iframe>
+</body>
+</html>

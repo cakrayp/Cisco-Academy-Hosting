@@ -1,0 +1,97 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+	<text><![CDATA[<b>Activity – Topology Diagram: Build the SPF Tree</b><br>Use the topology on this page to build the SPF tree for Parts 1 and 2. Click Button 2 to continue. Click Button 1 whenever you need to refer to the topology.]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[These buttons indicate<br><br>(Note: The cost values listed are <b>not</b> indicative of <b>real cost values </b> for links on a regular routing topology.)]]></text> 
+</component>
+  
+<component id="ID_s2_txt01">
+  <text><![CDATA[<b>Activity – Part 1: Building the Link-State Database and SPF Tree</b><br><br>Use the topology from the first page of this activity. All answers for this scenario will be based on the R1 SPF tree built from the topology.<br><br>Calculate the best cost for the destination routes listed. Drag your answer to the Cost column. Click Button 3 to continue.]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+  <text><![CDATA[<b>Scenario 1</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+  <text><![CDATA[<b>Destination Network</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+  <text><![CDATA[<b>Cost</b>]]></text>
+</component>
+
+<component id="ID_s2_CHECK">
+  <text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id="ID_s2_RESET">
+  <text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_TITLE">
+  <text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_BODY">
+  <text><![CDATA[You have successfully calculated the best cost for each of the destination routes. Click Button 3 to continue.]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_TITLE">
+  <text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_BODY">
+  <text><![CDATA[You have not successfully calculated the best cost for each of the destination routes. Please click Reset to try again.]]></text>
+</component>
+
+
+
+
+
+
+
+
+
+<component id="ID_s3_txt01">
+  <text><![CDATA[<b>Activity – Part 2: Building the Link-State Database and SPF Tree</b><br><br>Use the topology from the first page of this activity. All answers for this scenario will be based on the R2 SPF tree built from the topology.<br><br>Calculate the best cost for the destination routes listed. Drag your answer to the Cost column.]]></text> 
+</component>
+
+<component id="ID_s3_txt02">
+  <text><![CDATA[<b>Scenario 2</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+  <text><![CDATA[<b>Destination Network</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt04">
+  <text><![CDATA[<b>Cost</b>]]></text>
+</component>
+
+<component id="ID_s3_CHECK">
+  <text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id="ID_s3_RESET">
+  <text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_TITLE">
+  <text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_BODY">
+  <text><![CDATA[You have successfully calculated the best cost for each of the destination routes.]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_TITLE">
+  <text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_BODY">
+  <text><![CDATA[You have not successfully calculated the best cost for each of the destination routes. Please click Reset to try again.]]></text>
+</component>
+
+</textcomponents>

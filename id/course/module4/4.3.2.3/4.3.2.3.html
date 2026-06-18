@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.3.2.3 Contoh yang Berhubungan Langsung</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Pengoperasian Perute</h1>
+<h2>Rute yang Terhubung Langsung</h2>
+</div>
+<div id="content">
+<p>Contoh pada Gambar 1 sampai 3 menunjukkan langkah-langkah untuk mengkonfigurasi dan mengaktifkan antarmuka yang terpasang pada R1. Perhatikan pesan informasi Layer 1 dan 2 yang dihasilkan saat setiap antarmuka diaktifkan.</p>
+<p></p>
+<p>Saat setiap antarmuka ditambahkan, tabel perutean secara otomatis menambahkan koneksi ('<span class="cmd">C</span>’) dan lokal (‘<span class="cmd">L</span>') entri. Gambar 4 memberikan contoh tabel routing dengan antarmuka R1 yang terhubung langsung dikonfigurasi dan diaktifkan.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 5 untuk mengkonfigurasi dan mengaktifkan antarmuka yang terhubung ke R2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

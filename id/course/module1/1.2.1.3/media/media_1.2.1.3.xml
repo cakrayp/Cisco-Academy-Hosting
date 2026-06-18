@@ -1,0 +1,141 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Ganti Metode Pengiriman Paket</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Simpan dan Teruskan]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[Potong-Melalui]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[Sakelar simpan dan maju menerima seluruh frame, dan menghitung CRC. Jika CRC valid, beralih mencari alamat tujuan, yang menentukan antarmuka keluar. Frame kemudian dibiarkan keluar port yang benar.]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[Sakelar potong meneruskan bingkai sebelum diterima seluruhnya. Minimal, alamat tujuan frame harus dibaca sebelum frame dapat diteruskan.]]></text>
+ </component>
+ 
+ 
+ 
+ <component id="ID_s2_title">
+<text><![CDATA[<b>Peralihan Simpan-dan-Maju</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+   <text><![CDATA[Sumber]]></text>
+   </component>
+<component id="ID_s2_txt02">
+   <text><![CDATA[Tujuan]]></text>
+   </component>
+<component id="ID_s2_txt03">
+   <text><![CDATA[Sakelar simpan dan maju menerima seluruh frame, dan menghitung CRC. Jika CRC valid, beralih mencari alamat tujuan, yang menentukan antarmuka keluar. Frame kemudian dibiarkan keluar port yang benar.]]></text>
+   </component>
+<component id="ID_s2_txt04">
+   <text><![CDATA[Alamat Tujuan]]></text>
+   </component>
+<component id="ID_s2_txt05">
+   <text><![CDATA[Alamat Sumber]]></text>
+   </component>
+<component id="ID_s2_txt06">
+   <text><![CDATA[Data]]></text>
+   </component>
+<component id="ID_s2_txt07">
+   <text><![CDATA[CRC]]></text>
+   </component>
+<component id="ID_s2_txt08">
+   <text><![CDATA[CRC]]></text>
+   </component>
+<component id="ID_s2_txt09">
+   <text><![CDATA[Bingkainya bagus!]]></text>
+   </component>
+<component id="ID_s2_txt10">
+   <text><![CDATA[Berpindah Meja]]></text>
+   </component>
+   
+   
+   
+<component id="ID_s3_title">
+	<text><![CDATA[<b>Peralihan Melalui Jalur</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+   <text><![CDATA[Sumber]]></text>
+   </component>
+<component id="ID_s3_txt02">
+   <text><![CDATA[Tujuan]]></text>
+   </component>
+<component id="ID_s3_txt03">
+   <text><![CDATA[Sakelar potong meneruskan bingkai sebelum diterima seluruhnya. Minimal, alamat tujuan frame harus dibaca sebelum frame dapat diteruskan.]]></text>
+   </component>
+<component id="ID_s3_txt04">
+   <text><![CDATA[Berpindah Meja]]></text>
+   </component>
+<component id="ID_s3_txt05">
+   <text><![CDATA[Alamat Tujuan]]></text>
+   </component>
+<component id="ID_s3_txt06">
+   <text><![CDATA[Alamat Sumber]]></text>
+   </component>
+<component id="ID_s3_txt07">
+   <text><![CDATA[Data]]></text>
+   </component>
+<component id="ID_s3_txt08">
+   <text><![CDATA[CRC]]></text>
+   </component>
+   
+     
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+
+
+<component id="s2_end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="s2_fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="s2_pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="s2_play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="s2_rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="s2_start">
+<text><![CDATA[Awal]]></text>
+</component>
+
+<component id="transcript">
+<text><![CDATA[Salinan]]></text>
+</component>   
+   
+</textcomponents>

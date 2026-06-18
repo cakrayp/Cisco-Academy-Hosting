@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.3.2.5 Verifying Extended ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Extended IPv4 ACLs</h1>
+        <h2>Configure Extended IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>After an ACL has been configured and applied to an interface, use Cisco IOS <span class="cmd"><b>show</b></span> commands to verify the configuration. In the figure, the top example shows the Cisco IOS command used to display the contents of all ACLs. The bottom example shows the result of issuing the <span class="cmd"><b>show ip interface g0/0</b></span> command on router R1. </p>
+          <p></p>
+          <p>Unlike standard ACLs, extended ACLs do not implement the same internal logic and hashing function. The output and sequence numbers displayed in the <span class="cmd"><b>show access-lists</b></span> command output is the order in which the statements were entered. Host entries are not automatically listed prior to range entries.</p>
+          <p></p>
+          <p>The <span class="cmd"><b>show ip interface</b></span> command is used to verify the ACL on the interface and the direction in which it was applied. The output from this command includes the number or name of the access list and the direction in which the ACL was applied. The capitalized ACL names BROWSING and SURFING stand out in the screen output.</p>
+          <p></p>
+          <p>After an ACL configuration has been verified, the next step is to confirm that the ACLs work as planned; blocking and permitting traffic as expected. </p>
+          <p></p>
+          <p>The guidelines discussed earlier in this section, suggest that ACLs should be configured on a test network and then implemented on the production network.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

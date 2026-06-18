@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.2.1 Enabling OSPF on Interfaces</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>Configure Single-Area OSPFv2</h2>
+      </div>
+      <div id="content">
+          <p>The<span class="cmd"><b></b></span><span class="cmd"><b>network </b></span>command determines which interfaces participate in the routing process for an OSPF area. Any interfaces on a router that match the network address in the<span class="cmd"><b> network </b></span>command are enabled to send and receive OSPF packets. As a result, the network (or subnet) address for the interface is included in OSPF routing updates.</p>
+          <p>The basic command syntax is<span class="cmd"><b> network </b></span><span class="cmd"><i>network-address wildcard-mask</i></span><span class="cmd"><b> area </b></span><span class="cmd"><i>area-id</i></span>.</p>
+          <p>The<span class="cmd"><b> area </b></span><span class="cmd"><i>area-id </i></span>syntax refers to the OSPF area. When configuring single-area OSPF, the<span class="cmd"><b> network </b></span>command must be configured with the same<span class="cmd"><i> area-id </i></span>value on all routers. Although any area ID can be used, it is good practice to use an area ID of 0 with single-area OSPF. This convention makes it easier if the network is later altered to support multiarea OSPF.</p>
+          <p>The figure displays the reference topology. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

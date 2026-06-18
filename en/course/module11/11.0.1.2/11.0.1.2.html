@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.0.1.2  Conceptual NAT</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Introduction</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Conceptual NAT</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario</b>
+          </p>
+          <p></p>
+          <p>You work for a large university or school system. </p>
+          <p></p>
+          <p>Because you are the network administrator, many professors, administrative workers, and other network administrators need your assistance with their networks on a daily basis. They call you at all working hours of the day and, because of the number of telephone calls, you cannot complete your regular network administration tasks.</p>
+          <p></p>
+          <p>You need to find a way to limit when you take calls and from whom.  You also need to mask your telephone number so that when you call someone, another number is displayed to the recipient.</p>
+          <p></p>
+          <p>This scenario describes a very common problem for most small- to medium-sized businesses.  Visit, “How Network Address Translation Works” located at  <a href="http://computer.howstuffworks.com/nat.htm/printable" target="_blank">http://</a><a href="http://computer.howstuffworks.com/nat.htm/printable" target="_blank">computer.howstuffworks.com</a><a href="http://computer.howstuffworks.com/nat.htm/printable" target="_blank">/</a><a href="http://computer.howstuffworks.com/nat.htm/printable" target="_blank">nat.htm</a><a href="http://computer.howstuffworks.com/nat.htm/printable" target="_blank">/printable</a> to view more information about how the digital world handles these types of workday interruptions. </p>
+          <p></p>
+          <p>Use the PDF provided accompanying this activity to reflect further on how a process, known as NAT, could be the answer to this scenario’s challenge.</p>
+          <p></p>
+          <p>
+            <a href="../../files/11.0.1.2%20Conceptual%20NAT%20Instructions.pdf" target="_blank">Class Activity - Conceptual NAT Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

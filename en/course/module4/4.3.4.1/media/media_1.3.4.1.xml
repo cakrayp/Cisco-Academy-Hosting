@@ -1,0 +1,16 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Dynamic Routing Scenario</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[Hello I am R1 and I am using EIGRP to let my neighbors know that I can reach the following networks:<br/><textformat blockindent='-18'><li>192.168.10.0/24</li><li>192.168.11.0/24</li><li>209.165.200.224/30</li></textformat>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[Hello R1, I am R2 and I am also using EIGRP to let my neighbors know that I can reach the following networks:<br/><textformat blockindent='-18'><li>10.1.1.0/24</li><li>10.1.2.0/24</li><li>209.165.200.224/30</li>I am also the default gateway to the Internet.</textformat>]]></text> 
+  </component>
+
+</textcomponents>

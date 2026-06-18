@@ -1,0 +1,32 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[<b>Manfaat VLAN</b>]]></text>
+   </component>
+
+<component id="ID_txt01">
+   <text><![CDATA[<textformat blockindent="-14"><li>Peningkatan Keamanan</li><li>Mengurangi Biaya</li><li>Performa Lebih Baik</li><li>Domain Siaran yang Lebih Kecil</li><li>Efisiensi TI</li><li>Efisiensi Manajemen</li></textformat>]]></text>
+   </component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<b>Tamu<br/>VLAN 30<br/>172.17.30.26/24</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Tamu<br/>VLAN 30<br/>172.17.30.23/24</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Murid<br/>VLAN 20<br/>172.17.20.25/24</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Murid<br/>VLAN 20<br/>172.17.20.22/24</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Fakultas<br/>VLAN 10<br/>172.17.10.24/24</b>]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[<b>Fakultas<br/>VLAN 10<br/>172.17.10.21/24</b>]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[Gerbang<br/>VLAN 30<br/>172.17.30.1/24]]></text>
+   </component>   
+</textcomponents>
+

@@ -1,0 +1,93 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Activity – Determine the Correct Wildcard Mask </b><br><br>Drag the wildcard mask to the appropriate ACL statement. Some answers will be used multiple times and some answers will not be used at all. ]]></text>
+</component>
+
+<component id='ID_drag_header01'>
+	<text><![CDATA[<b>ACL Statement</b>]]></text>
+</component>
+<component id='ID_drag_header02'>
+	<text><![CDATA[<b>Wildcard Mask</b>]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Deny all hosts from the 10.10.10.0/24 network.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Deny host 192.168.5.7.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Permit all hosts from the 172.18.15.0/24 subnetwork.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Permit host 10.10.10.1.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Permit all hosts from the 10.0.0.0/8 network.]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[Deny host 172.18.33.1.]]></text>
+</component>
+
+<component id='ID_txt07'>
+	<text><![CDATA[Permit all hosts from the 192.168.5.0/27 subnetwork.]]></text>
+</component>
+
+<component id='ID_txt08'>
+	<text><![CDATA[Deny all hosts on the 172.18.0.0/16 network.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[0.0.0.255]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[0.0.0.0]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[0.255.255.255]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[0.0.0.31]]></text>
+</component>
+
+<component id='ID_ip5_DS'>
+	<text><![CDATA[0.0.255.255]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully determined the wildcard mask for each ACL statement.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully determined the wildcard mask for each ACL statement. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

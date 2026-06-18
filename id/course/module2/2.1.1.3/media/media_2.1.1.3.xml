@@ -1,0 +1,41 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Ganti LED</b>]]></text>
+</component>
+
+<component id='ID_table'>
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="title" colspan="4"><font color="#1C3635" size="12"><b>Katalis 2960 Saklar LED</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="4"><font color="#98D3D1" size="2">.</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="27"><p align="center">1</p></td>
+<td bgcolor="#FFFFFF">sistem LED</td>
+<td bgcolor="#FFFFFF" width="27"><p align="center">5</p></td>
+<td bgcolor="#FFFFFF">Port kecepatan LED</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" width="27"><p align="center">2</p></td>
+<td bgcolor="#EFF8F7">LED RPS (jika RPS didukung pada saklar)</td>
+<td bgcolor="#EFF8F7" width="27"><p align="center">6</p></td>
+<td bgcolor="#EFF8F7">Status LED PoE (jika PoE didukung pada saklar)</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="27"><p align="center">3</p></td>
+<td bgcolor="#FFFFFF">Port status LED (Ini adalah mode default.)</td>
+<td bgcolor="#FFFFFF" width="27"><p align="center">7</p></td>
+<td bgcolor="#FFFFFF">Tombol Modus</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" width="27"><p align="center">4</p></td>
+<td bgcolor="#EFF8F7">Port dupleks mode LED</td>
+<td bgcolor="#EFF8F7" width="27"><p align="center">8</p></td>
+<td bgcolor="#EFF8F7">Pelabuhan LED</td>
+</tr>
+</table>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.0.1.2 Activity - Can Submarines Swim?</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Single-Area OSPF</h1>
+        <h2>Single-Area OSPF</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity -</b>
+            <b>Can Submarines Swim?</b>
+          </p>
+          <p></p>
+          <p>
+            <b>Scenario</b>
+          </p>
+          <p></p>
+          <p>Edsger Wybe Dijkstra was a famous computer programmer and theoretical physicist. One of his most famous quotes was: “The question of whether computers can think is like the question of whether submarines can swim.”  Dijkstra’s work has been applied, among other things, to routing protocols. He created the Shortest Path First (SPF) algorithm for network routing.</p>
+          <p></p>
+          <p>Now, open the PDF provided with this activity and answer the reflection questions. Save your work.</p>
+          <p></p>
+          <p>Get together with two of your classmates to compare your answers.</p>
+          <p></p>
+          <p>After completing this activity, do you have an idea as to how the OSPF protocol may work?</p>
+          <p></p>
+          <p>
+            <a href="../../files/8.0.1.2%20Class%20Activity%20-%20Can%20Submarines%20Swim%20Instructions.pdf" target="_blank">Class Activity - Can Submarines Swim? Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

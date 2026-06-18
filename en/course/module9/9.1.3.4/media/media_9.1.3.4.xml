@@ -1,0 +1,29 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Wildcard Bit Mask Abbreviations</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Example 1</b><br><br><textformat blockindent='-14'><ul><li>192.168.10.10 0.0.0.0 matches all of the address bits</li><li>Abbreviate this wildcard mask using the IP address preceded by the keyword <font face="_typewriter"><b>host </b></font>(<font face="_typewriter"><b>host 192.168.10.10</b></font>)</li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Wildcard Mask:</b>]]></text> 
+</component>
+
+<component id="ID_txt03"><text><![CDATA[(Match All Bits)]]></text>
+</component>
+
+
+<component id="ID_txt04"><text><![CDATA[<b>Example 2</b><br><br><textformat blockindent='-14'><ul><li>0.0.0.0 255.255.255.255 ignores all address bits</li><li>Abbreviate expression with the keyword <font face="_typewriter"><b>any</b></font></li></ul></textformat>]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[<b>Wildcard Mask:</b>]]></text> 
+</component>
+
+<component id="ID_txt06"><text><![CDATA[(Ignore All Bits)]]></text>
+</component>
+
+</textcomponents>

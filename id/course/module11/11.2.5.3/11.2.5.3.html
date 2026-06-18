@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.5.3 NAT untuk IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.5.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Konfigurasi NAT dan IPv6</h2>
+</div>
+<div id="content">
+<p>NAT untuk IPv6 digunakan dalam konteks yang jauh berbeda dari NAT untuk IPv4. Variasi NAT untuk IPv6 digunakan untuk menyediakan akses secara transparan antara jaringan IPv6 saja dan jaringan IPv4 saja. Ini tidak digunakan sebagai bentuk terjemahan IPv6 privat ke IPv6 global.</p>
+<p></p>
+<p>Idealnya, IPv6 harus dijalankan secara native jika memungkinkan. Ini berarti perangkat IPv6 berkomunikasi satu sama lain melalui jaringan IPv6. Namun, untuk membantu perpindahan dari IPv4 ke IPv6, IETF telah mengembangkan beberapa teknik transisi untuk mengakomodasi berbagai skenario IPv4-ke-IPv6, termasuk dual-stack, tunneling, dan translasi.</p>
+<p></p>
+<p>Dual-stack adalah saat perangkat menjalankan protokol yang terkait dengan IPv4 dan IPv6. Tunneling untuk IPv6 adalah proses merangkum paket IPv6 di dalam paket IPv4. Hal ini memungkinkan paket IPv6 ditransmisikan melalui jaringan khusus IPv4.</p>
+<p></p>
+<p>NAT untuk IPv6 tidak boleh digunakan sebagai strategi jangka panjang, namun sebagai mekanisme sementara untuk membantu migrasi dari IPv4 ke IPv6. Selama bertahun-tahun, ada beberapa jenis NAT untuk IPv6 termasuk Network Address Translation-Protocol Translation (NAT-PT). NAT-PT sudah tidak digunakan lagi oleh IETF dan digantikan dengan NAT64. NAT64 berada di luar cakupan kurikulum ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

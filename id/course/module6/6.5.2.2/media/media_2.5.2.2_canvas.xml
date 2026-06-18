@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+		<element type="IMAGE" src="2_5_2_2_A.jpg" x="0" y="0" width="470" height="400"/>
+		<element type="TEXT" text="172.16.1.0/24" x="127.75" y="78.8" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.2.0/24" x="109.9" y="148.15" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="192.168.1.0/24" x="254.75" y="148.15" width="70.9" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.3.0/24" x="58.7" y="206.9" width="65.3" align="center" size="10" bold="1" />
+	<element type="TEXT" text="192.168.2.0/24" x="312.75" y="205.9" width="70.9" align="center" size="10" color="#383435" bold="1" />
+		<element type="TEXT" text="G0/0" x="189.85" y="100.45" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1 DCE" x="237.3" y="124.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="S0/0/0" x="166.55" y="135.15" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1" x="232.95" y="179.05" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="115.35" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="300.9" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/0 DCE" x="182.25" y="174.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="172.16.3.1" x="-1.45" y="208.9" width="51.4" align="center" size="10" />
+		<element type="TEXT" text="192.168.2.1" x="385.7" y="208.9" width="57" align="center" size="10" color="#383435" />	
+		<element type="ROUTER" textId="ID_s4_txt01" x="1.55" y="246.7" width="433.25" height="151.40" size="10"/>		
+		</slide>	
+	
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s2_title" />
+		<element type="IMAGE" src="2_5_2_2_A.jpg" x="0" y="0" width="470" height="400"/>
+		<element type="TEXT" text="172.16.1.0/24" x="127.75" y="78.8" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.2.0/24" x="109.9" y="148.15" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="192.168.1.0/24" x="254.75" y="148.15" width="70.9" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.3.0/24" x="58.7" y="206.9" width="65.3" align="center" size="10" bold="1" />
+	<element type="TEXT" text="192.168.2.0/24" x="312.75" y="205.9" width="70.9" align="center" size="10" color="#383435" bold="1" />
+		<element type="TEXT" text="G0/0" x="189.85" y="100.45" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1 DCE" x="237.3" y="124.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="S0/0/0" x="166.55" y="135.15" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1" x="232.95" y="179.05" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="115.35" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="300.9" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/0 DCE" x="182.25" y="174.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="172.16.3.1" x="-1.45" y="208.9" width="51.4" align="center" size="10" />
+		<element type="TEXT" text="192.168.2.1" x="385.7" y="208.9" width="57" align="center" size="10" color="#383435" />	
+		<element type="ROUTER" textId="ID_s5_txt01" x="1.55" y="246.7" width="433.25" height="151.40" size="10"/>		
+		</slide>
+		
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+		<element type="IMAGE" src="2_5_2_2_B.jpg" x="0" y="0" width="470" height="400"/>
+		<element type="TEXT" text="172.16.1.0/24" x="127.75" y="78.8" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.2.0/24" x="109.9" y="148.15" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="192.168.1.0/24" x="254.75" y="148.15" width="70.9" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.3.0/24" x="58.7" y="206.9" width="65.3" align="center" size="10" bold="1" />
+	<element type="TEXT" text="192.168.2.0/24" x="312.75" y="205.9" width="70.9" align="center" size="10" color="#383435" bold="1" />
+		<element type="TEXT" text="G0/0" x="189.85" y="100.45" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1 DCE" x="237.3" y="124.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="S0/0/0" x="166.55" y="135.15" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1" x="232.95" y="179.05" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="115.35" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="300.9" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/0 DCE" x="182.25" y="174.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="172.16.3.1" x="-1.45" y="208.9" width="51.4" align="center" size="10" />
+		<element type="TEXT" text="192.168.2.1" x="385.7" y="208.9" width="57" align="center" size="10" color="#383435" />	
+		<element type="ROUTER" textId="ID_s6_txt01" x="0" y="246.7" width="433.25" height="151.40" size="10"/>	
+		</slide>
+		
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s4_title" />
+		<element type="IMAGE" src="2_5_2_2_B.jpg" x="0" y="0" width="470" height="400"/>
+		<element type="TEXT" text="172.16.1.0/24" x="127.75" y="78.8" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.2.0/24" x="109.9" y="148.15" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="192.168.1.0/24" x="254.75" y="148.15" width="70.9" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.3.0/24" x="58.7" y="206.9" width="65.3" align="center" size="10" bold="1" />
+	<element type="TEXT" text="192.168.2.0/24" x="312.75" y="205.9" width="70.9" align="center" size="10" color="#383435" bold="1" />
+		<element type="TEXT" text="G0/0" x="189.85" y="100.45" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1 DCE" x="237.3" y="124.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="S0/0/0" x="166.55" y="135.15" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1" x="232.95" y="179.05" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="115.35" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="300.9" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/0 DCE" x="182.25" y="174.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="172.16.3.1" x="-1.45" y="208.9" width="51.4" align="center" size="10" />
+		<element type="TEXT" text="192.168.2.1" x="385.7" y="208.9" width="57" align="center" size="10" color="#383435" />
+		<element type="ROUTER" textId="ID_s7_txt01" x="0" y="246.7" width="433.25" height="151.40" size="10"/>	
+		</slide>
+		
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s5_title" />
+		<element type="IMAGE" src="2_5_2_2_A.jpg" x="0" y="0" width="470" height="400"/>
+		<element type="TEXT" text="172.16.1.0/24" x="127.75" y="78.8" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.2.0/24" x="109.9" y="148.15" width="65.3" align="center" size="10" bold="1" />
+		<element type="TEXT" text="192.168.1.0/24" x="254.75" y="148.15" width="70.9" align="center" size="10" bold="1" />
+		<element type="TEXT" text="172.16.3.0/24" x="58.7" y="206.9" width="65.3" align="center" size="10" bold="1" />
+	<element type="TEXT" text="192.168.2.0/24" x="312.75" y="205.9" width="70.9" align="center" size="10" color="#383435" bold="1" />
+		<element type="TEXT" text="G0/0" x="189.85" y="100.45" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1 DCE" x="237.3" y="124.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="S0/0/0" x="166.55" y="135.15" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="S0/0/1" x="232.95" y="179.05" width="33.1" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="115.35" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="G0/0" x="300.9" y="178.65" width="25.9" align="center" size="10" />
+		<element type="TEXT" text="S0/0/0 DCE" x="182.25" y="174.55" width="33.1" align="left" size="10" />
+		<element type="TEXT" text="172.16.3.1" x="-1.45" y="208.9" width="51.4" align="center" size="10" />
+		<element type="TEXT" text="192.168.2.1" x="385.7" y="208.9" width="57" align="center" size="10" color="#383435" />
+		<element type="ROUTER" textId="ID_s8_txt01" x="0" y="246.7" width="433.25" height="151.40" size="10"/>		
+		</slide>
+	
+	
+		<text id="ID_s4_txt01"><![CDATA[R1#<b>ping 192.168.2.1 sumber g0/0</b><br/>Ketik urutan escape untuk dibatalkan.<br/>Mengirim 5 ICMP Echo 100-byte ke 192.168.2.1, batas waktu adalah 2 detik:<br/>Paket dikirim dengan alamat sumber 172.16.3.1<br/>
+			.....<br/>Tingkat keberhasilan 0 persen (0/5)<br/>R1#]]></text>
+		
+		<text id="ID_s5_txt01"><![CDATA[R1#<b>rute pelacak 192.168.2.1</b><br/>Ketik urutan escape untuk dibatalkan.<br/>Menelusuri rute ke 192.168.2.1<br/>Info VRF: (vrf masuk nama/id, vrf keluar nama/id)<br/>
+<span>1 172.16.2.2 4 mdetik 4 mdetik 8 mdetik</span><br/>
+<span>2 172.16.2.1 12 mdetik 12 mdetik 12 mdetik</span><br/>
+<span>3 172.16.2.2 12 mdetik 8 mdetik 8 mdetik</span><br/>
+<span>4 172.16.2.1 20 mdtk 16 mdtk 20 mdtk</span><br/>
+<span>5 172.16.2.2 16 mdetik 16 mdetik 16 mdetik</span><br/>
+<span>6 172.16.2.1 20 mdetik 20 mdetik 24 mdetik</span><br/>
+<span>7 172.16.2.2 20 mdetik</span><br/>R1#]]></text>
+		
+		<text id="ID_s6_txt01"><![CDATA[
+<pre>R2# <b>tampilkan rute ip | mulai Gerbang</b>
+Gateway of last resort is not set
+
+      172.16.0.0/16 is variably subnetted, 5 subnets, 2 masks
+C        172.16.1.0/24 is directly connected, GigabitEthernet0/0
+L        172.16.1.1/32 is directly connected, GigabitEthernet0/0
+C        172.16.2.0/24 is directly connected, Serial0/0/0
+L        172.16.2.2/32 is directly connected, Serial0/0/0
+S        172.16.3.0/24 is directly connected, Serial0/0/0
+      192.168.1.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.1.0/24 is directly connected, Serial0/0/1
+L        192.168.1.2/32 is directly connected, Serial0/0/1
+<div class="orange_block">S 192.168.2.0/24 [1/0] melalui 172.16.2.1</div>
+R2#</pre>
+]]></text>
+		
+		<text id="ID_s7_txt01"><![CDATA[R2#<b>tampilkan konfigurasi yang sedang berjalan | bagian rute ip</b><br/>rute ip 172.16.3.0 255.255.255.0 172.16.2.1<br/>rute ip 192.168.2.0 255.255.255.0 172.16.2.1<br/>R2#<br/>R2#<b>konf t</b><br/>Masukkan perintah konfigurasi, satu per baris.  Akhiri dengan CNTL/Z.<br/>R2(konfigurasi)#<b>tidak ada rute ip 192.168.2.0 255.255.255.0 172.16.2.1</b><br/>R2(konfigurasi)#<b>rute ip 192.168.2.0 255.255.255.0 192.168.1.1</b><br/>R2(konfigurasi)#]]></text>
+		
+		<text id="ID_s8_txt01"><![CDATA[R1#<b>ping 192.168.2.1 sumber g0/0</b><br/>Ketik urutan escape untuk dibatalkan.<br/>Mengirim 5 ICMP Echo 100-byte ke 192.168.2.1, batas waktu adalah 2 detik:<br/>Paket dikirim dengan alamat sumber 172.16.3.1<br/>
+			!!!!!<br/>Tingkat keberhasilan 100 persen (5/5), pulang pergi min/rata-rata/maks = 28/28/28 ms<br/>R1#]]></text>
+		
+		
+			
+	</slide>
+</data>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.2.4 Memverifikasi ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Ubah ACL IPv4</h2>
+</div>
+<div id="content">
+<p>Seperti yang ditunjukkan pada Gambar 1,<span class="cmd"><b>tampilkan antarmuka ip</b></span>perintah digunakan untuk memverifikasi ACL pada antarmuka. Output dari perintah ini mencakup nomor atau nama daftar akses dan arah penerapan ACL. Outputnya menunjukkan router R1 memiliki daftar akses 1 yang diterapkan pada antarmuka keluar S0/0/0 dan daftar akses NO_ACCESS diterapkan pada antarmuka g0/0 juga dalam arah keluar.</p>
+<p></p>
+<p>Contoh pada Gambar 2 menunjukkan hasil penerbitan<span class="cmd"><b>tampilkan daftar akses</b></span>perintah pada router R1. Untuk melihat daftar akses individu gunakan<span class="cmd"><b>tampilkan daftar akses</b></span>perintah diikuti dengan nomor atau nama daftar akses. Pernyataan NO_ACCESS mungkin terlihat aneh. Perhatikan bahwa nomor urut 15 ditampilkan sebelum nomor urut 10. Ini adalah hasil dari proses internal router dan akan dibahas nanti di bagian ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Extended ACL Placement</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Block FTP and Telnet traffic from 192.168.11.0/24 to 192.168.30.0/24.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Examines traffic only from 192.168.11.0/24.]]></text> 
+  </component>
+  <component id="ID_txt03">
+  <text><![CDATA[Examines all traffic before exiting R1 S0/0/0.]]></text> 
+  </component>
+    <component id="ID_txt04">
+  <text><![CDATA[<b>Company A</b>]]></text> 
+  </component>
+    <component id="ID_txt05">
+  <text><![CDATA[<b>Company B</b>]]></text> 
+  </component>
+</textcomponents>

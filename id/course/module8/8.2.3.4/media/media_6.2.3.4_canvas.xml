@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	  <slide type="MBAR">
+	  		<slide>
+		   <element type="IMAGE" src="6_2_3_4.jpg" x="7" y="48" width="427.6" height="325"/>
+		   <element type="TEXT" subType="TITLE" compId="ID_s1_title"/>
+		   <element type="TEXT" compId="ID_s1_txt01" width="108.4" x="13" y="54" align="left" expand="down" />
+		   <element type="TEXT" compId="ID_s1_txt02" width="95.3" x="334.2" y="139" align="center" expand="up+down" />
+		   <element type="TEXT" text="172.16.2.0/24" width="88" x="153.8" y="74.95" align="center" bold="1" color="#000000"/>			
+			<element type="TEXT" text="209.165.200.224/27" width="106.25" x="230.2" y="107.9" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="172.16.3.0/30" width="88" x="38.65" y="184.4" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="192.168.10.8/30" width="88" x="278.05" y="187.7" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="172.16.1.0/24" width="88" x="24.45" y="335.5" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="192.168.10.4/30" width="88" x="147.3" y="286.05" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="192.168.1.0/24" width="88" x="289.8" y="335.5" align="center" bold="1" color="#000000"/>
+			<element type="TEXT" text="R1" width="18.25" x="59" y="279.1" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="R2" width="18.25" x="190" y="151.35" align="center" bold="1" color="#fff"/>
+			<element type="TEXT" text="R3" width="18.25" x="321.1" y="279.1" align="center" bold="1" color="#fff"/>
+			
+			<element type="TEXT" text="RID:2.2.2.2" width="60.35" x="93.75" y="139.1" align="center" bold="1" color="#F68026"/>
+			<element type="TEXT" text="RID:1.1.1.1" width="60.35" x="11.45" y="224.45" align="center" bold="1" color="#F68026"/>
+			<element type="TEXT" text="RID:3.3.3.3" width="60.35" x="330.1" y="224.45" align="center" bold="1" color="#F68026"/>
+			
+			
+			<element type="TEXT" text="1544kbps" width="51.85" x="128.95" y="218.75" align="center" bold="1" color="#652C8A" rotation="-40" />
+			<element type="TEXT" text="1024kbps" width="53.3" x="228" y="186.35" align="center" bold="1" color="#652C8A" rotation="37" />
+			<element type="TEXT" text="64kbps" width="42" x="181.45" y="251.1" align="center" bold="1" color="#652C8A"/>
+			
+			
+			
+			
+			<element type="TEXT" text="G0/0" width="28" x="171.2" y="113.4" align="center" />
+			<element type="TEXT" text=".1" width="13.35" x="201.2" y="113.4" align="center"/>
+			<element type="TEXT" text="Lo0" width="22.5" x="224.75" y="124.55" align="center" />
+			<element type="TEXT" text=".225" width="25.55" x="228.2" y="140.65" align="center" />
+			<element type="TEXT" text=".226" width="25.55" x="308.35" y="135.15" align="center"/>
+			<element type="TEXT" text=".2" width="13.35" x="155.55" y="148.1" align="center" />	
+			<element type="TEXT" text="S0/0/0" width="35.95" x="159.8" y="167.7" align="center" />
+			<element type="TEXT" text="S0/0/1" width="35.95" x="200.8" y="167.7" align="center"/>
+			<element type="TEXT" text=".9" width="13.35" x="229.25" y="151.95" align="center" />
+			<element type="TEXT" text=".1" width="13.35" x="64.4" y="240.2" align="center"/>
+			<element type="TEXT" text="S0/0/0" width="35.95" x="95.4" y="237.9" align="center" />
+			<element type="TEXT" text="S0/0/1" width="35.95" x="95.4" y="253.35" align="center"/>
+			<element type="TEXT" text=".10" width="19.45" x="323.9" y="240.65" align="center" />
+			<element type="TEXT" text="S0/0/1" width="35.95" x="274.05" y="244.5" align="center" />
+			<element type="TEXT" text="S0/0/0" width="35.95" x="265.45" y="266.45" align="center" />
+			<element type="TEXT" text=".5" width="13.35" x="94.4" y="272.25" align="center" />
+			<element type="TEXT" text="G0/0" width="28" x="40.45" y="295.65" align="center"/>
+			<element type="TEXT" text=".1" width="13.35" x="71.25" y="294.65" align="center" />
+			<element type="TEXT" text=".6" width="13.35" x="289" y="283.75" align="center" />
+			<element type="TEXT" text="G0/0" width="28" x="302.95" y="294.65" align="center"/>
+			<element type="TEXT" text=".1" width="13.35" x="332.85" y="294.65" align="center" />
+		  </slide>
+		  <slide>
+		   <element type="TEXT" subType="TITLE" compId="ID_s2_title"/>	
+		   <element type="ROUTER"  textId="router_text1"  x="3.55"    y="38.75"   width="434.05" height="347.4" size="10" />
+		  </slide>
+		   <slide>
+		   <element type="TEXT" subType="TITLE" compId="ID_s3_title"/>	
+		   <element type="ROUTER"  textId="router_text2"  x="6.55"    y="163"   width="428.05" height="71.25" size="10" />
+		  </slide>
+		  <slide>
+		   <element type="TEXT" subType="TITLE" compId="ID_s4_title"/>	
+		   <element type="ROUTER"  textId="router_text3"  x="3.55"    y="38.75"   width="434.05" height="347.4" size="10" />
+		  </slide>
+	  </slide>
+
+	  <text id="router_text1"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="397"> <tr> <td colspan="3">R1#<strong>tampilkan antarmuka serial 0/0/0</strong><br/>Serial0/0/0 sudah habis, protokol jalur sudah habis</td> </tr> <tr> <td width="14"> </td> <td colspan="2">Perangkat kerasnya adalah Seri WIC MBRD<br/>Deskripsi: Tautan ke R2<br/>Alamat internetnya adalah 172.16.3.1/30<br/>MTU 1500 byte,<span>BW 1544 Kbit/dtk</span>, DLY 20.000 penggunaan,</td> </tr> <tr> <td> </td> <td width="17"> </td> <td width="248">keandalan 255/255, txload 1/255, rxload 1/255</td> </tr> <tr> <td> </td> <td colspan="2">Enkapsulasi HDLC, loopback tidak disetel<br/>Set tetap hidup (10 detik)<br/>Input terakhir 00:00:05, output 00:00:03, output tidak pernah hang<br/>Pembersihan terakhir dari penghitung "tampilkan antarmuka" tidak pernah<br/>Antrian masukan: 0/75/0/0 (ukuran/maks/tetes/flushes); Total</td> </tr> <tr> <td colspan="3">penurunan keluaran: 0</td> </tr> <tr> <td> </td> <td colspan="2">Strategi antrian: fifo<br/>Antrian keluaran: 0/40 (ukuran/maks)<br/>Kecepatan input 5 menit 0 bit/detik, 0 paket/detik<br/>Kecepatan keluaran 5 menit 0 bit/detik, 0 paket/detik</td> </tr> <tr> <td> </td> <td> </td> <td>215 paket masukan, 17786 byte, 0 tanpa buffer<br/>Menerima 109 siaran (0 IP multicast)<br/>0 kerdil, 0 raksasa, 0 throttle<br/>0 kesalahan input, 0 CRC, 0 frame, 0 overrun, 0 diabaikan,</td> </tr> <tr> <td colspan="3">0 batalkan</td> </tr> <tr> <td> </td> <td> </td> <td>Output 216 paket, 17712 byte, 0 underrun<br/>0 kesalahan keluaran, 0 tabrakan, 5 pengaturan ulang antarmuka<br/>3 penurunan protokol yang tidak diketahui<br/>0 kegagalan buffer keluaran, 0 buffer keluaran tertukar</td> </tr> <tr> <td colspan="3">keluar</td> </tr> <tr> <td> </td> <td> </td> <td>0 transisi pembawa<br/>DCD=naik DSR=naik DTR=naik RTS=naik CTS=naik</td> </tr> <tr> <td colspan="3">R1#</td> </tr></table>]]></text>
+	  
+	  
+	  
+<text id="router_text2"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="410"> <tr> <td colspan="3">R1#<strong>tampilkan antarmuka serial 0/0/1 | termasuk BW</strong></td> </tr> <tr> <td width="14"> </td> <td colspan="2" width="265">MTU 1500 byte,<span>BW 1544 Kbit/dtk</span>, DLY 20.000 penggunaan,<br/></td> </tr> <tr> <td colspan="3">R1#</td> </tr></table>]]></text>
+	  
+	  
+	  
+	  <text id="router_text3"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="397"> <tr> <td colspan="3">R1#<strong>tampilkan antarmuka ip ospf serial 0/0/1</strong><br/>Serial0/0/1 sudah habis, protokol jalur sudah habis</td> </tr> <tr> <td width="14"> </td> <td colspan="2">Alamat Internet 192.168.10.5/30, Area 0, Terlampir melalui<br/>Pernyataan Jaringan<br/>ID Proses 10, ID Router 1.1.1.1, Jenis Jaringan<br/>POINT_TO_POINT,<span>Biaya: 647</span><br/></td> </tr> <tr> <td> </td> <td colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td align="center">Topologi-MTID</td> <td align="center">Biaya</td> <td align="center">Dengan disabilitas</td> <td align="center">Penutupan</td> <td align="center">Nama Topologi</td> </tr> <tr> <td align="center">0</td> <td align="center">647</td> <td align="center">no</td> <td align="center">no</td> <td align="center">Basis</td> </tr> </table></td> </tr> <tr> <td> </td> <td colspan="2">Penundaan Pengiriman adalah 1 detik, Nyatakan POINT_TO_POINT<br/>Interval pengatur waktu dikonfigurasi, Halo 10, Mati 40, Tunggu 40,<br/>Transmisi ulang 5</td> </tr> <tr> <td> </td> <td width="17"> </td> <td width="248">batas waktu sinkronisasi ulang oob 40<br/>Halo dijadwalkan pada 00:00:04</td> </tr> <tr> <td> </td> <td colspan="2">Mendukung Pensinyalan Tautan-lokal (LLS)<br/>Dukungan pembantu Cisco NSF diaktifkan<br/>Dukungan pembantu IETF NSF diaktifkan<br/>Indeks 3/3, panjang antrian banjir 0<br/>Berikutnya 0x0(0)/0x0(0)<br/>Panjang pemindaian banjir terakhir adalah 1, maksimum adalah 1<br/>Waktu pemindaian banjir terakhir adalah 0 mdetik, maksimum 0 mdetik<br/>Jumlah Tetangga adalah 1, Jumlah tetangga yang berdekatan adalah 1</td> </tr> <tr> <td> </td> <td> </td> <td>Berdekatan dengan tetangga 3.3.3.3</td> </tr> <tr> <td> </td> <td colspan="2">Menekan halo untuk 0 tetangga</td> </tr> <tr> <td colspan="3">R1#</td> </tr> <tr> <td colspan="3">R1#<strong>tampilkan antarmuka ip ospf serial 0/0/1 | termasuk Biaya:</strong></td> </tr> <tr> <td> </td> <td colspan="2">ID Proses 10, ID Router 1.1.1.1, Jenis Jaringan</td> </tr> <tr> <td colspan="3">POINT_TO_POINT,<span>Biaya: 647</span></td> </tr> <tr> <td colspan="3">R1#</td> </tr></table>]]></text>
+</data>
+

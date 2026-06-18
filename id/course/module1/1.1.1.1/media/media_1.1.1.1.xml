@@ -1,0 +1,40 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Komponen Warisan</b>]]></text> 
+  </component>
+  
+ 
+<component id="ID_s2_txt01">
+<text><![CDATA[Sistem PBX Kecil]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Sakelar Telepon Besar]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Infrastruktur Lemari Pengkabelan]]></text>
+</component> 
+  
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Komponen Jaringan Terkonvergensi</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[Sakelar Basis LAN Cisco Catalyst 2960]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[Komunikasi Terpadu - Server Konvergensi Media]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[Telepon IP Terpadu Cisco]]></text>
+</component> 
+
+</textcomponents>

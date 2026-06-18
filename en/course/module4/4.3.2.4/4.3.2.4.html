@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.3.2.4 Directly Connected IPv6 Example</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Router Operation</h1>
+        <h2>Directly Connected Routes</h2>
+      </div>
+      <div id="content">
+          <p>The example in Figure 1 shows the configuration steps for the directly connected interfaces of R1 with the indicated IPv6 addresses. Notice the Layer 1 and Layer 2 informational messages generated as each interface is configured and activated.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> show ipv6 route </b></span>command shown in Figure 2 is used to verify that IPv6 networks and specific IPv6 interface addresses have been installed in the IPv6 routing table. Like IPv4, a ‘<span class="cmd">C</span>’ next to a route indicates that this is a directly connected network. An ‘<span class="cmd">L</span>’ indicates the local route. In an IPv6 network, the local route has a /128 prefix. Local routes are used by the routing table to efficiently process packets with a destination address of the interface of the router. </p>
+          <p></p>
+          <p>Notice that there is also a route installed to the FF00::/8 network. This route is required for multicast routing.</p>
+          <p></p>
+          <p>Figure 3 displays how the<span class="cmd"><b> show ipv6 route </b></span>command can be combined with a specific network destination to display the details of how that route was learned by the router. </p>
+          <p></p>
+          <p>Figure 4 displays how connectivity to R2 can be verified using the<span class="cmd"><b> ping </b></span>command. </p>
+          <p></p>
+          <p>In Figure 5, notice what happens when the G0/0 LAN interface of R2 is the target of the<span class="cmd"><b> ping </b></span>command. The pings are unsuccessful. This is because R1 does not have an entry in the routing table to reach the 2001:DB8:ACAD:4::/64 network. </p>
+          <p></p>
+          <p>R1 requires additional information to reach a remote network. Remote network route entries can be added to the routing table using either:</p>
+          <p>
+            <ul>
+              <li>Static routing </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dynamic routing protocols</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

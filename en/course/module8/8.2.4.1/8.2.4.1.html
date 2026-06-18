@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.4.1 Verify OSPF Neighbors</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>Verify OSPF</h2>
+      </div>
+      <div id="content">
+          <p>Figure 1 shows the reference topology.</p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> show ip ospf neighbor </b></span>command to verify that the router has formed an adjacency with its neighboring routers. If the router ID of the neighboring router is not displayed, or if it does not show as being in a state of FULL, the two routers have not formed an OSPF adjacency. </p>
+          <p></p>
+          <p>If two routers do not establish adjacency, link-state information is not exchanged. Incomplete LSDBs can cause inaccurate SPF trees and routing tables. Routes to destination networks may not exist, or may not be the most optimum path.</p>
+          <p></p>
+          <p>Figure 2 displays the neighbor adjacency of R1. For each neighbor, this command displays the following output:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Neighbor ID </b>- The router ID of the neighboring router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Pri </b>- The OSPF priority of the interface. This value is used in the DR and BDR election.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>State </b>- The OSPF state of the interface. FULL state means that the router and its neighbor have identical OSPF LSDBs. On multiaccess networks, such as Ethernet, two routers that are adjacent may have their states displayed as 2WAY. The dash indicates that no DR or BDR is required because of the network type.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dead Time </b>- The amount of time remaining that the router waits to receive an OSPF Hello packet from the neighbor before declaring the neighbor down. This value is reset when the interface receives a Hello packet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Address </b>- The IPv4 address of the neighbor’s interface to which this router is directly connected.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface </b>- The interface on which this router has formed adjacency with the neighbor.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to verify the R2 and R3 neighbors using the<span class="cmd"><b> show ip ospf neighbor </b></span>command.</p>
+          <p>Two routers may not form an OSPF adjacency if:</p>
+          <p>
+            <ul>
+              <li>The subnet masks do not match, causing the routers to be on separate networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>OSPF Hello or Dead Timers do not match.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>OSPF Network Types do not match.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>There is a missing or incorrect OSPF<span class="cmd"><b> network </b></span>command.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

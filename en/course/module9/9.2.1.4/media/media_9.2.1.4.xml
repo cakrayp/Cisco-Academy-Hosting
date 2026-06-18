@@ -1,0 +1,33 @@
+<textcomponents>
+
+<!-- slide 1 -->
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Conflict with Statements</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<textformat blockindent='-14'>ACL 3: Host statement conflicts with previous range statement.</textformat>]]></text>
+</component>
+
+<!-- slide 2 -->
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Host Statement Entered Before Range</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<textformat blockindent='-14'>ACL 4: Host statement can always be configured before range statements.</textformat>]]></text>
+</component>
+
+<!-- slide 3 -->
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Host Configured After Range with no Conflict</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[<textformat blockindent='-14'>ACL 5: Host statement can be configured after range statement if there is no conflict.</textformat>]]></text>
+</component>
+
+</textcomponents>

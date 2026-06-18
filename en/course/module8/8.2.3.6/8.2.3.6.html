@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.3.6 Manually Setting the OSPF Cost</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Cost</h2>
+      </div>
+      <div id="content">
+          <p>As an alternative to setting the default interface bandwidth, the cost can be manually configured on an interface using the<span class="cmd"><b> ip ospf cost </b></span><span class="cmd"><i>value </i></span>interface configuration command. </p>
+          <p></p>
+          <p>An advantage of configuring a cost over setting the interface bandwidth is that the router does not have to calculate the metric when the cost is manually configured. In contrast, when the interface bandwidth is configured, the router must calculate the OSPF cost based on the bandwidth. The<span class="cmd"><b> ip ospf cost </b></span>command is useful in multi-vendor environments where non-Cisco routers may use a metric other than bandwidth to calculate the OSPF costs.</p>
+          <p></p>
+          <p>Both the<span class="cmd"><b> bandwidth</b></span> interface command and the<span class="cmd"><b> ip ospf cost </b></span>interface command achieve the same result, which is to provide an accurate value for use by OSPF in determining the best route.</p>
+          <p></p>
+          <p>For instance, in the example in Figure 1, the interface bandwidth of serial 0/0/1 is reset to the default value and the OSPF cost is manually set to 15,625. Although the interface bandwidth is reset to the default value, the OSPF cost is set as if the bandwidth was still calculated.</p>
+          <p></p>
+          <p>Figure 2 shows the two alternatives that can be used in modifying the costs of the serial links in the topology. The right side of the figure shows the<span class="cmd"><b> ip ospf cost </b></span>command equivalents of the<span class="cmd"><b> bandwidth </b></span>commands on the left.</p>
+          <p></p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

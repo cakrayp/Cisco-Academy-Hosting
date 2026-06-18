@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.2.4.1 Default Static IPv6 Route</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Static and Default Routes</h1>
+        <h2>Configure IPv6 Default Routes</h2>
+      </div>
+      <div id="content">
+          <p>A default route is a static route that matches all packets. Instead of routers storing routes for all of the networks in the Internet, they can store a single default route to represent any network that is not in the routing table.</p>
+          <p></p>
+          <p>Routers commonly use default routes that are either configured locally or learned from another router, using a dynamic routing protocol. They are used when no other routes match the packet's destination IP address in the routing table. In other words, if a more specific match does not exist, then use the default route as the Gateway of Last Resort. </p>
+          <p></p>
+          <p>Default static routes are commonly used when connecting:</p>
+          <p>
+            <ul>
+              <li>A company's edge router to a service provider network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>A router with only an upstream neighbor router. The router has no other neighbors and is, therefore, referred to as a stub router. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>As shown in the figure, the command syntax for a default static route is similar to any other static route, except that the ipv6-prefix/prefix-length is<span class="cmd"><b> ::/0</b></span>, which matches all routes. </p>
+          <p></p>
+          <p>The basic command syntax of a default static route is:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>ipv6 route ::/0 </b>
+                </span>
+                <span class="cmd">{</span>
+                <span class="cmd">
+                  <i>ipv6-address </i>
+                </span>
+                <span class="cmd">|</span>
+                <span class="cmd">
+                  <i> exit-intf</i>
+                </span>
+                <span class="cmd">}</span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

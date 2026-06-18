@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.2.3.4 Configuring a Router as a DHCPv6 Relay Agent</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v6</h1>
+        <h2>Stateful DHCPv6 Server</h2>
+      </div>
+      <div id="content">
+          <p>If the DHCPv6 server is located on a different network than the client, then the IPv6 router can be configured as a DHCPv6 relay agent. The configuration of a DHCPv6 relay agent is similar to the configuration of an IPv4 router as a DHCPv4 relay. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Although the configuration of a DHCPv6 relay agent is similar to DHCPv4, IPv6 router or relay agents forward DHCPv6 messages slightly differently than DHCPv4 relays. The messages and the process are beyond the scope of this curriculum.</p>
+          <p></p>
+          <p>Figure 1 shows an example topology where a DHCPv6 server is located on the 2001:DB8:CAFE:1::/64 network. The network administrator wants to use this DHCPv6 server as a central, stateful DHCPv6 server to allocate IPv6 addresses to all clients. Therefore, clients on other networks such as PC1 on the 2001:DB8:CAFE:A::/64 network, must communicate with the DHCPv6 server. </p>
+          <p></p>
+          <p>DHCPv6 messages from clients are sent to the IPv6 multicast address FF02::1:2. All_DHCPv6_Relay_Agents_and_Servers address. This address has link-local scope which means routers do not forward these messages. The router must be configured as a DHCPv6 relay agent to enable the DHCPv6 client and server to communicate.</p>
+          <p></p>
+          <p>
+            <b>Configuring the DHCPv6 Relay Agent</b>
+          </p>
+          <p></p>
+          <p>As shown in Figure 2, a DHCPv6 relay agent is configured using the <span class="cmd"><b>ipv6 dhcp relay destination</b></span> command. This command is configured on the interface facing the DHCPv6 client using the address of the DHCPv6 server as the destination.</p>
+          <p></p>
+          <p>The <span class="cmd"><b>show ipv6 dhcp interface</b></span> command verifies the G0/0 interface is in relay mode with 2001:DB8:CAFE:1::6 configured as the DHCPv6 server.</p>
+          <p></p>
+          <p>Using the Syntax Checker in Figure 3, configure the DHCPv6 relay commands on the correct router so that PC3 can receive IPv6 addressing information from the DHCPv6 server. Refer to Figure 1 to view the network topology.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

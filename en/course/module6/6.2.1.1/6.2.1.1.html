@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.2.1.1 ip route Command</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Static and Default Routes</h1>
+        <h2>Configure IPv4 Static Routes</h2>
+      </div>
+      <div id="content">
+          <p>Static routes are configured using the<span class="cmd"><b> ip route </b></span>global configuration command. The syntax of the command is:</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>ip route </b>
+            </span>
+            <span class="cmd">
+              <i>network-address subnet-mask </i>
+            </span>
+            <span class="cmd">{</span>
+            <span class="cmd">
+              <i>ip-address </i>
+            </span>
+            <span class="cmd">| </span>
+            <span class="cmd">
+              <i>interface-type interface-number </i>
+            </span>
+            <span class="cmd">[</span>
+            <span class="cmd">
+              <i>ip-address</i>
+            </span>
+            <span class="cmd">]} [</span>
+            <span class="cmd">
+              <i>distance</i>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <b>name </b>
+            </span>
+            <span class="cmd">
+              <i>name</i>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <b>permanent</b>
+            </span>
+            <span class="cmd">] [</span>
+            <span class="cmd">
+              <b>tag </b>
+            </span>
+            <span class="cmd">
+              <i>tag</i>
+            </span>
+            <span class="cmd">]</span>
+          </p>
+          <p></p>
+          <p>The following parameters are required to configure static routing:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>network-address</i>
+                </span>
+                <b></b>- Destination network address of the remote network to be added to the routing table, often this is referred to as the prefix.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>subnet-mask</i>
+                </span>
+                <b></b>- Subnet mask, or just mask, of the remote network to be added to the routing table. The subnet mask can be modified to summarize a group of networks. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>One or both of the following parameters must also be used:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>ip-address</i>
+                </span>
+                <b></b>- The IP address of the connecting router to use to forward the packet to the remote destination network. Commonly referred to as the next hop. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <i>exit-intf</i>
+                </span>
+                <b></b>- The outgoing interface to use to forward the packet to the next hop.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>As shown in the figure, the command syntax commonly used is<span class="cmd"><b> ip route </b></span><span class="cmd"><i>network-address subnet-mask </i></span><span class="cmd">{</span><span class="cmd"><i>ip-address </i></span><span class="cmd">|</span><span class="cmd"><i> exit-intf</i></span><span class="cmd">}</span>.</p>
+          <p></p>
+          <p>The<span class="cmd"><i></i></span><span class="cmd"><i>distance </i></span>parameter is used to create a floating static route by setting an administrative distance that is higher than a dynamically learned route.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The remaining parameters are not relevant for this chapter or for CCNA studies.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

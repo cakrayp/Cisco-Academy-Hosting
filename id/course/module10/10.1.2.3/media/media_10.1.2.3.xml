@@ -1,0 +1,78 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Masalah DHCPv4</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[Maaf, saya tidak dapat meneruskan siaran apa pun di luar jaringan Anda...]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Mencari server DHCPv4….]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[ServerDNS<br/>192.168.11.5]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Server DHCPv4<br/>192.168.11.6]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>PC1: Tidak Ada Alamat IPv4</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>C:\WINDOWS\system32\cmd.exe</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Mengonfigurasi DHCPv4 Langkah 1: Tidak termasuk Alamat IPv4</b>]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Perintah Relai DHCPv4</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[&lt;keluaran penghapusan&gt;]]></text>
+</component>
+
+
+<component id="ID_s4_title">
+<text><![CDATA[<b>PC1: memperbarui Alamat IPv4</b>]]></text>
+</component>
+
+
+<component id="ID_sc_reset">
+		<text><![CDATA[mengatur ulang]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[tertarik padaku]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Tampilkan Semua]]></text>
+	</component>
+
+<component id="ID_s5_title">
+		<text><![CDATA[<b>Konfigurasikan Relai DHCPv4</b>]]></text>
+	</component>
+	<component id="ID_s5_SC5" fontFace='_typewriter' fontSize="10" class=" font10px">
+		<feedback id="fb" class=" font10px"><![CDATA[<b><font face="_sans" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font face="_sans"><b>Configure the DHCPv4 relay commands on the correct router for PC3 to receive an IPv4 address and other parameters from the DHCPv4 server. Exit configuration mode on any device that needs no configuration.</b></font>]]></existingcommands>
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[exit]]></correctresponse>
+		</command>		
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[exit]]></correctresponse>
+		</command>		
+		<command prompt="R3(config)#">
+			<correctresponse><![CDATA[interface g0/0]]></correctresponse>
+		</command>
+		<command prompt="R3(config-if)#">
+			<correctresponse><![CDATA[ip helper-address 192.168.11.6]]></correctresponse>
+				<deviceresponse><![CDATA[<font face='courier New' size="10" class=" font10px">R3(config-if)#</font>]]></deviceresponse> 					
+			<instruction><![CDATA[<font face="_sans"><b>You successfully configured the DHCPv4 Relay.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+</textcomponents>

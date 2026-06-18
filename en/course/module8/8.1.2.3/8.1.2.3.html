@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.2.3 Hello Packet</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>OSPF Messages</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Hello Packet</b>
+          </p>
+          <p>The OSPF Type 1 packet is the Hello packet. Hello packets are used to:</p>
+          <p>
+            <ul>
+              <li>Discover OSPF neighbors and establish neighbor adjacencies.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Advertise parameters on which two routers must agree to become neighbors.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elect the Designated Router (DR) and Backup Designated Router (BDR) on multiaccess networks like Ethernet and Frame Relay. Point-to-point links do not require DR or BDR.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The figure displays the fields contained in the Type 1 Hello packet. Important fields shown in the figure include:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Type </b>- Identifies the type of packet. A one (1) indicates a Hello packet. A value 2 identifies a DBD packet, 3 an LSR packet, 4 an LSU packet, and 5 an LSAck packet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router ID </b>- A 32-bit value expressed in dotted decimal notation (an IPv4 address) used to uniquely identifying the originating router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Area ID </b>- Area from which the packet originated. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Network Mask </b>- Subnet mask associated with the sending interface.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hello Interval </b>- Specifies the frequency, in seconds, at which a router sends Hello packets. The default Hello interval on multiaccess networks is 10 seconds. This timer must be the same on neighboring routers; otherwise, an adjacency is not established.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Router Priority </b>- Used in a DR/BDR election. The default priority for all OSPF routers is 1, but can be manually altered from 0 to 255. The higher the value, the more likely the router becomes the DR on the link.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dead Interval </b>- Is the time in seconds that a router waits to hear from a neighbor before declaring the neighboring router out of service. By default, the router Dead Interval is four times the Hello interval. This timer must be the same on neighboring routers; otherwise, an adjacency is not established.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Designated Router (DR) </b>- Router ID of the DR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Backup Designated Router (BDR) </b>- Router ID of the BDR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>List of Neighbors </b>- List that identifies the router IDs of all adjacent routers. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Click each of the highlighted fields in the figure for more information.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>DHCP Snooping Operation</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+  <text><![CDATA[Attacker Rogue DHCP]]></text> 
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[DHCP Client]]></text> 
+</component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Untrusted Port]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[Trusted Port]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[DHCP Server]]></text> 
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>DHCP Snooping Configuration</b>]]></text>
+</component>
+
+<component id="ID_Title_txt01">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent='-14'><ul><li>DHCP snooping allows the configuration of ports as trusted or untrusted:</li></textformat><textformat blockindent='5'><li style="margin-left:35px">Trusted ports can send DHCP requests and acknowledgments.</li><li style="margin-left:35px">Untrusted ports can forward only DHCP requests.</li></textformat><textformat blockindent='-14'><li>DHCP snooping enables the switch to build a DHCP binding table that maps a client MAC address, IP address, VLAN, and port ID.</li></ul></textformat>]]></text> 
+</component>
+
+
+
+
+</textcomponents>

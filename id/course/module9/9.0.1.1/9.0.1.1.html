@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.0.1.1 Pendahuluan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.0.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Daftar Kontrol Akses</h1>
+<h2>Daftar Kontrol Akses</h2>
+</div>
+<div id="content">
+<p>Keamanan jaringan adalah subjek yang sangat besar, dan sebagian besarnya berada di luar cakupan kursus ini. Namun, salah satu keterampilan terpenting yang dibutuhkan administrator jaringan adalah penguasaan daftar kontrol akses (ACL).</p>
+<p></p>
+<p>Perancang jaringan menggunakan firewall untuk melindungi jaringan dari penggunaan yang tidak sah. Firewall adalah solusi perangkat keras atau perangkat lunak yang menerapkan kebijakan keamanan jaringan. Pertimbangkan kunci pada pintu sebuah ruangan di dalam gedung. Kunci tersebut hanya mengizinkan pengguna yang berwenang dengan kunci atau kartu akses untuk melewati pintu. Demikian pula, firewall menyaring paket yang tidak sah atau berpotensi berbahaya agar tidak memasuki jaringan. Pada router Cisco, Anda dapat mengkonfigurasi firewall sederhana yang menyediakan kemampuan dasar penyaringan lalu lintas menggunakan ACL. Administrator menggunakan ACL untuk menghentikan lalu lintas atau hanya mengizinkan lalu lintas tertentu di jaringan mereka.</p>
+<p></p>
+<p>ACL adalah daftar berurutan pernyataan izin atau penolakan yang berlaku untuk alamat atau protokol lapisan atas. ACL menyediakan cara yang ampuh untuk mengontrol lalu lintas masuk dan keluar jaringan. ACL dapat dikonfigurasi untuk semua protokol jaringan yang dirutekan.</p>
+<p></p>
+<p>Alasan paling penting untuk mengkonfigurasi ACL adalah untuk memberikan keamanan pada jaringan. Bab ini menjelaskan cara menggunakan ACL standar dan diperpanjang pada router Cisco sebagai bagian dari solusi keamanan. Di dalamnya terdapat tips, pertimbangan, rekomendasi, dan pedoman umum tentang cara menggunakan ACL.</p>
+<p></p>
+<p>Bab ini mencakup kesempatan untuk mengembangkan penguasaan ACL Anda dengan serangkaian pelajaran, aktivitas, dan latihan laboratorium.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

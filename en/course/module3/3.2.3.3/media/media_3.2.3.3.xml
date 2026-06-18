@@ -1,0 +1,90 @@
+
+<textcomponents>
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Activity - Predict Dynamic Trunking Protocol (DTP) Behavior</b><br/>Which DTP mode combinations between two switches will become trunk links and which will become access links? Drag each of the link labels to the fields provided in the topology. Not all labels will be used.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>KEY TO ABBREVIATIONS</b><br/>TR = Trunk<br/>AC = Access<br/>DA = Dynamic Auto<br/>DD = Dynamic Desirable]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[DD]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt04">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt06">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt07">
+	<text><![CDATA[TR]]></text>
+</component>
+
+
+<component id="ID_txt08">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt09">
+	<text><![CDATA[TR]]></text>
+</component>
+
+<component id="ID_txt10">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt11">
+	<text><![CDATA[DA]]></text>
+</component>
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[TRUNK]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[ACCESS]]></text>
+</component>
+
+
+
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the resulting link condition for each DTP mode combination.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the resulting link condition for each DTP mode combination. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+</textcomponents>

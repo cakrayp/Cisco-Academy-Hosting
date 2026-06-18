@@ -1,0 +1,119 @@
+<textcomponents>
+
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Port Forwarding menggunakan IOS</b>]]></text>
+</component>
+
+<!--screen 1 table -->
+
+<component id="ID_s1_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" cellspacing="2" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="mtitle" valign="top" width="100"><font bgcolor="#097A76" color="#EFF8F7"><b>Parameter</b></font></td>
+<td bgcolor="#077A77" class="mtitle" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Keterangan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font face="_typewriter"><b>tcp</b></font> or <font face="_typewriter"><b>udp</b></font></td>
+<td bgcolor="#ffffff" valign="top">Menunjukkan apakah ini nomor port TCP atau UDP.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>ip lokal</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Ini adalah alamat IPv4 yang ditetapkan ke host di jaringan dalam, biasanya dari ruang alamat pribadi RFC 1918.</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font face="_typewriter"><i>pelabuhan lokal</i></font></td>
+<td bgcolor="#ffffff" valign="top">mengatur port TCP/UDP lokal dalam rentang 1 — 65.535. Ini adalah nomor port yang didengarkan server.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>global-ip</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Ini adalah alamat IP unik global IPv4 dari host dalam. Ini adalah alamat IP yang akan digunakan klien luar untuk menjangkau server internal.</td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font face="_typewriter"><i>pelabuhan global</i></font></td>
+<td bgcolor="#ffffff" valign="top">Menetapkan port TCP/UDP global dalam rentang 1 — 65.535. Ini adalah nomor port yang akan digunakan klien luar untuk menjangkau server internal.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><b class="command">dapat diperpanjang</b></font></td>
+<td bgcolor="#EFF8F7" valign="top">Itu<font face="_typewriter"><b class="command">dapat diperpanjang</b></font>opsi diterapkan secara otomatis. Itu<font face="_typewriter"><b class="command">dapat diperpanjang</b></font>kata kunci memungkinkan pengguna untuk mengkonfigurasi beberapa terjemahan statistik ambigu, di mana terjemahan ambigu adalah terjemahan dengan alamat lokal atau global yang sama. Hal ini memungkinkan router untuk memperluas terjemahan ke lebih dari satu port jika diperlukan.</td>
+</tr>
+</table>]]></text>
+</component>
+
+
+<!--slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Contoh Port Forwarding menggunakan IOS</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Jaringan Dalam]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Jaringan Luar]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Server Web]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Klien]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[http://www.example.com:<font color="#F26200"><b>8080</b></font>]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[Menetapkan terjemahan statistik antara alamat lokal dalam dan port lokal dan alamat global dalam dan port global.]]></text>
+</component>
+
+<component id='ID_s2_txt08'>
+	<text><![CDATA[Mengidentifikasi antarmuka serial 0/0/0 sebagai antarmuka NAT di dalam.]]></text>
+</component>
+
+<component id='ID_s2_txt09'>
+	<text><![CDATA[Mengidentifikasi antarmuka serial 0/1/0 sebagai antarmuka NAT luar.]]></text>
+</component>
+
+
+<!--slide 3-->
+<component id="ID_s3_title">
+<text><![CDATA[<b>Memverifikasi Pelabuhan Penerusan</b>]]></text>
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[Jaringan Dalam]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[Jaringan Luar]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[Server Web]]></text>
+</component>
+
+<component id="ID_s3_txt04">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_s3_txt05">
+<text><![CDATA[Klien]]></text>
+</component>
+
+<component id='ID_s3_txt06'>
+	<text><![CDATA[http://www.example.com:<font color="#F26200"><b>8080</b></font>]]></text>
+</component>
+
+
+</textcomponents>

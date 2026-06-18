@@ -1,0 +1,127 @@
+﻿<textcomponents>
+
+    
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 1: Membandingkan dan Membandingkan OSPFv2 dan OSPFv3</b><br/><br/>Pada grafik tercantum pernyataan yang menjelaskan OSPFv2, OSPFv3, atau keduanya. Seret pengidentifikasi versi OSPF (OSPFv2, OSPFv3, atau Keduanya) ke deskripsi fungsi atau fitur yang sesuai. Pengidentifikasi versi dapat digunakan lebih dari satu kali. Klik Tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Perutean unicast diaktifkan secara default]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Menggunakan IPSec untuk otentikasi]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Protokol Perutean Link-State]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Protokol Perutean Dinamis]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s1_traget01'>
+	<text><![CDATA[<font color="#393536">OSPFv2</font>]]></text>
+</component>
+
+<component id='ID_s1_traget02'>
+	<text><![CDATA[<font color="#393536">OSPFv3</font>]]></text>
+</component>
+
+<component id='ID_s1_traget03'>
+	<text><![CDATA[<font color="#393536">Both</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap fungsi OSPF atau deskripsi fitur dengan versinya. Klik Tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap fungsi OSPF atau deskripsi fitur dengan versinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+<!--slide02-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 2: Membandingkan dan Membandingkan OSPFv2 dan OSPFv3</b><br/><br/>Pada grafik tercantum pernyataan yang menjelaskan OSPFv2, OSPFv3, atau keduanya. Seret pengidentifikasi versi OSPF (OSPFv2, OSPFv3, atau Keduanya) ke deskripsi fungsi atau fitur yang sesuai. Pengidentifikasi versi dapat digunakan lebih dari satu kali.]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Menggunakan biaya sebagai metriknya]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Memilih DR dan BDR]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Menggunakan FF02::6 untuk multicast DR dan BDR]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Menggunakan 224.0.0.6 untuk multicast DR dan BDR]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s2_traget01'>
+	<text><![CDATA[<font color="#393536">OSPFv2</font>]]></text>
+</component>
+
+<component id='ID_s2_traget02'>
+	<text><![CDATA[<font color="#393536">OSPFv3</font>]]></text>
+</component>
+
+<component id='ID_s2_traget03'>
+	<text><![CDATA[<font color="#393536">Both</font>]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap fungsi OSPF atau deskripsi fitur dengan versinya.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap fungsi OSPF atau deskripsi fitur dengan versinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

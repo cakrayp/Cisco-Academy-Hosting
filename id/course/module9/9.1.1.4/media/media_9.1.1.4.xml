@@ -1,0 +1,75 @@
+<textcomponents>
+
+<component id="ID_title01">
+<text><![CDATA[<b>Contoh Penyaringan Paket</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Bingkai Tajuk<br/>(Misalnya HDLC)]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Paket<br/>(Tajuk IP)]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Segmen Data<br/>(Tajuk TCP)]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Data]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Dari jaringan mana?]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Jaringan A]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Meminta layanan Port 80?]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[Ya]]></text>
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[Mengizinkan]]></text>
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[Membantah]]></text>
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Jaringan B]]></text>
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[Meminta layanan Port 80?]]></text>
+</component>
+
+<component id="ID_txt14">
+<text><![CDATA[Ya]]></text>
+</component>
+
+<component id="ID_txt15">
+<text><![CDATA[Membantah]]></text>
+</component>
+
+<component id="ID_txt16">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_txt17">
+<text><![CDATA[Mengizinkan]]></text>
+</component>
+
+</textcomponents>

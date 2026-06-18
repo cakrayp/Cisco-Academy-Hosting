@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.1.1 Beralih Urutan Booting</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Switch dengan Pengaturan Awal</h2>
+</div>
+<div id="content">
+<p>Setelah switch Cisco dinyalakan, switch tersebut akan melalui urutan booting berikut:</p>
+<p></p>
+<p>1. Pertama, saklar memuat program power-on self-test (POST) yang disimpan dalam ROM.  POST memeriksa subsistem CPU. Ini menguji CPU, DRAM, dan bagian perangkat flash yang membentuk sistem file flash.</p>
+<p>2. Selanjutnya, saklar memuat perangkat lunak boot loader. Boot loader adalah program kecil yang disimpan dalam ROM dan dijalankan segera setelah POST berhasil diselesaikan.</p>
+<p>3. Boot loader melakukan inisialisasi CPU tingkat rendah. Ini menginisialisasi register CPU, yang mengontrol di mana memori fisik dipetakan, jumlah memori, dan kecepatannya.</p>
+<p>4. Boot loader menginisialisasi sistem file flash pada board sistem.</p>
+<p>5. Terakhir, boot loader menemukan dan memuat image perangkat lunak sistem operasi IOS default ke dalam memori dan menyerahkan kendali peralihan ke IOS.</p>
+<p></p>
+<p>Boot loader menemukan image Cisco IOS pada switch sebagai berikut: switch mencoba melakukan booting secara otomatis dengan menggunakan informasi dalam variabel lingkungan BOOT. Jika variabel ini tidak disetel, saklar akan mencoba memuat dan mengeksekusi file pertama yang dapat dieksekusi dengan melakukan pencarian rekursif dan mendalam di seluruh sistem file flash. Dalam pencarian direktori yang mendalam terlebih dahulu, setiap subdirektori yang ditemukan dicari sepenuhnya sebelum melanjutkan pencarian di direktori asli. Pada switch Catalyst 2960 Series, file gambar biasanya terdapat dalam direktori yang memiliki nama yang sama dengan file gambar (tidak termasuk ekstensi file .bin).</p>
+<p></p>
+<p>Sistem operasi IOS kemudian menginisialisasi antarmuka menggunakan perintah Cisco IOS yang terdapat di file konfigurasi, konfigurasi startup, yang disimpan di NVRAM.</p>
+<p></p>
+<p>Pada gambar, variabel lingkungan BOOT diatur menggunakan<span class="cmd"><b>sistem boot</b></span>perintah mode konfigurasi global. Gunakan<span class="cmd"><b>tampilkan bootvar</b></span>memerintah (<span class="cmd"><b>tampilkan boot</b></span>di versi IOS yang lebih lama) untuk melihat file boot IOS saat ini disetel ke mana.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

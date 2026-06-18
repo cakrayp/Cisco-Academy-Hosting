@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>	
+	
+<slide>	
+
+            <element type="TEXT" subType="TITLE" compId="ID_title"/>	
+			<element type="ACTIVITY" subType="ANIMATION" movieClipId="anim01" totalFrames="531"/>
+		</slide>	
+		
+		<text id="ID_s1_txt01"><![CDATA[R1#<b>tampilkan rute ip</b><br/>Kode:<br/>C - terhubung, S - statis, I - IGRP, R - RIP, M - seluler, B - BGP<br/>D - EIGRP, EX - EIGRP eksternal, O - OSPF, IA - OSPF antar area<br/>N1 - OSPF NSSA eksternal tipe 1, N2 - OSPF NSSA eksternal tipe 2<br/>E1 - OSPF eksternal tipe 1, E2 - OSPF eksternal tipe 2, E - EGP<br/>i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS antar area<br/>* - kandidat default, U - rute statis per pengguna, o - ODR<br/>P - rute statis yang diunduh secara berkala<br/>Gerbang pilihan terakhir tidak disetel<br/>C 192.168.1.0/24 terhubung langsung, FastEthernet0/0<br/>C 192.168.2.0/24 terhubung langsung, Serial0/0/0<br/>S 192.168.3.0/24 [1/0] melalui 192.168.2.2<br/>
+]]></text>	
+<text id="ID_s2_txt01"><![CDATA[R2#<b>tampilkan rute ip</b><br/>Kode:<br/>C - terhubung, S - statis, I - IGRP, R - RIP, M - seluler, B - BGP<br/>D - EIGRP, EX - EIGRP eksternal, O - OSPF, IA - OSPF antar area<br/>N1 - OSPF NSSA eksternal tipe 1, N2 - OSPF NSSA eksternal tipe 2<br/>E1 - OSPF eksternal tipe 1, E2 - OSPF eksternal tipe 2, E - EGP<br/>i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS antar area<br/>* - kandidat default, U - rute statis per pengguna, o - ODR<br/><br/>P - rute statis yang diunduh secara berkala\n\nGateway pilihan terakhir tidak disetel<br/>C 192.168.3.0/24 terhubung langsung, FastEthernet0/0<br/>C 192.168.2.0/24 terhubung langsung, Serial0/0/0<br/>S 192.168.1.0/24 [1/0] melalui 192.168.2.1<br/>]]></text>
+
+	
+</data>

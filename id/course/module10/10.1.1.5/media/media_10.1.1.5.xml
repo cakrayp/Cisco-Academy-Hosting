@@ -1,0 +1,59 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas - identifikasi Langkah-Langkah dalam Operasi DHCPv4</b><br/><br/>Urutkan langkah-langkah untuk mengilustrasikan asal mula DHCPv4.<br/>Seret setiap langkah asal sewa DHCPv4 ke bidang yang sesuai, berdasarkan angka yang dilingkari pada grafik.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Klien DHCPv4]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Server DHCPv4]]></text>
+</component>
+
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">DHCPACK<br/>DHCP Acknowledgement</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">DHCPDISCOVER<br/>DHCP Discover</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">DHCPREQUEST<br/>DHCP Request</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">DHCPOFFER<br/>DHCP Offer</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memesan langkah-langkah untuk asal sewa DHCPv4.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memesan langkah-langkah untuk originasi limbah DHCPv4. Silakan klik<b>mengatur ulang</b>untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

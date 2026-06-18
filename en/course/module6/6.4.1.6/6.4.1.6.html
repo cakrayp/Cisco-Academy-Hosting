@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.4.1.6 Packet Tracer - Configuring IPv4 Route Summarization - Scenario 2</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.1.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Summary and Floating Static Routes</h1>
+        <h2>Configure IPv4 Summary Routes</h2>
+      </div>
+      <div id="content">
+          <p>In this activity, you will calculate and configure summary routes. Router summarization, also known as route aggregation, is the process of advertising a contiguous set of addresses as a single address. After calculating summary routes for each LAN, you must summarize a route which includes all networks in the topology in order for the ISP to reach each LAN.</p>
+          <p></p>
+          <p>
+            <a href="../../files/6.4.1.6%20Packet%20Tracer%20-%20Configuring%20IPv4%20Route%20Summarization%20-%202%20Inst.pdf" target="_blank">Packet Tracer - Configuring IPv4 Route Summarization - Scenario 2 Instructions</a>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/6.4.1.6%20Packet%20Tracer%20-%20Configuring%20IPv4%20Route%20Summarization%20-%202.pka" target="_blank">Packet Tracer - Configuring IPv4 Route Summarization - Scenario 2 - PKA</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

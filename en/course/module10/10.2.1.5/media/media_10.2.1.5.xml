@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Stateless DHCPv6 Option</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[The RA message has some addressing information but I must contact a DHCPv6 server for remaining information, such as DNS addresses.]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Router Solicitation]]></text> 
+</component>
+  
+<component id="ID_txt03">
+<text><![CDATA[Router Advertisement]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[M flag = 0 / O flag = 1]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[DHCPv6 operations]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[DHCPv6 Server]]></text> 
+</component>
+
+
+</textcomponents>

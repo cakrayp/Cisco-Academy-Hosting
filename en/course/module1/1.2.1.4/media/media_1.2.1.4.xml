@@ -1,0 +1,40 @@
+<textcomponents>
+
+<component id="ID_title">
+	<text><![CDATA[<b>Store-and-Forward Switching</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Frame Header]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Network Header]]></text> 
+</component>
+<component id="ID_txt03">
+  <text><![CDATA[Transport Header]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Data]]></text>
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Preamble]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[Destination MAC Address]]></text> 
+</component>
+<component id="ID_txt07">
+	<text><![CDATA[Source MAC Address]]></text>
+</component>
+<component id="ID_txt08">
+  <text><![CDATA[Type]]></text> 
+</component>
+<component id="ID_txt09">
+  <text><![CDATA[FCS Checksum (CRC)]]></text> 
+</component>
+<component id="ID_txt10">
+	<text><![CDATA[Bytes]]></text>
+</component>
+<component id="ID_txt11">
+  <text><![CDATA[Store-and-forward switching entails receipt of the entire frame (up to about 9,200 bytes for jumbo frames) before a forwarding decision is made.]]></text> 
+</component>
+
+</textcomponents>

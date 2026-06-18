@@ -1,0 +1,40 @@
+<textcomponents>
+
+<component id="ID_title">
+	<text><![CDATA[<b>Peralihan Simpan-dan-Maju</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Bingkai Tajuk]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Tajuk Jaringan]]></text> 
+</component>
+<component id="ID_txt03">
+  <text><![CDATA[Tajuk Transportasi]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Data]]></text>
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Pembukaan]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[Alamat MAC Tujuan]]></text> 
+</component>
+<component id="ID_txt07">
+	<text><![CDATA[Alamat MAC Sumber]]></text>
+</component>
+<component id="ID_txt08">
+  <text><![CDATA[Jenis]]></text> 
+</component>
+<component id="ID_txt09">
+  <text><![CDATA[Pemeriksaan FCS (CRC)]]></text> 
+</component>
+<component id="ID_txt10">
+	<text><![CDATA[byte]]></text>
+</component>
+<component id="ID_txt11">
+  <text><![CDATA[Peralihan simpan-dan-maju memerlukan penerimaan seluruh frame (hingga sekitar 9.200 byte untuk frame jumbo) sebelum keputusan penerusan dibuat.]]></text> 
+</component>
+
+</textcomponents>

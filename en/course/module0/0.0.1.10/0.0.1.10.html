@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>0.0.1.10 How Packet Tracer Helps Master Concepts</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_0.0.1.10_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Welcome to Routing and Switching Essentials</h1>
+        <h2>Message to the Student</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Educational Games</b>
+          </p>
+          <p>Packet Tracer Multi-User games enable you or a team to compete with other students to see who can accurately complete a series of networking tasks the fastest. It is an excellent way to practice the skills you are learning in Packet Tracer activities and hands-on labs.</p>
+          <p>Cisco Aspire is a single-player, standalone strategic simulation game. Players test their networking skills by completing contracts in a virtual city. The Networking Academy Edition is specifically designed to help you prepare for the CCENT certification exam. It also incorporates business and communication skills ICT employers seek in job candidates.</p>
+          <p></p>
+          <p>
+            <b>Performance-Based Assessments</b>
+          </p>
+          <p>The Networking Academy performance-based assessments have you do Packet Tracer activities like you have been doing all along, only now integrated with an online assessment engine that will automatically score your results and provide you with immediate feedback. This feedback helps you to more accurately identify the knowledge and skills you have mastered and where you need more practice. There are also questions on chapter quizzes and exams that use Packet Tracer activities to give you additional feedback on your progress.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

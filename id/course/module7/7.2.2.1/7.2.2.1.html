@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.2.2.1 Protokol Informasi Perutean</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Dinamis Vektor Jarak</h1>
+<h2>Jenis Protokol Perutean Vektor Jarak</h2>
+</div>
+<div id="content">
+<p>Routing Information Protocol (RIP) adalah protokol routing generasi pertama untuk IPv4 yang awalnya ditentukan dalam RFC 1058. Mudah dikonfigurasi, menjadikannya pilihan yang baik untuk jaringan kecil.</p>
+<p></p>
+<p>RIPv1 memiliki karakteristik utama sebagai berikut:</p>
+<p>
+<ul>
+<li>Pembaruan perutean disiarkan (255.255.255.255) setiap 30 detik.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jumlah hop digunakan sebagai metrik untuk pemilihan jalur.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jumlah lompatan yang lebih besar dari 15 lompatan dianggap tak terbatas (terlalu jauh). Router hop ke-15 tersebut tidak akan menyebarkan pembaruan perutean ke router berikutnya.</li>
+</ul>
+</p>
+<p></p>
+<p>Pada tahun 1993, RIPv1 berevolusi menjadi protokol routing tanpa kelas yang dikenal sebagai RIP versi 2 (RIPv2). RIPv2 memperkenalkan perbaikan berikut:</p>
+<p>
+<ul>
+<li>
+<b>Protokol perutean tanpa kelas</b>- Mendukung VLSM dan CIDR, karena menyertakan subnet mask dalam pembaruan perutean.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Peningkatan efisiensi</b>- Ini meneruskan pembaruan ke alamat multicast 224.0.0.9, bukan alamat siaran 255.255.255.255.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Mengurangi entri perutean</b>- Mendukung peringkasan rute manual pada antarmuka apa pun.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Aman</b>- Mendukung mekanisme otentikasi untuk mengamankan pembaruan tabel routing antar tetangga.</li>
+</ul>
+</p>
+<p></p>
+<p>Tabel pada gambar merangkum perbedaan antara RIPv1 dan RIPv2.</p>
+<p></p>
+<p>Pembaruan RIP dienkapsulasi ke dalam segmen UDP, dengan nomor port sumber dan tujuan diatur ke port UDP 520.</p>
+<p>Pada tahun 1997, versi RIP yang mendukung IPv6 dirilis. RIPng didasarkan pada RIPv2. Masih memiliki batasan 15 hop dan jarak administratif 120.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

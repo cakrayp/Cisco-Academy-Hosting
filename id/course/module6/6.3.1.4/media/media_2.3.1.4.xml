@@ -1,0 +1,28 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Alokasi Alamat IP Berkelas = Tidak Efisien</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Kelas A 50%]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Kelas B 25%]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Kelas C 12,5%]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Kelas D &amp; E 12,5%]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Kelas A (1 - 126)</b><br/># kemungkinan jaringan: 126<br/># Host/Net: 16.777.214<br/>Maks. # Tuan rumah: 2.113.928.964]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[<b>Kelas B (128 – 191)</b><br/># kemungkinan jaringan: 16.384<br/># Host/Net: 65.534<br/>Maks. # Tuan rumah: 1.073.709.056]]></text> 
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[<b>Kelas C (192 – 223)</b><br/># kemungkinan jaringan: 2.097.152<br/># Host/Net: 254<br/>Maks. # Tuan rumah: 532.676.608]]></text> 
+	</component>
+
+	</textcomponents>

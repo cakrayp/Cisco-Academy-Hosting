@@ -1,0 +1,23 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Penomoran dan Penamaan ACL</b>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt01">
+		<text><![CDATA[<b>ACL bernomor:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent="-14">Assign a number based on protocol to be filtered.<li>(1 hingga 99) dan (1300 dan 1999): Standar IP ACL</li><li>(100 hingga 199) dan (2000 hingga 2699): IP ACL yang Diperluas</li></textformat>]]></text>
+	</component>
+	
+	<component id="ID_Title_txt02">
+		<text><![CDATA[<b>Dinamakan ACL:</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt02">
+		<text><![CDATA[<textformat blockindent="-14">Assign a name to identify the ACL.<li>Nama dapat berisi karakter alfanumerik.</li><li>Disarankan agar nama ditulis dengan HURUF BESAR.</li><li>Nama tidak boleh mengandung spasi atau tanda baca.</li><li>Entri dapat ditambahkan atau dihapus dalam ACL.</li></textformat>]]></text>
+	</component>
+
+
+</textcomponents>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.1.2.3 Menggunakan Protokol Perutean Dinamis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Perutean Dinamis</h1>
+<h2>Perutean Dinamis versus Statis</h2>
+</div>
+<div id="content">
+<p>Protokol perutean dinamis membantu administrator jaringan mengelola proses konfigurasi dan pemeliharaan rute statis yang memakan waktu dan menuntut.</p>
+<p></p>
+<p>Bayangkan mempertahankan konfigurasi perutean statis untuk tujuh router pada Gambar 1.</p>
+<p></p>
+<p>Bagaimana jika perusahaan tersebut berkembang dan kini memiliki empat wilayah dan 28 router untuk dikelola, seperti yang ditunjukkan pada Gambar 2? Apa yang terjadi jika tautan terputus? Bagaimana Anda memastikan bahwa jalur redundan tersedia?</p>
+<p></p>
+<p>Perutean dinamis adalah pilihan terbaik untuk jaringan besar seperti yang ditunjukkan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

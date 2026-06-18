@@ -1,0 +1,52 @@
+<textcomponents>
+
+	<component id="ID_s1_title">
+	  <text><![CDATA[<b>Standar ACL<font face="_typewriter">access-list</font>Sintaks Perintah</b>]]></text> 
+	  </component>
+		
+	<component id="ID_s2_title">
+	  <text><![CDATA[<b>Menghapus ACL</b>]]></text> 
+	</component>
+	
+	  
+	  
+	<component id="ID_Table_01">
+			<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="liner">
+<td bgcolor="#0E6360" class="liner_top" colspan="2"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="100"><font color="#ffffff"><b>Parameter</b></font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff"><b>Keterangan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" face="_typewriter"><i>nomor daftar akses</i></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536">Number of an ACL. This is a decimal number from 1 to 99, or 1300 to 1999 (for standard ACL).</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" face="_typewriter"><b>membantah</b></font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Denies access if the conditions are matched.</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" face="_typewriter"><b>izin</b></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536">Permits access if the conditions are matched.</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" face="_typewriter"><b>komentar</b></font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Add a remark about entries in an IP access list to make the list easier to understand and scan.</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" face="_typewriter"><i>sumber</i></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536">Number of the network or host from which the packet is being sent. There are two ways to specify the <font color="#393536" face="_typewriter"><i>sumber</i></font>:<ul><li><textformat blockindent="-14">Use a 32-bit quantity in four-part, dotted-decimal format.</textformat></li><li><textformat blockindent="-14">Use the keyword <font face="_typewriter"><b>setiap</b></font> as an abbreviation for a <font face="_typewriter"><i>sumber</i></font> and <font face="_typewriter"><i>sumber-wildcard</i></font> of 0.0.0.0 255.255.255.255.</textformat></li></ul></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" face="_typewriter"><i>sumber-wildcard</i></font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">(Optional) 32-bit wildcard mask to be applied to the source. Places ones in the bit positions you want to ignore.</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" face="_typewriter"><b>mencatat</b></font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536"><p>(Opsional) Menyebabkan pesan logging informasi tentang paket yang cocok dengan entri yang akan dikirim ke konsol. (Tingkat pesan yang masuk ke konsol dikontrol oleh<font face="_typewriter"><b>konsol pencatatan</b></font>memerintah.)</p><br/><p>Pesan tersebut mencakup nomor ACL, apakah paket diizinkan atau ditolak, alamat sumber, dan jumlah paket. Pesan tersebut dihasilkan untuk paket pertama yang cocok, dan kemudian pada interval lima menit, termasuk jumlah paket yang diizinkan atau ditolak dalam interval lima menit sebelumnya.</p></font></td>
+</tr>
+</table>]]></text> 
+	</component>
+</textcomponents>

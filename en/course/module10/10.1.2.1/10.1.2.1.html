@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.1.2.1 Configuring a Basic DHCPv4 Server</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v4</h1>
+        <h2>Configuring a Basic DHCPv4 Server</h2>
+      </div>
+      <div id="content">
+          <p>A Cisco router running Cisco IOS software can be configured to act as a DHCPv4 server. The Cisco IOS DHCPv4 server assigns and manages IPv4 addresses from specified address pools within the router to DHCPv4 clients. The topology shown in Figure 1 is used to illustrate this functionality.</p>
+          <p></p>
+          <p>
+            <b>Step 1. Excluding IPv4 Addresses</b>
+          </p>
+          <p></p>
+          <p>The router functioning as the DHCPv4 server assigns all IPv4 addresses in a DHCPv4 address pool unless configured to exclude specific addresses. Typically, some IPv4 addresses in a pool are assigned to network devices that require static address assignments. Therefore, these IPv4 addresses should not be assigned to other devices. To exclude specific addresses, use the <span class="cmd"><b>ip dhcp excluded-address</b></span> command as shown in Figure 2.</p>
+          <p></p>
+          <p>A single address or a range of addresses can be excluded by specifying the low-address and high-address of the range. Excluded addresses should include the addresses assigned to routers, servers, printers, and other devices that have been manually configured.</p>
+          <p></p>
+          <p>
+            <b>Step 2. Configuring a DHCPv4 Pool</b>
+          </p>
+          <p></p>
+          <p>Configuring a DHCPv4 server involves defining a pool of addresses to assign. As shown in Figure 3, the <span class="cmd"><b>ip dhcp pool </b></span><span class="cmd"><i>pool-name</i></span> command creates a pool with the specified name and puts the router in DHCPv4 configuration mode, which is identified by this prompt <span class="cmd">Router(dhcp-config)#</span>.</p>
+          <p></p>
+          <p>
+            <b>Step 3. Configuring Specific Tasks</b>
+          </p>
+          <p></p>
+          <p>Figure 4 lists the tasks to complete the DHCPv4 pool configuration. Some of these are optional, while others must be configured. </p>
+          <p></p>
+          <p>The address pool and default gateway router must be configured. Use the <span class="cmd"><b>network</b></span> statement to define the range of available addresses. </p>
+          <p>Use the <span class="cmd"><b>default-router</b></span> command to define the default gateway router. Typically, the gateway is the LAN interface of the router closest to the client devices. One gateway is required, but you can list up to eight addresses if there are multiple gateways.</p>
+          <p></p>
+          <p>Other DHCPv4 pool commands are optional. For example, the IPv4 address of the DNS server that is available to a DHCPv4 client is configured using the <span class="cmd"><b>dns-server</b></span> command. The <span class="cmd"><b>domain-name </b></span><span class="cmd"><i>domain</i></span> command is used to define the domain name. The duration of the DHCPv4 lease can be changed using the <span class="cmd"><b>lease</b></span> command. The default lease value is one day. The <span class="cmd"><b>netbios-name-server</b></span> command is used to define the NetBIOS WINS server.</p>
+          <p></p>
+          <p>
+            <b>DHCPv4 Example</b>
+          </p>
+          <p></p>
+          <p>A sample configuration with basic DHCPv4 parameters configured on router R1, a DHCPv4 server for the 192.168.10.0/24 LAN is shown in Figure 5 using the example topology from Figure 1.</p>
+          <p></p>
+          <p>
+            <b>Disabling DHCPv4</b>
+          </p>
+          <p></p>
+          <p>The DHCPv4 service is enabled, by default, on versions of Cisco IOS software that support it. To disable the service, use the <span class="cmd"><b>no service dhcp</b></span> global configuration mode command. Use the <span class="cmd"><b>service dhcp</b></span> global configuration mode command to re-enable the DHCPv4 server process. Enabling the service has no effect if the parameters are not configured.</p>
+          <p></p>
+          <p>Using the Syntax Checker activity in Figure 6 to configure similar DHCPv4 parameters on R1 for the 192.168.11.0/24 LAN.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>DHCP Spoofing and Starvation Attack</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Client]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Legitimate DHCP Server]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[Rogue DHCP Attacker]]></text>
+</component>
+</textcomponents>

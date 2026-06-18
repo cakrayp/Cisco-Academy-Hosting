@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.5.1.2 Membandingkan ACL IPv4 dan IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.5.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv6</h1>
+<h2>Pembuatan IPv6 ACL</h2>
+</div>
+<div id="content">
+<p>Meskipun ACL IPv4 dan IPv6 sangat mirip, ada tiga perbedaan signifikan di antara keduanya.</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Menerapkan IPv6 ACL</b>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Perbedaan pertama adalah perintah yang digunakan untuk menerapkan IPv6 ACL ke sebuah antarmuka. IPv4 menggunakan perintah<span class="cmd"><b>grup akses ip</b></span>untuk menerapkan ACL IPv4 ke antarmuka IPv4. IPv6 menggunakan<span class="cmd"><b>filter lalu lintas ipv6</b></span>perintah untuk melakukan fungsi yang sama untuk antarmuka IPv6.</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Tidak Ada Masker Wildcard</b>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Berbeda dengan ACL IPv4, ACL IPv6 tidak menggunakan masker wildcard. Sebaliknya, panjang awalan digunakan untuk menunjukkan berapa banyak alamat sumber atau tujuan IPv6 yang harus cocok.</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Pernyataan Default Tambahan</b>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Perbedaan besar terakhir berkaitan dengan penambahan dua pernyataan izin implisit di akhir setiap daftar akses IPv6. Pada akhir setiap standar IPv4 atau ACL yang diperluas adalah sebuah implisit<span class="cmd"><b>menyangkal apapun</b></span> or <span class="cmd"><b>menyangkal apapun</b></span>. IPv6 mencakup hal serupa<span class="cmd"><b>tolak IPv6 apa pun</b></span>pernyataan di akhir setiap IPv6 ACL. Perbedaannya adalah IPv6 juga menyertakan dua pernyataan implisit lainnya secara default:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>izinkan icmp apa pun nd-na</b>
+</span>
+</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>izinkan icmp setiap nd-ns</b>
+</span>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Kedua pernyataan ini memungkinkan router untuk berpartisipasi dalam IPv6 yang setara dengan ARP untuk IPv4. Ingatlah bahwa ARP digunakan di IPv4 untuk menyelesaikan alamat Layer 3 ke alamat MAC Layer 2. Seperti yang ditunjukkan pada gambar, IPv6 menggunakan pesan ICMP Neighbor Discovery (ND) untuk mencapai hal yang sama. ND menggunakan pesan Neighbor Solicitation (NS) dan Neighbor Advertisement (NA).</p>
+<p></p>
+<p>Pesan ND dienkapsulasi dalam paket IPv6 dan memerlukan layanan lapisan jaringan IPv6 sedangkan ARP untuk IPv4 tidak menggunakan Lapisan 3. Karena IPv6 menggunakan layanan Lapisan 3 untuk penemuan tetangga, ACL IPv6 perlu secara implisit mengizinkan paket ND untuk dikirim dan diterima pada antarmuka. Secara khusus, pesan Neighbor Discovery - Neighbor Advertisement (nd-na) dan Neighbor Discovery - Neighbor Solicitation (nd-ns) diizinkan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

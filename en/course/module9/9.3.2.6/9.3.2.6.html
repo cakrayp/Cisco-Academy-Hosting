@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.3.2.6 Editing Extended ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Extended IPv4 ACLs</h1>
+        <h2>Configure Extended IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>Editing an extended ACL can be accomplished using the same process as editing a standard ACL as discussed in a previous section. An extended ACL can be modified using:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Method 1 Text editor </b>- Using this method, the ACL is copied and pasted into the text editor where the changes are made. The current access list is removed using the<span class="cmd"><b> no access-list </b></span>command. The modified ACL is then pasted back into the configuration. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Method 2 Sequence numbers </b>- Sequence numbers can be used to delete or insert an ACL statement. The <span class="cmd"><b>ip access-list extended </b></span><span class="cmd"><i>name </i></span>command is used to enter named-ACL configuration mode. If the ACL is numbered instead of named, the ACL number is used in the<span class="cmd"><i> name </i></span>parameter. ACEs can be inserted or removed.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In the figure the administrator needs to edit the ACL named SURFING to correct a typo in the source network statement. To view the current sequence numbers, the <span class="cmd"><b>show access-lists</b></span> command is used. The statement to be edited is identified as statement 10. The original statement is removed with the<span class="cmd"><b> no </b></span><span class="cmd"><i>sequence_# </i></span>command. The corrected statement is added replacing the original statement.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

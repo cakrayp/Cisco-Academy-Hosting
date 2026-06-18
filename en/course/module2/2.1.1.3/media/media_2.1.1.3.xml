@@ -1,0 +1,41 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Switch LEDs</b>]]></text>
+</component>
+
+<component id='ID_table'>
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000'glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	<tr>
+		<td bgcolor='#98D3D1' colspan='4' class="title"><font size='12' color='#1C3635'><b>Catalyst 2960 Switch LEDs</b></font></td>
+	</tr>
+	<tr class="mtable_top">
+		<td colspan='4' bgcolor='#0E6360' class="mtable_top"><font size='2' color='#98D3D1'>.</font></td>
+	</tr>
+	<tr>
+		<td width='27' bgcolor='#FFFFFF'><p align='center'>1</p></td>
+		<td bgcolor='#FFFFFF'>The system LED</td>
+		<td width='27' bgcolor='#FFFFFF'><p align='center'>5</p></td>
+		<td bgcolor='#FFFFFF'>The port speed LED</td>
+	</tr>
+	<tr>
+		<td width='27' bgcolor='#EFF8F7'><p align='center'>2</p></td>
+		<td bgcolor='#EFF8F7'>The RPS LED (if RPS is supported on the switch)</td>
+		<td width='27' bgcolor='#EFF8F7'><p align='center'>6</p></td>
+		<td bgcolor='#EFF8F7'>The PoE status LED (if PoE is supported on the switch)</td>
+	</tr>
+	<tr>
+		<td width='27' bgcolor='#FFFFFF'><p align='center'>3</p></td>
+		<td bgcolor='#FFFFFF'>The port status LED (This is the default mode.)</td>
+		<td width='27' bgcolor='#FFFFFF'><p align='center'>7</p></td>
+		<td bgcolor='#FFFFFF'>The Mode button</td>
+	</tr>
+	<tr>
+		<td width='27' bgcolor='#EFF8F7'><p align='center'>4</p></td>
+		<td bgcolor='#EFF8F7'>The port duplex mode LED</td>
+		<td width='27' bgcolor='#EFF8F7'><p align='center'>8</p></td>
+		<td bgcolor='#EFF8F7'>The port LEDs</td>
+	</tr>
+</table>]]></text>
+</component>
+
+</textcomponents>

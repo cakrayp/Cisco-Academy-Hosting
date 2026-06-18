@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.3.1.1 ACL yang Diperluas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 yang diperluas</h1>
+<h2>Struktur ACL IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>
+<b>Menguji Paket dengan ACL yang Diperluas</b>
+</p>
+<p></p>
+<p>Untuk kontrol pemfilteran lalu lintas yang lebih tepat, ACL IPv4 yang diperluas dapat dibuat. ACL yang diperluas diberi nomor 100 hingga 199 dan 2000 hingga 2699, sehingga menghasilkan total 799 kemungkinan ACL yang diperpanjang. ACL yang diperluas juga dapat diberi nama.</p>
+<p></p>
+<p>ACL yang diperluas lebih sering digunakan daripada ACL standar karena memberikan tingkat kontrol yang lebih besar. Seperti yang ditunjukkan pada gambar, seperti ACL standar, ACL yang diperluas memeriksa alamat sumber paket, tetapi juga memeriksa alamat tujuan, protokol, dan nomor port (atau layanan). Hal ini memberikan cakupan kriteria yang lebih luas yang menjadi dasar ACL. Misalnya, ACL yang diperluas secara bersamaan dapat mengizinkan lalu lintas email dari jaringan ke tujuan tertentu sambil menolak transfer file dan penelusuran web.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

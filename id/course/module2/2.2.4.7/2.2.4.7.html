@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.4.7 Port dalam Status Error Disabled</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.4.7_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Ganti Keamanan Port</h2>
+</div>
+<div id="content">
+<p>Ketika port dikonfigurasi dengan keamanan port, pelanggaran dapat menyebabkan port menjadi error dinonaktifkan. Ketika suatu port dinonaktifkan karena kesalahan, port tersebut akan dimatikan secara efektif dan tidak ada lalu lintas yang dikirim atau diterima pada port tersebut. Serangkaian pesan terkait keamanan port ditampilkan di konsol (Gambar 1).</p>
+<p></p>
+<p>
+<b>Catatan</b>: Protokol port dan status tautan diubah menjadi tidak aktif.</p>
+<p></p>
+<p>LED port akan berubah menjadi oranye. Itu<span class="cmd"><b>tampilkan antarmuka</b></span>perintah mengidentifikasi status port sebagai<span class="cmd"><b>err-dinonaktifkan</b></span>(Gambar 2). Keluaran dari<span class="cmd"><b>tampilkan antarmuka keamanan port</b></span>perintah sekarang menunjukkan status port sebagai<span class="cmd"><b>penutupan aman</b></span>. Karena mode pelanggaran keamanan port diatur ke<span class="cmd">penutupan</span>, port dengan pelanggaran keamanan masuk ke status kesalahan dinonaktifkan.</p>
+<p></p>
+<p>Administrator harus menentukan penyebab pelanggaran keamanan sebelum mengaktifkan kembali port. Jika perangkat yang tidak sah terhubung ke port aman, port tersebut tidak boleh diaktifkan kembali sampai ancaman keamanan dihilangkan. Untuk mengaktifkan kembali port, gunakan<span class="cmd"><b>penutupan</b></span>perintah mode konfigurasi antarmuka (Gambar 3). Kemudian, gunakan<span class="cmd"><b>tidak ada penutupan</b></span>perintah konfigurasi antarmuka untuk membuat port beroperasi.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

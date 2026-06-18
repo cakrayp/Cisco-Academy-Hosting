@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Mengonfigurasi Router sebagai Klien DHCPv6 Stateless</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[<b>Server DHCPv6 tanpa kewarganegaraan</b>]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Klien DHCPv6<b></b></b>]]></text> 
+  </component>
+
+</textcomponents>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.1.2.3 Tagging Ethernet Frames for VLAN Identification</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Segmentation</h1>
+        <h2>VLANs in a Multi-Switched Environment</h2>
+      </div>
+      <div id="content">
+          <p>Catalyst 2960 Series switches are Layer 2 devices. They use the Ethernet frame header information to forward packets. They do not have routing tables. The standard Ethernet frame header does not contain information about the VLAN to which the frame belongs; thus, when Ethernet frames are placed on a trunk, information about the VLANs to which they belong must be added. This process, called tagging, is accomplished by using the IEEE 802.1Q header, specified in the IEEE 802.1Q standard. The 802.1Q header includes a 4-byte tag inserted within the original Ethernet frame header, specifying the VLAN to which the frame belongs.</p>
+          <p></p>
+          <p>When the switch receives a frame on a port configured in access mode and assigned a VLAN, the switch inserts a VLAN tag in the frame header, recalculates the FCS, and sends the tagged frame out of a trunk port.</p>
+          <p></p>
+          <p>
+            <b>VLAN Tag Field Details</b>
+          </p>
+          <p></p>
+          <p>The VLAN tag field consists of a Type field, a tag control information field, and the FCS field:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Type</b> - A 2-byte value called the tag protocol ID (TPID) value. For Ethernet, it is set to hexadecimal 0x8100.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>User priority</b> - A 3-bit value that supports level or service implementation.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Canonical Format Identifier (CFI)</b> - A 1-bit identifier that enables Token Ring frames to be carried across Ethernet links.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN ID (VID)</b> - A 12-bit VLAN identification number that supports up to 4096 VLAN IDs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>After the switch inserts the Type and tag control information fields, it recalculates the FCS values and inserts the new FCS into the frame.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

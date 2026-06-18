@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.2.1 Types of Cisco IPv4 ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Standard versus Extended IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>The two types of Cisco IPv4 ACLs are standard and extended.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: Cisco IPv6 ACLs are similar to IPv4 extended ACLs and are discussed in a later section. </p>
+          <p></p>
+          <p>
+            <b>Standard ACLs</b>
+          </p>
+          <p></p>
+          <p>Standard ACLs can be used to permit or deny traffic only from source IPv4 addresses. The destination of the packet and the ports involved are not evaluated. The example in Figure 1 allows all traffic from the 192.168.30.0/24 network. Because of the implied "deny any" at the end, all other traffic is blocked with this ACL. Standard ACLs are created in global configuration mode.</p>
+          <p></p>
+          <p>
+            <b>Extended ACLs</b>
+          </p>
+          <p></p>
+          <p>Extended ACLs filter IPv4 packets based on several attributes:</p>
+          <p>
+            <ul>
+              <li>Protocol type</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Source IPv4 address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Destination IPv4 address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Source TCP or UDP ports</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Destination TCP or UDP ports</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Optional protocol type information for finer control</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In Figure 2, ACL 103 permits traffic originating from any address on the 192.168.30.0/24 network to any IPv4 network if the destination host port is 80 (HTTP). Extended ACLs are created in global configuration mode. </p>
+          <p></p>
+          <p>The commands for ACLs are explained in the next few topics.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: Standard and extended ACLs are discussed in more detail later in this chapter.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

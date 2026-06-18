@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="module-index" dir="ltr">
+<head>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<title>Perutean dan Peralihan</title>
+<link href="../common-ext/styles/index.css" rel="stylesheet" type="text/css"/>
+<script src="../common-ext/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="../common-ext/scripts/index.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+<div id="header-logo" title="Cisco Systems, Inc.- Akademi Jaringan Cisco"></div>
+<a href="../../index.html" id="home-btn" title="Rumah">Rumah</a>
+<h1>Bab 6: Perutean Statis<span id="title"></span></h1>
+</div>
+<div id="nav">
+<ul class="sections"><li><span class="icon"></span><span class="section-title">6.0 Perutean Statis</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.0.1 Pendahuluan</span><ul class="pages"><li><a class="page-title" data-ident="6.0.1.1" href="6.0.1.1/6.0.1.1.html" target="frame">6.0.1.1 Pendahuluan</a></li>
+<li><a class="page-title" data-ident="6.0.1.2" href="6.0.1.2/6.0.1.2.html" target="frame">6.0.1.2 Aktivitas - Kemana Kita Harus Pergi</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.1 Implementasi Routing Statis</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.1.1 Perutean Statis</span><ul class="pages"><li><a class="page-title" data-ident="6.1.1.1" href="6.1.1.1/6.1.1.1.html" target="frame">6.1.1.1 Menjangkau Jaringan Jarak Jauh</a></li>
+<li><a class="page-title" data-ident="6.1.1.2" href="6.1.1.2/6.1.1.2.html" target="frame">6.1.1.2 Mengapa Menggunakan Perutean Statis?</a></li>
+<li><a class="page-title" data-ident="6.1.1.3" href="6.1.1.3/6.1.1.3.html" target="frame">6.1.1.3 Kapan Menggunakan Rute Statis</a></li>
+<li><a class="page-title" data-ident="6.1.1.4" href="6.1.1.4/6.1.1.4.html" target="frame">6.1.1.4 Aktivitas - Identifikasi Keuntungan dan Kerugian Routing Statis</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.1.2 Jenis Rute Statis</span><ul class="pages"><li><a class="page-title" data-ident="6.1.2.1" href="6.1.2.1/6.1.2.1.html" target="frame">6.1.2.1 Aplikasi Rute Statis</a></li>
+<li><a class="page-title" data-ident="6.1.2.2" href="6.1.2.2/6.1.2.2.html" target="frame">6.1.2.2 Rute Statis Standar</a></li>
+<li><a class="page-title" data-ident="6.1.2.3" href="6.1.2.3/6.1.2.3.html" target="frame">6.1.2.3 Rute Statis Default</a></li>
+<li><a class="page-title" data-ident="6.1.2.4" href="6.1.2.4/6.1.2.4.html" target="frame">6.1.2.4 Ringkasan Rute Statis</a></li>
+<li><a class="page-title" data-ident="6.1.2.5" href="6.1.2.5/6.1.2.5.html" target="frame">6.1.2.5 Rute Statis Terapung</a></li>
+<li><a class="page-title" data-ident="6.1.2.6" href="6.1.2.6/6.1.2.6.html" target="frame">6.1.2.6 Kegiatan - Identifikasi Jenis Rute Statis</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.2 Konfigurasikan Rute Statis dan Default</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.2.1 Konfigurasikan Rute Statis IPv4</span><ul class="pages"><li><a class="page-title" data-ident="6.2.1.1" href="6.2.1.1/6.2.1.1.html" target="frame">6.2.1.1 Perintah rute ip</a></li>
+<li><a class="page-title" data-ident="6.2.1.2" href="6.2.1.2/6.2.1.2.html" target="frame">6.2.1.2 Opsi Hop Berikutnya</a></li>
+<li><a class="page-title" data-ident="6.2.1.3" href="6.2.1.3/6.2.1.3.html" target="frame">6.2.1.3 Konfigurasikan Rute Statis Hop Berikutnya</a></li>
+<li><a class="page-title" data-ident="6.2.1.4" href="6.2.1.4/6.2.1.4.html" target="frame">6.2.1.4 Konfigurasikan Rute Statis yang Terhubung Langsung</a></li>
+<li><a class="page-title" data-ident="6.2.1.5" href="6.2.1.5/6.2.1.5.html" target="frame">6.2.1.5 Konfigurasikan Rute Statis yang Ditentukan Sepenuhnya</a></li>
+<li><a class="page-title" data-ident="6.2.1.6" href="6.2.1.6/6.2.1.6.html" target="frame">6.2.1.6 Verifikasi Rute Statis</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.2.2 Konfigurasikan Rute Default IPv4</span><ul class="pages"><li><a class="page-title" data-ident="6.2.2.1" href="6.2.2.1/6.2.2.1.html" target="frame">6.2.2.1 Rute Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.2.2" href="6.2.2.2/6.2.2.2.html" target="frame">6.2.2.2 Konfigurasikan Rute Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.2.3" href="6.2.2.3/6.2.2.3.html" target="frame">6.2.2.3 Verifikasi Rute Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.2.4" href="6.2.2.4/6.2.2.4.html" target="frame">6.2.2.4 Packet Tracer - Mengonfigurasi Rute Statis dan Default IPv4</a></li>
+<li><a class="page-title" data-ident="6.2.2.5" href="6.2.2.5/6.2.2.5.html" target="frame">6.2.2.5 Lab - Mengonfigurasi Rute Statis dan Default IPv4</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.2.3 Konfigurasikan Rute Statis IPv6</span><ul class="pages"><li><a class="page-title" data-ident="6.2.3.1" href="6.2.3.1/6.2.3.1.html" target="frame">6.2.3.1 Perintah rute ipv6</a></li>
+<li><a class="page-title" data-ident="6.2.3.2" href="6.2.3.2/6.2.3.2.html" target="frame">6.2.3.2 Opsi Hop Berikutnya</a></li>
+<li><a class="page-title" data-ident="6.2.3.3" href="6.2.3.3/6.2.3.3.html" target="frame">6.2.3.3 Konfigurasikan Rute IPv6 Statis Next-Hop</a></li>
+<li><a class="page-title" data-ident="6.2.3.4" href="6.2.3.4/6.2.3.4.html" target="frame">6.2.3.4 Konfigurasikan Rute IPv6 Statis yang Terhubung Langsung</a></li>
+<li><a class="page-title" data-ident="6.2.3.5" href="6.2.3.5/6.2.3.5.html" target="frame">6.2.3.5 Konfigurasikan Rute IPv6 Statis yang Ditentukan Sepenuhnya</a></li>
+<li><a class="page-title" data-ident="6.2.3.6" href="6.2.3.6/6.2.3.6.html" target="frame">6.2.3.6 Verifikasi Rute Statis IPv6</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.2.4 Konfigurasikan Rute Default IPv6</span><ul class="pages"><li><a class="page-title" data-ident="6.2.4.1" href="6.2.4.1/6.2.4.1.html" target="frame">6.2.4.1 Rute IPv6 Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.4.2" href="6.2.4.2/6.2.4.2.html" target="frame">6.2.4.2 Konfigurasikan Rute IPv6 Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.4.3" href="6.2.4.3/6.2.4.3.html" target="frame">6.2.4.3 Verifikasi Rute Statis Default</a></li>
+<li><a class="page-title" data-ident="6.2.4.4" href="6.2.4.4/6.2.4.4.html" target="frame">6.2.4.4 Packet Tracer - Mengonfigurasi Rute Statis dan Default IPv6</a></li>
+<li><a class="page-title" data-ident="6.2.4.5" href="6.2.4.5/6.2.4.5.html" target="frame">6.2.4.5 Lab - Mengonfigurasi Rute Statis dan Default IPv6</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.3 Review CIDR dan VLSM</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.3.1 Pengalamatan Berkelas</span><ul class="pages"><li><a class="page-title" data-ident="6.3.1.1" href="6.3.1.1/6.3.1.1.html" target="frame">6.3.1.1 Pengalamatan Jaringan Berkelas</a></li>
+<li><a class="page-title" data-ident="6.3.1.2" href="6.3.1.2/6.3.1.2.html" target="frame">6.3.1.2 Subnet Mask Berkelas</a></li>
+<li><a class="page-title" data-ident="6.3.1.3" href="6.3.1.3/6.3.1.3.html" target="frame">6.3.1.3 Contoh Protokol Perutean Kelas</a></li>
+<li><a class="page-title" data-ident="6.3.1.4" href="6.3.1.4/6.3.1.4.html" target="frame">6.3.1.4 Mengatasi Sampah Secara Berkelas</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.3.2 CIDR</span><ul class="pages"><li><a class="page-title" data-ident="6.3.2.1" href="6.3.2.1/6.3.2.1.html" target="frame">6.3.2.1 Perutean Antar-Domain Tanpa Kelas</a></li>
+<li><a class="page-title" data-ident="6.3.2.2" href="6.3.2.2/6.3.2.2.html" target="frame">6.3.2.2 CIDR dan Peringkasan Rute</a></li>
+<li><a class="page-title" data-ident="6.3.2.3" href="6.3.2.3/6.3.2.3.html" target="frame">6.3.2.3 Contoh CIDR Perutean Statis</a></li>
+<li><a class="page-title" data-ident="6.3.2.4" href="6.3.2.4/6.3.2.4.html" target="frame">6.3.2.4 Contoh Protokol Routing Tanpa Kelas</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.3.3 VLSM</span><ul class="pages"><li><a class="page-title" data-ident="6.3.3.1" href="6.3.3.1/6.3.3.1.html" target="frame">6.3.3.1 Subnet Masking Panjang Tetap</a></li>
+<li><a class="page-title" data-ident="6.3.3.2" href="6.3.3.2/6.3.3.2.html" target="frame">6.3.3.2 Subnet Masking Panjang Variabel</a></li>
+<li><a class="page-title" data-ident="6.3.3.3" href="6.3.3.3/6.3.3.3.html" target="frame">6.3.3.3 Aksi VLSM</a></li>
+<li><a class="page-title" data-ident="6.3.3.4" href="6.3.3.4/6.3.3.4.html" target="frame">6.3.3.4 Subnet Subnet</a></li>
+<li><a class="page-title" data-ident="6.3.3.5" href="6.3.3.5/6.3.3.5.html" target="frame">6.3.3.5 Contoh VLSM</a></li>
+<li><a class="page-title" data-ident="6.3.3.6" href="6.3.3.6/6.3.3.6.html" target="frame">6.3.3.6 Packet Tracer - Merancang dan Mengimplementasikan Skema Pengalamatan VLSM</a></li>
+<li><a class="page-title" data-ident="6.3.3.7" href="6.3.3.7/6.3.3.7.html" target="frame">6.3.3.7 Lab - Merancang dan Mengimplementasikan Pengalamatan dengan VLSM</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.4 Konfigurasi Ringkasan dan Rute Statis Mengambang</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.4.1 Konfigurasikan Rute Ringkasan IPv4</span><ul class="pages"><li><a class="page-title" data-ident="6.4.1.1" href="6.4.1.1/6.4.1.1.html" target="frame">6.4.1.1 Peringkasan Rute</a></li>
+<li><a class="page-title" data-ident="6.4.1.2" href="6.4.1.2/6.4.1.2.html" target="frame">6.4.1.2 Menghitung Ringkasan Rute</a></li>
+<li><a class="page-title" data-ident="6.4.1.3" href="6.4.1.3/6.4.1.3.html" target="frame">6.4.1.3 Ringkasan Contoh Rute Statis</a></li>
+<li><a class="page-title" data-ident="6.4.1.4" href="6.4.1.4/6.4.1.4.html" target="frame">6.4.1.4 Aktivitas - Menentukan Ringkasan Alamat Jaringan dan Awalannya</a></li>
+<li><a class="page-title" data-ident="6.4.1.5" href="6.4.1.5/6.4.1.5.html" target="frame">6.4.1.5 Packet Tracer - Mengonfigurasi Peringkasan Rute IPv4 - Skenario 1</a></li>
+<li><a class="page-title" data-ident="6.4.1.6" href="6.4.1.6/6.4.1.6.html" target="frame">6.4.1.6 Packet Tracer - Mengonfigurasi Peringkasan Rute IPv4 - Skenario 2</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.4.2 Konfigurasikan Rute Ringkasan IPv6</span><ul class="pages"><li><a class="page-title" data-ident="6.4.2.1" href="6.4.2.1/6.4.2.1.html" target="frame">6.4.2.1 Meringkas Alamat Jaringan IPv6</a></li>
+<li><a class="page-title" data-ident="6.4.2.2" href="6.4.2.2/6.4.2.2.html" target="frame">6.4.2.2 Menghitung Alamat Jaringan IPv6</a></li>
+<li><a class="page-title" data-ident="6.4.2.3" href="6.4.2.3/6.4.2.3.html" target="frame">6.4.2.3 Konfigurasikan Alamat Ringkasan IPv6</a></li>
+<li><a class="page-title" data-ident="6.4.2.4" href="6.4.2.4/6.4.2.4.html" target="frame">6.4.2.4 Packet Tracer - Mengonfigurasi Peringkasan Rute IPv6</a></li>
+<li><a class="page-title" data-ident="6.4.2.5" href="6.4.2.5/6.4.2.5.html" target="frame">6.4.2.5 Lab - Menghitung Ringkasan Rute dengan IPv4 dan IPv6</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.4.3 Konfigurasikan Rute Statis Mengambang</span><ul class="pages"><li><a class="page-title" data-ident="6.4.3.1" href="6.4.3.1/6.4.3.1.html" target="frame">6.4.3.1 Rute Statis Terapung</a></li>
+<li><a class="page-title" data-ident="6.4.3.2" href="6.4.3.2/6.4.3.2.html" target="frame">6.4.3.2 Konfigurasikan Rute Statis Mengambang</a></li>
+<li><a class="page-title" data-ident="6.4.3.3" href="6.4.3.3/6.4.3.3.html" target="frame">6.4.3.3 Uji Rute Statis Mengambang</a></li>
+<li><a class="page-title" data-ident="6.4.3.4" href="6.4.3.4/6.4.3.4.html" target="frame">6.4.3.4 Packet Tracer - Mengonfigurasi Rute Statis Mengambang</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.5 Memecahkan Masalah Rute Statis dan Default</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.5.1 Pemrosesan Paket dengan Rute Statis</span><ul class="pages"><li><a class="page-title" data-ident="6.5.1.1" href="6.5.1.1/6.5.1.1.html" target="frame">6.5.1.1 Rute Statis dan Penerusan Paket</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">6.5.2 Memecahkan Masalah Konfigurasi Rute Statis dan Default IPv4</span><ul class="pages"><li><a class="page-title" data-ident="6.5.2.1" href="6.5.2.1/6.5.2.1.html" target="frame">6.5.2.1 Memecahkan Masalah Rute yang Hilang</a></li>
+<li><a class="page-title" data-ident="6.5.2.2" href="6.5.2.2/6.5.2.2.html" target="frame">6.5.2.2 Mengatasi Masalah Konektivitas</a></li>
+<li><a class="page-title" data-ident="6.5.2.3" href="6.5.2.3/6.5.2.3.html" target="frame">6.5.2.3 Packet Tracer - Mengatasi Masalah Rute Statis</a></li>
+<li><a class="page-title" data-ident="6.5.2.4" href="6.5.2.4/6.5.2.4.html" target="frame">6.5.2.4 Packet Tracer - Pemecahan Masalah VLSM dan Peringkasan Rute</a></li>
+<li><a class="page-title" data-ident="6.5.2.5" href="6.5.2.5/6.5.2.5.html" target="frame">6.5.2.5 Lab - Mengatasi Masalah Rute Statis</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">6.6 Ringkasan</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">6.6.1 Ringkasan</span><ul class="pages"><li><a class="page-title" data-ident="6.6.1.1" href="6.6.1.1/6.6.1.1.html" target="frame">6.6.1.1 Aktivitas - Jadikan Statis</a></li>
+<li><a class="page-title" data-ident="6.6.1.2" href="6.6.1.2/6.6.1.2.html" target="frame">6.6.1.2 Tantangan Integrasi Keterampilan Packet Tracer</a></li>
+<li><a class="page-title" data-ident="6.6.1.3" href="6.6.1.3/6.6.1.3.html" target="frame">6.6.1.3 Ringkasan</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<ul class="contextmenu" id="nav-menu">
+<li id="nav-menu-expand">Perluas Semua</li>
+<li id="nav-menu-collapse">Ciutkan Semua</li>
+</ul>
+<div id="content">
+<div id="container"></div>
+<button disabled="" id="prev-btn" title="Sebelumnya" type="button"><span class="icon">Sebelumnya</span></button>
+<input id="jump-box" type="text" value=""/>
+<button disabled="" id="next-btn" title="Berikutnya" type="button"><span class="icon">Berikutnya</span></button>
+<button id="mini-btn" title="Beralih" type="button"><span class="icon">Beralih</span></button>
+</div>
+</body>
+</html>

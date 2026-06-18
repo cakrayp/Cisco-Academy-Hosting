@@ -1,0 +1,155 @@
+<textcomponents>
+
+
+<!-- SCREEN 1 Drag and Drop -->  
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 1: Mengidentifikasi Fitur OSPF</b><br/><br/>Seret fitur OSPF ke kolom di sebelah deskripsi fungsi terkait. Tidak semua fitur akan digunakan. Klik Tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s1_header1'>
+	<text><![CDATA[<b>Fitur OSPF</b>]]></text>
+</component>
+<component id='ID_s1_header2'>
+	<text><![CDATA[<b>Fungsi/Deskripsi</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Menyebarkan perubahan jaringan dengan cepat]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Mendukung VLSM dan CIDR]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Mendukung otentikasi MD5]]></text>
+</component>
+
+<component id='ID_s1_target_header'>
+	<text><![CDATA[<b>Perintah Konfigurasi R1:</b>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[<font color="#393536">Classless</font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[<font color="#393536">Efficient</font>]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[<font color="#393536">Fast Convergence</font>]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[<font color="#393536">Scalable</font>]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[<font color="#393536">Secure</font>]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan fitur OSPF dengan deskripsi fungsinya. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan fitur OSPF dengan deskripsi fungsinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+
+<!--SCREEN 2 Drag and Drop -->  
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Aktivitas – Bagian 2: Mengidentifikasi Terminologi OSPF</b><br/><br/>Seret terminologi OSPF ke kolom di sebelah definisi yang sesuai.]]></text>
+</component>
+
+<component id='ID_s2_header1'>
+	<text><![CDATA[<b>terminologi OSPF</b>]]></text>
+</component>
+<component id='ID_s2_header2'>
+	<text><![CDATA[<b>Definisi</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Membuat tabel tetangga]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Digunakan untuk menghitung biaya SPF]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Membuat tabel topologi]]></text>
+</component>
+
+<component id='ID_s2_target_header'>
+	<text><![CDATA[<b>Perintah Konfigurasi R2:</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font color="#393536">Dijksta's Algorithm</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font color="#393536">Link-State Database</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font color="#393536">Routing Protocol Messages</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font color="#393536">Classless</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[<font color="#393536">Adjacency Database</font>]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan istilah OSPF dengan definisinya.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan istilah OSPF dengan definisinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+</textcomponents>

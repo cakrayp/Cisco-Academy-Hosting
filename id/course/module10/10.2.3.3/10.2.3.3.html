@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.3.3 Memverifikasi DHCPv6 Stateful</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>Server DHCPv6 berstatus</h2>
+</div>
+<div id="content">
+<p>
+<b>Memverifikasi Server DHCPv6 Stateful</b>
+</p>
+<p></p>
+<p>Pada Gambar 1,<span class="cmd"><b>tampilkan kumpulan dhcp ipv6</b></span>perintah memverifikasi nama kumpulan DHCPv6 dan parameternya. Jumlah klien aktif adalah 1, yang mencerminkan klien R3 menerima alamat unicast global IPv6 dari server ini.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan pengikatan ipv6 dhcp</b></span>perintah, seperti yang ditunjukkan pada Gambar 2, menampilkan pengikatan otomatis antara alamat link-lokal klien dan alamat yang diberikan oleh server. FE80::32F7:DFF:FE25:2DE1 adalah alamat link-lokal klien. Dalam contoh ini, ini adalah antarmuka G0/1 dari R3. Alamat ini terikat ke alamat unicast global IPv6, 2001:DB8:CAFE:1:5844:47B2:2603:C171, yang ditetapkan oleh R1, server DHCPv6. Informasi ini dikelola oleh server DHCPv6 stateful dan bukan oleh server DHCPv6 stateless.</p>
+<p></p>
+<p>
+<b>Memverifikasi Klien DHCPv6 Stateful</b>
+</p>
+<p></p>
+<p>Keluaran dari<span class="cmd"><b>tampilkan antarmuka ipv6</b></span>perintah yang ditunjukkan pada Gambar 3 memverifikasi alamat unicast global IPv6 pada klien DHCPv6 R3 yang ditetapkan oleh server DHCPv6. Informasi router default bukan dari server DHCPv6, tetapi ditentukan dengan menggunakan alamat IPv6 sumber dari pesan RA. Meskipun klien tidak menggunakan informasi yang terdapat dalam pesan RA, klien dapat menggunakan alamat IPv6 sumber untuk informasi gateway defaultnya.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 4 untuk mengonfigurasi dan memverifikasi DHCPv6 stateless.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

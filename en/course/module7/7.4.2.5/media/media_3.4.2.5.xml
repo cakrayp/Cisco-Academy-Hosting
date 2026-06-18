@@ -1,0 +1,54 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Flooding the LSP</b>]]></text>
+</component>
+
+  
+<component id="ID_Title_txt01">
+<text><![CDATA[<b>R1 Link State Contents</b>]]></text> 
+</component>
+
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent='-14'><li>R1; Ethernet network; 10.1.0.0/16; Cost 2</li><li>R1 -> R2; Serial point-to-point network; 10.2.0.0/16; Cost 20</li><li>R1 -> R3; Serial point-to-point network; 10.3.0.0/16; Cost 5</li><li>R1 -> R4; Serial point-to-point network; 10.4.0.0/16; Cost 20</li></textformat>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+.
+<component id="ID_txt02">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+<component id="ID_txt03">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Inbound and Outbound ACLs</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Inbound ACL]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Outbound ACL]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[An inbound ACL filters packets coming into a specific interface and before they are routed to the outbound interface.]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[An outbound ACL filters packets after being routed, regardless of the inbound interface.]]></text> 
+  </component>
+</textcomponents>

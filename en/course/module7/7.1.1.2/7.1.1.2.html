@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.1.1.2 Purpose of Dynamic Routing Protocols</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Routing Protocols</h1>
+        <h2>Dynamic Routing Protocol Operation</h2>
+      </div>
+      <div id="content">
+          <p>Routing protocols are used to facilitate the exchange of routing information between routers. A routing protocol is a set of processes, algorithms, and messages that are used to exchange routing information and populate the routing table with the routing protocol's choice of best paths. The purpose of dynamic routing protocols includes:</p>
+          <p>
+            <ul>
+              <li>Discovery of remote networks</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Maintaining up-to-date routing information</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Choosing the best path to destination networks</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ability to find a new best path if the current path is no longer available</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The main components of dynamic routing protocols include:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Data structures -</b> Routing protocols typically use tables or databases for its operations. This information is kept in RAM.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routing protocol messages -</b> Routing protocols use various types of messages to discover neighboring routers, exchange routing information, and other tasks to learn and maintain accurate information about the network. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Algorithm -</b> An algorithm is a finite list of steps used to accomplish a task. Routing protocols use algorithms for facilitating routing information and for best path determination.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The figure highlights the data structures, routing protocol messages, and routing algorithm used by EIGRP. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

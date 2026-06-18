@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Konfigurasikan Parameter Koneksi Klien Putty SSH</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Koneksi SSH Manajemen Jarak Jauh</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Verifikasi Status dan Pengaturan SSH</b>]]></text> 
+  </component>
+
+</textcomponents>

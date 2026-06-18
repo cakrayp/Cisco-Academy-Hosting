@@ -1,0 +1,21 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Konfigurasikan Variabel Lingkungan BOOT</b>]]></text> 
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Memerintah]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Perangkat Penyimpanan]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Jalur ke lokasi di file sistem]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[Nama filenya IOS]]></text> 
+</component>
+</textcomponents>

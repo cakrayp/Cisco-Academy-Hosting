@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.1.2 Operasi SLAAC</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>SLAAC dan DHCPv6</h2>
+</div>
+<div id="content">
+<p>Router harus diaktifkan sebagai router IPv6 sebelum dapat mengirim pesan RA. Untuk mengaktifkan perutean IPv6, router dikonfigurasi dengan perintah berikut:</p>
+<p></p>
+<p>
+<span class="cmd">Router(konfigurasi)#</span>
+<span class="cmd">
+<b>perutean unicast ipv6</b>
+</span>
+</p>
+<p></p>
+<p>1. Dalam contoh topologi yang ditunjukkan pada Gambar 1, PC1 dikonfigurasi untuk mendapatkan pengalamatan IPv6 secara otomatis. Sejak booting, PC1 belum menerima pesan RA, sehingga PC1 mengirimkan pesan RS ke alamat multicast semua router untuk memberi tahu router IPv6 lokal bahwa ia memerlukan RA.</p>
+<p></p>
+<p>2. Seperti yang ditunjukkan pada Gambar 2, R1 menerima pesan RS dan merespons dengan pesan RA. Yang termasuk dalam pesan RA adalah awalan dan panjang awalan jaringan. Pesan RA dikirim ke alamat multicast semua node IPv6 FF02::1, dengan alamat link-local router sebagai alamat sumber IPv6.</p>
+<p></p>
+<p>3. PC1 menerima pesan RA yang berisi awalan dan panjang awalan untuk jaringan lokal. PC1 akan menggunakan informasi ini untuk membuat alamat unicast global IPv6 miliknya sendiri. PC1 sekarang memiliki awalan jaringan 64-bit, tetapi memerlukan ID Antarmuka (IID) 64-bit untuk membuat alamat unicast global.</p>
+<p></p>
+<p>Ada dua cara PC1 dapat membuat IID uniknya sendiri:</p>
+<p>
+<ul>
+<li>
+<b>EUI-64</b>- Menggunakan proses EUI-64, PC1 akan membuat IID menggunakan alamat MAC 48-bitnya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Dihasilkan secara acak</b>- IID 64-bit dapat berupa nomor acak yang dihasilkan oleh sistem operasi klien.</li>
+</ul>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3, PC1 dapat membuat alamat unicast global IPv6 128-bit dengan menggabungkan awalan 64-bit dengan IID 64-bit. PC1 akan menggunakan alamat link-local router sebagai alamat gateway default IPv6.</p>
+<p></p>
+<p>4. Karena SLAAC adalah proses tanpa kewarganegaraan, sebelum PC1 dapat menggunakan alamat IPv6 yang baru dibuat ini, PC1 harus memverifikasi bahwa alamat tersebut unik. Seperti yang ditunjukkan pada Gambar 4, PC1 mengirimkan pesan ICMPv6 Neighbor Solicitation dengan alamatnya sendiri sebagai alamat IPv6 target. Jika tidak ada perangkat lain yang merespons dengan pesan Iklan Tetangga, maka alamat tersebut unik dan dapat digunakan oleh PC1. Jika Iklan Tetangga diterima oleh PC1 maka alamatnya tidak unik dan sistem operasi harus menentukan ID Antarmuka baru yang akan digunakan.</p>
+<p></p>
+<p>Proses ini merupakan bagian dari ICMPv6 Neighbor Discovery dan dikenal sebagai Duplikat Alamat Deteksi (DAD).</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

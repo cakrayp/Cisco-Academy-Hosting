@@ -1,0 +1,14 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Extended ACLs</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[<font color="#ffffff">Extended ACL</font>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Extended ACLs can filter on:</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<textformat blockindent="-14"><ul><li>Source address</li><li>Destination address</li><li>Protocol</li><li>Port numbers</li></ul></textformat>]]></text> 
+	</component>
+</textcomponents>

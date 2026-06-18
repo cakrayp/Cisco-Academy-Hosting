@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Configure PuTTY SSH Client Connection Parameters</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Remote Management SSH Connection</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Verify SSH Status and Settings</b>]]></text> 
+  </component>
+
+</textcomponents>

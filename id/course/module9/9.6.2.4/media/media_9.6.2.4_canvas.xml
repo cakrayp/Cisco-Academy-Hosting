@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+			<element type="TEXT" subType="TABLE" compId="ID_s1_table" x="1" y="95" width="422" height="305" />
+			<element type="IMAGE" src="9_6_2_4.jpg" x="0" y="0" width="470" height="400"/>
+			<element type="TEXT" text="2001:DB8:FEED:1::/64" width="109.1" x="92.25" y="93.7" align="center" bold="1" size="10"/>	
+			<element type="TEXT" text="2001:DB8:FEED:2::/64" width="109.1" x="284.25" y="93.7" align="center" bold="1" size="10"/>
+			<element type="TEXT" text="2001:DB8:CAFE:10::/64" width="115.2" x="2.7" y="208.9" align="center" bold="1" size="10"/>
+			<element type="TEXT" text="2001:DB8:CAFE:11::/64" width="115.2" x="193.85" y="208.9" align="center" bold="1" size="10"/>
+			<element type="TEXT" text="2001:DB8:CAFE:30::/64" width="115.2" x="321.65" y="210.3" align="center" bold="1" size="10" />
+			<element type="TEXT" text="2001:DB8:CAFE:10::10" width="112.4" x="1.7" y="349.45" align="center" bold="1" size="10"/>	
+			<element type="TEXT" text="2001:DB8:CAFE:11::11" width="112.4" x="153.85" y="349.45" align="center" bold="1" size="10"/>
+			<element type="TEXT" text="2001:DB8:CAFE:30::12/64" width="126.3" x="310.65" y="349.45" align="center" bold="1" size="10"/>
+			<element type="TEXT" text="S0/0/0
+:2" width="33.1" x="184.95" y="68.5" align="right" size="10"/>	
+			<element type="TEXT" text="S0/0/1
+:2" width="33.1" x="266.95" y="68.5" align="left" size="10"/>
+			<element type="TEXT" text="S0/0/0
+:1" width="33.1" x="138.9" y="107.5" align="right" size="10"/>
+			<element type="TEXT" text="S0/0/1
+:1" width="33.1" x="302.8" y="107.5" align="left" size="10"/>
+			<element type="TEXT" text="G0/0
+:1" width="25.9" x="114.7" y="165.25" align="center" size="10"/>
+			<element type="TEXT" text="G0/1
+:1" width="25.9" x="170" y="165.25" align="center" size="10"/>	
+			<element type="TEXT" text="G0/0
+:1" width="25.9" x="321.7" y="169.25" align="left" size="10"/>
+		</slide>
+		
+		<slide>	
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title" />		
+			<element type="ROUTER" textId="ID_s2_01" x="3.85" y="114.75" width="433.25" height="137.45"/>
+		</slide>
+			
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s3_title" />
+			<element type="ROUTER" textId="ID_s3_01" x="3.85" y="46.7" width="433.25" height="325.5"/>
+		</slide>	
+			
+</slide>
+	
+	<text id="ID_s1_01"><![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="403">
+<tr>
+<td>R1(config-ipv6-acl)# tolak | izinkan protokol {source-ipv6-prefix/prefix-length | apapun | host sumber-alamat-ipv6} [operator [nomor-port]] {awalan-ipv6 tujuan/panjang awalan | apapun | host tujuan-alamat-ipv6} [operator [nomor port]]</td>
+</tr>
+</table>
+]]></text>
+
+<text id="ID_s2_01"><![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="400"> <tr> <td>R1(konfigurasi)#<strong>daftar akses ipv6 NO-FTP-TO-11</strong></td> </tr> <tr> <td>R1(config-ipv6-acl)#<strong>tolak tcp any 2001:db8:cafe:11::/64 eq ftp</strong></td> </tr> <tr> <td>R1(config-ipv6-acl)#<strong>tolak tcp any 2001:db8:cafe:11::/64 eq ftp-data</strong></td> </tr> <tr> <td>R1(config-ipv6-acl)#<strong>izinkan ipv6 apa saja</strong></td> </tr> <tr> <td>R1(config-ipv6-acl)#<strong>KELUAR</strong></td> </tr> <tr> <td>R1(konfigurasi)#<strong>antarmuka g0/0</strong></td> </tr> <tr> <td>R1(config-if)#<strong>filter lalu lintas ipv6 NO-FTP-TO-11 in</strong></td> </tr> <tr> <td>R1(config-if)#</td> </tr></table>
+]]></text>
+
+<text id="ID_s3_01"><![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="535"> <tr> <td width="385">R3(konfigurasi)#<strong>daftar akses ipv6 AKSES YANG DIBATALKAN</strong></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>komentar Izinkan akses hanya HTTP dan HTTPS ke Jaringan 10</strong></td> </tr> <tr> <td><span class="flooter">R3(config-ipv6-acl)#<strong>izinkan tcp host mana pun 2001:db8:cafe:10::10 eq 80</strong><br/>R3(config-ipv6-acl)#<strong>izinkan tcp host mana pun 2001:db8:cafe:10::10 eq 443</strong></span><strong><span class="connect"></span><span class="num1">1</span></strong></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>komentar Tolak semua lalu lintas lainnya ke Jaringan 10</strong></td> </tr> <tr> <td><span class="flooter">R3(config-ipv6-acl)#<strong>tolak ipv6 apa pun 2001:db8:cafe:10::/64</strong></span><span class="num2">2</span></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>komentar Izinkan akses telnet PC3 ke PC2</strong></td> </tr> <tr> <td><span class="flooter">R3(config-ipv6-acl)#<strong>izin tcp host 2001:DB8:CAFE:30::12 host 2001:DB8:CAFE:11::11 eq 23</strong></span><span class="num2">3</span></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>komentar Tolak akses telnet ke PC2 untuk semua perangkat lainnya</strong></td> </tr> <tr> <td><span class="flooter">R3(config-ipv6-acl)#<strong>tolak tcp host mana pun 2001:db8:cafe:11::11 eq 23</strong></span><span class="num2">4</span></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>komentar Izinkan akses ke yang lainnya</strong></td> </tr> <tr> <td><span class="flooter">R3(config-ipv6-acl)#<strong>izinkan ipv6 apa saja</strong></span><span class="num2">5</span></td> </tr> <tr> <td>R3(config-ipv6-acl)#<strong>KELUAR</strong></td> </tr> <tr> <td>R3(konfigurasi)#<strong>antarmuka g0/0</strong></td> </tr> <tr> <td>R3(config-if)#<strong>filter lalu lintas ipv6 AKSES TERBATAS di</strong><strong><span>6</span></strong></td> </tr> <tr> <td>R3(config-if)#</td> </tr></table>
+]]></text>
+
+
+</data>

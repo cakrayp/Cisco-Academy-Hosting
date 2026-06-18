@@ -1,0 +1,103 @@
+<textcomponents>
+
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Default Keamanan Port</b>]]></text>
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff"><b>Fitur</b></font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff"><b>Pengaturan Bawaan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Keamanan pelabuhan</td>
+<td bgcolor="#FFFFFF">Dinonaktifkan pada port</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Jumlah maksimum alamat MAC aman</td>
+<td bgcolor="#EFF8F7">1</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Modus pelanggaran</td>
+<td bgcolor="#FFFFFF">Penutupan. Port dimatikan ketika jumlah maksimum alamat MAC aman terlampaui.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Pembelajaran alamat yang kaku</td>
+<td bgcolor="#EFF8F7">Dengan disabilitas</td>
+</tr>
+</table>]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Konfigurasikan Keamanan Port Dinamis</b>]]></text>
+</component> 
+
+<component id="ID_s2_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98d3d1" colspan="2"><font class="font11px" color="#1c3635" size="11"><b>Perintah Cisco IOS CLI</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="160">Tentukan antarmuka yang akan dikonfigurasi untuk keamanan port.</td>
+<td bgcolor="#FFFFFF"><font face="courier new">S1(config)# <b>antarmuka fastethernet 0/18</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Atur mode antarmuka untuk mengakses.</td>
+<td bgcolor="#EFF8F7"><font face="courier new">S1(config-if)# <b>akses mode switchport</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Aktifkan keamanan port pada antarmuka.</td>
+<td bgcolor="#FFFFFF"><font face="courier new">S1(config-if)# <b>keamanan port switchport</b></font></td>
+</tr>
+</table>]]></text>
+
+</component>
+
+
+
+<!--Slide 3-->
+<component id="ID_s3_title">
+<text><![CDATA[<b>Konfigurasikan Keamanan Sticky Port</b>]]></text>
+</component>
+
+
+<component id="ID_s3_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98d3d1" colspan="2"><font class="font11px" color="#1c3635" size="11"><b>Perintah Cisco IOS CLI</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td></tr>
+<tr>
+<td bgcolor="#FFFFFF" width="160">Tentukan antarmuka yang akan dikonfigurasi untuk keamanan port.</td>
+<td bgcolor="#FFFFFF"><font face="Courier New">S1(config)# <b>antarmuka fastethernet 0/19</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Atur mode antarmuka untuk mengakses.</td>
+<td bgcolor="#EFF8F7"><font face="courier new">S1(config-if)# <b>akses mode switchport</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Aktifkan keamanan port pada antarmuka.</td>
+<td bgcolor="#FFFFFF"><font face="courier new">S1(config-if)# <b>keamanan port switchport</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Tetapkan jumlah maksimum alamat aman yang diperbolehkan pada port.</td>
+<td bgcolor="#EFF8F7"><font face="courier new">S1(config-if)# <b>keamanan port switchport maksimum 50</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Aktifkan pembelajaran yang melekat.</td>
+<td bgcolor="#FFFFFF"><font face="courier new">S1(config-if)# <b>alamat mac keamanan port switchport lengket</b></font></td>
+</tr></table>]]></text>
+</component> 
+
+</textcomponents>

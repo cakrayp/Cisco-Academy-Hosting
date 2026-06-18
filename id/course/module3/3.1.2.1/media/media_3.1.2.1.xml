@@ -1,0 +1,38 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[<b>Batang VLAN</b>]]></text>
+   </component>
+
+   
+<component id="ID_txt01">
+   <text><![CDATA[F0/1-5 adalah antarmuka trunk 802.1Q dengan VLAN asli 99.<br/>F0/11-17 ada di VLAN 10.<br/>F0/18-24 ada di VLAN 20.<br/>F0/6-10 ada di VLAN 30.]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[VLAN 10 Fakultas/Staf - 172.17.10.0/24<br/>VLAN 20 Siswa - 172.17.20.0/24<br/>VLAN 30 Tamu - 172.17.30.0/24<br/>Manajemen VLAN 99 dan Asli - 172.17.99.0/24]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[Batang VLAN dikonfigurasi untuk mendukung: VLAN 10, 20, 30, dan VLAN 99.]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Tamu<br/>VLAN 30 -<br/>172.17.30.26</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Tamu<br/>VLAN 30 -<br/>172.17.30.23</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Murid<br/>VLAN 20 -<br/>172.17.20.25</b>]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[<b>Murid<br/>VLAN 20 -<br/>172.17.20.22</b>]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[<b>Fakultas<br/>VLAN 10 -<br/>172.17.10.24</b>]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[<b>Fakultas<br/>VLAN 10 -<br/>172.17.10.21</b>]]></text>
+   </component>
+<component id="ID_txt10">
+   <text><![CDATA[Gerbang<br/>VLAN 30<br/>172.17.30.1]]></text>
+   </component>   
+</textcomponents>
+

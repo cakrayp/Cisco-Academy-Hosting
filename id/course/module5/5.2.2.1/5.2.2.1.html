@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.2.2.1 Kesalahan pada Alamat IP dan Subnet Mask</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Perutean Antar-VLAN</h1>
+<h2>Masalah Pengalamatan IP</h2>
+</div>
+<div id="content">
+<p>VLAN berhubungan dengan subnet unik di jaringan. Agar perutean antar-VLAN dapat beroperasi, router harus terhubung ke semua VLAN, baik melalui antarmuka fisik terpisah atau dengan subantarmuka. Setiap antarmuka, atau subantarmuka, harus diberi alamat IP yang sesuai dengan subnet yang terhubung. Hal ini memungkinkan perangkat di VLAN untuk berkomunikasi dengan antarmuka router dan memungkinkan perutean lalu lintas ke VLAN lain yang terhubung ke router.</p>
+<p></p>
+<p>Berikut ini adalah beberapa kesalahan pengalamatan IP yang umum:</p>
+<p>
+<ul>
+<li>Seperti yang ditunjukkan pada Gambar 1, router R1 telah dikonfigurasi dengan alamat IP yang salah pada antarmuka G0/0. Hal ini mencegah PC1 untuk dapat berkomunikasi dengan router R1 di VLAN 10. Untuk memperbaiki masalah ini, tetapkan alamat IP yang benar ke antarmuka router R1 G0/0 menggunakan<span class="cmd"><b>alamat ip 172.17.10.1 255.255.255.0</b></span>memerintah. Setelah antarmuka router diberi alamat IP yang benar, PC1 dapat menggunakan antarmuka router sebagai gateway default untuk mengakses VLAN lain.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pada Gambar 2, PC1 telah dikonfigurasi dengan alamat IP yang salah untuk subnet yang terkait dengan VLAN 10. Hal ini mencegah PC1 untuk dapat berkomunikasi dengan router R1 di VLAN 10. Untuk memperbaiki masalah ini, tetapkan alamat IP yang benar ke PC1. Tergantung pada jenis PC yang digunakan, detail konfigurasinya mungkin berbeda.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pada Gambar 3, PC1 telah dikonfigurasi dengan subnet mask yang salah. Menurut subnet mask yang dikonfigurasi untuk PC1, PC1 berada di jaringan 172.17.0.0. Hasilnya PC1 menghitung bahwa PC3 dengan alamat IP 172.17.30.23 berada pada subnet yang sama dengan PC1. PC1 tidak meneruskan lalu lintas yang ditujukan untuk PC3 ke router R1 antarmuka G0/0; oleh karena itu, lalu lintas tidak pernah mencapai PC3. Untuk memperbaiki masalah ini, ubah subnet mask di PC1 menjadi 255.255.255.0. Tergantung pada jenis PC yang digunakan, detail konfigurasinya mungkin berbeda.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

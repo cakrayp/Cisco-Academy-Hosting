@@ -1,0 +1,72 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Packet Forwarding Decision Process</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Packet arrives on interface.]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Router searches <br/>the routing table for a match.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Does the destination IP address match the<br/>subnet of a …]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Directly Connected Interface?]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Check ARP cache (ARP if necessary) and forward to host on local subnet.]]></text> 
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Remote network?]]></text> 
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Encapsulate the frame and forward out of the exit interface to the next hop.]]></text> 
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[Is there a gateway of last resort available?]]></text> 
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[Encapsulate the frame and forward out of the exit interface to the next hop.]]></text> 
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[Drop the packet and send an ICMP message back to the source IP address.]]></text> 
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_txt14">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_txt15">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_txt16">
+<text><![CDATA[No]]></text> 
+</component>
+
+
+</textcomponents>

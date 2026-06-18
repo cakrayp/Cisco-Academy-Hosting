@@ -1,0 +1,235 @@
+<textcomponents>  
+
+<component id="ID_title">
+	<text><![CDATA[<b>3.1.4 IA - D Mengklasifikasikan Protokol Routing Dinamis</b>]]></text>
+</component>
+
+<!-- slide01 content-->
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Aktivitas - Bagian 1: Mengklasifikasikan Protokol Perutean Dinamis</b><br/>Seret protokol yang sesuai ke dalam bidang protokol perutean vektor jarak yang disediakan.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Kategori Protokol Perutean Dinamis]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+	<text><![CDATA[Protokol Gerbang Interior (IGP)]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+	<text><![CDATA[Protokol Perutean vektor jarak]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[IGRP]]></text>
+</component>
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[BGP]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[RIPv2]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[ADALAH]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[RIPv1]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memilih protokol perutean vektor jarak. Klik Bagian 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memilih protokol perutean vektor jarak. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!-- slide02 content-->
+
+
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Aktivitas - Bagian 2: Mengklasifikasikan Protokol Perutean Dinamis</b><br/>Seret protokol yang sesuai ke dalam bidang protokol perutean link-state yang tersedia.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+	<text><![CDATA[Kategori Protokol Perutean Dinamis]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+	<text><![CDATA[Protokol Gerbang Interior (IGP)]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+	<text><![CDATA[Protokol Perutean Link-State]]></text>
+</component>
+
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[RIPv1]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[ADALAH]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[RIPv2]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[BGP]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[IGRP]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memilih protokol perutean link-state. Klik Bagian 3 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memilih protokol perutean link-state. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+<!-- slide03 content-->
+
+
+
+<component id="ID_s3_inst">
+	<text><![CDATA[<b>Aktivitas - Bagian 3: Mengklasifikasikan Protokol Perutean Dinamis</b><br/>Seret protokol yang sesuai ke dalam bidang protokol perutean vektor jalur yang disediakan.]]></text>
+</component>
+
+<component id="ID_s3_txt01">
+	<text><![CDATA[Kategori Protokol Perutean Dinamis]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+	<text><![CDATA[Protokol Gerbang Eksterior (EGP)]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+	<text><![CDATA[Protokol Perutean Jalur-Vektor]]></text>
+</component>
+
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[RIPv1]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+<component id='ID_s3_drag03'>
+	<text><![CDATA[ADALAH]]></text>
+</component>
+
+<component id='ID_s3_drag04'>
+	<text><![CDATA[RIPv2]]></text>
+</component>
+
+<component id='ID_s3_drag05'>
+	<text><![CDATA[BGP]]></text>
+</component>
+
+<component id='ID_s3_drag06'>
+	<text><![CDATA[IGRP]]></text>
+</component>
+
+<component id='ID_s3_drag07'>
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memilih protokol perutean jalur-vektor.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memilih protokol perutean jalur-vektor. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,140 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activity Part 1: Summarize Networks and Prefixes</b><br/><br/>Read the scenarios and then compute the summary network address and prefix for that particular scenario.<br/><br/><b>Scenario 1</b> – R1 needs to reach all networks shown. Summarize the networks and prefixes into one summary route. After you have computed the summary route and prefix, look for it in the bank of summary routes provided. Drag the correct answer to the field in the topology. Select Button 2 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s1_target01'>
+	<text><![CDATA[<font color="#393536">10.0.0.0/27</font>]]></text>
+</component>
+
+<component id='ID_s1_target02'>
+	<text><![CDATA[<font color="#393536">10.0.0.0/24</font>]]></text>
+</component>
+
+<component id='ID_s1_target03'>
+	<text><![CDATA[<font color="#393536">10.0.0.0/11</font>]]></text>
+</component>
+
+<component id='ID_s1_target04'>
+	<text><![CDATA[<font color="#393536">10.0.0.0/14</font>]]></text>
+</component>
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully summarized the networks and prefixes into one summary route. Select Button 2 to continue this activity.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully summarized the networks and prefixes into one summary route. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!--Slide 2-->
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activity – Part 2: Summarize Networks and Prefixes</b><br/><br/><b>Scenario 2</b> – R1 needs to reach all networks shown. Summarize the networks and prefixes into one summary route.<br/><br/>After you have computed the summary route and prefix, look for it in the bank of summary routes provided. Drag the correct answer to the field in the topology. Select Button 3 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s2_traget01'>
+	<text><![CDATA[<font color="#393536">172.16.0.0/12</font>]]></text>
+</component>
+
+<component id='ID_s2_traget02'>
+	<text><![CDATA[<font color="#393536">172.0.0.0/20</font>]]></text>
+</component>
+
+<component id='ID_s2_traget03'>
+	<text><![CDATA[<font color="#393536">172.16.0.0/20</font>]]></text>
+</component>
+
+<component id='ID_s2_traget04'>
+	<text><![CDATA[<font color="#393536">172.16.0.0/19</font>]]></text>
+</component>
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully summarized the networks and prefixes into one summary route. Select Button 3 to continue this activity.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully summarized the networks and prefixes into one summary route. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!--Slide 3-->
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Activity – Part 3: Summarize Networks and Prefixes</b><br/><br/><b>Scenario 3</b> – R1 needs to reach the networks shown. Summarize the networks and prefixes into one summary route.<br/><br/>After you have computed the summary route and prefix, look for it in the bank of summary routes provided. Drag the correct answer to the field in the topology.
+]]></text>
+</component>
+
+<component id='ID_s3_traget01'>
+	<text><![CDATA[<font color="#393536">192.168.1.0/30</font>]]></text>
+</component>
+
+<component id='ID_s3_traget02'>
+	<text><![CDATA[<font color="#393536">192.168.0.0/30</font>]]></text>
+</component>
+
+<component id='ID_s3_traget03'>
+	<text><![CDATA[<font color="#393536">192.168.0.0/17</font>]]></text>
+</component>
+
+<component id='ID_s3_traget04'>
+	<text><![CDATA[<font color="#393536">192.168.1.0/17</font>]]></text>
+</component>
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[You have successfully summarized the networks and prefixes into one summary route.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully summarized the networks and prefixes into one summary route. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+</textcomponents>

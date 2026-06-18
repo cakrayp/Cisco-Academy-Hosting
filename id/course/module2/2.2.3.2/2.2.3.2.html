@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.3.2 Alat dan Pengujian Keamanan Jaringan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Praktik Terbaik Keamanan</h2>
+</div>
+<div id="content">
+<p>Alat keamanan jaringan membantu administrator jaringan menguji kelemahan jaringan. Beberapa alat memungkinkan administrator mengambil peran sebagai penyerang. Dengan menggunakan salah satu alat ini, administrator dapat melancarkan serangan terhadap jaringan dan mengaudit hasilnya untuk menentukan cara menyesuaikan kebijakan keamanan untuk memitigasi jenis serangan tersebut. Audit keamanan dan pengujian penetrasi adalah dua fungsi dasar yang dilakukan alat keamanan jaringan.</p>
+<p></p>
+<p>Teknik pengujian keamanan jaringan dapat dimulai secara manual oleh administrator. Tes lainnya sangat otomatis. Terlepas dari jenis pengujiannya, staf yang menyiapkan dan melakukan pengujian keamanan harus memiliki pengetahuan keamanan dan jaringan yang luas. Ini mencakup keahlian di bidang-bidang berikut:</p>
+<p>
+<ul>
+<li>Keamanan jaringan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Firewall</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sistem pencegahan intrusi</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Sistem operasi</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pemrograman</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Protokol jaringan (seperti TCP/IP)</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

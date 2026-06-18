@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.1.1.2 Benefits of VLANs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Segmentation</h1>
+        <h2>Overview of VLANs</h2>
+      </div>
+      <div id="content">
+          <p>User productivity and network adaptability are important for business growth and success. VLANs make it easier to design a network to support the goals of an organization. The primary benefits of using VLANs are as follows:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Security</b> - Groups that have sensitive data are separated from the rest of the network, decreasing the chances of confidential information breaches. As shown in the figure, faculty computers are on VLAN 10 and completely separated from student and guest data traffic.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Cost reduction</b> - Cost savings result from reduced need for expensive network upgrades and more efficient use of existing bandwidth and uplinks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Better performance</b> - Dividing flat Layer 2 networks into multiple logical workgroups (broadcast domains) reduces unnecessary traffic on the network and boosts performance. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Shrink broadcast domains</b> - Dividing a network into VLANs reduces the number of devices in the broadcast domain. As shown in the figure, there are six computers on this network but there are three broadcast domains: Faculty, Student, and Guest. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Improved IT staff efficiency</b> - VLANs make it easier to manage the network because users with similar network requirements share the same VLAN. When a new switch is provisioned, all the policies and procedures already configured for the particular VLAN are implemented when the ports are assigned. It is also easy for the IT staff to identify the function of a VLAN by giving it an appropriate name. In the figure, for easy identification VLAN 10 has been named “Faculty”, VLAN 20 is named “Student”, and VLAN 30 “Guest.” </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Simpler project and application management</b> - VLANs aggregate users and network devices to support business or geographic requirements. Having separate functions makes managing a project or working with a specialized application easier; an example of such an application is an e-learning development platform for faculty.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Each VLAN in a switched network corresponds to an IP network; therefore, VLAN design must take into consideration the implementation of a hierarchical network-addressing scheme. Hierarchical network addressing means that IP network numbers are applied to network segments or VLANs in an orderly fashion that takes the network as a whole into consideration. Blocks of contiguous network addresses are reserved for and configured on devices in a specific area of the network, as shown in the figure. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

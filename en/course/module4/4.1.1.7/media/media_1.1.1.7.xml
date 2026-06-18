@@ -1,0 +1,212 @@
+<textcomponents>
+
+<!-- Slide 1 -->
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity – Part 1: Identify Router Memory Types</b><br><br>Indicate your knowledge of router memory. Drag the memory functions to the appropriate field to match the memory types.<br><br>Check the accuracy of your answers by clicking on the Check button. If your answers are correct, click Button 2 to continue this activity. If your answers are incorrect, please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_header01'>
+	<text><![CDATA[<b>Memory Type</b>]]></text>
+</component>
+
+<component id='ID_s1_header02'>
+	<text><![CDATA[<b>Memory Functions</b>]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[NVRAM]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Flash]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[ROM]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[RAM]]></text>
+</component>
+
+<!-- Drag and Drop -->
+<component id='ID_mf1_DS'>
+	<text><![CDATA[<font color="#393536">Startup configuration</font>]]></text>
+</component>
+
+<component id='ID_mf2_DS'>
+	<text><![CDATA[<font color="#393536">IOS and system files</font>]]></text>
+</component>
+
+<component id='ID_mf3_DS'>
+	<text><![CDATA[<font color="#393536">Diagnostics and boot instructions</font>]]></text>
+</component>
+
+<component id='ID_mf4_DS'>
+	<text><![CDATA[<font color="#393536">Running configuration</font>]]></text>
+</component>
+
+<component id='ID_mf5_DS'>
+	<text><![CDATA[<font color="#393536">Virus, worm or Trojan horse</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each memory function to its type. Click Button 2 to continue.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each memory function to its type. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_check'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_reset'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+<!-- Slide 2 -->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity – Part 2: Identify Router Components</b><br><br>Identify the ports/slots on this Cisco 1941 Series router. Match the port or slot name to the letter that corresponds to the appropriate back panel location. Drag the location letters to the fields provided.]]></text>
+</component>
+
+<component id='ID_s2_circ01'>
+	<text><![CDATA[<b>A</b>]]></text>
+</component>
+
+<component id='ID_s2_circ02'>
+	<text><![CDATA[<b>B</b>]]></text>
+</component>
+
+<component id='ID_s2_circ03'>
+	<text><![CDATA[<b>C</b>]]></text>
+</component>
+
+<component id='ID_s2_circ04'>
+	<text><![CDATA[<b>D</b>]]></text>
+</component>
+
+<component id='ID_s2_circ05'>
+	<text><![CDATA[<b>E</b>]]></text>
+</component>
+
+<component id='ID_s2_circ06'>
+	<text><![CDATA[<b>F</b>]]></text>
+</component>
+
+<component id='ID_s2_circ07'>
+	<text><![CDATA[<b>G</b>]]></text>
+</component>
+
+<component id='ID_s2_header01'>
+	<text><![CDATA[<b>Back Panel Port or Slot Name</b>]]></text>
+</component>
+
+<component id='ID_s2_header02'>
+	<text><![CDATA[<b>Back Panel Location</b>]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[LAN Interfaces]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Console USB Mini-B Port]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[AUX Port]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[4 GB Flash Card Slots]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[Double-Wide eHWIC Slots]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[Console RJ-45 Port]]></text>
+</component>
+
+<component id='ID_s2_txt07'>
+	<text><![CDATA[eHWIC 0 Slot]]></text>
+</component>
+
+<!-- Drag and Drop -->
+
+<component id='ID_sTwo1_DS'>
+
+	<text><![CDATA[A]]></text>
+</component>
+<component id='ID_sTwo2_DS'>
+
+	<text><![CDATA[B]]></text>
+</component>
+
+<component id='ID_sTwo3_DS'>
+
+	<text><![CDATA[C]]></text>
+</component>
+
+<component id='ID_sTwo4_DS'>
+
+	<text><![CDATA[D]]></text>
+</component>
+
+<component id='ID_sTwo5_DS'>
+
+	<text><![CDATA[E]]></text>
+</component>
+
+<component id='ID_sTwo6_DS'>
+
+	<text><![CDATA[F]]></text>
+</component>
+
+<component id='ID_sTwo7_DS'>
+
+	<text><![CDATA[G]]></text>
+
+</component>
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each back panel port or slot name to its location.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each back panel port or slot name to its location. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+
+</textcomponents>

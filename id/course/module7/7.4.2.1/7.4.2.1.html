@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.4.2.1 Proses Perutean Link-State</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.4.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Dinamis Link-State</h1>
+<h2>Pembaruan Link-State</h2>
+</div>
+<div id="content">
+<p>Jadi sebenarnya bagaimana cara kerja protokol perutean link-state? Dengan protokol routing link-state, link adalah antarmuka pada router. Informasi tentang status tautan tersebut dikenal sebagai status tautan.</p>
+<p></p>
+<p>Periksa topologi pada gambar. Semua router dalam topologi akan menyelesaikan proses routing link-state generik berikut untuk mencapai keadaan konvergensi:</p>
+<p></p>
+<p>1. Setiap router mempelajari linknya sendiri dan jaringannya yang terhubung langsung. Hal ini dilakukan dengan mendeteksi bahwa suatu antarmuka berada dalam keadaan aktif.</p>
+<p>2. Setiap router bertanggung jawab untuk bertemu tetangganya di jaringan yang terhubung langsung. Router link state melakukan ini dengan menukar paket Hello dengan router link-state lainnya pada jaringan yang terhubung langsung.</p>
+<p>3. Setiap router membangun Link-State Packet (LSP) yang berisi status setiap link yang terhubung langsung. Hal ini dilakukan dengan mencatat semua informasi terkait tentang masing-masing tetangga, termasuk ID tetangga, jenis link, dan bandwidth.</p>
+<p>4. Setiap router membanjiri LSP ke semua tetangganya. Tetangga tersebut menyimpan semua LSP yang diterima dalam database. Mereka kemudian membanjiri LSP ke tetangganya sampai semua router di area tersebut menerima LSP. Setiap router menyimpan salinan setiap LSP yang diterima dari tetangganya di database lokal.</p>
+<p>5. Setiap router menggunakan database untuk membuat peta topologi lengkap dan menghitung jalur terbaik ke setiap jaringan tujuan. Ibarat memiliki peta jalan, router kini memiliki peta lengkap semua tujuan dalam topologi dan rute untuk mencapainya. Algoritma SPF digunakan untuk membuat peta topologi dan menentukan jalur terbaik ke setiap jaringan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Proses ini sama untuk OSPF untuk IPv4 dan OSPF untuk IPv6. Contoh di bagian ini akan mengacu pada OSPF untuk IPv4.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

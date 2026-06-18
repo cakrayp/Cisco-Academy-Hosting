@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.3.2.2 Contoh: Mengatasi Masalah Peralihan Lapisan 3</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Peralihan Lapisan 3</h1>
+<h2>Memecahkan Masalah Peralihan Lapisan 3</h2>
+</div>
+<div id="content">
+<p>Perusahaan XYZ menambahkan lantai baru, lantai 5, ke jaringan. Berdasarkan hal tersebut, persyaratan saat ini adalah memastikan pengguna di lantai 5 dapat berkomunikasi dengan pengguna di lantai lain. Saat ini, pengguna di lantai 5 tidak dapat berkomunikasi dengan pengguna di lantai lain. Berikut ini adalah rencana implementasi pemasangan VLAN baru bagi pengguna di lantai 5 dan memastikan VLAN tersebut routing ke VLAN lain.</p>
+<p></p>
+<p>Ada empat langkah untuk mengimplementasikan VLAN baru:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Buat VLAN 500 baru pada saklar lantai lima dan pada saklar distribusi. Beri nama VLAN ini.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Identifikasi port yang diperlukan untuk pengguna dan switch. Atur<span class="cmd"><b>vlan akses switchport</b></span>perintah ke<span class="cmd"><b> 500 </b></span>dan memastikan bahwa trunk antara switch distribusi dikonfigurasi dengan benar dan VLAN 500 diperbolehkan di trunk.</p>
+<p></p>
+<p>
+<b>Langkah 3.</b>Buat antarmuka SVI pada sakelar distribusi dan pastikan alamat IP ditetapkan.</p>
+<p></p>
+<p>
+<b>Langkah 4.</b>Verifikasi konektivitas.</p>
+<p></p>
+<p>Rencana pemecahan masalah memeriksa hal-hal berikut:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Verifikasi bahwa semua VLAN telah dibuat:</p>
+<p>
+<ul>
+<li>Apakah VLAN dibuat di semua switch?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Verifikasi dengan<span class="cmd"><b>tunjukkan vlan</b></span>memerintah.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Pastikan port berada di VLAN yang benar dan trunking berfungsi seperti yang diharapkan:</p>
+<p>
+<ul>
+<li>Apakah semua port akses memiliki<span class="cmd"><b>akses switchport VLAN 500</b></span>perintah ditambahkan?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah ada port lain yang seharusnya ditambahkan? Jika ya, lakukan perubahan tersebut.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah port ini sebelumnya digunakan? Jika ya, pastikan tidak ada perintah tambahan yang diaktifkan pada port tersebut yang dapat menyebabkan konflik. Jika tidak, apakah portnya diaktifkan?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah ada port pengguna yang disetel ke trunk? Jika ya, terbitkan<span class="cmd"><b>akses mode switchport</b></span>memerintah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah port trunk disetel ke mode trunk?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah pemangkasan VLAN secara manual dikonfigurasi? Jika demikian, pastikan bahwa trunk yang diperlukan untuk membawa lalu lintas VLAN 500 memiliki VLAN dalam pernyataan yang diizinkan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Langkah 3.</b>Verifikasi konfigurasi SVI (jika perlu):</p>
+<p>
+<ul>
+<li>Apakah SVI sudah dibuat dengan alamat IP dan subnet mask yang benar?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah ini diaktifkan?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah perutean diaktifkan?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah SVI ini ditambahkan dalam protokol routing?</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Langkah 4.</b>Verifikasi konektivitas:</p>
+<p>
+<ul>
+<li>Apakah semua link antar switch berada pada mode trunk?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah VLAN 500 diperbolehkan di semua trunk?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah spanning-tree memblokir salah satu tautan yang berpartisipasi?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah portnya diaktifkan?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Apakah host telah menetapkan gateway default yang tepat?</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pastikan rute default atau beberapa protokol perutean diaktifkan jika perlu.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

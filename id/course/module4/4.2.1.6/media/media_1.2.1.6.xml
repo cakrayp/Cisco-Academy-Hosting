@@ -1,0 +1,210 @@
+<textcomponents>
+
+
+
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas</b><br/>Dalam aktivitas ini, Anda diberikan bingkai kosong untuk dibuat sesuai skenario. Tentukan alamat MAC tujuan dan sumber, serta IP sumber dan alamat IP tujuan yang akan membangun frame dengan benar seperti yang ditentukan. Masukkan jawaban Anda dengan menyeret alamat MAC dan IP ke kolom yang sesuai.<br/><br/><b>Skenario 1</b>– PC1 mengirim data ke PC2 – semua perangkat dilengkapi ARP. Dalam frame ini, tunjukkan awal lalu lintas data untuk pembuatan frame. Semua jawaban tidak akan digunakan.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Bingkai Tautan Data Lapisan 2]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Paket Data Lapisan 3]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[<b>Tujuan<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[<b>Sumber<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Jenis<br/>0x800]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[<b>Sumber IP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[<b>Tujuan<br/>IP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[Bidang IP]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Data]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[Cuplikan]]></text>
+</component>
+
+<component id="ID_s1_drag01">
+<text><![CDATA[192.168.4.10]]></text>
+</component>
+
+<component id="ID_s1_drag02">
+<text><![CDATA[192.168.1.10]]></text>
+</component>
+
+<component id="ID_s1_drag03">
+<text><![CDATA[192.168.1.20]]></text>
+</component>
+
+<component id="ID_s1_drag04">
+<text><![CDATA[192.168.1.1]]></text>
+</component>
+
+<component id="ID_s1_drag05">
+<text><![CDATA[0B:02]]></text>
+</component>
+
+<component id="ID_s1_drag06">
+<text><![CDATA[0C:03]]></text>
+</component>
+
+<component id="ID_s1_drag07">
+<text><![CDATA[0A:10]]></text>
+</component>
+
+<component id="ID_s1_drag08">
+<text><![CDATA[0F:08]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menentukan alamat MAC dan IP sumber dan tujuan untuk membangun frame berdasarkan topologi. Klik tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menentukan alamat MAC dan IP sumber dan tujuan untuk membangun frame berdasarkan topologi. Klik tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Aktivitas</b><br/>Dalam aktivitas ini, Anda diberikan bingkai kosong untuk dibuat sesuai skenario. Tentukan alamat MAC tujuan dan sumber, serta IP sumber dan alamat IP tujuan yang akan membangun frame dengan benar seperti yang ditentukan. Masukkan jawaban Anda dengan menyeret alamat MAC dan IP ke kolom yang sesuai.<br/><br/><b>Skenario 2</b>– R2 telah menerima frame dari PC1 dan sekarang perlu mengirimkannya ke PC2. Semua perangkat masih ARP lengkap. Dalam frame ini, buat frame untuk mentransfer data dari R2 ke PC2. Semua jawaban tidak akan digunakan.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Bingkai Tautan Data Lapisan 2]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Paket Data Lapisan 3]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[<b>Tujuan<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[<b>Sumber<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Jenis<br/>0x800]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[<b>Sumber IP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[<b>Tujuan<br/>IP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[Bidang IP]]></text>
+</component>
+
+<component id="ID_s2_txt09">
+<text><![CDATA[Data]]></text>
+</component>
+
+<component id="ID_s2_txt10">
+<text><![CDATA[Cuplikan]]></text>
+</component>
+
+<component id="ID_s2_drag01">
+<text><![CDATA[192.168.4.10]]></text>
+</component>
+
+<component id="ID_s2_drag02">
+<text><![CDATA[192.168.1.10]]></text>
+</component>
+
+<component id="ID_s2_drag03">
+<text><![CDATA[192.168.4.20]]></text>
+</component>
+
+<component id="ID_s2_drag04">
+<text><![CDATA[192.168.3.2]]></text>
+</component>
+
+<component id="ID_s2_drag05">
+<text><![CDATA[0E:07]]></text>
+</component>
+
+<component id="ID_s2_drag06">
+<text><![CDATA[0D:05]]></text>
+</component>
+
+<component id="ID_s2_drag07">
+<text><![CDATA[0A:10]]></text>
+</component>
+
+<component id="ID_s2_drag08">
+<text><![CDATA[0F:08]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menentukan alamat MAC dan IP sumber dan tujuan untuk membangun frame berdasarkan topologi. Klik tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menentukan alamat MAC dan IP sumber dan tujuan untuk membangun frame berdasarkan topologi. Klik tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+
+</textcomponents>

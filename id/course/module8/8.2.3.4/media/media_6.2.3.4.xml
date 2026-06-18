@@ -1,0 +1,24 @@
+<textcomponents>
+<!--screen 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Topologi Referensi OSPF</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Daerah0</b>]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Internet]]></text>
+</component>
+<!--screen 2-->
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Memverifikasi Pengaturan Bandwidth Default R1 Serial 0/0/0</b>]]></text> 
+</component>
+<!--screen 3-->
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Pengaturan Seri R1 0/0/1</b>]]></text> 
+</component>
+<!--screen 4-->
+<component id="ID_s4_title">
+  <text><![CDATA[<b>Pengaturan Seri R1 0/0/1</b>]]></text> 
+</component>
+</textcomponents>

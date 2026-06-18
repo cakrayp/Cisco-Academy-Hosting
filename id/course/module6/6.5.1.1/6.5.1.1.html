@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.5.1.1 Rute Statis dan Penerusan Paket</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.5.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Rute Statis dan Default</h1>
+<h2>Pemrosesan Paket dengan Rute Statis</h2>
+</div>
+<div id="content">
+<p>Contoh berikut menjelaskan proses penerusan paket dengan rute statis.</p>
+<p></p>
+<p>Pada gambar, klik tombol Play untuk melihat animasi dimana PC1 mengirimkan paket ke PC3:</p>
+<p>1. Paket tiba di antarmuka GigabitEthernet 0/0 R1.</p>
+<p>2. R1 tidak memiliki rute khusus menuju jaringan tujuan, 192.168.2.0/24; oleh karena itu, R1 menggunakan rute statis default.</p>
+<p>3. R1 merangkum paket dalam frame baru. Karena link ke R2 adalah link point-to-point, R1 menambahkan alamat "semua 1" untuk alamat tujuan Layer 2.</p>
+<p>4. Frame diteruskan keluar dari antarmuka Serial 0/0/0. Paket tiba pada antarmuka Serial 0/0/0 di R2.</p>
+<p>5. R2 mendeenkapsulasi frame dan mencari rute ke tujuan. R2 memiliki rute statis ke 192.168.2.0/24 dari antarmuka Serial 0/0/1.</p>
+<p>6. R2 merangkum paket dalam frame baru. Karena link ke R3 adalah link point-to-point, R2 menambahkan alamat "semua 1" untuk alamat tujuan Layer 2.</p>
+<p>7. Frame diteruskan keluar dari antarmuka Serial 0/0/1. Paket tiba pada antarmuka Serial 0/0/1 di R3.</p>
+<p>8. R3 mendeenkapsulasi frame dan mencari rute ke tujuan. R3 memiliki rute yang terhubung ke 192.168.2.0/24 dari antarmuka GigabitEthernet 0/0.</p>
+<p>9. R3 mencari entri tabel ARP untuk 192.168.2.10 untuk menemukan alamat Kontrol Akses Media (MAC) Lapisan 2 untuk PC3. Jika tidak ada entri, R3 mengirimkan permintaan Address Resolusi Protocol (ARP) dari antarmuka GigabitEthernet 0/0, dan PC3 merespons dengan balasan ARP, yang mencakup alamat MAC PC3.</p>
+<p>10. R3 merangkum paket dalam bingkai baru dengan alamat MAC antarmuka GigabitEthernet 0/0 sebagai alamat Layer 2 sumber dan alamat MAC PC3 sebagai alamat MAC tujuan.</p>
+<p>11. Frame diteruskan keluar dari antarmuka GigabitEthernet 0/0. Paket tiba di antarmuka kartu antarmuka jaringan (NIC) PC3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

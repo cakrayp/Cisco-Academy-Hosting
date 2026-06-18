@@ -1,0 +1,14 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Link-State Routing Process</b>]]></text>
+	</component>
+	
+	<component id="ID_bodyTitle01">
+		<text><![CDATA[<b>Link-State Routing Process</b>]]></text> 
+	</component>
+	
+	<component id="ID_bodyText01">
+		<text><![CDATA[<textformat blockindent="-14"><li>Each router learns about each of its own directly connected networks.</li><li>Each router is responsible for "saying hello" to its neighbors on directly connected networks.</li><li>Each router builds a Link-State Packet (LSP) containing the state of each directly connected link.</li><li>Each router floods the LSP to all neighbors who then store all LSP's received in a database.</li><li>Each router uses the database to construct a complete map of the topology and computes the best path to each destination network.</li></textformat>]]></text> 
+	</component>
+
+</textcomponents>

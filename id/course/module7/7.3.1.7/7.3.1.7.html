@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.3.1.7 Menyebarkan Rute Default</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.1.7_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean RIP dan RIPng</h1>
+<h2>Konfigurasi Protokol RIP</h2>
+</div>
+<div id="content">
+<p>Lihat Gambar 1. Dalam skenario ini, R1 adalah rumah tunggal bagi penyedia layanan. Oleh karena itu, semua yang diperlukan R1 untuk mencapai Internet adalah rute statis default yang keluar dari antarmuka Serial 0/0/1.</p>
+<p></p>
+<p>Rute statis default yang serupa dapat dikonfigurasi pada R2 dan R3, tetapi jauh lebih terukur untuk memasukkannya satu kali pada router edge R1 dan kemudian R1 menyebarkannya ke semua router lain menggunakan RIP. Untuk menyediakan konektivitas Internet ke semua jaringan lain di domain routing RIP, rute statis default perlu diiklankan ke semua router lain yang menggunakan protokol routing dinamis.</p>
+<p></p>
+<p>Untuk menyebarkan rute default, router edge harus dikonfigurasi dengan:</p>
+<p>
+<ul>
+<li>Rute statis default menggunakan<span class="cmd"><b>rute ip 0.0.0.0 0.0.0.0</b></span><span class="cmd"><i>keluar-intf next-hop-ip</i></span>memerintah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Itu<span class="cmd"><b>informasi default berasal</b></span>perintah konfigurasi router. Ini menginstruksikan router R1 untuk membuat informasi default, dengan menyebarkan rute default statis dalam pembaruan RIP.</li>
+</ul>
+</p>
+<p></p>
+<p>Contoh pada Gambar 2 mengkonfigurasi rute statis default yang ditentukan sepenuhnya ke penyedia layanan dan kemudian rute tersebut disebarkan oleh RIP. Perhatikan bahwa R1 sekarang memiliki Gateway of Last Resort dan rute default yang terinstal di tabel routingnya.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk memverifikasi bahwa rute default telah disebarkan ke R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

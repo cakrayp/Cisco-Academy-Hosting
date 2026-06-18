@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.0.1.2 Activity - Own or Lease?</title>
+    <!--  -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Introduction</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity - </b>
+            <b>Own or Lease?</b>
+          </p>
+          <p></p>
+          <p>This chapter presents the concept of using the DHCP process in a small- to medium-sized business network.  This modeling activity describes how very basic wireless ISR devices work using the DHCP process.  </p>
+          <p></p>
+          <p>Visit <a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">http://</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">ui.linksys.com</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">/WRT54GL/4.30.0/</a><a href="http://ui.linksys.com/WRT54GL/4.30.0/Setup.htm" target="_blank">Setup.htm</a>  which is a web-based simulator that helps you learn to configure DHCP using a Linksys wireless 54GL router. To the right of the simulator (in the blue description column), you can click <b>More</b> to read information about configuring DHCP settings on this particular integrated services router (ISR) simulator.</p>
+          <p></p>
+          <p>Practice configuring the ISR’s:</p>
+          <p>
+            <ul>
+              <li>Hostname</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Local IP address with subnet mask</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>DHCP (enable and disable)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Starting IP address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Maximum number of users to receive an IP DHCP address</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Lease time</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Time zone (use yours or a favorite as an alternative)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>When you have completed configuring the settings as listed for this assignment, take a screen shot of your settings by using the<b> PrtScrn </b>key command. Copy and place your screen shot into a word processing document. Save it and be prepared to discuss your configuration choices with the class.</p>
+          <p></p>
+          <p>
+            <a href="../../files/10.0.1.2%20Own%20or%20Lease%20Instructions.pdf" target="_blank">Class Activity - Own or Lease? Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

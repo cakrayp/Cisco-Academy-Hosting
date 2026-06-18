@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>NAT Border</b>]]></text>
+</component>
+<component id="ID_txt01">
+   <text><![CDATA[Stub Network: Only one exit point to the Internet]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[NAT-enabled border router]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Public Address Space</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[Internet]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[Server]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Private Address Space</b>]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[ISP]]></text>
+      </component>
+</textcomponents>

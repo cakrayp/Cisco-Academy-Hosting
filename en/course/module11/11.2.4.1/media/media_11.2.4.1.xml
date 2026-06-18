@@ -1,0 +1,60 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>TCP and UDP Destination Ports</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[Telnet Server]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[FTP Server]]></text>
+</component>
+<component id="ID_s1_txt03">
+<text><![CDATA[Web Server]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Port 23]]></text>
+</component>
+<component id="ID_s1_txt05">
+<text><![CDATA[Ports 20 and 21]]></text>
+</component>
+<component id="ID_s1_txt06">
+<text><![CDATA[Port 80]]></text>
+</component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Client]]></text>
+</component>
+<component id="ID_s1_txt08">
+<text><![CDATA[<b>Internet</b>]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Port Forwarding</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[PoS Server]]></text>
+</component>
+<component id="ID_s2_txt02">
+<text><![CDATA[To the private IPv4 address of the server.]]></text>
+</component>
+<component id="ID_s2_txt03">
+<text><![CDATA[Inside Network]]></text>
+</component>
+<component id="ID_s2_txt04">
+<text><![CDATA[SOHO Router]]></text>
+</component>
+<component id="ID_s2_txt05">
+<text><![CDATA[To the public IPv4 address of the router and specific destination port of the server.]]></text>
+</component>
+<component id="ID_s2_txt06">
+<text><![CDATA[Internet]]></text>
+</component>
+<component id="ID_s2_txt07">
+<text><![CDATA[I forward packets to the PoS server that match a specific destination port.]]></text>
+</component>
+
+
+</textcomponents>

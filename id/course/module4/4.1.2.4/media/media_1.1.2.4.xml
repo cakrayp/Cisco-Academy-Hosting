@@ -1,0 +1,36 @@
+<textcomponents>
+<!-- Slide 1-->
+	<component id="ID_s1_title">
+	<text><![CDATA[<b>Menetapkan Alamat IP Secara Statis</b>]]></text>
+	</component>
+
+	<component id="ID_txt01">
+		<text><![CDATA[Untuk tugas statis, masukkan alamat:]]></text> 
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Alamat IP]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Subnet Masker]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Gerbang Bawaan]]></text> 
+	</component>
+	<component id="transcript">
+		<text><![CDATA[<b>transkrip ada di sini</b>]]></text> 
+	</component>
+  
+<!-- Slide 2-->
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Menetapkan Alamat IP Secara Dinamis</b>]]></text>
+	</component>
+
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Menetapkan Alamat Dinamis]]></text>
+	</component> 
+
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Properti ini akan mengatur perangkat untuk mendapatkan alamat IP secara otomatis.]]></text>
+	</component> 
+</textcomponents>

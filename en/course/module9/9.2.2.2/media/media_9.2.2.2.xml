@@ -1,0 +1,17 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Editing Numbered ACLs Using Sequence Numbers</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Configuration]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Step 1]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Step 2]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Step 3]]></text> 
+	</component>
+</textcomponents>

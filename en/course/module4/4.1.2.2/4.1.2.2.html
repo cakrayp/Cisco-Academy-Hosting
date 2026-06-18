@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.2.2 Default Gateways</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Connect Devices</h2>
+      </div>
+      <div id="content">
+          <p>To enable network access, devices must be configured with IP address information to identify the appropriate:</p>
+          <p>
+            <ul>
+              <li>
+                <b>IP address </b>- Identifies a unique host on a local network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Subnet mask </b>- Identifies with which network subnet the host can communicate.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Default gateway </b>- Identifies the router to send a packet to when the destination is not on the same local network subnet.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>When a host sends a packet to a device that is on the same IP network, the packet is simply forwarded out of the host interface to the destination device. </p>
+          <p></p>
+          <p>When a host sends a packet to a device on a different IP network, then the packet is forwarded to the default gateway, because a host device cannot communicate directly with devices outside of the local network. The default gateway is the destination that routes traffic from the local network to devices on remote networks. It is often used to connect a local network to the Internet. </p>
+          <p></p>
+          <p>The default gateway is usually the address of the interface on the router connected to the local network. The router maintains routing table entries of all connected networks as well as entries of remote networks, and determines the best path to reach those destinations. </p>
+          <p></p>
+          <p>For example, if PC1 sends a packet to the Web Server located at 176.16.1.99, it would discover that the Web Server is not on the local network and it, therefore, must send the packet to the Media Access Control (MAC) address of its default gateway. The Packet protocol data unit (PDU) in the figure identifies the source and destination IP and MAC addresses.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: A router is also usually configured with its own default gateway. This is sometimes known as the Gateway of Last Resort.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

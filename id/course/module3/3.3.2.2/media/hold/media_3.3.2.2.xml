@@ -1,0 +1,33 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>QoS dan VLAN</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Kontrol Penerimaan]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Klasifikasi dan Penandaan]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Kepolisian dan Penurunan Harga]]></text> 
+  </component>
+<component id="ID_txt04">
+<text><![CDATA[Penjadwalan (Antri dan Dropping)]]></text>
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Pembentukan Lalu Lintas]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[Mekanisme Khusus Tautan]]></text> 
+  </component>  
+<component id="ID_txt07">
+  <text><![CDATA[<b>BERHENTI</b>]]></text> 
+  </component>    
+  
+<component id="transcript">
+  <text><![CDATA[<b>transkrip ada di sini</b>]]></text> 
+  </component>
+  
+</textcomponents>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>0.0.1.2 Komunitas Global</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_0.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Selamat datang di Esensi Perutean dan Peralihan</h1>
+<h2>Pesan untuk Siswa</h2>
+</div>
+<div id="content">
+<p>Saat Anda berpartisipasi dalam Akademi Jaringan, Anda bergabung dengan komunitas global yang dihubungkan oleh tujuan dan teknologi yang sama. Sekolah, perguruan tinggi, universitas, dan entitas lain di lebih dari 160 negara berpartisipasi dalam program ini. Visualisasi komunitas Networking Academy global tersedia di<a href="https://www.academynetspace.com/index_flash.php" target="_blank">http://www.academynetspace.com</a>.</p>
+<p></p>
+<p>Cari situs resmi Cisco Networking Academy di Facebook© dan LinkedIn©. Situs Facebook adalah tempat Anda dapat bertemu dan berinteraksi dengan siswa Akademi Jaringan lainnya dari seluruh dunia. Situs LinkedIn Cisco Networking Academy menghubungkan Anda dengan lowongan pekerjaan, dan Anda dapat melihat bagaimana orang lain mengkomunikasikan keterampilan mereka secara efektif.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

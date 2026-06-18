@@ -1,0 +1,130 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas – Operasi ACL</b><br/><br/>Seret kata atau frasa yang sesuai untuk menyelesaikan pernyataan operasi ACL. Tidak semua jawaban akan digunakan. Pernyataan pertama memerlukan dua kata atau frasa untuk melengkapinya.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Discarded</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Before</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Four</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Interface</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Pathway</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">Deny</font>]]></text>
+</component>
+
+<component id='ID_drag07'>
+	<text><![CDATA[<font color="#393536">After</font>]]></text>
+</component>
+
+<component id='ID_drag08'>
+	<text><![CDATA[<font color="#393536">Processing</font>]]></text>
+</component>
+
+<component id='ID_drag09'>
+	<text><![CDATA[<font color="#393536">Six</font>]]></text>
+</component>
+
+<component id='ID_drag10'>
+	<text><![CDATA[<font color="#393536">Protocol</font>]]></text>
+</component>
+<component id='ID_drag11'>
+	<text><![CDATA[<font color="#393536">Firewall</font>]]></text>
+</component>
+<component id='ID_drag12'>
+	<text><![CDATA[<font color="#393536">Twelve</font>]]></text>
+</component>
+<component id='ID_drag13'>
+	<text><![CDATA[<font color="#393536">Forwarded</font>]]></text>
+</component>
+<component id='ID_drag14'>
+	<text><![CDATA[<font color="#393536">Permit</font>]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menyelesaikan pernyataan operasi ACL.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menyelesaikan pernyataan operasi ACL. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+<component id="ID_txt01">
+	<text><![CDATA[Daftar Kontrol Akses (ACL) mengontrol apakah router akan _____ atau _____ lalu lintas paket berdasarkan kriteria header paket.]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[ACL sering digunakan di router antara jaringan internal dan eksternal untuk menyediakan _____.]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Sebuah router dengan tiga antarmuka dan dua protokol jaringan (IPv4 dan IPv6) dapat memiliki sebanyak _____ ACL aktif.]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[Untuk ACL masuk, paket masuk diproses dan dikirim ke antarmuka keluar.]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[Untuk ACL keluar, paket masuk diproses _____ dan dikirim ke antarmuka keluar.]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Untuk setiap ACL, ada pernyataan penolakan yang tersirat. Jika sebuah paket tidak sesuai dengan salah satu kriteria ACL, maka akan menjadi _____.]]></text> 
+</component>
+
+<component id="ID_txt07">
+  <text><![CDATA[ACL dapat memfilter lalu lintas data per protokol, per arah, dan per _____.]]></text> 
+</component>
+
+<component id="ID_txt08">
+  <text><![CDATA[ACL dapat memfilter lalu lintas berdasarkan alamat sumber/tujuan, _____, dan nomor port.]]></text> 
+</component>
+
+<component id="ID_txt09">
+  <text><![CDATA[<b>Operasi ACL</b>]]></text> 
+</component>
+
+<component id="ID_txt10">
+  <text><![CDATA[<b>Penyelesaian</b>]]></text> 
+</component>
+   
+</textcomponents>

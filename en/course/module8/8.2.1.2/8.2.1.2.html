@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.1.2 Router OSPF Configuration Mode</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Router ID</h2>
+      </div>
+      <div id="content">
+          <p>Figure 1 is the reference topology for this topic. OSPFv2 is enabled using the<span class="cmd"><b> router ospf </b></span><span class="cmd"><i>process-id </i></span>global configuration mode command. The<span class="cmd"><i> process-id </i></span>value represents a number between 1 and 65,535 and is selected by the network administrator. The<span class="cmd"><i> process-id </i></span>value is locally significant, which means that it does not have to be the same value on the other OSPF routers to establish adjacencies with those neighbors. </p>
+          <p></p>
+          <p>Figure 2 provides an example of entering router OSPF configuration mode on R1. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: The list of commands has been altered to display only the commands that are used in this chapter. For a complete list of commands, use the Syntax Checkers in Figure 3.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to enter OSPF router configuration mode on R2 and list the commands available at the prompt.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

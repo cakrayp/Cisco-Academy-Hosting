@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+<component id="ID_title_txt">
+  <text><![CDATA[<b>Kelebihan NAT</b>]]></text> 
+  </component>
+<component id="ID_body_txt">
+  <text><![CDATA[<textformat blockindent="-14"><ul><li>Melestarikan skema pengalamatan yang terdaftar secara hukum</li><li>Meningkatkan koneksi ke jaringan publik</li><li>Memberikan konsistensi untuk skema pengalamatan jaringan internal</li><li>Memberikan keamanan jaringan</li></ul></textformat>]]></text>
+</component>
+
+</textcomponents>

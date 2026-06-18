@@ -1,0 +1,33 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Mengonfigurasi DHCPv6 Stateless pada Router</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+   <text><![CDATA[<b>Langkah 1: Aktifkan Perutean IPv6</b>]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[<b>Langkah 2: Konfigurasikan Kumpulan DHCPv6</b>]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[<b>Langkah 3: Konfigurasikan Kumpulan Parameter</b>]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[<b>Langkah 4: Konfigurasikan antarmuka DHCPv6</b>]]></text>
+   </component>
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Mengonfigurasi Router R1 sebagai Server DHCPv6 Stateless</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+   <text><![CDATA[<b>Server Tanpa Status DHCPv6</b>]]></text>
+   </component>
+<component id="ID_s2_txt02">
+   <text><![CDATA[<b>Klien DHCPv6</b>]]></text>
+   </component>
+
+
+
+</textcomponents>

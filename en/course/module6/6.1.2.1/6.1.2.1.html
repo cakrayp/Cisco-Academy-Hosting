@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.1.2.1 Static Route Applications</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Static Routing Implementation</h1>
+        <h2>Types of Static Routes</h2>
+      </div>
+      <div id="content">
+          <p>As shown in the figure, static routes are most often used to connect to a specific network or to provide a Gateway of Last Resort for a stub network. They can also be used to:</p>
+          <p>
+            <ul>
+              <li>Reduce the number of routes advertised by summarizing several contiguous networks as one static route</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Create a backup route in case a primary route link fails</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The following types of IPv4 and IPv6 static routes will be discussed:</p>
+          <p>
+            <ul>
+              <li>Standard static route</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Default static route</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Summary static route</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Floating static route</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

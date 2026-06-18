@@ -1,0 +1,198 @@
+<textcomponents>
+
+<!--screen1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Statistik Topologi NAT</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Jaringan Dalam</b>]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[<b>Jaringan Luar</b>]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Server Web]]></text> 
+  </component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+  <component id="ID_s1_txt05">
+  <text><![CDATA[Klien]]></text> 
+  </component>
+    <component id="ID_s1_txt06">
+  <text><![CDATA[<b>Terjemahan NAT Statis</b>]]></text> 
+  </component>
+    <component id="ID_s1_txt07">
+  <text><![CDATA[http://209.165.201.5]]></text> 
+  </component>
+  
+  
+<!--screen 1 table -->
+
+<component id="ID_s1_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtitle">
+<td bgcolor="#98D3D1" class="mtitle" colspan="2"><font color="#1C3635" size="11"><b>Tabel Statistik NAT</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di dalam Alamat Global</b></font></td>
+<td bgcolor="#077A77" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di dalam Alamat Lokal</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top">209.165.201.5</td>
+<td bgcolor="#ffffff" valign="top">192.168.10.254</td>
+</tr>
+</table>]]></text>
+</component>  
+  
+  
+<!--screen2-->  
+<component id="ID_s2_title">
+<text><![CDATA[<b>Mengonfigurasi NAT Statis</b>]]></text>
+</component>
+  
+<!--screen 2 table -->
+<component id="ID_s2_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" cellspacing="2" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="3"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="40"><font bgcolor="#097A76" color="#EFF8F7"><b>Melangkah</b></font></td>
+<td bgcolor="#077A77" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Tindakan</b></font></td>
+<td bgcolor="#077A77" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Catatan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">1</td>
+<td bgcolor="#EFF8F7">Buat terjemahan statistik antara alamat lokal dalam dan alamat global dalam.<font face="_typewriter"><br/>Router(config)# <b>ip nat di dalam sumber statistik</b><i>ip-lokal global-ip</i></font></td>
+<td bgcolor="#EFF8F7">Masukkan<font face="_typewriter"><b>tidak ada ip nat di dalam sumber statistik</b></font>perintah mode konfigurasi global untuk menghapus terjemahan sumber dinamis.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">2</td>
+<td bgcolor="#FFFFFF">Tentukan antarmuka bagian dalam.<br/> <font face="_typewriter">Router(config)# <b>antarmuka</b><i>ketik nomor</i></font></td>
+<td bgcolor="#FFFFFF">Masukkan<font face="_typewriter"><b>antarmuka</b></font>memerintah. Perintah CLI berubah dari<font face="_typewriter">(config)# </font>to <font face="_typewriter">(config-if)#</font>.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">3</td>
+<td bgcolor="#EFF8F7">Tandai antarmuka sebagai terhubung ke dalam.<br/> <font face="_typewriter">Router(config-if)# <b>ip nat di dalam</b></font></td>
+<td bgcolor="#EFF8F7"> </td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">4</td>
+<td bgcolor="#FFFFFF">Keluar dari mode konfigurasi antarmuka.<br/> <font face="_typewriter">Router(config-if)# <b>KELUAR</b></font></td>
+<td bgcolor="#FFFFFF"> </td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">5</td>
+<td bgcolor="#FFFFFF">Tentukan antarmuka luar.<br/> <font face="_typewriter">Router(config)# <b>antarmuka</b><i>ketik nomor</i></font></td>
+<td bgcolor="#FFFFFF"> </td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">6</td>
+<td bgcolor="#EFF8F7">Tandai antarmuka sebagai terhubung ke luar.<br/><font face="_typewriter">Router(config-if)# <b>ip nat di luar</b></font></td>
+<td bgcolor="#EFF8F7"> </td>
+</tr>
+</table>]]></text>
+</component>
+
+
+<!--screen 3-->
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Contoh Konfigurasi NAT Statis</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Jaringan Dalam</b>]]></text>
+</component>
+<component id="ID_s3_txt02">
+  <text><![CDATA[<b>Jaringan Luar</b>]]></text> 
+</component>
+<component id="ID_s3_txt03">
+  <text><![CDATA[Server Web]]></text> 
+</component>
+<component id="ID_s3_txt04">
+  <text><![CDATA[Internet]]></text> 
+</component>
+<component id="ID_s3_txt05">
+  <text><![CDATA[Klien]]></text> 
+</component>
+<component id="ID_s3_txt06">
+  <text><![CDATA[<b>Terjemahan NAT Statis</b>]]></text> 
+</component>
+<component id="ID_s3_txt07">
+  <text><![CDATA[http://209.165.201.5]]></text> 
+  </component>
+
+<!--screen 4-->  
+  
+    <component id="ID_s4_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+<component id="ID_s4_txt01">
+<text><![CDATA[<b>Jaringan Dalam</b>]]></text>
+</component>
+<component id="ID_s4_txt02">
+  <text><![CDATA[<b>Jaringan Luar</b>]]></text> 
+  </component>
+<component id="ID_s4_txt03">
+  <text><![CDATA[Server Web]]></text> 
+  </component>
+<component id="ID_s4_txt04">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+  <component id="ID_s4_txt05">
+  <text><![CDATA[Klien]]></text> 
+  </component>
+    <component id="ID_s4_txt06">
+  <text><![CDATA[<b>Terjemahan NAT Statis</b>]]></text> 
+  </component>
+  <component id="ID_s4_txt07">
+  <text><![CDATA[http://209.165.201.5]]></text> 
+  </component>
+  
+  
+<!-- syntax checker -->
+
+<component id="ID_sc_reset">
+<text><![CDATA[mengatur ulang]]></text>
+</component>
+
+<component id="ID_sc_showme">
+<text><![CDATA[tertarik padaku]]></text>
+</component>
+
+<component id="ID_sc_showall">
+<text><![CDATA[Tampilkan Semua]]></text>
+</component>
+
+
+<component id="ID_SC5" fontFace='Courier New' fontSize="10">
+		<feedback id="fb"><![CDATA[<b><font size = '10' class="font10px" face="Arial" color="#0000FF">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font size = '10' class="font10px" face="Arial"><b>Configure the static translation with an inside local address of 192.168.11.99 and an inside global address of 201.165.201.15.</b></font>]]></existingcommands>
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[ip nat inside source static 192.168.11.99 209.165.201.15]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' class="font10px" face="Arial"><b>Configure the proper  inside NAT interface.</font>]]></instruction>
+		</command>
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[interface Serial0/0/0]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+			<correctresponse><![CDATA[ip nat inside]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' class="font10px" face="Arial"><b>Configure the proper outside NAT interface.</b></font>]]></instruction>
+		</command>
+		<command prompt="R2(config)#">
+			<correctresponse><![CDATA[interface Serial0/1/0]]></correctresponse>
+		</command>	
+		<command prompt="R2(config-if)#">
+			<correctresponse><![CDATA[ip nat outside]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' class="font10px" face="Arial"><b>You successfully configured static NAT.</font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+
+</textcomponents>

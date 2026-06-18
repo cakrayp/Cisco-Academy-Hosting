@@ -1,0 +1,65 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Perutean Antar-VLAN Lama</b>]]></text>
+</component>
+
+<component id="ID_bubble01">
+<text><![CDATA[<b>Belalai</b>]]></text>
+</component>
+
+<component id="ID_bubble02">
+<text><![CDATA[<b>Belalai</b>]]></text>
+</component>
+
+<component id="ID_bubble03">
+<text><![CDATA[<b>Belalai</b>]]></text>
+</component>
+
+<component id="ID_bubble04">
+<text><![CDATA[<b>Ganti Port S1</b><br/>F0/6 = VLAN 10<br/>F0/5 = VLAN 30<br/>F0/1-F0/4 = Batang<br/><br/><b>Ganti Port S2</b><br/>F0/11 = VLAN 10<br/>F0/18 = VLAN 20<br/>F0/6 = VLAN 30<br/>F0/1-F0/4 = Batang]]></text>
+</component>
+
+<component id="ID_bubble05">
+<text><![CDATA[VLAN<br/>Bingkai yang Ditandai]]></text>
+</component>
+
+<component id="ID_frame01">
+<text><![CDATA[<b>Unicast</b>]]></text>
+</component>
+
+<component id="ID_frame02">
+<text><![CDATA[<b>Unicast VLAN 10</b>]]></text>
+</component>
+
+<component id="ID_frame03">
+<text><![CDATA[<b>Unicast VLAN 30</b>]]></text>
+</component>
+
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+</textcomponents>

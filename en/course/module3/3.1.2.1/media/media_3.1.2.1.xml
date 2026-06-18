@@ -1,0 +1,38 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[<b>VLAN Trunks</b>]]></text>
+   </component>
+
+   
+<component id="ID_txt01">
+   <text><![CDATA[F0/1-5 are 802.1Q trunk interfaces with native VLAN 99.<br/>F0/11-17 are in VLAN 10.<br/>F0/18-24 are in VLAN 20.<br/>F0/6-10 are in VLAN 30.]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[VLAN 10 Faculty/Staff - 172.17.10.0/24<br/>VLAN 20 Students - 172.17.20.0/24<br/>VLAN 30 Guest - 172.17.30.0/24<br/>VLAN 99 Management and Native - 172.17.99.0/24]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[VLAN trunks configured to support: VLAN 10, 20, 30, and VLAN 99.]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Guest<br/>VLAN 30 -<br/>172.17.30.26</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Guest<br/>VLAN 30 -<br/>172.17.30.23</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Student<br/>VLAN 20 -<br/>172.17.20.25</b>]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[<b>Student<br/>VLAN 20 -<br/>172.17.20.22</b>]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[<b>Faculty <br/>VLAN 10 -<br/>172.17.10.24</b>]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[<b>Faculty<br/>VLAN 10 -<br/>172.17.10.21</b>]]></text>
+   </component>
+<component id="ID_txt10">
+   <text><![CDATA[Gateway<br/>VLAN 30<br/>172.17.30.1]]></text>
+   </component>   
+</textcomponents>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.2.2 Serangan Keamanan Umum: Spoofing DHCP</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Masalah Keamanan di LAN</h2>
+</div>
+<div id="content">
+<p>DHCP adalah protokol yang secara otomatis memberikan host alamat IP yang valid dari kumpulan DHCP. DHCP telah digunakan selama TCP/IP menjadi protokol utama yang digunakan dalam industri untuk mengalokasikan alamat IP klien. Dua jenis serangan DHCP dapat dilakukan terhadap jaringan yang diaktifkan: serangan kelaparan DHCP dan spoofing DHCP.</p>
+<p></p>
+<p>Dalam serangan kelaparan DHCP, penyerang membanjiri server DHCP dengan permintaan DHCP untuk menggunakan semua alamat IP yang tersedia yang dapat dikeluarkan oleh server DHCP. Setelah alamat IP ini dikeluarkan, server tidak dapat mengeluarkan alamat lagi, dan situasi ini menghasilkan serangan penolakan layanan (DoS) karena klien baru tidak dapat memperoleh akses jaringan. Serangan DoS adalah serangan apa pun yang digunakan untuk membebani perangkat dan layanan jaringan tertentu dengan lalu lintas tidak sah, sehingga mencegah lalu lintas sah mencapai sumber daya tersebut.</p>
+<p></p>
+<p>Dalam serangan spoofing DHCP, penyerang mengkonfigurasi server DHCP palsu di jaringan untuk mengeluarkan alamat DHCP ke klien. Alasan normal serangan ini adalah untuk memaksa klien menggunakan server Domain Name System (DNS) atau Windows Internet Naming Service (WINS) palsu dan membuat klien menggunakan penyerang, atau mesin yang berada di bawah kendali penyerang, sebagai gateway default mereka.</p>
+<p></p>
+<p>Kelaparan DHCP sering digunakan sebelum serangan spoofing DHCP untuk menolak layanan ke server DHCP yang sah, sehingga lebih mudah untuk memasukkan server DHCP palsu ke dalam jaringan.</p>
+<p></p>
+<p>Untuk memitigasi serangan DHCP, gunakan fitur pengintaian DHCP dan keamanan port pada switch Cisco Catalyst. Fitur-fitur ini dibahas dalam topik selanjutnya.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+	
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+.font8px,.ls{letter-spacing:-0.09px}
+input#ID_SC1_prompt_0,input#ID_SC1_prompt_1,input#ID_SC1_prompt_2,input#ID_SC1_prompt_3,input#ID_SC2_prompt_0,input#ID_SC2_prompt_1,input#ID_SC2_prompt_2,input#ID_SC2_prompt_3,input#ID_SC2_prompt_4{font-family:courier new ! important}

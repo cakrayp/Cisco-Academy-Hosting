@@ -1,0 +1,141 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Switch Packet Forwarding Methods</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Store-and-Forward]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[Cut-Through]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[A store-and-forward switch receives the entire frame, and computes the CRC. If the CRC is valid, the switch looks up the destination address, which determines the outgoing interface. The frame is then forwarded out the correct port.]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[A cut-through switch forwards the frame before it is entirely received. At a minimum, the destination address of the frame must be read before the frame can be forwarded.]]></text>
+ </component>
+ 
+ 
+ 
+ <component id="ID_s2_title">
+<text><![CDATA[<b>Store-and-Forward Switching</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+   <text><![CDATA[Source]]></text>
+   </component>
+<component id="ID_s2_txt02">
+   <text><![CDATA[Destination]]></text>
+   </component>
+<component id="ID_s2_txt03">
+   <text><![CDATA[A store-and-forward switch receives the entire frame, and computes the CRC. If the CRC is valid, the switch looks up the destination address, which determines the outgoing interface. The frame is then forwarded out the correct port.]]></text>
+   </component>
+<component id="ID_s2_txt04">
+   <text><![CDATA[Destination Address]]></text>
+   </component>
+<component id="ID_s2_txt05">
+   <text><![CDATA[Source Address]]></text>
+   </component>
+<component id="ID_s2_txt06">
+   <text><![CDATA[Data]]></text>
+   </component>
+<component id="ID_s2_txt07">
+   <text><![CDATA[CRC]]></text>
+   </component>
+<component id="ID_s2_txt08">
+   <text><![CDATA[CRC]]></text>
+   </component>
+<component id="ID_s2_txt09">
+   <text><![CDATA[Frame is good!]]></text>
+   </component>
+<component id="ID_s2_txt10">
+   <text><![CDATA[Switching Table]]></text>
+   </component>
+   
+   
+   
+<component id="ID_s3_title">
+	<text><![CDATA[<b>Cut-Through Switching</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+   <text><![CDATA[Source]]></text>
+   </component>
+<component id="ID_s3_txt02">
+   <text><![CDATA[Destination]]></text>
+   </component>
+<component id="ID_s3_txt03">
+   <text><![CDATA[A cut-through switch forwards the frame before it is entirely received. At a minimum, the destination address of the frame must be read before the frame can be forwarded.]]></text>
+   </component>
+<component id="ID_s3_txt04">
+   <text><![CDATA[Switching Table]]></text>
+   </component>
+<component id="ID_s3_txt05">
+   <text><![CDATA[Destination Address]]></text>
+   </component>
+<component id="ID_s3_txt06">
+   <text><![CDATA[Source Address]]></text>
+   </component>
+<component id="ID_s3_txt07">
+   <text><![CDATA[Data]]></text>
+   </component>
+<component id="ID_s3_txt08">
+   <text><![CDATA[CRC]]></text>
+   </component>
+   
+     
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+
+<component id="s2_end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="s2_fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="s2_pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="s2_play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="s2_rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="s2_start">
+<text><![CDATA[Start]]></text>
+</component>
+
+<component id="transcript">
+<text><![CDATA[Transcript]]></text>
+</component>   
+   
+</textcomponents>

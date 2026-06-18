@@ -1,0 +1,62 @@
+<textcomponents>
+<!--screen1-->
+<component id="ID_title">
+<text><![CDATA[<b>Proses Statistik NAT</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[<b>Jaringan Dalam</b>]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Jaringan Luar</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Server Web]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+  <component id="ID_txt05">
+  <text><![CDATA[Klien]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[SA 192.168.10.254]]></text> 
+</component>
+<component id="ID_txt07">
+  <text><![CDATA[DA 192.168.10.254]]></text> 
+</component>
+<component id="ID_txt08">
+  <text><![CDATA[SA 201.165.201.5]]></text> 
+</component>
+<component id="ID_txt09">
+  <text><![CDATA[DA 209.165.201.5]]></text> 
+</component>
+  
+  
+  
+  
+  <!--screen 1 table -->
+<!--screen 1 table -->
+
+<component id="ID_s1_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="msubtitle">
+<td bgcolor="#98D3D1" class="msubtitle" colspan="4"><font color="#1C3635" size="11"><b>Tabel NAT</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="4"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="mtable_title" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di dalam Alamat Global</b></font></td>
+<td bgcolor="#077A77" class="mtable_title" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di dalam Alamat Lokal</b></font></td>
+<td bgcolor="#077A77" class="mtable_title" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di Luar Alamat Lokal</b></font></td>
+<td bgcolor="#077A77" class="mtable_title" valign="top"><font bgcolor="#097A76" color="#EFF8F7"><b>Di Luar Alamat Global</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top">209.165.201.5</td>
+<td bgcolor="#ffffff" valign="top">192.168.10.254</td>
+<td bgcolor="#ffffff" valign="top">209.165.200.254</td>
+<td bgcolor="#ffffff" valign="top">209.165.200.254</td>
+</tr>
+</table>]]></text>
+</component>   
+</textcomponents>

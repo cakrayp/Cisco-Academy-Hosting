@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>How We Teach</b>]]></text>
+</component>
+<component id="ID_txt01">
+   <text><![CDATA[<b>Engage</b>]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>Personalize</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Interact</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Stimulate</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>E-Doing</b>]]></text>
+   </component>
+</textcomponents>

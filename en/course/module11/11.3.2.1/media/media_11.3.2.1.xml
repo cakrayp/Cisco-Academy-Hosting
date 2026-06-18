@@ -1,0 +1,29 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+  <text><![CDATA[Inside Network]]></text> 
+ </component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Outside Network Internet]]></text> 
+</component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[<b>Svr1</b>]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[<b>Svr2</b>]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[<b>PAT</b>]]></text> 
+</component>
+  
+<component id="ID_s1_txt06">
+  <text><![CDATA[Pings fail]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+  <text><![CDATA[&lt;output omitted>]]></text> 
+</component>
+
+<component id="ID_s4_txt01">
+  <text><![CDATA[&lt;output omitted>]]></text> 
+</component>
+</textcomponents>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.3.2.4 Creating Named Extended ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Extended IPv4 ACLs</h1>
+        <h2>Configure Extended IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>Named extended ACLs are created in essentially the same way that named standard ACLs are created. Follow these steps to create an extended ACL, using names:</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>From global configuration mode, use the<span class="cmd"><b> ip access-list extended </b></span><span class="cmd"><i>name </i></span>command to define a name for the extended ACL. </p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>In named ACL configuration mode, specify the conditions to<span class="cmd"><b> permit </b></span>or<span class="cmd"><b> deny</b></span>.</p>
+          <p></p>
+          <p>
+            <b>Step 3. </b>Return to privileged EXEC mode and verify the ACL with the<span class="cmd"><b> show access-lists </b></span><span class="cmd"><i>name </i></span>command.</p>
+          <p></p>
+          <p>
+            <b>Step 4. </b>Save the entries in the configuration file with the<span class="cmd"><b> copy running-config startup-config </b></span>command.</p>
+          <p></p>
+          <p>To remove a named extended ACL, use the<span class="cmd"><b> no ip access-list extended </b></span><span class="cmd"><i>name </i></span>global configuration command.</p>
+          <p></p>
+          <p>The figure shows the named versions of the ACLs created in the previous examples. The named ACL, SURFING, permits the users on the 192.168.10.0/24 LAN to access web sites. The named ACL, BROWSING, allows the return traffic from established connections. Using the ACL names, the rules are applied inbound and outbound on the G0/0 interface.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

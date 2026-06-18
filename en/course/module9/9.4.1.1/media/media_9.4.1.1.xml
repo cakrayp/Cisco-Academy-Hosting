@@ -1,0 +1,153 @@
+<textcomponents>
+
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>Inbound ACL Process</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Inbound Interface]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Match 1st ACE]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Match 2nd ACE]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[Match 3rd ACE]]></text> 
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt11">
+<text><![CDATA[Implicit Deny Any]]></text> 
+</component>
+
+
+
+<component id="ID_s1_txt12">
+<text><![CDATA[(Send to Routing Table & Destination Interface)]]></text> 
+</component>
+
+<component id="ID_s1_txt13">
+<text><![CDATA[Permit]]></text> 
+</component>
+
+<component id="ID_s1_txt14">
+<text><![CDATA[Permit or Deny]]></text> 
+</component>
+
+<component id="ID_s1_txt15">
+<text><![CDATA[Deny]]></text> 
+</component>
+<component id="ID_s1_txt17">
+   <text><![CDATA[Packet Discarded]]></text>
+   </component>
+
+
+
+
+
+
+
+
+
+
+
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Outbound ACL Process</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[(From Routing Table & Outbound Interface Selection)]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Match 1st ACE]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Match 2nd ACE]]></text> 
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[Match 3rd ACE]]></text> 
+</component>
+
+<component id="ID_s2_txt09">
+<text><![CDATA[Yes]]></text> 
+</component>
+
+<component id="ID_s2_txt10">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt11">
+<text><![CDATA[Implicit Deny Any]]></text> 
+</component>
+
+
+
+<component id="ID_s2_txt12">
+<text><![CDATA[Outbound Interface]]></text> 
+</component>
+
+<component id="ID_s2_txt13">
+<text><![CDATA[Permit]]></text> 
+</component>
+
+<component id="ID_s2_txt14">
+<text><![CDATA[Permit or Deny]]></text> 
+</component>
+
+<component id="ID_s2_txt15">
+<text><![CDATA[Deny]]></text> 
+</component>
+
+<component id="ID_s2_txt17">
+   <text><![CDATA[Packet Discarded]]></text>
+   </component>
+
+
+</textcomponents>

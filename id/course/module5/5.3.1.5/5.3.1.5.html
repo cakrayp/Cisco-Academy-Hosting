@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.3.1.5 Mengonfigurasi Rute Statis pada Catalyst 2960</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Peralihan Lapisan 3</h1>
+<h2>Operasi dan Konfigurasi Pengalihan Lapisan 3</h2>
+</div>
+<div id="content">
+<p>Sakelar Catalyst 2960 dapat berfungsi sebagai perangkat Layer 3 dan merutekan antara VLAN dan sejumlah rute statis terbatas.</p>
+<p></p>
+<p>Cisco Switch Database Manager (SDM) menyediakan beberapa templat untuk switch 2960. Templat dapat diaktifkan untuk mendukung peran tertentu tergantung pada bagaimana saklar digunakan dalam jaringan. Misalnya, templat perutean lanbase sdm dapat diaktifkan untuk memungkinkan peralihan rute antar VLAN dan untuk mendukung perutean statis.</p>
+<p></p>
+<p>Pada Gambar 1,<span class="cmd"><b>tunjukkan sdm lebih suka</b></span>perintah dimasukkan pada sakelar S1 dan templat default diterapkan. Templat default adalah pengaturan default pabrik untuk sakelar Catalyst 2960. Templat default tidak mendukung perutean statis. Jika pengalamatan IPv6 telah diaktifkan, templatnya akan menjadi dual-ipv4-dan-ipv6 default.</p>
+<p></p>
+<p>Templat SDM dapat diubah dalam mode konfigurasi global dengan<span class="cmd"><b>sdm lebih suka</b></span>memerintah.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Pada Gambar 2, 4, 6, dan 7,<span class="cmd"><b> do </b></span>perintah digunakan untuk menjalankan perintah EXEC pengguna atau hak istimewa EXEC dari mode konfigurasi router lainnya.</p>
+<p></p>
+<p>Pada Gambar 2, opsi template SDM ditampilkan dengan<span class="cmd"><b>sdm lebih suka?</b></span>memerintah. Template SDM diubah menjadi lanbase-routing. Peralihan harus dimuat ulang agar templat baru dapat diterapkan.</p>
+<p></p>
+<p>Pada Gambar 3, template perutean lanbase aktif di S1. Dengan templat ini, perutean statis didukung hingga 750 rute statis.</p>
+<p></p>
+<p>Pada Gambar 4, antarmuka F0/6 pada S1 ditugaskan ke VLAN 2. SVI untuk VLAN 1 dan 2 juga dikonfigurasi dengan alamat IP masing-masing 192.168.1.1/24 dan 192.168.2.1/24. Perutean IP diaktifkan dengan<span class="cmd"><b>perutean ip</b></span>perintah mode konfigurasi global.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Itu<span class="cmd"><b>perutean ip</b></span>perintah secara otomatis diaktifkan pada router Cisco; namun, perintah yang sesuai untuk IPv6,<span class="cmd"><b>perutean unicast ipv6</b></span>, dinonaktifkan, secara default, pada router dan switch Cisco.</p>
+<p></p>
+<p>Pada Gambar 5, router R1 memiliki dua jaringan IPv4 yang dikonfigurasi: antarmuka G0/1 memiliki alamat IP 192.168.1.10/24 dan antarmuka loopback Lo0 memiliki alamat IP 209.165.200.225/27. Itu<span class="cmd"><b>tampilkan rute ip</b></span>keluaran perintah ditampilkan.</p>
+<p></p>
+<p>Rute default dikonfigurasi pada S1 pada Gambar 6<span class="cmd"><b>tampilkan rute ip</b></span>keluaran perintah ditampilkan.</p>
+<p></p>
+<p>Rute statis ke jaringan jarak jauh 192.168.2.0/24 (VLAN 2) dikonfigurasi pada R1 pada Gambar 7.<span class="cmd"><b>tampilkan rute ip</b></span>keluaran perintah ditampilkan.</p>
+<p></p>
+<p>Pada Gambar 8, PC-A dikonfigurasi dengan alamat IP 192.168.2.2/24 di VLAN 2 dan PC-B dikonfigurasi dengan alamat IP 192.168.1.2/24 di VLAN 1. PC-B mampu melakukan ping ke PC-B dan antarmuka loopback di R1.</p>
+<p></p>
+<p>Pada Gambar 9, gunakan Pemeriksa Sintaks untuk mengonfigurasi perutean statis pada S1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

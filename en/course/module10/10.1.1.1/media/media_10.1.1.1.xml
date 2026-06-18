@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Dynamic Host Configuration Protocol (DHCP)</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[DHCP Server]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[DHCP Client]]></text> 
+  </component>
+<component id="ID_speech01">
+  <text><![CDATA[I can provide you an IP address and other information.]]></text> 
+  </component>
+  
+<component id="ID_speech02">
+  <text><![CDATA[I need the services of a DHCP server for IP addressing and other information.]]></text> 
+  </component>  
+  
+</textcomponents>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.2.1.4 Verify Router Configuration</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshoot Inter-VLAN Routing</h1>
+        <h2>Inter-VLAN Configuration Issues</h2>
+      </div>
+      <div id="content">
+          <p>With router-on-a-stick configurations, a common problem is assigning the wrong VLAN ID to the subinterface.</p>
+          <p></p>
+          <p>As shown in Figure 1, router R1 has been configured with the wrong VLAN on subinterface G0/0.10, preventing devices configured on VLAN 10 from communicating with subinterface G0/0.10. This subsequently prevents those devices from being able to send data to other VLANs on the network.</p>
+          <p></p>
+          <p>Using the<span class="cmd"><b> show interface </b></span>and the<span class="cmd"><b> show running-config </b></span>commands can be useful in troubleshooting this type of issue, as shown in the figure. </p>
+          <p></p>
+          <p>The<span class="cmd"><b> show interface </b></span>command produces a lot of output, making it sometimes difficult to see the problem, as shown in Figure 2. However, the top highlighted section shows that the subinterface G0/0.10 on router R1 uses VLAN 100.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> show running-config </b></span>command confirms that subinterface G0/0.10 on router R1 has been configured to allow access to VLAN 100 traffic and not VLAN 10.</p>
+          <p></p>
+          <p>To correct this problem, configure subinterface G0/0.10 to be on the correct VLAN using the<span class="cmd"><b> encapsulation dot1q 10 </b></span>subinterface configuration mode command. When the subinterface has been assigned to the correct VLAN, it is accessible by devices on that VLAN and the router can perform inter-VLAN routing.</p>
+          <p></p>
+          <p>With proper verification, router configuration problems are quickly addressed, allowing inter-VLAN routing to function properly. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

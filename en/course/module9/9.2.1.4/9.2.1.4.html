@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.2.1.4 Internal Logic</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Standard IPv4 ACLs </h1>
+        <h2>Configure Standard IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>Cisco IOS applies an internal logic when accepting and processing standard ACEs. As discussed previously, ACEs are processed sequentially. Therefore, the order in which ACEs are entered is important.</p>
+          <p></p>
+          <p>For example, in Figure 1 ACL 3 contains two ACEs. The first ACE uses a wildcard mask to deny a range of addresses, which includes all hosts in the 192.168.10.0/24 network. The second ACE is a host statement that examines a specific host: 192.168.10.10. This is a host within the range of hosts that was configured in the previous statement. In other words, 192.168.10.10 is a host in the 192.168.10.0/24 network. The IOS internal logic for standard access lists rejects the second statement and returns an error message because it is a subset of the previous statement. Notice in the figure that the router automatically assigns sequence num 10 as the sequence number assigned to the first statement entered in this example. The router output includes the message that the rule is “part of the existing rule at sequence num 10” and does not accept the statement.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: Currently, extended ACLs do not produce a similar error.</p>
+          <p></p>
+          <p>The configuration in Figure 2 of ACL 4 has the same two statements but in reverse order. This is a valid sequence of statements because the first statement refers a specific host, not a range of hosts. </p>
+          <p></p>
+          <p>In Figure 3, ACL 5 shows that a host statement can be configured after a statement that denotes a range of hosts. The host must not be within the range covered by a previous statement. The 192.168.11.10 host address is not a member of the 192.168.10.0/24 network so this is a valid statement.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The order in which standard ACEs are entered may not be the order that they are stored, displayed, or processed by the router. This will be discussed in a later section.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

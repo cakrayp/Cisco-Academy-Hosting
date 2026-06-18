@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.3.4 Wildcard Mask Keywords</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Wildcard Masks in ACLs</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Wildcard Bit Mask Keywords</b>
+          </p>
+          <p></p>
+          <p>Working with decimal representations of binary wildcard mask bits can be tedious. To simplify this task, the keywords<span class="cmd"><b> host </b></span>and<span class="cmd"><b> any</b></span> help identify the most common uses of wildcard masking. These keywords eliminate entering wildcard masks when identifying a specific host or an entire network. These keywords also make it easier to read an ACL by providing visual clues as to the source or destination of the criteria.</p>
+          <p></p>
+          <p>The<span class="cmd"><b> host</b></span> keyword substitutes for the 0.0.0.0 mask. This mask states that all IPv4 address bits must match or only one host is matched.</p>
+          <p>The <span class="cmd"><b>any</b></span> option substitutes for the IP address and 255.255.255.255 mask. This mask says to ignore the entire IPv4 address or to accept any addresses. </p>
+          <p></p>
+          <p>
+            <b>Example 1: Wildcard Masking Process with a Single IP Address</b>
+          </p>
+          <p></p>
+          <p>In Example 1 in the figure, instead of entering <span class="cmd"><b>192.168.10.10 0.0.0.0</b></span>, you can use <span class="cmd"><b>host 192.168.10.10</b></span>. </p>
+          <p></p>
+          <p>
+            <b>Example 2: Wildcard Masking Process with a Match Any IP Address</b>
+          </p>
+          <p></p>
+          <p>In Example 2 in the figure, instead of entering <span class="cmd"><b>0.0.0.0 255.255.255.255</b></span>, you can use the keyword<span class="cmd"><b> any</b></span> by itself.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The keywords<span class="cmd"><b> host </b></span>and<span class="cmd"><b> any </b></span>can also be used when configuring an IPv6 ACL. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

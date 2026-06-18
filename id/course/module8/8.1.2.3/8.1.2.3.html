@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.1.2.3 Paket Halo</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Karakteristik OSPF</h1>
+<h2>Pesan OSPF</h2>
+</div>
+<div id="content">
+<p>
+<b>Halo Paket</b>
+</p>
+<p>Paket OSPF Tipe 1 adalah paket Hello. Paket hello digunakan untuk:</p>
+<p>
+<ul>
+<li>Temukan tetangga OSPF dan buat kedekatan tetangga.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Iklankan parameter di mana dua router harus setuju untuk menjadi tetangga.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pilih Designated Router (DR) dan Backup Designated Router (BDR) pada jaringan multiakses seperti Ethernet dan Frame Relay. Tautan point-to-point tidak memerlukan DR atau BDR.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar tersebut menampilkan field yang terdapat dalam paket Hello Tipe 1. Bidang penting yang ditunjukkan pada gambar meliputi:</p>
+<p>
+<ul>
+<li>
+<b>Jenis</b>- Mengidentifikasi jenis paket. Angka satu (1) menunjukkan paket Hello. Nilai 2 mengidentifikasi paket DBD, 3 paket LSR, 4 paket LSU, dan 5 paket LSAck.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>ID Perute</b>- Nilai 32-bit yang dinyatakan dalam notasi desimal bertitik (alamat IPv4) yang digunakan untuk mengidentifikasi router asal secara unik.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>ID Daerah</b>- Area asal paket.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Masker Jaringan</b>- Subnet mask yang terkait dengan antarmuka pengiriman.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Halo Interval</b>- Menentukan frekuensi, dalam hitungan detik, saat router mengirimkan paket Hello. Interval Hello default pada jaringan multiakses adalah 10 detik. Pengatur waktu ini harus sama di router tetangga; jika tidak, kedekatan tidak akan terjalin.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Prioritas Router</b>- Digunakan pada pemilu DR/BDR. Prioritas default untuk semua router OSPF adalah 1, namun dapat diubah secara manual dari 0 hingga 255. Semakin tinggi nilainya, semakin besar kemungkinan router menjadi DR pada link.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Interval Mati</b>- Apakah waktu dalam hitungan detik dimana router menunggu kabar dari tetangganya sebelum menyatakan router tetangganya tidak dapat digunakan. Secara default, Interval Mati router adalah empat kali interval Hello. Pengatur waktu ini harus sama di router tetangga; jika tidak, kedekatan tidak akan terjalin.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Router yang Ditunjuk (DR)</b>- ID Router dari DR.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Router Khusus Cadangan (BDR)</b>- ID Router BDR.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Daftar Tetangga</b>- Daftar yang mengidentifikasi ID router dari semua router yang berdekatan.</li>
+</ul>
+</p>
+<p></p>
+<p>Klik masing-masing bidang yang disorot pada gambar untuk informasi lebih lanjut.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

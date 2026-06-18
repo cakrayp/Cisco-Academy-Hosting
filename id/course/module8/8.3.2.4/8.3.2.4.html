@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.3.2.4 Mengonfigurasi ID Router OSPFv3</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan OSPFv3 Area Tunggal</h1>
+<h2>Mengonfigurasi OSPFv3</h2>
+</div>
+<div id="content">
+<p>Gunakan<span class="cmd"><b>router ipv6 ospf</b></span><span class="cmd"><i>proses-id</i></span>perintah mode konfigurasi global untuk masuk ke mode konfigurasi router. Prompt mode konfigurasi router IPv6 berbeda dengan prompt mode konfigurasi router IPv4. Gunakan mode konfirmasi router IPv6 untuk mengonfigurasi parameter OSPFv3 global, seperti menetapkan ID router OSPF 32-bit dan bandwidth referensi.</p>
+<p></p>
+<p>Protokol perutean IPv6 diaktifkan pada antarmuka, dan bukan dari mode konfigurasi router, seperti protokol IPv4. Itu<span class="cmd"><b>jaringan</b></span>Perintah mode konfigurasi router IPv4 tidak ada di IPv6.</p>
+<p></p>
+<p>Seperti OSPFv2, itu<span class="cmd"><i>proses-id</i></span>nilainya adalah angka antara 1 dan 65.535 dan dipilih oleh administrator jaringan. Itu<span class="cmd"><i>proses-id</i></span>nilainya signifikan secara lokal, yang berarti bahwa ia tidak harus cocok dengan router OSPF lain untuk membangun kedekatan dengan tetangganya.</p>
+<p></p>
+<p>OSPFv3 memerlukan ID router 32-bit untuk ditetapkan sebelum OSPF dapat diaktifkan pada antarmuka. Diagram logika pada Gambar 1 menampilkan bagaimana ID router dipilih. Seperti OSPFv2, OSPFv3 menggunakan:</p>
+<p>
+<ul>
+<li>ID router yang dikonfigurasi secara eksplisit terlebih dahulu.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika tidak ada yang dikonfigurasi, maka router menggunakan alamat IPv4 terkonfigurasi tertinggi dari antarmuka loopback.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika tidak ada yang dikonfigurasi, maka router menggunakan alamat IPv4 terkonfigurasi tertinggi dari antarmuka aktif.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika tidak ada sumber alamat IPv4 pada router, maka router menampilkan pesan konsol untuk mengkonfigurasi ID router secara manual.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Untuk konsistensi, ketiga router menggunakan ID proses 10.</p>
+<p></p>
+<p>Seperti yang ditunjukkan dalam topologi pada Gambar 2, router R1, R2, dan R3 akan diberi ID router yang ditunjukkan. Itu<span class="cmd"><b>router-id</b></span><span class="cmd"><i>menyingkirkan</i></span>perintah yang digunakan untuk menetapkan ID router di OSPFv2 adalah perintah yang sama yang digunakan di OSPFv3.</p>
+<p></p>
+<p>Contoh pada Gambar 3:</p>
+<p>
+<ul>
+<li>Memasuki mode konfigurasi OSPFv3 router. Perhatikan bagaimana prompt router berbeda dari prompt router mode protokol perutean IPv4 default. Perhatikan juga bagaimana pesan konsol informasi muncul ketika mode konfigurasi router OSPFv3 diakses.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Menetapkan ID router 1.1.1.1.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Menyesuaikan bandwidth referensi menjadi 1.000.000.000 bps (1 Gb/s), karena terdapat tautan Gigabit Ethernet di jaringan. Perhatikan pesan konsol informasi bahwa perintah ini harus dikonfigurasi pada semua router di domain perutean.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Itu<span class="cmd"><b>tampilkan protokol ipv6</b></span>perintah digunakan untuk memverifikasi bahwa proses OSPFv3 ID 10 menggunakan ID router 1.1.1.1.</li>
+</ul>
+</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 4 untuk mengonfigurasi pengaturan OSPFv3 global pada R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

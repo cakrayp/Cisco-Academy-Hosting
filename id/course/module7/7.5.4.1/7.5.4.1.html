@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.5.4.1 Entri Tabel Perutean IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.5.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Tabel Perutean</h1>
+<h2>Analisis Tabel Perutean IPv6</h2>
+</div>
+<div id="content">
+<p>Komponen tabel routing IPv6 sangat mirip dengan tabel routing IPv4. Misalnya, diisi menggunakan antarmuka yang terhubung langsung, rute statis, dan rute yang dipelajari secara dinamis.</p>
+<p></p>
+<p>Karena IPv6 dirancang tanpa kelas, semua rute secara efektif merupakan rute utama level 1. Tidak ada rute induk level 1 dari rute anak level 2.</p>
+<p></p>
+<p>Topologi yang ditampilkan pada gambar digunakan sebagai topologi referensi untuk bagian ini.  Perhatikan bahwa dalam topologi:</p>
+<p>
+<ul>
+<li>R1, R2, dan R3 dikonfigurasi dalam topologi mesh penuh. Semua router memiliki jalur redundan ke berbagai jaringan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>R2 adalah router tepi dan terhubung ke ISP; namun, rute statis default tidak diiklankan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>EIGRP untuk IPv6 telah dikonfigurasi pada ketiga router.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

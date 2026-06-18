@@ -1,0 +1,34 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>R1 Meneruskan Pembaruan Kelas ke R2</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>R2 Menambahkan Entri untuk 172.16.0.0 melalui R1</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>R3 Meneruskan Pembaruan Kelas ke R2</b>]]></text> 
+  </component>
+ <component id="ID_s4_title">
+  <text><![CDATA[<b>R2 Menambahkan Entri untuk 172.16.0.0 melalui R3</b>]]></text> 
+  </component>
+  <component id="ID_s5_title">
+  <text><![CDATA[<b>Kegagalan Konektivitas</b>]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt01">
+  <text><![CDATA[<b>Pembaruan perutean:<br/>172.16.0.0</b>]]></text> 
+  </component>
+  
+  <component id="ID_s1_txt02">
+  <text><![CDATA[30 detikku sudah habis. Saya mengirimkan pembaruan ke tetangga RIP saya.]]></text> 
+  </component>
+
+    <component id="ID_s3_txt01">
+  <text><![CDATA[<b>Pembaruan perutean:<br/>172.16.0.0</b>]]></text> 
+  </component>
+  
+  <component id="ID_s3_txt02">
+  <text><![CDATA[30 detikku sudah habis. Saya mengirimkan pembaruan ke tetangga RIP saya.]]></text> 
+  </component>
+  
+</textcomponents>

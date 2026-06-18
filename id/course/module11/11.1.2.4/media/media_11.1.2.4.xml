@@ -1,0 +1,64 @@
+<textcomponents>
+
+<component id="ID_title">
+ <text><![CDATA[<b>Port Tersedia Berikutnya</b>]]></text>
+ </component>
+<!--table data-->
+<component id="ID_txt01">
+   <text><![CDATA[<b>Tabel NAT dengan Kelebihan Beban</b>]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>Di dalam Alamat IP Global</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Di dalam Alamat IP Lokal</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>Tabel NAT dengan Kelebihan Beban</b>]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Di dalam Alamat IP Global</b>]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Di dalam Alamat IP Lokal</b>]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[<b>Di dalam</b>]]></text>
+      </component>
+<component id="ID_txt08">
+   <text><![CDATA[<b>Di luar</b>]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[Internet]]></text>
+   </component>
+
+   <component id="ID_txt10">
+      <text><![CDATA[Svr1]]></text>
+      </component>
+ 
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[Akhir]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Maju Cepat]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Berhenti sebentar]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Bermain]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Memutar ulang]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Awal]]></text>
+	</component>
+</textcomponents>

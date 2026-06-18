@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.4.1 Verifikasi Pengaturan Antarmuka</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Verifikasi Konektivitas Jaringan yang Terhubung Langsung</h2>
+</div>
+<div id="content">
+<p>Ada beberapa<span class="cmd"><b>menunjukkan</b></span>perintah yang dapat digunakan untuk memverifikasi operasi dan konfigurasi antarmuka. Tiga perintah berikut sangat berguna untuk mengidentifikasi status antarmuka dengan cepat:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan antarmuka ip secara singkat</b>
+</span>- Menampilkan ringkasan untuk semua antarmuka termasuk alamat IPv4 antarmuka dan status operasional saat ini.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan rute ip</b>
+</span>- Menampilkan isi tabel routing IPv4 yang disimpan dalam RAM. Di Cisco IOS 15, antarmuka aktif akan muncul di tabel perutean dengan dua entri terkait yang diidentifikasi dengan kode '<span class="cmd">C</span>’ (Tersambung) atau ‘<span class="cmd">L</span>’ (Lokal). Pada versi iOS sebelumnya, hanya satu entri dengan kode '<span class="cmd">C</span>' akan muncul.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan antarmuka konfigurasi yang sedang berjalan</b>
+</span>
+<span class="cmd">
+<i>antarmuka-id</i>
+</span>
+<span class="cmd">
+<b></b>
+</span>- Menampilkan perintah yang dikonfigurasi pada antarmuka yang ditentukan.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 1 menampilkan output dari<span class="cmd"><b>tampilkan antarmuka ip secara singkat</b></span>memerintah. Outputnya menunjukkan bahwa antarmuka LAN dan tautan WAN semuanya diaktifkan dan beroperasi seperti yang ditunjukkan oleh Status “up” dan Protokol “up”. Output yang berbeda akan menunjukkan adanya masalah pada konfigurasi atau kabel.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Pada Gambar 1, antarmuka Embedded-Service-Engine0/0 ditampilkan karena Cisco ISRs G2 memiliki CPU dual core pada motherboard. Antarmuka Embedded-Service-Engine0/0 berada di luar cakupan kursus ini.</p>
+<p></p>
+<p>Gambar 2 menampilkan output dari<span class="cmd"><b>tampilkan rute ip</b></span>memerintah. Perhatikan tiga entri jaringan yang terhubung langsung dan tiga entri antarmuka rute host lokal. Rute host lokal memiliki jarak administratif 0. Rute ini juga memiliki mask /32 untuk IPv4, dan mask /128 untuk IPv6. Rute host lokal adalah untuk rute pada router yang memiliki alamat IP. Ini digunakan untuk memungkinkan router memproses paket yang ditujukan ke IP tersebut.</p>
+<p></p>
+<p>Gambar 3 menampilkan output dari<span class="cmd"><b>tampilkan antarmuka konfigurasi yang sedang berjalan</b></span>memerintah. Outputnya menampilkan perintah saat ini yang dikonfigurasi pada antarmuka yang ditentukan.</p>
+<p></p>
+<p>Dua perintah berikut digunakan untuk mengumpulkan informasi antarmuka yang lebih rinci:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan antarmuka</b>
+</span>- Menampilkan informasi antarmuka dan jumlah aliran paket untuk semua antarmuka pada perangkat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>tampilkan antarmuka ip</b>
+</span>- Menampilkan informasi terkait IPv4 untuk semua antarmuka pada router.</li>
+</ul>
+</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 4 dan 5 untuk memverifikasi antarmuka pada R1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

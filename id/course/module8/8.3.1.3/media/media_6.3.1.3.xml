@@ -1,0 +1,57 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Perbedaan Antara OSPFv2 vs OSPFv3</b>]]></text>
+</component>
+
+<component id="ID_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="liner">
+<td bgcolor="#0E6360" class="liner_top" colspan="3"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="90"><font color="#ffffff"><b></b></font></td>
+<td bgcolor="#077A77" valign="top" width="175"><font color="#ffffff"><b>OSPFv2</b></font></td>
+<td bgcolor="#077A77" valign="top" width="175"><font color="#ffffff"><b>OSPFv3</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Advertises</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">IPv4 networks</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">IPv6 prefixes</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Source Address</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">IPv4 source address</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">IPv6 link-local address</font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Destination Address</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Choice of:<textformat blockindent="-14">
+<li>Alamat unicast IPv4 tetangga</li>
+<li>224.0.0.5 alamat multicast semua router OSPF</li>
+<li>224.0.0.6 Alamat multicast DR/BDR</li></textformat>
+</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">Choice of:<textformat blockindent="-14"><li>Alamat lokal tautan IPv6 tetangga</li>
+<li>FF02::5 alamat multicast semua router OSPFv3</li>
+<li>FF02::6 alamat multicast DR/BDR</li></textformat>
+</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Advertise Networks</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Configured using the <font face="_typewriter"><b>jaringan</b></font> router configuration command</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Configured using the <font face="_typewriter"><b>ipv6 ospf</b><i>proses-id</i><b>daerah</b><i>area-id</i></font> interface configuration command</font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">IP Unicast Routing</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">IPv4 unicast routing is enabled by default.</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">IPv6 unicast forwarding is not enabled by default. The <font face="_typewriter"><b>perutean unicast ipv6</b></font>global configuration command must be configured.</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Authentication</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">Plain text and MD5</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">IPv6 authentication</font></td>
+</tr>
+</table>]]></text> 
+</component>
+
+</textcomponents>

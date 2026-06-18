@@ -1,0 +1,66 @@
+<textcomponents>
+
+<!--slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Hierarchical Networks</b>]]></text>
+</component>
+
+
+<!--slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Borderless Switched Networks</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Large Campus]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Data Center]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Services Block]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[Internet Edge]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[WAN]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[PSTN]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[Medium Campus]]></text>
+</component>
+
+<component id="ID_s2_txt09">
+<text><![CDATA[Data Center]]></text>
+</component>
+
+<component id="ID_s2_txt10">
+<text><![CDATA[Services Block]]></text>
+</component>
+
+<component id="ID_s2_txt11">
+<text><![CDATA[Small Campus]]></text>
+</component>
+
+<component id="ID_s2_txt12">
+<text><![CDATA[Data Center]]></text>
+</component>
+
+<component id="ID_s2_txt13">
+<text><![CDATA[Services Block]]></text>
+</component>
+
+</textcomponents>

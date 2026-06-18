@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.4.3.3 Test the Floating Static Route</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Summary and Floating Static Routes</h1>
+        <h2>Configure Floating Static Routes</h2>
+      </div>
+      <div id="content">
+          <p>Because the default static route on R1 to R2 has an administrative distance of 1, traffic from R1 to R3 should go through R2. The output in Figure 1 confirms that traffic between R1 and R3 flows through R2. </p>
+          <p></p>
+          <p>What would happen if R2 failed? To simulate this failure both serial interfaces of R2 are shut down, as shown in Figure 2.</p>
+          <p></p>
+          <p>Notice in Figure 3 that R1 automatically generates messages indicating that the serial interface to R2 is down. A look at the routing table verifies that the default route is now pointing to R3 using the floating static default route configured for next-hop 10.10.10.2.</p>
+          <p></p>
+          <p>The output in Figure 4 confirms that traffic now flows directly between R1 and R3. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Configuring IPv6 floating static routes is outside of the scope of this chapter.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

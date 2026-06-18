@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.1.2.3 Configure Legacy Inter-VLAN Routing: Router Interface Configuration</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Inter-VLAN Routing Configuration</h1>
+        <h2>Configure Legacy Inter-VLAN Routing</h2>
+      </div>
+      <div id="content">
+          <p>Next, the router can be configured to perform inter-VLAN routing.</p>
+          <p></p>
+          <p>Router interfaces are configured in a manner similar to configuring VLAN interfaces on switches. To configure a specific interface, change to interface configuration mode from global configuration mode. </p>
+          <p></p>
+          <p>As shown in Figure 1, each interface is configured with an IP address using the<span class="cmd"><b> ip address </b></span><span class="cmd"><i>ip_address subnet_mask </i></span>command in interface configuration mode. </p>
+          <p></p>
+          <p>In the example, interface G0/0 is configured with IP address 172.17.10.1 and subnet mask 255.255.255.0 using the<span class="cmd"><b> ip address 172.17.10.1 255.255.255.0 </b></span>command. </p>
+          <p></p>
+          <p>Router interfaces are disabled by default and must be enabled using the<span class="cmd"><b> no shutdown </b></span>command before they are used. After the<span class="cmd"><b> no shutdown </b></span>interface configuration mode command has been issued, a notification displays, indicating that the interface state has changed to up. This indicates that the interface is now enabled.</p>
+          <p></p>
+          <p>The process is repeated for all router interfaces. Each router interface must be assigned to a unique subnet for routing to occur. In this example, the other router interface, G0/1, has been configured to use IP address 172.17.30.1, which is on a different subnet than interface G0/0.</p>
+          <p></p>
+          <p>After the IP addresses are assigned to the physical interfaces and the interfaces are enabled, the router is capable of performing inter-VLAN routing.</p>
+          <p></p>
+          <p>Examine the routing table using the<span class="cmd"><b> show ip route </b></span>command. </p>
+          <p></p>
+          <p>In Figure 2, there are two routes visible in the routing table. One route is to the 172.17.10.0 subnet, which is attached to the local interface G0/0. The other route is to the 172.17.30.0 subnet, which is attached to the local interface G0/1. The router uses this routing table to determine where to send the traffic it receives. For example, if the router receives a packet on interface G0/0 destined for the 172.17.30.0 subnet, the router would identify that it should send the packet out interface G0/1 to reach hosts on the 172.17.30.0 subnet.</p>
+          <p></p>
+          <p>Notice the letter<span class="cmd"><b> C </b></span>to the left of each of the route entries for the VLANs. This letter indicates that the route is local for a connected interface, which is also identified in the route entry. Using the output in this example, if traffic was destined for the 172.17.30.0 subnet, the router would forward the traffic out interface G0/1.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.3.2.3 Filtering Traffic with Extended ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Extended IPv4 ACLs</h1>
+        <h2>Configure Extended IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>The example shown in Figure 1 denies FTP traffic from subnet 192.168.11.0 that is going to subnet 192.168.10.0, but permits all other traffic. Note the use of wildcard masks and the explicit deny any statement. Remember that FTP uses TCP ports 20 and 21; therefore the ACL requires both port name keywords <span class="cmd"><b>ftp</b></span> and <span class="cmd"><b>ftp-data</b></span> or <span class="cmd"><b>eq 20</b></span> and <span class="cmd"><b>eq 21</b></span> to deny FTP.</p>
+          <p></p>
+          <p>If using port numbers instead of port names, the commands would be written as:</p>
+          <p></p>
+          <p>
+            <span class="cmd">
+              <b>access-list 114 permit tcp 192.168.20.0 0.0.0.255 any eq 20</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">
+              <b>access-list 114 permit tcp 192.168.20.0 0.0.0.255 any eq 21</b>
+            </span>
+          </p>
+          <p></p>
+          <p>To prevent the implied deny any statement at the end of the ACL from blocking all traffic, the <span class="cmd"><b>permit ip any any</b></span> statement is added. Without at least one <span class="cmd"><b>permit</b></span> statement in an ACL, all traffic on the interface where that ACL was applied would be dropped. The ACL should be applied inbound on the G0/1 interface so that traffic from the 192.168.11.0/24 LAN is filtered as it enters the router interface.</p>
+          <p></p>
+          <p>The example shown in Figure 2, denies Telnet traffic from any source to the 192.168.11.0/24 LAN, but allows all other IP traffic. Because traffic destined for the 192.168.11.0/24 LAN is outbound on interface G0/1, the ACL would be applied to G0/1 using the <span class="cmd"><b>out</b></span> keyword. Note the use of the <span class="cmd"><b>any</b></span> keywords in the permit statement. This permit statement is added to ensure that no other traffic is blocked. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: The examples in Figures 1 and 2 both use the <span class="cmd"><b>permit ip any any</b></span> statement at the end of the ACL. For greater security the <span class="cmd"><b>permit 192.168.11.0 0.0.0.255 any</b></span> command may be used.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

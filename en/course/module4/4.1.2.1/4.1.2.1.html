@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.2.1 Connect to a Network</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Connect Devices</h2>
+      </div>
+      <div id="content">
+          <p>Network devices and end users typically connect to a network using a wired Ethernet or wireless connection. Refer to the figure as a sample reference topology. The LANs in the figure serve as an example of how users and network devices could connect to networks.</p>
+          <p></p>
+          <p>Home office devices can connect as follows:</p>
+          <p>
+            <ul>
+              <li>Laptops and tablets connect wirelessly to a home router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>A network printer connects using an Ethernet cable to the switch port on the home router.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The home router connects to the service provider cable modem using an Ethernet cable.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The cable modem connects to the Internet service provider (ISP) network.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The Branch site devices connect as follows:</p>
+          <p>
+            <ul>
+              <li>Corporate resources (i.e., file servers and printers) connect to Layer 2 switches using Ethernet cables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Desktop PCs and voice over IP (VoIP) phones connect to Layer 2 switches using Ethernet cables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Laptops and smartphones connect wirelessly to wireless access points (WAPs).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The WAPs connect to switches using Ethernet cables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Layer 2 switches connect to an Ethernet interface on the edge router using Ethernet cables. An edge router is a device that sits at the edge or boundary of a network and routes between that network and another, such as between a LAN and a WAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The edge router connects to a WAN service provider (SP).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The edge router also connects to an ISP for backup purposes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The Central site devices connect as follows:</p>
+          <p>
+            <ul>
+              <li>Desktop PCs and VoIP phones connect to Layer 2 switches using Ethernet cables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Layer 2 switches connect redundantly to multilayer Layer 3 switches using Ethernet fiber-optic cables (orange connections).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Layer 3 multilayer switches connect to an Ethernet interface on the edge router using Ethernet cables.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The corporate website server is connected using an Ethernet cable to the edge router interface.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The edge router connects to a WAN SP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The edge router also connects to an ISP for backup purposes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In the Branch and Central LANs, hosts are connected either directly or indirectly (via WAPs) to the network infrastructure using a Layer 2 switch. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

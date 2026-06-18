@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.1.1.2 Why Use Static Routing?</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Static Routing Implementation</h1>
+        <h2>Static Routing</h2>
+      </div>
+      <div id="content">
+          <p>Static routing provides some advantages over dynamic routing, including:</p>
+          <p>
+            <ul>
+              <li>Static routes are not advertised over the network, resulting in better security. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Static routes use less bandwidth than dynamic routing protocols, no CPU cycles are used to calculate and communicate routes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The path a static route uses to send data is known.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Static routing has the following disadvantages:</p>
+          <p>
+            <ul>
+              <li>Initial configuration and maintenance is time-consuming.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configuration is error-prone, especially in large networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Administrator intervention is required to maintain changing route information.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Does not scale well with growing networks; maintenance becomes cumbersome. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Requires complete knowledge of the whole network for proper implementation.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>In the figure, dynamic and static routing features are compared. Notice that the advantages of one method are the disadvantages of the other.</p>
+          <p></p>
+          <p>Static routes are useful for smaller networks with only one path to an outside network. They also provide security in a larger network for certain types of traffic or links to other networks that need more control. It is important to understand that static and dynamic routing are not mutually exclusive. Rather, most networks use a combination of dynamic routing protocols and static routes. This may result in the router having multiple paths to a destination network via static routes and dynamically learned routes. However, the administrative distance (AD) of a static route is 1. Therefore, a static route will take precedence over all dynamically learned routes. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

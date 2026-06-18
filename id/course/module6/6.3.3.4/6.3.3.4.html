@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.3.4 Subnet Subnet</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.3.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>VLSM</h2>
+</div>
+<div id="content">
+<p>Cara lain untuk melihat subnet VLSM adalah dengan membuat daftar setiap subnet dan subnetnya.</p>
+<p></p>
+<p>Pada Gambar 1, jaringan 10.0.0.0/8 adalah ruang alamat awal dan disubnet dengan mask /16. Meminjam 8 bit (dari /8 ke /16) menghasilkan 256 subnet yang berkisar dari 10.0.0.0/16 hingga 10.255.0.0/16.</p>
+<p></p>
+<p>Pada Gambar 2, subnet 10.1.0.0/16 selanjutnya disubnet dengan meminjam 8 bit lagi. Ini menciptakan 256 subnet dengan mask /24. Mask ini memungkinkan 254 alamat host per subnet. Subnet yang berkisar dari 10.1.0.0/24 hingga 10.1.255.0/24 adalah subnet dari subnet 10.1.0.0/16.</p>
+<p></p>
+<p>Pada Gambar 3, subnet 10.2.0.0/16 juga disubnet lebih lanjut dengan mask /24 yang memungkinkan 254 alamat host per subnet. Subnet yang berkisar dari 10.2.0.0/24 hingga 10.2.255.0/24 adalah subnet dari subnet 10.2.0.0/16.</p>
+<p></p>
+<p>Pada Gambar 4, subnet 10.3.0.0/16 selanjutnya disubnet dengan mask /28, sehingga menghasilkan 4.096 subnet dan memungkinkan 14 alamat host per subnet. Subnet yang berkisar dari 10.3.0.0/28 hingga 10.3.255.240/28 adalah subnet dari subnet 10.3.0.0/16.</p>
+<p></p>
+<p>Pada Gambar 5, subnet 10.4.0.0/16 selanjutnya disubnet dengan mask /20, sehingga menghasilkan 16 subnet dan memungkinkan 4.094 alamat host per subnet. Subnet yang berkisar dari 10.4.0.0/20 hingga 10.4.240.0/20 adalah subnet dari subnet 10.4.0.0/16. Subnet /20 ini cukup besar untuk membuat subnet lebih jauh lagi, sehingga memungkinkan lebih banyak jaringan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.1.3 Routers Are Computers</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Functions of a Router</h2>
+      </div>
+      <div id="content">
+          <p>Most network capable devices (i.e., computers, tablets, and smartphones) require the following components to operate, as shown in Figure 1:</p>
+          <p>
+            <ul>
+              <li>Central processing unit (CPU)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Operating system (OS)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Memory and storage (RAM, ROM, NVRAM, Flash, hard drive)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>A router is essentially a specialized computer. It requires a CPU and memory to temporarily and permanently store data to execute operating system instructions, such as system initialization, routing functions, and switching functions. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Cisco devices use the Cisco Internetwork Operating System (IOS) as the system software.</p>
+          <p></p>
+          <p>The table in Figure 2 summarizes the types of router memory, the volatility, and examples of what is stored in each.</p>
+          <p></p>
+          <p>Routers store data using:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Random Access Memory (RAM) </b>- Provides temporary storage for various applications and processes including the running IOS, the running configuration file, various tables (i.e., IP routing table, Ethernet ARP table) and buffers for packet processing. RAM is referred to as volatile because it loses its contents when power is turned off.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Read-Only Memory (ROM) </b>- Provides permanent storage for bootup instructions, basic diagnostic software and a limited IOS in case the router cannot load the full featured IOS. ROM is firmware and referred to as non-volatile because it does not lose its contents when power is turned off.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Non-Volatile Random Access Memory (NVRAM) </b>- Provides permanent storage for the startup configuration file (startup-config). NVRAM is non-volatile and does not lose its contents when power is turned off.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Flash </b>- Provides permanent storage for the IOS and other system-related files. The IOS is copied from flash into RAM during the bootup process. Flash is non-volatile and does not lose its contents when power is turned off. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Unlike a computer, a router does not have video adapters or sound card adapters. Instead, routers have specialized ports and network interface cards to interconnect devices to other networks. Figure 3 identifies some of these ports and interfaces.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

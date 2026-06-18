@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.1.4 Mengatasi Sampah Secara Berkelas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>Pengalamatan Berkelas</h2>
+</div>
+<div id="content">
+<p>Pengalamatan classful yang ditentukan dalam RFC 790 dan 791 mengakibatkan pemborosan ruang alamat yang sangat besar. Pada masa awal Internet, organisasi diberi alamat jaringan seluruh kelas dari kelas A, B, atau C.</p>
+<p></p>
+<p>Seperti yang diilustrasikan pada gambar:</p>
+<p>
+<ul>
+<li>Kelas A memiliki 50% dari total ruang alamat. Namun, hanya 126 organisasi yang dapat diberi alamat jaringan kelas A. Konyolnya, masing-masing organisasi ini bisa memberikan alamat hingga 16 juta host. Organisasi yang sangat besar diberi seluruh blok alamat kelas A. Beberapa perusahaan dan organisasi pemerintah masih memiliki alamat kelas A. Misalnya, General Electric memiliki 3.0.0.0/8, Apple Computer memiliki 17.0.0.0/8, dan US Postal Service memiliki 56.0.0.0/8.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Kelas B memiliki 25% dari total ruang alamat. Hingga 16.384 organisasi dapat diberi alamat jaringan kelas B dan masing-masing jaringan ini dapat mendukung hingga 65.534 host. Hanya organisasi dan pemerintah terbesar yang dapat berharap untuk menggunakan seluruh 65.000 alamat tersebut. Seperti jaringan kelas A, banyak alamat IP di ruang alamat kelas B yang terbuang sia-sia.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Kelas C memiliki 12,5% dari total ruang alamat. Lebih banyak organisasi yang bisa mendapatkan jaringan kelas C, tetapi jumlah total host yang dapat mereka sambungkan terbatas. Faktanya, dalam banyak kasus, alamat kelas C seringkali terlalu kecil untuk sebagian besar organisasi skala menengah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Kelas D dan E digunakan untuk multicasting dan alamat cadangan.</li>
+</ul>
+</p>
+<p></p>
+<p>Hasil keseluruhannya adalah pengalamatan classful merupakan skema pengalamatan yang sangat boros. Solusi pengalamatan jaringan yang lebih baik harus dikembangkan. Karena alasan ini, Perutean Antar-Domain Tanpa Kelas (CIDR) diperkenalkan pada tahun 1993.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

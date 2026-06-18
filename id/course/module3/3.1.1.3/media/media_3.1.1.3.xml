@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>VLAN 1</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Semua port ditetapkan ke VLAN 1 untuk meneruskan data secara default.</li><li>VLAN asli adalah VLAN 1 secara default.</li><li>VLAN Manajemen adalah VLAN 1 secara default.</li><li>VLAN 1 tidak dapat diganti namanya atau dihapus.</li></ul></textformat>]]></text>
+</component>
+</textcomponents>

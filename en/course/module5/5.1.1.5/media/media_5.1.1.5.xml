@@ -1,0 +1,147 @@
+<textcomponents>
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activity – Part 1: Identify the Types of Inter-VLAN Routing</b><br/>Identify this topology as a legacy, router-on-a-stick, or multilayer switch inter-VLAN routing by dragging the appropriate answer to the field provided. Click Part 2 to continue this activity.]]></text></component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>R1 Interface</b><br/>Gi0/0 Trunk Link<br/><br/> <b>R1 Subinterfaces</b><br/>Gi0/0.10      10.17.10.1/28<br/>Gi0/0.20      10.17.20.1/28<br/>Gi0/0.30      10.17.30.1/28<br/><br/><b>S1 Ports</b><br/>Gi0/1 Trunk Link<br/>Gi0/3 = VLAN 10<br/>Gi0/9 = VLAN 20<br/>Gi0/17 = VLAN 30<br/><br/><b>End Devices</b><br/>PC1 – VLAN 10   10.17.10.4/28<br/>PC2 – VLAN 20   10.17.20.4/28<br/>PC3 – VLAN 30   10.17.30.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>Inter-VLAN Routing Type</b>]]></text> 
+ </component>
+ 
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Legacy]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Multilayer Switch]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the type of inter-VLAN routing used in this topology. Click Part 2 to continue.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the type of inter-VLAN routing used in this topology. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activity – Part 2: Identify the Types of Inter-VLAN Routing</b><br/>Identify this topology as a legacy, router-on-a-stick, or multilayer switch inter-VLAN routing by dragging the appropriate answer to the field provided. Click Part 3 to continue this activity.]]></text></component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>S1 Ports</b><br/>Gi0/1-Gi0/4 = Trunk<br/>VLAN 10   172.17.10.1<br/>VLAN 20   172.17.20.1<br/><br/><b>S2 Ports</b><br/>Gi0/1-Gi0/2 – Trunk<br/>Gi0/5-Gi0/6 – Trunk<br/>VLAN 10 – Gi0/11<br/><br/><b>S3 Ports</b><br/>Gi0/3-Gi0/6 = Trunk<br/>VLAN 20 – Gi0/18<br/><br/><b>End Devices</b><br/>PC1 – VLAN 10<br/>10.17.10.4/28<br/>PC2 – VLAN 20<br/>10.17.20.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s2_txt02">
+<text><![CDATA[<b>Inter-VLAN Routing Type</b>]]></text> 
+ </component>
+ 
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Legacy]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[Multilayer Switch]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the type of inter-VLAN routing used in this topology. Click Part 3 to continue.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the type of inter-VLAN routing used in this topology. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Activity – Part 3: Identify the Types of Inter-VLAN Routing</b><br/>Identify this topology as a legacy, router-on-a-stick, or multilayer switch inter-VLAN routing by dragging the appropriate answer to the field provided.]]></text></component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>R1 Interface</b><br/>Gi0/0 10.17.10.1/28<br/>Gi0/1 10.17.20.1/28<br/><br/><b>S1 Ports</b><br/>Gi0/3 = VLAN 10<br/>Gi0/17 = VLAN 20<br/><br/><b>End Devices</b><br/>PC1 – VLAN 10<br/>10.17.10.4/28<br/><br/>PC2 – VLAN 20<br/>10.17.20.4/28]]></text> 
+ </component>
+ 
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Inter-VLAN Routing Type</b>]]></text> 
+ </component>
+ 
+<component id='ID_s3_drag01'>
+	<text><![CDATA[Legacy]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+	<text><![CDATA[Router-on-a-Stick]]></text>
+</component>
+
+<component id='ID_s3_drag03'>
+	<text><![CDATA[Multilayer Switch]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the type of inter-VLAN routing used in this topology.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the type of inter-VLAN routing used in this topology. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+</textcomponents>

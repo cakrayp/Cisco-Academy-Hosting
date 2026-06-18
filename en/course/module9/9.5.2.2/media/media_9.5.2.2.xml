@@ -1,0 +1,63 @@
+<textcomponents>
+
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Example IPv6 ACL</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>IPv6 Topology</b>]]></text> 
+</component>
+
+  
+  
+
+<component id="ID_s1_table">
+  <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+	
+	<tr class="mtable_top">
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#077A77'  valign="top" width="110" class="mtitle"><font color='#ffffff' ><b>Parameter</b></font></td>
+		<td bgcolor='#077A77'  valign="top" class="mtitle"><font color='#ffffff'><b>Description</b></font></td>
+	</tr>
+
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font face="_typewriter"><b>deny | permit</b></font></td>
+		<td bgcolor='#EFF8F7' valign="top">Specifies whether to deny or permit the packet.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#ffffff' valign="top"><font face="_typewriter"><i>protocol</i></font></td>
+		<td bgcolor='#ffffff' valign="top">Enter the name or number of an Internet protocol, or an integer representing an IPv6 protocol number.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font face="_typewriter"><i>source-ipv6-prefix/prefix-length<br/><br/>destination-ipv6-address</i></font></td>
+		<td bgcolor='#EFF8F7' valign="top">The source or destination IPv6 network or class of networks for which to set deny or permit conditions.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#ffffff' valign="top"><font face="_typewriter"><b>any</b></font></td>
+		<td bgcolor='#ffffff' valign="top">Enter <font face="_typewriter"><b>any </b></font>as an abbreviation for the IPv6 prefix ::/0. This matches all addresses.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font face="_typewriter"><b>host</b></font></td>
+		<td bgcolor='#EFF8F7' valign="top">For <font face="_typewriter"><b>host </b><i>source-ipv6-address </i></font> or <font face="_typewriter"><i>destination-ipv6-address</i></font>, enter the source or destination IPv6 host address for which to set deny or permit conditions.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#ffffff' valign="top"><font face="_typewriter"><i>operator</i></font></td>
+		<td bgcolor='#ffffff' valign="top">(Optional) An operand that compares the source or destination ports of the specified protocol. Operands are lt (less than), gt (greater than), eq (equal), neq (not equal), and range.</td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font face="_typewriter"><i>port-number</i></font></td>
+		<td bgcolor='#EFF8F7' valign="top">(Optional) A decimal number or the name of a TCP or UDP port for filtering TCP or UDP, respectively.</td>
+	</tr>
+	
+	</table>]]></text>
+</component>
+  
+</textcomponents>

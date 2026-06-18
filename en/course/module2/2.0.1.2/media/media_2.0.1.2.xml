@@ -1,0 +1,22 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Switches</b><br/><br/><textformat blockindent='-14'><li>Identify connected hosts, port locations and unique MAC addresses</li><li>Record unique host addresses to a MAC address table</li><li>Send and receive data traffic using unicasts, multicasts, and broadcasts</textformat>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Full and Half-Duplex Communication</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[send AND receive, simultaneously]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>Half-Duplex Communication</b>]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[send OR receive]]></text>
+</component>
+
+</textcomponents>

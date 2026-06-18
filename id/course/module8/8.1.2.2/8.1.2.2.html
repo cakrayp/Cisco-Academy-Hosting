@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.1.2.2 Jenis Paket OSPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Karakteristik OSPF</h1>
+<h2>Pesan OSPF</h2>
+</div>
+<div id="content">
+<p>OSPF menggunakan paket link-state (LSP) untuk membangun dan memelihara kedekatan tetangga dan bertukar pembaruan perutean.</p>
+<p></p>
+<p>Gambar tersebut menunjukkan lima jenis LSP berbeda yang digunakan oleh OSPF. Setiap paket memiliki tujuan tertentu dalam proses routing OSPF:</p>
+<p>
+<ul>
+<li>
+<b>Tipe 1: Paket Halo</b>- Digunakan untuk membangun dan memelihara kedekatan dengan router OSPF lainnya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tipe 2: Paket Deskripsi Basis Data (DBD).</b>- Berisi daftar singkat LSDB router pengirim dan digunakan oleh router penerima untuk memeriksa LSDB lokal. LSDB harus identik pada semua router link-state dalam suatu area untuk membangun pohon SPF yang akurat.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tipe 3: Paket Link-State Request (LSR).</b>- Router penerima kemudian dapat meminta informasi lebih lanjut tentang entri apa pun di DBD dengan mengirimkan LSR.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tipe 4: Paket Link-State Update (LSU).</b>- Digunakan untuk membalas LSR dan mengumumkan informasi baru. LSU berisi tujuh jenis LSA yang berbeda.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tipe 5: Paket Link-State Acknowledgment (LSAck).</b>- Ketika LSU diterima, router mengirimkan LSAck untuk mengkonfirmasi penerimaan LSU. Bidang data LSAck kosong.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

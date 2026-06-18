@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.2.6 Nomor Urutan ACL Standar</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Ubah ACL IPv4</h2>
+</div>
+<div id="content">
+<p>Cisco IOS mengimplementasikan logika internal ke ACL standar. Seperti yang telah dibahas sebelumnya, bagian dari logika ini mencegah pernyataan host dikonfigurasi setelah pernyataan rentang jika host adalah anggota rentang tersebut, seperti yang ditunjukkan pada Gambar 1.</p>
+<p></p>
+<p>Bagian lain dari logika internal IOS melibatkan pengurutan internal ACE standar. Gambar 2 menunjukkan konfigurasi daftar akses standar. Pernyataan rentang yang menolak tiga jaringan dikonfigurasi terlebih dahulu diikuti oleh lima pernyataan host. Semua pernyataan host adalah pernyataan yang valid karena alamat IP hostnya bukan bagian dari pernyataan rentang yang dimasukkan sebelumnya.</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan konfigurasi yang sedang berjalan</b></span>perintah digunakan untuk memverifikasi konfigurasi ACL. Perhatikan bahwa pernyataan-pernyataan dicantumkan dalam urutan yang berbeda dengan urutan yang dimasukkan. Kami akan menggunakan<span class="cmd"><b>tampilkan daftar akses</b></span>perintah untuk memahami logika di balik ini.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3,<span class="cmd"><b>tampilkan daftar akses</b></span>perintah menampilkan ACE beserta nomor urutnya. Kita mungkin mengharapkan urutan pernyataan dalam keluaran mencerminkan urutan pemasukannya. Namun, itu<span class="cmd"><b>tampilkan daftar akses</b></span>keluaran menunjukkan bahwa hal ini tidak terjadi.</p>
+<p></p>
+<p>Urutan daftar ACE standar adalah urutan yang digunakan oleh IOS untuk memproses daftar tersebut. Perhatikan bahwa pernyataan-pernyataan tersebut dikelompokkan menjadi dua bagian, pernyataan host diikuti dengan pernyataan rentang. Nomor urut menunjukkan urutan pemasukan pernyataan, bukan urutan pemrosesan pernyataan.</p>
+<p></p>
+<p>Pernyataan host dicantumkan terlebih dahulu tetapi tidak harus sesuai urutan saat dimasukkan. IOS menempatkan pernyataan host dalam urutan menggunakan fungsi hashing khusus. Urutan yang dihasilkan mengoptimalkan pencarian entri host ACL.</p>
+<p></p>
+<p>Pernyataan rentang ditampilkan setelah pernyataan host. Pernyataan-pernyataan ini diurutkan sesuai urutan pemasukannya.</p>
+<p></p>
+<p>Ingatlah bahwa ACL standar dan bernomor dapat diedit menggunakan nomor urut. Nomor urut ditunjukkan pada<span class="cmd"><b>tampilkan daftar akses</b></span>keluaran perintah adalah nomor yang digunakan saat menghapus pernyataan individual dari daftar. Saat memasukkan pernyataan ACL baru, nomor urut hanya akan mempengaruhi lokasi pernyataan rentang dalam daftar. Pernyataan host akan selalu diurutkan menggunakan fungsi hashing.</p>
+<p></p>
+<p>Melanjutkan contoh, setelah menyimpan konfigurasi yang sedang berjalan, router dimuat ulang (reboot). Seperti yang ditunjukkan pada Gambar 3,<span class="cmd"><b>tampilkan daftar akses</b></span>perintah menampilkan ACL dalam urutan yang sama, namun pernyataannya telah dinomori ulang. Nomor urut sekarang dalam urutan numerik.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Fungsi hashing hanya diterapkan pada pernyataan host dalam daftar akses standar IPv4. Algoritme ini tidak digunakan untuk ACL yang diperluas IPv4 atau ACL IPv6. Hal ini karena ACL yang diperluas dan IPv6 memfilter lebih dari satu alamat sumber saja. Detail fungsi hashing berada di luar cakupan kursus ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

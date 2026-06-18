@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.3.1.1 Classful Network Addressing</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Review of CIDR and VLSM</h1>
+        <h2>Classful Addressing</h2>
+      </div>
+      <div id="content">
+          <p>Released in 1981, RFC 790 and RFC 791 describe how IPv4 network addresses were initially allocated based on a classification system. In the original specification of IPv4, the authors established the classes to provide three different sizes of networks for large, medium, and small organizations. As a result, class A, B, and C addresses were defined with a specific format for the high order bits. High order bits are the far left bits in a 32-bit address. </p>
+          <p></p>
+          <p>As shown in the figure:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Class A addresses begin with 0 </b>- Intended for large organizations; includes all addresses from 0.0.0.0 (<b>0</b>0000000) to 127.255.255.255 (<b>0</b>1111111). The 0.0.0.0 address is reserved for default routing and the 127.0.0.0 address is reserved for loopback testing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Class B addresses begin with 10 </b>- Intended for medium-to-large organizations; includes all addresses from 128.0.0.0 (<b>10</b>000000) to 191.255.255.255 (<b>10</b>111111). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Class C addresses begin with 110 </b>- Intended for small-to-medium organizations; includes all addresses from 192.0.0.0 (<b>110</b>00000) to 223.255.255.255 (<b>110</b>11111). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The remaining addresses were reserved for multicasting and future uses. </p>
+          <p>
+            <ul>
+              <li>
+                <b>Class D Multicast addresses begin with 1110 </b>- Multicast addresses are used to identify a group of hosts that are part of a multicast group. This helps reduce the amount of packet processing that is done by hosts, particularly on broadcast media (i.e., Ethernet LANs). Routing protocols, such as RIPv2, EIGRP, and OSPF use designated multicast addresses (RIP = 224.0.0.9, EIGRP = 224.0.0.10, OSPF 224.0.0.5, and 224.0.0.6). </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Class E Reserved IP addresses begin with 1111 </b>- These addresses were reserved for experimental and future use.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Links:</p>
+          <p></p>
+          <p>"Internet Protocol," <a href="http://www.ietf.org/rfc/rfc791.txt" target="_blank">http://www.ietf.org/rfc/rfc791.txt</a></p>
+          <p></p>
+          <p>"Internet Multicast Addresses," <a href="http://www.iana.org/assignments/multicast-addresses" target="_blank">http://www.iana.org/assignments/multicast-addresses</a></p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

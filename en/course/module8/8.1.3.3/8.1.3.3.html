@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.3.3 OSPF DR and BDR</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>OSPF Operation</h2>
+      </div>
+      <div id="content">
+          <p>Why is a DR and BDR election necessary?</p>
+          <p></p>
+          <p>Multiaccess networks can create two challenges for OSPF regarding the flooding of LSAs:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Creation of multiple adjacencies </b>- Ethernet networks could potentially interconnect many OSPF routers over a common link. Creating adjacencies with every router is unnecessary and undesirable. It would lead to an excessive number of LSAs exchanged between routers on the same network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Extensive flooding of LSAs </b>- Link-state routers flood their LSAs any time OSPF is initialized, or when there is a change in the topology. This flooding can become excessive.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>To understand the problem with multiple adjacencies, we must study a formula:</p>
+          <p></p>
+          <p>For any number of routers (designated as <i>n</i>) on a multiaccess network, there are <i>n</i> (<i>n</i> – 1) / 2 adjacencies. </p>
+          <p></p>
+          <p>Figure 1 shows a simple topology of five routers, all of which are attached to the same multiaccess Ethernet network. Without some type of mechanism to reduce the number of adjacencies, collectively these routers would form 10 adjacencies: </p>
+          <p></p>
+          <p>5 (5 – 1) / 2 = 10 </p>
+          <p></p>
+          <p>This may not seem like much, but as routers are added to the network, the number of adjacencies increases dramatically, as shown in Figure 2.</p>
+          <p></p>
+          <p>To understand the problem of extensive flooding of LSAs, play the animation in Figure 3. In the animation, R2 sends out an LSA. This event triggers every other router to also send out an LSA. Not shown in the animation are the required acknowledgments sent for every LSA received. If every router in a multiaccess network had to flood and acknowledge all received LSAs to all other routers on that same multiaccess network, the network traffic would become quite chaotic.</p>
+          <p></p>
+          <p>The solution to managing the number of adjacencies and the flooding of LSAs on a multiaccess network is the DR. On multiaccess networks, OSPF elects a DR to be the collection and distribution point for LSAs sent and received. A BDR is also elected in case the DR fails. All other routers become DROTHERs. A DROTHER is a router that is neither the DR nor the BDR.</p>
+          <p></p>
+          <p>Play the animation in Figure 4 to see the role of DR.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

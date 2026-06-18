@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.0.1.2 Berapa Biayanya</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Secara Dinamis</h1>
+<h2>Perkenalan</h2>
+</div>
+<div id="content">
+<p>
+<b>Aktivitas -</b>
+<b>Berapa harga barang ini?</b>
+</p>
+<p></p>
+<p>Kegiatan pemodelan ini menggambarkan konsep jaringan biaya routing.</p>
+<p></p>
+<p>Anda akan menjadi anggota tim yang terdiri dari lima siswa yang melakukan perjalanan untuk menyelesaikan skenario kegiatan. Satu kamera digital atau membawa perangkat Anda sendiri (BYOD) dengan kamera, stopwatch, dan berkas siswa untuk kegiatan ini diperlukan per grup. Satu orang akan berperan sebagai fotografer dan perekam acara, sesuai pilihan masing-masing kelompok. Empat anggota tim yang tersisa akan berpartisipasi aktif dalam skenario di bawah ini.</p>
+<p></p>
+<p>Ruang kelas sekolah atau universitas, lorong, area lintasan luar ruangan, tempat parkir sekolah, atau lokasi lainnya dapat berfungsi sebagai tempat kegiatan ini.</p>
+<p></p>
+<p>
+<b>Kegiatan 1</b>
+</p>
+<p>Orang yang paling tinggi dalam kelompok menetapkan garis start dan finish dengan menandai 15 langkah dari awal sampai akhir, yang menunjukkan jarak rute tim. Setiap siswa akan mengambil 15 langkah dari garis start menuju garis finis dan kemudian berhenti pada langkah ke-15—tidak diperbolehkan melangkah lebih jauh.</p>
+<p>
+<b>Catatan</b>: Tidak semua siswa dapat mencapai jarak yang sama dari garis start karena perbedaan tinggi dan langkahnya. Fotografer akan mengambil foto grup dari lokasi akhir seluruh tim setelah melakukan 15 langkah yang diperlukan.</p>
+<p></p>
+<p>
+<b>Kegiatan 2</b>
+</p>
+<p>Garis start dan finish yang baru akan ditetapkan; namun, kali ini, jarak yang lebih jauh untuk rute tersebut akan ditentukan dibandingkan jarak yang ditentukan dalam Kegiatan 1. Tidak ada langkah maksimum yang dapat digunakan sebagai dasar untuk membuat rute khusus ini. Satu per satu, siswa akan “menjalani rute baru dari awal hingga akhir dua kali”.</p>
+<p></p>
+<p>Setiap anggota tim akan menghitung langkah yang diambil untuk menyelesaikan rute tersebut. Pencatat akan menghitung waktu setiap siswa dan di akhir rute setiap anggota tim, mencatat waktu yang diperlukan untuk menyelesaikan seluruh rute dan berapa banyak langkah yang diambil, yang diceritakan oleh setiap anggota tim dan dicatat pada file siswa tim.</p>
+<p></p>
+<p>Setelah kedua kegiatan selesai, tim akan menggunakan gambar digital yang diambil untuk Kegiatan 1 dan data rekaman mereka dari file Kegiatan 2 untuk menjawab pertanyaan refleksi.</p>
+<p></p>
+<p>Jawaban kelompok dapat didiskusikan di kelas, jika waktu mengizinkan.</p>
+<p></p>
+<p>
+<a href="../../files/7.0.1.2%20How%20Much%20Does%20This%20Cost%20Instructions.pdf" target="_blank">Kegiatan Kelas - Berapa Biayanya? instruksi</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

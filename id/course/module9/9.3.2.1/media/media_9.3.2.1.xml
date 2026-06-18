@@ -1,0 +1,79 @@
+<textcomponents>
+<component id="ID_s1_title">
+  <text><![CDATA[<b>Mengonfigurasi ACL yang Diperluas</b>]]></text> 
+</component>
+
+  <component id="ID_s1_table">
+  <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#0E6360" class="liner_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="110"><font color="#ffffff" size="11"><b>Parameter</b></font></td>
+<td bgcolor="#077A77" valign="top"><font color="#ffffff" size="11"><b>Keterangan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>nomor daftar akses</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Mengidentifikasi daftar akses menggunakan nomor dalam rentang 100 hingga 199 (untuk IP ACL yang diperluas) dan 2000 hingga 2699 (IP ACL yang diperluas).</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><b>membantah</b></font></td>
+<td bgcolor="#FFFFFF" valign="top">Menolak akses jika kondisinya cocok.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><b>izin</b></font></td>
+<td bgcolor="#EFF8F7" valign="top">Mengizinkan akses jika kondisinya cocok.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><b>komentar</b></font></td>
+<td bgcolor="#FFFFFF" valign="top">Digunakan untuk memasukkan komentar atau komentar.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>protokol</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Nama atau nomor protokol Internet. Kata kunci umum meliputi<font face="_typewriter"><b>icmp</b></font>, <font face="_typewriter"><b>ip</b></font>, <font face="_typewriter"><b>tcp</b></font>, atau<font face="_typewriter"><b>udp</b></font>. Untuk mencocokkan protokol Internet apa pun (termasuk ICMP, TCP, dan UDP) gunakan<font face="_typewriter"><b>ip </b></font>kata kunci.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><i>sumber</i></font></td>
+<td bgcolor="#FFFFFF" valign="top">Nomor jaringan atau host tempat paket dikirim.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>sumber-wildcard</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Bit wildcard untuk diterapkan ke sumber.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><i>tujuan</i></font></td>
+<td bgcolor="#FFFFFF" valign="top">Nomor jaringan atau host tujuan pengiriman paket.</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>tujuan-wildcard</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">Bit wildcard untuk diterapkan ke tujuan.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><i>operator</i></font></td>
+<td bgcolor="#FFFFFF" valign="top">(Opsional) Membandingkan port sumber dan tujuan. Operan yang mungkin termasuk<font face="_typewriter"><b>lt </b></font>(kurang dari),<font face="_typewriter"><b>gt </b></font>(lebih besar dari),<font face="_typewriter"><b>eq </b></font>(setara),<font face="_typewriter"><b>berikutnya</b></font>(tidak sama), dan<font face="_typewriter"><b>jangkauan</b></font>(kisaran inklusif).</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><i>pelabuhan</i></font></td>
+<td bgcolor="#EFF8F7" valign="top">(Opsional) Nomor desimal atau nama port TCP atau UDP.</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font face="_typewriter"><b>didirikan</b></font></td>
+<td bgcolor="#FFFFFF" valign="top">(Opsional) Hanya untuk protokol TCP: Menunjukkan koneksi yang terjalin.</td>
+</tr></table>]]></text>
+  </component>
+  
+  
+  <!-- slide 2-->
+  
+  <component id="ID_s2_title">
+  <text><![CDATA[<b>Mengonfigurasi ACL yang Diperluas</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01"><text><![CDATA[<textformat blockindent="-14"><li>ACL 103 mengizinkan permintaan ke port 80 dan 443.</li><li>ACL 104 memungkinkan balasan HTTP dan HTTPS yang dibuat.</li></textformat>]]></text> 
+</component>
+
+
+
+
+
+</textcomponents>

@@ -1,0 +1,55 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Nilai Biaya Cisco OSPF Default</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Tipe Antarmuka</b>]]></text>
+</component>
+<component id="ID_txt02">
+<text><![CDATA[<b>Bandwidth Referensi dalam bps</b>]]></text>
+</component>
+
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Bandwidth Default dalam bps</b>]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>Biaya</b>]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[<b>10 Gigabit Ethernet</b><br/>10 Gbps]]></text>
+</component>
+
+
+<component id="ID_txt06">
+<text><![CDATA[<b>Gigabit Ethernet</b><br/>1Gbps]]></text>
+</component>
+<component id="ID_txt07">
+<text><![CDATA[<b>Ethernet cepat</b><br/>100Mbps]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[<b>Ethernet</b><br/>10Mbps]]></text>
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[<b>Serial</b><br/>1,544Mbps]]></text>
+</component>
+<component id="ID_txt10">
+<text><![CDATA[<b>Serial</b><br/>128kbps]]></text>
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[<b>Serial</b><br/>64kbps]]></text>
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Biaya yang Sama karena bandwidth referensi]]></text>
+</component>
+
+</textcomponents>

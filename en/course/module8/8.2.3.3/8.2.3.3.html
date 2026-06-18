@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.3.3 Adjusting the Reference Bandwidth</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>OSPF Cost</h2>
+      </div>
+      <div id="content">
+          <p>OSPF uses a reference bandwidth of 100 Mb/s for any links that are equal to or faster than a fast Ethernet connection. Therefore, the cost assigned to a fast Ethernet interface with an interface bandwidth of 100 Mb/s would equal 1. </p>
+          <p></p>
+          <p>
+            <span class="cmd">
+              <b>Cost =</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>
+                <u>100,000,000 bps</u>
+              </i>
+            </span>
+            <span class="cmd"> / </span>
+            <span class="cmd">
+              <i>
+                <u>100,000,000</u>
+              </i>
+            </span>
+            <span class="cmd">
+              <i> = </i>
+            </span>
+            <span class="cmd">
+              <i>
+                <u>1</u>
+              </i>
+            </span>
+          </p>
+          <p></p>
+          <p>While this calculation works for fast Ethernet interfaces, it is problematic for links that are faster than 100 Mb/s; because the OSPF metric only uses integers as its final cost of a link. If something less than an integer is calculated, OSPF rounds up to the nearest integer. For this reason, from the OSPF perspective, an interface with an interface bandwidth of 100 Mb/s (a cost of 1) has the same cost as an interface with a bandwidth of 100 Gb/s (a cost of 1). </p>
+          <p></p>
+          <p>To assist OSPF in making the correct path determination, the reference bandwidth must be changed to a higher value to accommodate networks with links faster than 100 Mb/s.</p>
+          <p></p>
+          <p>
+            <b>Adjusting the Reference Bandwidth</b>
+          </p>
+          <p></p>
+          <p>Changing the reference bandwidth does not actually affect the bandwidth capacity on the link; rather, it simply affects the calculation used to determine the metric. To adjust the reference bandwidth, use the<span class="cmd"><b> auto-cost reference-bandwidth </b></span><span class="cmd"><i>Mb/s </i></span>router configuration command. This command must be configured on every router in the OSPF domain. Notice that the value is expressed in Mb/s; therefore, to adjust the costs for:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Gigabit Ethernet </b>-<span class="cmd"><b> auto-cost reference-bandwidth 1000</b></span></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>10 Gigabit Ethernet </b>-<span class="cmd"><b> auto-cost reference-bandwidth 10000</b></span></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>To return to the default reference bandwidth, use the<span class="cmd"><b> auto-cost reference-bandwidth 100 </b></span>command.</p>
+          <p></p>
+          <p>The table in Figure 1 displays the OSPF cost if the reference bandwidth is set to Gigabit Ethernet. Although the metric values increase, OSPF makes better choices because it can now distinguish between FastEthernet and Gigabit Ethernet links.</p>
+          <p></p>
+          <p>Figure 2 displays the OSPF cost if the reference bandwidth is adjusted to accommodate 10 Gigabit Ethernet links. The reference bandwidth should be adjusted anytime there are links faster than FastEthernet (100 Mb/s).</p>
+          <p></p>
+          <p>
+            <b>Note</b>:<b></b> The costs represent whole numbers that have been rounded down.</p>
+          <p></p>
+          <p>In Figure 3, all routers have been configured to accommodate the Gigabit Ethernet link with the<span class="cmd"><b> auto-cost reference-bandwidth 1000 router </b></span>configuration command. The new accumulated cost to reach the R2 LAN 172.16.2.0/24 from R1:</p>
+          <p>
+            <ul>
+              <li>Serial link from R1 to R2 cost  = 647</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Gigabit Ethernet link on R2 cost =   1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Total cost to reach 172.16.2.0/24 = <b>648</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Use the<span class="cmd"><b> show ip ospf interface s0/0/0 </b></span>command to verify the current OSPF cost assigned to the R1 serial 0/0/0 interface, as shown in Figure 4. Notice how it displays a cost of 647. </p>
+          <p></p>
+          <p>The routing table of R1 in Figure 5 confirms that the metric to reach the R2 LAN is a cost of 648.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

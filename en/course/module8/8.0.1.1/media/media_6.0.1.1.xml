@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Explain the process by which link-state routers learn about other networks. </li><li>Describe the types of packets used by Cisco IOS routers to establish and maintain an OSPF network. </li><li>Explain how Cisco IOS routers achieve convergence in an OSPF network. </li><li>Configure an OSPF router ID. </li><li>Configure single-area OSPFv2 in a small, routed IPv4 network. </li><li>Explain how OSPF uses cost to determine best path. </li><li>Verify single-area OSPFv2 in a small, routed network. </li><li>Compare the characteristics and operations of OSPFv2 to OSPFv3. </li><li>Configure single-area OSPFv3 in a small, routed network. </li><li>Verify single-area OSPFv3 in a small, routed network.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

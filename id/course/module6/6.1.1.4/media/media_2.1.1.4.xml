@@ -1,0 +1,113 @@
+﻿<textcomponents>
+
+<!-- instructions -->
+<component id="ID_inst">
+	<text><![CDATA[<b>Aktivitas – Identifikasi Keuntungan dan Kerugian Perutean Statis</b><br/><br/>Tentukan apakah deskriptor perutean statis merupakan kelebihan atau kekurangan perutean statis.<br/><br/>Klik bidang yang sesuai di samping setiap deskriptor untuk menunjukkan jawaban Anda.]]></text>
+</component>
+
+<!-- buttons -->
+<component id="ID_Button01">
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id="ID_Button02">
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!--Number of rows in the table-->
+<component id="txt_numrows">
+	<text><![CDATA[6]]></text>
+</component>
+
+<!--Number of columns for the answers in the table. Do not count the question column-->
+<component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component>
+
+<!--Answer column headers-->
+<component id="txt_col1">
+	<text><![CDATA[<b>Keuntungan</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Kerugian</b>]]></text>
+</component>
+
+
+
+
+<!--Question text - blockindent code moves the text away from the left edge a bit-->
+<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+<component id="txt_q1">
+	<text><![CDATA[Kompleksitas konfigurasi meningkat seiring dengan ukuran jaringan.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Tidak diperlukan sumber daya tambahan (CPU, bandwidth, dll.).]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Perubahan topologi akan mempengaruhi konfigurasi.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Jalur rute menuju tujuan selalu sama.]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[Tabel perutean berukuran kecil dan pemeliharaannya minimal.]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[Tidak ada pembaruan otomatis yang akan dilakukan pada tabel perutean jika topologi berubah.]]></text>
+</component>
+
+
+
+<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+<component id="txt_a1">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[2]]></text>
+</component>
+
+
+
+<!-- Correct Feedback -->
+<component id="ID_titleCorrect">
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Anda telah berhasil mengidentifikasi kelebihan dan kekurangan routing statis.]]></text>
+</component>
+
+<!-- Incorrect Feedback -->
+<component id="ID_titleIncorrect">
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[Anda belum berhasil mengidentifikasi kelebihan dan kekurangan routing statis. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+</textcomponents>

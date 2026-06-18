@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.3.1 Konfigurasikan Pengaturan Dasar Router</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Pengaturan Dasar pada Router</h2>
+</div>
+<div id="content">
+<p>Router Cisco dan switch Cisco memiliki banyak kesamaan. Mereka mendukung sistem operasi modal yang serupa, struktur perintah yang serupa, dan banyak perintah yang sama. Selain itu, kedua perangkat memiliki langkah konfigurasi awal yang serupa.</p>
+<p></p>
+<p>Saat mengkonfigurasi switch atau router Cisco, tugas dasar berikut harus dilakukan terlebih dahulu:</p>
+<p>
+<ul>
+<li>
+<b>Beri nama perangkatnya</b>- Membedakannya dengan router lain.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Akses manajemen yang aman</b>- Mengamankan hak istimewa EXEC, EXEC pengguna, dan akses Telnet, dan mengenkripsi kata sandi ke tingkat tertinggi.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Konfigurasikan spanduk</b>- Memberikan pemberitahuan hukum tentang akses tidak sah.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Selalu simpan perubahan pada router dan verifikasi konfigurasi dasar dan pengoperasian router.</p>
+<p></p>
+<p>Gambar 1 sampai 4 memberikan contoh konfigurasi pengaturan dasar pada router R1:</p>
+<p>
+<ul>
+<li>Pada Gambar 1, perangkat tersebut diberi nama.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pada Gambar 2, akses manajemen diamankan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pada Gambar 3, spanduk dikonfigurasi.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Pada Gambar 4, konfigurasi disimpan.</li>
+</ul>
+</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 5 untuk mengkonfigurasi router R2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

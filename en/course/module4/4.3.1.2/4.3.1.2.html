@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.3.1.2 Routing Table Sources</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Router Operation</h1>
+        <h2>Analyze the Routing Table</h2>
+      </div>
+      <div id="content">
+          <p>On a Cisco IOS router, the<span class="cmd"><b> show ip route </b></span>command can be used to display the IPv4 routing table of a router. A router provides additional route information, including how the route was learned, how long the route has been in the table, and which specific interface to use to get to a predefined destination.</p>
+          <p></p>
+          <p>Entries in the routing table can be added as:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Local Route interfaces </b>- Added when an interface is configured and active. This entry is only displayed in IOS 15 or newer for IPv4 routes and all IOS releases for IPv6 routes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Directly connected interfaces </b>- Added to the routing table when an interface is configured and active.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Static routes </b>- Added when a route is manually configured and the exit interface is active. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dynamic routing protocol </b>- Added when routing protocols that dynamically learn about the network, such as EIGRP or OSPF, are implemented and networks are identified.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The sources of the routing table entries are identified by a code. The code identifies how the route was learned. For instance, common codes include:</p>
+          <p>
+            <ul>
+              <li>
+                <b>L </b>- Identifies the address assigned to a router’s interface. This allows the router to efficiently determine when it receives a packet for the interface instead of being forwarded.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>C </b>- Identifies a directly connected network. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>S </b>- Identifies a static route created to reach a specific network. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>D </b>- Identifies a dynamically learned network from another router using EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O </b>- Identifies a dynamically learned network from another router using the OSPF routing protocol.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Other codes are beyond the scope of this chapter.</p>
+          <p></p>
+          <p>The figure shows the routing table of R1 in a simple network. </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

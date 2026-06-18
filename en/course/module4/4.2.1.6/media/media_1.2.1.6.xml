@@ -1,0 +1,211 @@
+<textcomponents>
+
+
+
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activity</b><br/>In this activity, you are given a blank frame to build according to the scenario. Determine the destination and source MAC addresses, and the source IP and destination IP addresses that would correctly build the frame as specified. Enter your answers by dragging the MAC and IP addresses to the appropriate fields.<br/><br/><b>Scenario 1</b> – PC1 is sending data to PC2 – all devices are ARP complete. In this frame, indicate the start of the data traffic for frame building. All answers will not be used.
+]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Layer 2 Data Link Frame]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Layer 3 Data Packet]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[<b>Destination<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[<b>Source<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Type<br/>0x800]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[<b>Source IP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[<b>Destination<br/>IP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[IP Fields]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Data]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[Trailer]]></text>
+</component>
+
+<component id="ID_s1_drag01">
+<text><![CDATA[192.168.4.10]]></text>
+</component>
+
+<component id="ID_s1_drag02">
+<text><![CDATA[192.168.1.10]]></text>
+</component>
+
+<component id="ID_s1_drag03">
+<text><![CDATA[192.168.1.20]]></text>
+</component>
+
+<component id="ID_s1_drag04">
+<text><![CDATA[192.168.1.1]]></text>
+</component>
+
+<component id="ID_s1_drag05">
+<text><![CDATA[0B:02]]></text>
+</component>
+
+<component id="ID_s1_drag06">
+<text><![CDATA[0C:03]]></text>
+</component>
+
+<component id="ID_s1_drag07">
+<text><![CDATA[0A:10]]></text>
+</component>
+
+<component id="ID_s1_drag08">
+<text><![CDATA[0F:08]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully determined the source and destination MAC and IP addresses to build the frame based on the topology. Click button 2 to continue. ]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully determined the source and destination MAC and IP addresses to build the frame based on the topology. Click button 2 to continue. ]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activity</b><br/>In this activity, you are given a blank frame to build according to the scenario. Determine the destination and source MAC addresses, and the source IP and destination IP addresses that would correctly build the frame as specified. Enter your answers by dragging the MAC and IP addresses to the appropriate fields.<br/><br/><b>Scenario 2</b> – R2 has received the frame from PC1 and now needs to send it to PC2. All devices are still ARP complete. In this frame, build the frame to transfer the data from R2 to PC2. All answers will not be used.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Layer 2 Data Link Frame]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Layer 3 Data Packet]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[<b>Destination<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[<b>Source<br/>MAC</b>]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Type<br/>0x800]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[<b>Source IP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[<b>Destination<br/>IP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[IP Fields]]></text>
+</component>
+
+<component id="ID_s2_txt09">
+<text><![CDATA[Data]]></text>
+</component>
+
+<component id="ID_s2_txt10">
+<text><![CDATA[Trailer]]></text>
+</component>
+
+<component id="ID_s2_drag01">
+<text><![CDATA[192.168.4.10]]></text>
+</component>
+
+<component id="ID_s2_drag02">
+<text><![CDATA[192.168.1.10]]></text>
+</component>
+
+<component id="ID_s2_drag03">
+<text><![CDATA[192.168.4.20]]></text>
+</component>
+
+<component id="ID_s2_drag04">
+<text><![CDATA[192.168.3.2]]></text>
+</component>
+
+<component id="ID_s2_drag05">
+<text><![CDATA[0E:07]]></text>
+</component>
+
+<component id="ID_s2_drag06">
+<text><![CDATA[0D:05]]></text>
+</component>
+
+<component id="ID_s2_drag07">
+<text><![CDATA[0A:10]]></text>
+</component>
+
+<component id="ID_s2_drag08">
+<text><![CDATA[0F:08]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully determined the source and destination MAC and IP addresses to build the frame based on the topology. Click button 2 to continue. ]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully determined the source and destination MAC and IP addresses to build the frame based on the topology. Click button 2 to continue. ]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+
+</textcomponents>

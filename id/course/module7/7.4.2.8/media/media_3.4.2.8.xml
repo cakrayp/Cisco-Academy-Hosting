@@ -1,0 +1,25 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Isi Tabel Perutean</b>]]></text>
+	</component>
+	
+	<component id="ID_bodyTitle01">
+		<text><![CDATA[<b>Tabel Perutean R1</b>]]></text> 
+	</component>
+	
+	<component id="ID_bodyText01">
+		<text><![CDATA[<b>Jaringan yang Terhubung Langsung</b><textformat blockindent="-14"><ul><li>10.1.0.0/16 Jaringan Terhubung Langsung</li><li>10.2.0.0/16 Jaringan Terhubung Langsung</li><li>10.3.0.0/16 Jaringan Terhubung Langsung</li><li>10.4.0.0/16 Jaringan Terhubung Langsung</li></ul></textformat><br/><b>Jaringan Jarak Jauh</b><textformat blockindent="-14"><ul><li>10.5.0.0/16 melalui R2 serial 0/0/0, biaya = 22</li><li>10.6.0.0/16 melalui R3 serial 0/0/1, biaya = 7</li><li>10.7.0.0/16 melalui R3 serial 0/0/1, biaya = 15</li><li>10.8.0.0/16 melalui R3 serial 0/0/1, biaya = 17</li><li>10.9.0.0/16 melalui R2 serial 0/0/0, biaya = 30</li><li>10.10.0.0/16 melalui R3 serial 0/0/1, biaya = 25</li><li>10.11.0.0/16 melalui R3 serial 0/0/1, biaya = 27</li></ul></textformat>]]></text> 
+	</component>
+	<component id="ID_text01">
+			<text><![CDATA[<b>Tujuan</b>]]></text>
+		</component>
+		
+	<component id="ID_text02">
+			 <text><![CDATA[<b>Jalur Terpendek</b>]]></text> 
+	</component>
+	
+	<component id="ID_text03">
+			 <text><![CDATA[<b>Biaya</b>]]></text> 
+	</component>
+
+</textcomponents>

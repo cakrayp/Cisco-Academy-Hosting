@@ -1,0 +1,192 @@
+﻿<textcomponents>
+<!--Slide 1-->
+
+<!-- instructions -->
+<component id="ID_inst">
+	<text><![CDATA[<b>Activity – Identify Switched Network Terminology – Part A</b><br>Match the hierarchical switch characteristics to their term. Click Button 2 to continue. ]]></text>
+</component>
+
+<!-- buttons -->
+<component id="ID_Button01">
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id="ID_Button02">
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!--Number of rows in the table-->
+<component id="txt_numrows">
+	<text><![CDATA[4]]></text>
+</component>
+
+<!--Number of columns for the answers in the table. Do not count the question column-->
+<component id="txt_numcols">
+	<text><![CDATA[4]]></text>
+</component>
+
+
+<!--Answer column headers-->
+<component id="txt_col1">
+	<text><![CDATA[<b>Hierarchical</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Modularity</b>]]></text>
+</component>
+
+<component id="txt_col3">
+	<text><![CDATA[<b>Resiliency</b>]]></text>
+</component>
+
+<component id="txt_col4">
+	<text><![CDATA[<b>Flexibility</b>]]></text>
+</component>
+
+<!--Question text - blockindent code moves the text away from the left edge a bit-->
+<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+<component id="txt_q1">
+	<text><![CDATA[Provides a way for the network to always be accessible.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Allows networks to expand and provide on-demand services.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Helps for every device on every tier to employ a specific role.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Uses all network resources available to provide data traffic load sharing.]]></text>
+</component>
+
+<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+<component id="txt_a1">
+	<text><![CDATA[3]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[4]]></text>
+</component>
+
+<!-- Correct Feedback -->
+<component id="ID_titleCorrect">
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[You have correctly identified the switched network design terms.]]></text>
+</component>
+
+<!-- Incorrect Feedback -->
+<component id="ID_titleIncorrect">
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[You have not correctly identified the switched network design terms. Please <b>Reset</b> and try again.]]></text>
+</component>
+
+<!--Slide 2-->
+
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Activity – Identify Switched Network Layer Functions – Part B</b><br>Click on Core, Distribution, or Access layer fields to identify the switch functions described.]]></text>
+</component>
+ 
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Hierarchical Switched Network Platform Identifier</b>]]></text>
+</component>
+
+<!--Characteristics-->
+<component id="ID_s2_ans01">
+<text><![CDATA[The network backbone area for switching]]></text>
+</component>
+
+<component id="ID_s2_ans02">
+<text><![CDATA[Provides fault isolation and high-speed backbone switch connectivity]]></text>
+</component>
+
+<component id="ID_s2_ans03">
+<text><![CDATA[Interfaces with the backbone and users to provide intelligent switching, routing, and security]]></text>
+</component>
+
+<component id="ID_s2_ans04">
+<text><![CDATA[Allows data to flow on equal-cost switching paths to the backbone]]></text>
+</component>
+
+<component id="ID_s2_ans05">
+<text><![CDATA[Includes redundancy as an important feature for switched network access]]></text>
+</component>
+
+<component id="ID_s2_ans06">
+<text><![CDATA[Provides direct, switched network connectivity to the user]]></text>
+</component>
+
+<component id="ID_s2_ans07">
+<text><![CDATA[Helps applications to operate on the switched network more safely and securely]]></text>
+</component>
+
+<component id="ID_s2_ans08">
+<text><![CDATA[Supports Layer 2 broadcast domains and Layer 3 routing boundaries]]></text>
+</component>
+
+<component id="ID_s2_ans09">
+<text><![CDATA[Can be combined with the Distribution Layer to provide for a collapsed design]]></text>
+</component>
+
+<component id='ID_s2_break'>
+	<text><![CDATA[<br><br>]]></text>
+</component>
+
+<!--buttons-->
+<component id="ID_s2_btn01">
+<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!-- Terms -->
+<component id="ID_s2_term01">
+<text><![CDATA[<b>Core Layer</b>]]></text>
+</component>
+
+<component id="ID_s2_term02">
+<text><![CDATA[<b>Distribution Layer</b>]]></text>
+</component>
+
+<component id="ID_s2_term03">
+<text><![CDATA[<b>Access Layer</b>]]></text>
+</component>
+
+<!--feedback-->
+<component id='ID_s2_titleCorrect'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_correctText'>
+	<text><![CDATA[You have correctly matched the descriptions to the switched network design layers.]]></text>
+</component>
+
+<component id='ID_s2_titleIncorrect'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_incorrectText'>
+	<text><![CDATA[You have not correctly identified the switched network design layer as described. Please <b>Reset</b> and try again.]]></text>
+</component>
+
+<component id='ID_break'>
+	<text><![CDATA[<br><br>]]></text>
+</component>
+
+</textcomponents>

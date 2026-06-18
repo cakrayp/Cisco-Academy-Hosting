@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.2.2.1 Configuring a Router as a Stateless DHCPv6 Server</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v6</h1>
+        <h2>Stateless DHCPv6</h2>
+      </div>
+      <div id="content">
+          <p>As shown in Figure 1, there are four steps to configure a router as a DHCPv6 server:</p>
+          <p></p>
+          <p>
+            <b>Step 1. Enable IPv6 Routing </b>
+          </p>
+          <p></p>
+          <p>Use the <span class="cmd"><b>ipv6 unicast-routing </b></span>command is required to enable IPv6 routing. This command is not necessary for the router to be a stateless DHCPv6 server, but is required for sending ICMPv6 RA messages. </p>
+          <p></p>
+          <p>
+            <b>Step 2. Configure a DHCPv6 Pool</b>
+          </p>
+          <p></p>
+          <p>The<span class="cmd"><b> ipv6 dhcp pool </b></span><span class="cmd"><i>pool-name </i></span>command creates a pool and enters the router in DHCPv6 configuration mode, which is identified by the <span class="cmd">Router(config-dhcpv6)#</span> prompt.</p>
+          <p></p>
+          <p>
+            <b>Step 3. Configure Pool Parameters</b>
+          </p>
+          <p></p>
+          <p>During the SLAAC process the client received the information it needed to create an IPv6 global unicast address. The client also received the default gateway information using the source IPv6 address from the RA message, which is the link-local address of the router. However, the stateless DHCPv6 server can be configured to provide other information that might not have been included in the RA message such as DNS server address and the domain name.</p>
+          <p></p>
+          <p>
+            <b>Step 4. Configure the DHCPv6 Interface</b>
+          </p>
+          <p></p>
+          <p>The<span class="cmd"><b> ipv6 dhcp server </b></span><span class="cmd"><i>pool-name </i></span>interface configuration mode command binds the DHCPv6 pool to the interface. The router responds to stateless DHCPv6 requests on this interface with the information contained in the pool. The O flag needs to be changed from 0 to 1 using the interface command<span class="cmd"><b> ipv6 nd other-config-flag</b></span>. RA messages sent on this interface indicate that additional information is available from a stateless DHCPv6 server.</p>
+          <p></p>
+          <p>
+            <b>DHCPv6 Stateless Server Example</b>
+          </p>
+          <p></p>
+          <p>Figure 2 shows a sample configuration for a router to be configured as a stateless DHCPv6 server. Notice that router R3 is shown as a DHCPv6 client. R3 is configured as a client to help verify the stateless DHCPv6 operations.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

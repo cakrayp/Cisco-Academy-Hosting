@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.0.1.2 Aktivitas - Bisakah Kapal Selam Berenang?</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>OSPF Area Tunggal</h1>
+<h2>OSPF Area Tunggal</h2>
+</div>
+<div id="content">
+<p>
+<b>Aktivitas -</b>
+<b>Bisakah Kapal Selam Berenang?</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p></p>
+<p>Edsger Wybe Dijkstra adalah seorang programmer komputer dan fisikawan teoretis terkenal. Salah satu kutipannya yang paling terkenal adalah: “Pertanyaan apakah komputer dapat berpikir sama seperti pertanyaan apakah kapal selam dapat berenang.”  Karya Dijkstra telah diterapkan, antara lain, pada protokol routing. Dia menciptakan algoritma Shortest Path First (SPF) untuk routing jaringan.</p>
+<p></p>
+<p>Sekarang, buka PDF yang disediakan dengan kegiatan ini dan jawab pertanyaan refleksi. Simpan pekerjaan Anda.</p>
+<p></p>
+<p>Berkumpullah dengan dua teman sekelas Anda untuk membandingkan jawaban Anda.</p>
+<p></p>
+<p>Setelah menyelesaikan aktivitas ini, apakah Anda mempunyai gambaran bagaimana protokol OSPF dapat bekerja?</p>
+<p></p>
+<p>
+<a href="../../files/8.0.1.2%20Class%20Activity%20-%20Can%20Submarines%20Swim%20Instructions.pdf" target="_blank">Aktivitas Kelas - Bisakah Kapal Selam Berenang? instruksi</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

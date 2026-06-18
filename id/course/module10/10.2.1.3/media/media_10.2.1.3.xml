@@ -1,0 +1,35 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>SLAAC dan DHCPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Klien]]></text> 
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[<b>RS</b>]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA["Saya membutuhkan RA dari R1."]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[<b>Opsi RA</b>]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[Hanya SLAAC (Bawaan)]]></text> 
+</component>
+<component id="ID_txt06">
+	<text><![CDATA["Gunakan RA ini saja."]]></text> 
+</component>
+<component id="ID_txt07">
+	<text><![CDATA[DCHP tanpa kewarganegaraan: SLAAC dan DHCPv6]]></text> 
+</component>
+<component id="ID_txt08">
+	<text><![CDATA["Gunakan RA ini dan server DHCPv6."]]></text> 
+</component>
+<component id="ID_txt09">
+	<text><![CDATA[Status DHCPv6: Hanya DHCPv6]]></text> 
+</component>
+<component id="ID_txt10">
+	<text><![CDATA["Server Gunakan DHCPv6."]]></text> 
+</component>
+</textcomponents>

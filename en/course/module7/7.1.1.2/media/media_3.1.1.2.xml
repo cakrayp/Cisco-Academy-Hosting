@@ -1,0 +1,29 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Components of Routing Protocols</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Routing protocols create and maintain data structures]]></text> 
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Routing protocols exchange messages]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Routing protocols use routing algorithms to identify the best route(s)]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[I will use the EIGRP DUAL algorithm to identify what the best routes are and submit the best route(s) to the routing table.]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[I will use the EIGRP DUAL algorithm to identify what the best routes are and submit the best route(s) to the routing table.]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[EIGRP creates and maintains the: <textformat blockindent="-14"><ul><li>Neighbor table</li><li>Topology table</li></ul></textformat>]]></text> 
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[EIGRP creates and maintains the: <textformat blockindent="-14"><ul><li>Neighbor table</li><li>Topology table</li></ul></textformat>]]></text> 
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[<font color="#FFFFFF">EIGRP Hello<br/>EIGRP Update<br/>EIGRP Query<br/>EIGRP Reply<br/>EIGRP Acknowledge</font>]]></text> 
+	</component>
+</textcomponents>

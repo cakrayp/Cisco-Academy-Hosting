@@ -1,0 +1,134 @@
+<textcomponents>
+
+<!--SLIDE 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Router R1 sebagai Server DHCPv4</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Server DHCPv4</b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<b>ServerDNS</b>]]></text>
+</component>
+
+<!--SLIDE 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Mengonfigurasi DHCPv4 Langkah 1: Tidak termasuk Alamat IPv4</b>]]></text>
+</component>
+
+
+<!--SLIDE 3-->
+<component id="ID_s3_title">
+<text><![CDATA[<b>Mengonfigurasi DHCPv4 Langkah 2: Mengonfigurasi Kumpulan DHCPv4</b>]]></text>
+</component>
+
+
+<!--SLIDE 4-->
+<component id="ID_s4_title">
+<text><![CDATA[<b>Mengonfigurasi DHCPv4 Langkah 3: Mengonfigurasi Tugas Tertentu</b>]]></text>
+</component>
+
+<component id="ID_S4_table1">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#0E6360" valign="top"><font color="#ffffff"><b>Tugas yang diperlukan</b></font></td>
+<td bgcolor="#0E6360" valign="top"><font color="#ffffff"><b>Memerintah</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top">Tentukan kumpulan alamat.</td>
+<td bgcolor="#EFF8F7" valign="top"><font face="_typewriter"><b>jaringan</b><i>nomor jaringan</i>[<i>topeng | /panjang awalan</i>]</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top">Tentukan router atau gateway default.</td>
+<td bgcolor="#ffffff" valign="top"><font face="_typewriter"><b>bawaan router</b> <i>alamat</i> [<i>alamat2...alamat8</i>]</font></td>
+</tr>
+</table>]]></text>
+</component>
+
+<component id="ID_S4_table2">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#0E6360" valign="top"><font color="#ffffff"><b>Tugas Opsional</b></font></td>
+<td bgcolor="#0E6360" valign="top"><font color="#ffffff"><b>Memerintah</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top">Tentukan DNS server.</td>
+<td bgcolor="#EFF8F7" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top"><font face="_typewriter"><b>DNS server</b><i>alamat</i> [<i>alamat2...alamat8</i>]</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top">Tentukan nama domain.</td>
+<td bgcolor="#ffffff" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top"><font face="_typewriter"><b>nama domain</b> <i>domain</i></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top">Tentukan durasi sewa DHCP.</td>
+<td bgcolor="#EFF8F7" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top"><font face="_typewriter"><b>sewa</b> {<i>hari</i>[<i>selai</i>] [<i>menit</i>] | <i>tak terbatas</i>}</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top">Tentukan server NetBIOS MENANG.</td>
+<td bgcolor="#ffffff" glow="false" glowcolor="#FCA92E" type="dynamic" valign="top"><font face="_typewriter"><b>netbios-nama-server</b> <i>alamat</i> [<i>alamat2...alamat8</i>]</font></td>
+</tr>
+</table> ]]></text>
+</component>
+
+
+<!--SLIDE 5-->
+<component id="ID_s5_title">
+<text><![CDATA[<b>Contoh DHCPv4</b>]]></text>
+</component>
+
+
+<!--SLIDE 6-->
+<component id="ID_s6_title">
+		<text><![CDATA[<b>Mengonfigurasi Server DHCPv4</b>]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[mengatur ulang]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[tertarik padaku]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Tampilkan Semua]]></text>
+	</component>
+	<component id="ID_s6_SC5" fontFace='_typewriter' fontSize="10" class="font10px">
+		<feedback id="fb"><![CDATA[<b><font size = '10' face="_sans" color="#0000FF" class="font10px">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font size = '10' face="_sans" class="font10px"><b>Exclude the .1 through the .9 address, along with the .254 address from the 192.168.11.0/24 address range.</b></font>]]></existingcommands>
+		<command prompt="R1(config)#"><correctresponse><![CDATA[ip dhcp excluded-address 192.168.11.1 192.168.11.9]]></correctresponse>
+		</command>
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[ip dhcp excluded-address 192.168.11.254]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="_sans" class="font10px"><b>Configure the DHCPv4 pool LAN-POOL-2 for 192.168.11.0/24 LAN.</b></font>]]></instruction>
+		</command>	
+		<command prompt="R1(config)#">
+			<correctresponse><![CDATA[ip dhcp pool LAN-POOL-2]]></correctresponse>
+		</command>
+		<command prompt="R1(dhcp-config)#">
+			<correctresponse><![CDATA[network 192.168.11.0 255.255.255.0]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="_sans" class="font10px"><b>Configure the default gateway address.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1(dhcp-config)#">
+			<correctresponse><![CDATA[default-router 192.168.11.1]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="_sans" class="font10px"><b>Configure the DNS server address using the same address used for LAN-POOL-1.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1(dhcp-config)#">
+			<correctresponse><![CDATA[dns-server 192.168.11.5]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="_sans" class="font10px"><b>Configure the domain name using the same address used for LAN-POOL-1.</b></font>]]></instruction>
+		</command>
+		<command prompt="R1(dhcp-config)#">
+			<correctresponse><![CDATA[domain-name example.com]]></correctresponse>
+				<deviceresponse><![CDATA[<font face='courier New' fontSize="10" class="font10px">R1(dhcp-config)#</font>]]></deviceresponse> 					
+			<instruction><![CDATA[<font size = '10' face="_sans" class="font10px"><b>You successfully configured the DHCPv4 Server.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,167 @@
+﻿<textcomponents>
+
+    
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity - Part 1: Identify the OSPF States for Establishing Adjacency </b><br><br>Drag the identifying states to their corresponding OSPF adjacency statements. Not all of the identifying states will be used. Click Button 2 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[On Ethernet links, elect a Designated Router (DR) and a Backup Designated Router (BDR).]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Routers Exchange DBD packets.]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Hello packets are received from neighbors, containing the sending Router ID.]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Initiates the exchange of DBD packets.]]></text>
+</component>
+
+<component id='ID_s1_txt05'>
+	<text><![CDATA[<b>OSPF Adjacency Statements</b>]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s1_traget01'>
+	<text><![CDATA[<font color="#393536">Down State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget02'>
+	<text><![CDATA[<font color="#393536">Init State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget03'>
+	<text><![CDATA[<font color="#393536">Two-Way <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget04'>
+	<text><![CDATA[<font color="#393536">Ex-Start <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget05'>
+	<text><![CDATA[<font color="#393536">Exchange <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget06'>
+	<text><![CDATA[<font color="#393536">Loading State</font>]]></text>
+</component>
+
+<component id='ID_s1_traget07'>
+	<text><![CDATA[<font color="#393536">Full State</font>]]></text>
+</component>
+
+ 
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each OSPF state to its corresponding adjacency statement. Click Button 2 to continue this activity. ]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched the OSPF states to their corresponding adjacency statements. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+<!--slide02-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity - Part 2: Identify the OSPF States for Establishing Adjacency</b><br><br>Drag the identifying states to their corresponding OSPF adjacency statements. Not all of the identifying states will be used.]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Routers have converged.]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[No Hello packets received.]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Negotiate master/slave relationship and DBD packet sequence number.]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Routes are processed using the SPF algorithm.]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[<b>OSPF Adjacency Statements</b>]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s2_traget01'>
+	<text><![CDATA[<font color="#393536">Down State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget02'>
+	<text><![CDATA[<font color="#393536">Init State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget03'>
+	<text><![CDATA[<font color="#393536">Two-Way <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget04'>
+	<text><![CDATA[<font color="#393536">Ex-Start <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget05'>
+	<text><![CDATA[<font color="#393536">Exchange <br/>State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget06'>
+	<text><![CDATA[<font color="#393536">Loading State</font>]]></text>
+</component>
+
+<component id='ID_s2_traget07'>
+	<text><![CDATA[<font color="#393536">Full State</font>]]></text>
+</component>
+
+ 
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched the OSPF states to their corresponding adjacency statements.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched the OSPF states to their corresponding adjacency statements. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

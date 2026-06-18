@@ -1,0 +1,106 @@
+<textcomponents>
+<!--Slide 1-->
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Components of a Network Capable Device</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Network Capable Device</b>]]></text> 
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[CPU]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Operating System]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Memory and <br/> Storage]]></text> 
+	</component>
+	
+<!--Slide 2-->
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Router Memory</b>]]></text>
+	</component>
+	<component id='ID_s2_table'>
+     <text>
+      <![CDATA[ <table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+        
+		 		
+				<td colspan='3' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	   
+        <tr>
+          <td width='60px' bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Memory </b></font></td>
+          <td width='130px' bgcolor='#077A77' class="mtitle" ><font  color='#ffffff'><b>Volatile / Non-Volatile</b></font></td>
+          <td width='220px' bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Stores</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td  bgcolor='#EFF8F7' valign="top"><font color='#393536'>RAM</font></td>
+          <td  bgcolor='#EFF8F7' valign="top"><font  color='#393536'>Volatile</font></td>
+          <td bgcolor='#EFF8F7' valign="top" class="col3"><font color='#393536'><textformat blockindent='-14'>
+		  <ul class="bulletIndent20"><li>Running IOS</li>
+          <li>Running configuration file</li>
+          <li>IP routing and ARP tables</li>
+          <li>Packet buffer</li></ul></textformat>
+          </font></td>
+        </tr>
+        <tr>
+          <td bgcolor='#FFFFFF' valign="top"><font color='#393536'>ROM</font></td>
+          <td bgcolor='#FFFFFF' valign="top"><font  color='#393536'>Non-Volatile</font></td> 
+          <td bgcolor='#FFFFFF' valign="top" class="col3"><font color='#393536'>
+		  <ul class="bulletIndent20"><li><textformat blockindent='-14'>Bootup instructions</textformat></li>
+          <li><textformat blockindent='-14'>Basic diagnostic software</textformat></li>
+          <li><textformat blockindent='-14'>Limited IOS</textformat></li></ul>
+          </font></td>
+        </tr>
+        <tr>
+          <td bgcolor='#EFF8F7' valign="top"><font color='#393536'>NVRAM</font>
+          </td>
+          <td bgcolor='#EFF8F7' valign="top">
+            <font  color='#393536' >Non-Volatile</font>
+          </td>
+          <td bgcolor='#EFF8F7' valign="top" class="col3"><font  color='#393536'>
+            <ul class="bulletIndent20"><li><textformat blockindent='-14'>Startup configuration file</textformat></li></ul>
+          </font></td>
+        </tr>
+         <tr>
+          <td bgcolor='#FFFFFF' valign="top"><font  color='#393536'>Flash</font></td>
+          <td bgcolor='#FFFFFF' valign="top">
+            <font  color='#393536'>Non-Volatile</font>
+          </td>
+          <td width='170' class="col3" bgcolor='#FFFFFF' valign="top"><font  color='#393536'>
+            <ul class="bulletIndent20"><li><textformat blockindent='-14'>IOS</textformat></li>
+             <li><textformat blockindent='-14'>Other system files</textformat></li></ul>
+          </font></td>
+        </tr>         
+      </table>]]>
+    </text>
+  </component>
+<!--Slide 3-->
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Back Panel of a Router</b>]]></text>
+	</component> 
+	<component id="ID_s3_txt01">
+		<text><![CDATA[Double-Wide eHWIC Slots]]></text>
+	</component>
+	<component id="ID_s3_txt02">
+		<text><![CDATA[eHWIC 0]]></text> 
+	</component> 
+	<component id="ID_s3_txt03">
+		<text><![CDATA[AUX Port]]></text>
+	</component>
+	<component id="ID_s3_txt04">
+		<text><![CDATA[LAN Interfaces]]></text> 
+	</component> 
+	<component id="ID_s3_txt05">
+		<text><![CDATA[Two 4 GB Flash Card Slots]]></text>
+	</component>
+	<component id="ID_s3_txt06">
+		<text><![CDATA[Console USB Mini-B]]></text> 
+	</component> 
+	<component id="ID_s3_txt07">
+		<text><![CDATA[Console<br/>RJ-45]]></text>
+	</component>
+	<component id="ID_s3_txt08">
+		<text><![CDATA[USB Ports]]></text> 
+	</component> 
+</textcomponents>

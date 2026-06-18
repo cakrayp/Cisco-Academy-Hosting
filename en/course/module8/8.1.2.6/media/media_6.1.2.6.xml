@@ -1,0 +1,145 @@
+<textcomponents> 
+
+
+<!-- slide01 content-->
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Activity - Part 1: Identify OSPF Packet Types</b><br/>Drag the OSPF packet types to the fields below their corresponding function descriptions. Not all OSPF packet types will be used. Click Button 2 to continue this activity.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[Asks for specific link-state records from router to router]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+	<text><![CDATA[Sends specifically requested link-state records]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+	<text><![CDATA[Discovers neighbors and builds adjacencies between them]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Hello]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[Database Description (DBD)]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[Link-State Request (LSR)]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[Link-State Update (LSU)]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[Link-State Acknowledgment (LSAck)]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each OSPF packet type to its function description. Click Button 2 to continue.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each OSPF packet type to its function description. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<!-- slide02 content-->
+
+
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Activity - Part 2: Identify OSPF Packet Types</b><br/>Drag the OSPF packet types to the fields below their corresponding function descriptions. Not all OSPF packet types will be used.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+	<text><![CDATA[Checks for database synchronization between routers]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+	<text><![CDATA[Maintains adjacency with other OSPF routers]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+	<text><![CDATA[Confirms receipt of a link-state update packet]]></text>
+</component>
+
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Hello]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[Database Description (DBD)]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[Link-State Request (LSR)]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[Link-State Update (LSU)]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[Link-State Acknowledgment (LSAck)]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[IGRP]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each OSPF packet type to its function description.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each OSPF packet type to function description. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+</textcomponents>
+
+

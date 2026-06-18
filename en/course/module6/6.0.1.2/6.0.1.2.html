@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.0.1.2 Activity - Which Way Should We Go</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Static Routing</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity -</b>
+            <b>Which Way Should We Go?</b>
+          </p>
+          <p></p>
+          <p>A huge sporting event is about to take place in your city. To attend the event, you make concise plans to arrive at the sports arena on time to see the entire game.</p>
+          <p></p>
+          <p>There are two routes you can take to drive to the event:  </p>
+          <p>
+            <ul>
+              <li>
+                <b>Highway route</b> - It is easy to follow and fast driving speeds are allowed.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Alternative, direct route</b> - You found this route using a city map. Depending on conditions, such as the amount of traffic or congestion, this just may be the way to get to the arena on time!</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>With a partner, discuss these options. Choose a preferred route to arrive at the arena in time to see every second of the huge sporting event.</p>
+          <p></p>
+          <p>Compare your optional preferences to network traffic, which route would you choose to deliver data communications for your small- to medium-sized business? Would it be the fastest, easiest route or the alternative, direct route? Justify your choice.</p>
+          <p></p>
+          <p>Complete the modeling activity .pdf and be prepared to justify your answers to the class or with another group.</p>
+          <p></p>
+          <p>
+            <a href="../../files/6.0.1.2%20Which%20Way%20Should%20We%20Go%20Instructions.pdf" target="_blank">Class Activity - Which Way Should We Go? Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.2.2.1 Editing Standard Numbered ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Standard IPv4 ACLs </h1>
+        <h2>Modify IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Editing Numbered ACLs</b>
+          </p>
+          <p></p>
+          <p>When configuring a standard ACL, the statements are added to the running-config. However, there is no built-in editing feature that allows you to edit a change in an ACL. </p>
+          <p></p>
+          <p>There are two ways that a standard numbered ACL can be edited. </p>
+          <p></p>
+          <p>
+            <b>Method 1: Using a Text Editor</b>
+          </p>
+          <p></p>
+          <p>After someone is familiar with creating and editing ACLs, it may be easier to construct the ACL using a text editor such as Microsoft Notepad. This allows you to create or edit the ACL and then paste it into the router. For an existing ACL, you can use the <span class="cmd"><b>show running-config</b></span> command to display the ACL, copy and paste it into the text editor, make the necessary changes, and paste it back in. </p>
+          <p></p>
+          <p>
+            <b>Configuration</b>: For example, assume that the host IPv4 address in the figure was incorrectly entered. Instead of the 192.168.10.99 host, it should have been the 192.168.10.10 host. Here are the steps to edit and correct ACL 1:</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Display the ACL using the <span class="cmd"><b>show running-config</b></span> command. The example in the figure uses the <span class="cmd"><b>include</b></span> keyword to display only the ACEs.</p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>Highlight the ACL, copy it, and then paste it into Microsoft Notepad. Edit the list as required. After the ACL is correctly displayed in Microsoft Notepad, highlight it and copy it.</p>
+          <p></p>
+          <p>
+            <b>Step 3. </b>In global configuration mode, remove the access list using the <span class="cmd"><b>no access-list 1 </b></span>command. Otherwise, the new statements would be appended to the existing ACL. Then paste the new ACL into the configuration of the router.</p>
+          <p></p>
+          <p>
+            <b>Step 4. </b>Using the <span class="cmd"><b>show running-config</b></span> command, verify the changes</p>
+          <p></p>
+          <p>It should be mentioned that when using the <span class="cmd"><b>no access-list</b></span> command, different IOS software releases act differently. If the ACL that has been deleted is still applied to an interface, some IOS versions act as if no ACL is protecting your network while others deny all traffic. For this reason it is good practice to remove the reference to the access list from the interface before modifying the access list. Also, be aware that if there is an error in the new list, disable it and troubleshoot the problem. In that instance, again, the network has no ACL during the correction process.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.1.2 Mengonfigurasi SSH</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Akses Jarak Jauh yang Aman</h2>
+</div>
+<div id="content">
+<p>Sebelum mengonfigurasi SSH, sakelar harus dikonfigurasi minimal dengan nama host unik dan pengaturan konektivitas jaringan yang benar.</p>
+<p></p>
+<p>
+<b>Langkah 1. Verifikasi dukungan SSH.</b>
+</p>
+<p></p>
+<p>Gunakan<span class="cmd"><b>tunjukkan ip ssh</b></span>perintah untuk memverifikasi bahwa sakelar mendukung SSH. Jika switch tidak menjalankan IOS yang mendukung fitur kriptografi, perintah ini tidak dikenali.</p>
+<p></p>
+<p>
+<b>Langkah 2. Konfigurasikan domain IP.</b>
+</p>
+<p></p>
+<p>Konfigurasikan nama domain IP jaringan menggunakan<span class="cmd"><b>ip nama domain</b></span><span class="cmd"><i>nama domain</i></span>perintah mode konfigurasi global. Pada Gambar 1,<span class="cmd"><i>nama domain</i></span>nilai adalah<span class="cmd"><b> cisco.com</b></span>.</p>
+<p></p>
+<p>
+<b>Langkah 3. Hasilkan pasangan kunci RSA.</b>
+</p>
+<p></p>
+<p>Menghasilkan pasangan kunci RSA secara otomatis mengaktifkan SSH. Gunakan<span class="cmd"><b>kunci kripto menghasilkan rsa</b></span>perintah mode konfigurasi global untuk mengaktifkan server SSH di sakelar dan menghasilkan pasangan kunci RSA. Saat membuat kunci RSA, administrator diminta memasukkan panjang modulus. Cisco merekomendasikan ukuran modulus minimum 1.024 bit (lihat contoh konfigurasi pada Gambar 1). Panjang modulus yang lebih panjang lebih aman, namun memerlukan waktu lebih lama untuk dibuat dan digunakan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Untuk menghapus pasangan kunci RSA, gunakan<span class="cmd"><b>kunci kripto memusatkan perhatian pada rsa</b></span>perintah mode konfigurasi global. Setelah pasangan kunci RSA dihapus, server SSH otomatis dinonaktifkan.</p>
+<p></p>
+<p>
+<b>Langkah 4. Konfigurasikan otentikasi pengguna.</b>
+</p>
+<p></p>
+<p>Server SSH dapat mengautentikasi pengguna secara lokal atau menggunakan server autentikasi. Untuk menggunakan metode otentikasi lokal, buat pasangan nama pengguna dan kata sandi menggunakan<span class="cmd"><b>nama belakang</b></span><span class="cmd"><i>nama belakang</i></span><span class="cmd"><b>kata sandi</b></span><span class="cmd"><i>kata sandi</i></span>perintah mode konfigurasi global. Misalnya saja pengguna<span class="cmd"><b>admin</b></span>diberi kata sandi<span class="cmd"><b>ccna</b></span>.</p>
+<p></p>
+<p>
+<b>Langkah 5. Konfigurasikan garis vty.</b>
+</p>
+<p></p>
+<p>Aktifkan protokol SSH pada baris vty menggunakan<span class="cmd"><b>masukan transportasi ssh</b></span>perintah mode konfigurasi baris. Catalyst 2960 memiliki garis vty mulai dari 0 hingga 15. Konfigurasi ini mencegah koneksi non-SSH (seperti Telnet) dan membatasi switch untuk hanya menerima koneksi SSH. Gunakan<span class="cmd"><b>baris vty</b></span>perintah mode konfigurasi global dan kemudian<span class="cmd"><b>masuk lokal</b></span>perintah mode konfigurasi baris untuk memerlukan otentikasi lokal untuk koneksi SSH dari database nama pengguna lokal.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 2 untuk mengkonfigurasi SSH pada sakelar S1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

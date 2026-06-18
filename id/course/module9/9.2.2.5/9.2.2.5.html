@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.2.5 Statistik ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Ubah ACL IPv4</h2>
+</div>
+<div id="content">
+<p>Setelah ACL diterapkan ke antarmuka dan beberapa pengujian telah dilakukan,<span class="cmd"><b>tampilkan daftar akses</b></span>perintah akan menampilkan statistik untuk setiap pernyataan yang telah dicocokkan. Pada keluaran Gambar 1, perhatikan bahwa beberapa pernyataan telah cocok. Ketika lalu lintas dihasilkan yang harus cocok dengan pernyataan ACL, kecocokan tersebut ditampilkan di<span class="cmd"><b>tampilkan daftar akses</b></span>output perintah harus meningkat. Misalnya dalam contoh ini, jika ping dikeluarkan dari PC1 ke PC3 atau PC4, outputnya akan menunjukkan peningkatan kecocokan untuk pernyataan penolakan ACL 1.</p>
+<p></p>
+<p>Pernyataan izin dan penolakan akan melacak statistik pertandingan; namun, ingat bahwa setiap ACL memiliki penolakan tersirat sebagai pernyataan terakhir. Pernyataan ini tidak akan muncul di<span class="cmd"><b>tampilkan daftar akses</b></span>perintah, oleh karena itu, statistik untuk pernyataan itu tidak akan muncul. Untuk melihat statistik pernyataan penolakan apa pun yang tersirat, pernyataan tersebut dapat dikonfigurasi secara manual dan akan muncul di output. Kehati-hatian yang ekstrim harus diambil ketika secara manual mengkonfigurasi pernyataan penolakan apa pun, karena pernyataan tersebut akan cocok dengan semua lalu lintas. Jika pernyataan ini tidak dikonfigurasi sebagai pernyataan terakhir di ACL, hal ini dapat menyebabkan hasil yang tidak diharapkan.</p>
+<p></p>
+<p>Selama pengujian ACL, penghitung dapat dibersihkan menggunakan<span class="cmd"><b>menghapus penghitung daftar akses</b></span>memerintah. Perintah ini dapat digunakan sendiri atau dengan nomor atau nama ACL tertentu. Seperti yang ditunjukkan pada Gambar 2, perintah ini menghapus penghitung statistik untuk ACL.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.3.2.6 Mengedit ACL yang Diperluas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 yang diperluas</h1>
+<h2>Konfigurasikan ACL IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>Mengedit ACL yang diperluas dapat dilakukan dengan menggunakan proses yang sama seperti mengedit ACL standar seperti yang dibahas di bagian sebelumnya. ACL yang diperluas dapat dimodifikasi menggunakan:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Metode 1 Editor teks</b>- Dengan menggunakan metode ini, ACL disalin dan ditempelkan ke editor teks tempat perubahan dilakukan. Daftar akses saat ini dihapus menggunakan<span class="cmd"><b>tidak ada daftar akses</b></span>memerintah. ACL yang dimodifikasi kemudian ditempelkan kembali ke konfigurasi.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Metode 2 Urutan nomor</b>- Nomor urut dapat digunakan untuk menghapus atau menyisipkan pernyataan ACL. Itu<span class="cmd"><b>daftar akses ip diperluas</b></span><span class="cmd"><i>nama</i></span>perintah digunakan untuk masuk ke mode konfigurasi bernama-ACL. Jika ACL diberi nomor dan bukan diberi nama, maka nomor ACL yang digunakan dalam<span class="cmd"><i>nama</i></span>parameter. ACE dapat dimasukkan atau dihapus.</li>
+</ul>
+</p>
+<p></p>
+<p>Pada gambar, administrator perlu mengedit ACL bernama SURFING untuk memperbaiki kesalahan ketik pada pernyataan jaringan sumber. Untuk melihat nomor urut saat ini,<span class="cmd"><b>tampilkan daftar akses</b></span>perintah digunakan. Pernyataan yang akan diedit diidentifikasi sebagai pernyataan 10. Pernyataan asli dihilangkan dengan<span class="cmd"><b> no </b></span><span class="cmd"><i>urutan_#</i></span>memerintah. Pernyataan yang dikoreksi ditambahkan menggantikan pernyataan asli.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

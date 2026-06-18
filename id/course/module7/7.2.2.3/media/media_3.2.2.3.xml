@@ -1,0 +1,147 @@
+<textcomponents>  
+
+
+
+<!-- slide01 content-->
+
+<component id="ID_s1_inst">
+	<text><![CDATA[<b>Aktivitas – Bagian 1: Membandingkan RIP dan EIGRP</b><br/>Tarik protokol perutean vektor jarak yang cocok dengan setiap deskripsi ke kolom yang tersedia. Klik Tombol 2 untuk melanjutkan aktivitas.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[<b>Deskripsi Protokol Perutean vektor jarak</b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+	<text><![CDATA[<b>RIP ATAU EIGRP</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+	<text><![CDATA[Mengirim paket halo]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[Versi 2 mendukung VLSM dan perutean tanpa kelas]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+	<text><![CDATA[Batas maksimum 255 hop]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+	<text><![CDATA[Batas maksimum 15 hop]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+	<text><![CDATA[Membentuk kedekatan tetangga]]></text>
+</component>
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[MEROBEK]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap protokol perutean vektor jarak dengan deskripsinya. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap protokol perutean vektor jarak dengan deskripsinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<!-- slide02 content-->
+
+  
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Aktivitas – Bagian 2: Membandingkan RIP dan EIGRP</b><br/>Tarik protokol perutean vektor jarak yang cocok dengan setiap deskripsi ke kolom yang tersedia.]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+	<text><![CDATA[<b>Deskripsi Protokol Perutean vektor jarak</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+	<text><![CDATA[<b>RIP ATAU EIGRP</b>]]></text>
+</component>
+
+<component id="ID_s2_txt03">
+	<text><![CDATA[Pembaruan perutean siaran ke 255.255.255.255]]></text>
+</component>
+
+<component id="ID_s2_txt04">
+	<text><![CDATA[Multicast dibatasi, memicu pembaruan ke 224.0.0.10]]></text>
+</component>
+
+<component id="ID_s2_txt05">
+	<text><![CDATA[Menggunakan jarak administratif 120]]></text>
+</component>
+
+<component id="ID_s2_txt06">
+	<text><![CDATA[Pembaruan perutean dikirim setiap 30 detik]]></text>
+</component>
+
+<component id="ID_s2_txt07">
+	<text><![CDATA[Menggunakan algoritma DUAL]]></text>
+</component>
+
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[MEROBEK]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[EIGRP]]></text>
+</component>
+
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap protokol perutean vektor jarak dengan deskripsinya.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap protokol perutean vektor jarak dengan deskripsinya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.1.2.5 Penandaan VLAN Suara</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Segmentasi VLAN</h1>
+<h2>VLAN dalam Lingkungan Multi-Switched</h2>
+</div>
+<div id="content">
+<p>Seperti yang ditunjukkan pada Gambar 1, port F0/18 pada S3 dikonfigurasikan menjadi mode suara sehingga frame suara akan ditandai dengan VLAN 150. Frame data yang masuk melalui telepon IP Cisco dari PC5 tidak diberi tag. Bingkai data yang ditujukan untuk PC5 yang berasal dari port F0/18 ditandai dengan VLAN 20 dalam perjalanan ke telepon. Telepon menghapus tag VLAN sebelum data diteruskan ke PC5.</p>
+<p></p>
+<p>Cisco IP Phone berisi saklar tiga port 10/100 yang terintegrasi. Port menyediakan koneksi khusus ke perangkat berikut:</p>
+<p></p>
+<p>
+<ul>
+<li>Port 1 terhubung ke switch atau perangkat VoIP lainnya.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Port 2 adalah antarmuka internal 10/100 yang membawa lalu lintas telepon IP.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Port 3 (port akses) menghubungkan ke PC atau perangkat lain.</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika port switch telah dikonfigurasi dengan VLAN suara, hubungan antara switch dan telepon IP bertindak sebagai trunk untuk membawa lalu lintas suara yang diberi tag dan lalu lintas data yang tidak diberi tag. Komunikasi antara switch dan telepon IP difasilitasi oleh Cisco Discovery Protocol (CDP).</p>
+<p></p>
+<p>
+<b>Konfigurasi Sampel</b>
+</p>
+<p></p>
+<p>Gambar 2 menunjukkan contoh keluaran. Pembahasan tentang perintah suara Cisco IOS berada di luar cakupan kursus ini tetapi area yang disorot dalam contoh keluaran menunjukkan antarmuka F0/18 yang dikonfigurasi dengan VLAN yang dikonfigurasi untuk data (VLAN 20) dan VLAN yang dikonfigurasi untuk suara (VLAN 150).</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

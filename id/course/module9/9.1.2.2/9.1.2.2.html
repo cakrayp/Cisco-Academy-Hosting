@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.2.2 Penomoran dan Penamaan ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>ACL Standar versus IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>ACL standar dan diperpanjang dapat dibuat menggunakan nomor atau nama untuk mengidentifikasi ACL dan daftar pernyataannya.</p>
+<p></p>
+<p>Menggunakan ACL bernomor adalah metode yang efektif untuk menentukan tipe ACL pada jaringan yang lebih kecil dengan lalu lintas yang lebih homogen. Namun sejumlah tidak memberikan informasi mengenai tujuan ACL. Untuk alasan ini, dimulai dengan Cisco IOS Rilis 11.2, sebuah nama dapat digunakan untuk mengidentifikasi Cisco ACL.</p>
+<p></p>
+<p>Gambar tersebut merangkum aturan yang harus diikuti untuk menetapkan ACL bernomor dan ACL yang diberi nama.</p>
+<p></p>
+<p>Mengenai ACL yang diberi nomor, nomor 200 hingga 1299 dilewati karena nomor tersebut digunakan oleh protokol lain, yang sebagian besar merupakan protokol lawas atau usang. Kursus ini hanya berfokus pada IP ACL. Contoh nomor protokol ACL lama adalah 600 hingga 699 yang digunakan oleh AppleTalk, dan nomor 800 hingga 899 yang digunakan oleh IPX.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

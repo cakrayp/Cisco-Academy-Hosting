@@ -1,0 +1,38 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Packet Filtering</b>]]></text>
+</component>
+<component id="ID_osi_header">
+<text><![CDATA[<b>OSI Model</b>]]></text>
+</component>
+
+
+<component id="ID_osi_txt07">
+<text><![CDATA[Application]]></text> 
+</component>
+<component id="ID_osi_txt06">
+<text><![CDATA[Presentation]]></text> 
+</component>
+<component id="ID_osi_txt05">
+<text><![CDATA[Session]]></text> 
+</component>
+<component id="ID_osi_txt04">
+<text><![CDATA[Transport]]></text> 
+</component>
+<component id="ID_osi_txt03">
+<text><![CDATA[Network]]></text>
+</component>
+<component id="ID_osi_txt02">
+<text><![CDATA[Data Link]]></text>
+</component>
+<component id="ID_osi_txt01">
+<text><![CDATA[Physical]]></text>
+</component>
+
+<component id="ID_bubble01">
+<text><![CDATA[Packet filtering works at Layer 3 and Layer 4]]></text>
+</component>
+
+
+</textcomponents>

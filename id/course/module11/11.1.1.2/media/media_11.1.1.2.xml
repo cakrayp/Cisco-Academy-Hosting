@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Perbatasan NAT</b>]]></text>
+</component>
+<component id="ID_txt01">
+   <text><![CDATA[Stub Network: Hanya satu titik keluar ke Internet]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[Router perbatasan berkemampuan NAT]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Ruang Alamat Publik</b>]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[Internet]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[pelayan]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[<b>Ruang Alamat Pribadi</b>]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[ISP]]></text>
+      </component>
+</textcomponents>

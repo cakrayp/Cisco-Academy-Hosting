@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Port Security</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Sticky Secure</b>]]></text> 
+  </component>
+   <component id="ID_Body_title01">
+  <text><![CDATA[<b>Implement security on all switch ports to:</b>]]></text> 
+  </component>
+<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14' ><li>Specify a single MAC address or a group of valid MAC addresses allowed on a port.</li><li>Specify that a port automatically shuts down if unauthorized MAC addresses are detected.</li></textformat>]]></text>
+	</component>	
+ 
+  <component id="ID_Body_txt02">
+ <text><![CDATA[<textformat blockindent='-14' ><li>Learned dynamically, converted to sticky secure MAC addresses stored in the running-config.</li><li>Removed from the running-config if port security is disabled.</li><li>Lost when the switch reboots (power cycled).</li><li>Saving sticky secure MAC addresses in the startup-config makes them permanent and the switch retains them after a reboot.</li><li>Disabling sticky learning converts sticky MAC addresses to dynamic secure addresses and removes them from the running-config.</li></textformat>]]></text>
+  </component>
+</textcomponents>

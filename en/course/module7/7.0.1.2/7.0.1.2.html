@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.0.1.2 How Much Does This Cost</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.0.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Routing Dynamically</h1>
+        <h2>Introduction</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity - </b>
+            <b>How Much Does This Cost?</b>
+          </p>
+          <p></p>
+          <p>This modeling activity illustrates the network concept of routing cost. </p>
+          <p></p>
+          <p>You will be a member of a team of five students who travel routes to complete the activity scenarios. One digital camera or bring your own device (BYOD) with camera, a stopwatch, and the student file for this activity will be required per group. One person will function as the photographer and event recorder, as selected by each group. The remaining four team members will actively participate in the scenarios below.</p>
+          <p></p>
+          <p>A school or university classroom, hallway, outdoor track area, school parking lot, or any other location can serve as the venue for these activities.</p>
+          <p></p>
+          <p>
+            <b>Activity 1</b>
+          </p>
+          <p>The tallest person in the group establishes a start and finish line by marking 15 steps from start to finish, indicating the distance of the team route. Each student will take 15 steps from the start line toward the finish line and then stop on the 15th step—no further steps are allowed. </p>
+          <p>
+            <b>Note</b>: Not all of the students may reach the same distance from the start line due to their height and stride differences. The photographer will take a group picture of the entire team’s final location after taking the 15 steps required. </p>
+          <p></p>
+          <p>
+            <b>Activity 2</b>
+          </p>
+          <p>A new start and finish line will be established; however, this time, a longer distance for the route will be established than the distance specified in Activity 1. No maximum steps are to be used as a basis for creating this particular route. One at a time, students will “walk the new route from beginning to end twice”. </p>
+          <p></p>
+          <p>Each team member will count the steps taken to complete the route. The recorder will time each student and at the end of each team member’s route, record the time that it took to complete the full route and how many steps were taken, as recounted by each team member and recorded on the team’s student file.</p>
+          <p></p>
+          <p>After both activities have been completed, teams will use the digital picture taken for Activity 1 and their recorded data from Activity 2 file to answer the reflection questions.</p>
+          <p></p>
+          <p>Group answers can be discussed as a class, time permitting.</p>
+          <p></p>
+          <p>
+            <a href="../../files/7.0.1.2%20How%20Much%20Does%20This%20Cost%20Instructions.pdf" target="_blank">Class Activity - How Much Does This Cost? Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

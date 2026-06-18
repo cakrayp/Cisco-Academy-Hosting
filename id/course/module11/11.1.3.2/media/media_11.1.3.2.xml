@@ -1,0 +1,11 @@
+<textcomponents>
+
+<component id="ID_title_txt">
+<text><![CDATA[<b>Kekurangan NAT</b>]]></text>
+</component>
+
+<component id="ID_body_txt">
+<text><![CDATA[<li>Kinerja menurun.</li><li>Fungsionalitas terdegradasi end-to-end.</li><li>Ketertelusuran IP ujung ke ujung hilang.</li><li>Tunneling menjadi lebih rumit.</li><li>Memulai koneksi TCP dapat terganggu.</li>]]></text>
+</component>
+
+</textcomponents>

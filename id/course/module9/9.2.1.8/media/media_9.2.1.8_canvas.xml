@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_title" />
+			<element type="ROUTER" textId="staticTxt" width="458" height="150" x="5.95" y="53.95" style="font-family:Courier New"/>
+			<element type="TEXT" compId="ID_txt01" width="104" x="5.35" y="33.85" align="left" expand="right" /> 
+			<element type="ROUTER" textId="staticTxt1" width="460" height="165" x="5.95" y="224.95" style="font-family:Courier New"/>
+			<element type="TEXT" compId="ID_txt02" width="104" x="5.35" y="206" align="left" expand="right" /> 
+	</slide>
+	<text id="staticTxt"><![CDATA[R1(konfigurasi)#<b>access-list 1 komentar Jangan izinkan stasiun kerja Tamu lewat</b><br/>R1(konfigurasi)#<b>daftar akses 1 menolak host 192.168.10.10</b><br/>R1(konfigurasi)#<b>daftar akses 1 komentar Izinkan perangkat dari semua subnet 192.168.x.x lainnya</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 192.168.0.0 0.0.255.255</b><br/>R1(konfigurasi)#<b>antarmuka s0/0/0</b><br/>R1(config-if)#<b>grup akses ip 1 keluar</b><br/>R1(config-if)#]]></text>
+	<text id="staticTxt1"><![CDATA[<pre>
+R1(config)#<b>daftar akses ip standar NO_ACCESS</b>
+R1(config-std-nacl)#<b>komentar Jangan izinkan akses dari Lab<br/>stasiun kerja</b>
+R1(config-std-nacl)#<b>tolak tuan rumah 192.168.11.10</b>
+R1(config-std-nacl)#<b>komentar Izinkan akses dari semua jaringan lain</b>
+R1(config-std-nacl)#<b>mengizinkan apa pun</b>
+R1(config-std-nacl)#<b>KELUAR</b>
+R1(config-std-nacl)#<b>antarmuka G0/0</b>
+R1(config-if)#<b>grup akses ip NO_ACCESS keluar</b>
+R1(config-if)#</pre>
+]]></text>
+</data>

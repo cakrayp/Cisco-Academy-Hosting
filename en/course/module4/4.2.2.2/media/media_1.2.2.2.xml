@@ -1,0 +1,48 @@
+<textcomponents>
+   
+<component id="ID_title">
+<text><![CDATA[<b>Hop Count Versus Bandwidth as a Metric</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Hop Count]]></text>
+</component>
+
+ <component id="ID_txt02">
+    <text><![CDATA[56Kbps]]></text>
+</component>
+
+ <component id="ID_txt03">
+<text><![CDATA[Bandwidth]]></text>
+</component>
+
+
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+
+</textcomponents>

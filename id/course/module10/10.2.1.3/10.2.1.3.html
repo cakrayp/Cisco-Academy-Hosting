@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.1.3 SLAAC dan DHCPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>SLAAC dan DHCPv6</h2>
+</div>
+<div id="content">
+<p>Keputusan apakah klien dikonfigurasi untuk mendapatkan informasi pengalamatan IPv6 secara otomatis menggunakan SLAAC, DHCPv6, atau kombinasi keduanya bergantung pada pengaturan dalam pesan RA. Pesan ICMPv6 RA berisi dua tanda untuk menunjukkan opsi mana yang harus digunakan klien.</p>
+<p></p>
+<p>Dua tanda tersebut adalah tanda Konfigurasi Alamat Terkelola (tanda M) dan tanda Konfigurasi Lainnya (tanda O).</p>
+<p></p>
+<p>Menggunakan kombinasi flag M dan O yang berbeda, pesan RA memiliki salah satu dari tiga opsi pengalamatan untuk perangkat IPv6, seperti yang ditunjukkan pada gambar:</p>
+<p>
+<ul>
+<li>SLAAC (khusus Iklan Router)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>DHCPv6 Tanpa Status (Iklan Router dan DHCPv6)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>DHCPv6 berstatus (hanya DHCPv6)</li>
+</ul>
+</p>
+<p></p>
+<p>Terlepas dari opsi yang digunakan, RFC 4861 merekomendasikan agar semua perangkat IPv6 melakukan Deteksi Alamat Duplikat (DAD) pada alamat unicast mana pun, termasuk alamat yang dikonfigurasi menggunakan SLAAC atau DHCPv6.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Meskipun pesan RA menentukan proses yang harus digunakan klien dalam memperoleh alamat IPv6 secara dinamis, sistem operasi klien dapat memilih untuk mengabaikan pesan RA dan menggunakan layanan server DHCPv6 secara eksklusif.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.2.4.1 Tugas Pemecahan Masalah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.2.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v6</h1>
+<h2>Pecahkan masalah DHCPv6</h2>
+</div>
+<div id="content">
+<p>Pemecahan masalah DHCPv6 mirip dengan pemecahan masalah DHCPv4.</p>
+<p></p>
+<p>
+<b>Tugas Pemecahan Masalah 1. Menyelesaikan Konflik</b>
+</p>
+<p></p>
+<p>Mirip dengan alamat IPv4, sewa alamat IPv6 dapat berakhir pada klien yang masih perlu terhubung ke jaringan. Itu<span class="cmd"><b>tampilkan konflik ipv6 dhcp</b></span>perintah menampilkan konflik alamat apa pun yang dicatat oleh server DHCPv6 stateful. Jika konflik alamat IPv6 terdeteksi, klien biasanya menghapus alamat tersebut dan membuat alamat baru menggunakan SLAAC atau DHCPv6 stateful.</p>
+<p></p>
+<p>
+<b>Tugas Pemecahan Masalah 2. Verifikasi Metode Alokasi</b>
+</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan antarmuka ipv6</b></span><span class="cmd"><i>antarmuka</i></span>perintah dapat digunakan untuk memverifikasi metode alokasi alamat yang ditunjukkan dalam pesan RA seperti yang ditunjukkan oleh pengaturan flag M dan O. Informasi ini ditampilkan di baris terakhir keluaran. Jika klien tidak menerima informasi alamat IPv6 dari server DHCPv6 stateful, hal ini mungkin disebabkan oleh tanda M dan O yang salah dalam pesan RA.</p>
+<p></p>
+<p>
+<b>Tugas Pemecahan Masalah 3. Uji dengan Alamat IPv6 Statis</b>
+</p>
+<p></p>
+<p>Saat memecahkan masalah DHCP apa pun, baik DHCPv4 atau DHCPv6, konektivitas jaringan dapat diverifikasi dengan mengonfigurasi alamat IP statis pada stasiun kerja klien. Dalam kasus IPv6, jika workstation tidak dapat menjangkau sumber daya jaringan dengan alamat IPv6 yang dikonfigurasi secara statis, akar penyebab masalahnya bukan pada SLAAC atau DHCPv6. Pada titik ini, pemecahan masalah konektivitas jaringan diperlukan.</p>
+<p></p>
+<p>
+<b>Tugas Pemecahan Masalah 4. Verifikasi Konfigurasi Port Switch</b>
+</p>
+<p></p>
+<p>Jika klien DHCPv6 tidak dapat memperoleh informasi dari server DHCPv6, verifikasi bahwa port switch diaktifkan dan beroperasi dengan benar.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Jika ada peralihan antara klien dan server DHCPv6, dan klien tidak dapat memperoleh konfigurasi DHCP, masalah konfigurasi port peralihan mungkin menjadi penyebabnya. Penyebab ini mungkin mencakup masalah dari trunking dan channeling, STP, dan RSTP.  Konfigurasi PortFast dan edge port menyelesaikan masalah klien DHCPv6 paling umum yang terjadi dengan instalasi awal switch Cisco.</p>
+<p></p>
+<p>
+<b>Tugas Pemecahan Masalah 5. Menguji Operasi DHCPv6 pada Subnet atau VLAN yang Sama</b>
+</p>
+<p></p>
+<p>Jika server DHCPv6 stateless atau stateful berfungsi dengan benar, namun berada pada jaringan IPv6 atau VLAN yang berbeda dengan klien, masalahnya mungkin ada pada agen relai DHCPv6. Antarmuka yang menghadap klien pada router harus dikonfigurasi dengan<span class="cmd"><b>tujuan relai dhcp ipv6</b></span>memerintah.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

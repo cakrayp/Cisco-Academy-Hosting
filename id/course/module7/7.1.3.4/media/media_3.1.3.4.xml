@@ -1,0 +1,97 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Pembaruan Berikutnya</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Jaringan]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Antarmuka]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Melompat]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Jaringan]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Antarmuka]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Melompat]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Jaringan]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[Antarmuka]]></text>
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[Melompat]]></text>
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt14">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt15">
+<text><![CDATA[Memperbarui]]></text>
+</component>
+
+<component id="ID_txt20">
+<text><![CDATA[Tidak ada informasi baru]]></text>
+</component>
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[Akhir]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Maju Cepat]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Berhenti sebentar]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Bermain]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Memutar ulang]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Awal]]></text>
+	</component>
+
+
+
+</textcomponents>

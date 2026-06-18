@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.4.1.3 Summary</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.4.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>This chapter has outlined how NAT is used to help alleviate the depletion of IPv4 address space. NAT for IPv4 allows network administrators to use RFC 1918 private address space while providing connectivity to the Internet, using a single or limited number of public addresses.</p>
+          <p></p>
+          <p>NAT conserves public address space and saves considerable administrative overhead in managing adds, moves, and changes. NAT and PAT can be implemented to conserve public address space and build private secure intranets without affecting the ISP connection. However, NAT has drawbacks in terms of its negative effects on device performance, security, mobility, and end-to-end connectivity and should be considered a short term implementation for address exhaustion with the long term solution being IPv6.</p>
+          <p></p>
+          <p>This chapter discussed NAT for IPv4, including:</p>
+          <p>
+            <ul>
+              <li>NAT characteristics, terminology, and general operations</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The different types of NAT including static NAT, dynamic NAT, and PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The benefits and disadvantages of NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The configuration, verification, and analysis of static NAT, dynamic NAT, and PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>How port forwarding can be used to access an internal devices from the Internet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Troubleshooting NAT using<span class="cmd"><b> show </b></span>and<span class="cmd"><b> debug </b></span>commands</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

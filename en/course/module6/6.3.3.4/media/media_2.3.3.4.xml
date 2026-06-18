@@ -1,0 +1,52 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>1st Round of Subnets</b>]]></text>
+</component>
+<component id="ID_txt02">
+<text><![CDATA[<b>Subnets of the Subnet</b>]]></text>
+</component>
+<component id="ID_txt03">
+<text><![CDATA[Subnets]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Sub-Subnets]]></text>
+</component>
+<component id="ID_txt05">
+<text><![CDATA[256 Subnets]]></text>
+</component>
+<component id="ID_txt06">
+<text><![CDATA[Starting Address Space]]></text>
+</component>
+<component id="ID_txt07">
+<text><![CDATA[Network<br>10.0.0.0/8]]></text>
+</component>
+
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Subnetting 10.0.0.0/8 to 10.0.0.0/16</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Subnetting the Subnet 10.1.0.0/16 to 10.1.0.0/24</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Subnetting the Subnet 10.2.0.0/16 to 10.2.0.0/24</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Subnetting the Subnet 10.3.0.0/16 to 10.3.0.0/28</b>]]></text>
+</component>
+<component id="ID_s5_title">
+<text><![CDATA[<b>Subnetting the Subnet 10.4.0.0/16 to 10.4.0.0/20</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[256 Subnets]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[256 Subnets]]></text>
+</component>
+<component id="ID_s4_txt01">
+  <text><![CDATA[4,096 Subnets]]></text> 
+  </component>
+<component id="ID_s5_txt01">
+  <text><![CDATA[16 Subnets]]></text> 
+  </component>
+</textcomponents>

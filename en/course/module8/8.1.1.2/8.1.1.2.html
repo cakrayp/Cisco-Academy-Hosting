@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.1.2 Features of OSPF</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>Open Shortest Path First</h2>
+      </div>
+      <div id="content">
+          <p>OSPF features, as shown in Figure 1, include:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Classless </b>- It is classless by design; therefore, it supports VLSM and CIDR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Efficient </b>- Routing changes trigger routing updates (no periodic updates). It uses the SPF algorithm to choose the best path.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fast convergence </b>- It quickly propagates network changes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Scalable </b>- It works well in small and large network sizes. Routers can be grouped into areas to support a hierarchical system. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Secure </b>- It supports Message Digest 5 (MD5) authentication. When enabled, OSPF routers only accept encrypted routing updates from peers with the same pre-shared password.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Administrative distance (AD) is the trustworthiness (or preference) of the route source. OSPF has a default administrative distance of 110. As shown in Figure 2, OSPF is preferred over IS-IS and RIP.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

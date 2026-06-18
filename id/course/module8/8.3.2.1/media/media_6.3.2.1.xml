@@ -1,0 +1,27 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Topologi OSPFv3</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Daerah 0</b>]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Alamat FE80 mewakili alamat link-lokal yang ditetapkan untuk setiap router.]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Mengonfigurasi Alamat Global-Unicast di R1</b>]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Langkah-langkah Mengonfigurasi OSPFv3</b>]]></text>
+</component>
+ 
+<component id="ID_s3_tx01">
+	   <text><![CDATA[<b>Langkah 1:</b>Aktifkan perutean unicast IPv6:<font color="#393536" face="Courier New"><b>perutean unicast ipv6</b></font>.<br/><b>Langkah 2:</b>(Opsional) Konfigurasikan alamat link-lokal.<br/><b>Langkah 3:</b>Konfigurasikan ID router 32-bit dalam mode konfigurasi router OSPFv3 menggunakan<font color="#393536" face="Courier New"><b>router-id</b></font> <font face="Courier New">rid</font>memerintah.<br/><b>Langkah 4:</b>Konfigurasikan spesifik perutean opsional seperti menyesuaikan bandwidth referensi.<br/><b>Langkah 5:</b>(Opsional) Konfigurasikan pengaturan khusus antarmuka OSPFv3. Misalnya, sesuaikan bandwidth antarmuka.<br/><b>Langkah 6:</b>Aktifkan perutean IPv6 dengan menggunakan<font color="#393536" face="Courier New"><b>area ospf ipv6</b></font>memerintah.]]></text>
+</component>
+
+
+</textcomponents>

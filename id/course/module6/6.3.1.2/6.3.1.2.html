@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.1.2 Subnet Mask Berkelas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>Pengalamatan Berkelas</h2>
+</div>
+<div id="content">
+<p>Sebagaimana ditentukan dalam RFC 790, setiap kelas jaringan memiliki subnet mask default yang terkait dengannya.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 1, jaringan kelas A menggunakan oktet pertama untuk mengidentifikasi bagian jaringan dari alamat tersebut. Ini diterjemahkan ke subnet mask kelas 255.0.0.0. Karena hanya tersisa 7 bit pada oktet pertama (ingat, bit pertama selalu 0), sehingga menghasilkan 2 pangkat 7, atau 128 jaringan. Jumlah sebenarnya adalah 126 jaringan, karena ada dua alamat kelas A yang dicadangkan (yaitu, 0.0.0.0/8 dan 127.0.0.0/8). Dengan 24 bit pada bagian host, setiap alamat kelas A mempunyai potensi untuk lebih dari 16 juta alamat host individual.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 2, jaringan kelas B menggunakan dua oktet pertama untuk mengidentifikasi bagian jaringan dari alamat jaringan. Dengan dua bit pertama ditetapkan sebagai 1 dan 0, 14 bit tersisa di dua oktet pertama untuk menetapkan jaringan, yang menghasilkan 16.384 alamat jaringan kelas B. Karena setiap alamat jaringan kelas B berisi 16 bit di bagian host, maka ia mengontrol 65.534 alamat. (Ingat bahwa dua alamat dicadangkan untuk alamat jaringan dan alamat siaran.)</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3, jaringan kelas C menggunakan tiga oktet pertama untuk mengidentifikasi bagian jaringan dari alamat jaringan. Dengan tiga bit pertama ditetapkan sebagai 1 dan 1 dan 0, 21 bit tersisa untuk menetapkan jaringan untuk lebih dari 2 juta jaringan kelas C. Namun, setiap jaringan kelas C hanya memiliki 8 bit pada bagian host, atau 254 kemungkinan alamat host.</p>
+<p></p>
+<p>Keuntungan dari menetapkan subnet mask default tertentu ke setiap kelas adalah membuat pesan pembaruan perutean menjadi lebih kecil. Protokol routing classful tidak menyertakan informasi subnet mask dalam pembaruannya. Router penerima menerapkan mask default berdasarkan nilai oktet pertama yang mengidentifikasi kelasnya.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

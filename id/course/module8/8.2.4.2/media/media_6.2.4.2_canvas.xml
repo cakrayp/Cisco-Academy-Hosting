@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+		
+		<slide>
+		<element type="TEXT" subType="TITLE" compId="ID_s1_title" />
+		<element type="ROUTER" textId="ID_s4_txt01" x="1.55" y="40.7" width="415.20" height="342.60"/>		
+		</slide>	
+	
+		<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title" />		
+			<element type="ACTIVITY" subType="SYNTAX" compId="ID_SC2" x="8" y="30" width="430" height="367" resetId="ID_sc_reset" showMeId="ID_sc_showme" showAllId="ID_sc_showall"/>
+			
+		</slide>
+	
+	
+		<text id="ID_s4_txt01"><![CDATA[R1#<b>tampilkan protokol ip</b><br/>*** Perutean IP sadar NSF ***<br/><br/>Protokol Peruteannya adalah "ospf 10"<br/>
+<span class="space">Daftar filter pembaruan keluar untuk semua antarmuka tidak</span> <br/>
+<span class="space">mengatur</span><br/>
+<span class="space">Daftar filter pembaruan masuk untuk semua antarmuka tidak</span><br/>
+<span class="space">mengatur</span><br/>
+<span class="space">ID Perute 1.1.1.1</span><br/>
+<span class="space">Jumlah area di router ini adalah 1. 1 normal 0 stub 0</span><br/>
+<span class="space">tidak</span><br/>
+<span class="space">Jalur maksimum: 4</span><br/>
+<span class="space">Perutean untuk Jaringan:</span><br/>
+<span class="space1">172.16.1.0 0.0.0.255 luas 0</span><br/>
+<span class="space1">172.16.3.0 0.0.0.3 luas 0</span><br/>
+<span class="space1">192.168.10.4 0.0.0.3 luas 0</span><br/>
+<span class="space">Sumber Informasi Perutean:</span><br/>
+<span class="space1">Gateway   Jarak   Pembaruan Terakhir</span><br/>
+<span class="space1">2.2.2.2        110   00:17:18</span><br/>
+<span class="space1">3.3.3.3        110   00:14:49</span><br/>
+<span class="space">Jarak: (standarnya adalah 110)</span><br/>R1#]]></text>
+		
+		
+	</slide>
+</data>

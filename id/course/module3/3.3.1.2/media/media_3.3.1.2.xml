@@ -1,0 +1,49 @@
+<textcomponents>
+<component id="ID_Title">
+<text><![CDATA[<b>Serangan Pemberian Tag Ganda</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Penyerang ada di VLAN 10. Mereka menandai frame untuk VLAN 10 dan memasukkan tag tambahan untuk VLAN 20.]]></text> 
+</component>
+<component id="ID_txt02">
+<text><![CDATA[Peralihan pertama menghapus tag pertama dan tidak memberi tag ulang karena lalu lintas asli tidak diberi tag ulang. Kemudian meneruskan frame ke saklar berikutnya.]]></text> 
+</component>
+<component id="ID_txt03">
+<text><![CDATA[Switch kedua memeriksa frame, melihat tag VLAN 20, dan meneruskannya sesuai dengan itu.]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Belalai<br/>VLAN asli=10]]></text> 
+</component>
+<component id="ID_txt05">
+<text><![CDATA[Sasaran (VLAN 20)]]></text> 
+</component>
+<component id="ID_txt06">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt07">
+<text><![CDATA[VLAN 10]]></text> 
+</component>
+<component id="ID_txt08">
+<text><![CDATA[VLAN 20]]></text> 
+</component>
+<component id="ID_txt09">
+<text><![CDATA[Data]]></text> 
+</component>
+<component id="ID_txt10">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt11">
+<text><![CDATA[VLAN 20]]></text> 
+</component>
+<component id="ID_txt12">
+<text><![CDATA[Data]]></text> 
+</component>
+<component id="ID_txt13">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt14">
+<text><![CDATA[Data]]></text> 
+</component>
+
+
+</textcomponents>

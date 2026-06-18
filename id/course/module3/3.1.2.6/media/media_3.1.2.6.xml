@@ -1,0 +1,171 @@
+<textcomponents>
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas - Skenario 1: Trunk VLAN beraksi</b><br/><br/>Seret Ethernet Frames (amplop warna kuning) ke PC tujuan untuk skenario tersebut. Tidak semua amplop akan digunakan dalam setiap skenario.<br/>Skenario 1: PC 1 mengirimkan siaran. PC mana yang akan menerima salinan frame siaran?]]></text>
+</component>
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Aktivitas - Skenario 2: Trunk VLAN beraksi</b><br/><br/>Seret Ethernet Frames (amplop warna kuning) ke PC tujuan untuk skenario tersebut. Tidak semua amplop akan digunakan dalam setiap skenario.<br/>Skenario 2: PC 2 mengirimkan siaran. PC mana yang akan menerima salinan frame siaran?]]></text>
+</component>
+
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Aktivitas - Skenario 3: Trunk VLAN beraksi</b><br/><br/>Seret Ethernet Frames (amplop warna kuning) ke PC tujuan untuk skenario tersebut. Tidak semua amplop akan digunakan dalam setiap skenario.<br/>Skenario 3: PC 3 mengirimkan siaran. PC mana yang akan menerima salinan frame siaran?]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s1_txt04'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s2_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s3_txt03'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt05'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Ethernet<br/>Bingkai]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Ethernet<br/>Bingkai]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[Ethernet<br/>Bingkai]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi PC tujuan yang akan menerima frame siaran. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

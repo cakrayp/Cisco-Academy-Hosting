@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.2.2.3 Editing Standard Named ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Standard IPv4 ACLs </h1>
+        <h2>Modify IPv4 ACLs</h2>
+      </div>
+      <div id="content">
+          <p>In a previous example, sequence numbers were used to edit a standard numbered ACL. By referring to the statement sequence numbers, individual statements can easily be inserted or deleted. This method can also be used to edit standard named ACLs.</p>
+          <p></p>
+          <p>The figure shows an example of inserting a line to a named ACL. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>In the first <span class="cmd"><b>show</b></span> command output, you can see that the ACL named NO_ACCESS has two numbered lines indicating access rules for a workstation with the IPv4 address 192.168.11.10. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The <span class="cmd"><b>ip access-list standard</b></span> command used to configure named ACLs. From named access list configuration mode statements can be inserted or removed. The <span class="cmd"><b>no </b></span><span class="cmd"><i>sequence-number</i></span> command is used to delete individual statements.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>To add a statement to deny another workstation requires inserting a numbered line. In the example, the workstation with the IPv4 address 192.168.11.11 is being added using a new sequence number of 15. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The final <span class="cmd"><b>show</b></span> command output verifies that the new workstation is now denied access.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

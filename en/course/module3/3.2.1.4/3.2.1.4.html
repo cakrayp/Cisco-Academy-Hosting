@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>3.2.1.4 Changing VLAN Port Membership</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>VLAN Implementations</h1>
+        <h2>VLAN Assignment</h2>
+      </div>
+      <div id="content">
+          <p>There are a number of ways to change VLAN port membership. Figure 1 shows the syntax for changing a switch port to VLAN 1 membership with the<span class="cmd"><b> no switchport access vlan </b></span>interface configuration mode command. </p>
+          <p></p>
+          <p>Interface F0/18 was previously assigned to VLAN 20. The<span class="cmd"><b> no switchport access vlan </b></span>command is entered for interface F0/18. Examine the output in the<span class="cmd"><b> show vlan brief </b></span>command that immediately follows as shown in Figure 2. The<span class="cmd"><b> show vlan brief </b></span>command displays the VLAN assignment and membership type for all switch ports. The<span class="cmd"><b> show vlan brief </b></span>command displays one line for each VLAN. The output for each VLAN includes the VLAN name, status, and switch ports.</p>
+          <p></p>
+          <p>VLAN 20 is still active, even though no ports are assigned to it. In Figure 3, the<span class="cmd"><b> show interfaces f0/18 switchport </b></span>output verifies that the access VLAN for interface F0/18 has been reset to VLAN 1.</p>
+          <p></p>
+          <p>A port can easily have its VLAN membership changed. It is not necessary to first remove a port from a VLAN to change its VLAN membership. When an access port has its VLAN membership reassigned to another existing VLAN, the new VLAN membership simply replaces the previous VLAN membership. In Figure 4, port F0/11 is assigned to VLAN 20.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 5 to change VLAN port membership.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

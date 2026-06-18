@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.3.3 Konfigurasikan Antarmuka Router IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Pengaturan Dasar pada Router</h2>
+</div>
+<div id="content">
+<p>Mengkonfigurasi antarmuka IPv6 mirip dengan mengkonfigurasi antarmuka untuk IPv4. Sebagian besar perintah konfigurasi dan verifikasi IPv6 di Cisco IOS sangat mirip dengan rekan-rekan IPv4 mereka. Dalam banyak kasus, satu-satunya perbedaan adalah penggunaan<span class="cmd"><b>ipv6</b></span>di tempat<span class="cmd"><b> ip </b></span>dalam perintah.</p>
+<p></p>
+<p>Antarmuka IPv6 harus:</p>
+<p>
+<ul>
+<li>
+<b>Dikonfigurasi dengan alamat IPv6 dan subnet mask</b>- Gunakan<span class="cmd"><b>alamat ipv6</b></span><span class="cmd"><i>alamat ipv6</i></span><span class="cmd">/</span><span class="cmd"><i>panjang awalan</i></span><span class="cmd"><b>[tautan-lokal | eui-64]</b></span>perintah konfigurasi antarmuka.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Diaktifkan</b>- Antarmuka harus diaktifkan menggunakan<span class="cmd"><b>tidak ada penutupan</b></span>memerintah.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Sebuah antarmuka dapat menghasilkan alamat link-lokal IPv6 sendiri tanpa memiliki alamat unicast global dengan menggunakan<span class="cmd"><b>aktifkan ipv6</b></span>perintah konfigurasi antarmuka.</p>
+<p></p>
+<p>Tidak seperti IPv4, antarmuka IPv6 biasanya memiliki lebih dari satu alamat IPv6. Minimal, perangkat IPv6 harus memiliki alamat link-lokal IPv6 tetapi kemungkinan besar juga memiliki alamat unicast global IPv6. IPv6 juga mendukung kemampuan antarmuka untuk memiliki beberapa alamat unicast global IPv6 dari subnet yang sama. Perintah berikut dapat digunakan untuk membuat alamat IPv6 global unicast atau link-local secara statis:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>alamat ipv6</b>
+</span>
+<span class="cmd">
+<i>alamat ipv6</i>
+</span>
+<span class="cmd">/</span>
+<span class="cmd">
+<i>panjang awalan</i>
+</span>- Membuat alamat IPv6 unicast global seperti yang ditentukan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>alamat ipv6</b>
+</span>
+<span class="cmd">
+<i>alamat ipv6</i>
+</span>
+<span class="cmd">/</span>
+<span class="cmd">
+<i>panjang awalan</i>
+</span>
+<span class="cmd">
+<b>eui-64</b>
+</span>
+<b></b>- Mengonfigurasi alamat IPv6 unicast global dengan pengidentifikasi antarmuka (ID) dalam 64 bit tingkat rendah dari alamat IPv6 menggunakan proses EUI-64.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>alamat ipv6</b>
+</span>
+<span class="cmd">
+<i>alamat ipv6</i>
+</span>
+<span class="cmd">/</span>
+<span class="cmd">
+<i>panjang awalan</i>
+</span>
+<span class="cmd">
+<b>tautan-lokal</b>
+</span>
+<b></b>- Mengonfigurasi alamat link-lokal statis pada antarmuka yang digunakan sebagai pengganti alamat link-lokal yang dikonfigurasi secara otomatis ketika alamat IPv6 unicast global ditetapkan ke antarmuka atau diaktifkan menggunakan<span class="cmd"><b>aktifkan ipv6</b></span>perintah antarmuka. Ingat, itu<span class="cmd"><b>aktifkan ipv6</b></span>perintah antarmuka digunakan untuk secara otomatis membuat alamat link-lokal IPv6 baik alamat unicast global IPv6 telah ditetapkan atau belum.</li>
+</ul>
+</p>
+<p></p>
+<p>Dalam contoh topologi yang ditunjukkan pada Gambar 1, R1 harus dikonfigurasi untuk mendukung alamat jaringan IPv6 berikut:</p>
+<p>
+<ul>
+<li>2001:0DB8:ACAD:0001:/64 atau 2001:DB8:ACAD:1::/64</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>2001:0DB8:ACAD:0002:/64 atau 2001:DB8:ACAD:2::/64</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>2001:0DB8:ACAD:0003:/64 atau 2001:DB8:ACAD:3::/64</li>
+</ul>
+</p>
+<p></p>
+<p>Ketika router dikonfigurasi menggunakan<span class="cmd"><b>perutean unicast ipv6</b></span>perintah konfigurasi global, router mulai mengirimkan pesan Iklan Router ICMPv6 keluar antarmuka. Hal ini memungkinkan PC yang terhubung ke antarmuka untuk secara otomatis mengkonfigurasi alamat IPv6 dan mengatur gateway default tanpa memerlukan layanan server DHCPv6. Alternatifnya, PC yang terhubung ke jaringan IPv6 bisa mendapatkan alamat IPv6 yang ditetapkan secara statis, seperti yang ditunjukkan pada Gambar 2. Perhatikan bahwa alamat gateway default yang dikonfigurasi untuk PC1 adalah alamat unicast global IPv6 dari antarmuka R1 GigabitEthernet 0/0.</p>
+<p></p>
+<p>Antarmuka router dalam contoh topologi harus dikonfigurasi dan diaktifkan seperti yang ditunjukkan pada Gambar 3 hingga 5.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 6 untuk mengkonfigurasi alamat unicast global IPv6 pada router R2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

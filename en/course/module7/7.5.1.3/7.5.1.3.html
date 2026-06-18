@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.5.1.3 Remote Network Entries</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.5.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>The Routing Table</h1>
+        <h2>Parts of an IPv4 Route Entry</h2>
+      </div>
+      <div id="content">
+          <p>The figure displays an IPv4 routing table entry on R1 for the route to remote network 172.16.4.0 on R3. The entry identifies the following information:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Route source </b>- Identifies how the route was learned. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Destination network </b>- Identifies the address of the remote network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Administrative distance </b>- Identifies the trustworthiness of the route source. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Metric </b>- Identifies the value assigned to reach the remote network. Lower values indicate preferred routes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Next hop </b>- Identifies the IPv4 address of the next router to forward the packet to.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Route timestamp </b>- Identifies from when the route was last heard.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Outgoing interface </b>- Identifies the exit interface to use to forward a packet toward the final destination.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

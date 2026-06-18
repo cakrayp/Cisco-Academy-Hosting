@@ -1,0 +1,70 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+/*#flashContent, #flashContent div {border:1px solid red;}*/
+
+#ID_s1_table {
+    height: 283px;
+    overflow-y: scroll;
+    width: 429px !important;
+}
+
+
+
+
+
+#ID_s3_01 {line-height:13px;}
+
+/*.tb { border:2px solid #98D3D1;font-weight: bold; border-collapse:collapse;}
+.tb tr td { border:4px solid #98D3D1}
+.tb_top {line-height:1px; padding:0px; background-color:#0E6360 !important;}
+.tb_title {background-color:#0E6360 !important; color:#FFF;}
+span { font-size:16px;}
+.tb tr:nth-child(odd) { background-color:#EFF8F7;}
+.tb tr:nth-child(even) { background-color:#fff;}
+*/
+
+.mtable {line-height: 12.9px;}
+
+/*Start Common Table Css for all*/
+/*.mtable { border:2px solid #98D3D1;border-collapse:collapse; line-height: 9.9px;
+}
+.mtable tr td { border:4px solid #98D3D1}
+.mtable_top {line-height:1px; padding:0px; background-color:#0E6360 !important;}
+.mtable_title {background-color:#0E6360 !important; color:#FFF;}
+span { font-size:16px;}
+.mtable tr:nth-child(2n+1) { background-color:#EFF8F7;}
+.mtable tr:nth-child(2n) { background-color:#fff;}*/
+/*End Common Table Css for all*/
+
+
+/*table
+{
+border-width: 0 0 1px 1px;
+border-spacing: 0;
+border-collapse: collapse;
+border-style: solid;
+}
+
+table tr td
+{
+margin: 0;
+padding: 4px;
+border-width: 1px 1px 0 0;
+border-style: solid;
+}*/
+
+
+#slide_3 { font-size:11px !important;}

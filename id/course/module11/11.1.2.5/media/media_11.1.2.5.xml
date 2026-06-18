@@ -1,0 +1,71 @@
+<textcomponents>
+<component id="ID_title">
+ <text><![CDATA[Membandingkan NAT dan PAT]]></text>
+ </component>
+
+
+ <component id="ID_table01">
+ <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="mtitle" colspan="2"><font color="#393536" size="12"><b>NAT</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="msubtitle" valign="top" width="210"><font color="#ffffff" size="11"><b>Di dalam Kumpulan Alamat Global</b></font></td>
+<td bgcolor="#077A77" class="msubtitle" valign="top" width="210"><font color="#ffffff" size="11"><b>Di dalam Alamat Lokal</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.200.226</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">192.168.10.10</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">209.165.200.227</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">192.168.10.11</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.200.228</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">192.168.10.12</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">209.165.200.229</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">192.168.10.13</font></td>
+</tr>
+</table>]]></text>
+ </component>
+
+
+<component id="ID_table02">
+  <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="mtitle" colspan="2"><font color="#393536" size="12"><b>MENEPUK</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="msubtitle" valign="top" width="210"><font color="#ffffff" size="11"><b>Di dalam Alamat Global</b></font></td>
+<td bgcolor="#077A77" class="msubtitle" valign="top" width="210"><font color="#ffffff" size="11"><b>Di dalam Alamat Lokal</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.200.226:1444</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">192.168.10.10:1444</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">209.165.200.226:1445</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">192.168.10.11:1444</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">209.165.200.226:1555</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">192.168.10.12:1555</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">209.165.200.226:1556</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536" size="11">192.168.10.13:1555</font></td>
+</tr>
+</table>]]></text>
+ </component>
+
+  
+</textcomponents>

@@ -1,0 +1,90 @@
+
+<textcomponents>
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Aktivitas - Memprediksi Perilaku Dynamic Trunking Protocol (DTP).</b><br/>Kombinasi mode DTP manakah antara dua switch yang akan menjadi trunk link dan mana yang akan menjadi access link? Seret setiap label tautan ke kolom yang tersedia di topologi. Tidak semua label akan digunakan.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>KUNCI SINGKATAN</b><br/>TR = Batang<br/>AC = Akses<br/>DA = Otomatis Dinamis<br/>DD = Dinamis Diinginkan]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[DD]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt04">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt06">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt07">
+	<text><![CDATA[TR]]></text>
+</component>
+
+
+<component id="ID_txt08">
+	<text><![CDATA[DA]]></text>
+</component>
+
+<component id="ID_txt09">
+	<text><![CDATA[TR]]></text>
+</component>
+
+<component id="ID_txt10">
+	<text><![CDATA[DD]]></text>
+</component>
+
+<component id="ID_txt11">
+	<text><![CDATA[DA]]></text>
+</component>
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[BELALAI]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[MENGAKSES]]></text>
+</component>
+
+
+
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mengidentifikasi kondisi tautan yang dihasilkan untuk setiap kombinasi mode DTP.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mengidentifikasi kondisi tautan yang dihasilkan untuk setiap kombinasi mode DTP. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+</textcomponents>

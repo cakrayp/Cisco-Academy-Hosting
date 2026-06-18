@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.1.2.3 Menandai Frame Ethernet untuk Identifikasi VLAN</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Segmentasi VLAN</h1>
+<h2>VLAN dalam Lingkungan Multi-Switched</h2>
+</div>
+<div id="content">
+<p>Sakelar Catalyst 2960 Series adalah perangkat Lapisan 2. Mereka menggunakan informasi header frame Ethernet untuk meneruskan paket. Mereka tidak memiliki tabel routing. Header frame Ethernet standar tidak berisi informasi tentang VLAN yang memiliki frame tersebut; dengan demikian, ketika frame Ethernet ditempatkan pada trunk, informasi tentang VLAN yang menjadi miliknya harus ditambahkan. Proses ini, yang disebut penandaan, dilakukan dengan menggunakan header IEEE 802.1Q, yang ditentukan dalam standar IEEE 802.1Q. Header 802.1Q menyertakan tag 4-byte yang dimasukkan ke dalam header frame Ethernet asli, yang menentukan VLAN tempat frame tersebut berada.</p>
+<p></p>
+<p>Ketika switch menerima frame pada port yang dikonfigurasi dalam mode akses dan menetapkan VLAN, switch menyisipkan tag VLAN di header frame, menghitung ulang FCS, dan mengirimkan frame yang diberi tag keluar dari port trunk.</p>
+<p></p>
+<p>
+<b>Detail Bidang Tag VLAN</b>
+</p>
+<p></p>
+<p>Bidang tag VLAN terdiri dari bidang Tipe, bidang informasi kontrol tag, dan bidang FCS:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Jenis</b>- Nilai 2 byte yang disebut nilai tag protokol ID (TPID). Untuk Ethernet, disetel ke heksadesimal 0x8100.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Prioritas pengguna</b>- Nilai 3-bit yang mendukung implementasi level atau layanan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Pengidentifikasi Format Kanonik (CFI)</b>- Pengidentifikasi 1-bit yang memungkinkan frame Token Ring dibawa melalui link Ethernet.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>ID VLAN (VID)</b>- Nomor identifikasi VLAN 12-bit yang mendukung hingga 4096 ID VLAN.</li>
+</ul>
+</p>
+<p></p>
+<p>Setelah sakelar menyisipkan bidang informasi kontrol Tipe dan tag, sakelar akan menghitung ulang nilai FCS dan memasukkan FCS baru ke dalam bingkai.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

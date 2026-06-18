@@ -1,0 +1,15 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Spoofing DHCP dan Serangan Kelaparan</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Klien]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Server DHCP yang Sah]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[Penyerang DHCP Nakal]]></text>
+</component>
+</textcomponents>

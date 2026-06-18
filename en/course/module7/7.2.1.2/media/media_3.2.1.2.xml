@@ -1,0 +1,65 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Purpose of Routing Algorithms</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+   <text><![CDATA[<li>Sending and receiving updates</li>]]></text>
+</component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<li>Calculate best path and install route</li>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<li>Detect and react to topology changes</li>]]></text>
+   </component>
+
+   <component id="ID_txt04">
+      <text><![CDATA[Network]]></text>
+      </component>
+<component id="ID_txt05">
+   <text><![CDATA[Interface]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[Hop]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[Network]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[Interface]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[Hop]]></text>
+   </component>
+
+   <component id="ID_txt10">
+      <text><![CDATA[Update]]></text>
+      </component>
+
+      <!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>
+
+</textcomponents>

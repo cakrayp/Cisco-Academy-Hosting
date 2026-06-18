@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Port Forwarding on a SOHO Router</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[Web Server]]></text> 
+</component>
+  
+<component id="ID_txt02">
+  <text><![CDATA[<b>Inside Network</b>]]></text> 
+</component>
+  
+<component id="ID_txt03">
+  <text><![CDATA[<b>Internet</b>]]></text> 
+</component>
+  
+<component id="ID_txt04">
+  <text><![CDATA[Client]]></text> 
+</component>
+  
+<component id="ID_txt05">
+  <text><![CDATA[SOHO Router]]></text> 
+</component>
+  
+<component id="ID_txt06">
+  <text><![CDATA[http://www.example.com]]></text> 
+</component>
+
+</textcomponents>

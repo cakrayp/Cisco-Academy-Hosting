@@ -1,0 +1,83 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Enabling RIPng on IPv6 the R1 Interfaces</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Enabling RIPng on IPv6 the R2 and R3 Interfaces</b>]]></text>
+</component>
+<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+</component>
+<component id="ID_s2_SC5" fontFace='Courier New' fontSize="10">
+		<!--text><![CDATA[<b>Advertising R2 and R3 Networks</b>]]></text-->		
+		<feedback id="fb"><![CDATA[<b>***</b><font face="Arial" color="#0000FF">You must enter the exact and full command.</font><b>***</b> 
+		]]></feedback>		
+		<existingcommands><![CDATA[<font face="Arial"><b>Enable IPv6 unicast routing.</b></font>]]></existingcommands>
+		<command prompt="R2(config)#">
+		    <correctresponse><![CDATA[ipv6 unicast-routing]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>Configure gigabitethernet 0/0 to use the RIPng process named RIP-AS and activate the interface. There is no need to exit interface configuration mode prior to the next command.</b>]]></instruction>
+		</command>
+		<command prompt="R2(config)#">
+		    <correctresponse><![CDATA[interface gigabitethernet 0/0]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ipv6 rip RIP-AS enable]]></correctresponse>
+			</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>Configure serial 0/0/0 to use the RIPng process named RIP-AS and activate the interface.</b>]]></instruction>			
+			</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[interface serial 0/0/0]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ipv6 rip RIP-AS enable]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>Configure serial 0/0/1 to use the RIPng process named RIP-AS and activate the interface.</b>]]></instruction>			
+			</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[interface serial 0/0/1]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[ipv6 rip RIP-AS enable]]></correctresponse>
+		</command>
+		<command prompt="R2(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+		<instruction><![CDATA[<font face="Arial"><b>You are now logged into R3. Enable IPv6 unicast routing.</b></font>]]></instruction>
+		</command>
+		<command prompt="R3(config)#">
+		    <correctresponse><![CDATA[ipv6 unicast-routing]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>Configure gigabitethernet 0/0 to use the RIPng process named RIP-AS and activate the interface. There is no need to exit interface configuration mode prior to the next command.</b>]]></instruction>
+		</command>
+		<command prompt="R3(config)#">
+		    <correctresponse><![CDATA[interface gigabitethernet 0/0]]></correctresponse>
+		</command>
+		<command prompt="R3(config-if)#">
+		    <correctresponse><![CDATA[ipv6 rip RIP-AS enable]]></correctresponse>
+			</command>
+		<command prompt="R3(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial"><b>Configure serial 0/0/1 to use the RIPng process named RIP-AS and activate the interface.</b>]]></instruction>			
+			</command>
+		<command prompt="R3(config-if)#">
+		    <correctresponse><![CDATA[interface serial 0/0/1]]></correctresponse>
+		</command>
+		<command prompt="R3(config-if)#">
+		    <correctresponse><![CDATA[ipv6 rip RIP-AS enable]]></correctresponse>
+			</command>
+		<command prompt="R3(config-if)#">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<instruction><![CDATA[<font face="Arial" class="syntaxBottomLine"><b>You successfully enabled RIPng for IPv6 on R2 and R3 interfaces.</b>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+</textcomponents>

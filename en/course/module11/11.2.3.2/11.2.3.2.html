@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.3.2 Configuring PAT: Single Address</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Configuring Port Address Translation (PAT)</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Configuring PAT for a Single Public IPv4 Address</b>
+          </p>
+          <p></p>
+          <p>Figure 1 shows the topology of a PAT implementation for a single public IPv4 address translation. In the example, all hosts from network 192.168.0.0/16 (matching ACL 1) that send traffic through router R2 to the Internet will be translated to IPv4 address 209.165.200.225 (IPv4 address of interface S0/1/0). The traffic flows will be identified by port numbers in the NAT table, because the <span class="cmd"><b>overload</b></span> keyword was used.</p>
+          <p></p>
+          <p>Figure 2 shows the steps to follow to configure PAT with a single IPv4 address. If only a single public IPv4 address is available, the overload configuration typically assigns the public address to the outside interface that connects to the ISP. All inside addresses are translated to the single IPv4 address when leaving the outside interface. </p>
+          <p></p>
+          <p>
+            <b>Step 1.</b> Define an ACL to permit the traffic to be translated.</p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>Configure source translation using the <span class="cmd"><b>interface</b></span> and <span class="cmd"><b>overload</b></span> keywords. The <span class="cmd"><b>interface</b></span> keyword identifies which interface IP address to use when translating inside addresses. The <span class="cmd"><b>overload</b></span> keyword directs the router to track port numbers with each NAT entry.</p>
+          <p></p>
+          <p>
+            <b>Step 3. </b>Identify which interfaces are inside in relation to NAT. That is any interface that connects to the inside network.</p>
+          <p></p>
+          <p>
+            <b>Step 4. </b>Identify which interface is outside in relation to NAT. This should be the same interface identified in the source translation statement from Step 2.</p>
+          <p></p>
+          <p>The configuration is similar to dynamic NAT, except that instead of a pool of addresses, the <span class="cmd"><b>interface</b></span> keyword is used to identify the outside IPv4 address. Therefore, no NAT pool is defined. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to configure PAT using a single address on R2.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

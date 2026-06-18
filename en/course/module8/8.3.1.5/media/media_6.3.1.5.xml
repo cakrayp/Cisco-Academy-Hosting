@@ -1,0 +1,127 @@
+﻿<textcomponents>
+
+    
+
+<component id='ID_s1_inst'>
+	<text><![CDATA[<b>Activity – Part 1: Compare and Contrast OSPFv2 and OSPFv3</b><br><br>Listed on the graphic are statements, which describe OSPFv2, OSPFv3, or both. Drag the OSPF version identifier (OSPFv2, OSPFv3, or Both) to the corresponding function or feature descriptions. Version identifiers may be used more than one time. Click Button 2 to continue this activity.]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[Unicast routing enabled by default]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[Uses IPSec for authentication]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[Link-State Routing Protocol]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Dynamic Routing Protocol]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s1_traget01'>
+	<text><![CDATA[<font color="#393536">OSPFv2</font>]]></text>
+</component>
+
+<component id='ID_s1_traget02'>
+	<text><![CDATA[<font color="#393536">OSPFv3</font>]]></text>
+</component>
+
+<component id='ID_s1_traget03'>
+	<text><![CDATA[<font color="#393536">Both</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each OSPF function or feature description with its version. Click Button 2 to continue this activity.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each OSPF function or feature description with its version. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+<!--slide02-->
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Activity – Part 2: Compare and Contrast OSPFv2 and OSPFv3</b><br><br>Listed on the graphic are statements, which describe OSPFv2, OSPFv3, or both. Drag the OSPF version identifier (OSPFv2, OSPFv3, or Both) to the corresponding function or feature descriptions. Version identifiers may be used more than one time.]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[Uses cost as its metric]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[Elects a DR and a BDR]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Uses FF02::6 for DR and BDR multicasts]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Uses 224.0.0.6 for DR and BDR multicasts]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_s2_traget01'>
+	<text><![CDATA[<font color="#393536">OSPFv2</font>]]></text>
+</component>
+
+<component id='ID_s2_traget02'>
+	<text><![CDATA[<font color="#393536">OSPFv3</font>]]></text>
+</component>
+
+<component id='ID_s2_traget03'>
+	<text><![CDATA[<font color="#393536">Both</font>]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each OSPF function or feature description with its version.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each OSPF function or feature description with its version. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.1.2.5 Pembaruan Link-State</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Karakteristik OSPF</h1>
+<h2>Pesan OSPF</h2>
+</div>
+<div id="content">
+<p>Router awalnya menukar paket DBD Tipe 2, yang merupakan daftar singkat LSDB router pengirim dan digunakan oleh router penerima untuk memeriksa LSDB lokal.</p>
+<p></p>
+<p>Paket LSR Tipe 3 digunakan oleh router penerima untuk meminta informasi lebih lanjut tentang entri di DBD.</p>
+<p></p>
+<p>Paket LSU Tipe 4 digunakan untuk membalas paket LSR.</p>
+<p></p>
+<p>LSU juga digunakan untuk meneruskan pembaruan perutean OSPF, seperti perubahan tautan. Secara khusus, paket LSU dapat berisi 11 jenis LSA OSPFv2 yang berbeda, seperti yang ditunjukkan pada gambar. OSPFv3 mengganti nama beberapa LSA ini dan juga berisi dua LSA tambahan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Perbedaan istilah LSU dan LSA terkadang membingungkan karena istilah ini sering digunakan secara bergantian. Namun, LSU berisi satu atau lebih LSA.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>Setelah menyelesaikan bab ini, Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>menjelaskan konvergensi data, suara, dan video dalam konteks jaringan yang diaktifkan.</li><li>Menjelaskan jaringan yang diaktifkan dalam bisnis kecil dan menengah.</li><li>Menjelaskan proses penerusan frame dalam jaringan switch.</li><li>Bandingkan tabrakan domain dengan domain siaran.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

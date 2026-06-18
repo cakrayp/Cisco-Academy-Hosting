@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>ACL Masuk dan Keluar</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[ACL masuk]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[ACL keluar]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[ACL masuk memfilter paket yang masuk ke antarmuka tertentu dan sebelum dialihkan ke antarmuka keluar.]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[ACL keluar memfilter paket setelah dirutekan, terlepas dari antarmuka masuknya.]]></text> 
+  </component>
+</textcomponents>

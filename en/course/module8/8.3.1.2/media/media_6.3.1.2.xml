@@ -1,0 +1,60 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Similarities Between OSPFv2 and OSPFv3</b>]]></text>
+</component>
+
+<component id="ID_table01">
+<text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+<tr class="mtitle">
+<td colspan='2' bgcolor='#98D3D1' class="title"><font size='12' color='#393536'><b>OSPFv2 and OSPFv3</b></font></td>
+</tr>
+
+<tr class="mtable_top">
+<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+</tr>
+
+<tr>
+<td width="120" bgcolor='#eff8f7' valign="top"><font color='#393536'>Link-State</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Yes</font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Routing Algorithm</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>SPF</font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Metric</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Cost</font></td>	
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Areas</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Supports the same two-level hierarchy</font></td> 
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Packet Types</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Same Hello, DBD, LSR, LSU, and LSAck packets</font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Neighbor Discovery</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Transitions through the same states using Hello packets</font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>DR and BDR</font></td>
+<td bgcolor='#eff8f7' valign="top"><font color='#393536'>Function and election process is the same</font></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>Router ID</font></td>
+<td bgcolor='#ffffff' valign="top"><font color='#393536'>32-bit router ID: determined by the same process in both protocols</font></td>
+</tr>
+
+</table>]]></text> 
+</component>
+
+</textcomponents>

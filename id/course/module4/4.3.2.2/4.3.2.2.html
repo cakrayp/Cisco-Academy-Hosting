@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.3.2.2 Entri tabel Routing yang Terhubung Langsung</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Pengoperasian Perute</h1>
+<h2>Rute yang Terhubung Langsung</h2>
+</div>
+<div id="content">
+<p>Antarmuka yang aktif, dikonfigurasi dengan benar, dan terhubung langsung sebenarnya menciptakan dua entri tabel perutean. Gambar tersebut menampilkan entri tabel routing IPv4 pada R1 untuk jaringan yang terhubung langsung 192.168.10.0.</p>
+<p></p>
+<p>Entri tabel routing untuk antarmuka yang terhubung langsung lebih sederhana daripada entri untuk jaringan jarak jauh. Entri berisi informasi berikut:</p>
+<p>
+<ul>
+<li>
+<b>Sumber rute</b>- Mengidentifikasi bagaimana rute itu dipelajari. Antarmuka yang terhubung langsung memiliki dua kode sumber rute. ‘<span class="cmd">C</span>' mengidentifikasi jaringan yang terhubung langsung. '<span class="cmd">L</span>’ mengidentifikasi alamat IPv4 yang ditetapkan ke antarmuka router.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Jaringan tujuan</b>- Alamat jaringan jarak jauh.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Antarmuka keluar</b>- Mengidentifikasi antarmuka keluar yang akan digunakan saat meneruskan paket ke jaringan tujuan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Sebelum IOS 15, entri tabel perutean rute lokal (<span class="cmd">L</span>) tidak ditampilkan di tabel perutean IPv4. Rute lokal (<span class="cmd">L</span>) entri selalu menjadi bagian dari tabel perutean IPv6.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

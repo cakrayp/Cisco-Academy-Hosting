@@ -1,0 +1,61 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Operasi Protokol Link-State</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[Basis Data Status Tautan R1]]></text>
+	</component>
+	
+	<component id="ID_txt02">
+		<text><![CDATA[Basis Data Status Tautan R2]]></text>
+	</component>
+	
+	<component id="ID_txt03">
+		<text><![CDATA[Basis Data Status Tautan R3]]></text>
+	</component>
+	
+	<component id="ID_txt04">
+		<text><![CDATA[Basis Data Status Tautan R4]]></text>
+	</component>
+	
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Pembaruan tautan dari R1</b>]]></text>
+	</component>
+	
+	<component id="ID_txt06">
+		<text><![CDATA[<b>Pembaruan tautan dari R1</b>]]></text>
+	</component>
+	
+	<component id="ID_txt07">
+		<text><![CDATA[Protokol link-state meneruskan pembaruan ketika status link berubah.]]></text>
+	</component>
+	
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+</textcomponents>

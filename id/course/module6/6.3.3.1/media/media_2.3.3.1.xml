@@ -1,0 +1,47 @@
+<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Topologi Jaringan: Subnet Dasar</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Gedung A</b><br/>25 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<b>Gedung B</b><br/>20 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<b>Gedung C</b><br/>15 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[<b>Gedung D</b><br/>28 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Skema Subnet Dasar</b>]]></text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Bagian Jaringan]]></text> 
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Bagian Tuan Rumah]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Membangun LAN A, B, C, dan D]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[WAN Situs-ke-Situs]]></text> 
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[Tidak Digunakan / Tersedia]]></text> 
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Bagian Subnet<br/>2^3 = 8 Subnet]]></text> 
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[Bagian Tuan Rumah Baru<br/>2^5 – 2 = 30 Host Per Subnet]]></text> 
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Alamat yang Tidak Digunakan pada Subnet WAN</b>]]></text>
+	</component>
+	<component id="ID_s3_txt01">
+		<text><![CDATA[Bagian Tuan Rumah Baru<br/>2^5 – 2 = 30 Host Per Subnet<br/><br/>30 – 2 = 28<br/>Setiap Subnet WAN Membuang 28 Alamat<br/><br/>28 x 3 = 84<br/>84 Alamat Tidak Digunakan]]></text> 
+	</component>
+</textcomponents>

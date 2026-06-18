@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.1.1.3 Router-on-a-Stick Inter-VLAN Routing</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Inter-VLAN Routing Configuration</h1>
+        <h2>Inter-VLAN Routing Operation</h2>
+      </div>
+      <div id="content">
+          <p>While legacy inter-VLAN routing requires multiple physical interfaces on both the router and the switch, a more common, present-day implementation of inter-VLAN routing does not. Instead, some router software permits configuring a router interface as a trunk link, meaning only one physical interface is required on the router and the switch to route packets between multiple VLANs.</p>
+          <p></p>
+          <p>“Router-on-a-stick” is a type of router configuration in which a single physical interface routes traffic between multiple VLANs on a network. As seen in the figure, the router is connected to switch S1 using a single, physical network connection (a trunk). </p>
+          <p>The router interface is configured to operate as a trunk link and is connected to a switch port that is configured in trunk mode. The router performs inter-VLAN routing by accepting VLAN-tagged traffic on the trunk interface coming from the adjacent switch, and then internally routing between the VLANs using subinterfaces. The router then forwards the routed traffic, VLAN-tagged for the destination VLAN, out the same physical interface as it used to receive the traffic.</p>
+          <p></p>
+          <p>Subinterfaces are software-based virtual interfaces, associated with a single physical interface. Subinterfaces are configured in software on a router and each subinterface is independently configured with an IP address and VLAN assignment. Subinterfaces are configured for different subnets corresponding to their VLAN assignment to facilitate logical routing. After a routing decision is made based on the destination VLAN, the data frames are VLAN-tagged and sent back out the physical interface. </p>
+          <p></p>
+          <p>Click the Play button in the figure to view an animation of how a router-on-a-stick performs its routing function.</p>
+          <p></p>
+          <p>As seen in the animation:</p>
+          <p></p>
+          <p>1. PC1 on VLAN 10 is communicating with PC3 on VLAN 30 through router R1 using a single, physical router interface.</p>
+          <p></p>
+          <p>2. PC1 sends its unicast traffic to switch S2.</p>
+          <p></p>
+          <p>3. Switch S2 then tags the unicast traffic as originating on VLAN 10 and forwards the unicast traffic out its trunk link to switch S1.</p>
+          <p></p>
+          <p>4. Switch S1 forwards the tagged traffic out the other trunk interface on port F0/5 to the interface on router R1.</p>
+          <p></p>
+          <p>5. Router R1 accepts the tagged unicast traffic on VLAN 10 and routes it to VLAN 30 using its configured subinterfaces.</p>
+          <p></p>
+          <p>6. The unicast traffic is tagged with VLAN 30 as it is sent out the router interface to switch S1.</p>
+          <p></p>
+          <p>7. Switch S1 forwards the tagged unicast traffic out the other trunk link to switch S2.</p>
+          <p></p>
+          <p>8. Switch S2 removes the VLAN tag of the unicast frame and forwards the frame out to PC3 on port F0/6.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The router-on-a-stick method of inter-VLAN routing does not scale beyond 50 VLANs.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

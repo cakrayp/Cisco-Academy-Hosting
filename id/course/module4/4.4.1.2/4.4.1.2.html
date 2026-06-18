@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.4.1.2 Ringkasan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.4.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>Ada banyak struktur utama dan karakteristik terkait kinerja yang dirujuk ketika membahas jaringan: topologi, kecepatan, biaya, keamanan, ketersediaan, skalabilitas, dan keandalan.</p>
+<p></p>
+<p>Router Cisco dan switch Cisco memiliki banyak kesamaan. Mereka mendukung sistem operasi modal yang serupa, struktur perintah yang serupa, dan banyak perintah yang sama. Salah satu fitur yang membedakan antara switch dan router adalah jenis antarmuka yang didukung oleh masing-masing switch. Setelah antarmuka dikonfigurasi pada kedua perangkat, perintah show yang sesuai perlu digunakan untuk memverifikasi antarmuka yang berfungsi.</p>
+<p></p>
+<p>Tujuan utama router adalah untuk menghubungkan beberapa jaringan dan meneruskan paket dari satu jaringan ke jaringan berikutnya. Ini berarti bahwa router biasanya memiliki banyak antarmuka. Setiap antarmuka merupakan anggota atau host pada jaringan IP yang berbeda.</p>
+<p></p>
+<p>Cisco IOS menggunakan apa yang dikenal sebagai jarak administratif (AD) untuk menentukan rute yang akan dipasang ke dalam tabel routing IP. Tabel routing adalah daftar jaringan yang diketahui oleh router. Tabel perutean mencakup alamat jaringan untuk antarmukanya sendiri, yang merupakan jaringan yang terhubung langsung, serta alamat jaringan untuk jaringan jarak jauh. Jaringan jarak jauh adalah jaringan yang hanya dapat dijangkau dengan meneruskan paket ke router lain.</p>
+<p></p>
+<p>Jaringan jarak jauh ditambahkan ke tabel perutean dengan dua cara: baik oleh administrator jaringan yang mengonfigurasi rute statis secara manual atau dengan menerapkan protokol perutean dinamis. Rute statis tidak memiliki overhead sebanyak protokol routing dinamis; namun, rute statis memerlukan lebih banyak pemeliharaan jika topologi terus berubah atau tidak stabil.</p>
+<p></p>
+<p>Protokol perutean dinamis secara otomatis menyesuaikan diri dengan perubahan tanpa intervensi apa pun dari administrator jaringan. Protokol perutean dinamis memerlukan lebih banyak pemrosesan CPU dan juga menggunakan sejumlah kapasitas tautan untuk perutean pembaruan dan pesan. Dalam banyak kasus, tabel perutean berisi rute statis dan dinamis.</p>
+<p></p>
+<p>Router membuat keputusan penerusan utama mereka di Layer 3, layer Network. Namun, antarmuka router berpartisipasi dalam Lapisan 1, 2, dan 3. Paket IP Lapisan 3 dienkapsulasi ke dalam bingkai tautan data Lapisan 2 dan dikodekan menjadi bit-bit pada Lapisan 1. Antarmuka router berpartisipasi dalam proses Lapisan 2 yang terkait dengan enkapsulasinya. Misalnya, antarmuka Ethernet pada router berpartisipasi dalam proses ARP seperti host lain di LAN tersebut.</p>
+<p></p>
+<p>Tabel routing Cisco IP bukanlah database datar. Tabel perutean sebenarnya adalah struktur hierarki yang digunakan untuk mempercepat proses pencarian saat mencari rute dan meneruskan paket.</p>
+<p></p>
+<p>Komponen tabel routing IPv6 sangat mirip dengan tabel routing IPv4. Misalnya, diisi menggunakan antarmuka yang terhubung langsung, rute statis, dan rute yang dipelajari secara dinamis.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

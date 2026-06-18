@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.5.1 Where to Place ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.5.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Guidelines for ACL Placement</h2>
+      </div>
+      <div id="content">
+          <p>The proper placement of an ACL can make the network operate more efficiently. An ACL can be placed to reduce unnecessary traffic. For example, traffic that will be denied at a remote destination should not be forwarded using network resources along the route to that destination. </p>
+          <p></p>
+          <p>Every ACL should be placed where it has the greatest impact on efficiency. As shown in the figure, the basic rules are:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Extended ACLs </b>- Locate extended ACLs as close as possible to the source of the traffic to be filtered. This way, undesirable traffic is denied close to the source network without crossing the network infrastructure.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Standard ACLs </b>- Because standard ACLs do not specify destination addresses, place them as close to the destination as possible. Placing a standard ACL at the source of the traffic will effectively prevent that traffic from reaching any other networks through the interface where the ACL is applied. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Placement of the ACL and therefore the type of ACL used may also depend on:</p>
+          <p>
+            <ul>
+              <li>
+                <b>The extent of the network administrator’s control </b>- Placement of the ACL can depend on whether or not the network administrator has control of both the source and destination networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Bandwidth of the networks involved </b>- Filtering unwanted traffic at the source prevents transmission of the traffic before it consumes bandwidth on the path to a destination. This is especially important in low bandwidth networks.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ease of configuration </b>- If a network administrator wants to deny traffic coming from several networks, one option is to use a single standard ACL on the router closest to the destination. The disadvantage is that traffic from these networks will use bandwidth unnecessarily. An extended ACL could be used on each router where the traffic originated. This will save bandwidth by filtering the traffic at the source but requires creating extended ACLs on multiple routers.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: For CCNA certification the general rule is that extended ACLs are placed as close as possible to the source and standard ACLs are placed as close as possible to the destination.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

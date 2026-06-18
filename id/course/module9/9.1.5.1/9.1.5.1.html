@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.5.1 Dimana Menempatkan ACL</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.5.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Pedoman Penempatan ACL</h2>
+</div>
+<div id="content">
+<p>Penempatan ACL yang tepat dapat membuat jaringan beroperasi lebih efisien. ACL dapat ditempatkan untuk mengurangi lalu lintas yang tidak perlu. Misalnya, lalu lintas yang akan ditolak di tujuan jarak jauh tidak boleh diteruskan menggunakan sumber daya jaringan di sepanjang rute ke tujuan tersebut.</p>
+<p></p>
+<p>Setiap ACL harus ditempatkan di tempat yang memiliki dampak efisiensi terbesar. Seperti yang ditunjukkan pada gambar, aturan dasarnya adalah:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>ACL yang diperluas</b>- Temukan ACL yang diperluas sedekat mungkin dengan sumber lalu lintas yang akan difilter. Dengan cara ini, lalu lintas yang tidak diinginkan ditolak di dekat jaringan sumber tanpa melintasi infrastruktur jaringan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>ACL standar</b>- Karena ACL standar tidak menentukan alamat tujuan, letakkan sedekat mungkin dengan tujuan. Menempatkan ACL standar pada sumber lalu lintas akan secara efektif mencegah lalu lintas tersebut mencapai jaringan lain melalui antarmuka tempat ACL diterapkan.</li>
+</ul>
+</p>
+<p></p>
+<p>Penempatan ACL dan jenis ACL yang digunakan mungkin juga bergantung pada:</p>
+<p>
+<ul>
+<li>
+<b>Luasnya kendali administrator jaringan</b>- Penempatan ACL dapat bergantung pada apakah administrator jaringan memiliki kendali atas jaringan sumber dan tujuan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Bandwidth jaringan yang terlibat</b>- Menyaring lalu lintas yang tidak diinginkan pada sumbernya mencegah transmisi lalu lintas sebelum menghabiskan bandwidth pada jalur ke tujuan. Hal ini sangat penting dalam jaringan bandwidth rendah.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Kemudahan konfigurasi</b>- Jika administrator jaringan ingin menolak lalu lintas yang datang dari beberapa jaringan, salah satu pilihannya adalah menggunakan satu ACL standar pada router yang paling dekat dengan tujuan. Kerugiannya adalah lalu lintas dari jaringan ini akan menggunakan bandwidth secara tidak perlu. ACL yang diperluas dapat digunakan pada setiap router tempat lalu lintas berasal. Ini akan menghemat bandwidth dengan memfilter lalu lintas di sumbernya tetapi memerlukan pembuatan ACL yang diperluas di beberapa router.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Untuk sertifikasi CCNA, aturan umumnya adalah ACL yang diperluas ditempatkan sedekat mungkin dengan sumbernya dan ACL standar ditempatkan sedekat mungkin dengan tujuan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

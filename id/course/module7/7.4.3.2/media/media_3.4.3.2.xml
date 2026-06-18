@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Buat Area untuk Meminimalkan Penggunaan Sumber Daya Router</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Daerah 0</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Daerah 51</b>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[<b>Daerah 1</b>]]></text> 
+  </component>
+
+    <component id="ID_txt04">
+  <text><![CDATA[LSP tidak membanjiri daerah tersebut. Algoritme SPF tidak harus dijalankan ulang di area ini.]]></text> 
+  </component>
+
+ <component id="ID_txt05">
+  <text><![CDATA[LSP hanya membanjiri wilayah ini.]]></text> 
+  </component>
+
+   <component id="ID_txt06">
+  <text><![CDATA[Jalankan kembali algoritma SPF]]></text> 
+  </component>
+
+
+</textcomponents>

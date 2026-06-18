@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.3.2.6 Enabling OSPFv3 on Interfaces</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Single-Area OSPFv3</h1>
+        <h2>Configuring OSPFv3</h2>
+      </div>
+      <div id="content">
+          <p>OSPFv3 uses a different method to enable an interface for OSPF. Instead of using the<span class="cmd"><b> network </b></span>router configuration mode command to specify matching interface addresses, OSPFv3 is configured directly on the interface.  </p>
+          <p></p>
+          <p>To enable OSPFv3 on an interface, use the<span class="cmd"><b> ipv6 ospf </b></span><span class="cmd"><i>process-id</i></span><span class="cmd"><b> area </b></span><span class="cmd"><i>area-id </i></span>interface configuration mode command. </p>
+          <p></p>
+          <p>The<span class="cmd"><i> process-id </i></span>value identifies the specific routing process and must be the same as the process ID used to create the routing process in the<span class="cmd"><b> ipv6 router ospf </b></span><span class="cmd"><i>process-id </i></span>command.  </p>
+          <p></p>
+          <p>The<span class="cmd"><i> area-id </i></span>value is the area to be associated with the OSPFv3 interface. Although any value could have been configured for the area, 0 was selected, because area 0 is the backbone area to which all other areas must attach, as shown in Figure 1. This helps in the migration to multiarea OSPF, if the need arises.</p>
+          <p></p>
+          <p>In Figure 2, OSPFv3 is enabled on the R1 interfaces using the<span class="cmd"><b> ipv6 ospf 10 area 0 </b></span>command. The<span class="cmd"><b> show ipv6 ospf interface brief </b></span>command displays the active OSPFv3 interfaces. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 3 to enable OSPFv3 on the R2 and R3 interfaces.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

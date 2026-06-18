@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.2.2.2 Memverifikasi Masalah Konfigurasi Alamat IP dan Subnet Mask</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Perutean Antar-VLAN</h1>
+<h2>Masalah Pengalamatan IP</h2>
+</div>
+<div id="content">
+<p>Setiap antarmuka, atau subantarmuka, harus diberi alamat IP yang sesuai dengan subnet yang terhubung. Kesalahan yang umum terjadi adalah kesalahan konfigurasi alamat IP untuk subinterface. Gambar 1 menampilkan output dari<span class="cmd"><b>tampilkan konfigurasi yang sedang berjalan</b></span>memerintah. Area yang disorot menunjukkan bahwa subinterface G0/0.10 pada router R1 memiliki alamat IP 172.17.20.1. VLAN untuk subinterface ini harus mendukung lalu lintas VLAN 10. Alamat IP telah dikonfigurasi dengan tidak benar. Itu<span class="cmd"><b>tampilkan antarmuka ip</b></span>perintah berguna dalam pengaturan ini. Sorotan kedua menunjukkan alamat IP yang salah.</p>
+<p></p>
+<p>Terkadang perangkat pengguna akhir, seperti komputer pribadi, yang tidak dikonfigurasi dengan benar. Gambar 2 menunjukkan konfigurasi IP yang ditampilkan untuk PC1. Alamat IP-nya adalah 172.17.20.21, dengan subnet mask 255.255.255.0. Namun dalam skenario ini, PC1 harus berada di VLAN 10, dengan alamat 172.17.10.21 dan subnet mask 255.255.255.0.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Meskipun mengonfigurasi ID subantarmuka agar sesuai dengan nomor VLAN membuatnya lebih mudah untuk mengelola konfigurasi antar-VLAN, hal ini bukan suatu keharusan. Saat memecahkan masalah, pastikan subinterface dikonfigurasi dengan alamat yang benar untuk VLAN tersebut.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

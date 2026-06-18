@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.1.2.2 Mengontrol Domain Broadcast dengan VLAN</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Segmentasi VLAN</h1>
+<h2>VLAN dalam Lingkungan Multi-Switched</h2>
+</div>
+<div id="content">
+<p>
+<b>Jaringan tanpa VLAN</b>
+</p>
+<p></p>
+<p>Dalam operasi normal, ketika switch menerima frame siaran pada salah satu portnya, switch meneruskan frame tersebut ke semua port lain kecuali port tempat siaran diterima. Dalam animasi pada Gambar 1, seluruh jaringan dikonfigurasi dalam subnet yang sama (172.17.40.0/24) dan tidak ada VLAN yang dikonfigurasi. Hasilnya, ketika komputer fakultas (PC1) mengirimkan frame siaran, saklar S2 mengirimkan frame siaran tersebut ke seluruh portnya. Akhirnya seluruh jaringan menerima siaran karena jaringan tersebut merupakan satu domain siaran.</p>
+<p></p>
+<p>
+<b>Jaringan dengan VLAN</b>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan dalam animasi pada Gambar 2, jaringan telah disegmentasi menggunakan dua VLAN: Perangkat fakultas ditugaskan ke VLAN 10 dan perangkat Siswa ditugaskan ke VLAN 20. Ketika frame siaran dikirim dari komputer fakultas, PC1, ke switch S2, switch meneruskan frame siaran tersebut hanya ke port switch yang dikonfigurasi untuk mendukung VLAN 10.</p>
+<p></p>
+<p>Port yang terdiri dari koneksi antara switch S2 dan S1 (port F0/1), dan antara S1 dan S3 (port F0/3) adalah trunk dan telah dikonfigurasi untuk mendukung semua VLAN di jaringan.</p>
+<p></p>
+<p>Ketika S1 menerima frame siaran pada port F0/1, S1 meneruskan frame siaran tersebut dari satu-satunya port lain yang dikonfigurasi untuk mendukung VLAN 10, yaitu port F0/3. Ketika S3 menerima frame siaran pada port F0/3, S3 meneruskan frame siaran tersebut keluar dari satu-satunya port lain yang dikonfigurasi untuk mendukung VLAN 10, yaitu port F0/11. Frame siaran tiba di satu-satunya komputer lain di jaringan yang dikonfigurasi dalam VLAN 10, yaitu komputer fakultas PC4.</p>
+<p></p>
+<p>Ketika VLAN diimplementasikan pada switch, transmisi lalu lintas unicast, multicast, dan siaran dari host di VLAN tertentu dibatasi ke perangkat yang ada di VLAN tersebut.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

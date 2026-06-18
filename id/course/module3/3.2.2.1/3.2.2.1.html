@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.2.2.1 Mengonfigurasi Tautan Batang IEEE 802.1Q</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi VLAN</h1>
+<h2>Batang VLAN</h2>
+</div>
+<div id="content">
+<p>VLAN trunk adalah tautan OSI Layer 2 antara dua switch yang membawa lalu lintas untuk semua VLAN (kecuali daftar VLAN yang diizinkan dibatasi secara manual atau dinamis). Untuk mengaktifkan tautan trunk, konfigurasikan port di kedua ujung tautan fisik dengan serangkaian perintah paralel.</p>
+<p></p>
+<p>Untuk mengkonfigurasi port switch pada salah satu ujung link trunk, gunakan<span class="cmd"><b>bagasi mode switchport</b></span>memerintah. Dengan perintah ini, antarmuka berubah ke mode trunking permanen. Port memasuki negosiasi Dynamic Trunking Protocol (DTP) untuk mengubah link menjadi link trunk bahkan jika antarmuka yang menghubungkannya tidak menyetujui perubahan tersebut. DTP dijelaskan pada topik berikutnya. Dalam kursus ini,<span class="cmd"><b>bagasi mode switchport</b></span>perintah adalah satu-satunya metode yang diterapkan untuk konfigurasi trunk.</p>
+<p></p>
+<p>Sintaks perintah Cisco IOS untuk menentukan VLAN asli (selain VLAN 1) ditunjukkan pada Gambar 1. Dalam contoh, VLAN 99 dikonfigurasi sebagai VLAN asli menggunakan<span class="cmd"><b>switchport trunk vlan asli 99</b></span>memerintah.</p>
+<p></p>
+<p>Gunakan Cisco IOS<span class="cmd"><b>trunk switchport mengizinkan vlan</b></span><span class="cmd"><i>daftar vlan</i></span>perintah untuk menentukan daftar VLAN yang diizinkan pada link trunk.</p>
+<p></p>
+<p>Pada Gambar 2, VLAN 10, 20, dan 30 mendukung komputer Fakultas, Mahasiswa, dan Tamu (PC1, PC2, dan PC3). Port F0/1 pada saklar S1 dikonfigurasi sebagai port trunk dan meneruskan lalu lintas untuk VLAN 10, 20, dan 30. VLAN 99 dikonfigurasi sebagai VLAN asli.</p>
+<p></p>
+<p>Gambar 3 menampilkan konfigurasi port F0/1 pada switch S1 sebagai port trunk. VLAN asli diubah menjadi VLAN 99 dan daftar VLAN yang diizinkan dibatasi menjadi 10, 20, dan 30.</p>
+<p></p>
+<p>Jika VLAN asli tidak diperbolehkan pada link trunk, trunk tidak akan mengizinkan lalu lintas data apa pun untuk VLAN asli.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Konfigurasi ini mengasumsikan penggunaan switch Cisco Catalyst 2960 yang secara otomatis menggunakan enkapsulasi 802.1Q pada link trunk. Sakelar lain mungkin memerlukan konfigurasi enkapsulasi secara manual. Selalu konfigurasikan kedua ujung link trunk dengan VLAN asli yang sama. Jika konfigurasi trunk 802.1Q tidak sama di kedua ujungnya, Perangkat Lunak Cisco IOS melaporkan kesalahan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

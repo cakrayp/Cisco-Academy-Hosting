@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.2.4.3 Pengantar Batang Pemecahan Masalah</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Implementasi VLAN</h1>
+<h2>Memecahkan masalah VLAN dan Trunks</h2>
+</div>
+<div id="content">
+<p>Tugas umum administrator jaringan adalah memecahkan masalah pembentukan link trunk atau link yang berperilaku tidak tepat sebagai link trunk. Terkadang port switch mungkin berperilaku seperti port trunk meskipun tidak dikonfigurasi sebagai port trunk. Misalnya, port akses mungkin menerima frame dari VLAN yang berbeda dari VLAN yang ditugaskan. Ini disebut kebocoran VLAN.</p>
+<p></p>
+<p>Gambar 1 menampilkan diagram alur pedoman pemecahan masalah umum.</p>
+<p></p>
+<p>Untuk memecahkan masalah ketika trunk tidak terbentuk atau ketika terjadi kebocoran VLAN, lakukan sebagai berikut:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Gunakan<span class="cmd"><b>tampilkan antarmuka bagasi</b></span>perintah untuk memeriksa apakah VLAN asli lokal dan rekannya cocok. Jika VLAN asli tidak cocok di kedua sisi, terjadi kebocoran VLAN.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Gunakan<span class="cmd"><b>tampilkan antarmuka bagasi</b></span>perintah untuk memeriksa apakah trunk telah dibuat di antara switch. Konfigurasikan tautan trunk secara statis bila memungkinkan. Port switch Cisco Catalyst menggunakan DTP secara default dan berupaya menegosiasikan tautan trunk.</p>
+<p></p>
+<p>Untuk menampilkan status trunk, VLAN asli yang digunakan pada link trunk tersebut, dan memverifikasi pembentukan trunk, gunakan<span class="cmd"><b>tampilkan antarmuka bagasi</b></span>memerintah. Contoh pada Gambar 2 menunjukkan bahwa VLAN asli di satu sisi link trunk diubah menjadi VLAN 2. Jika salah satu ujung trunk dikonfigurasi sebagai VLAN 99 asli dan ujung lainnya dikonfigurasi sebagai VLAN 2 asli, frame yang dikirim dari VLAN 99 di satu sisi diterima di VLAN 2 di sisi lain. VLAN 99 bocor ke segmen VLAN 2.</p>
+<p></p>
+<p>CDP menampilkan pemberitahuan ketidakcocokan VLAN asli pada link trunk dengan pesan ini:</p>
+<p></p>
+<p>
+<span class="cmd">*1 Maret 06:45:26.232: %CDP-4-NATIVE_VLAN_MISMATCH: Ketidakcocokan VLAN asli ditemukan di FastEthernet0/1 (2), dengan S2 FastEthernet0/1 (99).</span>
+</p>
+<p></p>
+<p>Masalah konektivitas terjadi di jaringan jika ada ketidakcocokan VLAN asli. Lalu lintas data untuk VLAN, selain dari dua VLAN asli yang dikonfigurasi, berhasil menyebar melalui link trunk, namun data yang terkait dengan salah satu VLAN asli tidak berhasil menyebar melalui link trunk.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Output pada Gambar 2 menunjukkan bahwa ada trunk yang aktif meskipun VLAN asli tidak cocok. Konfigurasikan VLAN asli menjadi VLAN yang sama di kedua sisi tautan untuk memperbaiki perilaku ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

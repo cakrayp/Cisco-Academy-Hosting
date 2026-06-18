@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.2.1 Rute Statis Default</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Default IPv4</h2>
+</div>
+<div id="content">
+<p>Rute default adalah rute statis yang cocok dengan semua paket. Daripada menyimpan semua rute ke semua jaringan dalam tabel routing, router dapat menyimpan satu rute default untuk mewakili jaringan apa pun yang tidak ada dalam tabel routing.</p>
+<p></p>
+<p>Router biasanya menggunakan rute default yang dikonfigurasi secara lokal atau dipelajari dari router lain, menggunakan protokol routing dinamis. Rute default digunakan ketika tidak ada rute lain dalam tabel perutean yang cocok dengan alamat IP tujuan paket. Dengan kata lain, jika tidak ada kecocokan yang lebih spesifik, maka rute default digunakan sebagai Gerbang Pilihan Terakhir.</p>
+<p></p>
+<p>Rute statis default biasanya digunakan saat menghubungkan:</p>
+<p>
+<ul>
+<li>Router tepi ke jaringan penyedia layanan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Router stub (router dengan hanya satu router tetangga hulu)</li>
+</ul>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, sintaks perintah untuk rute statis default mirip dengan rute statis lainnya, kecuali alamat jaringannya adalah<span class="cmd"><b> 0.0.0.0 </b></span>dan subnet masknya adalah<span class="cmd"><b> 0.0.0.0</b></span>. Sintaks perintah dasar dari rute statis default adalah:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>rute ip 0.0.0.0 0.0.0.0</b>
+</span>
+<span class="cmd">{</span>
+<span class="cmd">
+<i>alamat ip</i>
+</span>
+<span class="cmd">|</span>
+<span class="cmd">
+<i>keluar-intf</i>
+</span>
+<span class="cmd">}</span>
+</li>
+</ul>
+</p>
+<p></p>
+<p>
+<b>Catatan</b>: Rute statis default IPv4 biasanya disebut sebagai rute quad-zero.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.1.1.2 Percakapan TCP</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi IP ACL</h1>
+<h2>Tujuan ACL</h2>
+</div>
+<div id="content">
+<p>ACL memungkinkan administrator untuk mengontrol lalu lintas masuk dan keluar jaringan. Kontrol ini bisa sesederhana mengizinkan atau menolak lalu lintas berdasarkan alamat jaringan atau serumit mengendalikan lalu lintas jaringan berdasarkan port TCP yang diminta. Lebih mudah untuk memahami bagaimana ACL memfilter lalu lintas dengan memeriksa dialog yang terjadi selama percakapan TCP, seperti saat meminta halaman web.</p>
+<p></p>
+<p>
+<b>Komunikasi TCP</b>
+</p>
+<p>Ketika klien meminta data dari server web, IP mengatur komunikasi antara PC (sumber) dan server (tujuan). TCP mengelola komunikasi antara browser web (aplikasi) dan perangkat lunak server jaringan.</p>
+<p></p>
+<p>Saat Anda mengirim email, melihat halaman web, atau mengunduh file, TCP bertanggung jawab untuk memecah data menjadi beberapa segmen untuk IP sebelum dikirim. TCP juga mengelola pengumpulan data dari segmen ketika segmen tersebut tiba. Proses TCP sangat mirip dengan percakapan di mana dua node di jaringan setuju untuk meneruskan data antara satu sama lain.</p>
+<p></p>
+<p>TCP menyediakan layanan aliran byte yang berorientasi koneksi dan andal. Berorientasi koneksi berarti kedua aplikasi harus membuat koneksi TCP sebelum bertukar data. TCP adalah protokol full-duplex, artinya setiap koneksi TCP mendukung sepasang aliran byte, masing-masing aliran mengalir dalam satu arah. TCP menyertakan mekanisme kontrol aliran untuk setiap aliran byte yang memungkinkan penerima membatasi berapa banyak data yang dapat dikirimkan oleh pengirim. TCP juga menerapkan mekanisme kontrol kemacetan.</p>
+<p></p>
+<p>Animasi yang ditunjukkan pada Gambar 1 mengilustrasikan bagaimana percakapan TCP/IP terjadi. Segmen TCP ditandai dengan bendera yang menunjukkan tujuannya: SYN memulai (menyinkronkan) sesi; ACK adalah pengakuan bahwa segmen yang diharapkan telah diterima, dan FIN mengakhiri sesi. SYN/ACK mengakui bahwa transfer telah disinkronkan. Segmen data TCP mencakup protokol tingkat lebih tinggi yang diperlukan untuk mengarahkan data aplikasi ke aplikasi yang benar.</p>
+<p></p>
+<p>Segmen data TCP juga mengidentifikasi port yang cocok dengan layanan yang diminta. Misalnya, HTTP adalah port 80, SMTP adalah port 25, dan FTP adalah port 20 dan port 21. Gambar 2 menunjukkan rentang port UDP dan TCP.</p>
+<p></p>
+<p>Gambar 3 sampai 5 mengeksplorasi port TCP/UDP.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

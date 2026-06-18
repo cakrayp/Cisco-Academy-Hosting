@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.3.2.1 Layer 3 Switch Configuration Issues</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Layer 3 Switching</h1>
+        <h2>Troubleshoot Layer 3 Switching</h2>
+      </div>
+      <div id="content">
+          <p>The issues common to legacy inter-VLAN routing and router-on-a-stick inter-VLAN routing are also manifested in the context of Layer 3 switching. To troubleshoot Layer 3 switching issues, the following items should be checked for accuracy:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>VLANs </b>- VLANs must be defined across all the switches. VLANs must be enabled on the trunk ports. Ports must be in the right VLANs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SVIs </b>- SVI must have the correct IP address or subnet mask. SVI must be up. SVI must match with the VLAN number.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routing </b>- Routing must be enabled. Each interface or network should be added to the routing protocol.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hosts </b>- Hosts must have the correct IP address or subnet mask. Hosts must have a default gateway associated with an SVI or routed port.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>To troubleshoot the Layer 3 switching problems, be familiar with the implementation and design layout of the topology.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

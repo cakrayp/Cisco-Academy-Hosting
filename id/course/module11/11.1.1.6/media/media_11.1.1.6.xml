@@ -1,0 +1,51 @@
+<textcomponents>
+<component id="ID_inst">
+<text><![CDATA[<b>Aktivitas - identifikasi Terminologi NAT</b><br/><br/>PC1 berkomunikasi dengan Server Web melalui router yang mendukung NAT (R1). Seret setiap jenis alamat NAT ke bidangnya yang sesuai di topologi.]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Server Web]]></text> 
+  </component>
+  
+  
+<!--Drag and drop-->
+
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Inside Global</font>]]></text>
+</component>
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Outside Global</font>]]></text>
+</component>
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Outside Local</font>]]></text>
+</component>
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Inside Local</font>]]></text>
+</component>
+
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menemukan jenis alamat NAT dengan topologi jaringan.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menemukan jenis alamat NAT dengan topologi jaringan. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+</textcomponents>

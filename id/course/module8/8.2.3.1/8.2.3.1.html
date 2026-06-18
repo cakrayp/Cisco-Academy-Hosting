@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.3.1 Metrik OSPF = Biaya</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>Biaya OSPF</h2>
+</div>
+<div id="content">
+<p>Ingatlah bahwa protokol perutean menggunakan metrik untuk menentukan jalur terbaik suatu paket melalui jaringan. Metrik memberikan indikasi overhead yang diperlukan untuk mengirim paket melalui antarmuka tertentu. OSPF menggunakan biaya sebagai metrik. Biaya yang lebih rendah menunjukkan jalur yang lebih baik daripada biaya yang lebih tinggi.</p>
+<p></p>
+<p>Biaya sebuah antarmuka berbanding terbalik dengan bandwidth antarmuka. Oleh karena itu, bandwidth yang lebih tinggi menunjukkan biaya yang lebih rendah. Lebih banyak overhead dan penundaan waktu sama dengan biaya yang lebih tinggi. Oleh karena itu, jalur Ethernet 10-Mb/s memiliki biaya lebih tinggi daripada jalur Ethernet 100-Mb/s.</p>
+<p></p>
+<p>Rumus yang digunakan untuk menghitung biaya OSPF adalah:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>Biaya</b>
+</span>
+<span class="cmd"> = </span>
+<span class="cmd">
+<i>
+<u>bandwidth referensi</u>
+</i>
+</span>
+<span class="cmd"> / </span>
+<span class="cmd">
+<i>
+<u>bandwidth antarmuka</u>
+</i>
+</span>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Bandwidth referensi default adalah 10^8 (100.000.000); oleh karena itu, rumusnya adalah:</p>
+<p>
+<ul>
+<li>
+<span class="cmd">
+<b>Biaya</b>
+</span>
+<span class="cmd"> = </span>
+<span class="cmd">
+<u>100.000.000bps</u>
+</span>
+<span class="cmd"> /</span>
+<span class="cmd">
+<b></b>
+</span>
+<span class="cmd">
+<i>
+<u>bandwidth antarmuka dalam bps</u>
+</i>
+</span>
+</li>
+</ul>
+</p>
+<p></p>
+<p>Lihat tabel pada gambar untuk rincian perhitungan biaya. Perhatikan bahwa antarmuka FastEthernet, Gigabit Ethernet, dan 10 GigE memiliki biaya yang sama, karena nilai biaya OSPF harus berupa bilangan bulat. Akibatnya, karena bandwidth referensi default diatur ke 100 Mb/s, semua link yang lebih cepat dari Fast Ethernet juga dikenakan biaya 1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Statistik NAT</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Terjemahan NAT Statis<b></b></b>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Di dalam</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Di luar</b>]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_table01">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="liner">
+<td bgcolor="#98D3D1" class="msubtitle" colspan="2"><font color="#1C3635" size="11"><b>Tabel Statistik NAT</b></font></td>
+</tr>
+<tr class="liner">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="width50" valign="top"><font color="#FFFFFF"><b>Di dalam Alamat Lokal</b></font></td>
+<td bgcolor="#077A77" class="width50" valign="top"><font color="#FFFFFF"><b>Inside Global Address - Alamat yang dapat dijangkau melalui R2</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font color="#393536">192.168.10.10</font></td>
+<td bgcolor="#FACCA8" valign="top"><font color="#393536">209.165.200.226</font></td>
+</tr>
+<tr>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">192.168.10.11</font></td>
+<td bgcolor="#eff8f7" valign="top"><font color="#393536">209.165.200.227</font></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">192.168.10.12</font></td>
+<td bgcolor="#ffffff" valign="top"><font color="#393536">209.165.200.228</font></td>
+</tr>
+</table>]]></text> 
+</component>
+
+</textcomponents>

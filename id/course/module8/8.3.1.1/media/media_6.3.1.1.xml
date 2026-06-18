@@ -1,0 +1,59 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[<b>Struktur Data OSPFv2 dan OSPFv3</b>]]></text>
+   </component>
+<component id="ID_txt01">
+   <text><![CDATA[R1 - OSPFv2]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[Meja Tetangga]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[Tabel Topologi]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[Tabel Perutean]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[R2 - OSPFv2]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[Meja Tetangga]]></text>
+   </component>
+<component id="ID_txt07">
+   <text><![CDATA[Tabel Topologi]]></text>
+   </component>
+<component id="ID_txt08">
+   <text><![CDATA[Tabel Perutean]]></text>
+   </component>
+<component id="ID_txt09">
+   <text><![CDATA[R1 - OSPFv3]]></text>
+   </component>
+<component id="ID_txt10">
+   <text><![CDATA[Meja Tetangga]]></text>
+   </component>
+<component id="ID_txt11">
+   <text><![CDATA[Tabel Topologi]]></text>
+   </component>
+<component id="ID_txt12">
+   <text><![CDATA[Tabel Perutean]]></text>
+   </component>
+<component id="ID_txt13">
+   <text><![CDATA[R2 - OSPFv3]]></text>
+   </component>
+<component id="ID_txt14">
+   <text><![CDATA[Meja Tetangga]]></text>
+   </component>
+<component id="ID_txt15">
+   <text><![CDATA[Tabel Topologi]]></text>
+   </component>
+<component id="ID_txt16">
+   <text><![CDATA[Tabel Perutean]]></text>
+   </component>
+   <component id="ID_txt17">
+   <text><![CDATA[Jaringan IPv4]]></text>
+   </component>
+   <component id="ID_txt18">
+   <text><![CDATA[Jaringan IPv6]]></text>
+   </component>
+</textcomponents>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.3.2.3 Memfilter Lalu Lintas dengan ACL yang Diperluas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.3.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 yang diperluas</h1>
+<h2>Konfigurasikan ACL IPv4 yang Diperluas</h2>
+</div>
+<div id="content">
+<p>Contoh yang ditunjukkan pada Gambar 1 menolak lalu lintas FTP dari subnet 192.168.11.0 yang menuju ke subnet 192.168.10.0, namun mengizinkan semua lalu lintas lainnya. Perhatikan penggunaan topeng wildcard dan pernyataan penolakan apa pun secara eksplisit. Ingatlah bahwa FTP menggunakan port TCP 20 dan 21; oleh karena itu ACL memerlukan kedua kata kunci nama port<span class="cmd"><b>ftp</b></span>Dan<span class="cmd"><b>ftp-data</b></span> or <span class="cmd"><b>persamaan 20</b></span>Dan<span class="cmd"><b>persamaan 21</b></span>untuk menolak FTP.</p>
+<p></p>
+<p>Jika menggunakan nomor port dan bukan nama port, perintahnya akan ditulis sebagai:</p>
+<p></p>
+<p>
+<span class="cmd">
+<b>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 setiap persamaan 20</b>
+</span>
+</p>
+<p>
+<span class="cmd">
+<b>daftar akses 114 izin tcp 192.168.20.0 0.0.0.255 setiap persamaan 21</b>
+</span>
+</p>
+<p></p>
+<p>Untuk mencegah pernyataan penolakan apa pun yang tersirat di akhir ACL memblokir semua lalu lintas, maka<span class="cmd"><b>izinkan ip apa saja</b></span>pernyataan ditambahkan. Tanpa setidaknya satu<span class="cmd"><b>izin</b></span>pernyataan dalam ACL, semua lalu lintas pada antarmuka tempat ACL diterapkan akan dihapus. ACL harus diterapkan masuk pada antarmuka G0/1 sehingga lalu lintas dari LAN 192.168.11.0/24 disaring saat memasuki antarmuka router.</p>
+<p></p>
+<p>Contoh yang ditunjukkan pada Gambar 2, menolak lalu lintas Telnet dari sumber mana pun ke LAN 192.168.11.0/24, namun mengizinkan semua lalu lintas IP lainnya. Karena lalu lintas yang ditujukan untuk LAN 192.168.11.0/24 keluar pada antarmuka G0/1, ACL akan diterapkan ke G0/1 menggunakan<span class="cmd"><b>keluar</b></span>kata kunci. Perhatikan penggunaan<span class="cmd"><b>setiap</b></span>kata kunci dalam pernyataan izin. Pernyataan izin ini ditambahkan untuk memastikan tidak ada lalu lintas lain yang diblokir.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Contoh pada Gambar 1 dan 2 keduanya menggunakan<span class="cmd"><b>izinkan ip apa saja</b></span>pernyataan di akhir ACL. Untuk keamanan yang lebih baik<span class="cmd"><b>izin 192.168.11.0 0.0.0.255 apa saja</b></span>perintah dapat digunakan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

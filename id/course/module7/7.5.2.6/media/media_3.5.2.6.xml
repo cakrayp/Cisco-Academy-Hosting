@@ -1,0 +1,52 @@
+<textcomponents>
+	<component id='ID_inst'>
+		<text><![CDATA[<b>Aktivitas – Identifikasi Rute IPv4 Induk dan Anak</b><br/><br/>Menggunakan tabel routing di bawah ini; temukan jaringan yang tercantum dalam bagan. Tentukan apakah jaringan diklasifikasikan sebagai rute Level 1, Level 1 Induk, atau Level 2 Anak. Seret istilah yang sesuai ke bidang Jenis Rute yang tersedia.]]></text>
+	</component>
+
+
+<!--Drag and Drop-->
+	<component id='ID_drag01'>
+		<text><![CDATA[<font color="#393536">Level 1</font>]]></text>
+	</component>
+
+	<component id='ID_drag02'>
+		<text><![CDATA[<font color="#393536">Level 1 Parent</font>]]></text>
+	</component>
+
+	<component id='ID_drag03'>
+		<text><![CDATA[<font color="#393536">Level 2 Child</font>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_TITLE'>
+		<text><![CDATA[<span class="font10px"><b>Benar</b></span>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_BODY'>
+		<text><![CDATA[<span class="font10px">Anda telah berhasil mengklasifikasikan jenis rute untuk setiap jaringan.</span>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_TITLE'>
+		<text><![CDATA[<span class="font10px"><b>Salah</b></span>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_BODY'>
+		<text><![CDATA[<span class="font10px">Anda belum berhasil mengklasifikasikan jenis rute untuk setiap jaringan. Silakan klik Reset untuk mencoba lagi.</span>]]></text>
+	</component>
+
+	<component id='ID_CHECK'>
+		<text><![CDATA[<b>Memeriksa</b>]]></text>
+	</component>
+
+	<component id='ID_RESET'>
+		<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[<b>Jaringan Tertentu</b>]]></text>
+	</component> 
+	
+	<component id='ID_txt02'>
+		<text><![CDATA[<b>Jenis Rute</b>]]></text>
+	</component> 
+	
+</textcomponents>

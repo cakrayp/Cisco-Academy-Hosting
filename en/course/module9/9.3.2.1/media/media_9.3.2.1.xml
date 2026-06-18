@@ -1,0 +1,79 @@
+<textcomponents>
+<component id="ID_s1_title">
+  <text><![CDATA[<b>Configuring Extended ACLs</b>]]></text> 
+</component>
+
+  <component id="ID_s1_table">
+  <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+	<tr>
+		<td colspan='2' bgcolor='#0E6360' class="liner_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#077A77'  valign="top" width="110"><font color='#ffffff' size="11"><b>Parameter</b></font></td>
+		<td bgcolor='#077A77'  valign="top"><font color='#ffffff' size="11"><b>Description</b></font></td>
+	</tr>
+	   <tr>
+<td  bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><i>access-list-number</i></font></td>
+<td bgcolor='#EFF8F7' valign='top' >Identifies the access list using a number in the range 100 to 199 (for an extended IP ACL) and 2000 to 2699 (expanded IP ACLs).</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><B>deny</B></font></td>
+<td bgcolor='#FFFFFF' valign='top' >Denies access if the conditions are matched.</td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><B>permit</B></font></td>
+<td bgcolor='#EFF8F7' valign='top' >Permits access if the conditions are matched.</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><B>remark</B></font></td>
+<td bgcolor='#FFFFFF' valign='top' >Used to enter a remark or comment.</td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><i>protocol</i></font></td>
+<td bgcolor='#EFF8F7' valign='top' >Name or number of an Internet protocol. Common keywords include <font face="_typewriter"><b>icmp</b></font>, <font face="_typewriter"><b>ip</b></font>, <font face="_typewriter"><b>tcp</b></font>, or <font face="_typewriter"><b>udp</b></font>. To match any Internet protocol (including ICMP, TCP, and UDP) use the <font face="_typewriter"><b>ip </b></font>keyword.</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><i>source</i></font></td>
+<td bgcolor='#FFFFFF' valign='top' >Number of the network or host from which the packet is being sent.</td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><i>source-wildcard</i></font></td>
+<td bgcolor='#EFF8F7' valign='top' >Wildcard bits to be applied to source.</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><i>destination</i></font></td>
+<td bgcolor='#FFFFFF' valign='top' >Number of the network or host to which the packet is being sent.</td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><i>destination-wildcard</i></font></td>
+<td bgcolor='#EFF8F7' valign='top' >Wildcard bits to be applied to the destination.</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><i>operator</i></font></td>
+<td bgcolor='#FFFFFF' valign='top' >(Optional) Compares source or destination ports. Possible operands include <font face="_typewriter"><B>lt </B></font>(less than), <font face="_typewriter"><B>gt </B></font>(greater than),  <font face="_typewriter"><B>eq </B></font>(equal), <font face="_typewriter"><B>neq </B></font>(not equal), and <font face="_typewriter"><B>range </B></font>(inclusive range).</td>
+</tr>
+<tr>
+<td bgcolor='#EFF8F7' valign='top' ><font face="_typewriter"><i>port</i></font></td>
+<td bgcolor='#EFF8F7' valign='top' >(Optional) The decimal number or name of a TCP or UDP port.</td>
+</tr>
+<tr>
+<td bgcolor='#FFFFFF' valign='top' ><font face="_typewriter"><B>established</B></font></td>
+<td bgcolor='#FFFFFF' valign='top' >(Optional) For the TCP protocol only: Indicates an established connection.</td>
+</tr></table>]]></text>
+  </component>
+  
+  
+  <!-- slide 2-->
+  
+  <component id="ID_s2_title">
+  <text><![CDATA[<b>Configuring Extended ACLs</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01"><text><![CDATA[<textformat blockindent="-14"><li>ACL 103 allows requests to ports 80 and 443.</li><li>ACL 104 allows established HTTP and HTTPS replies.</li></textformat>]]></text> 
+</component>
+
+
+
+
+
+</textcomponents>

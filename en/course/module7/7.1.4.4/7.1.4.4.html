@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.1.4.4 Link-State Routing Protocols</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.4.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Routing Protocols</h1>
+        <h2>Types of Routing Protocols</h2>
+      </div>
+      <div id="content">
+          <p>In contrast to distance vector routing protocol operation, a router configured with a link-state routing protocol can create a complete view or topology of the network by gathering information from all of the other routers.  </p>
+          <p></p>
+          <p>To continue our analogy of sign posts, using a link-state routing protocol is like having a complete map of the network topology.  The sign posts along the way from source to destination are not necessary, because all link-state routers are using an identical map of the network.  A link-state router uses the link-state information to create a topology map and to select the best path to all destination networks in the topology.  </p>
+          <p></p>
+          <p></p>
+          <p>RIP-enabled routers send periodic updates of their routing information to their neighbors. Link-state routing protocols do not use periodic updates. After the network has converged, a link-state update is only sent when there is a change in the topology. For example, the link-state update in the animation is not sent until the 172.16.3.0 network goes down.  </p>
+          <p></p>
+          <p>Click Play in the figure to view link-state operations.  </p>
+          <p></p>
+          <p>Link-state protocols work best in situations where:</p>
+          <p>
+            <ul>
+              <li>The network design is hierarchical, usually occurring in large networks</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Fast convergence of the network is crucial</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The administrators have good knowledge of the implemented link-state routing protocol</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>There are two link-state IPv4 IGPs:</p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF </b>- Popular standards based routing protocol</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS </b>- Popular in provider networks</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

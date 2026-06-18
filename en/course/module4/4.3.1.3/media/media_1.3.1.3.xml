@@ -1,0 +1,52 @@
+﻿<textcomponents>
+  <component id="ID_title">
+    <text><![CDATA[<b>Remote Network Entry Identifiers</b>]]></text>
+  </component>
+ <!-- <component id="ID_txt01">
+    <text><![CDATA[D]]></text>
+  </component>-->
+  
+   <component id="ID_txt01">
+    <text><![CDATA[<b>D</b>]]></text>
+  </component>
+
+     <component id="ID_txt02">
+    <text><![CDATA[<b>Legend</b>]]></text>
+  </component>
+ 
+
+	 <component id="ID_txt03">
+    <text><![CDATA[- Identifies how the network was learned by the router.]]></text>
+  </component>
+ 
+ 
+ 
+	<component id="ID_txt04">
+    <text><![CDATA[- Identifies the destination network.]]></text>
+  </component>
+	
+	<component id="ID_txt05">
+    <text><![CDATA[- Identifies the administrative distance (trustworthiness) of the route source.]]></text>
+  </component>
+	
+	<component id="ID_txt06">
+    <text><![CDATA[- Identifies the metric to reach the remote network.]]></text>
+  </component>
+	
+	<component id="ID_txt07">    
+	<text><![CDATA[- Identifies the next-hop IP address to reach the remote network.]]></text>
+  </component>
+  
+	<component id="ID_txt08">    
+	<text><![CDATA[- Identifies the amout of elapsed time since the network was discovered.]]></text>
+  </component>
+	
+	<component id="ID_txt09">    
+	<text><![CDATA[- Identifies the outgoing interface on the router to reach the destination network.]]></text>
+  </component>
+
+
+  
+  
+
+</textcomponents>

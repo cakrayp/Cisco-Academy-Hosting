@@ -1,0 +1,39 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Struktur Data OSPF</b>]]></text> 
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Paket Pertukaran Router OSPF</b>]]></text> 
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[Halo paket<br/>Paket Deskripsi Basis Data<br/>Paket Permintaan Link-state<br/>Paket Pembaruan Link-State<br/>Paket Pengakuan Link-state]]></text> 
+</component>
+
+<component id="ID_s1_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" cellspacing="2" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="liner_top">
+<td bgcolor="#0E6360" class="liner_top" colspan="3"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="80"><font bgcolor="#097A76" color="#EFF8F7"><b>Basis data</b></font></td>
+<td bgcolor="#077A77" valign="top" width="80"><font bgcolor="#097A76" color="#EFF8F7"><b>Meja</b></font></td>
+<td bgcolor="#077A77" valign="top" width="267"><font bgcolor="#097A76" color="#EFF8F7"><b>Keterangan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Basis Data Kedekatan</td>
+<td bgcolor="#EFF8F7">Meja Tetangga</td>
+<td bgcolor="#EFF8F7"><textformat blockindent="-14"><ul class="bulletIndent20"><li>Daftar semua router tetangga yang mana router telah menjalin komunikasi dua arah.</li><li>Tabel ini unik untuk setiap router.</li><li>Dapat dilihat menggunakan<b><font face="_typewriter"> show ip ospf neighbor </font></b>memerintah.</li></ul></textformat></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">Basis Data Status Tautan<br/>(LSDB)</td>
+<td bgcolor="#FFFFFF">Tabel Topologi</td>
+<td bgcolor="#FFFFFF"><textformat blockindent="-14"><ul class="bulletIndent20"><li>Mencantumkan informasi tentang semua router lain di jaringan.</li><li>Basis data mewakili topologi jaringan.</li><li>Semua router dalam suatu area memiliki LSDB yang identik.</li><li>Dapat dilihat menggunakan<b><font face="_typewriter"> show ip ospf database </font></b>memerintah.</li></ul></textformat></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">Basis Data Penerusan</td>
+<td bgcolor="#EFF8F7">Tabel Perutean</td>
+<td bgcolor="#EFF8F7"><textformat blockindent="-14"><ul class="bulletIndent20"><li>Daftar rute yang dihasilkan ketika suatu algoritma dijalankan pada database link-state.</li><li>Tabel perutean setiap router bersifat unik dan berisi informasi tentang bagaimana dan ke mana mengirim paket ke router lain.</li><li>Dapat dilihat menggunakan<b><font face="_typewriter">show ip route </font></b>memerintah.</li></ul></textformat></td>
+</tr>
+</table>]]></text>
+</component>
+</textcomponents>

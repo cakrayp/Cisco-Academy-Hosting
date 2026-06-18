@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.2.1.6 Verify a Static Route</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.1.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Static and Default Routes</h1>
+        <h2>Configure IPv4 Static Routes</h2>
+      </div>
+      <div id="content">
+          <p>Along with<span class="cmd"><b> ping </b></span>and<span class="cmd"><b> traceroute</b></span>, useful commands to verify static routes include:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip route </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip route static</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>show ip route </b>
+                </span>
+                <span class="cmd">
+                  <i>network</i>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Figure 1 displays sample output of the<span class="cmd"><b> show ip route static </b></span>command. In the example, the output is filtered using the pipe and<span class="cmd"><b> begin </b></span>parameter. The output reflects the use of static routes using the next-hop address. </p>
+          <p></p>
+          <p>Figure 2 displays sample output of the<span class="cmd"><b> show ip route 192.168.2.1 </b></span>command.</p>
+          <p></p>
+          <p>Figure 3 verifies the<span class="cmd"><b> ip route </b></span>configuration in the running configuration. </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 4 to verify the routing settings of R2.</p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 5 to verify the routing settings of R3.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<textcomponents>
+
+	<component id='ID_s1_inst'>
+		<text><![CDATA[<b>Activity – Match the Metric to the Protocol</b><br><br>Check the protocol which best matches the metric described.]]></text>
+	</component>
+
+<!--check and reset button -->
+	<component id="ID_Button01">
+		<text><![CDATA[<b>Check</b>]]></text>
+	</component>
+
+
+	<component id="ID_Button02">
+		<text><![CDATA[<b>Reset</b>]]></text>
+	</component>
+	
+<!--Number of rows in the table-->
+	<component id="txt_numrows">
+		<text><![CDATA[4]]></text>
+	</component>
+
+<!--Number of columns for the answers in the table. Do not count the question column-->
+	<component id="txt_numcols">
+		<text><![CDATA[3]]></text>
+	</component>
+
+<!--Answer column headers-->
+	<component id="txt_col1">
+		<text><![CDATA[<b>EIGRP</b>]]></text>
+	</component>
+
+	<component id="txt_col2">
+		<text><![CDATA[<b>OSPF</b>]]></text>
+	</component>
+	
+	<component id="txt_col3">
+		<text><![CDATA[<b>RIP</b>]]></text>
+	</component>
+
+
+<!--Question text - blockindent code moves the text away from the left edge a bit-->
+<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+	<component id="txt_q1">
+		<text><![CDATA[Metric based on hop counts.]]></text>
+	</component>
+
+	<component id="txt_q2">
+		<text><![CDATA[Uses cost (cumulative link bandwidths) as its metric.]]></text>
+	</component>
+
+	<component id="txt_q3">
+		<text><![CDATA[Metric based on delay (packet delivery time) and bandwidth.]]></text>
+	</component>
+
+	<component id="txt_q4">
+		<text><![CDATA[Metric can be based additionally on load (amount of link traffic) and reliability (probability of link failure).]]></text>
+	</component>
+
+
+<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+	<component id="txt_a1">
+		<text><![CDATA[3]]></text>
+	</component>
+
+	<component id="txt_a2">
+		<text><![CDATA[2]]></text>
+	</component>
+
+	<component id="txt_a3">
+		<text><![CDATA[1]]></text>
+	</component>
+
+	<component id="txt_a4">
+		<text><![CDATA[1]]></text>
+	</component>
+
+<!-- Correct Feedback -->
+	<component id="ID_titleCorrect">
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id="ID_correctText">
+		<text><![CDATA[You have successfully matched each routing metric description to its protocol.]]></text>
+	</component>
+
+<!--Incorrect Feedback -->
+	<component id="ID_titleIncorrect">
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id="ID_IncorrectText">
+		<text><![CDATA[You have not successfully matched each routing metric description to its protocol. Please click Reset to try again.]]></text>
+	</component>
+</textcomponents>

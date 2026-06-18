@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.3.2 Konfigurasi Router-on-a-Stick: Konfigurasi Switch</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Konfigurasikan Perutean Antar-VLAN Router-on-a-Stick</h2>
+</div>
+<div id="content">
+<p>Untuk mengaktifkan routing antar-VLAN menggunakan router-on-a stick, mulailah dengan mengaktifkan trunking pada port switch yang terhubung ke router.</p>
+<p></p>
+<p>Pada gambar, router R1 terhubung ke switch S1 pada port trunk F0/5. VLAN 10 dan 30 ditambahkan ke switch S1.</p>
+<p></p>
+<p>Karena port switch F0/5 dikonfigurasi sebagai port trunk, port tersebut tidak perlu ditetapkan ke VLAN mana pun. Untuk mengkonfigurasi port switch F0/5 sebagai port trunk, jalankan<span class="cmd"><b>bagasi mode switchport</b></span>perintah dalam mode konfigurasi antarmuka untuk port F0/5.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Router tidak mendukung Dynamic Trunking Protocol (DTP) yang digunakan oleh switch, sehingga perintah berikut tidak dapat digunakan:<span class="cmd"><b>mode switchport otomatis dinamis</b></span>or<span class="cmd"><b>mode switchport dinamis diinginkan.</b></span></p>
+<p></p>
+<p>Router sekarang dapat dikonfigurasi untuk melakukan perutean antar-VLAN.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Network Topology: Basic Subnets</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[<b>Building A</b><br/>25 hosts]]></text> 
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[<b>Building B</b><br/>20 hosts]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<b>Building C</b><br/>15 hosts]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[<b>Building D</b><br/>28 hosts]]></text> 
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Basic Subnet Scheme</b>]]></text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Network Portion]]></text> 
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Host Portion]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Building LANs A, B, C, and D]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Site-to-Site WANs]]></text> 
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[Unused / Available]]></text> 
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[Subnet Portion<br/>2^3 = 8 Subnets]]></text> 
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[New Host Portion<br/>2^5 – 2 = 30 Hosts Per Subnet]]></text> 
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Unused Addresses on WAN Subnets</b>]]></text>
+	</component>
+	<component id="ID_s3_txt01">
+		<text><![CDATA[New Host Portion<br/>2^5 – 2 = 30 Hosts Per Subnet<br/><br/>30 – 2 = 28<br/>Each WAN Subnet Wastes 28 Addresses<br/><br/>28 x 3 = 84<br/>84 Addresses Are Unused]]></text> 
+	</component>
+</textcomponents>

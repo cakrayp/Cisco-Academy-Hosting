@@ -1,0 +1,35 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Configuring a Backup Route</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Private WAN]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Branch]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[ISP]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[HQ]]></text> 
+</component>
+
+<component id="ID_speech01">
+<text><![CDATA[I prefer to reach the HQ router using the private WAN link. ]]></text> 
+</component>
+
+<component id="ID_speech02">
+<text><![CDATA[However, if that link ever fails, I can use a floating static route connecting to the Internet as a backup.]]></text> 
+</component>
+
+</textcomponents>

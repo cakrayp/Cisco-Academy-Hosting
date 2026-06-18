@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.3.5 Konfigurasi Router-on-a-Stick: Memverifikasi Perutean</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.3.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Konfigurasikan Perutean Antar-VLAN Router-on-a-Stick</h2>
+</div>
+<div id="content">
+<p>Setelah router dan switch dikonfigurasi untuk melakukan routing antar-VLAN, langkah selanjutnya adalah memverifikasi konektivitas host-to-host. Akses ke perangkat pada VLAN jarak jauh dapat diuji menggunakan<span class="cmd"><b>ping</b></span>memerintah.</p>
+<p></p>
+<p>Misalnya seperti pada gambar, a<span class="cmd"><b>ping</b></span>dan sebuah<span class="cmd"><b>pelacak</b></span>dimulai dari PC1 ke alamat tujuan PC3.</p>
+<p></p>
+<p>
+<b>Tes Ping</b>
+</p>
+<p></p>
+<p>Itu<span class="cmd"><b>ping</b></span>perintah mengirimkan permintaan gema ICMP ke alamat tujuan. Ketika sebuah host menerima permintaan gema ICMP, ia merespons dengan balasan gema ICMP untuk mengonfirmasi bahwa ia menerima permintaan gema ICMP. Itu<span class="cmd"><b>ping</b></span>perintah menghitung waktu yang telah berlalu menggunakan perbedaan antara waktu pengiriman permintaan gema dan waktu balasan gema diterima. Waktu yang berlalu ini digunakan untuk menentukan latensi koneksi. Berhasil menerima balasan mengonfirmasi bahwa ada jalur antara perangkat pengirim dan perangkat penerima.</p>
+<p></p>
+<p>
+<b>Uji Tracert</b>
+</p>
+<p></p>
+<p>Tracert adalah utilitas yang berguna untuk mengonfirmasi jalur rute yang diambil antara dua perangkat. Pada sistem UNIX, utilitas ditentukan oleh<span class="cmd"><b>traceroute</b></span>. Tracert juga menggunakan ICMP untuk menentukan jalur yang diambil, namun menggunakan permintaan gema ICMP dengan nilai time-to-live tertentu yang ditentukan pada frame.</p>
+<p></p>
+<p>Nilai time-to-live menentukan dengan tepat berapa banyak router hop yang dapat dijangkau oleh gema ICMP. Permintaan gema ICMP pertama dikirim dengan nilai time-to-live yang ditetapkan untuk kedaluwarsa pada router pertama dalam perjalanan ke perangkat tujuan.</p>
+<p></p>
+<p>Ketika permintaan gema ICMP habis pada rute pertama, pesan ICMP dikirim kembali dari router ke perangkat asal. Perangkat mencatat respons dari router dan mengirimkan permintaan gema ICMP lainnya, namun kali ini dengan nilai time-to-live yang lebih besar. Hal ini memungkinkan permintaan gema ICMP melintasi router pertama dan mencapai perangkat kedua dalam perjalanan ke tujuan akhir. Proses tersebut berulang secara rekursif hingga akhirnya permintaan gema ICMP terkirim sepenuhnya ke perangkat tujuan akhir. Setelah<span class="cmd"><b>pelacak</b></span>utilitas selesai berjalan, ini menampilkan daftar antarmuka router masuk yang dicapai permintaan gema ICMP dalam perjalanan ke tujuan.</p>
+<p></p>
+<p>Dalam contoh tersebut,<span class="cmd"><b>ping</b></span>utilitas dapat mengirim permintaan gema ICMP ke alamat IP PC3. Juga, itu<span class="cmd"><b>pelacak</b></span>utilitas mengonfirmasi bahwa jalur ke PC3 adalah melalui alamat IP subantarmuka 172.17.10.1 dari router R1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

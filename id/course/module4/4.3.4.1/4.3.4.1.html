@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.3.4.1 Perutean Dinamis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Pengoperasian Perute</h1>
+<h2>Protokol Perutean Dinamis</h2>
+</div>
+<div id="content">
+<p>Protokol perutean dinamis digunakan oleh router untuk berbagi informasi tentang jangkauan dan status jaringan jarak jauh. Protokol perutean dinamis melakukan beberapa aktivitas, termasuk penemuan jaringan dan pemeliharaan tabel perutean.</p>
+<p></p>
+<p>Penemuan jaringan adalah kemampuan protokol perutean untuk berbagi informasi tentang jaringan yang diketahuinya dengan router lain yang juga menggunakan protokol perutean yang sama. Daripada bergantung pada rute statis yang dikonfigurasi secara manual ke jaringan jarak jauh di setiap router, protokol perutean dinamis memungkinkan router secara otomatis mempelajari jaringan ini dari router lain. Jaringan-jaringan ini, dan jalur terbaik ke masing-masing jaringan, ditambahkan ke tabel routing router, dan diidentifikasi sebagai jaringan yang dipelajari oleh protokol routing dinamis tertentu.</p>
+<p></p>
+<p>Selama penemuan jaringan, router bertukar rute dan memperbarui tabel peruteannya. Router telah berkumpul setelah mereka selesai bertukar dan memperbarui tabel peruteannya. Router kemudian memelihara jaringan dalam tabel routing mereka.</p>
+<p></p>
+<p>Gambar tersebut memberikan skenario sederhana tentang bagaimana dua router tetangga awalnya bertukar informasi routing. Dalam pesan yang disederhanakan ini, pertukaran R1 memperkenalkan dirinya dan jaringan yang dapat dijangkau. R2 merespons dan menyediakan jaringannya kepada R1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.2.1 Konfigurasikan Perutean Antar-VLAN Lama: Persiapan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Konfigurasikan Perutean Antar-VLAN Lama</h2>
+</div>
+<div id="content">
+<p>Perutean antar-VLAN lama mengharuskan router memiliki beberapa antarmuka fisik. Router menyelesaikan perutean dengan menghubungkan setiap antarmuka fisiknya ke VLAN unik. Setiap antarmuka juga dikonfigurasi dengan alamat IP untuk subnet yang terkait dengan VLAN tertentu yang terhubung dengannya. Dengan mengkonfigurasi alamat IP pada antarmuka fisik, perangkat jaringan yang terhubung ke masing-masing VLAN dapat berkomunikasi dengan router menggunakan antarmuka fisik yang terhubung ke VLAN yang sama. Dalam konfigurasi ini, perangkat jaringan dapat menggunakan router sebagai gateway untuk mengakses perangkat yang terhubung ke VLAN lainnya.</p>
+<p></p>
+<p>Proses perutean memerlukan perangkat sumber untuk menentukan apakah perangkat tujuan bersifat lokal atau jauh ke subnet lokal. Perangkat sumber menyelesaikan hal ini dengan membandingkan alamat IP sumber dan tujuan dengan subnet mask. Ketika alamat IP tujuan telah ditentukan berada di jaringan jarak jauh, perangkat sumber harus mengidentifikasi ke mana ia perlu meneruskan paket untuk mencapai perangkat tujuan. Perangkat sumber memeriksa tabel perutean lokal untuk menentukan ke mana ia perlu mengirim data. Perangkat menggunakan gateway defaultnya sebagai tujuan Lapisan 2 untuk semua lalu lintas yang harus keluar dari subnet lokal. Gateway default adalah rute yang digunakan perangkat ketika tidak ada rute lain yang ditentukan secara eksplisit ke jaringan tujuan. Alamat IP antarmuka router pada subnet lokal bertindak sebagai gateway default untuk perangkat pengirim.</p>
+<p></p>
+<p>Ketika perangkat sumber telah menentukan bahwa paket harus berjalan melalui antarmuka router lokal pada VLAN yang terhubung, perangkat sumber mengirimkan permintaan ARP untuk menentukan alamat MAC dari antarmuka router lokal. Ketika router mengirimkan balasan ARP-nya kembali ke perangkat sumber, perangkat sumber dapat menggunakan alamat MAC untuk menyelesaikan pembingkaian paket sebelum mengirimkannya ke jaringan sebagai lalu lintas unicast.</p>
+<p></p>
+<p>Karena frame Ethernet memiliki alamat MAC tujuan dari antarmuka router, switch mengetahui secara pasti port switch mana yang meneruskan lalu lintas unicast untuk mencapai antarmuka router untuk VLAN tersebut. Ketika frame tiba di router, router menghapus informasi alamat MAC sumber dan tujuan untuk memeriksa alamat IP tujuan paket. Router membandingkan alamat tujuan dengan entri dalam tabel routingnya untuk menentukan ke mana ia perlu meneruskan data untuk mencapai tujuan akhirnya. Jika router menentukan bahwa jaringan tujuan adalah jaringan yang terhubung secara lokal, seperti halnya dengan routing antar-VLAN, router mengirimkan permintaan ARP keluar antarmuka yang terhubung secara fisik ke VLAN tujuan. Perangkat tujuan merespons kembali ke router dengan alamat MAC-nya, yang kemudian digunakan router untuk membingkai paket. Router kemudian mengirimkan lalu lintas unicast ke switch, yang meneruskannya keluar port tempat perangkat tujuan terhubung.</p>
+<p></p>
+<p>Klik tombol Putar pada gambar untuk melihat bagaimana perutean antar-VLAN lama dilakukan.</p>
+<p></p>
+<p>Meskipun ada banyak langkah dalam proses perutean antar-VLAN, ketika dua perangkat pada VLAN berbeda berkomunikasi melalui router, seluruh proses terjadi dalam sepersekian detik.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

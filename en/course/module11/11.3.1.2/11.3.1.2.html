@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.3.1.2 Troubleshooting NAT: debug command</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.3.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Troubleshooting NAT</h1>
+        <h2>Troubleshooting NAT</h2>
+      </div>
+      <div id="content">
+          <p>Use the <span class="cmd"><b>debug ip nat</b></span> command to verify the operation of the NAT feature by displaying information about every packet that is translated by the router. The <span class="cmd"><b>debug ip nat detailed</b></span> command generates a description of each packet considered for translation. This command also provides information about certain errors or exception conditions, such as the failure to allocate a global address. The <span class="cmd"><b>debug ip nat detailed</b></span> command generates more overhead than the <span class="cmd"><b>debug ip nat</b></span> command, but it can provide the detail that may be needed to troubleshoot the NAT problem. Always turn off debugging when finished.</p>
+          <p></p>
+          <p>Figure 1 shows a sample <span class="cmd"><b>debug ip nat</b></span> output. The output shows that the inside host (192.168.10.10) initiated traffic to the outside host (209.165.201.1) and the source address was translated to address 209.165.200.226. </p>
+          <p></p>
+          <p>When decoding the debug output, note what the following symbols and values indicate: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>* (asterisk)</b> - The asterisk next to NAT indicates that the translation is occurring in the fast-switched path. The first packet in a conversation is always process-switched, which is slower. The remaining packets go through the fast-switched path if a cache entry exists. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>s=</b> - This symbol refers to the source IP address. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>a.b.c.d</b>---><b>w.x.y.z</b> - This value indicates that source address a.b.c.d is translated to w.x.y.z. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>d=</b> - This symbol refers to the destination IP address. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>[xxxx]</b> - The value in brackets is the IP identification number. This information may be useful for debugging in that it enables correlation with other packet traces from protocol analyzers. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: Verify that the ACL referenced in the NAT command reference is permitting all of the necessary networks. In Figure 2, only 192.168.0.0/16 addresses are eligible to be translated. Packets from the inside network destined for the Internet with source addresses that are not explicitly permitted by ACL 1 are not translated by R2.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

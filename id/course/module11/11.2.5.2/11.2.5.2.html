@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.5.2 Alamat Lokal Unik IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.5.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Konfigurasi NAT dan IPv6</h2>
+</div>
+<div id="content">
+<p>Alamat lokal unik (ULA) IPv6 mirip dengan alamat pribadi RFC 1918 di IPv4, tetapi terdapat perbedaan yang signifikan juga. Tujuan ULA adalah menyediakan ruang alamat IPv6 untuk komunikasi dalam situs lokal; ini tidak dimaksudkan untuk memberikan ruang alamat IPv6 tambahan, juga tidak dimaksudkan untuk memberikan tingkat keamanan.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, ULA memiliki awalan FC00::/7, yang menghasilkan rentang hextet pertama dari FC00 hingga FDFF. 1 bit berikutnya diatur ke 1 jika awalan ditetapkan secara lokal. Disetel ke 0 dapat ditentukan di masa mendatang. 40 bit berikutnya adalah ID global diikuti dengan ID Subnet 16-bit. 64 bit pertama ini digabungkan untuk membuat awalan ULA. Ini menyisakan 64 bit tersisa untuk ID antarmuka, atau dalam istilah IPv4, bagian host dari alamat tersebut.</p>
+<p></p>
+<p>Alamat lokal unik didefinisikan dalam RFC 4193. ULA juga dikenal sebagai alamat IPv6 lokal (jangan bingung dengan alamat link-lokal IPv6) dan memiliki beberapa karakteristik termasuk:</p>
+<p>
+<ul>
+<li>Mengizinkan situs digabungkan atau saling terhubung secara pribadi, tanpa menimbulkan konflik alamat atau memerlukan penomoran ulang antarmuka yang menggunakan awalan ini.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Tidak bergantung pada ISP mana pun dan dapat digunakan untuk komunikasi dalam suatu situs tanpa harus memiliki konektivitas Internet apa pun.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Tidak dapat dirutekan melalui Internet, namun jika secara tidak sengaja bocor melalui perutean atau DNS, tidak ada konflik dengan alamat lain.</li>
+</ul>
+</p>
+<p></p>
+<p>ULA tidak sesederhana alamat RFC 1918. Tidak seperti alamat IPv4 pribadi, IETF tidak bermaksud menggunakan bentuk NAT untuk menerjemahkan antara alamat lokal unik dan alamat unicast global IPv6.</p>
+<p></p>
+<p>Penerapan dan potensi penggunaan alamat lokal unik IPv6 masih diperiksa oleh komunitas Internet. Misalnya, IETF sedang mempertimbangkan untuk mengizinkan opsi untuk membuat awalan ULA secara lokal menggunakan FC00::/8, atau menetapkannya secara otomatis oleh pihak ketiga yang dimulai dengan FD00::/8.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Spesifikasi IPv6 asli mengalokasikan ruang alamat untuk alamat situs-lokal, yang didefinisikan dalam RFC 3513. Alamat situs-lokal sejak itu tidak digunakan lagi oleh IETF di RFC 3879 karena istilah “situs” agak ambigu. Alamat situs-lokal memiliki rentang awalan FEC0::/10 dan mungkin masih ditemukan di beberapa dokumentasi IPv6 lama.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

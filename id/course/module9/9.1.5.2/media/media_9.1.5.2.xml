@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Penempatan ACL Standar</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Blokir semua lalu lintas dari 192.168.10.0/24 hingga 192.168.30.0/24.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Memfilter lalu lintas dari 192.168.10.0/24 saja ke 192.168.30.0/24.]]></text> 
+  </component>
+  <component id="ID_txt03">
+  <text><![CDATA[Memfilter lalu lintas dari 192.168.10.0/24 ke semua tujuan yang dapat dijangkau oleh R3.]]></text> 
+  </component>
+   <component id="ID_txt04">
+  <text><![CDATA[<b>Situs A</b>]]></text> 
+  </component>
+   <component id="ID_txt05">
+  <text><![CDATA[<b>Situs B</b>]]></text> 
+  </component>
+</textcomponents>

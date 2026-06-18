@@ -1,0 +1,60 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Port Tujuan TCP dan UDP</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[Server Telnet]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Server FTP]]></text>
+</component>
+<component id="ID_s1_txt03">
+<text><![CDATA[Server Web]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Pelabuhan 23]]></text>
+</component>
+<component id="ID_s1_txt05">
+<text><![CDATA[Pelabuhan 20 dan 21]]></text>
+</component>
+<component id="ID_s1_txt06">
+<text><![CDATA[Pelabuhan 80]]></text>
+</component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Klien]]></text>
+</component>
+<component id="ID_s1_txt08">
+<text><![CDATA[<b>Internet</b>]]></text>
+</component>
+
+
+<!--Slide 2-->
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Pelabuhan Penerusan</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Server PoS]]></text>
+</component>
+<component id="ID_s2_txt02">
+<text><![CDATA[Ke alamat server pribadi IPv4.]]></text>
+</component>
+<component id="ID_s2_txt03">
+<text><![CDATA[Jaringan Dalam]]></text>
+</component>
+<component id="ID_s2_txt04">
+<text><![CDATA[Router SOHO]]></text>
+</component>
+<component id="ID_s2_txt05">
+<text><![CDATA[Ke alamat IPv4 publik dari router dan port tujuan server tertentu.]]></text>
+</component>
+<component id="ID_s2_txt06">
+<text><![CDATA[Internet]]></text>
+</component>
+<component id="ID_s2_txt07">
+<text><![CDATA[Saya meneruskan paket ke server PoS yang cocok dengan port tujuan tertentu.]]></text>
+</component>
+
+
+</textcomponents>

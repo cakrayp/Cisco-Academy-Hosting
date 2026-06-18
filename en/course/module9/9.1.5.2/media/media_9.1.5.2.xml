@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Standard ACL Placement</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Block all traffic from 192.168.10.0/24 to 192.168.30.0/24.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Filters traffic from 192.168.10.0/24 only to 192.168.30.0/24.]]></text> 
+  </component>
+  <component id="ID_txt03">
+  <text><![CDATA[Filters traffic from 192.168.10.0/24 to all destinations reachable by R3.]]></text> 
+  </component>
+   <component id="ID_txt04">
+  <text><![CDATA[<b>Site A</b>]]></text> 
+  </component>
+   <component id="ID_txt05">
+  <text><![CDATA[<b>Site B</b>]]></text> 
+  </component>
+</textcomponents>

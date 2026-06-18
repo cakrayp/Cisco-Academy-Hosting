@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.2.2.1 Operasi NAT Dinamis</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi NAT</h1>
+<h2>Mengonfigurasi NAT Dinamis</h2>
+</div>
+<div id="content">
+<p>Meskipun NAT statis menyediakan pemetaan permanen antara alamat lokal dalam dan alamat global dalam, NAT dinamis memungkinkan pemetaan otomatis alamat lokal dalam ke alamat global dalam. Alamat dalam global ini biasanya merupakan alamat IPv4 publik. NAT Dinamis menggunakan grup, atau kumpulan alamat IPv4 publik untuk terjemahan.</p>
+<p></p>
+<p>NAT dinamis, seperti NAT statis, memerlukan konfigurasi antarmuka dalam dan luar yang berpartisipasi dalam NAT. Namun, jika NAT statis membuat pemetaan permanen ke satu alamat, NAT dinamis menggunakan kumpulan alamat.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Menerjemahkan antara alamat IPv4 publik dan pribadi sejauh ini merupakan penggunaan NAT yang paling umum. Namun, terjemahan NAT dapat terjadi antara pasangan alamat mana pun.</p>
+<p></p>
+<p>Contoh topologi yang ditunjukkan pada gambar memiliki jaringan dalam yang menggunakan alamat dari ruang alamat pribadi RFC 1918. Terlampir pada router R1 adalah dua LAN, 192.168.10.0/24 dan 192.168.11.0/24.  Router R2, router perbatasan, dikonfigurasi untuk NAT dinamis menggunakan kumpulan alamat IPv4 publik 209.165.200.226 hingga 209.165.200.240.</p>
+<p></p>
+<p>Kumpulan alamat IPv4 publik (di dalam kumpulan alamat global) tersedia untuk perangkat apa pun di dalam jaringan berdasarkan siapa cepat dia dapat. Dengan NAT dinamis, satu alamat dalam diterjemahkan ke satu alamat luar. Dengan jenis terjemahan ini, harus ada cukup alamat di kumpulan untuk mengakomodasi semua perangkat di dalam yang memerlukan akses ke jaringan luar pada saat yang bersamaan. Jika semua alamat di pool telah digunakan, perangkat harus menunggu alamat yang tersedia sebelum dapat mengakses jaringan luar.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

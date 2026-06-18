@@ -1,0 +1,17 @@
+﻿<textcomponents>
+ <component id="ID_title">
+    <text><![CDATA[<b>Directly Connected Network Entry Identifiers</b>]]></text>
+  </component>
+  <component id="ID_txt01">
+    <text><![CDATA[- Identifies how the network was learned by the router.]]></text>
+  </component>
+  <component id="ID_txt02">
+    <text><![CDATA[- Identifies the destination network and how it is connected.]]></text>
+  </component>
+  <component id="ID_txt03">
+    <text><![CDATA[- Identifies the interface on the router connected to the destination network.]]></text>
+  </component>
+  <component id="ID_txt04">
+    <text><![CDATA[<b>Legend</b>]]></text>
+  </component>
+</textcomponents>

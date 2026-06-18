@@ -1,0 +1,21 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Rute Jaringan Terhubung Langsung dan Jarak Jauh</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Jaringan yang terhubung langsung</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Jaringan yang terhubung langsung</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Jaringan yang terhubung langsung</b>]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Jaringan jarak jauh</b>]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[R1 memiliki tiga jaringan yang terhubung langsung: 192.168.10.0/24, 192.168.11.0/24, dan 209.165.200.224/30. R1 juga memiliki dua jaringan jarak jauh yang dapat dipelajari dari R2: 10.1.1.0/24 dan 10.1.2.0/24.]]></text>
+	</component>
+</textcomponents>

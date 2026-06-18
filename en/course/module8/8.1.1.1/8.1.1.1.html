@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.1.1 Evolution of OSPF</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>Open Shortest Path First</h2>
+      </div>
+      <div id="content">
+          <p>As shown in Figure 1, OSPF version 2 (OSPFv2) is available for IPv4 while OSPF version 3 (OSPFv3) is available for IPv6. </p>
+          <p></p>
+          <p>Click the dates in Figure 2 to see historical events related to OSPF. </p>
+          <p></p>
+          <p>The initial development of OSPF began in 1987 by the Internet Engineering Task Force (IETF) OSPF Working Group. At that time, the Internet was largely an academic and research network funded by the U.S. government. </p>
+          <p></p>
+          <p>In 1989, the specification for OSPFv1 was published in RFC 1131. Two implementations were written. One implementation was developed to run on routers and the other to run on UNIX workstations. The latter implementation became a widespread UNIX process known as GATED. OSPFv1 was an experimental routing protocol and was never deployed.</p>
+          <p></p>
+          <p>In 1991, OSPFv2 was introduced in RFC 1247 by John Moy. OSPFv2 offered significant technical improvements over OSPFv1. It is classless by design; therefore, it supports VLSM and CIDR.</p>
+          <p></p>
+          <p>At the same time the OSPF was introduced, ISO was working on a link-state routing protocol of their own, Intermediate System-to-Intermediate System (IS-IS). IETF chose OSPF as their recommended Interior Gateway Protocol (IGP). </p>
+          <p></p>
+          <p>In 1998, the OSPFv2 specification was updated in RFC 2328, which remains the current RFC for OSPF. </p>
+          <p></p>
+          <p>In 1999, OSPFv3 for IPv6 was published in RFC 2740. OSPF for IPv6, created by John Moy, Rob Coltun, and Dennis Ferguson, is not only a new protocol implementation for IPv6, but also a major rewrite of the operation of the protocol. </p>
+          <p></p>
+          <p>In 2008, OSPFv3 was updated in RFC 5340 as OSPF for IPv6. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: In this chapter, unless explicitly identified as OSPFv2 or OSPFv3, the term OSPF is used to indicate concepts that are shared by both.  </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

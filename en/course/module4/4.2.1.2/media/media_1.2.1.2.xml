@@ -1,0 +1,102 @@
+<textcomponents>
+
+   <component id="ID_title01">
+      <text><![CDATA[<b>PC1 Sends a Packet to PC2</b>]]></text>
+   </component>
+
+   <component id="ID_header1">
+      <text><![CDATA[<b>Layer 2 Data Link Frame</b>]]></text>
+   </component>
+
+   <component id="ID_header2">
+      <text><![CDATA[<b>Packet’s Layer 3 data</b>]]></text>
+   </component>
+   
+   <component id="ID_txt01">
+      <text><![CDATA[<b>Dest. MAC 00-10</b>]]></text>
+   </component>
+
+   <component id="ID_txt02">
+      <text><![CDATA[<b>Source MAC 0A-10</b>]]></text>
+   </component>
+
+   <component id="ID_txt03">
+      <text><![CDATA[Type 0x800]]></text>
+   </component> 
+
+   <component id="ID_txt04">
+      <text><![CDATA[<b>Source IP 192.168.1.10</b>]]></text>
+   </component>
+   
+   <component id="ID_txt05">
+      <text><![CDATA[<b>Dest. IP 192.168.4.10</b>]]></text>
+   </component>
+
+   <component id="ID_txt06">
+      <text><![CDATA[IP fields]]></text>
+   </component>
+
+   <component id="ID_txt07">
+      <text><![CDATA[Data]]></text>
+   </component>
+
+   <component id="ID_txt08">
+      <text><![CDATA[Trailer]]></text>
+   </component>
+
+   <component id="ID_txt09">
+      <text><![CDATA[<b>PC1’s ARP Cache for R1</b>]]></text>
+   </component>
+
+   <component id="ID_txt10">
+      <text><![CDATA[<b>IP Address</b>]]></text>
+   </component>
+
+   <component id="ID_txt11">
+      <text><![CDATA[<b>MAC Address</b>]]></text>
+   </component>
+
+
+<!--SPEECH BUBBLES-->
+   <component id="ID_speech01">
+      <text><![CDATA[I have a packet for PC2.]]></text>
+   </component>
+
+   <component id="ID_speech02">
+      <text><![CDATA[What path does it need to take?]]></text>
+   </component>
+
+   <component id="ID_speech03">
+      <text><![CDATA[I see PC2 is on a different network.]]></text>
+   </component>
+
+   <component id="ID_speech04">
+      <text><![CDATA[Because PC2 is on different network, I will encapsulate the packet and send it to the router on MY network. Let me find that MAC address….]]></text>
+   </component>
+   
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>
+
+</textcomponents>

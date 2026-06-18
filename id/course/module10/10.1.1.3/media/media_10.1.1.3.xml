@@ -1,0 +1,56 @@
+<textcomponents>
+	<component id="ID_s1_title">
+	<text><![CDATA[<b>Format Pesan DHCPv4</b>]]></text>
+	</component>
+
+	<component id="ID_table">
+	<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" class="mtable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="4"><font color="#0E6360" size="1"><span style="color:#98D3D1">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#0E6360" class="mtitle" valign="top"><p align="center"><font color="#ffffff"><b>8</b></font></p></td>
+<td bgcolor="#0E6360" class="mtitle" valign="top"><p align="center"><font color="#ffffff"><b>16</b></font></p></td>
+<td bgcolor="#0E6360" class="mtitle" valign="top"><p align="center"><font color="#ffffff"><b>24</b></font></p></td>
+<td bgcolor="#0E6360" class="mtitle" valign="top"><p align="center"><font color="#ffffff"><b>32</b></font></p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><p align="center">Kode OP (1)</p></td>
+<td bgcolor="#EFF8F7" valign="top"><p align="center">Jenis Perangkat Keras (1)</p></td>
+<td bgcolor="#EFF8F7" valign="top"><p align="center">Panjang Alamat Perangkat Keras (1)</p></td>
+<td bgcolor="#EFF8F7" valign="top"><p align="center">Lompatan (1)</p></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4" valign="top"><p align="center">Pengidentifikasi Transaksi</p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" colspan="2" valign="top"><p align="center">Detik - 2 byte</p></td>
+<td bgcolor="#EFF8F7" colspan="2" valign="top"><p align="center">Bendera - 2 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4" valign="top"><p align="center">Alamat IP Klien (CIADDR) - 4 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" colspan="4" valign="top"><p align="center">Alamat IP Anda (YIADDR) - 4 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4" valign="top"><p align="center">Alamat IP Server (SIADDR) - 4 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" colspan="4" valign="top"><p align="center">Alamat IP Gerbang (GIADDR) - 4 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4" valign="top"><p align="center">Alamat Perangkat Keras Klien (CHADDR) - 16 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" colspan="4" valign="top"><p align="center">Server Nama (SNAME) - 64 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff" colspan="4" valign="top"><p align="center">Nama File Boot - 128 byte</p></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" colspan="4" valign="top"><p align="center">Opsi DHCP - variabel</p></td>
+</tr>
+</table>]]></text>
+	</component>
+</textcomponents>

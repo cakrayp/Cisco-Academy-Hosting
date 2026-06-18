@@ -1,0 +1,96 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activity – Identify distance vector Terminology</b><br/><br/>Drag the term that best matches the distance vector routing protocol description to the field provided.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Bellman-Ford</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Broadcast Updates</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Neighbors</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Periodic Updates</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Algorithm</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">DUAL</font>]]></text>
+</component>
+
+
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each term to its distance vector routing protocol description. ]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each term to its distance vector routing protocol description. Please click Reset to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[Check]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[Reset]]></text>
+</component>
+
+
+<component id='ID_target_header'>
+	<text><![CDATA[<b>Term</b>]]></text>
+</component>
+<component id='ID_text_header'>
+	<text><![CDATA[<b>distance vector Routing Protocol Description</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[A timing process where updates are sent to neighboring routers at regular intervals.]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[A process where neighbor routers receive network updates at a specific network address.]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Process which calculates the best paths to networks.]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[EIGRP and IGRP use this algorithm process as developed by Cisco.]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[RIP uses this algorithm process.]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Describes routers which share a link and the same routing protocol.]]></text> 
+</component>
+
+
+   
+</textcomponents>

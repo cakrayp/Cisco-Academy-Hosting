@@ -1,0 +1,48 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Perutean Dinamis versus Statis</b>]]></text> 
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" cellspacing="2" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr class="liner">
+<td bgcolor="#0E6360" class="liner_top" colspan="3"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" valign="top" width="105"><font bgcolor="#097A76" color="#EFF8F7"> </font></td>
+<td bgcolor="#077A77" valign="top" width="175"><font bgcolor="#097A76" color="#EFF8F7"><b>Perutean Dinamis</b></font></td>
+<td bgcolor="#077A77" valign="top" width="175"><font bgcolor="#097A76" color="#EFF8F7"><b>Perutean Statis</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Configuration Complexity</font></b></td>
+<td bgcolor="#EFF8F7">Umumnya tidak bergantung pada ukuran jaringan</td>
+<td bgcolor="#EFF8F7">Meningkat seiring dengan ukuran jaringan</td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Topology Changes</font></b></td>
+<td bgcolor="#FFFFFF">Secara otomatis beradaptasi dengan perubahan topologi</td>
+<td bgcolor="#FFFFFF">Diperlukan intervensi administrator</td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Scaling</font></b></td>
+<td bgcolor="#EFF8F7">Cocok untuk topologi sederhana dan kompleks</td>
+<td bgcolor="#EFF8F7">Cocok untuk topologi sederhana</td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Security</font></b></td>
+<td bgcolor="#FFFFFF">Kurang aman</td>
+<td bgcolor="#FFFFFF">Lebih aman</td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Resource Usage</font></b></td>
+<td bgcolor="#EFF8F7">Menggunakan CPU, memori, bandwidth tautan</td>
+<td bgcolor="#EFF8F7">Tidak diperlukan sumber daya tambahan</td>
+</tr>
+<tr>
+<td bgcolor="#077A77"><b><font color="#FFFFFF">Predictability</font></b></td>
+<td bgcolor="#FFFFFF">Rute tergantung pada topologi saat ini</td>
+<td bgcolor="#FFFFFF">Rute menuju tujuan selalu sama</td>
+</tr>
+</table>]]></text>
+</component>
+</textcomponents>

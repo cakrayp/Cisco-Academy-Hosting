@@ -1,0 +1,29 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Komponen Protokol Routing</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Protokol perutean membuat dan memelihara struktur data]]></text> 
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Protokol perutean bertukar pesan]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Protokol perutean menggunakan algoritma perutean untuk mengidentifikasi rute terbaik]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Saya akan menggunakan algoritma EIGRP DUAL untuk mengidentifikasi rute terbaik dan mengirimkan rute terbaik ke tabel routing.]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Saya akan menggunakan algoritma EIGRP DUAL untuk mengidentifikasi rute terbaik dan mengirimkan rute terbaik ke tabel routing.]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[EIGRP menciptakan dan memelihara:<textformat blockindent="-14"><ul><li>Meja tetangga</li><li>Tabel topologi</li></ul></textformat>]]></text> 
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[EIGRP menciptakan dan memelihara:<textformat blockindent="-14"><ul><li>Meja tetangga</li><li>Tabel topologi</li></ul></textformat>]]></text> 
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[<font color="#FFFFFF">EIGRP Hello<br/>EIGRP Update<br/>EIGRP Query<br/>EIGRP Reply<br/>EIGRP Acknowledge</font>]]></text> 
+	</component>
+</textcomponents>

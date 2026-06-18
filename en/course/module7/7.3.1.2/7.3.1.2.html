@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>7.3.1.2 Advertising Networks</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>RIP and RIPng Routing</h1>
+        <h2>Configuring the RIP Protocol</h2>
+      </div>
+      <div id="content">
+          <p>By entering the RIP router configuration mode, the router is instructed to run RIP. But the router still needs to know which local interfaces it should use for communication with other routers, as well as which locally connected networks it should advertise to those routers.  </p>
+          <p></p>
+          <p>To enable RIP routing for a network, use the<span class="cmd"><b> network </b></span><span class="cmd"><i>network-address </i></span>router configuration mode command. Enter the classful network address for each directly connected network. This command:</p>
+          <p>
+            <ul>
+              <li>Enables RIP on all interfaces that belong to a specific network. Associated interfaces now both send and receive RIP updates.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Advertises the specified network in RIP routing updates sent to other routers every 30 seconds. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Note</b>: If a subnet address is entered, the IOS automatically converts it to the classful network address.  Remember RIPv1 is a classful routing protocol for IPv4. For example, entering the<span class="cmd"><b> network 192.168.1.32 </b></span>command would automatically be converted to<span class="cmd"><b> network 192.168.1.0 </b></span>in the running configuration file. The IOS does not give an error message, but instead corrects the input and enters the classful network address.  </p>
+          <p></p>
+          <p>In Figure 1, the<span class="cmd"><b> network </b></span>command is used to advertise the R1 directly connected networks.  </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 2 to configure a similar configuration on R2 and R3.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

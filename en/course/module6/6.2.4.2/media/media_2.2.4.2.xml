@@ -1,0 +1,5 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Configuring a Default Static IPv6 Route</b>]]></text>
+	</component>
+</textcomponents>

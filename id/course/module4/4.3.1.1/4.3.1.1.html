@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.3.1.1 Tabel Perutean</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Pengoperasian Perute</h1>
+<h2>Analisis Tabel Perutean</h2>
+</div>
+<div id="content">
+<p>Tabel routing router menyimpan informasi tentang:</p>
+<p>
+<ul>
+<li>
+<b>Rute yang terhubung langsung</b>- Rute ini berasal dari antarmuka router aktif. Router menambahkan rute yang terhubung langsung ketika antarmuka dikonfigurasi dengan alamat IP dan diaktifkan.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Rute jarak jauh</b>- Ini adalah jaringan jarak jauh yang terhubung ke router lain. Rute ke jaringan ini dapat dikonfigurasi secara statis atau dikonfigurasi secara dinamis menggunakan protokol perutean dinamis.</li>
+</ul>
+</p>
+<p></p>
+<p>Secara khusus, tabel routing adalah file data dalam RAM yang digunakan untuk menyimpan informasi rute tentang jaringan yang terhubung langsung dan jarak jauh. Tabel perutean berisi asosiasi jaringan atau hop berikutnya. Asosiasi ini memberi tahu router bahwa tujuan tertentu dapat dicapai secara optimal dengan mengirimkan paket ke router tertentu yang mewakili hop berikutnya menuju tujuan akhir. Asosiasi hop berikutnya juga dapat menjadi antarmuka keluar atau keluar ke tujuan berikutnya.</p>
+<p></p>
+<p>Gambar tersebut mengidentifikasi jaringan yang terhubung langsung dan jaringan jarak jauh dari router R1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

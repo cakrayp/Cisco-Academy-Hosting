@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.1.1.4 Multilayer Switch Inter-VLAN Routing</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Inter-VLAN Routing Configuration</h1>
+        <h2>Inter-VLAN Routing Operation</h2>
+      </div>
+      <div id="content">
+          <p>The router-on-a-stick implementation of inter-VLAN routing requires only one physical interface on a router and one interface on a switch, simplifying the cabling of the router. However, in other implementations of inter-VLAN routing, a dedicated router is not required.</p>
+          <p></p>
+          <p>Multilayer switches can perform Layer 2 and Layer 3 functions, replacing the need for dedicated routers to perform basic routing on a network. Multilayer switches support dynamic routing and inter-VLAN routing.</p>
+          <p></p>
+          <p>Click the Play button in the figure to see an animation of how switch-based inter-VLAN routing occurs. </p>
+          <p></p>
+          <p>As seen in the animation:</p>
+          <p></p>
+          <p>1. PC1 on VLAN 10 is communicating with PC3 on VLAN 30 through switch S1 using VLAN interfaces configured for each VLAN.</p>
+          <p></p>
+          <p>2. PC1 sends its unicast traffic to switch S2.</p>
+          <p></p>
+          <p>3. Switch S2 tags the unicast traffic as originating on VLAN 10 as it forwards the unicast traffic out its trunk link to switch S1.</p>
+          <p></p>
+          <p>4. Switch S1 removes the VLAN tag and forwards the unicast traffic to the VLAN 10 interface.</p>
+          <p></p>
+          <p>5. Switch S1 routes the unicast traffic to its VLAN 30 interface.</p>
+          <p></p>
+          <p>6. Switch S1 then retags the unicast traffic with VLAN 30 and forwards it out the trunk link back to switch S2.</p>
+          <p></p>
+          <p>7. Switch S2 removes the VLAN tag of the unicast frame and forwards the frame out to PC3 on port F0/6.</p>
+          <p></p>
+          <p>To enable a multilayer switch to perform routing functions, the multilayer switch must have IP routing enabled.</p>
+          <p>Multilayer switching is more scalable than any other inter-VLAN routing implementation. This is because routers have a limited number of available ports to connect to networks. Additionally, for interfaces that are configured as a trunk line, limited amounts of traffic can be accommodated on that line at one time.</p>
+          <p></p>
+          <p>With a multilayer switch, traffic is routed internal to the switch device, which means packets are not filtered down a single trunk line to obtain new VLAN-tagging information. A multilayer switch does not, however, completely replace the functionality of a router. Routers support a significant number of additional features, such as the ability to implement greater security controls. Rather, a multilayer switch can be thought of as a Layer 2 device that is upgraded to have some routing capabilities. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: <b></b>In this course, configuring inter-VLAN routing on a switch is restricted to configuring static routes on a 2960 switch, which is the only routing functionality supported on the 2960 switches. The 2960 switch supports up to 16 static routes (including user-configured routes and the default route) and any directly connected routes and default routes for the management interface; the 2960 switch can have an IP address assigned to each switch virtual interface (SVI). For a full-featured, relatively inexpensive multilayer switch, the Cisco Catalyst 3560 Series switches support the EIGRP, OSPF, and BGP routing protocols.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

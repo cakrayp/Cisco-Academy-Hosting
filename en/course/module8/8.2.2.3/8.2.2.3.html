@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.2.2.3 The network Command</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring Single-Area OSPFv2</h1>
+        <h2>Configure Single-Area OSPFv2</h2>
+      </div>
+      <div id="content">
+          <p>There are several ways to identify the interfaces that will participate in the OSPFv2 routing process.</p>
+          <p>Figure 1 displays the required commands to determine which interfaces on R1 participate in the OSPFv2 routing process for an area. Notice the use of wildcard masks to identify the respective interfaces based on their network addresses. Because this is a single-area OSPF network, all area IDs are set to 0. </p>
+          <p>As an alternative, OSPFv2 can be enabled using the<span class="cmd"><b> network </b></span><span class="cmd"><i>intf-ip-address </i></span><span class="cmd"><b>0.0.0.0 </b></span><span class="cmd"><i>area area-id </i></span>router configuration mode command.</p>
+          <p>Figure 2 provides an example of specifying the interface IPv4 address with a quad 0 wildcard mask. Entering<span class="cmd"><b> network 172.16.3.1 0.0.0.0 area 0 </b></span>on R1 tells the router to enable interface Serial0/0/0 for the routing process. As a result, the OSPFv2 process will advertise the network that is on this interface (172.16.3.0/30).</p>
+          <p>The advantage of specifying the interface is that the wildcard mask calculation is not necessary. OSPFv2 uses the interface address and subnet mask to determine the network to advertise.</p>
+          <p>Some IOS versions allow the subnet mask to be entered instead of the wildcard mask. The IOS then converts the subnet mask to the wildcard mask format. </p>
+          <p>Use the Syntax Checker in Figure 3 to advertise the networks connected to R2.</p>
+          <p>
+            <b>Note</b>: While completing the syntax checker, observe the informational messages describing the adjacency between R1 (1.1.1.1) and R2 (2.2.2.2). The IPv4 addressing scheme used for the router ID makes it easy to identify the neighbor.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<textcomponents>
+<!-- comman text-->
+	<component id="ID_txt01">
+		<text><![CDATA[<b>1 Oktober</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>2 Oktober</b>]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>3 Oktober</b>]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>4 Oktober</b>]]></text> 
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Setara desimal:]]></text> 
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Subnetmask]]></text> 
+	</component>
+	
+<!-- Slide 1-->
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Jaringan Kelas A</b>]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Selalu dimulai dengan<br/>biner 0:]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[0xxxxxxx]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[0 – 127]]></text> 
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[255]]></text> 
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s1_txt07">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s1_txt08">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s1_txt09">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt10">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt11">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+<!-- Slide 2-->
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Jaringan Kelas B</b>]]></text>
+	</component>
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Selalu dimulai dengan<br/>biner 10:]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[10xxxxxx]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[128 – 191]]></text> 
+	</component>
+	<component id="ID_s2_txt05">
+		<text><![CDATA[255]]></text> 
+	</component>
+	<component id="ID_s2_txt06">
+		<text><![CDATA[.255]]></text> 
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s2_txt08">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s2_txt09">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s2_txt10">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+	<component id="ID_s2_txt11">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+	<component id="ID_s2_txt12">
+		<text><![CDATA[xxxxxxxx]]></text> 
+	</component>
+	<component id="ID_s2_txt13">
+		<text><![CDATA[0 - 255]]></text> 
+	</component>
+	
+<!-- Slide 3-->
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Jaringan Kelas C</b>]]></text>
+	</component>
+	<component id="ID_s3_txt01">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s3_txt02">
+		<text><![CDATA[Selalu dimulai dengan<br/>biner 110:]]></text> 
+	</component>
+	<component id="ID_s3_txt03">
+		<text><![CDATA[110xxxx]]></text> 
+	</component>
+	<component id="ID_s3_txt04">
+		<text><![CDATA[192 – 223]]></text> 
+	</component>
+	<component id="ID_s3_txt05">
+		<text><![CDATA[255]]></text> 
+	</component>
+	<component id="ID_s3_txt06">
+		<text><![CDATA[.255]]></text> 
+	</component>
+	<component id="ID_s3_txt07">
+		<text><![CDATA[.255]]></text> 
+	</component>
+	<component id="ID_s3_txt08">
+		<text><![CDATA[.0]]></text> 
+	</component>
+	<component id="ID_s3_txt09">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s3_txt10">
+		<text><![CDATA[Jaringan]]></text> 
+	</component>
+	<component id="ID_s3_txt11">
+		<text><![CDATA[Tuan rumah]]></text> 
+	</component>
+	<component id="ID_s3_txt12">
+		<text><![CDATA[xxxxxxxx]]></text> 
+	</component>
+	<component id="ID_s3_txt13">
+		<text><![CDATA[0 - 255]]></text> 
+	</component>
+	<component id="ID_s3_txt14">
+		<text><![CDATA[xxxxxxxx]]></text> 
+	</component>
+	<component id="ID_s3_txt15">
+		<text><![CDATA[0 - 255]]></text> 
+	</component>
+</textcomponents>

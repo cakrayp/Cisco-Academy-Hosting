@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="module-index" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8"/>
+    <title>Routing and Switching</title>
+    <link rel="stylesheet" type="text/css" href="../common-ext/styles/index.css"/>
+    <script type="text/javascript" src="../common-ext/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../common-ext/scripts/index.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo" title="Cisco Systems, Inc. - Cisco Networking Academy"></div>
+      <a id="home-btn" href="../../index.html" title="Home">Home</a>
+      <h1>Chapter 8: Single-Area OSPF <span id="title"></span></h1>
+    </div>
+    <div id="nav">
+      <ul class="sections"><li><span class="icon"></span><span class="section-title">8.0 Single-Area OSPF</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">8.0.1 Single-Area OSPF</span><ul class="pages"><li><a data-ident="8.0.1.1" class="page-title" href="8.0.1.1/8.0.1.1.html" target="frame">8.0.1.1 Introduction</a></li>
+<li><a data-ident="8.0.1.2" class="page-title" href="8.0.1.2/8.0.1.2.html" target="frame">8.0.1.2 Activity - Can Submarines Swim?</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">8.1 Characteristics of OSPF</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">8.1.1 Open Shortest Path First</span><ul class="pages"><li><a data-ident="8.1.1.1" class="page-title" href="8.1.1.1/8.1.1.1.html" target="frame">8.1.1.1 Evolution of OSPF</a></li>
+<li><a data-ident="8.1.1.2" class="page-title" href="8.1.1.2/8.1.1.2.html" target="frame">8.1.1.2 Features of OSPF</a></li>
+<li><a data-ident="8.1.1.3" class="page-title" href="8.1.1.3/8.1.1.3.html" target="frame">8.1.1.3 Components of OSPF</a></li>
+<li><a data-ident="8.1.1.4" class="page-title" href="8.1.1.4/8.1.1.4.html" target="frame">8.1.1.4 Link-State Operation</a></li>
+<li><a data-ident="8.1.1.5" class="page-title" href="8.1.1.5/8.1.1.5.html" target="frame">8.1.1.5 Single-Area and Multiarea OSPF</a></li>
+<li><a data-ident="8.1.1.6" class="page-title" href="8.1.1.6/8.1.1.6.html" target="frame">8.1.1.6 Activity - Identify OSPF Features and Terminology</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.1.2 OSPF Messages</span><ul class="pages"><li><a data-ident="8.1.2.1" class="page-title" href="8.1.2.1/8.1.2.1.html" target="frame">8.1.2.1 Encapsulating OSPF Messages</a></li>
+<li><a data-ident="8.1.2.2" class="page-title" href="8.1.2.2/8.1.2.2.html" target="frame">8.1.2.2 Types of OSPF Packets</a></li>
+<li><a data-ident="8.1.2.3" class="page-title" href="8.1.2.3/8.1.2.3.html" target="frame">8.1.2.3 Hello Packet</a></li>
+<li><a data-ident="8.1.2.4" class="page-title" href="8.1.2.4/8.1.2.4.html" target="frame">8.1.2.4 Hello Packet Intervals</a></li>
+<li><a data-ident="8.1.2.5" class="page-title" href="8.1.2.5/8.1.2.5.html" target="frame">8.1.2.5 Link-State Updates</a></li>
+<li><a data-ident="8.1.2.6" class="page-title" href="8.1.2.6/8.1.2.6.html" target="frame">8.1.2.6 Activity - Identify the OSPF Packet Types</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.1.3 OSPF Operation</span><ul class="pages"><li><a data-ident="8.1.3.1" class="page-title" href="8.1.3.1/8.1.3.1.html" target="frame">8.1.3.1 OSPF Operational States</a></li>
+<li><a data-ident="8.1.3.2" class="page-title" href="8.1.3.2/8.1.3.2.html" target="frame">8.1.3.2 Establish Neighbor Adjacencies</a></li>
+<li><a data-ident="8.1.3.3" class="page-title" href="8.1.3.3/8.1.3.3.html" target="frame">8.1.3.3 OSPF DR and BDR</a></li>
+<li><a data-ident="8.1.3.4" class="page-title" href="8.1.3.4/8.1.3.4.html" target="frame">8.1.3.4 Synchronizing OSPF Databases</a></li>
+<li><a data-ident="8.1.3.5" class="page-title" href="8.1.3.5/8.1.3.5.html" target="frame">8.1.3.5 Activity - Identify the OSPF States for Establishing Adjacency</a></li>
+<li><a data-ident="8.1.3.6" class="page-title" href="8.1.3.6/8.1.3.6.html" target="frame">8.1.3.6 Video Demonstration - Observing OSPF Protocol Communications</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">8.2 Configuring Single-Area OSPFv2</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">8.2.1 OSPF Router ID</span><ul class="pages"><li><a data-ident="8.2.1.1" class="page-title" href="8.2.1.1/8.2.1.1.html" target="frame">8.2.1.1 OSPF Network Topology</a></li>
+<li><a data-ident="8.2.1.2" class="page-title" href="8.2.1.2/8.2.1.2.html" target="frame">8.2.1.2 Router OSPF Configuration Mode</a></li>
+<li><a data-ident="8.2.1.3" class="page-title" href="8.2.1.3/8.2.1.3.html" target="frame">8.2.1.3 Router IDs</a></li>
+<li><a data-ident="8.2.1.4" class="page-title" href="8.2.1.4/8.2.1.4.html" target="frame">8.2.1.4 Configuring an OSPF Router ID</a></li>
+<li><a data-ident="8.2.1.5" class="page-title" href="8.2.1.5/8.2.1.5.html" target="frame">8.2.1.5 Modifying a Router ID </a></li>
+<li><a data-ident="8.2.1.6" class="page-title" href="8.2.1.6/8.2.1.6.html" target="frame">8.2.1.6 Using a Loopback Interface as the Router ID</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.2.2 Configure Single-Area OSPFv2</span><ul class="pages"><li><a data-ident="8.2.2.1" class="page-title" href="8.2.2.1/8.2.2.1.html" target="frame">8.2.2.1 Enabling OSPF on Interfaces</a></li>
+<li><a data-ident="8.2.2.2" class="page-title" href="8.2.2.2/8.2.2.2.html" target="frame">8.2.2.2 Wildcard Mask</a></li>
+<li><a data-ident="8.2.2.3" class="page-title" href="8.2.2.3/8.2.2.3.html" target="frame">8.2.2.3 The network Command</a></li>
+<li><a data-ident="8.2.2.4" class="page-title" href="8.2.2.4/8.2.2.4.html" target="frame">8.2.2.4 Passive Interface</a></li>
+<li><a data-ident="8.2.2.5" class="page-title" href="8.2.2.5/8.2.2.5.html" target="frame">8.2.2.5 Configuring Passive Interfaces</a></li>
+<li><a data-ident="8.2.2.6" class="page-title" href="8.2.2.6/8.2.2.6.html" target="frame">8.2.2.6 Activity - Calculate the Subnet and Wildcard Masks</a></li>
+<li><a data-ident="8.2.2.7" class="page-title" href="8.2.2.7/8.2.2.7.html" target="frame">8.2.2.7 Packet Tracer - Configuring OSPFv2 in a Single-area</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.2.3 OSPF Cost</span><ul class="pages"><li><a data-ident="8.2.3.1" class="page-title" href="8.2.3.1/8.2.3.1.html" target="frame">8.2.3.1 OSPF Metric = Cost</a></li>
+<li><a data-ident="8.2.3.2" class="page-title" href="8.2.3.2/8.2.3.2.html" target="frame">8.2.3.2 OSPF Accumulates Costs</a></li>
+<li><a data-ident="8.2.3.3" class="page-title" href="8.2.3.3/8.2.3.3.html" target="frame">8.2.3.3 Adjusting the Reference Bandwidth</a></li>
+<li><a data-ident="8.2.3.4" class="page-title" href="8.2.3.4/8.2.3.4.html" target="frame">8.2.3.4 Default Interface Bandwidths</a></li>
+<li><a data-ident="8.2.3.5" class="page-title" href="8.2.3.5/8.2.3.5.html" target="frame">8.2.3.5 Adjusting the Interface Bandwidths</a></li>
+<li><a data-ident="8.2.3.6" class="page-title" href="8.2.3.6/8.2.3.6.html" target="frame">8.2.3.6 Manually Setting the OSPF Cost</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.2.4 Verify OSPF</span><ul class="pages"><li><a data-ident="8.2.4.1" class="page-title" href="8.2.4.1/8.2.4.1.html" target="frame">8.2.4.1 Verify OSPF Neighbors</a></li>
+<li><a data-ident="8.2.4.2" class="page-title" href="8.2.4.2/8.2.4.2.html" target="frame">8.2.4.2 Verify OSPF Protocol Settings</a></li>
+<li><a data-ident="8.2.4.3" class="page-title" href="8.2.4.3/8.2.4.3.html" target="frame">8.2.4.3 Verify OSPF Process Information</a></li>
+<li><a data-ident="8.2.4.4" class="page-title" href="8.2.4.4/8.2.4.4.html" target="frame">8.2.4.4 Verify OSPF Interface Settings</a></li>
+<li><a data-ident="8.2.4.5" class="page-title" href="8.2.4.5/8.2.4.5.html" target="frame">8.2.4.5 Lab - Configuring Basic Single-Area OSPFv2 </a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">8.3 Configure Single-Area OSPFv3</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">8.3.1 OSPFv2 vs. OSPFv3</span><ul class="pages"><li><a data-ident="8.3.1.1" class="page-title" href="8.3.1.1/8.3.1.1.html" target="frame">8.3.1.1 OSPFv3</a></li>
+<li><a data-ident="8.3.1.2" class="page-title" href="8.3.1.2/8.3.1.2.html" target="frame">8.3.1.2 Similarities Between OSPFv2 to OSPFv3</a></li>
+<li><a data-ident="8.3.1.3" class="page-title" href="8.3.1.3/8.3.1.3.html" target="frame">8.3.1.3 Differences Between OSPFv2 and OSPFv3</a></li>
+<li><a data-ident="8.3.1.4" class="page-title" href="8.3.1.4/8.3.1.4.html" target="frame">8.3.1.4 Link-Local Addresses</a></li>
+<li><a data-ident="8.3.1.5" class="page-title" href="8.3.1.5/8.3.1.5.html" target="frame">8.3.1.5 Activity - Compare and Contrast OSPFv2 and OSPFv3</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.3.2 Configuring OSPFv3</span><ul class="pages"><li><a data-ident="8.3.2.1" class="page-title" href="8.3.2.1/8.3.2.1.html" target="frame">8.3.2.1 OSPFv3 Network Topology</a></li>
+<li><a data-ident="8.3.2.2" class="page-title" href="8.3.2.2/8.3.2.2.html" target="frame">8.3.2.2 Link-Local Addresses</a></li>
+<li><a data-ident="8.3.2.3" class="page-title" href="8.3.2.3/8.3.2.3.html" target="frame">8.3.2.3 Assigning Link-Local Addresses</a></li>
+<li><a data-ident="8.3.2.4" class="page-title" href="8.3.2.4/8.3.2.4.html" target="frame">8.3.2.4 Configuring the OSPFv3 Router ID</a></li>
+<li><a data-ident="8.3.2.5" class="page-title" href="8.3.2.5/8.3.2.5.html" target="frame">8.3.2.5 Modifying an OSPFv3 Router ID</a></li>
+<li><a data-ident="8.3.2.6" class="page-title" href="8.3.2.6/8.3.2.6.html" target="frame">8.3.2.6 Enabling OSPFv3 on Interfaces</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">8.3.3 Verify OSPFv3</span><ul class="pages"><li><a data-ident="8.3.3.1" class="page-title" href="8.3.3.1/8.3.3.1.html" target="frame">8.3.3.1 Verify OSPFv3 Neighbors</a></li>
+<li><a data-ident="8.3.3.2" class="page-title" href="8.3.3.2/8.3.3.2.html" target="frame">8.3.3.2 Verify OSPFv3 Protocol Settings</a></li>
+<li><a data-ident="8.3.3.3" class="page-title" href="8.3.3.3/8.3.3.3.html" target="frame">8.3.3.3 Verify OSPFv3 Interfaces</a></li>
+<li><a data-ident="8.3.3.4" class="page-title" href="8.3.3.4/8.3.3.4.html" target="frame">8.3.3.4 Verify the IPv6 Routing Table</a></li>
+<li><a data-ident="8.3.3.5" class="page-title" href="8.3.3.5/8.3.3.5.html" target="frame">8.3.3.5 Packet Tracer - Configuring Basic OSPFv3</a></li>
+<li><a data-ident="8.3.3.6" class="page-title" href="8.3.3.6/8.3.3.6.html" target="frame">8.3.3.6 Lab - Configuring Basic Single-Area OSPFv3 </a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">8.4 Summary</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">8.4.1 Summary</span><ul class="pages"><li><a data-ident="8.4.1.1" class="page-title" href="8.4.1.1/8.4.1.1.html" target="frame">8.4.1.1 Activity - Stepping Through OSPFv3</a></li>
+<li><a data-ident="8.4.1.2" class="page-title" href="8.4.1.2/8.4.1.2.html" target="frame">8.4.1.2 Packet Tracer - Skills Integration Challenge</a></li>
+<li><a data-ident="8.4.1.3" class="page-title" href="8.4.1.3/8.4.1.3.html" target="frame">8.4.1.3 Summary</a></li>
+</ul></li>
+</ul></li>
+</ul>
+    </div>
+    <ul id="nav-menu" class="contextmenu">
+      <li id="nav-menu-expand">Expand All</li>
+      <li id="nav-menu-collapse">Collapse All</li>
+    </ul>
+    <div id="content">
+      <div id="container"></div>
+      <button id="prev-btn" type="button" title="Previous" disabled><span class="icon">Previous</span></button>
+      <input id="jump-box" type="text" value=""/>
+      <button id="next-btn" type="button" title="Next" disabled><span class="icon">Next</span></button>
+      <button id="mini-btn" type="button" title="Toggle"><span class="icon">Toggle</span></button>
+    </div>
+  </body>
+</html>
+

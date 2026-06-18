@@ -1,0 +1,130 @@
+nw<textcomponents>
+
+<component id="ID_inst">
+<text><![CDATA[<b>Aktivitas</b><br/>Tentukan bagaimana meneruskan frame berdasarkan alamat MAC Sumber dan MAC Tujuan serta informasi dalam tabel MAC switch.<br/><b>Jawablah pertanyaan di bawah ini dengan menggunakan informasi yang tersedia.</b>]]></text> 
+</component>
+
+<component id="ID_HELP_TITLE">
+<text><![CDATA[<b>Membantu</b>]]></text> 
+</component>
+
+<component id="ID_HELP_BODY">
+<text><![CDATA[Aktivitas ini menguji pengetahuan Anda tentang bagaimana sebuah frame dihubungkan pada sebuah saklar.<br/><br/>Klik tombol "Periksa" untuk memeriksa jawaban Anda. Klik tombol "Soal Latihan Baru" untuk memulai aktivitas latihan baru yang dihasilkan komputer.<br/><br/>Anda diberikan topologi fisik dan tabel alamat MAC switch. Anda juga diberikan bingkai yang terdiri dari alamat MAC sumber dan tujuan. Aktivitas yang dihasilkan komputer akan memiliki pasangan sumber dan tujuan menggunakan salah satu alamat yang ditampilkan pada topologi. Aktivitas kustom dapat menggunakan alamat apa pun yang diinginkan pada tabel MAC dan frame.<br/><br/>1.<textformat blockindent="20"> Your goal is to determine how the switch will handle this frame given the MAC address table shown.</textformat><br/>2. <textformat blockindent="20">For the first question, check the port numbers to indicate where (if any) the switch will forward this frame.</textformat><br/>3. <textformat blockindent="20">For the second question, check the corresponding options to indicate how a switch will handle the frame.</textformat><br/>4. <textformat blockindent="20">Click the "Check" button to see if your answer is correct.</textformat><br/><br/><b>Bantuan Tambahan:</b><br/>"FF" adalah alamat MAC siaran dan dipertahankan ke semua port kecuali port asal.<br/><br/>Sebuah bingkai adalah<b>kebanjiran</b>ke semua port (kecuali port asal) hanya jika switch tidak memiliki MAC tujuan dalam tabel MAC.<br/><br/>Switch hanya akan menambahkan alamat MAC baru ke tabel MAC berdasarkan alamat MAC sumber. Jika alamat MAC sumber sudah ada dalam tabel, tidak ada yang ditambahkan atau dipelajari. Jika alamat MAC sumber tidak ada dalam tabel, alamat tersebut akan ditambahkan.<br/><br/>Switch akan menjatuhkan frame jika perangkat tujuan dan sumber keduanya terhubung ke port yang sama dan switch memiliki alamat MAC tujuan di tabel MAC. Pada aktivitas ini terjadi pada satu port yang terhubung ke hub dengan 2 perangkat host.<br/>]]></text> 
+</component>
+
+<component id="ID_CHECK">
+<text><![CDATA[<b>Memeriksa</b>]]></text> 
+</component>
+
+<component id="ID_NEW">
+<text><![CDATA[<b>Soal Latihan Baru</b>]]></text> 
+</component>
+
+<component id="ID_HELP">
+<text><![CDATA[<b>Membantu</b>]]></text> 
+</component>
+
+<component id="ID_hub">
+<text><![CDATA[Pusat]]></text> 
+</component>
+
+<!--Frame Table-->
+
+<component id="ID_table1_title">
+<text><![CDATA[<b>Bingkai</b>]]></text> 
+</component>
+
+<component id="ID_table1_txt01">
+<text><![CDATA[Pembukaan]]></text> 
+</component>
+
+<component id="ID_table1_txt02">
+<text><![CDATA[tujuan MAC]]></text> 
+</component>
+
+<component id="ID_table1_txt03">
+<text><![CDATA[Sumber MAC]]></text> 
+</component>
+
+<component id="ID_table1_txt04">
+<text><![CDATA[Tipe Panjang]]></text> 
+</component>
+
+<component id="ID_table1_txt05">
+<text><![CDATA[Data Terenkapsulasi]]></text> 
+</component>
+
+<component id="ID_table1_txt06">
+<text><![CDATA[Akhir Bingkai]]></text> 
+</component>
+
+
+<!--MAC Table-->
+
+<component id="ID_table2_title">
+<text><![CDATA[<b>Tabel MAC</b>]]></text> 
+</component>
+
+
+<!--Questions-->
+
+<component id="ID_question1">
+<text><![CDATA[<b>Pertanyaan 1</b>- Dimana saklar akan meneruskan frame?]]></text> 
+</component>
+
+<component id="ID_question2">
+<text><![CDATA[<b>Pertanyaan 2</b>- Saat saklar meneruskan frame, pernyataan yang benar?]]></text> 
+</component>
+
+<component id="ID_Q2_choice1">
+<text><![CDATA[Switch menambahkan alamat MAC sumber ke tabel MAC.]]></text> 
+</component>
+
+<component id="ID_Q2_choice2">
+<text><![CDATA[Frame merupakan frame yang disiarkan dan akan diteruskan ke semua port.]]></text> 
+</component>
+
+<component id="ID_Q2_choice3">
+<text><![CDATA[Frame adalah frame unicast dan akan dikirim ke port tertentu saja.]]></text> 
+</component>
+
+<component id="ID_Q2_choice4">
+<text><![CDATA[Frame adalah frame unicast dan akan dibanjiri ke semua port.]]></text> 
+</component>
+
+<component id="ID_Q2_choice5">
+<text><![CDATA[Bingkai adalah bingkai unicast tetapi akan tiba di saklar.]]></text> 
+</component>
+
+
+<!--Feedback text-->
+<component id="ID_correctHeader">
+<text><![CDATA[<b>Benar</b>]]></text> 
+</component>
+<component id="ID_correct">
+<text><![CDATA[Anda berhasil menjawab semua pertanyaan berdasarkan informasi pada frame dan tabel MAC.]]></text> 
+</component>
+
+<component id="ID_feedback1Header">
+<text><![CDATA[<b>Salah</b>]]></text> 
+</component>
+<component id="ID_feedback1">
+<text><![CDATA[Pada pertanyaan 1, port yang Anda pilih salah.]]></text> 
+</component>
+
+<component id="ID_feedback2Header">
+<text><![CDATA[<b>Salah</b>]]></text> 
+</component>
+<component id="ID_feedback2">
+<text><![CDATA[Pada pertanyaan 2, jawaban Anda tentang cara switch menangani alamat MAC sumber tidak benar.]]></text> 
+</component>
+
+<component id="ID_feedback3Header">
+<text><![CDATA[<b>Salah</b>]]></text> 
+</component>
+<component id="ID_feedback3">
+<text><![CDATA[Pada pertanyaan 2, jawaban Anda tentang bagaimana switch akan menangani frame berdasarkan alamat tujuan tidak benar.]]></text> 
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.3.1.4 Ringkasan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.3.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>Kita telah melihat bahwa tren jaringan menuju konvergensi menggunakan satu set kabel dan perangkat untuk menangani transmisi suara, video, dan data. Selain itu, terjadi perubahan dramatis dalam cara bisnis beroperasi. Karyawan tidak lagi dibatasi pada kantor fisik atau batasan geografis. Sumber daya kini harus tersedia kapan saja dan di mana saja. Arsitektur Cisco Borderless Network memungkinkan berbagai elemen, mulai dari saklar akses hingga titik akses nirkabel, untuk bekerja sama dan memungkinkan pengguna mengakses sumber daya dari mana saja dan kapan saja.</p>
+<p></p>
+<p>Model desain hierarki tiga lapis tradisional membagi jaringan menjadi lapisan inti, distribusi, dan akses, dan memungkinkan setiap bagian jaringan dioptimalkan untuk fungsionalitas tertentu. Ini memberikan modularitas, ketahanan, dan fleksibilitas, yang memberikan landasan yang memungkinkan perancang jaringan untuk melapisi fitur keamanan, mobilitas, dan komunikasi terpadu. Di beberapa jaringan, tidak diperlukan inti dan lapisan distribusi terpisah. Dalam jaringan ini, fungsi lapisan inti dan lapisan distribusi sering kali digabungkan.</p>
+<p></p>
+<p>Switch Cisco LAN menggunakan ASIC untuk meneruskan frame berdasarkan alamat MAC tujuan. Sebelum hal ini dapat dicapai, terlebih dahulu harus menggunakan alamat MAC sumber dari frame yang masuk untuk membangun tabel alamat MAC dalam memori yang dapat dialamatkan konten (CAM). Jika alamat MAC tujuan terdapat dalam tabel ini, frame hanya diteruskan ke port tujuan tertentu. Jika alamat MAC tujuan tidak ditemukan dalam tabel alamat MAC, frame akan dibanjiri ke semua port, kecuali port tempat frame diterima.</p>
+<p></p>
+<p>Sakelar menggunakan peralihan simpan-dan-maju atau potong-melalui. Store-and-forward membaca seluruh frame ke dalam buffer dan memeriksa CRC sebelum meneruskan frame. Peralihan cut-through hanya membaca bagian pertama dari frame dan mulai meneruskannya segera setelah alamat tujuan dibaca. Meskipun ini sangat cepat, tidak ada pemeriksaan kesalahan yang dilakukan pada frame sebelum meneruskannya.</p>
+<p></p>
+<p>Setiap port pada switch membentuk domain tabrakan terpisah yang memungkinkan komunikasi dupleks penuh berkecepatan sangat tinggi. Port switch tidak memblokir siaran dan menghubungkan switch secara bersamaan dapat memperluas ukuran domain siaran yang sering kali mengakibatkan penurunan kinerja jaringan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

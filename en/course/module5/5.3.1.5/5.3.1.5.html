@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>5.3.1.5 Configuring Static Routes on a Catalyst 2960</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.3.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Layer 3 Switching</h1>
+        <h2>Layer 3 Switching Operation and Configuration</h2>
+      </div>
+      <div id="content">
+          <p>A Catalyst 2960 switch can function as a Layer 3 device and route between VLANs and a limited number of static routes. </p>
+          <p></p>
+          <p>The Cisco Switch Database Manager (SDM) provides multiple templates for the 2960 switch. The templates can be enabled to support specific roles depending on how the switch is used in the network. For example, the sdm lanbase-routing template can be enabled to allow the switch to route between VLANs and to support static routing.   </p>
+          <p></p>
+          <p>In Figure 1, the<span class="cmd"><b> show sdm prefer </b></span>command is entered on switch S1 and the default template is applied. The default template is the factory default setting for a Catalyst 2960 switch. The default template does not support static routing. If IPv6 addressing has been enabled, the template will be dual-ipv4-and-ipv6 default.</p>
+          <p></p>
+          <p>The SDM template can be changed in global configuration mode with the<span class="cmd"><b> sdm prefer </b></span>command. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: In Figures 2, 4, 6, and 7, the<span class="cmd"><b> do </b></span>command is used to execute user EXEC or privilege EXEC commands from other router configuration modes.</p>
+          <p></p>
+          <p>In Figure 2, the SDM template options are displayed with the<span class="cmd"><b> sdm prefer ? </b></span>command. The SDM template is changed to lanbase-routing. The switch must be reloaded for the new template to take effect.</p>
+          <p></p>
+          <p>In Figure 3, the lanbase-routing template is active on S1. With this template, static routing is supported for up to 750 static routes. </p>
+          <p></p>
+          <p>In Figure 4, interface F0/6 on S1 is assigned to VLAN 2. The SVIs for VLANs 1 and 2 are also configured with IP addresses 192.168.1.1/24 and 192.168.2.1/24, respectively. IP routing is enabled with the<span class="cmd"><b> ip routing </b></span>global configuration mode command.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: The<span class="cmd"><b> ip routing </b></span>command is automatically enabled on Cisco routers; however, the corresponding command for IPv6,<span class="cmd"><b> ipv6 unicast-routing</b></span>, is disabled, by default, on Cisco routers and switches.</p>
+          <p></p>
+          <p>In Figure 5, router R1 has two IPv4 networks configured: interface G0/1 has IP address 192.168.1.10/24 and loopback interface Lo0 has IP address 209.165.200.225/27. The<span class="cmd"><b> show ip route </b></span>command output is displayed.</p>
+          <p></p>
+          <p>A default route is configured on S1 in Figure 6. The<span class="cmd"><b> show ip route </b></span>command output is displayed.</p>
+          <p></p>
+          <p>A static route to the remote network 192.168.2.0/24 (VLAN 2) is configured on R1 in Figure 7. The<span class="cmd"><b> show ip route </b></span>command output is displayed.</p>
+          <p></p>
+          <p>In Figure 8, PC-A is configured with IP address 192.168.2.2/24 in VLAN 2 and PC-B is configured with IP address 192.168.1.2/24 in VLAN 1. PC-B is able to ping both PC-B and the loopback interface on R1.</p>
+          <p></p>
+          <p>In Figure 9, use the Syntax Checker to configure static routing on S1.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

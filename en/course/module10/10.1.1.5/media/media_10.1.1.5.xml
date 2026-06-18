@@ -1,0 +1,59 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activity - Identify the Steps in DHCPv4 Operation</b><br><br>Order the steps to illustrate a DHCPv4 lease origination.<br/>Drag each of the DHCPv4 lease origination steps to its appropriate field, based on the circled numbers in the graphic.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[DHCPv4 Client]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[DHCPv4 Server]]></text>
+</component>
+
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">DHCPACK<br/>DHCP Acknowledgement</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">DHCPDISCOVER<br/>DHCP Discover</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">DHCPREQUEST<br/>DHCP Request</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">DHCPOFFER<br/>DHCP Offer</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully ordered the steps for a DHCPv4 lease origination.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully ordered the steps for a DHCPv4 lease origination. Please click <b>Reset</b> to try again.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

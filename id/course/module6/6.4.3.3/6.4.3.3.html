@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.4.3.3 Uji Rute Statis Mengambang</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Ringkasan dan Rute Statis Mengambang</h1>
+<h2>Konfigurasikan Rute Statis Mengambang</h2>
+</div>
+<div id="content">
+<p>Karena rute statis default pada R1 ke R2 memiliki jarak administratif 1, lalu lintas dari R1 ke R3 harus melalui R2. Output pada Gambar 1 mengkonfirmasi bahwa lalu lintas antara R1 dan R3 mengalir melalui R2.</p>
+<p></p>
+<p>Apa yang akan terjadi jika R2 gagal? Untuk mensimulasikan kegagalan ini, kedua antarmuka serial R2 dimatikan, seperti yang ditunjukkan pada Gambar 2.</p>
+<p></p>
+<p>Perhatikan pada Gambar 3 bahwa R1 secara otomatis menghasilkan pesan yang menunjukkan bahwa antarmuka serial ke R2 sedang down. Tampilan tabel perutean memverifikasi bahwa rute default sekarang mengarah ke R3 menggunakan rute default statis mengambang yang dikonfigurasi untuk hop berikutnya 10.10.10.2.</p>
+<p></p>
+<p>Output pada Gambar 4 menegaskan bahwa lalu lintas kini mengalir langsung antara R1 dan R3.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Mengonfigurasi rute statis mengambang IPv6 berada di luar cakupan bab ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

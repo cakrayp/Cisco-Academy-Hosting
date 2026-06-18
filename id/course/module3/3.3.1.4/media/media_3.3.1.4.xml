@@ -1,0 +1,60 @@
+
+<textcomponents>
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Aktivitas - Identifikasi Jenis Serangan VLAN, Teknik Mitigasi Serangan, dan Fitur Keamanan</b><br/><br/>Seret jenis serangan VLAN, teknik mitigasi serangan, atau fitur keamanan ke deskripsi yang sesuai. Tidak semua istilah akan digunakan.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[Seorang pengguna menyerang PC pengguna lain di lingkungan kedai kopi. PC pengguna masih perlu diberikan akses ke Internet dan server cetak.]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Nonaktifkan DTP pada semua port, dan tetapkan port secara statis sebagai Access atau Trunk.]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[Pastikan VLAN asli port trunk berbeda dari VLAN port akses.]]></text>
+</component>
+
+<component id='ID_drag01'>
+	<text><![CDATA[Tepi PVLAN]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[Serangan Melompat VLAN]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[Serangan Pemberian Tag Ganda]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[Aktifkan SSH Secure Shell]]></text>
+</component>
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap deskripsi dengan jenis serangan VLAN, teknik mitigasi serangan, atau fitur keamanannya.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap deskripsi dengan jenis serangan VLAN, teknik mitigasi serangan, atau fitur keamanannya.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+</textcomponents>

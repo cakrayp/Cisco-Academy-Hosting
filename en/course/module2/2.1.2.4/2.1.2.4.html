@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.1.2.4 Verifying Switch Port Configuration</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.2.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Basic Switch Configuration</h1>
+        <h2>Configure Switch Ports</h2>
+      </div>
+      <div id="content">
+          <p>Figure 1 describes some of the options for the<span class="cmd"><b> show </b></span>command that are helpful in verifying common configurable switch features.</p>
+          <p></p>
+          <p>Figure 2 shows sample abbreviated output from the<span class="cmd"><b> show running-config </b></span>command. Use this command to verify that the switch has been correctly configured. As seen in the output for S1, some key information is shown:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Fast Ethernet 0/18 interface configured with the management VLAN 99</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN 99 configured with an IP address of 172.17.99.11 255.255.0.0</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Default gateway set to 172.17.99.1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The<span class="cmd"><b> show interfaces </b></span>command is another commonly used command, which displays status and statistics information on the network interfaces of the switch. The<span class="cmd"><b> show interfaces </b></span>command is frequently used when configuring and monitoring network devices. </p>
+          <p></p>
+          <p>Figure 3 shows the output from the<span class="cmd"><b> show interfaces fastEthernet 0/18 </b></span>command. The first line in the figure indicates that the FastEthernet 0/18 interface is up/up meaning that it is operational. Further down the output shows that the duplex is full and the speed is 100 Mb/s.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

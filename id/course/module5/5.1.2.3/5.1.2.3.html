@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.2.3 Konfigurasikan Perutean Antar-VLAN Lama: Konfigurasi Antarmuka Router</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Konfigurasikan Perutean Antar-VLAN Lama</h2>
+</div>
+<div id="content">
+<p>Selanjutnya, router dapat dikonfigurasi untuk melakukan routing antar-VLAN.</p>
+<p></p>
+<p>Antarmuka router dikonfigurasi dengan cara yang mirip dengan mengkonfigurasi antarmuka VLAN pada switch. Untuk mengonfigurasi antarmuka tertentu, ubah ke mode konfigurasi antarmuka dari mode konfigurasi global.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 1, setiap antarmuka dikonfigurasi dengan alamat IP menggunakan<span class="cmd"><b>alamat IP</b></span><span class="cmd"><i>ip_address subnet_mask</i></span>perintah dalam mode konfigurasi antarmuka.</p>
+<p></p>
+<p>Dalam contoh, antarmuka G0/0 dikonfigurasi dengan alamat IP 172.17.10.1 dan subnet mask 255.255.255.0 menggunakan<span class="cmd"><b>alamat ip 172.17.10.1 255.255.255.0</b></span>memerintah.</p>
+<p></p>
+<p>Antarmuka router dinonaktifkan secara default dan harus diaktifkan menggunakan<span class="cmd"><b>tidak ada penutupan</b></span>perintah sebelum digunakan. Setelah<span class="cmd"><b>tidak ada penutupan</b></span>perintah mode konfigurasi antarmuka telah dikeluarkan, pemberitahuan ditampilkan, menunjukkan bahwa status antarmuka telah berubah ke atas. Ini menunjukkan bahwa antarmuka sekarang diaktifkan.</p>
+<p></p>
+<p>Proses ini diulangi untuk semua antarmuka router. Setiap antarmuka router harus ditetapkan ke subnet unik agar perutean dapat dilakukan. Dalam contoh ini, antarmuka router lainnya, G0/1, telah dikonfigurasi untuk menggunakan alamat IP 172.17.30.1, yang berada pada subnet berbeda dari antarmuka G0/0.</p>
+<p></p>
+<p>Setelah alamat IP ditetapkan ke antarmuka fisik dan antarmuka diaktifkan, router mampu melakukan perutean antar-VLAN.</p>
+<p></p>
+<p>Periksa tabel routing menggunakan<span class="cmd"><b>tampilkan rute ip</b></span>memerintah.</p>
+<p></p>
+<p>Pada Gambar 2, ada dua rute yang terlihat di tabel routing. Salah satu rutenya adalah ke subnet 172.17.10.0, yang terpasang pada antarmuka lokal G0/0. Rute lainnya adalah ke subnet 172.17.30.0, yang terpasang pada antarmuka lokal G0/1. Router menggunakan tabel perutean ini untuk menentukan ke mana harus mengirim lalu lintas yang diterimanya. Misalnya, jika router menerima paket pada antarmuka G0/0 yang ditujukan untuk subnet 172.17.30.0, router akan mengidentifikasi bahwa ia harus mengirimkan paket keluar antarmuka G0/1 untuk mencapai host pada subnet 172.17.30.0.</p>
+<p></p>
+<p>Perhatikan surat itu<span class="cmd"><b> C </b></span>di sebelah kiri setiap entri rute untuk VLAN. Surat ini menunjukkan bahwa rute tersebut bersifat lokal untuk antarmuka yang terhubung, yang juga diidentifikasi dalam entri rute. Dengan menggunakan keluaran dalam contoh ini, jika lalu lintas ditujukan untuk subnet 172.17.30.0, router akan meneruskan lalu lintas keluar antarmuka G0/1.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

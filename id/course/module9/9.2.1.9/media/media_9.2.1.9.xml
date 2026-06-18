@@ -1,0 +1,200 @@
+<textcomponents>
+
+<!--SCREEN 1-->  
+
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Topologi – Mengonfigurasi ACL Standar</b><br/><br/>Gunakan diagram topologi jaringan ini dalam menjawab ketiga skenario, Anda dapat kembali ke topologi ini lagi sesuai kebutuhan. Klik tombol 2 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<!-- SCREEN 2 Drag and Drop -->  
+
+<component id='ID_s2_inst'>
+	<text><![CDATA[<b>Skenario 1 – Mengonfigurasi ACL Standar</b><br/><br/>Lihat diagram topologi jaringan sesuai kebutuhan untuk menyelesaikan skenario ini. Seret perintah ke dalam ruang yang disediakan dalam urutan yang benar (atas ke bawah) untuk mengonfigurasi dan menerapkan ACL standar yang akan mengontrol entri ke LAN 192.168.1.0. Host 192.168.3.77 seharusnya tidak dapat mengakses LAN ini tetapi semua host lain di jaringan 192.168.3.0 dan 192.168.4.0 harus diizinkan mengakses. Klik tombol 3 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s2_target_header'>
+	<text><![CDATA[<b>Perintah Konfigurasi R1:</b>]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 44 in</font>]]></text>
+</component>
+
+<component id='ID_s2_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 44 out</font>]]></text>
+</component>
+
+<component id='ID_s2_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 permit 192.168.4.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s2_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/0</font>]]></text>
+</component>
+
+<component id='ID_s2_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/1</font>]]></text>
+</component>
+
+<component id='ID_s2_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 deny 192.168.3.77 0.0.0.0</font>]]></text>
+</component>
+
+<component id='ID_s2_drag07'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 44 permit 192.168.3.0 0.0.0.255</font>]]></text>
+</component>
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+
+<!--SCREEN 3 Drag and Drop -->  
+
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Skenario 2 – Mengonfigurasi ACL Standar</b><br/><br/>Lihat diagram topologi jaringan sesuai kebutuhan untuk menyelesaikan skenario ini. Seret perintah ke dalam ruang yang disediakan dalam urutan yang benar (atas ke bawah) untuk mengonfigurasi dan menerapkan ACL standar yang akan mengontrol akses ke host 192.168.4.12. Baik host 192.168.1.66 maupun semua host di LAN 192.168.2.0 harus diizinkan mengakses host ini. Semua jaringan lain seharusnya tidak dapat mengakses host 192.168.4.12. Klik tombol 4 untuk melanjutkan aktivitas ini.]]></text>
+</component>
+
+<component id='ID_s3_target_header'>
+	<text><![CDATA[<b>Perintah Konfigurasi R2:</b>]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 permit 192.168.1.66 0.0.0.0</font>]]></text>
+</component>
+
+<component id='ID_s3_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 permit 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s3_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 66 deny 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s3_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/1</font>]]></text>
+</component>
+
+<component id='ID_s3_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 66 out</font>]]></text>
+</component>
+<component id='ID_s3_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 66 in</font>]]></text>
+</component>
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+<!--SCREEN 4 Drag and Drop -->  
+
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Skenario 3 – Mengonfigurasi ACL Standar</b><br/><br/>Lihat diagram topologi jaringan sesuai kebutuhan untuk menyelesaikan skenario ini. Seret perintah ke dalam ruang yang disediakan dalam urutan yang benar (atas ke bawah) untuk mengonfigurasi dan menerapkan ACL standar yang akan mengontrol akses ke LAN 192.168.3.0 dan LAN 192.168.4.0. Semua host di LAN 192.168.1.0 harus diizinkan mengakses kedua jaringan ini. Jaringan 192.168.2.0 seharusnya tidak memiliki akses ke jaringan ini.]]></text>
+</component>
+
+<component id='ID_s4_target_header'>
+	<text><![CDATA[<b>Perintah Konfigurasi R2:</b>]]></text>
+</component>
+
+<component id='ID_s4_drag01'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 permit 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s4_drag02'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">ip access-group 88 in</font>]]></text>
+</component>
+
+<component id='ID_s4_drag03'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 deny 192.168.2.0 0.0.0.255</font>]]></text>
+</component>
+
+<component id='ID_s4_drag04'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0</font>]]></text>
+</component>
+
+<component id='ID_s4_drag05'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">interface gi0/0</font>]]></text>
+</component>
+<component id='ID_s4_drag06'>
+	<text><![CDATA[<font color="#393536" face="_typewriter">access-list 88 permit 192.168.1.0 0.0.0.255</font>]]></text>
+</component>
+
+
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil memesan perintah konfigurasi ACL.]]></text>
+</component>
+
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil memesan perintah konfigurasi ACL. Silakan klik Reset to lagi.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+
+
+
+</textcomponents>

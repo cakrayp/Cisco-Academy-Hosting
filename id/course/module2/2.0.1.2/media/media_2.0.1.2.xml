@@ -1,0 +1,22 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Beralih</b><br/><br/><textformat blockindent="-14"><li>identifikasi host yang terhubung, lokasi port, dan alamat MAC unik</li><li>Catat alamat host unik ke tabel alamat MAC</li><li>Mengirim dan menerima lalu lintas data menggunakan unicast, multicast, dan siaran</li></textformat>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Komunikasi Penuh dan Setengah Dupleks</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[kirim DAN terima secara bersamaan]]></text>
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>Komunikasi Setengah Duplex</b>]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[ATAU kirim terima]]></text>
+</component>
+
+</textcomponents>

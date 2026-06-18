@@ -1,0 +1,11 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Classless Routing Update</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Summary <br />Route]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Update]]></text> 
+  </component>
+</textcomponents>

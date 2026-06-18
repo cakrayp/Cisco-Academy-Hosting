@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide>
+			<element type="TEXT" subType="TITLE" compId="ID_title" />
+			<element type="TEXT" subType="TABLE" compId="ID_table01" x="20.25" y="52.35" width="425.1" height="160"/>
+			<element type="TEXT" subType="TABLE" compId="ID_table02" x="20.25" y="228.4" width="425.1" height="160"/> 	
+	</slide>
+
+<text id="ID_s2_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="367"> <tr> <td colspan="3">SW3 #<strong>rute sh ip</strong></td> </tr> <tr> <td colspan="3">�</td> </tr> <tr> <td colspan="3">Gerbang pilihan terakhir tidak disetel</td> </tr> <tr> <td> </td> <td colspan="2"> </td> </tr> <tr> <td width="37"> </td> <td colspan="2">10.0.0.0/8 memiliki subnet yang bervariasi, 3 subnet, 3 masker</td> </tr> <tr> <td>C</td> <td width="24"> </td> <td width="339">10.2.0.0/24 terhubung langsung, Vlan5</td> </tr> <tr> <td>C</td> <td> </td> <td>10.3.0.0/24 terhubung langsung, Vlan3</td> </tr> <tr> <td>C</td> <td> </td> <td>10.4.0.0/24 terhubung langsung, Vlan4</td> </tr></table>]]></text>
+
+<text id="ID_s3_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="367"> <tr> <td colspan="3">SW3#<strong>tampilkan rute ip</strong></td> </tr> <tr> <td colspan="3">�</td> </tr> <tr> <td colspan="3">Gerbang pilihan terakhir tidak disetel</td> </tr> <tr> <td> </td> <td colspan="2"> </td> </tr> <tr> <td width="37"> </td> <td colspan="2">10.0.0.0/8 memiliki subnet yang bervariasi, 3 subnet, 3 masker</td> </tr> <tr> <td>C</td> <td width="24"> </td> <td width="339">10.2.0.0/30 terhubung langsung, Vlan2</td> </tr> <tr> <td>C</td> <td> </td> <td>10.3.0.0/16 terhubung langsung, Vlan3</td> </tr> <tr> <td>C</td> <td> </td> <td>10.4.0.0/24 terhubung langsung, Vlan4</td> </tr></table>]]></text>
+
+<text id="ID_s4_txt01"><![CDATA[<table border="0" cellpadding="0" cellspacing="0" width="367"> <tr> <td width="400">SW3#<strong>tampilkan bagasi antarmuka</strong></td> </tr> <tr> <td><table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td align="left">Pelabuhan</td> <td align="left">Mode</td> <td align="left">Enkapsulasi</td> <td align="left">Status</td> <td align="left">vlan asli</td> </tr> <tr> <td align="left">Pertunjukan0/1</td> <td align="left">mobil</td> <td align="left">n-802.1q</td> <td align="left">bagasi</td> <td align="left">1</td> </tr> </table></td> </tr></table>]]></text>
+
+</data>

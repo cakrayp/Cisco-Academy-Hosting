@@ -1,0 +1,224 @@
+<textcomponents>
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Topologi Dasar</b>]]></text>
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Subnetting 192.168.20.0/24 ke 192.168.20.0/27</b>]]></text>
+	</component>
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Subnet Subnet 192.168.20.224/27 hingga 192.168.20.224/30</b>]]></text>
+	</component>
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>Konfigurasi VLSM di R1</b>]]></text>
+	</component>
+	<component id="ID_s5_title">
+		<text><![CDATA[<b>Mengonfigurasi VLSM di R2</b>]]></text>
+	</component>
+	<component id="ID_s6_title">
+		<text><![CDATA[<b>Mengonfigurasi VLSM di R3</b>]]></text>
+	</component>
+	<component id="ID_s7_title">
+		<text><![CDATA[<b>Mengonfigurasi VLSM di R4</b>]]></text>
+	</component>
+
+
+
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Gedung A</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		  <text><![CDATA[<b>Gedung B</b>]]></text> 
+	</component>
+	<component id="ID_txt03">
+		  <text><![CDATA[<b>Gedung C</b>]]></text> 
+	</component>
+	<component id="ID_txt04">
+		  <text><![CDATA[<b>Gedung D</b>]]></text> 
+	</component>
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[25 tuan rumah]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+	  <text><![CDATA[20 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt03">
+	  <text><![CDATA[15 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s1_txt04">
+	  <text><![CDATA[28 tuan rumah]]></text> 
+	</component>
+
+	<component id="ID_s2_txt01">
+		<text><![CDATA[25 tuan rumah]]></text>
+	</component>
+	<component id="ID_s2_txt02">
+	  <text><![CDATA[20 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+	  <text><![CDATA[15 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+	  <text><![CDATA[28 tuan rumah]]></text> 
+	</component>
+  
+	<component id="ID_s3_txt01">
+		<text><![CDATA[25 tuan rumah]]></text>
+	</component>
+	<component id="ID_s3_txt02">
+	  <text><![CDATA[20 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s3_txt03">
+	  <text><![CDATA[15 tuan rumah]]></text> 
+	</component>
+	<component id="ID_s3_txt04">
+	  <text><![CDATA[28 tuan rumah]]></text> 
+	</component>
+
+<component id='ID_s2_table'>
+<text><![CDATA[
+<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<!--<tr class="liner_top">
+					<td colspan='3' bgcolor='#0E6360' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+				</tr>			-->
+<tr>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"></font></td>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"><b>/27 Jaringan</b></font></td>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"><b>Tuan rumah</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Building A</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.0</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.1 - .30</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Building B</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.32</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.33 - .62</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Building C</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.64</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.65 - .94</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Building D</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.96</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.97 - .126</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">WAN R1 – R2</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="12">.128</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.129 - .158</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">WAN R2 – R3</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.160</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.161 - .190</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">WAN R3 – R4</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.192</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.193 - .222</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Unused</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.224</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.225 - .254</font></td>
+</tr>
+</table>]]>
+		</text>
+</component>
+
+
+<component id='ID_s3_table01'>
+<text><![CDATA[
+<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<!--<tr class="liner_top">
+					<td colspan='3' bgcolor='#0E6360' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+				</tr>		-->
+<tr>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"></font></td>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"><b>/27 Jaringan</b></font></td>
+<td bgcolor="#077A77" valign="top" width="140"><font color="#ffffff" size="11"><b>Tuan rumah</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Building A</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.0</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.1 - .30</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Building B</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.32</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.33 - .62</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Building C</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.64</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.65 - .94</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Building D</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.96</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.97 - .126</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Unused</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.128</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.129 - .158</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">Unused</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.160</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.161 - .190</font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">Unused</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.192</font></td>
+<td bgcolor="#EFF8F7" valign="top"><font color="#393536" size="11">.193 - .222</font></td>
+</tr>
+<tr>
+<td bgcolor="#FACCA8" valign="top"><font color="#393536" size="11"></font></td>
+<td bgcolor="#FACCA8" valign="top"><font color="#393536" size="11">.224</font></td>
+<td bgcolor="#FACCA8" valign="top"><font color="#393536" size="11">.225 - .254</font></td>
+</tr>
+</table>]]>
+		</text>
+</component>
+
+
+<component id='ID_s3_table02'>
+<text><![CDATA[
+<table bordercolor="#FACCA8" borderwidth="3" cellpadding="4" class="ntable" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<!--<tr class="liner_top">
+					<td colspan='3' bgcolor='#CB6D25' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+				</tr>		-->
+<tr>
+<td bgcolor="#CB6D25" valign="top" width="140"><font color="#ffffff" size="11"></font></td>
+<td bgcolor="#CB6D25" valign="top" width="140"><font color="#ffffff" size="11"><b>/30 Jaringan</b></font></td>
+<td bgcolor="#CB6D25" valign="top" width="140"><font color="#ffffff" size="11"><b>Tuan rumah</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">WAN R1–R2</font></td>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">.224</font></td>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">.225 - .226</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">WAN R2–R3</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.228</font></td>
+<td bgcolor="#FFFFFF" valign="top"><font color="#393536" size="11">.229 - .230</font></td>
+</tr>
+<tr>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">WAN R3–R4</font></td>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">.232</font></td>
+<td bgcolor="#FDF6F3" valign="top"><font color="#393536" size="11">.233 - .234</font></td>
+</tr>
+</table>]]>
+		</text>
+</component>
+
+
+
+
+</textcomponents>

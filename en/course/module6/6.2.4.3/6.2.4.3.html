@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.2.4.3 Verify a Default Static Route</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.4.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configure Static and Default Routes</h1>
+        <h2>Configure IPv6 Default Routes</h2>
+      </div>
+      <div id="content">
+          <p>In Figure 1, the<span class="cmd"><b> show ipv6 route static </b></span>command output displays the contents of the routing table. </p>
+          <p></p>
+          <p>Unlike IPv4, IPv6 does not explicitly state that the default IPv6 is the Gateway of Last Resort. </p>
+          <p></p>
+          <p>The key to this configuration is the<span class="cmd"><b> ::/0 </b></span>mask. Recall that the ipv6 prefix-length in a routing table determines how many bits must match between the destination IP address of the packet and the route in the routing table. The<span class="cmd"><b> ::/0 </b></span>mask indicates that none of the bits are required to match. As long as a more specific match does not exist, the default static IPv6 route matches all packets.</p>
+          <p></p>
+          <p>Figure 2 displays a successful ping to the R3 LAN interface.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>ICMPv6 Stateless Address Autoconfiguration</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Client]]></text> 
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[IPv6 all-routers multicast]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[<b>Router Solicitation (RS)</b><br>"I need a Router Advertisement from the router."]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[IPv6 all-nodes multicast]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[<b>Router Advertisement (RA)</b><br>"Here is your prefix, prefix length, and other information."]]></text> 
+</component>
+</textcomponents>

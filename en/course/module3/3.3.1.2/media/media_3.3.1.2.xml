@@ -1,0 +1,49 @@
+<textcomponents>
+<component id="ID_Title">
+<text><![CDATA[<b>Double Tagging Attack</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[An attacker is on VLAN 10. They tag a frame for VLAN 10 and insert an additional tag for VLAN 20.]]></text> 
+</component>
+<component id="ID_txt02">
+<text><![CDATA[The first switch strips off the first tag and does not retag it because native traffic is not retagged. It then forwards the frame to the next switch.]]></text> 
+</component>
+<component id="ID_txt03">
+<text><![CDATA[The second switch examines the frame, sees the VLAN 20 tag, and forwards it accordingly.]]></text>
+</component>
+<component id="ID_txt04">
+<text><![CDATA[Trunk<br/>Native VLAN=10]]></text> 
+</component>
+<component id="ID_txt05">
+<text><![CDATA[Target (VLAN 20)]]></text> 
+</component>
+<component id="ID_txt06">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt07">
+<text><![CDATA[VLAN 10]]></text> 
+</component>
+<component id="ID_txt08">
+<text><![CDATA[VLAN 20]]></text> 
+</component>
+<component id="ID_txt09">
+<text><![CDATA[Data]]></text> 
+</component>
+<component id="ID_txt10">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt11">
+<text><![CDATA[VLAN 20]]></text> 
+</component>
+<component id="ID_txt12">
+<text><![CDATA[Data]]></text> 
+</component>
+<component id="ID_txt13">
+<text><![CDATA[Ethernet]]></text> 
+</component>
+<component id="ID_txt14">
+<text><![CDATA[Data]]></text> 
+</component>
+
+
+</textcomponents>

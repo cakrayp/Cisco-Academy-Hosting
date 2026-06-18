@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.4.1.1 Pemeriksaan NAT</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.4.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Ringkasan</h1>
+<h2>Ringkasan</h2>
+</div>
+<div id="content">
+<p>
+<b>Periksa NAT</b>
+</p>
+<p></p>
+<p>
+<b>Skenario</b>
+</p>
+<p></p>
+<p>Terjemahan alamat jaringan saat ini tidak disertakan dalam desain jaringan perusahaan Anda.  Telah diputuskan untuk mengkonfigurasi beberapa perangkat agar menggunakan layanan NAT untuk menghubungkan ke server email.</p>
+<p></p>
+<p>Sebelum menyebarkan NAT secara langsung di jaringan, Anda membuat prototipe menggunakan program simulasi jaringan.</p>
+<p></p>
+<p>Untuk instruksi lebih lanjut, lihat PDF yang menyertai kegiatan ini.</p>
+<p></p>
+<p>
+<a href="../../files/11.4.1.1%20NAT%20Check%20Instructions.pdf" target="_blank">Aktivitas Kelas - Petunjuk Pemeriksaan NAT</a>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

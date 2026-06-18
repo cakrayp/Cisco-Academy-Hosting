@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Keuntungan dari Protokol Routing Link-State</b>]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Setiap router membangun peta topologi jaringannya sendiri untuk menentukan jalur terpendek.</li><li>Pembanjiran LSP yang segera akan menghasilkan konvergensi yang lebih cepat.</li><li>LSP dikirim hanya ketika ada perubahan topologi dan hanya berisi informasi mengenai perubahan tersebut.</li><li>Desain hierarki digunakan saat mengimplementasikan banyak area.</li></ul></textformat>]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<b>Kekurangan Protokol Routing Link-State</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Mempertahankan database link-state dan pohon SPF memerlukan memori tambahan.</li><li>Menghitung algoritma SPF juga memerlukan pemrosesan CPU tambahan.</li><li>Bandwidth dapat terkena dampak buruk dari banjir paket link-state.</li></ul></textformat>]]></text> 
+</component>
+
+</textcomponents>

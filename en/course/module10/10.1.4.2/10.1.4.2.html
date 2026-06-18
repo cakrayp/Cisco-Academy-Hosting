@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.1.4.2 Verify Router DHCPv4 Configuration</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.4.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v4</h1>
+        <h2>Troubleshoot DHCPv4</h2>
+      </div>
+      <div id="content">
+          <p>When the DHCPv4 server is located on a separate LAN from the client, the router interface facing the client must be configured to relay DHCPv4 requests by configuring the IPv4 helper address. If the IPv4 helper address is not configured properly, client DHCPv4 requests are not forwarded to the DHCPv4 server.</p>
+          <p></p>
+          <p>Follow these steps to verify the router configuration:</p>
+          <p></p>
+          <p>
+            <b>Step 1. </b>Verify that the <span class="cmd"><b>ip helper-address </b></span>command is configured on the correct interface. It must be present on the inbound interface of the LAN containing the DHCPv4 client workstations and must be directed to the correct DHCPv4 server. In the figure, the output of the<span class="cmd"><b> show running-config </b></span>command verifies that the DHCPv4 relay IPv4 address is referencing the DHCPv4 server address at 192.168.11.6.</p>
+          <p></p>
+          <p>The <span class="cmd"><b>show ip interface</b></span> command can also be used to verify the DHCPv4 relay on an interface.</p>
+          <p></p>
+          <p>
+            <b>Step 2. </b>Verify that the global configuration command <span class="cmd"><b>no service dhcp</b></span> has not been configured. This command disables all DHCP server and relay functionality on the router. The command <span class="cmd"><b>service dhcp</b></span> does not appear in the running-config, because it is the default configuration.</p>
+          <p></p>
+          <p>In the figure, the <span class="cmd"><b>show running-config | include no service dhcp </b></span>command verifies that the DHCPv4 service is enabled since there is no match for the <span class="cmd"><b>show running-config | include no service dhcp </b></span>command. If the service had been disabled, the<span class="cmd"><b> no service dhcp </b></span>command would be displayed in the output.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Keamanan Pelabuhan</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Lengket Aman</b>]]></text> 
+  </component>
+   <component id="ID_Body_title01">
+  <text><![CDATA[<b>Menerapkan keamanan pada semua port switch untuk:</b>]]></text> 
+  </component>
+<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent="-14"><li>Tentukan satu alamat MAC atau sekelompok alamat MAC valid yang diperbolehkan pada suatu port.</li><li>Tentukan bahwa port akan dimatikan secara otomatis jika alamat MAC yang tidak sah terdeteksi.</li></textformat>]]></text>
+	</component>	
+ 
+  <component id="ID_Body_txt02">
+ <text><![CDATA[<textformat blockindent="-14"><li>Dipelajari secara dinamis, diubah menjadi alamat MAC aman yang disimpan di konfigurasi berjalan.</li><li>Dihapus dari konfigurasi berjalan jika keamanan port dinonaktifkan.</li><li>Hilang saat sakelar di-boot ulang (daya berputar).</li><li>Menyimpan alamat MAC aman yang lengket di konfigurasi startup menjadikannya permanen dan switch mempertahankannya setelah reboot.</li><li>Menonaktifkan pembelajaran lengket akan mengubah alamat MAC lengket menjadi alamat aman dinamis dan menghapusnya dari konfigurasi yang sedang berjalan.</li></textformat>]]></text>
+  </component>
+</textcomponents>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>2.1.2.2 Configure Switch Ports at the Physical Layer</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Basic Switch Configuration</h1>
+        <h2>Configure Switch Ports</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Duplex and Speed</b>
+          </p>
+          <p></p>
+          <p>Switch ports can be manually configured with specific duplex and speed settings. Use the<span class="cmd"><b> duplex </b></span>interface configuration mode command to manually specify the duplex mode for a switch port. Use the <span class="cmd"><b>speed</b></span> interface configuration mode command to manually specify the speed for a switch port. In Figure 1, port F0/1 on switch S1 and S2 are manually configured with the<span class="cmd"><b> full </b></span>keyword for the<span class="cmd"><b> duplex </b></span>command, and the<span class="cmd"><b> 100 </b></span>keyword for the<span class="cmd"><b> speed </b></span>command. </p>
+          <p></p>
+          <p></p>
+          <p>The default setting for both duplex and speed for switch ports on Cisco Catalyst 2960 and 3560 switches is auto. The 10/100/1000 ports operate in either half- or full-duplex mode when they are set to 10 or 100 Mb/s, but when they are set to 1000 Mb/s (1 Gb/s), they operate only in full-duplex mode. Cisco recommends only using the<span class="cmd"><b> auto </b></span>command for duplex and the<span class="cmd"><b> speed </b></span>command to avoid connectivity issues between devices. When troubleshooting switch port issues, the duplex and speed settings should be checked.</p>
+          <p></p>
+          <p>
+            <b>Note</b>: Mismatched settings for the duplex mode and speed of switch ports can cause connectivity issues. Auto negotiation failure creates mismatched settings.</p>
+          <p></p>
+          <p>All fiber optic ports, such as 100BASE-FX ports, operate only at one preset speed and are always full-duplex.   </p>
+          <p></p>
+          <p>Use the Syntax Checker in Figure 2 to configure port F0/1 of switch S1.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

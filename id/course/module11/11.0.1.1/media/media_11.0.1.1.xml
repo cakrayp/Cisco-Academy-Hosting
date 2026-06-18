@@ -1,0 +1,7 @@
+<textcomponents>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Setelah menyelesaikan bab ini Anda akan dapat:</b><br/><br/><textformat blockindent="-14"><li>menjelaskan karakteristik NAT.</li><li>menjelaskan kelebihan dan kekurangan NAT.</li><li>Konfigurasikan statistik NAT menggunakan CLI.</li><li>Konfigurasikan NAT dinamis menggunakan CLI.</li><li>Konfigurasikan PAT menggunakan CLI.</li><li>Konfigurasikan penerusan port menggunakan CLI.</li><li>Konfigurasikan NAT-PT (v6 hingga v4).</li><li>Gunakan perintah show untuk memverifikasi operasi NAT.</li></textformat><br/>]]></text>
+</component>
+
+</textcomponents>

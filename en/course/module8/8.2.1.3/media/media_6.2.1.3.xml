@@ -1,0 +1,40 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Router ID Order of Precedence</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Router ID explicitly configured?]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[IPv4 loopback interface configured?]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Use the highest active configured IPv4 address.]]></text>
+</component>
+
+
+<component id="ID_txt04">
+<text><![CDATA[Use that as the router ID.]]></text>
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Yes]]></text>
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[No]]></text>
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Yes]]></text>
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[No]]></text>
+</component>
+
+
+</textcomponents>

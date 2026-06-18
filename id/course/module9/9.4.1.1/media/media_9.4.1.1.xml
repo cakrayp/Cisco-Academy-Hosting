@@ -1,0 +1,153 @@
+<textcomponents>
+
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>Proses ACL masuk</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Antarmuka Masuk]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Cocokkan ACE pertama]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Cocokkan ACE ke-2]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[Cocokkan ACE ke-3]]></text> 
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s1_txt11">
+<text><![CDATA[Secara implisit Tolak Apa Pun]]></text> 
+</component>
+
+
+
+<component id="ID_s1_txt12">
+<text><![CDATA[(Kirim ke Tabel Perutean &amp; Antarmuka Tujuan)]]></text> 
+</component>
+
+<component id="ID_s1_txt13">
+<text><![CDATA[Izin]]></text> 
+</component>
+
+<component id="ID_s1_txt14">
+<text><![CDATA[Izin atau Tolak]]></text> 
+</component>
+
+<component id="ID_s1_txt15">
+<text><![CDATA[Membantah]]></text> 
+</component>
+<component id="ID_s1_txt17">
+   <text><![CDATA[Paket Dibuang]]></text>
+   </component>
+
+
+
+
+
+
+
+
+
+
+
+<component id='ID_s2_title'>
+	<text><![CDATA[<b>Proses ACL Keluar</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[(Dari Tabel Perutean &amp; Pemilihan Antarmuka Keluar)]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Cocokkan ACE pertama]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt05">
+<text><![CDATA[Cocokkan ACE ke-2]]></text> 
+</component>
+
+<component id="ID_s2_txt06">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s2_txt07">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt08">
+<text><![CDATA[Cocokkan ACE ke-3]]></text> 
+</component>
+
+<component id="ID_s2_txt09">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_s2_txt10">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_s2_txt11">
+<text><![CDATA[Secara implisit Tolak Apa Pun]]></text> 
+</component>
+
+
+
+<component id="ID_s2_txt12">
+<text><![CDATA[Antarmuka Keluar]]></text> 
+</component>
+
+<component id="ID_s2_txt13">
+<text><![CDATA[Izin]]></text> 
+</component>
+
+<component id="ID_s2_txt14">
+<text><![CDATA[Izin atau Tolak]]></text> 
+</component>
+
+<component id="ID_s2_txt15">
+<text><![CDATA[Membantah]]></text> 
+</component>
+
+<component id="ID_s2_txt17">
+   <text><![CDATA[Paket Dibuang]]></text>
+   </component>
+
+
+</textcomponents>

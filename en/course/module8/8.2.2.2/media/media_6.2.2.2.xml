@@ -1,0 +1,26 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Calculating a Wildcard Mask for /24 </b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Subnet Mask]]></text>
+</component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[Wildcard Mask]]></text>
+</component>
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Calculating a Wildcard Mask for /26</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+   <text><![CDATA[Subnet Mask]]></text>
+</component>
+<component id="ID_s2_txt02">
+   <text><![CDATA[Wildcard Mask]]></text>
+</component>
+
+
+</textcomponents>

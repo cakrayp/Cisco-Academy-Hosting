@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.5.1.2 Comparing IPv4 and IPv6 ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.5.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IPv6 ACLs</h1>
+        <h2>IPv6 ACL Creation</h2>
+      </div>
+      <div id="content">
+          <p>Although IPv4 and IPv6 ACLs are very similar, there are three significant differences between them. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Applying an IPv6 ACL</b>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The first difference is the command used to apply an IPv6 ACL to an interface. IPv4 uses the command <span class="cmd"><b>ip access-group</b></span> to apply an IPv4 ACL to an IPv4 interface. IPv6 uses the <span class="cmd"><b>ipv6 traffic-filter</b></span> command to perform the same function for IPv6 interfaces. </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>No Wildcard Masks</b>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Unlike IPv4 ACLs, IPv6 ACLs do not use wildcard masks. Instead, the prefix-length is used to indicate how much of an IPv6 source or destination address should be matched.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Additional Default Statements</b>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>The last major difference has to with the addition of two implicit permit statements at the end of each IPv6 access list. At the end of every IPv4 standard or extended ACL is an implicit <span class="cmd"><b>deny any</b></span> or <span class="cmd"><b>deny any any</b></span>. IPv6 includes a similar <span class="cmd"><b>deny ipv6 any any</b></span> statement at the end of each IPv6 ACL. The difference is IPv6 also includes two other implicit statements by default:</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>permit icmp any any nd-na</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">
+                  <b>permit icmp any any nd-ns</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>These two statements allow the router to participate in the IPv6 equivalent of ARP for IPv4. Recall that ARP is used in IPv4 to resolve Layer 3 addresses to Layer 2 MAC addresses. As shown in the figure, IPv6 uses ICMP Neighbor Discovery (ND) messages to accomplish the same thing. ND uses Neighbor Solicitation (NS) and Neighbor Advertisement (NA) messages.  </p>
+          <p></p>
+          <p>ND messages are encapsulated in IPv6 packets and require the services of the IPv6 network layer while ARP for IPv4 does not use Layer 3.  Because IPv6 uses the Layer 3 service for neighbor discovery, IPv6 ACLs need to implicitly permit ND packets to be sent and received on an interface. Specifically, both Neighbor Discovery - Neighbor Advertisement (nd-na) and Neighbor Discovery - Neighbor Solicitation (nd-ns) messages are permitted.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

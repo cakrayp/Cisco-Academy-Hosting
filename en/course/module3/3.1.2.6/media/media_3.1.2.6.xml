@@ -1,0 +1,171 @@
+<textcomponents>
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activity - Scenario 1: VLAN Trunks in Action</b><br/><br/>Drag the Ethernet Frames (yellow color envelopes) to their destination PCs for the scenario. Not all envelopes will be used in every scenario.<br/>Scenario 1: PC 1 sends a broadcast. Which PCs will receive a copy of the broadcast frame?]]></text>
+</component>
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activity - Scenario 2: VLAN Trunks in Action</b><br/><br/>Drag the Ethernet Frames (yellow color envelopes) to their destination PCs for the scenario. Not all envelopes will be used in every scenario.<br/>Scenario 2: PC 2 sends a broadcast. Which PCs will receive a copy of the broadcast frame?]]></text>
+</component>
+
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Activity - Scenario 3: VLAN Trunks in Action</b><br/><br/>Drag the Ethernet Frames (yellow color envelopes) to their destination PCs for the scenario. Not all envelopes will be used in every scenario.<br/>Scenario 3: PC 3 sends a broadcast. Which PCs will receive a copy of the broadcast frame?]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s1_txt04'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s2_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s3_txt03'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt05'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Ethernet<br>Frame]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Ethernet<br>Frame]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[Ethernet<br>Frame]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the destination PCs that would receive the broadcast frame.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the destination PCs that would receive the broadcast frame. Please click Reset to try again.]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the destination PCs that would receive the broadcast frame.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the destination PCs that would receive the broadcast frame. Please click Reset to try again.]]></text>
+</component>
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[You have successfully identified the destination PCs that would receive the broadcast frame.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully identified the destination PCs that would receive the broadcast frame. Please click Reset to try again.]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+</textcomponents>

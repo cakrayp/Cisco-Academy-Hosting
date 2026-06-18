@@ -1,0 +1,9 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Basic Topology</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[R1 needs to reach networks in the range of 172.20.0.0/16 to 172.23.0.0/16. Instead of configuring four separate static routes, summarize the networks and create a summary static route.]]></text> 
+  </component>
+
+</textcomponents>

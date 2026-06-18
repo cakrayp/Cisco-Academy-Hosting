@@ -1,0 +1,11 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>ACL Placement</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Extended ACLs are usually placed near the source.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Standard ACLs are usually placed near the destination.]]></text> 
+  </component>
+</textcomponents>

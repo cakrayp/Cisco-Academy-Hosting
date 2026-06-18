@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="module-index" dir="ltr">
+<head>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<title>Perutean dan Peralihan</title>
+<link href="../common-ext/styles/index.css" rel="stylesheet" type="text/css"/>
+<script src="../common-ext/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="../common-ext/scripts/index.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+<div id="header-logo" title="Cisco Systems, Inc.- Akademi Jaringan Cisco"></div>
+<a href="../../index.html" id="home-btn" title="Rumah">Rumah</a>
+<h1>Bab 9: Daftar Kontrol Akses<span id="title"></span></h1>
+</div>
+<div id="nav">
+<ul class="sections"><li><span class="icon"></span><span class="section-title">9.0 Daftar Kontrol Akses</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.0.1 Daftar Kontrol Akses</span><ul class="pages"><li><a class="page-title" data-ident="9.0.1.1" href="9.0.1.1/9.0.1.1.html" target="frame">9.0.1.1 Pendahuluan</a></li>
+<li><a class="page-title" data-ident="9.0.1.2" href="9.0.1.2/9.0.1.2.html" target="frame">9.0.1.2 Izinkan Saya Membantu Anda</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.1 Pengoperasian IP ACL</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.1.1 Tujuan ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.1.1.1" href="9.1.1.1/9.1.1.1.html" target="frame">9.1.1.1 Apa itu ACL?</a></li>
+<li><a class="page-title" data-ident="9.1.1.2" href="9.1.1.2/9.1.1.2.html" target="frame">9.1.1.2 Percakapan TCP</a></li>
+<li><a class="page-title" data-ident="9.1.1.3" href="9.1.1.3/9.1.1.3.html" target="frame">9.1.1.3 Penyaringan Paket</a></li>
+<li><a class="page-title" data-ident="9.1.1.4" href="9.1.1.4/9.1.1.4.html" target="frame">9.1.1.4 Pemfilteran Paket (Lanjutan)</a></li>
+<li><a class="page-title" data-ident="9.1.1.5" href="9.1.1.5/9.1.1.5.html" target="frame">9.1.1.5 Pengoperasian ACL</a></li>
+<li><a class="page-title" data-ident="9.1.1.6" href="9.1.1.6/9.1.1.6.html" target="frame">9.1.1.6 Packet Tracer - Demonstrasi ACL</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.1.2 ACL Standar versus IPv4 yang Diperluas</span><ul class="pages"><li><a class="page-title" data-ident="9.1.2.1" href="9.1.2.1/9.1.2.1.html" target="frame">9.1.2.1 Jenis Cisco IPv4 ACL</a></li>
+<li><a class="page-title" data-ident="9.1.2.2" href="9.1.2.2/9.1.2.2.html" target="frame">9.1.2.2 Penomoran dan Penamaan ACL</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.1.3 Masker Wildcard di ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.1.3.1" href="9.1.3.1/9.1.3.1.html" target="frame">9.1.3.1 Memperkenalkan Masking ACL Wildcard</a></li>
+<li><a class="page-title" data-ident="9.1.3.2" href="9.1.3.2/9.1.3.2.html" target="frame">9.1.3.2 Contoh Masker Wildcard</a></li>
+<li><a class="page-title" data-ident="9.1.3.3" href="9.1.3.3/9.1.3.3.html" target="frame">9.1.3.3 Menghitung Masker Wildcard</a></li>
+<li><a class="page-title" data-ident="9.1.3.4" href="9.1.3.4/9.1.3.4.html" target="frame">9.1.3.4 Kata Kunci Masker Wildcard</a></li>
+<li><a class="page-title" data-ident="9.1.3.5" href="9.1.3.5/9.1.3.5.html" target="frame">9.1.3.5 Contoh Kata Kunci Wildcard Mask</a></li>
+<li><a class="page-title" data-ident="9.1.3.6" href="9.1.3.6/9.1.3.6.html" target="frame">9.1.3.6 Aktivitas - Menentukan Wildcard Mask yang Benar</a></li>
+<li><a class="page-title" data-ident="9.1.3.7" href="9.1.3.7/9.1.3.7.html" target="frame">9.1.3.7 Kegiatan - Menentukan Izin atau Penolakan</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.1.4 Pedoman pembuatan ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.1.4.1" href="9.1.4.1/9.1.4.1.html" target="frame">9.1.4.1 Pedoman Umum Pembuatan ACL</a></li>
+<li><a class="page-title" data-ident="9.1.4.2" href="9.1.4.2/9.1.4.2.html" target="frame">9.1.4.2 Praktik Terbaik ACL</a></li>
+<li><a class="page-title" data-ident="9.1.4.3" href="9.1.4.3/9.1.4.3.html" target="frame">9.1.4.3 Aktivitas - Operasi ACL</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.1.5 Pedoman Penempatan ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.1.5.1" href="9.1.5.1/9.1.5.1.html" target="frame">9.1.5.1 Dimana Menempatkan ACL</a></li>
+<li><a class="page-title" data-ident="9.1.5.2" href="9.1.5.2/9.1.5.2.html" target="frame">9.1.5.2 Penempatan ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.1.5.3" href="9.1.5.3/9.1.5.3.html" target="frame">9.1.5.3 Penempatan ACL yang Diperpanjang</a></li>
+<li><a class="page-title" data-ident="9.1.5.4" href="9.1.5.4/9.1.5.4.html" target="frame">9.1.5.4 Kegiatan - Menempatkan ACL Standar dan Extended</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.2 ACL IPv4 standar</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.2.1 Konfigurasikan ACL IPv4 Standar</span><ul class="pages"><li><a class="page-title" data-ident="9.2.1.1" href="9.2.1.1/9.2.1.1.html" target="frame">9.2.1.1 Memasukkan Pernyataan Kriteria</a></li>
+<li><a class="page-title" data-ident="9.2.1.2" href="9.2.1.2/9.2.1.2.html" target="frame">9.2.1.2 Mengonfigurasi ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.2.1.3" href="9.2.1.3/9.2.1.3.html" target="frame">9.2.1.3 Mengonfigurasi ACL Standar (Lanjutan)</a></li>
+<li><a class="page-title" data-ident="9.2.1.4" href="9.2.1.4/9.2.1.4.html" target="frame">9.2.1.4 Logika Internal</a></li>
+<li><a class="page-title" data-ident="9.2.1.5" href="9.2.1.5/9.2.1.5.html" target="frame">9.2.1.5 Menerapkan ACL Standar ke Antarmuka</a></li>
+<li><a class="page-title" data-ident="9.2.1.6" href="9.2.1.6/9.2.1.6.html" target="frame">9.2.1.6 Menerapkan ACL Standar ke Antarmuka (Lanjutan)</a></li>
+<li><a class="page-title" data-ident="9.2.1.7" href="9.2.1.7/9.2.1.7.html" target="frame">9.2.1.7 Membuat ACL Standar Bernama</a></li>
+<li><a class="page-title" data-ident="9.2.1.8" href="9.2.1.8/9.2.1.8.html" target="frame">9.2.1.8 Mengomentari ACL</a></li>
+<li><a class="page-title" data-ident="9.2.1.9" href="9.2.1.9/9.2.1.9.html" target="frame">9.2.1.9 Aktivitas - Mengonfigurasi ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.2.1.10" href="9.2.1.10/9.2.1.10.html" target="frame">9.2.1.10 Packet Tracer - Mengonfigurasi ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.2.1.11" href="9.2.1.11/9.2.1.11.html" target="frame">9.2.1.11 Packet Tracer - Mengonfigurasi ACL Standar Bernama</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.2.2 Memodifikasi ACL IPv4</span><ul class="pages"><li><a class="page-title" data-ident="9.2.2.1" href="9.2.2.1/9.2.2.1.html" target="frame">9.2.2.1 Mengedit ACL Bernomor Standar</a></li>
+<li><a class="page-title" data-ident="9.2.2.2" href="9.2.2.2/9.2.2.2.html" target="frame">9.2.2.2 Mengedit ACL Bernomor Standar (Lanjutan)</a></li>
+<li><a class="page-title" data-ident="9.2.2.3" href="9.2.2.3/9.2.2.3.html" target="frame">9.2.2.3 Mengedit ACL Bernama Standar</a></li>
+<li><a class="page-title" data-ident="9.2.2.4" href="9.2.2.4/9.2.2.4.html" target="frame">9.2.2.4 Memverifikasi ACL</a></li>
+<li><a class="page-title" data-ident="9.2.2.5" href="9.2.2.5/9.2.2.5.html" target="frame">9.2.2.5 Statistik ACL</a></li>
+<li><a class="page-title" data-ident="9.2.2.6" href="9.2.2.6/9.2.2.6.html" target="frame">9.2.2.6 Nomor Urutan ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.2.2.7" href="9.2.2.7/9.2.2.7.html" target="frame">9.2.2.7 Lab - Mengonfigurasi dan Memverifikasi ACL Standar</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.2.3 Mengamankan port VTY dengan ACL IPv4 Standar</span><ul class="pages"><li><a class="page-title" data-ident="9.2.3.1" href="9.2.3.1/9.2.3.1.html" target="frame">9.2.3.1 Mengonfigurasi ACL Standar untuk Mengamankan Port VTY</a></li>
+<li><a class="page-title" data-ident="9.2.3.2" href="9.2.3.2/9.2.3.2.html" target="frame">9.2.3.2 Memverifikasi ACL Standar yang digunakan untuk Mengamankan Port VTY</a></li>
+<li><a class="page-title" data-ident="9.2.3.3" href="9.2.3.3/9.2.3.3.html" target="frame">9.2.3.3 Packet Tracer - Mengonfigurasi ACL pada VTY Lines</a></li>
+<li><a class="page-title" data-ident="9.2.3.4" href="9.2.3.4/9.2.3.4.html" target="frame">9.2.3.4 Lab - Mengonfigurasi dan Memverifikasi Pembatasan VTY</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.3 ACL IPv4 yang Diperluas</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.3.1 Struktur ACL IPv4 yang Diperluas</span><ul class="pages"><li><a class="page-title" data-ident="9.3.1.1" href="9.3.1.1/9.3.1.1.html" target="frame">9.3.1.1 ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.1.2" href="9.3.1.2/9.3.1.2.html" target="frame">9.3.1.2 ACL yang Diperluas (Lanjutan)</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.3.2 Konfigurasikan ACL IPv4 yang Diperluas</span><ul class="pages"><li><a class="page-title" data-ident="9.3.2.1" href="9.3.2.1/9.3.2.1.html" target="frame">9.3.2.1 Mengonfigurasi ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.2" href="9.3.2.2/9.3.2.2.html" target="frame">9.3.2.2 Menerapkan ACL yang Diperluas ke Antarmuka</a></li>
+<li><a class="page-title" data-ident="9.3.2.3" href="9.3.2.3/9.3.2.3.html" target="frame">9.3.2.3 Memfilter Lalu Lintas dengan ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.4" href="9.3.2.4/9.3.2.4.html" target="frame">9.3.2.4 Membuat ACL yang Diperluas Bernama</a></li>
+<li><a class="page-title" data-ident="9.3.2.5" href="9.3.2.5/9.3.2.5.html" target="frame">9.3.2.5 Memverifikasi ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.6" href="9.3.2.6/9.3.2.6.html" target="frame">9.3.2.6 Mengedit ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.7" href="9.3.2.7/9.3.2.7.html" target="frame">9.3.2.7 Aktivitas - Membuat Pernyataan ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.8" href="9.3.2.8/9.3.2.8.html" target="frame">9.3.2.8 Kegiatan - Mengevaluasi ACE yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.3.2.9" href="9.3.2.9/9.3.2.9.html" target="frame">9.3.2.9 Aktivitas - Testlet ACL</a></li>
+<li><a class="page-title" data-ident="9.3.2.10" href="9.3.2.10/9.3.2.10.html" target="frame">9.3.2.10 Packet Tracer - Mengonfigurasi ACL yang Diperluas - Skenario 1</a></li>
+<li><a class="page-title" data-ident="9.3.2.11" href="9.3.2.11/9.3.2.11.html" target="frame">9.3.2.11 Packet Tracer - Mengonfigurasi ACL yang Diperluas - Skenario 2</a></li>
+<li><a class="page-title" data-ident="9.3.2.12" href="9.3.2.12/9.3.2.12.html" target="frame">9.3.2.12 Packet Tracer - Mengonfigurasi ACL yang Diperluas - Skenario 3</a></li>
+<li><a class="page-title" data-ident="9.3.2.13" href="9.3.2.13/9.3.2.13.html" target="frame">9.3.2.13 Lab - Mengonfigurasi dan Memverifikasi ACL yang Diperluas</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.4 Memecahkan Masalah ACL</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.4.1 Memproses Paket dengan ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.4.1.1" href="9.4.1.1/9.4.1.1.html" target="frame">9.4.1.1 Logika ACL Masuk dan Keluar</a></li>
+<li><a class="page-title" data-ident="9.4.1.2" href="9.4.1.2/9.4.1.2.html" target="frame">9.4.1.2 Operasi Logika ACL</a></li>
+<li><a class="page-title" data-ident="9.4.1.3" href="9.4.1.3/9.4.1.3.html" target="frame">9.4.1.3 Proses Keputusan ACL Standar</a></li>
+<li><a class="page-title" data-ident="9.4.1.4" href="9.4.1.4/9.4.1.4.html" target="frame">9.4.1.4 Proses Keputusan ACL yang Diperluas</a></li>
+<li><a class="page-title" data-ident="9.4.1.5" href="9.4.1.5/9.4.1.5.html" target="frame">9.4.1.5 Kegiatan - Menyusun Langkah-Langkah Proses Pengambilan Keputusan ACL</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.4.2 Kesalahan Umum ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.4.2.1" href="9.4.2.1/9.4.2.1.html" target="frame">9.4.2.1 Pemecahan Masalah Kesalahan Umum ACL - Contoh 1</a></li>
+<li><a class="page-title" data-ident="9.4.2.2" href="9.4.2.2/9.4.2.2.html" target="frame">9.4.2.2 Mengatasi Masalah Kesalahan Umum ACL - Contoh 2</a></li>
+<li><a class="page-title" data-ident="9.4.2.3" href="9.4.2.3/9.4.2.3.html" target="frame">9.4.2.3 Pemecahan Masalah Kesalahan Umum ACL - Contoh 3</a></li>
+<li><a class="page-title" data-ident="9.4.2.4" href="9.4.2.4/9.4.2.4.html" target="frame">9.4.2.4 Pemecahan Masalah Kesalahan Umum ACL - Contoh 4</a></li>
+<li><a class="page-title" data-ident="9.4.2.5" href="9.4.2.5/9.4.2.5.html" target="frame">9.4.2.5 Pemecahan Masalah Kesalahan Umum ACL - Contoh 5</a></li>
+<li><a class="page-title" data-ident="9.4.2.6" href="9.4.2.6/9.4.2.6.html" target="frame">9.4.2.6 Packet Tracer - Mengatasi Masalah ACL</a></li>
+<li><a class="page-title" data-ident="9.4.2.7" href="9.4.2.7/9.4.2.7.html" target="frame">9.4.2.7 Lab - Mengatasi Masalah Konfigurasi dan Penempatan ACL</a></li>
+<li><a class="page-title" data-ident="9.4.2.8" href="9.4.2.8/9.4.2.8.html" target="frame">9.4.2.8 Packet Tracer - Tantangan Integrasi Keterampilan</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.5 ACL IPv6</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.5.1 Pembuatan IPv6 ACL</span><ul class="pages"><li><a class="page-title" data-ident="9.5.1.1" href="9.5.1.1/9.5.1.1.html" target="frame">9.5.1.1 Jenis ACL IPv6</a></li>
+<li><a class="page-title" data-ident="9.5.1.2" href="9.5.1.2/9.5.1.2.html" target="frame">9.5.1.2 Membandingkan ACL IPv4 dan IPv6</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">9.5.2 Mengonfigurasi ACL IPv6</span><ul class="pages"><li><a class="page-title" data-ident="9.5.2.1" href="9.5.2.1/9.5.2.1.html" target="frame">9.5.2.1 Konfigurasi Topologi IPv6</a></li>
+<li><a class="page-title" data-ident="9.5.2.2" href="9.5.2.2/9.5.2.2.html" target="frame">9.5.2.2 Mengonfigurasi ACL IPv6</a></li>
+<li><a class="page-title" data-ident="9.5.2.3" href="9.5.2.3/9.5.2.3.html" target="frame">9.5.2.3 Menerapkan ACL IPv6 ke Antarmuka</a></li>
+<li><a class="page-title" data-ident="9.5.2.4" href="9.5.2.4/9.5.2.4.html" target="frame">9.5.2.4 Contoh IPv6 ACL</a></li>
+<li><a class="page-title" data-ident="9.5.2.5" href="9.5.2.5/9.5.2.5.html" target="frame">9.5.2.5 Memverifikasi ACL IPv6</a></li>
+<li><a class="page-title" data-ident="9.5.2.6" href="9.5.2.6/9.5.2.6.html" target="frame">9.5.2.6 Packet Tracer - Mengonfigurasi ACL IPv6</a></li>
+<li><a class="page-title" data-ident="9.5.2.7" href="9.5.2.7/9.5.2.7.html" target="frame">9.5.2.7 Lab - Mengonfigurasi dan Memverifikasi ACL IPv6</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">9.6 Ringkasan</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">9.6.1 Ringkasan</span><ul class="pages"><li><a class="page-title" data-ident="9.6.1.1" href="9.6.1.1/9.6.1.1.html" target="frame">9.6.1.1 FTP Ditolak</a></li>
+<li><a class="page-title" data-ident="9.6.1.2" href="9.6.1.2/9.6.1.2.html" target="frame">9.6.1.2 Ringkasan</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<ul class="contextmenu" id="nav-menu">
+<li id="nav-menu-expand">Perluas Semua</li>
+<li id="nav-menu-collapse">Ciutkan Semua</li>
+</ul>
+<div id="content">
+<div id="container"></div>
+<button disabled="" id="prev-btn" title="Sebelumnya" type="button"><span class="icon">Sebelumnya</span></button>
+<input id="jump-box" type="text" value=""/>
+<button disabled="" id="next-btn" title="Berikutnya" type="button"><span class="icon">Berikutnya</span></button>
+<button id="mini-btn" title="Beralih" type="button"><span class="icon">Beralih</span></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Creating Adjacencies With Every Neighbor</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>More Routers = More Adjacencies</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Flooding LSAs</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>LSAs and DR</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[R2's LSA]]></text> 
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[R3's LSA]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[R4's LSA]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[R1's LSA]]></text> 
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[R5's LSA]]></text> 
+</component>
+
+
+
+<component id="ID_s1_txt01">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt06">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt07">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt08">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt09">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt10">
+  <text><![CDATA[Adjacency]]></text> 
+</component>
+<component id="ID_s1_txt11">
+  <text><![CDATA[Number of Adjacencies = n (n - 1) / 2<br/>n = number of routers<br/>Example: 5 (5 - 1) / 2 = 10 adjacencies]]></text> 
+</component>
+
+
+<component id="ID_s2_txt01">
+  <text><![CDATA[Routers]]></text> 
+</component>
+<component id="ID_s2_txt02">
+  <text><![CDATA[Adjacencies]]></text> 
+</component>
+
+<component id="ID_s4_txt01">
+  <text><![CDATA[DR]]></text> 
+</component>
+<component id="ID_s4_txt02">
+  <text><![CDATA[BDR]]></text> 
+</component>
+<component id="ID_s4_txt03">
+  <text><![CDATA[Here are my LSAs.]]></text> 
+</component>
+<component id="ID_s4_txt04">
+  <text><![CDATA[Here are 10.1.1.1's LSAs.]]></text> 
+</component>
+<component id="ID_s4_txt05">
+  <text><![CDATA[LSA]]></text> 
+</component>
+<component id="ID_s4_txt06">
+  <text><![CDATA[LSA]]></text> 
+</component>
+
+<!--ANIMATION CONTROLLER-->
+	<component id="end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="start">
+		<text><![CDATA[Start]]></text>
+	</component>	
+
+<component id="s4_end">
+		<text><![CDATA[End]]></text>
+	</component>
+	
+	<component id="s4_fforward">
+		<text><![CDATA[Fast Forward]]></text>
+	</component>
+	
+	<component id="s4_pause">
+		<text><![CDATA[Pause]]></text>
+	</component>
+	
+	<component id="s4_play">
+		<text><![CDATA[Play]]></text>
+	</component>
+	
+	<component id="s4_rewind">
+		<text><![CDATA[Rewind]]></text>
+	</component>
+	
+	<component id="s4_start">
+		<text><![CDATA[Start]]></text>
+	</component>
+
+	
+</textcomponents>

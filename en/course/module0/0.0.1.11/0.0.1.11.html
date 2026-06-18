@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>0.0.1.11 Course Overview</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_0.0.1.11_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Welcome to Routing and Switching Essentials</h1>
+        <h2>Message to the Student</h2>
+      </div>
+      <div id="content">
+          <p>As the course title states, the focus of this course is on learning the architecture, components, and operations of routers and switches in a small network. In this course, you will learn how to configure a router and a switch for basic functionality. You will do the following: </p>
+          <p>
+            <ul>
+              <li>describe enhanced switching technologies such as VLANs, VLAN Trunking Protocol (VTP), Rapid Spanning Tree Protocol (RSTP), Per VLAN Spanning Tree Protocol (PVSTP), and 802.1q</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure and troubleshoot basic operations of a small switched network</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure and verify static routing and default routing </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure and troubleshoot basic operations of routers in a small routed network </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure and troubleshoot VLANs and inter-VLAN routing </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure, monitor, and troubleshoot ACLs for IPv4 and IPv6</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>configure, monitor, and troubleshoot ACLs for IPv4 and IPv6</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>By the end of this course, you will be able to configure and troubleshoot routers and switches and resolve common issues with RIPv1, RIPv2, single-area and multi-area OSPF, virtual LANs, and inter-VLAN routing in both IPv4 and IPv6 networks</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

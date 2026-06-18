@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.1.3.2 Konfigurasi Antarmuka Router IPv4</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Awal Router</h1>
+<h2>Pengaturan Dasar pada Router</h2>
+</div>
+<div id="content">
+<p>Salah satu fitur yang membedakan antara switch dan router adalah jenis antarmuka yang didukung oleh masing-masing switch. Misalnya, switch Layer 2 mendukung LAN dan, oleh karena itu, memiliki beberapa port FastEthernet atau Gigabit Ethernet.</p>
+<p></p>
+<p>Router mendukung LAN dan WAN dan dapat menghubungkan berbagai jenis jaringan; oleh karena itu, mereka mendukung banyak jenis antarmuka. Misalnya, ISR G2 memiliki satu atau dua antarmuka Gigabit Ethernet terintegrasi dan slot Kartu Antarmuka WAN Berkecepatan Tinggi (HWIC) untuk mengakomodasi jenis antarmuka jaringan lainnya, termasuk antarmuka serial, DSL, dan kabel.</p>
+<p></p>
+<p>Agar tersedia, antarmuka harus:</p>
+<p>
+<ul>
+<li>
+<b>Jika menggunakan IPv4, dikonfigurasi dengan alamat dan subnet mask</b>- Gunakan<span class="cmd"><b>alamat IP</b></span><span class="cmd"><i>subnet-mask alamat ip</i></span>perintah konfigurasi antarmuka.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Diaktifkan</b>- Secara default, antarmuka LAN dan WAN tidak diaktifkan (<span class="cmd"><b>penutupan</b></span>). Untuk mengaktifkan antarmuka, itu harus diaktifkan menggunakan<span class="cmd"><b>tidak ada penutupan</b></span>memerintah. (Ini mirip dengan menyalakan antarmuka.) Antarmuka juga harus terhubung ke perangkat lain (hub, switch, atau router lain) agar lapisan fisik dapat aktif.</li>
+</ul>
+</p>
+<p></p>
+<p>Secara opsional, antarmuka juga dapat dikonfigurasi dengan deskripsi singkat. Merupakan praktik yang baik untuk mengonfigurasi deskripsi pada setiap antarmuka. Teks deskripsi dibatasi hingga 240 karakter. Pada jaringan produksi, deskripsi dapat membantu dalam pemecahan masalah dengan memberikan informasi tentang jenis jaringan yang terhubung dengan antarmuka. Jika antarmuka terhubung ke ISP atau operator layanan, akan berguna jika memasukkan koneksi pihak ketiga dan informasi kontak.</p>
+<p></p>
+<p>Tergantung pada jenis antarmuka, parameter tambahan mungkin diperlukan. Misalnya, di lingkungan lab, antarmuka serial yang menghubungkan ke ujung kabel serial berlabel DCE harus dikonfigurasi dengan<span class="cmd"><b>kecepatan jam</b></span>memerintah.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Secara tidak sengaja menggunakan<span class="cmd"><b>kecepatan jam</b></span>perintah pada antarmuka DTE menghasilkan a<span class="cmd">%Error: Perintah ini hanya berlaku untuk antarmuka DCE</span>pesan.</p>
+<p></p>
+<p>Gambar 1 sampai 3 memberikan contoh konfigurasi antarmuka router R1.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 4 untuk mengkonfigurasi router R2.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

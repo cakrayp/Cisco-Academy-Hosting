@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[]]></text>
+	</component>
+	   
+	<component id="ID_txt01">
+		<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Explain the purpose of dynamic routing protocols.</li><li>Explain the use of dynamic routing versus static routing.</li><li>Explain how dynamic routing protocols share route information and achieve convergence.</li><li>Compare the different categories of routing protocols.</li><li>Describe the algorithm used by distance vector routing protocols to determine the best path.</li><li>Identify the types of distance vector routing protocols.</li><li>Configure the RIP routing protocol.</li><li>Configure the RIPng routing protocol.</li><li>Describe the algorithm used by link-state routing protocols to determine the best path. </li><li>Explain how the link-state routing protocol uses information sent in a link-state update.</li><li>Explain the advantages and disadvantages of using link-state routing protocols. </li><li>Determine the route source, administrative distance, and metric for a given route.</li><li>Explain the concept of a parent/child relationship in a dynamically built routing table.</li><li>Compare the IPv4 classless route lookup process and the IPv6 lookup process.</li><li>Analyze a routing table to determine which route will be used to forward a packet.</li></textformat><br/>]]></text>
+	</component>
+	
+</textcomponents>

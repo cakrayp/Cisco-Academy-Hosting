@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.1.2.2 Verifying DHCPv4</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Dynamic Host Configuration Protocol v4</h1>
+        <h2>Configuring a Basic DHCPv4 Server</h2>
+      </div>
+      <div id="content">
+          <p>The topology shown in Figure 1 is used in the example output. In this example, R1 has been configured to provide DHCPv4 services. PC1 has not been powered up and, therefore, does not have an IP address. </p>
+          <p></p>
+          <p>As shown in Figure 2, the<span class="cmd"><b> show running-config | section dhcp </b></span>command output displays the DHCPv4 commands configured on R1. The <span class="cmd"><b>| section </b></span>parameter displays only the commands associated with DHCPv4 configuration.</p>
+          <p></p>
+          <p>As shown in Figure 3, the operation of DHCPv4 can be verified using the <span class="cmd"><b>show ip dhcp binding </b></span>command. This command displays a list of all IPv4 address to MAC address bindings that have been provided by the DHCPv4 service. The second command in Figure 3, <span class="cmd"><b>show ip dhcp server statistics</b></span>, is used to verify that messages are being received or sent by the router. This command displays count information regarding the number of DHCPv4 messages that have been sent and received.</p>
+          <p></p>
+          <p>As seen in the output for these commands, currently there are no bindings and the statistics indicate no messages sent or received. At this point no devices have requested DHCPv4 services from router R1.</p>
+          <p></p>
+          <p>In Figure 4, the commands are issued after PC1 and PC2 have been powered on and have completed the booting process.</p>
+          <p></p>
+          <p>Notice that the binding information now displays that the IPv4 addresses of 192.168.10.10 and 192.168.11.10 have been bound to MAC addresses. The statistics are also displaying DHCPDISCOVER, DHCPREQUEST, DHCPOFFER, and DHCPACK activity.</p>
+          <p></p>
+          <p>As shown in Figure 5, the<span class="cmd"><b> ipconfig /all</b></span> command, when issued on PC1, displays the TCP/IP parameters. Because PC1 was connected to the network segment 192.168.10.0/24, it automatically received a DNS suffix, IPv4 address, subnet mask, default gateway, and DNS server address from that pool. No router interface configuration is required. If a PC is connected to a network segment that has a DHCPv4 pool available, the PC can obtain an IPv4 address from the appropriate pool automatically.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

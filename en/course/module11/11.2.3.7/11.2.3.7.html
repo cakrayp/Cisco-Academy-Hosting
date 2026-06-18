@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>11.2.3.7 Lab - Configuring NAT Pool Overload and PAT</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.2.3.7_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Configuring NAT</h1>
+        <h2>Configuring Port Address Translation (PAT)</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>In this lab, you will complete the following objectives:</b>
+          </p>
+          <p>
+            <ul>
+              <li>Part 1: Build the Network and Verify Connectivity</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Part 2: Configure and Verify NAT Pool Overload</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Part 3: Configure and Verify PAT</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/11.2.3.7%20Lab%20-%20Configuring%20NAT%20Pool%20Overload%20and%20PAT.pdf" target="_blank">Lab - Configuring NAT Pool Overload and PAT</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

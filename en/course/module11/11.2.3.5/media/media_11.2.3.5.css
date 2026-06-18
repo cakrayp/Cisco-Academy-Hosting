@@ -1,0 +1,14 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#ID_static_7,#ID_s2_top01,#ID_static_8,#ID_s2_top02,#ID_s2_top03,#ID_static_9,#ID_static_10,#ID_static_13,#ID_static_14,#ID_s5_top01,#ID_static_19,#ID_s5_top02,#ID_static_20,#ID_s5_top03{opacity:.25 !important;}

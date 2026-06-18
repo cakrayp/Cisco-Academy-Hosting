@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.1.2.1 Mengenkapsulasi Pesan OSPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Karakteristik OSPF</h1>
+<h2>Pesan OSPF</h2>
+</div>
+<div id="content">
+<p>Pesan OSPF yang dikirimkan melalui link Ethernet berisi informasi berikut:</p>
+<p>
+<ul>
+<li>
+<b>Header Bingkai Ethernet Tautan Data</b>- Mengidentifikasi alamat MAC multicast tujuan 01-00-5E-00-00-05 atau 01-00-5E-00-00-06. (Gambar 1)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tajuk Paket IP</b>- Mengidentifikasi bidang protokol IPv4 89 yang menunjukkan bahwa ini adalah paket OSPF. Ini juga mengidentifikasi salah satu dari dua alamat multicast OSPF, 224.0.0.5 atau 224.0.0.6. (Gambar 2)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Header Paket OSPF</b>- Mengidentifikasi jenis paket OSPF, ID router dan ID area. (Figure 3)</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Data Spesifik Tipe Paket OSPF</b>- Berisi informasi jenis paket OSPF. Isinya berbeda-beda, bergantung pada jenis paket. Dalam hal ini, ini adalah Header IPv4. (Figure 4)</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

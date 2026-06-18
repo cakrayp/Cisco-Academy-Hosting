@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="module-index" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8"/>
+    <title>Routing and Switching</title>
+    <link rel="stylesheet" type="text/css" href="../common-ext/styles/index.css"/>
+    <script type="text/javascript" src="../common-ext/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../common-ext/scripts/index.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo" title="Cisco Systems, Inc. - Cisco Networking Academy"></div>
+      <a id="home-btn" href="../../index.html" title="Home">Home</a>
+      <h1>Chapter 11: Network Address Translation for IPv4 <span id="title"></span></h1>
+    </div>
+    <div id="nav">
+      <ul class="sections"><li><span class="icon"></span><span class="section-title">11.0 Introduction</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">11.0.1 Introduction</span><ul class="pages"><li><a data-ident="11.0.1.1" class="page-title" href="11.0.1.1/11.0.1.1.html" target="frame">11.0.1.1 Introduction</a></li>
+<li><a data-ident="11.0.1.2" class="page-title" href="11.0.1.2/11.0.1.2.html" target="frame">11.0.1.2  Conceptual NAT</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">11.1 NAT Operation</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">11.1.1 NAT Characteristics</span><ul class="pages"><li><a data-ident="11.1.1.1" class="page-title" href="11.1.1.1/11.1.1.1.html" target="frame">11.1.1.1 IPv4 Private Address Space</a></li>
+<li><a data-ident="11.1.1.2" class="page-title" href="11.1.1.2/11.1.1.2.html" target="frame">11.1.1.2 What is NAT?</a></li>
+<li><a data-ident="11.1.1.3" class="page-title" href="11.1.1.3/11.1.1.3.html" target="frame">11.1.1.3 NAT Terminology</a></li>
+<li><a data-ident="11.1.1.4" class="page-title" href="11.1.1.4/11.1.1.4.html" target="frame">11.1.1.4 NAT Terminology (Cont.)</a></li>
+<li><a data-ident="11.1.1.5" class="page-title" href="11.1.1.5/11.1.1.5.html" target="frame">11.1.1.5 How NAT Works</a></li>
+<li><a data-ident="11.1.1.6" class="page-title" href="11.1.1.6/11.1.1.6.html" target="frame">11.1.1.6 Activity - Identify the NAT Terminology</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.1.2 Types of NAT</span><ul class="pages"><li><a data-ident="11.1.2.1" class="page-title" href="11.1.2.1/11.1.2.1.html" target="frame">11.1.2.1 Static NAT</a></li>
+<li><a data-ident="11.1.2.2" class="page-title" href="11.1.2.2/11.1.2.2.html" target="frame">11.1.2.2 Dynamic NAT</a></li>
+<li><a data-ident="11.1.2.3" class="page-title" href="11.1.2.3/11.1.2.3.html" target="frame">11.1.2.3 Port Address Translation (PAT)</a></li>
+<li><a data-ident="11.1.2.4" class="page-title" href="11.1.2.4/11.1.2.4.html" target="frame">11.1.2.4 Next Available Port</a></li>
+<li><a data-ident="11.1.2.5" class="page-title" href="11.1.2.5/11.1.2.5.html" target="frame">11.1.2.5 Comparing NAT and PAT</a></li>
+<li><a data-ident="11.1.2.6" class="page-title" href="11.1.2.6/11.1.2.6.html" target="frame">11.1.2.6 Packet Tracer - Investigating NAT Operation</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.1.3 Benefits of NAT</span><ul class="pages"><li><a data-ident="11.1.3.1" class="page-title" href="11.1.3.1/11.1.3.1.html" target="frame">11.1.3.1 Benefits of NAT</a></li>
+<li><a data-ident="11.1.3.2" class="page-title" href="11.1.3.2/11.1.3.2.html" target="frame">11.1.3.2 Disadvantages of NAT</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">11.2 Configuring NAT</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">11.2.1 Configuring Static NAT</span><ul class="pages"><li><a data-ident="11.2.1.1" class="page-title" href="11.2.1.1/11.2.1.1.html" target="frame">11.2.1.1 Configuring Static NAT</a></li>
+<li><a data-ident="11.2.1.2" class="page-title" href="11.2.1.2/11.2.1.2.html" target="frame">11.2.1.2 Analyzing Static NAT</a></li>
+<li><a data-ident="11.2.1.3" class="page-title" href="11.2.1.3/11.2.1.3.html" target="frame">11.2.1.3 Verifying Static NAT</a></li>
+<li><a data-ident="11.2.1.4" class="page-title" href="11.2.1.4/11.2.1.4.html" target="frame">11.2.1.4 Packet Tracer - Configuring Static NAT</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.2.2 Configuring Dynamic NAT</span><ul class="pages"><li><a data-ident="11.2.2.1" class="page-title" href="11.2.2.1/11.2.2.1.html" target="frame">11.2.2.1 Dynamic NAT Operation</a></li>
+<li><a data-ident="11.2.2.2" class="page-title" href="11.2.2.2/11.2.2.2.html" target="frame">11.2.2.2 Configuring Dynamic NAT</a></li>
+<li><a data-ident="11.2.2.3" class="page-title" href="11.2.2.3/11.2.2.3.html" target="frame">11.2.2.3 Analyzing Dynamic NAT</a></li>
+<li><a data-ident="11.2.2.4" class="page-title" href="11.2.2.4/11.2.2.4.html" target="frame">11.2.2.4 Verifying Dynamic NAT</a></li>
+<li><a data-ident="11.2.2.5" class="page-title" href="11.2.2.5/11.2.2.5.html" target="frame">11.2.2.5 Packet Tracer - Configuring Dynamic NAT</a></li>
+<li><a data-ident="11.2.2.6" class="page-title" href="11.2.2.6/11.2.2.6.html" target="frame">11.2.2.6 Lab - Configuring Dynamic and Static NAT</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.2.3 Configuring Port Address Translation (PAT)</span><ul class="pages"><li><a data-ident="11.2.3.1" class="page-title" href="11.2.3.1/11.2.3.1.html" target="frame">11.2.3.1 Configuring PAT: Address Pool</a></li>
+<li><a data-ident="11.2.3.2" class="page-title" href="11.2.3.2/11.2.3.2.html" target="frame">11.2.3.2 Configuring PAT: Single Address</a></li>
+<li><a data-ident="11.2.3.3" class="page-title" href="11.2.3.3/11.2.3.3.html" target="frame">11.2.3.3 Analyzing PAT</a></li>
+<li><a data-ident="11.2.3.4" class="page-title" href="11.2.3.4/11.2.3.4.html" target="frame">11.2.3.4 Verifying PAT</a></li>
+<li><a data-ident="11.2.3.5" class="page-title" href="11.2.3.5/11.2.3.5.html" target="frame">11.2.3.5 Activity - Identify the Address Information at Each Hop</a></li>
+<li><a data-ident="11.2.3.6" class="page-title" href="11.2.3.6/11.2.3.6.html" target="frame">11.2.3.6 Packet Tracer - Implementing Static and Dynamic NAT</a></li>
+<li><a data-ident="11.2.3.7" class="page-title" href="11.2.3.7/11.2.3.7.html" target="frame">11.2.3.7 Lab - Configuring NAT Pool Overload and PAT</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.2.4 Port Forwarding</span><ul class="pages"><li><a data-ident="11.2.4.1" class="page-title" href="11.2.4.1/11.2.4.1.html" target="frame">11.2.4.1 Port Forwarding</a></li>
+<li><a data-ident="11.2.4.2" class="page-title" href="11.2.4.2/11.2.4.2.html" target="frame">11.2.4.2 SOHO Example </a></li>
+<li><a data-ident="11.2.4.3" class="page-title" href="11.2.4.3/11.2.4.3.html" target="frame">11.2.4.3 Configuring Port Forwarding with IOS</a></li>
+<li><a data-ident="11.2.4.4" class="page-title" href="11.2.4.4/11.2.4.4.html" target="frame">11.2.4.4 Packet Tracer - Configuring Port Forwarding on a Linksys Router</a></li>
+</ul></li>
+<li><span class="icon"></span><span class="topic-title">11.2.5 Configuring NAT and IPv6</span><ul class="pages"><li><a data-ident="11.2.5.1" class="page-title" href="11.2.5.1/11.2.5.1.html" target="frame">11.2.5.1 NAT for IPv6?</a></li>
+<li><a data-ident="11.2.5.2" class="page-title" href="11.2.5.2/11.2.5.2.html" target="frame">11.2.5.2 IPv6 Unique Local Addresses</a></li>
+<li><a data-ident="11.2.5.3" class="page-title" href="11.2.5.3/11.2.5.3.html" target="frame">11.2.5.3 NAT for IPv6</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">11.3 Troubleshooting NAT</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">11.3.1 Troubleshooting NAT</span><ul class="pages"><li><a data-ident="11.3.1.1" class="page-title" href="11.3.1.1/11.3.1.1.html" target="frame">11.3.1.1 Troubleshooting NAT: show commands</a></li>
+<li><a data-ident="11.3.1.2" class="page-title" href="11.3.1.2/11.3.1.2.html" target="frame">11.3.1.2 Troubleshooting NAT: debug command</a></li>
+<li><a data-ident="11.3.1.3" class="page-title" href="11.3.1.3/11.3.1.3.html" target="frame">11.3.1.3 Case Study</a></li>
+<li><a data-ident="11.3.1.4" class="page-title" href="11.3.1.4/11.3.1.4.html" target="frame">11.3.1.4 Packet Tracer - Verifying and Troubleshooting NAT Configurations</a></li>
+<li><a data-ident="11.3.1.5" class="page-title" href="11.3.1.5/11.3.1.5.html" target="frame">11.3.1.5 Lab - Troubleshooting NAT Configurations</a></li>
+</ul></li>
+</ul></li>
+<li><span class="icon"></span><span class="section-title">11.4 Summary</span><ul class="topics"><li><span class="icon"></span><span class="topic-title">11.4.1 Summary</span><ul class="pages"><li><a data-ident="11.4.1.1" class="page-title" href="11.4.1.1/11.4.1.1.html" target="frame">11.4.1.1 NAT Check</a></li>
+<li><a data-ident="11.4.1.2" class="page-title" href="11.4.1.2/11.4.1.2.html" target="frame">11.4.1.2 Packet Tracer - Skills Integration Challenge</a></li>
+<li><a data-ident="11.4.1.3" class="page-title" href="11.4.1.3/11.4.1.3.html" target="frame">11.4.1.3 Summary</a></li>
+</ul></li>
+</ul></li>
+</ul>
+    </div>
+    <ul id="nav-menu" class="contextmenu">
+      <li id="nav-menu-expand">Expand All</li>
+      <li id="nav-menu-collapse">Collapse All</li>
+    </ul>
+    <div id="content">
+      <div id="container"></div>
+      <button id="prev-btn" type="button" title="Previous" disabled><span class="icon">Previous</span></button>
+      <input id="jump-box" type="text" value=""/>
+      <button id="next-btn" type="button" title="Next" disabled><span class="icon">Next</span></button>
+      <button id="mini-btn" type="button" title="Toggle"><span class="icon">Toggle</span></button>
+    </div>
+  </body>
+</html>
+

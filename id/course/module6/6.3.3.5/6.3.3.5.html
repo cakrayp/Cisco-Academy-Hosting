@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.3.3.5 Contoh VLSM</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.3.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Review CIDR dan VLSM</h1>
+<h2>VLSM</h2>
+</div>
+<div id="content">
+<p>Pertimbangan yang cermat harus diberikan pada desain skema pengalamatan jaringan. Misalnya, contoh topologi pada Gambar 1 memerlukan tujuh subnet.</p>
+<p></p>
+<p>Dengan menggunakan subnet tradisional, tujuh blok alamat pertama dialokasikan untuk LAN dan WAN, seperti yang ditunjukkan pada Gambar 2. Skema ini menghasilkan 8 subnet dengan masing-masing 30 alamat yang dapat digunakan (/27). Meskipun skema ini berfungsi untuk segmen LAN, ada banyak alamat yang terbuang di segmen WAN.</p>
+<p></p>
+<p>Jika skema pengalamatan dirancang untuk jaringan baru, blok alamat dapat ditetapkan sedemikian rupa sehingga meminimalkan pemborosan dan menjaga blok alamat yang tidak terpakai tetap berdekatan. Akan lebih sulit melakukan hal ini ketika menambah jaringan yang sudah ada.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 3, untuk menggunakan ruang alamat secara lebih efisien, subnet /30 dibuat untuk tautan WAN. Untuk menyatukan blok-blok alamat yang tidak terpakai, subnet /27 terakhir disubnet lebih lanjut untuk membuat subnet /30. 3 subnet pertama ditetapkan ke tautan WAN yang membuat subnet 192.168.20.224/30, 192.168.20.228/30, dan 192.168.20.232/30. Merancang skema pengalamatan dengan cara ini menyisakan tiga subnet /27 yang tidak digunakan dan lima subnet /30 yang tidak digunakan.</p>
+<p></p>
+<p>Gambar 4 sampai 7 menampilkan contoh konfigurasi pada keempat router untuk mengimplementasikan skema pengalamatan VLSM.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

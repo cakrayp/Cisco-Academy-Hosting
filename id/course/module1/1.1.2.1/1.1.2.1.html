@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.1.2.1 Peran Jaringan Switched</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Desain LAN</h1>
+<h2>Jaringan Beralih</h2>
+</div>
+<div id="content">
+<p>Peran switch network telah berkembang secara dramatis dalam dua dekade terakhir. Belum lama berselang, jaringan switch Layer 2 datar menjadi hal yang biasa. Jaringan data Flat Layer 2 mengandalkan properti dasar Ethernet dan meluasnya penggunaan repeater hub untuk menyebarkan lalu lintas LAN ke seluruh organisasi. Seperti yang ditunjukkan pada Gambar 1, jaringan secara mendasar telah berubah menjadi LAN yang diaktifkan dalam jaringan hierarki. LAN yang diaktifkan memungkinkan lebih banyak fleksibilitas, manajemen lalu lintas, dan fitur tambahan, seperti:</p>
+<p>
+<ul>
+<li>Kualitas layanan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Keamanan tambahan</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Dukungan untuk jaringan nirkabel dan konektivitas</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Dukungan untuk teknologi baru, seperti telepon IP dan layanan mobilitas</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 2 menunjukkan desain hierarki yang digunakan dalam jaringan switch tanpa batas.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

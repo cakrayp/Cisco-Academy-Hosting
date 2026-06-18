@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+			<element type="ROUTER" textId="ID_s1_txt01" x="20" y="88" width="430" height="230"/>
+			<element type="TEXT" subType="TITLE" compId="ID_title" />
+			<element type="TEXT" compId="ID_txt01" width="104" x="28" y="243.8" align="center" expand="right" />
+			<element type="TEXT" compId="ID_txt02" width="104" x="28" y="291.8" align="center" expand="right" />	
+</slide>
+<text id="ID_s1_txt01"><![CDATA[
+<table border="0" cellpadding="0" cellspacing="0" width="412"> <tr> <td colspan="2">R1#<strong>tampilkan daftar akses</strong></td> </tr> <tr> <td colspan="2">Daftar akses IP yang diperluas PENELUSURAN</td> </tr> <tr> <td width="27"> </td> <td width="298">10 izin tcp apa pun 192.168.10.0 0.0.0.255 ditetapkan</td> </tr> <tr> <td colspan="2">Daftar akses IP yang diperluas SURFING</td> </tr> <tr> <td> </td> <td>10 izin tcp 192.168.10.0 0.0.0.255 apa saja persamaan www</td> </tr> <tr> <td> </td> <td>20 izin tcp 192.168.10.0 0.0.0.255 setiap persamaan 443</td> </tr> <tr> <td>R1#</td> <td> </td> </tr> <tr> <td colspan="2">R1#<strong>tampilkan antarmuka ip g0/0</strong></td> </tr> <tr> <td colspan="2">GigabitEthernet0/0 sudah habis, protokol jalur sudah habis</td> </tr> <tr> <td colspan="2"><span>Alamat internetnya adalah 192.168.10.1/24</span></td> </tr> <tr> <td colspan="2"> </td> </tr> <tr> <td bgcolor="#FACCA8" colspan="2"><span>Daftar akses keluar sedang MENJELAJAHI</span></td> </tr> <tr> <td bgcolor="#FACCA8" colspan="2"><span>Daftar akses masuk adalah SURFING</span></td> </tr> <tr> <td colspan="2"> </td> </tr></table>
+]]></text>
+</data>

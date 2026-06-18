@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.1.2.5 Masalah Lapisan Akses Jaringan</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.1.2.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Sakelar Dasar</h1>
+<h2>Konfigurasikan Port Sakelar</h2>
+</div>
+<div id="content">
+<p>Keluaran dari<span class="cmd"><b>tampilkan antarmuka</b></span>perintah dapat digunakan untuk mendeteksi masalah media umum. Salah satu bagian terpenting dari keluaran ini adalah tampilan status protokol jalur dan data link. Gambar 1 menunjukkan baris ringkasan untuk memeriksa status antarmuka.</p>
+<p></p>
+<p>Parameter pertama (FastEthernet0/1 aktif) mengacu pada lapisan perangkat keras dan, pada dasarnya, mencerminkan apakah antarmuka menerima sinyal deteksi pembawa dari ujung yang lain. Parameter kedua (protokol jalur aktif) mengacu pada lapisan data link dan mencerminkan apakah protokol lapisan data link tetap diterima.</p>
+<p></p>
+<p>Berdasarkan keluaran dari<span class="cmd"><b>tampilkan antarmuka</b></span>perintah, kemungkinan masalah dapat diperbaiki sebagai berikut:</p>
+<p></p>
+<p>
+<ul>
+<li>Jika antarmuka aktif dan protokol jalur tidak aktif, maka ada masalah. Mungkin ada ketidakcocokan jenis enkapsulasi, antarmuka di sisi lain mungkin dinonaktifkan karena kesalahan, atau mungkin ada masalah perangkat keras.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika protokol saluran dan antarmuka keduanya tidak berfungsi, kabel tidak terpasang atau ada masalah antarmuka lainnya. Misalnya, dalam sambungan back-to-back, ujung sambungan yang lain mungkin tidak aktif secara administratif.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jika antarmuka secara administratif tidak aktif, maka antarmuka tersebut telah dinonaktifkan secara manual (file<span class="cmd"><b>penutupan</b></span>perintah telah dikeluarkan) dalam konfigurasi aktif.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar 2 menunjukkan contoh<span class="cmd"><b>tampilkan antarmuka</b></span>keluaran perintah. Contoh ini menunjukkan penghitung dan statistik untuk antarmuka FastEthernet0/1.</p>
+<p></p>
+<p>Beberapa kesalahan media tidak cukup parah sehingga menyebabkan kegagalan sirkuit, namun menyebabkan masalah kinerja jaringan. Gambar 3 menjelaskan beberapa kesalahan umum yang dapat dideteksi dengan menggunakan<span class="cmd"><b>tampilkan antarmuka</b></span>memerintah.</p>
+<p></p>
+<p>“Kesalahan input” adalah jumlah seluruh kesalahan dalam datagram yang diterima pada antarmuka yang sedang diperiksa. Ini termasuk jumlah kerdil, raksasa, CRC, tanpa buffer, frame, overrun, dan diabaikan. Kesalahan input yang dilaporkan dari<span class="cmd"><b>tampilkan antarmuka</b></span>perintahnya antara lain sebagai berikut:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Bingkai Kerdil</b>- Frame Ethernet yang lebih pendek dari panjang minimum yang diizinkan 64 byte disebut kerdil. NIC yang tidak berfungsi adalah penyebab umum dari frame kerdil yang berlebihan, namun bisa juga disebabkan oleh masalah yang sama seperti tabrakan yang berlebihan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Raksasa</b>- Frame Ethernet yang lebih panjang dari panjang maksimum yang diperbolehkan disebut raksasa. Raksasa disebabkan oleh masalah yang sama dengan masalah yang menyebabkan kekerdilan.</li>
+</ul>
+</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>kesalahan CRC</b>- Pada antarmuka Ethernet dan serial, kesalahan CRC biasanya menunjukkan kesalahan media atau kabel. Penyebab umumnya termasuk gangguan listrik, sambungan longgar atau rusak, atau penggunaan jenis kabel yang salah. Jika Anda melihat banyak kesalahan CRC, berarti ada terlalu banyak noise pada tautan dan Anda harus memeriksa kabel dari kerusakan dan panjangnya. Anda juga harus mencari dan menghilangkan sumber kebisingan, jika memungkinkan.</li>
+</ul>
+</p>
+<p></p>
+<p></p>
+<p>“Kesalahan keluaran” adalah jumlah seluruh kesalahan yang menghalangi transmisi akhir datagram keluar dari antarmuka yang sedang diperiksa. Kesalahan keluaran yang dilaporkan dari<span class="cmd"><b>tampilkan antarmuka</b></span>perintahnya antara lain sebagai berikut:</p>
+<p></p>
+<p>
+<ul>
+<li>
+<b>Tabrakan</b>- Tabrakan dalam operasi setengah dupleks sepenuhnya normal dan Anda tidak perlu mengkhawatirkannya, selama Anda puas dengan operasi setengah dupleks. Namun, Anda tidak akan pernah melihat tabrakan dalam jaringan yang dirancang dan dikonfigurasi dengan benar yang menggunakan komunikasi dupleks penuh. Sangat disarankan agar Anda menggunakan dupleks penuh kecuali Anda memiliki peralatan lama atau lama yang memerlukan setengah dupleks.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Tabrakan terlambat</b>- Tabrakan terlambat mengacu pada tumbukan yang terjadi setelah 512 bit frame (pembukaan) dikirimkan. Panjang kabel yang berlebihan adalah penyebab paling umum dari tabrakan yang terlambat. Penyebab umum lainnya adalah kesalahan konfigurasi dupleks. Misalnya, Anda dapat mengkonfigurasi salah satu ujung koneksi untuk dupleks penuh dan ujung lainnya untuk setengah dupleks. Anda akan melihat tabrakan terlambat pada antarmuka yang dikonfigurasi untuk setengah dupleks. Dalam hal ini, Anda harus mengonfigurasi pengaturan dupleks yang sama di kedua ujungnya. Jaringan yang dirancang dan dikonfigurasi dengan benar tidak boleh mengalami tabrakan yang terlambat.</li>
+</ul>
+</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Aktivitas – Identifikasi Serangan Keamanan Umum</b><br/><br/>Cocokkan nama serangan keamanan umum dengan deskripsinya.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Memungkinkan penyerang melihat alamat IP di sekitarnya, versi perangkat lunak, dan informasi VLAN asli untuk melakukan serangan DoS.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Membanjiri server DHCP dengan permintaan DHCP untuk menggunakan semua alamat yang tersedia – menyimulasikan serangan DoS pada switch.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Menggunakan “kamus” untuk menemukan kata sandi umum – mencoba memulai sesi Telnet menggunakan apa yang disarankan oleh “kamus” untuk kata sandi tersebut.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Menggunakan alamat MAC palsu untuk meluapkan tabel alamat MAC.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Memungkinkan penyerang mengkonfigurasi server DHCP palsu di jaringan untuk mengeluarkan alamat DHCP ke klien.]]></text>
+</component>
+
+   <component id="ID_txt06">
+   <text><![CDATA[<b>Jenis Serangan Keamanan</b>]]></text>
+   </component>
+
+<component id="ID_txt07">
+   <text><![CDATA[<b>Deskripsi Serangan Keamanan Umum</b>]]></text>
+   </component>
+
+
+
+
+<!--Drag and Drop-->
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">MAC flooding</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">DHCP snooping</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">CDP</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">DHCP starvation</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Brute force</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil mencocokkan setiap deskripsi umum serangan keamanan dengan jenisnya.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil mencocokkan setiap deskripsi umum serangan keamanan dengan jenisnya. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

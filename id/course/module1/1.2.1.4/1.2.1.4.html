@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>1.2.1.4 Peralihan Simpan-dan-Maju</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_1.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Lingkungan yang Beralih</h1>
+<h2>Penerusan Bingkai</h2>
+</div>
+<div id="content">
+<p>Peralihan store-and-forward memiliki dua karakteristik utama yang membedakannya dari cut-through: pengecekan kesalahan dan buffering otomatis.</p>
+<p></p>
+<p>
+<b>Pemeriksaan Kesalahan</b>
+</p>
+<p></p>
+<p>Sakelar yang menggunakan peralihan simpan-dan-maju melakukan pemeriksaan kesalahan pada bingkai yang masuk. Setelah menerima seluruh frame pada port ingress, seperti yang ditunjukkan pada gambar, switch membandingkan nilai frame-check-sequence (FCS) di bidang terakhir datagram dengan perhitungan FCS-nya sendiri. FCS adalah proses pengecekan kesalahan yang membantu memastikan bahwa frame bebas dari kesalahan fisik dan data-link. Jika frame bebas dari kesalahan, saklar meneruskan frame. Jika tidak, bingkai akan terjatuh.</p>
+<p></p>
+<p>
+<b>Penyangga Otomatis</b>
+</p>
+<p></p>
+<p>Proses buffering port ingress yang digunakan oleh switch store-and-forward memberikan fleksibilitas untuk mendukung campuran kecepatan Ethernet apa pun. Misalnya, menangani frame masuk yang masuk ke port Ethernet 100 Mb/s yang harus dikirim keluar antarmuka 1 Gb/s akan memerlukan penggunaan metode simpan dan teruskan. Jika ada ketidakcocokan kecepatan antara port masuk dan keluar, switch menyimpan seluruh frame dalam buffer, menghitung pemeriksaan FCS, meneruskannya ke buffer port keluar dan kemudian mengirimkannya.</p>
+<p></p>
+<p>Peralihan store-and-forward adalah metode peralihan LAN utama Cisco.</p>
+<p></p>
+<p>Sakelar simpan-dan-maju menjatuhkan frame yang tidak lolos pemeriksaan FCS, oleh karena itu tidak meneruskan frame yang tidak valid. Sebaliknya, saklar potong dapat meneruskan frame yang tidak valid karena tidak ada pemeriksaan FCS yang dilakukan.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

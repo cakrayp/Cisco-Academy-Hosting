@@ -1,0 +1,101 @@
+<textcomponents>
+<!--  Slide 1  -->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Console Connection Requirements</b>]]></text>
+</component>
+
+<component id="ID_s1_header1">
+  <text><![CDATA[<b>Port on Computer</b>]]></text> 
+</component>
+<component id="ID_s1_header2">
+  <text><![CDATA[<b>Cable Required</b>]]></text> 
+</component>
+<component id="ID_s1_header3">
+  <text><![CDATA[<b>Port on ISR</b>]]></text> 
+</component>
+<component id="ID_s1_header4">
+  <text><![CDATA[<b>Terminal Emulation</b>]]></text> 
+</component>
+
+
+<component id="ID_s1_txt01">
+  <text><![CDATA[Serial Port]]></text> 
+  </component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[USB<br>Type-A Port]]></text> 
+  </component>
+<component id="ID_s1_txt03">
+  <text><![CDATA[<textformat blockindent="-14">RJ-45-to-DB-9 Console Cable</textformat>]]></text> 
+</component>
+<component id="ID_s1_txt04">
+  <text><![CDATA[<ul><textformat blockindent="-14"><li>USB-to-RS-232 compatible serial port adapter</li></textformat><br><textformat blockindent="-14"><li>Adapter may require a software driver</li></textformat><br><textformat blockindent="-14"><li>RJ-45-to-DB-9 console cable</li></textformat></ul>]]></text> 
+</component>
+<component id="ID_s1_txt05">
+  <text><![CDATA[<ul><textformat blockindent="-14"><li>USB Type-A to USB Type-B (Mini-B USB)</li></textformat><br><textformat blockindent="-14"><li>A device driver is required and available from cisco.com.</li></textformat></ul>]]></text> 
+</component>
+<component id="ID_s1_txt06">
+  <text><![CDATA[RJ-45 Console Port]]></text> 
+</component>
+<component id="ID_s1_txt07">
+  <text><![CDATA[USB Type-B<br>(Mini-B USB)]]></text> 
+</component>
+<component id="ID_s1_txt08">
+  <text><![CDATA[Tera Term]]></text> 
+</component>
+<component id="ID_s1_txt09">
+  <text><![CDATA[PuTTY]]></text> 
+</component>
+
+
+
+<!--  Slide 2  -->
+<component id="ID_s2_title">
+<text><![CDATA[<b>Ports and Cables</b>]]></text>
+</component>
+
+<component id="ID_s2_header1">
+  <text><![CDATA[<b>Port on Computer</b>]]></text> 
+</component>
+<component id="ID_s2_header2">
+  <text><![CDATA[<b>Cable Required</b>]]></text> 
+</component>
+<component id="ID_s2_header3">
+  <text><![CDATA[<b>Port on ISR</b>]]></text> 
+</component>
+<component id="ID_s2_header4">
+  <text><![CDATA[<b>Terminal Emulation</b>]]></text> 
+</component>
+
+
+<component id="ID_s2_txt01">
+  <text><![CDATA[Serial Port]]></text> 
+  </component>
+<component id="ID_s2_txt02">
+  <text><![CDATA[USB<br>Type-A Port]]></text> 
+  </component>
+<component id="ID_s2_txt03">
+  <text><![CDATA[Console Cable]]></text> 
+</component>
+<component id="ID_s2_txt04">
+  <text><![CDATA[USB-to-RS-232<br>Serial Port Adapter]]></text> 
+</component>
+<component id="ID_s2_txt04A">
+  <text><![CDATA[Console Cable]]></text> 
+</component>
+<component id="ID_s2_txt05">
+  <text><![CDATA[USB Type-A to USB Type-B<br>(Mini-B) Cable]]></text> 
+</component>
+<component id="ID_s2_txt06">
+  <text><![CDATA[RJ-45 Console Port]]></text> 
+</component>
+<component id="ID_s2_txt07">
+  <text><![CDATA[USB Type-B<br>(Mini-B USB) Console Port]]></text> 
+</component>
+<component id="ID_s2_txt08">
+  <text><![CDATA[Tera Term]]></text> 
+</component>
+<component id="ID_s2_txt09">
+  <text><![CDATA[PuTTY]]></text> 
+</component>
+
+</textcomponents>

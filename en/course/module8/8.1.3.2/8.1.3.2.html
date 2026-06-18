@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>8.1.3.2 Establish Neighbor Adjacencies</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.1.3.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Characteristics of OSPF</h1>
+        <h2>OSPF Operation</h2>
+      </div>
+      <div id="content">
+          <p>When OSPF is enabled on an interface, the router must determine if there is another OSPF neighbor on the link. To accomplish this, the router forwards a Hello packet that contains its router ID out all OSPF-enabled interfaces. The OSPF router ID is used by the OSPF process to uniquely identify each router in the OSPF area. A router ID is an IP address assigned to identify a specific router among OSPF peers. </p>
+          <p></p>
+          <p>When a neighboring OSPF-enabled router receives a Hello packet with a router ID that is not within its neighbor list, the receiving router attempts to establish an adjacency with the initiating router. </p>
+          <p></p>
+          <p>Refer to R1 in Figure 1. When OSPF is enabled, the enabled Gigabit Ethernet 0/0 interface transitions from the Down state to the Init state. R1 starts sending Hello packets out all OSPF-enabled interfaces to discover OSPF neighbors to develop adjacencies with. </p>
+          <p></p>
+          <p>In Figure 2, R2 receives the Hello packet from R1 and adds the R1 router ID to its neighbor list. R2 then sends a Hello packet to R1. The packet contains the R2 Router ID and the R1 Router ID in its list of neighbors on the same interface.</p>
+          <p></p>
+          <p>In Figure 3, R1 receives the Hello and adds the R2 Router ID in its list of OSPF neighbors. It also notices its own Router ID in the Hello packet’s list of neighbors. When a router receives a Hello packet with its Router ID listed in the list of neighbors, the router transitions from the Init state to the Two-Way state. </p>
+          <p></p>
+          <p>The action performed in Two-Way state depends on the type of inter-connection between the adjacent routers:</p>
+          <p>
+            <ul>
+              <li>If the two adjacent neighbors are interconnected over a point-to-point link, then they immediately transition from the Two-Way state to the database synchronization phase.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>If the routers are interconnected over a common Ethernet network, then a designated router DR and a BDR must be elected.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Because R1 and R2 are interconnected over an Ethernet network, a DR and BDR election takes place. As shown in Figure 4, R2 becomes the DR and R1 is the BDR. This process only occurs on multi-access networks such as Ethernet LANs.</p>
+          <p></p>
+          <p>Hello packets are continually exchanged to maintain router information.</p>
+          <p></p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

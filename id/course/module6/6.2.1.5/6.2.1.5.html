@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.1.5 Konfigurasikan Rute Statis yang Ditentukan Sepenuhnya</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Statis IPv4</h2>
+</div>
+<div id="content">
+<p>
+<b>Rute Statis yang Ditentukan Sepenuhnya</b>
+</p>
+<p>Dalam rute statis yang ditentukan sepenuhnya, antarmuka keluaran dan alamat IP hop berikutnya ditentukan. Ini adalah jenis rute statis lain yang digunakan di IOS lama, sebelum CEF. Bentuk rute statis ini digunakan ketika antarmuka keluaran adalah antarmuka multi-akses dan perlu untuk mengidentifikasi hop berikutnya secara eksplisit. Hop berikutnya harus terhubung langsung ke antarmuka keluar yang ditentukan.</p>
+<p></p>
+<p>Misalkan link jaringan antara R1 dan R2 adalah link Ethernet dan antarmuka GigabitEthernet 0/1 dari R1 terhubung ke jaringan tersebut, seperti yang ditunjukkan pada Gambar 1. CEF tidak diaktifkan. Untuk menghilangkan pencarian rekursif, rute statis yang terhubung langsung dapat diimplementasikan menggunakan perintah berikut:</p>
+<p></p>
+<p>
+<span class="cmd">R1(konfigurasi)#</span>
+<span class="cmd">
+<b>rute ip 192.168.2.0 255.255.255.0 GigabitEthernet 0/1</b>
+</span>
+</p>
+<p></p>
+<p>Namun, hal ini dapat menyebabkan hasil yang tidak diharapkan atau tidak konsisten. Perbedaan antara jaringan multi-akses Ethernet dan jaringan serial point-to-point adalah jaringan point-to-point hanya memiliki satu perangkat lain di jaringan itu, yaitu router di ujung lain link. Dengan jaringan Ethernet, mungkin terdapat banyak perangkat berbeda yang berbagi jaringan multi-akses yang sama, termasuk host dan bahkan beberapa router. Dengan hanya menunjuk antarmuka keluar Ethernet dalam rute statis, router tidak akan memiliki informasi yang cukup untuk menentukan perangkat mana yang merupakan perangkat hop berikutnya.</p>
+<p></p>
+<p>R1 mengetahui bahwa paket tersebut perlu dienkapsulasi dalam bingkai Ethernet dan dikirim melalui antarmuka GigabitEthernet 0/1. Namun, R1 tidak mengetahui alamat IPv4 hop berikutnya dan oleh karena itu R1 tidak dapat menentukan alamat MAC tujuan untuk frame Ethernet.</p>
+<p></p>
+<p>Tergantung pada topologi dan konfigurasi pada router lain, rute statis ini mungkin berfungsi atau tidak. Direkomendasikan bahwa ketika antarmuka keluar adalah jaringan Ethernet, rute statis yang ditentukan sepenuhnya digunakan termasuk antarmuka keluar dan alamat hop berikutnya.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 2, saat meneruskan paket ke R2, antarmuka keluarnya adalah GigabitEthernet 0/1 dan alamat IPv4 hop berikutnya adalah 172.16.2.2.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Dengan penggunaan CEF, rute statis yang ditentukan sepenuhnya tidak lagi diperlukan. Rute statis yang menggunakan alamat hop berikutnya harus digunakan.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 dan 4 untuk mengonfigurasi dan memverifikasi rute statis yang ditentukan sepenuhnya pada R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

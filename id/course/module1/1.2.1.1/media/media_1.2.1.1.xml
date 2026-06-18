@@ -1,0 +1,97 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Saklar LAN</b>]]></text>
+</component>
+
+
+<component id="ID_txt01">
+   <text><![CDATA[<b>Tabel Pelabuhan</b>]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>Alamat Tujuan</b>]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>Pelabuhan</b>]]></text>
+   </component>
+   
+<component id="ID_bubble01">
+   <text><![CDATA[Alamat Tujuan:<b>EA</b>]]></text>
+   </component>    
+<component id="ID_bubble02">
+   <text><![CDATA[Alamat Tujuan:<b>EE</b>]]></text>
+   </component>    
+<component id="ID_bubble03">
+   <text><![CDATA[Alamat Tujuan:<b>AB</b>]]></text>
+   </component>      
+   
+<component id="ID_table">
+   <text><![CDATA[<table bordercolor="#98D3D1" borderwidth="3" cellpadding="4" glow="true" glowcolor="#808080" header="none" shadow="false" shadowcolor="#000000">
+<tr>
+<td bgcolor="#98D3D1" class="mtitle" colspan="2"><font color="#1C3635" size="11"><b>Tabel Pelabuhan</b></font></td>
+</tr>
+<tr class="mtable_top">
+<td bgcolor="#0E6360" class="mtable_top" colspan="2"><font color="#434321" size="1"><span style="color:#DAE17A">.</span></font></td>
+</tr>
+<tr>
+<td bgcolor="#077A77" class="width"><font color="#FFFFFF"><b>Alamat Tujuan</b></font></td>
+<td bgcolor="#077A77"><font color="#FFFFFF"><b>Pelabuhan</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">EE</td>
+<td bgcolor="#EFF8F7">1</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">AA</td>
+<td bgcolor="#FFFFFF">2</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">BA</td>
+<td bgcolor="#EFF8F7">3</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">EA</td>
+<td bgcolor="#FFFFFF">4</td>
+</tr>
+<tr>
+<td bgcolor="#EFF8F7">AC</td>
+<td bgcolor="#EFF8F7">5</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF">AB</td>
+<td bgcolor="#FFFFFF">6</td>
+</tr>
+</table>]]></text>
+   </component>
+
+<!-- controller -->
+
+<component id="end">
+<text><![CDATA[Akhir]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Maju Cepat]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Berhenti sebentar]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Bermain]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Memutar ulang]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Awal]]></text>
+</component>
+
+<component id="transcript">
+<text><![CDATA[Salinan]]></text>
+</component>   
+   
+   
+</textcomponents>

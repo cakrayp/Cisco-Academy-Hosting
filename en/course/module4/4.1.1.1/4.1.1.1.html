@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>4.1.1.1 Characteristics of a Network</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.1.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Initial Configuration of a Router</h1>
+        <h2>Functions of a Router</h2>
+      </div>
+      <div id="content">
+          <p>Networks have had a significant impact on our lives. They have changed the way we live, work, and play. </p>
+          <p></p>
+          <p>Networks allow us to communicate, collaborate, and interact in ways we never did before. We use the network in a variety of ways, including web applications, IP telephony, video conferencing, interactive gaming, electronic commerce, education, and more. </p>
+          <p></p>
+          <p>As shown in the figure, there are many key structures and performance-related characteristics referred to when discussing networks:</p>
+          <p>
+            <ul>
+              <li>
+                <b>Topology </b>- There are physical and logical topologies. The physical topology is the arrangement of the cables, network devices, and end systems. It describes how the network devices are actually interconnected with wires and cables. The logical topology is the path over which the data is transferred in a network. It describes how the network devices appear connected to network users.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Speed </b>- Speed is a measure of the data rate in bits per second (b/s) of a given link in the network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Cost </b>- Cost indicates the general expense for purchasing of network components, and installation and maintenance of the network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Security </b>- Security indicates how protected the network is, including the information that is transmitted over the network. The subject of security is important, and techniques and practices are constantly evolving. Consider security whenever actions are taken that affect the network.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Availability </b>- Availability is a measure of the probability that the network is available for use when it is required. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Scalability </b>- Scalability indicates how easily the network can accommodate more users and data transmission requirements. If a network design is optimized to only meet current requirements, it can be very difficult and expensive to meet new needs when the network grows.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Reliability </b>- Reliability indicates the dependability of the components that make up the network, such as the routers, switches, PCs, and servers. Reliability is often measured as a probability of failure or as the mean time between failures (MTBF).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>These characteristics and attributes provide a means to compare different networking solutions. </p>
+          <p></p>
+          <p>
+            <b>Note</b>: While the term “speed” is commonly used when referring to the network bandwidth, it is not technically accurate. The actual speed that the bits are transmitted does not vary over the same medium. The difference in bandwidth is due to the number of bits transmitted per second, not how fast they travel over wire or wireless medium.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

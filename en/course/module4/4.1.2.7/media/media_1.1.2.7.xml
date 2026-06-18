@@ -1,0 +1,45 @@
+﻿<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Configure the Switch Management Interface</b>]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[Reset]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Show Me]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Show All]]></text>
+	</component>
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Configure the Management SVI on S2</b>]]></text>
+	</component>
+		
+	<component id="ID_SC" fontFace='Courier New' fontSize="10" class="font9px">
+		<text></text>
+		<feedback id="fb"><![CDATA[<b><font size = '10' face="Arial" color="#0000FF" class="font9px">***You must enter the exact and full command. Commands that include a name or password are case-sensitive.***</font></b>
+		]]></feedback>
+		<existingcommands><![CDATA[<font size = '10' face="Arial" class="font9px"><b>Configure the VLAN 1 interface on S2 using the second available address in the network. Be sure to activate the interface.</b></font>]]></existingcommands>
+		<command prompt="S2(config)# " class="commandfont">
+		    <correctresponse><![CDATA[interface vlan 1]]></correctresponse>
+		</command>
+		<command prompt="S2(config-if)# " class="commandfont">
+		    <correctresponse><![CDATA[ip address 192.168.11.2 255.255.255.0]]></correctresponse>
+		</command>
+		<command prompt="S2(config-if)# " class="commandfont">
+		    <correctresponse><![CDATA[no shutdown]]></correctresponse>
+			<deviceresponse><![CDATA[%LINK-5-CHANGED: Interface Vlan1, changed state to up]]></deviceresponse>
+			<instruction><![CDATA[<font size = '10' face="Arial" class="font9px"><b>Exit interface configuration mode.</b></font>]]></instruction>
+		</command>
+		<command prompt="S2(config-if)# " class="commandfont">
+		    <correctresponse><![CDATA[exit]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="Arial" class="font9px"><b>Configure the default gateway for S2.</b></font>]]></instruction>
+		</command>
+		<command prompt="S2(config)# " class="commandfont">
+		    <correctresponse><![CDATA[ip default-gateway 192.168.11.1]]></correctresponse>
+			<instruction><![CDATA[<font size = '10' face="Arial" class="syntaxBottomLine"><b>You successfully configured the Management SVI on S2.</b></font>]]></instruction>
+		</command>
+		<command prompt=""/>
+	</component>
+
+</textcomponents>

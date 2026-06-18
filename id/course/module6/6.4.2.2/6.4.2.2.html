@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.4.2.2 Menghitung Alamat Jaringan IPv6</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Ringkasan dan Rute Statis Mengambang</h1>
+<h2>Konfigurasikan Rute Ringkasan IPv6</h2>
+</div>
+<div id="content">
+<p>Meringkas jaringan IPv6 menjadi satu awalan IPv6 dan panjang awalan dapat dilakukan dalam tujuh langkah seperti yang ditunjukkan pada Gambar 1 hingga 7:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Buat daftar alamat jaringan (awalan) dan identifikasi bagian di mana alamatnya berbeda.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Perluas IPv6 jika disingkat.</p>
+<p></p>
+<p>
+<b>Langkah 3.</b>Konversikan bagian yang berbeda dari hex ke biner.</p>
+<p></p>
+<p>
+<b>Langkah 4.</b>Hitung jumlah bit paling kiri yang cocok untuk menentukan panjang awalan untuk rute ringkasan.</p>
+<p></p>
+<p>
+<b>Langkah 5.</b>Salin bit yang cocok lalu tambahkan bit nol untuk menentukan alamat jaringan yang diringkas (awalan).</p>
+<p></p>
+<p>
+<b>Langkah 6.</b>Ubah bagian biner kembali menjadi hex.</p>
+<p></p>
+<p>
+<b>Langkah 7.</b>Tambahkan awalan rute ringkasan (hasil dari Langkah 4).</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

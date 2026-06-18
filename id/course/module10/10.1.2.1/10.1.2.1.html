@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.2.1 Mengonfigurasi Server DHCPv4 Dasar</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.2.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Mengonfigurasi Server DHCPv4 Dasar</h2>
+</div>
+<div id="content">
+<p>Router Cisco yang menjalankan perangkat lunak Cisco IOS dapat dikonfigurasi untuk bertindak sebagai server DHCPv4. Server Cisco IOS DHCPv4 menetapkan dan mengelola alamat IPv4 dari kumpulan alamat tertentu dalam router ke klien DHCPv4. Topologi yang ditunjukkan pada Gambar 1 digunakan untuk mengilustrasikan fungsi ini.</p>
+<p></p>
+<p>
+<b>Langkah 1. Tidak termasuk Alamat IPv4</b>
+</p>
+<p></p>
+<p>Router yang berfungsi sebagai server DHCPv4 menetapkan semua alamat IPv4 di kumpulan alamat DHCPv4 kecuali dikonfigurasi untuk mengecualikan alamat tertentu. Biasanya, beberapa alamat IPv4 dalam kumpulan ditetapkan ke perangkat jaringan yang memerlukan penetapan alamat statis. Oleh karena itu, alamat IPv4 ini tidak boleh ditetapkan ke perangkat lain. Untuk mengecualikan alamat tertentu, gunakan<span class="cmd"><b>ip dhcp alamat yang dikecualikan</b></span>perintah seperti yang ditunjukkan pada Gambar 2.</p>
+<p></p>
+<p>Sebuah alamat tunggal atau serangkaian alamat dapat dikecualikan dengan menentukan alamat rendah dan alamat tinggi dari rentang tersebut. Alamat yang dikecualikan harus mencakup alamat yang ditetapkan ke router, server, printer, dan perangkat lain yang telah dikonfigurasi secara manual.</p>
+<p></p>
+<p>
+<b>Langkah 2. Mengonfigurasi Kumpulan DHCPv4</b>
+</p>
+<p></p>
+<p>Mengonfigurasi server DHCPv4 melibatkan penentuan kumpulan alamat yang akan ditetapkan. Seperti yang ditunjukkan pada Gambar 3,<span class="cmd"><b>ip dhcp pool</b></span><span class="cmd"><i>nama kolam</i></span>perintah membuat kumpulan dengan nama yang ditentukan dan menempatkan router dalam mode konfigurasi DHCPv4, yang diidentifikasi oleh prompt ini<span class="cmd">Router(dhcp-config)#</span>.</p>
+<p></p>
+<p>
+<b>Langkah 3. Mengonfigurasi Tugas Tertentu</b>
+</p>
+<p></p>
+<p>Gambar 4 mencantumkan tugas untuk menyelesaikan konfigurasi kumpulan DHCPv4. Beberapa di antaranya bersifat opsional, sementara yang lainnya harus dikonfigurasi.</p>
+<p></p>
+<p>Kumpulan alamat dan router gateway default harus dikonfigurasi. Gunakan<span class="cmd"><b>jaringan</b></span>pernyataan untuk menentukan kisaran alamat yang tersedia.</p>
+<p>Gunakan<span class="cmd"><b>router default</b></span>perintah untuk menentukan router gateway default. Biasanya, gateway adalah antarmuka LAN dari router yang paling dekat dengan perangkat klien. Diperlukan satu gateway, namun Anda dapat mencantumkan hingga delapan alamat jika terdapat beberapa gateway.</p>
+<p></p>
+<p>Perintah kumpulan DHCPv4 lainnya bersifat opsional. Misalnya, alamat IPv4 server DNS yang tersedia untuk klien DHCPv4 dikonfigurasi menggunakan<span class="cmd"><b>server dns</b></span>memerintah. Itu<span class="cmd"><b>nama domain</b></span><span class="cmd"><i>domain</i></span>perintah digunakan untuk mendefinisikan nama domain. Durasi sewa DHCPv4 dapat diubah menggunakan<span class="cmd"><b>sewa</b></span>memerintah. Nilai sewa default adalah satu hari. Itu<span class="cmd"><b>netbios-nama-server</b></span>perintah digunakan untuk mendefinisikan server NetBIOS WINS.</p>
+<p></p>
+<p>
+<b>Contoh DHCPv4</b>
+</p>
+<p></p>
+<p>Contoh konfigurasi dengan parameter dasar DHCPv4 yang dikonfigurasi pada router R1, server DHCPv4 untuk LAN 192.168.10.0/24 ditunjukkan pada Gambar 5 menggunakan contoh topologi dari Gambar 1.</p>
+<p></p>
+<p>
+<b>Menonaktifkan DHCPv4</b>
+</p>
+<p></p>
+<p>Layanan DHCPv4 diaktifkan, secara default, pada versi perangkat lunak Cisco IOS yang mendukungnya. Untuk menonaktifkan layanan, gunakan<span class="cmd"><b>tidak ada layanan dhcp</b></span>perintah mode konfigurasi global. Gunakan<span class="cmd"><b>layanan dhcp</b></span>perintah mode konfigurasi global untuk mengaktifkan kembali proses server DHCPv4. Mengaktifkan layanan tidak berpengaruh jika parameter tidak dikonfigurasi.</p>
+<p></p>
+<p>Menggunakan aktivitas Pemeriksa Sintaks pada Gambar 6 untuk mengonfigurasi parameter DHCPv4 serupa di R1 untuk LAN 192.168.11.0/24.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Skenario Perutean Statis</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Router R2 terhubung ke jaringan lain dan ke Internet. Ini juga satu-satunya jalan keluarku dari sini. I just use a default static route to reach any network I do not know about.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Router R1 hanya memiliki dua jaringan yang perlu saya ketahui jadi saya hanya menggunakan dua rute statis untuk menjangkau jaringan tersebut.]]></text> 
+</component>
+</textcomponents>

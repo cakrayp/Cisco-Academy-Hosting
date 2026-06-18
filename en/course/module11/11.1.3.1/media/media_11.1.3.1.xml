@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b></b>]]></text>
+</component>
+<component id="ID_title_txt">
+  <text><![CDATA[<b>Advantages of NAT</b>]]></text> 
+  </component>
+<component id="ID_body_txt">
+  <text><![CDATA[<textformat blockindent='-14'><ul><li>Conserves the legally registered addressing scheme</li><li>Increases the flexibility of connections to the public network</li><li>Provides consistency for internal network addressing schemes</li><li>Provides network security</li></ul></textformat>]]></text>
+</component>
+
+</textcomponents>

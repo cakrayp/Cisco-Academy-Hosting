@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>10.1.1.2 Operasi DHCPv4</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Protokol Konfigurasi Host Dinamis v4</h1>
+<h2>Operasi DHCPv4</h2>
+</div>
+<div id="content">
+<p>Seperti yang ditunjukkan pada Gambar 1, DHCPv4 bekerja dalam mode klien/server. Ketika klien berkomunikasi dengan server DHCPv4, server memberikan atau menyewakan alamat IPv4 kepada klien tersebut. Klien terhubung ke jaringan dengan alamat IP yang disewakan hingga masa sewa berakhir. Klien harus menghubungi server DHCP secara berkala untuk memperpanjang sewa. Mekanisme sewa ini memastikan bahwa klien yang berpindah atau mematikan tidak menyimpan alamat yang tidak lagi mereka perlukan. Ketika masa sewa berakhir, server DHCP mengembalikan alamat ke kumpulan di mana alamat tersebut dapat dialokasikan kembali sesuai kebutuhan.</p>
+<p></p>
+<p>
+<b>Asal Sewa</b>
+</p>
+<p></p>
+<p>Ketika klien melakukan booting (atau ingin bergabung dengan jaringan), ia memulai proses empat langkah untuk mendapatkan sewa. Seperti yang ditunjukkan pada Gambar 2, klien memulai proses dengan pesan DHCPDISCOVER siaran dengan alamat MAC-nya sendiri untuk menemukan server DHCPv4 yang tersedia.</p>
+<p></p>
+<p>
+<b>Penemuan DHCP (DHCPDISCOVER)</b>
+</p>
+<p>Pesan DHCPDISCOVER menemukan server DHCPv4 di jaringan. Karena klien tidak memiliki informasi IPv4 yang valid saat boot, klien menggunakan alamat siaran Layer 2 dan Layer 3 untuk berkomunikasi dengan server.</p>
+<p></p>
+<p>
+<b>Penawaran DHCP (DHCPOFFER)</b>
+</p>
+<p>Ketika server DHCPv4 menerima pesan DHCPDISCOVER, server tersebut mencadangkan alamat IPv4 yang tersedia untuk disewakan kepada klien. Server juga membuat entri ARP yang terdiri dari alamat MAC klien yang meminta dan alamat IPv4 yang disewa dari klien. Seperti yang ditunjukkan pada Gambar 3, server DHCPv4 mengirimkan pesan DHCPOFFER yang mengikat ke klien yang meminta. Pesan DHCPOFFER dikirim sebagai unicast, menggunakan alamat MAC Layer 2 server sebagai alamat sumber dan alamat MAC Layer 2 klien sebagai tujuan.</p>
+<p></p>
+<p>
+<b>Permintaan DHCP (DHCPREQUEST)</b>
+</p>
+<p>Ketika klien menerima DHCPOFFER dari server, ia mengirimkan kembali pesan DHCPREQUEST seperti yang ditunjukkan pada Gambar 4. Pesan ini digunakan untuk permulaan sewa dan pembaruan sewa. Ketika digunakan untuk asal sewa, DHCPREQUEST berfungsi sebagai pemberitahuan penerimaan yang mengikat ke server yang dipilih untuk parameter yang ditawarkan dan penolakan implisit ke server lain yang mungkin telah memberikan penawaran yang mengikat kepada klien.</p>
+<p></p>
+<p>Banyak jaringan perusahaan menggunakan beberapa server DHCPv4. Pesan DHCPREQUEST dikirim dalam bentuk siaran untuk menginformasikan server DHCPv4 ini dan server DHCPv4 lainnya tentang tawaran yang diterima.</p>
+<p></p>
+<p>
+<b>Pengakuan DHCP (DHCPACK)</b>
+</p>
+<p>Saat menerima pesan DHCPREQUEST, server memverifikasi informasi sewa dengan ping ICMP ke alamat tersebut untuk memastikan alamat tersebut belum digunakan, membuat entri ARP baru untuk sewa klien, dan membalas dengan pesan DHCPACK unicast seperti yang ditunjukkan pada Gambar 5. Pesan DHCPACK adalah duplikat dari DHCPOFFER, kecuali untuk perubahan pada kolom jenis pesan. Ketika klien menerima pesan DHCPACK, klien mencatat informasi konfigurasi dan melakukan pencarian ARP untuk alamat yang ditetapkan. Jika tidak ada balasan ke ARP, klien mengetahui bahwa alamat IPv4 valid dan mulai menggunakannya sebagai miliknya.</p>
+<p></p>
+<p>
+<b>Perpanjangan Sewa</b>
+</p>
+<p></p>
+<p>
+<b>Permintaan DHCP (DHCPREQUEST)</b>
+</p>
+<p>Seperti yang ditunjukkan pada Gambar 6, ketika masa sewa telah berakhir, klien mengirimkan pesan DHCPREQUEST langsung ke server DHCPv4 yang awalnya menawarkan alamat IPv4. Jika DHCPACK tidak diterima dalam jangka waktu tertentu, klien menyiarkan DHCPREQUEST lain sehingga salah satu server DHCPv4 lainnya dapat memperpanjang sewa.</p>
+<p></p>
+<p>
+<b>Pengakuan DHCP (DHCPACK)</b>
+</p>
+<p>Saat menerima pesan DHCPREQUEST, server memverifikasi informasi sewa dengan mengembalikan DHCPACK, seperti yang ditunjukkan pada Gambar 7.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

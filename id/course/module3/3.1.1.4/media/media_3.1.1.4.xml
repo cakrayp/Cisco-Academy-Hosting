@@ -1,0 +1,19 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>VLAN Suara</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Switch port dikonfigurasi untuk mendukung lalu lintas suara:<textformat blockindent="-14"><li>Port mengirimkan frame CDP untuk memberikan informasi yang digunakan oleh telepon IP</li><li>Port meneruskan frame yang terkait dengan VLAN 150</li></textformat>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[<b>Murid<br/>VLAN 20 - 172.17.20.25</b>]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[Sakelar dikonfigurasi untuk mendukung lalu lintas suara:<textformat blockindent="-14"><li>Menggunakan VLAN 150 untuk VLAN suara</li><li>Memprioritaskan lalu lintas suara</li></textformat>]]></text>
+</component>
+
+</textcomponents>

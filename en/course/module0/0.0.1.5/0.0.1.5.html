@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>0.0.1.5 Practice Leads to Mastery</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_0.0.1.5_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Welcome to Routing and Switching Essentials</h1>
+        <h2>Message to the Student</h2>
+      </div>
+      <div id="content">
+          <p>In a typical lesson, after learning about a topic for the first time, you will check your understanding with some interactive media items. If there are new commands to learn, you will practice them with the Syntax Checker before using the commands to configure or troubleshoot a network in Packet Tracer, the Networking Academy network simulation tool. Next, you will do practice activities on real equipment in your classroom or accessed remotely over the internet. </p>
+          <p></p>
+          <p>Packet Tracer can also provide additional practice any time by creating your own activities or you may want to competitively test your skills with classmates in multi-user games. Packet Tracer skills assessments and skills integration labs give you rich feedback on the skills you are able to demonstrate and are great practice for chapter, checkpoint, and final exams.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.4.3.1 Rute Statis Terapung</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.4.3.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Ringkasan dan Rute Statis Mengambang</h1>
+<h2>Konfigurasikan Rute Statis Mengambang</h2>
+</div>
+<div id="content">
+<p>Rute statis terapung adalah rute statis yang mempunyai jarak administratif lebih besar dibandingkan jarak administratif rute statis atau rute dinamis lainnya. Mereka sangat berguna ketika menyediakan cadangan ke tautan utama, seperti yang ditunjukkan pada gambar.</p>
+<p></p>
+<p>Secara default, rute statis memiliki jarak administratif 1, sehingga lebih disukai daripada rute yang dipelajari dari protokol perutean dinamis. Misalnya, jarak administratif dari beberapa protokol perutean dinamis yang umum adalah:</p>
+<p>
+<ul>
+<li>EIGRP = 90</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>IGRP = 100</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>OSPF = 110</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>IS-IS = 115</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>RIP = 120</li>
+</ul>
+</p>
+<p></p>
+<p>Jarak administratif dari rute statis dapat ditingkatkan untuk membuat rute tersebut kurang diinginkan dibandingkan dengan rute statis lain atau rute yang dipelajari melalui protokol perutean dinamis. Dengan cara ini, rute statis “mengambang” dan tidak digunakan ketika rute dengan jarak administratif yang lebih baik aktif. Namun, jika rute pilihan hilang, rute statis terapung dapat mengambil alih, dan lalu lintas dapat dikirim melalui rute alternatif ini.</p>
+<p></p>
+<p>Rute statis mengambang dapat digunakan untuk menyediakan rute cadangan ke beberapa antarmuka atau jaringan pada router. Ini juga bersifat enkapsulasi independen, artinya dapat digunakan untuk meneruskan paket keluar antarmuka apa pun, apa pun jenis enkapsulasinya.</p>
+<p></p>
+<p>Pertimbangan penting dari rute statis terapung adalah bahwa hal itu dipengaruhi oleh waktu konvergensi. Rute yang terus-menerus terputus dan membuat kembali sambungan dapat menyebabkan antarmuka pencadangan diaktifkan secara tidak perlu.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>6.3.3.3 VLSM in Action</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.3.3.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Review of CIDR and VLSM</h1>
+        <h2>VLSM</h2>
+      </div>
+      <div id="content">
+          <p>VLSM allows the use of different masks for each subnet. After a network address is subnetted, those subnets can be further subnetted. VLSM is simply subnetting a subnet. VLSM can be thought of as sub-subnetting.</p>
+          <p></p>
+          <p>The figure shows the network 10.0.0.0/8 that has been subnetted using the subnet mask of /16, which makes 256 subnets. That is 10.0.0.0/16, 10.1.0.0/16, 10.2.0.0/16, …, 10.255.0.0/16. Four of these /16 subnets are displayed in the figure. Any of these /16 subnets can be subnetted further. </p>
+          <p></p>
+          <p>Click the Play button in the figure to view the animation. In the animation:</p>
+          <p>
+            <ul>
+              <li>The 10.1.0.0/16 subnet is subnetted again with the /24 mask.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The 10.2.0.0/16 subnet is subnetted again with the /24 mask. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The 10.3.0.0/16 subnet is subnetted again with the /28 mask</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>The 10.4.0.0/16 subnet is subnetted again with the /20 mask. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Individual host addresses are assigned from the addresses of "sub-subnets". For example, the figure shows the 10.1.0.0/16 subnet divided into /24 subnets. The 10.1.4.10 address would now be a member of the more specific subnet 10.1.4.0/24.</p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

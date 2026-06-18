@@ -1,0 +1,46 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Identify the Part Where the Addresses Differ</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Identify the Part Where the Addresses Differ</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Convert the Section from Hex to Binary</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Count the number of far left matching bits</b>]]></text>
+</component>
+<component id="ID_s5_title">
+<text><![CDATA[<b>Add Zero Bits to Determine the Summarized Network Address</b>]]></text>
+</component>
+<component id="ID_s6_title">
+<text><![CDATA[<b>Convert the Binary Section Back to Hex</b>]]></text>
+</component>
+<component id="ID_s7_title">
+<text><![CDATA[<b>Count the number of far left matching bits</b>]]></text>
+</component>
+
+<!-- slide 4 -->
+<component id='ID_s4_txt01'>
+	<text><![CDATA[16<br>bits]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[16<br>bits]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[16<br>bits]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[13<br>bits]]></text>
+</component>
+
+
+<component id='ID_s7_txt01'>
+	<text><![CDATA[<font face="_typewriter">2001:0DB8:ACAD:0000::/61</font><br>or<br><font face="_typewriter">2001:DB8:ACAD:0::/61</font><br>or<br><font face="_typewriter">2001:DB8:ACAD::/61</font>]]></text>
+</component>
+
+</textcomponents>

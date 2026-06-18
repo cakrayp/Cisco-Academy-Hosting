@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>4.2.2.3 Penyeimbangan Beban</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_4.2.2.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Keputusan Perutean</h1>
+<h2>Penentuan Jalur</h2>
+</div>
+<div id="content">
+<p>Apa yang terjadi jika tabel perutean memiliki dua jalur atau lebih dengan metrik yang identik ke jaringan tujuan yang sama?</p>
+<p></p>
+<p>Ketika router mempunyai dua jalur atau lebih ke suatu tujuan dengan metrik biaya yang sama, maka router meneruskan paket menggunakan kedua jalur tersebut secara merata. Hal ini disebut penyeimbangan beban biaya yang setara. Tabel routing berisi jaringan tujuan tunggal, namun memiliki beberapa antarmuka keluar, satu untuk setiap jalur biaya yang sama. Router meneruskan paket menggunakan beberapa antarmuka keluar yang tercantum dalam tabel routing.</p>
+<p></p>
+<p>Jika dikonfigurasi dengan benar, penyeimbangan beban dapat meningkatkan efektivitas dan kinerja jaringan. Penyeimbangan beban biaya yang sama dapat dikonfigurasi untuk menggunakan protokol perutean dinamis dan rute statis.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Hanya EIGRP yang mendukung penyeimbangan beban biaya yang tidak setara.</p>
+<p></p>
+<p>Animasi pada gambar memberikan contoh penyeimbangan beban biaya yang sama.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

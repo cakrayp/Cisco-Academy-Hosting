@@ -1,0 +1,10 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Configure initial settings on a Cisco switch.</li><li>Configure switch ports to meet network requirements.</li><li>Configure the management switch virtual interface.</li><li>Describe basic security attacks in a switched environment.</li><li>Describe security best practices in a switched environment.</li><li>Configure the port security feature to restrict network access.</li></textformat><br/>]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.4.8 Protokol Waktu Jaringan (NTP)</title>
+<!-- Activity -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.4.8_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Ganti Keamanan Port</h2>
+</div>
+<div id="content">
+<p>Memiliki waktu yang tepat dalam jaringan adalah penting. Stempel waktu yang tepat diperlukan untuk melacak peristiwa jaringan secara akurat seperti pelanggaran keamanan. Selain itu, sinkronisasi jam sangat penting untuk interpretasi yang benar atas peristiwa dalam file data syslog serta untuk sertifikat digital.</p>
+<p></p>
+<p>Network Time Protocol (NTP) adalah protokol yang digunakan untuk menyinkronkan jam sistem komputer melalui jaringan data latensi variabel dan packet-switched. NTP memungkinkan perangkat jaringan untuk menyinkronkan pengaturan waktunya dengan server NTP. Sekelompok klien NTP yang memperoleh informasi waktu dan tanggal dari satu sumber akan memiliki pengaturan waktu yang lebih konsisten.</p>
+<p></p>
+<p>Metode yang aman dalam menyediakan pencatatan jam kerja untuk jaringan adalah dengan administrator jaringan menerapkan jam master jaringan pribadi mereka sendiri, yang disinkronkan ke UTC, menggunakan satelit atau radio. Namun, jika administrator jaringan tidak ingin menerapkan jam master mereka sendiri karena biaya atau alasan lain, sumber jam lain tersedia di Internet. NTP bisa mendapatkan waktu yang tepat dari sumber waktu internal atau eksternal antara lain sebagai berikut:</p>
+<p>
+<ul>
+<li>Jam master lokal</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>Jam master di Internet</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>GPS atau jam atom</li>
+</ul>
+</p>
+<p></p>
+<p>Perangkat jaringan dapat dikonfigurasi sebagai server NTP atau klien NTP. Untuk mengizinkan jam perangkat lunak disinkronkan oleh server waktu NTP, gunakan<span class="cmd"><b>server ntp</b></span><span class="cmd"><i>alamat ip</i></span>perintah dalam mode konfigurasi global. Contoh konfigurasi ditunjukkan pada Gambar 1. Router R2 dikonfigurasi sebagai klien NTP, sedangkan router R1 berfungsi sebagai server NTP otoritatif.</p>
+<p></p>
+<p>Untuk mengonfigurasi perangkat yang memiliki jam master NTP yang dapat disinkronkan oleh rekan-rekannya, gunakan<span class="cmd"><b>ntp menguasai [</b></span><span class="cmd"><i>lapisan</i></span><span class="cmd"><b>] </b></span>perintah dalam mode konfigurasi global. Nilai stratum berupa angka 1 sampai 15 dan menunjukkan nomor stratum NTP yang akan diklaim oleh sistem. Jika sistem dikonfigurasikan sebagai master NTP dan tidak ada nomor stratum yang ditentukan, sistem akan default ke stratum 8. Jika master NTP tidak dapat mencapai jam mana pun dengan nomor stratum yang lebih rendah, sistem akan mengklaim telah disinkronkan pada nomor stratum yang dikonfigurasi, dan sistem lain akan bersedia melakukan sinkronisasi ke jam tersebut menggunakan NTP.</p>
+<p></p>
+<p>Gambar 2 menampilkan verifikasi NTP. Untuk menampilkan status asosiasi NTP, gunakan<span class="cmd"><b>tampilkan asosiasi ntp</b></span>perintah dalam mode EXEC istimewa. Perintah ini akan menunjukkan alamat IP perangkat rekan apa pun yang disinkronkan ke rekan ini, rekan yang dikonfigurasi secara statis, dan nomor strata. Itu<span class="cmd"><b>tampilkan status ntp</b></span>perintah pengguna EXEC dapat digunakan untuk menampilkan informasi seperti status sinkronisasi NTP, rekan yang perangkatnya disinkronkan, dan di strata NTP mana perangkat tersebut berfungsi.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

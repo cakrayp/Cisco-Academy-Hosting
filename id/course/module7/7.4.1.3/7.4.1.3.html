@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.4.1.3 Contoh SPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.4.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean Dinamis Link-State</h1>
+<h2>Operasi Protokol Perutean Link-State</h2>
+</div>
+<div id="content">
+<p>Tabel pada Gambar 1 menampilkan jalur terpendek dan akumulasi biaya untuk mencapai jaringan tujuan yang diidentifikasi dari perspektif R1.</p>
+<p></p>
+<p>Jalur terpendek belum tentu merupakan jalur dengan jumlah hop paling sedikit. Misalnya, lihat jalur ke LAN R5. Mungkin diasumsikan bahwa R1 akan mengirim langsung ke R4, bukan ke R3. Namun biaya untuk mencapai R4 secara langsung (22) lebih tinggi dibandingkan biaya untuk mencapai R4 melalui R3 (17).</p>
+<p></p>
+<p>Amati jalur terpendek setiap router untuk mencapai masing-masing LAN, seperti yang ditunjukkan pada Gambar 2 hingga 5.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

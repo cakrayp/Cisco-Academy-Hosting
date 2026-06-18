@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.1.4 Mengonfigurasi ID Router OSPF</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>ID Perute OSPF</h2>
+</div>
+<div id="content">
+<p>Gunakan<span class="cmd"><b>router-id</b></span><span class="cmd"><i>menyingkirkan</i></span>perintah mode konfigurasi router untuk secara manual menetapkan nilai 32-bit yang dinyatakan sebagai alamat IPv4 ke router. Router OSPF mengidentifikasi dirinya ke router lain menggunakan ID router ini.</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada Gambar 1, R1 dikonfigurasi dengan ID router 1.1.1.1, R2 dengan 2.2.2.2, dan R3 dengan 3.3.3.3.</p>
+<p></p>
+<p>Pada Gambar 2, ID router 1.1.1.1 ditetapkan ke R1. Gunakan<span class="cmd"><b>tampilkan protokol ip</b></span>perintah untuk memverifikasi ID router.</p>
+<p></p>
+<p>
+<b>Catatan</b>: R1 belum pernah dikonfigurasi dengan ID router OSPF. Jika ya, maka ID router harus diubah.</p>
+<p></p>
+<p>Jika ID router sama pada dua router tetangga, router akan menampilkan pesan kesalahan seperti di bawah ini:</p>
+<p></p>
+<p>
+<span class="cmd">%OSPF-4-DUP_RTRID1: Router terdeteksi dengan ID router duplikat.</span>
+</p>
+<p></p>
+<p>Untuk memperbaiki masalah ini, konfigurasikan semua router sehingga mereka memiliki ID router OSPF yang unik.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk menetapkan ID router ke R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

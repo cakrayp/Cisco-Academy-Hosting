@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Masalah Router</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+   <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[&lt;keluaran dihilangkan&gt;]]></text>
+   </component>
+
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Masalah Pengalamatan IP PC</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[PC1 ini harus berada di subnet VLAN 10<br/>Jadi ini seharusnya:<font face="_typewriter">172.17.10.21</font>dengan subnet mask sebesar<font face="_typewriter">255.255.255.0</font>]]></text>
+</component>
+</textcomponents>

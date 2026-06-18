@@ -1,0 +1,233 @@
+<textcomponents>
+
+<!--Feedback for use by actionscript-->
+<!--Do not need to duplicate for each activity-->
+
+<component id="ID_correctTitle">
+<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_correctBody">
+<text><![CDATA[Benar!]]></text>
+</component>
+
+<component id="ID_incorrectTitle">
+<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_incorrectBody">
+<text><![CDATA[Itu tidak benar. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id="ID_blankTitle">
+<text><![CDATA[<b>Tidak Dijawab</b>]]></text>
+</component>
+
+<component id="ID_blankBody">
+<text><![CDATA[Silakan pilih jawaban.]]></text>
+</component>
+
+<!--slide 1-->
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/>Klik Tombol 2-6 untuk menyelesaikan aktivitas. Klik Tombol 1 untuk melihat topologi ini kapan saja. To continue, select Button 2 now.]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+<text><![CDATA[Server FTP]]></text>
+</component>
+
+<component id="ID_s1_correctBody">
+<text><![CDATA[Benar! Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+<!--slide 2-->
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/><b>Pertanyaan 1</b>– A single access list needs to be created to deny the 10.10.1.0/24 network and the 10.10.20.0/24 network from reaching the 10.10.30.0/24 network. Host 10.10.1.1 seharusnya memiliki akses ke server FTP saja. Jaringan 10.0.0.0 lainnya harus memiliki akses ke jaringan 10.10.30.0/24. All devices should be able to access the Internet. Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+<text><![CDATA[Apa yang harus menjadi baris pertama dari daftar akses baru yang dijelaskan dalam skenario praktik di atas?]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 10 tolak 10.10.1.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip 10.10.1.1 0.0.0.0 10.10.30.2 0.0.0.0</b></font>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip 10.10.1.1 0.0.0.0 10.10.30.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.10.1.0 0.0.0.255 10.10.30.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+<component id="ID_s2_correctBody">
+<text><![CDATA[Benar! Klik Tombol 3 untuk melanjutkan.]]></text>
+</component>
+
+
+<!--slide 3-->
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/><b>Pertanyaan 2</b>– Daftar akses tunggal perlu dibuat untuk menolak jaringan 10.10.1.0/24 dan jaringan 10.10.20.0/24 mencapai jaringan 10.10.30.0/24. Host 10.10.1.1 seharusnya memiliki akses ke server FTP saja. Jaringan 10.0.0.0 lainnya harus memiliki akses ke jaringan 10.10.30.0/24. Semua perangkat harus dapat mengakses Internet. Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+<text><![CDATA[Apa yang seharusnya menjadi baris kedua dari daftar akses baru yang dijelaskan dalam skenario praktik di atas?]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip host 10.10.1.1 host 10.10.30.1</b></font>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip host 10.10.1.1 host 10.10.30.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.10.1.0 0.0.0.255 10.10.30.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.10.1.0 0.0.0.255 apa saja</b></font>]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s3_correctBody">
+<text><![CDATA[Benar! Klik Tombol 4 untuk melanjutkan.]]></text>
+</component>
+
+
+<!--slide 4-->
+<component id="ID_s4_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/><b>Pertanyaan 3</b>– Daftar akses tunggal perlu dibuat untuk menolak jaringan 10.10.1.0/24 dan jaringan 10.10.20.0/24 mencapai jaringan 10.10.30.0/24. Host 10.10.1.1 seharusnya memiliki akses ke server FTP saja. Jaringan 10.0.0.0 lainnya harus memiliki akses ke jaringan 10.10.30.0/24. Semua perangkat harus dapat mengakses Internet. Klik Tombol 5 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s4_txt01'>
+<text><![CDATA[Apa yang seharusnya menjadi baris ketiga dari daftar akses baru yang dijelaskan dalam skenario praktik di atas?]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip host 10.10.1.1 host 10.10.30.1 eq ftp</b></font>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip host 10.10.1.1 10.10.30.0 0.0.0.255 eq any</b></font>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.10.20.0 0.0.0.255 10.10.30.0 0.0.0.255 eq apa saja</b></font>]]></text>
+</component>
+
+<component id='ID_s4_txt05'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.20.1.0 0.0.0.255 apa saja</b></font>]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+<component id="ID_s4_correctBody">
+<text><![CDATA[Benar! Klik Tombol 5 untuk melanjutkan.]]></text>
+</component>
+
+
+<!--slide 5-->
+<component id="ID_s5_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/><b>Pertanyaan 4</b>– Daftar akses tunggal perlu dibuat untuk menolak jaringan 10.10.1.0/24 dan jaringan 10.10.20.0/24 mencapai jaringan 10.10.30.0/24. Host 10.10.1.1 seharusnya memiliki akses ke server FTP saja. Jaringan 10.0.0.0 lainnya harus memiliki akses ke jaringan 10.10.30.0/24. Semua perangkat harus dapat mengakses Internet. Klik Tombol 6 untuk melanjutkan.]]></text>
+</component>
+
+<component id='ID_s5_txt01'>
+<text><![CDATA[Apa yang seharusnya menjadi baris keempat dari daftar akses baru yang dijelaskan dalam skenario praktik di atas?]]></text>
+</component>
+
+<component id='ID_s5_txt02'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 10 izin ip host 10.0.0.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s5_txt03'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip 10.0.0.0 0.0.0.0 10.10.30.0 0.0.0.255</b></font>]]></text>
+</component>
+
+<component id='ID_s5_txt04'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 izin ip 10.0.0.0 0.255.255.255 apa saja</b></font>]]></text>
+</component>
+
+<component id='ID_s5_txt05'>
+<text><![CDATA[<font face="_typewriter">Router(config)# <b>daftar akses 101 tolak ip 10.10.1.0 0.0.0.255 10.10.30.0 0.0.0.255 eq apa saja</b></font>]]></text>
+</component>
+
+<component id='ID_s5_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s5_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+
+<component id="ID_s5_correctBody">
+<text><![CDATA[Benar! Klik Tombol 6 untuk melanjutkan.]]></text>
+</component>
+
+
+<!--slide 6-->
+<component id="ID_s6_inst">
+<text><![CDATA[<b>Aktivitas – Periksa Pemahaman Anda tentang ACL</b><br/><br/><b>Pertanyaan 5</b>– Daftar akses tunggal perlu dibuat untuk menolak jaringan 10.10.1.0/24 dan jaringan 10.10.20.0/24 mencapai jaringan 10.10.30.0/24. Host 10.10.1.1 seharusnya memiliki akses ke server FTP saja. Jaringan 10.0.0.0 lainnya harus memiliki akses ke jaringan 10.10.30.0/24. Semua perangkat harus dapat mengakses Internet.]]></text>
+</component>
+
+<component id='ID_s6_txt01'>
+<text><![CDATA[Di manakah daftar akses baru yang dijelaskan dalam skenario praktik di atas harus ditempatkan untuk memastikan efektivitasnya?]]></text>
+</component>
+
+<component id='ID_s6_txt02'>
+<text><![CDATA[S 0/2/0 di RTB sebagai daftar keluar]]></text>
+</component>
+
+<component id='ID_s6_txt03'>
+<text><![CDATA[G 0/0 di RTB sebagai daftar keluar]]></text>
+</component>
+
+<component id='ID_s6_txt04'>
+<text><![CDATA[G 0/1 pada RTA sebagai daftar masuk]]></text>
+</component>
+
+<component id='ID_s6_txt05'>
+<text><![CDATA[G 0/1 pada RTA sebagai daftar masuk]]></text>
+</component>
+
+<component id='ID_s6_check'>
+	<text><![CDATA[Memeriksa]]></text>
+</component>
+
+<component id='ID_s6_reset'>
+	<text><![CDATA[Mengatur ulang]]></text>
+</component>
+<component id="ID_s6_correctBody">
+<text><![CDATA[Benar!]]></text>
+</component>
+
+</textcomponents>

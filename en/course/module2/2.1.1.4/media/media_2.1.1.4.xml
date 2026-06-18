@@ -1,0 +1,13 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Preparing for Remote Management</b>]]></text>
+	</component>	
+	
+	<component id="ID_txt01">
+		<text><![CDATA[Console Cable]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14' ><ul><li>A console cable is used to connect a PC to the console port of a switch for configuration.</li><li>To remotely manage the switch, the switch must be initially configured through the console port.</li></ul></textformat>]]></text>
+	</component>	
+</textcomponents>

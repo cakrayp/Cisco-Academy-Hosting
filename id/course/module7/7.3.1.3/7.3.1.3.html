@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>7.3.1.3 Memeriksa Pengaturan RIP Default</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.3.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Perutean RIP dan RIPng</h1>
+<h2>Konfigurasi Protokol RIP</h2>
+</div>
+<div id="content">
+<p>Itu<span class="cmd"><b>tampilkan protokol ip</b></span>perintah menampilkan pengaturan protokol perutean IPv4 yang saat ini dikonfigurasi pada router. Output yang ditampilkan pada Gambar 1 mengkonfirmasi sebagian besar parameter RIP termasuk:</p>
+<p></p>
+<p>1. Perutean RIP dikonfigurasi dan dijalankan pada router R1.</p>
+<p>2. Nilai berbagai pengatur waktu; misalnya, pembaruan perutean berikutnya, dikirim oleh R1 dalam 16 detik.</p>
+<p>3. Versi RIP yang dikonfigurasi saat ini adalah RIPv1.</p>
+<p>4. R1 saat ini sedang melakukan rangkuman pada batas jaringan kelas.</p>
+<p>5. Jaringan berkelas diiklankan oleh R1. Ini adalah jaringan yang disertakan R1 dalam pembaruan RIP-nya.</p>
+<p>6. Daftar RIP tetangga termasuk alamat IP hop berikutnya, AD terkait yang digunakan R2 untuk pembaruan yang dikirim oleh tetangga ini dan kapan pembaruan terakhir diterima dari tetangga ini.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Perintah ini juga sangat berguna ketika memverifikasi operasi protokol perutean lainnya (yaitu EIGRP dan OSPF).</p>
+<p></p>
+<p>Itu<span class="cmd"><b>tampilkan rute ip</b></span>perintah menampilkan rute RIP yang diinstal di tabel routing. Pada Gambar 2, R1 sekarang mengetahui tentang jaringan yang disorot.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 untuk memverifikasi pengaturan dan rute RIP R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+	<!-- Slide 1 -->
+		<slide>
+		<!-- Lazy text-->
+			<element type="TEXT" compId="ID_s1_txt01" x="13" y="181" width="415" height="17"  align="left" expand="right" />
+				
+		<!-- Router text-->		
+			<element type="ROUTER" textId="ID_r1_txt01" x="4.35" y="94.75" width="433.25" height="217.3" size="10"/>
+			
+			
+		</slide>
+	<!-- Slide 2 -->	
+		<slide>
+				
+		<!-- Router text-->		
+			<element type="ROUTER" textId="ID_r2_txt01" x="4.35" y="94.75" width="433.25" height="217.3" size="10"/>
+			
+		</slide>
+	
+	<!-- Slide 3 -->	
+		<slide>
+		<!-- Lazy text-->
+			<element type="TEXT" compId="ID_s3_txt01" x="13" y="112.85" width="416" height="17"  align="left" expand="right" />
+			
+		<!-- Router text-->		
+			<element type="ROUTER" textId="ID_r3_txt01" x="4.35" y="94.75" width="433.25" height="217.3" size="10"/>
+			
+		</slide>
+	</slide>
+	<!-- Router text -->
+	
+		<text id="ID_r1_txt01"><![CDATA[R3#<b>tampilkan antarmuka ipv6 g0/0</b><br/>GigabitEthernet0/0 sudah habis, protokol jalur sudah habis<br/>Alamat unicast global:<br/>2001:DB8:CAFE:30::1, subnetnya adalah 2001:DB8:CAFE:30::/64<br>
+<span class="highlight">Fitur masukan: Daftar Akses<br/>Daftar akses masuk AKSES TERBATAS</span>
+</br>]]></text>	
+		
+		<text id="ID_r2_txt01"><![CDATA[R3#<b>tampilkan daftar akses</b><br/>Daftar akses IPv6 AKSES TERBATAS<br/>izinkan tcp host mana pun 2001:DB8:CAFE:10::10 eq www urutan 20<br/>izinkan tcp host mana pun 2001:DB8:CAFE:10::10 eq 443 urutan 30<br/>tolak ipv6 apa pun 2001:DB8:CAFE:10::/64 urutan 50<br/>izinkan tcp host 2001:DB8:CAFE:30::12 host 2001:DB8:CAFE:11::11 eq<br/>urutan telnet 70<br/>tolak tcp host mana pun 2001:DB8:CAFE:11::11 eq urutan telnet 90<br/>izinkan ipv6 urutan apa pun 110<br/>R3#]]></text>	
+		
+		<text id="ID_r3_txt01"><![CDATA[R3#<b>tampilkan konfigurasi yang sedang berjalan</b><br/><br/>daftar akses ipv6 AKSES TERBATAS<br/>komentar Izinkan akses hanya HTTP dan HTTPS ke Jaringan 10<br/>izinkan tcp host mana pun 2001:DB8:CAFE:10::10 eq www<br/>izinkan tcp host mana pun 2001:DB8:CAFE:10::10 eq 443<br/>komentar Tolak semua lalu lintas lainnya ke Jaringan 10<br/>tolak ipv6 apa pun 2001:DB8:CAFE:10::/64<br/>komentar Izinkan akses telnet PC3 ke PC2<br/>izinkan tcp host 2001:DB8:CAFE:30::12 host 2001:DB8:CAFE:11::11<br/>misalnya telnet<br/>komentar Tolak akses telnet ke PC2 untuk semua perangkat lainnya<br/>tolak tcp host mana pun 2001:DB8:CAFE:11::11 eq telnet<br/>komentar Izinkan akses ke yang lainnya<br/>izinkan ipv6 apa saja<br/>
+]]></text>	
+</data>

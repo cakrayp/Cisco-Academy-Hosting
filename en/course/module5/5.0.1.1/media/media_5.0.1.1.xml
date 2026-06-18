@@ -1,0 +1,12 @@
+﻿<textcomponents>
+<component id="ID_title">
+<text><![CDATA[]]></text>
+</component>
+   
+<component id="ID_txt01">
+<text><![CDATA[<br/><b>After completing this chapter, you will be able to:</b><br/><br/><textformat blockindent='-14'><li>Describe the three primary options for enabling inter-VLAN routing.</li><li>Configure legacy inter-VLAN routing.</li><li>Configure router-on-a-stick inter-VLAN routing.</li><li>Troubleshoot common inter-VLAN configuration issues.</li><li>Troubleshoot common IP addressing issues in an inter-VLAN routed environment.</li><li>Configure inter-VLAN routing using Layer 3 switching.</li><li>Troubleshoot inter-VLAN routing in a Layer 3 switched environment.</li></textformat><br/>]]></text>
+</component>
+
+
+
+</textcomponents>

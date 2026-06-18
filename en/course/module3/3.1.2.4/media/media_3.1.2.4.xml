@@ -1,0 +1,38 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Native VLAN on 802.1Q Trunk</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[PC1]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[VLAN1]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[VLAN2]]></text> 
+  </component>
+  <component id="ID_txt04">
+  <text><![CDATA[VLAN3]]></text> 
+  </component>
+<component id="ID_txt05">
+  <text><![CDATA[VLAN1]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[VLAN2]]></text> 
+</component>
+<component id="ID_txt07">
+  <text><![CDATA[VLAN3]]></text> 
+  </component>
+<component id="ID_txt08">
+  <text><![CDATA[802.1Q Trunk]]></text> 
+  </component>
+<component id="ID_txt09">
+  <text><![CDATA[802.1Q Trunk]]></text> 
+  </component>
+<component id="ID_txt10">
+  <text><![CDATA[802.1Q Trunk]]></text> 
+  </component>
+<component id="ID_txt11">
+  <text><![CDATA[802.1Q Trunk]]></text> 
+  </component>
+</textcomponents>

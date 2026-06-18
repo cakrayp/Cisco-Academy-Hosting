@@ -1,0 +1,50 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Default Static Route Syntax</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+						 <table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+								<tr >
+									<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+								</tr> 
+							  
+								<tr>
+								  <td width='70px' bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Parameter</b></font></td>
+								  <td width='380px' bgcolor='#077A77' class="mtitle"><font  color='#ffffff'><b>Description</b></font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#EFF8F7' valign="top"><font color='#393536' face="Courier New">0.0.0.0</font></td>
+								  <td bgcolor='#EFF8F7' valign="top"><font color='#393536'>Matches any network address.</font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#FFFFFF' valign="top"><font color='#393536' face="Courier New">0.0.0.0</font></td>
+								  <td bgcolor='#FFFFFF' valign="top"><font color='#393536'>Matches any subnet mask.</font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#EFF8F7' valign="top"><font color='#393536' face="Courier New">ip-address</font></td>
+								  <td bgcolor='#EFF8F7' valign="top"><font color='#393536'>
+									<textformat blockindent='-18'>
+										<li>Commonly referred to as the next-hop router’s IP address.</li>
+										<li>Typically used when connecting to a broadcast media (i.e., Ethernet).</li>
+										<li>Commonly creates a recursive lookup.</li>
+									</textformat></font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#FFFFFF' valign="top"><font color='#393536' face="Courier New">exit-intf</font></td>
+								  <td bgcolor='#FFFFFF' valign="top"><font color='#393536'>
+									<textformat blockindent='-18'>
+										<li>Use the outgoing interface to forward packets to the destination network.</li>
+										<li>Also referred to as a directly attached static route.</li>
+										<li>Typically used when connecting in a point-to-point configuration.</li>
+									</textformat></font></td>
+								</tr>      
+							  </table>
+					]]>
+		</text>
+	</component>
+
+
+</textcomponents>

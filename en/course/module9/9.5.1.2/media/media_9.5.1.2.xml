@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>IPv6 Neighbor Discovery</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[ICMP Neighbor Solicitation Message]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[ICMP Neighbor Advertisement Message]]></text> 
+  </component>
+<component id="ID_speech01">
+  <text><![CDATA[I know your IPv6 address, but I need your MAC address.]]></text> 
+  </component>
+  
+<component id="ID_speech02">
+  <text><![CDATA[I have that IPv6 address. Here is my MAC address.]]></text> 
+  </component>  
+  
+</textcomponents>

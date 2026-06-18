@@ -1,0 +1,33 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>QoS and VLANs</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Admission Control]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Classification and Marking]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Policing and Markdown]]></text> 
+  </component>
+<component id="ID_txt04">
+<text><![CDATA[Scheduling (Queueing and Dropping)]]></text>
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Traffic Shaping]]></text> 
+  </component>
+<component id="ID_txt06">
+  <text><![CDATA[Link-Specific Mechanisms]]></text> 
+  </component>  
+<component id="ID_txt07">
+  <text><![CDATA[<b>STOP</b>]]></text> 
+  </component>    
+  
+<component id="transcript">
+  <text><![CDATA[<b>transcript goes here</b>]]></text> 
+  </component>
+  
+</textcomponents>

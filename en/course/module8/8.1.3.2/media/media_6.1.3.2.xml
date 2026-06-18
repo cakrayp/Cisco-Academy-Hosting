@@ -1,0 +1,74 @@
+<textcomponents>
+<!--Slide 1-->
+<component id="ID_s1_title">
+<text><![CDATA[<b>Down State to Init State</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+   <text><![CDATA[Down State]]></text>
+   </component>
+<component id="ID_s1_txt02">
+   <text><![CDATA[Init State]]></text>
+   </component>
+<component id="ID_s1_txt03">
+   <text><![CDATA[Hello]]></text>
+   </component>
+<component id="ID_s1_txt04">
+   <text><![CDATA[Hello! My router ID is 172.16.5.1. Is there anyone else on this link?]]></text>
+   </component>
+<component id="ID_s1_txt05">
+   <text><![CDATA[Multicast to 224.0.0.5]]></text>
+   </component>
+
+
+
+
+<!--Slide 2-->
+<component id="ID_s2_title">
+<text><![CDATA[<b>The Init State</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+   <text><![CDATA[R2 neighbor list:<br/>172.16.5.1, int G0/1]]></text>
+   </component>
+<component id="ID_s2_txt02">
+   <text><![CDATA[Hello]]></text>
+   </component>
+<component id="ID_s2_txt03">
+   <text><![CDATA[Hello! My router ID is 172.16.5.2 and here is my neighbor list.]]></text>
+   </component>
+<component id="ID_s2_txt04">
+   <text><![CDATA[Unicast to 172.16.5.1]]></text>
+   </component>
+
+
+
+
+
+<!--Slide 3-->
+<component id="ID_s3_title">
+<text><![CDATA[<b>Two-Way State</b>]]></text>
+</component>
+
+<component id="ID_s3_txt01">
+   <text><![CDATA[R1 neighbor list:<br/>172.16.5.2, int G0/0]]></text>
+   </component>
+<component id="ID_s3_txt02">
+   <text><![CDATA[Two-Way State]]></text>
+   </component>
+
+
+<!--Slide 4-->
+<component id="ID_s4_title">
+<text><![CDATA[<b>Elect the DR and BDR</b>]]></text>
+</component>
+
+<component id="ID_s4_txt01">
+   <text><![CDATA[R1 has a default priority of 1 and the second highest router ID. It will be the BDR on this link.]]></text>
+   </component>
+<component id="ID_s4_txt02">
+   <text><![CDATA[R2 has a default priority of 1 and the highest router ID. It will be the DR on this link.]]></text>
+   </component>
+
+
+
+</textcomponents>

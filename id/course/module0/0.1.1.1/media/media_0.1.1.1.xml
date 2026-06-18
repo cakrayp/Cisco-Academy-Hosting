@@ -1,0 +1,14 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Pertimbangan dan persyaratan proses</b>]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Menentukan kebutuhan pengguna akhir</b>]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<b>Tentukan pilihan dan pilih OS</b>]]></text> 
+  </component>
+<component id="transcript">
+  <text><![CDATA[<b>transkrip ada di sini</b>]]></text> 
+  </component>
+</textcomponents>

@@ -1,0 +1,72 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Proses Keputusan Penerusan Paket</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Paket tiba di antarmuka.]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Pencarian router<br/>tabel routing untuk pertandingan.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Apakah alamat IP tujuan cocok dengan<br/>subnet dari…]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[Antarmuka Terhubung Langsung?]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Periksa cache ARP (ARP jika perlu) dan teruskan ke host di subnet lokal.]]></text> 
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Jaringan jarak jauh?]]></text> 
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Enkapsulasi frame dan teruskan keluar dari antarmuka keluar ke hop berikutnya.]]></text> 
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[Apakah ada gerbang pilihan terakhir yang tersedia?]]></text> 
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[Enkapsulasi frame dan teruskan keluar dari antarmuka keluar ke hop berikutnya.]]></text> 
+</component>
+
+<component id="ID_txt10">
+<text><![CDATA[Jatuhkan paket dan kirim pesan ICMP kembali ke alamat IP sumber.]]></text> 
+</component>
+
+<component id="ID_txt11">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_txt12">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_txt13">
+<text><![CDATA[Ya]]></text> 
+</component>
+
+<component id="ID_txt14">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_txt15">
+<text><![CDATA[No]]></text> 
+</component>
+
+<component id="ID_txt16">
+<text><![CDATA[No]]></text> 
+</component>
+
+
+</textcomponents>

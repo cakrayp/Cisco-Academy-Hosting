@@ -1,0 +1,38 @@
+<textcomponents>
+
+<component id="ID_title">
+<text><![CDATA[<b>Penyaringan Paket</b>]]></text>
+</component>
+<component id="ID_osi_header">
+<text><![CDATA[<b>Model OSI</b>]]></text>
+</component>
+
+
+<component id="ID_osi_txt07">
+<text><![CDATA[Aplikasi]]></text> 
+</component>
+<component id="ID_osi_txt06">
+<text><![CDATA[Presentasi]]></text> 
+</component>
+<component id="ID_osi_txt05">
+<text><![CDATA[Sidang]]></text> 
+</component>
+<component id="ID_osi_txt04">
+<text><![CDATA[Mengangkut]]></text> 
+</component>
+<component id="ID_osi_txt03">
+<text><![CDATA[Jaringan]]></text>
+</component>
+<component id="ID_osi_txt02">
+<text><![CDATA[Tautan Data]]></text>
+</component>
+<component id="ID_osi_txt01">
+<text><![CDATA[Fisik]]></text>
+</component>
+
+<component id="ID_bubble01">
+<text><![CDATA[Pemfilteran paket berfungsi pada Layer 3 dan Layer 4]]></text>
+</component>
+
+
+</textcomponents>

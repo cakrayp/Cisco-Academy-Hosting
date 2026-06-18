@@ -1,0 +1,83 @@
+<textcomponents>
+
+<!-- topology -->
+ <component id="ID_title">
+<text><![CDATA[<b>MAC Addressing and Switch MAC Tables</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+  <text><![CDATA[Port 1]]></text> 
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Port 2]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Port 3]]></text> 
+</component>
+
+
+<!-- slide 1 -->
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<!-- slide 2 -->
+
+<component id="ID_s2_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+  <text><![CDATA[MAC Table:<br>Port 1: MAC PC1<br>Port 2: Empty<br>Port 3: Empty]]></text> 
+</component>
+
+<!-- slide 3 -->
+
+<component id="ID_s3_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt04">
+<text><![CDATA[MAC Table:<br/>Port 1: MAC PC1<br/>Port 2: Empty<br/>Port 3: Empty]]></text>
+</component>
+
+<!-- slide 4 -->
+
+<component id="ID_s4_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s4_txt03">
+<text><![CDATA[MAC Table:<br/>Port 1: MAC PC1<br/>Port 2: Empty<br/>Port 3: Empty]]></text>
+</component>
+
+<!-- slide 5 -->
+
+<component id="ID_s5_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s5_txt03">
+  <text><![CDATA[MAC Table:<br>Port 1: MAC PC1<br>Port 2: Empty<br>Port 3: MAC PC3]]></text> 
+</component>
+
+<!-- slide 6 -->
+
+<component id="ID_s6_txt02">
+  <text><![CDATA[<b>Frame</b>]]></text> 
+</component>
+
+<component id="ID_s6_txt03">
+  <text><![CDATA[MAC Table:<br>Port 1: MAC PC1<br>Port 2: Empty<br>Port 3: MAC PC3]]></text> 
+</component>
+
+</textcomponents>
+
+

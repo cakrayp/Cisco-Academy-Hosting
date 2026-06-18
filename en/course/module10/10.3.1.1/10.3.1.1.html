@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>10.3.1.1 Activity - IoE and DHCP</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_10.3.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>Summary</h1>
+        <h2>Summary</h2>
+      </div>
+      <div id="content">
+          <p>
+            <b>Activity - </b>
+            <b>IoE and DHCP</b>
+          </p>
+          <p></p>
+          <p>This chapter presents the concept of using the DHCP process in a small- to medium-sized business network; however, DHCP also has other uses!  </p>
+          <p></p>
+          <p>With the advent of the Internet of Everything (IoE), any device in your home capable of wired or wireless connectivity to a network will be able to be accessed from just about anywhere.</p>
+          <p></p>
+          <p>Using Packet Tracer for this modeling activity, perform the following tasks:  </p>
+          <p>
+            <ul>
+              <li>Configure a Cisco 1941 router (or DHCP-server-capable ISR device) for IPv4 or IPv6 DHCP addressing.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Think of five devices in your home you would like to receive IP addresses from the router’s DHCP service.  Set the end devices to claim DHCP addresses from the DHCP server.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Show output validating that each end device secures an IP address from the server. Save your output information via a screen capture program or use the <b>PrtScrn </b>key command.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Present your findings to a fellow classmate or to the class.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <a href="../../files/10.3.1.1%20IoE%20and%20DHCP%20Instructions.pdf" target="_blank">Class Activity - IoE and DHCP Instructions</a>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

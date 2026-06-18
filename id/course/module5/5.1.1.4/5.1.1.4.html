@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>5.1.1.4 Perutean Antar-VLAN Sakelar Multilayer</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_5.1.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasi Perutean Antar-VLAN</h1>
+<h2>Operasi Perutean Antar-VLAN</h2>
+</div>
+<div id="content">
+<p>Implementasi perutean antar-VLAN router-on-a-stick hanya memerlukan satu antarmuka fisik pada router dan satu antarmuka pada sakelar, sehingga menyederhanakan pemasangan kabel pada router. Namun, dalam implementasi perutean antar-VLAN lainnya, router khusus tidak diperlukan.</p>
+<p></p>
+<p>Switch multilayer dapat menjalankan fungsi Layer 2 dan Layer 3, menggantikan kebutuhan router khusus untuk melakukan perutean dasar pada jaringan. Sakelar multilayer mendukung perutean dinamis dan perutean antar-VLAN.</p>
+<p></p>
+<p>Klik tombol Putar pada gambar untuk melihat animasi bagaimana perutean antar-VLAN berbasis switch terjadi.</p>
+<p></p>
+<p>Seperti yang terlihat dalam animasi:</p>
+<p></p>
+<p>1. PC1 pada VLAN 10 berkomunikasi dengan PC3 pada VLAN 30 melalui switch S1 menggunakan antarmuka VLAN yang dikonfigurasi untuk setiap VLAN.</p>
+<p></p>
+<p>2. PC1 mengirimkan lalu lintas unicastnya ke switch S2.</p>
+<p></p>
+<p>3. Switch S2 menandai lalu lintas unicast yang berasal dari VLAN 10 saat meneruskan lalu lintas unicast keluar dari link utama ke switch S1.</p>
+<p></p>
+<p>4. Switch S1 menghapus tag VLAN dan meneruskan lalu lintas unicast ke antarmuka VLAN 10.</p>
+<p></p>
+<p>5. Switch S1 merutekan lalu lintas unicast ke antarmuka VLAN 30-nya.</p>
+<p></p>
+<p>6. Switch S1 kemudian menandai ulang lalu lintas unicast dengan VLAN 30 dan meneruskannya keluar link trunk kembali ke switch S2.</p>
+<p></p>
+<p>7. Switch S2 menghapus tag VLAN dari frame unicast dan meneruskan frame keluar ke PC3 pada port F0/6.</p>
+<p></p>
+<p>Untuk mengaktifkan saklar multilayer untuk melakukan fungsi perutean, saklar multilayer harus mengaktifkan perutean IP.</p>
+<p>Peralihan multilayer lebih terukur dibandingkan implementasi perutean antar-VLAN lainnya. Ini karena router memiliki jumlah port yang tersedia terbatas untuk terhubung ke jaringan. Selain itu, untuk antarmuka yang dikonfigurasi sebagai jalur utama, jumlah lalu lintas terbatas dapat diakomodasi pada jalur tersebut pada satu waktu.</p>
+<p></p>
+<p>Dengan switch multilayer, lalu lintas dirutekan secara internal ke perangkat switch, yang berarti paket tidak disaring ke satu jalur utama untuk mendapatkan informasi penandaan VLAN baru. Namun, saklar multilayer tidak sepenuhnya menggantikan fungsi router. Router mendukung sejumlah besar fitur tambahan, seperti kemampuan untuk menerapkan kontrol keamanan yang lebih besar. Sebaliknya, saklar multilayer dapat dianggap sebagai perangkat Layer 2 yang ditingkatkan untuk memiliki beberapa kemampuan routing.</p>
+<p></p>
+<p>
+<b>Catatan</b>: <b></b>Dalam kursus ini, konfigurasi perutean antar-VLAN pada sebuah saklar dibatasi pada konfigurasi rute statis pada saklar 2960, yang merupakan satu-satunya fungsi perutean yang didukung pada saklar 2960. Sakelar 2960 mendukung hingga 16 rute statis (termasuk rute yang dikonfigurasi pengguna dan rute default) dan semua rute yang terhubung langsung serta rute default untuk antarmuka manajemen; saklar 2960 dapat memiliki alamat IP yang ditetapkan untuk setiap antarmuka virtual saklar (SVI). Untuk switch multilayer berfitur lengkap dan relatif murah, switch Cisco Catalyst 3560 Series mendukung protokol routing EIGRP, OSPF, dan BGP.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

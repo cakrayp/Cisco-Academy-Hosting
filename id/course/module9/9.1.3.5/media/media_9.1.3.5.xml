@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Itu<font face="Courier New">any</font>Dan<font face="Courier New">host</font>Kata kunci</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>Contoh 1:</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<b>Contoh 2:</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Ini adalah formatnya<font face="Courier New"><b>tuan rumah</b></font>Dan<font face="Courier New"><b>setiap</b></font>kata kunci opsional dalam pernyataan ACL.]]></text>
+</component>
+</textcomponents>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.1.1 Memasukkan Pernyataan Kriteria</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Konfigurasikan ACL IPv4 Standar</h2>
+</div>
+<div id="content">
+<p>Ketika lalu lintas memasuki router, lalu lintas tersebut dibandingkan dengan semua ACE dalam urutan entri yang terjadi di ACL. Router terus memproses ACE hingga menemukan kecocokan. Router akan memproses paket berdasarkan kecocokan pertama yang ditemukan dan tidak ada ACE lain yang akan diperiksa.</p>
+<p></p>
+<p>Jika tidak ada kecocokan yang ditemukan ketika router mencapai akhir daftar, lalu lintas akan ditolak. Hal ini karena, secara default, terdapat penolakan tersirat di akhir semua ACL untuk lalu lintas yang tidak cocok dengan entri yang dikonfigurasi. ACL entri tunggal dengan hanya satu entri penolakan mempunyai efek menolak semua lalu lintas. Setidaknya satu izin ACE harus dikonfigurasi dalam ACL atau semua lalu lintas diblokir.</p>
+<p></p>
+<p>Untuk jaringan pada gambar, menerapkan ACL 1 atau ACL 2 ke antarmuka S0/0/0 R1 dalam arah keluar akan memiliki efek yang sama. Jaringan 192.168.10.0 akan diizinkan mengakses jaringan yang dapat dijangkau melalui S0/0/0 sedangkan 192.168.11.0 tidak akan diizinkan mengakses jaringan tersebut.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

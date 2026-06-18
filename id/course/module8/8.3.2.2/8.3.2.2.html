@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.3.2.2 Alamat Link-Lokal</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.3.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan OSPFv3 Area Tunggal</h1>
+<h2>Mengonfigurasi OSPFv3</h2>
+</div>
+<div id="content">
+<p>Pada gambar, output dari<span class="cmd"><b>tampilkan antarmuka ipv6 secara singkat</b></span>perintah mengonfirmasi bahwa alamat IPv6 global yang benar telah berhasil dikonfigurasi dan antarmuka diaktifkan. Juga, perhatikan bahwa setiap antarmuka secara otomatis menghasilkan alamat link-lokal, seperti yang disorot dalam gambar.</p>
+<p></p>
+<p>Alamat link-lokal secara otomatis dibuat ketika alamat unicast global IPv6 ditetapkan ke antarmuka. Alamat unicast global tidak diperlukan pada antarmuka; namun, alamat link-lokal IPv6 adalah.</p>
+<p></p>
+<p>Kecuali jika dikonfigurasi secara manual, router Cisco membuat alamat link-local menggunakan awalan FE80::/10 dan proses EUI-64. EUI-64 melibatkan penggunaan alamat MAC Ethernet 48-bit, memasukkan FFFE di tengah dan membalik bit ketujuh. Untuk antarmuka serial, Cisco menggunakan alamat MAC dari antarmuka Ethernet. Perhatikan pada gambar bahwa ketiga antarmuka menggunakan alamat link-local yang sama.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

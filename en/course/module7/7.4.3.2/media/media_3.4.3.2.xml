@@ -1,0 +1,30 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Create Areas to Minimize Router Resource Usage</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Area 0</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Area 51</b>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[<b>Area 1</b>]]></text> 
+  </component>
+
+    <component id="ID_txt04">
+  <text><![CDATA[LSP not flooded to these areas. SPF algorithm does not have to be rerun in these areas.]]></text> 
+  </component>
+
+ <component id="ID_txt05">
+  <text><![CDATA[LSP flooded only within this area.]]></text> 
+  </component>
+
+   <component id="ID_txt06">
+  <text><![CDATA[Rerun SPF algorithm]]></text> 
+  </component>
+
+
+</textcomponents>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+	<slide type="MBAR">
+	<!-- Slide 1 -->
+		<slide>
+			<element type="ROUTER" textId="ID_txt01" x="6" y="111.45" width="430" height="97.15" />
+		</slide>
+	<!-- Slide 2 -->
+		<slide>
+		<!-- Title -->
+			<element type="TEXT" subType="TITLE" compId="ID_s2_title"/>	
+				
+		<!-- Router text-->		
+			<element type="ROUTER" textId="ID_r1_txt01" x="6" y="41.45" width="430" height="347.1"/>
+			
+		<!-- Lazy text -->
+			<element type="TEXT" compId="ID_s2_txt01" width="65" x="353.8" y="105.75" align="left" expand="down"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" border="2"/>
+			<element type="TEXT" compId="ID_s2_txt02" width="110" x="295" y="210.2" align="left" expand="down"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" border="2"/>
+			
+		</slide>
+	<!-- Slide 3 -->
+		<slide>			
+		<!-- Title -->
+			<element type="TEXT" subType="TITLE" compId="ID_s3_title"/>	
+		
+		<!-- Router text-->		
+			<element type="ROUTER" textId="ID_r2_txt01" x="6" y="41.45" width="430" height="347.1"/>	
+			
+			
+		<!-- Lazy text -->
+			<element type="TEXT" compId="ID_s3_txt01" width="250" x="162.5" y="103.5" align="left" expand="up+down" class="orangeCallOut" />
+			<element type="TEXT" compId="ID_s3_txt02" width="200" x="216" y="217.1" align="left" expand="down"  bgColor="#FDE6D4" borderColor="#F68026" corner="5" border="2"/>
+		
+		</slide>
+			
+	</slide>
+	<!-- Router text -->
+		<text id="ID_txt01"><![CDATA[R1(konfigurasi)#<b>daftar akses 3 tolak 192.168.10.0 0.0.0.255</b>R1(konfigurasi)#<b>daftar akses 3 izin host 192.168.10.10<br/></b>% Aturan akses tidak dapat dikonfigurasi pada nomor urut yang lebih tinggi 
+		itu bagian dari aturan yang ada pada urutan nomor 10R1(konfigurasi)#]]></text>
+
+		<text id="ID_r1_txt01"><![CDATA[R1(konfigurasi)#<b>daftar akses 1 tolak 192.168.10.0 0.0.0.255</b><br/>R1(konfigurasi)#<b>daftar akses 1 tolak 192.168.20.0 0.0.0.255</b><br/>R1(konfigurasi)#<b>daftar akses 1 tolak 192.168.30.0 0.0.0.255</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 10.0.0.1</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 10.0.0.2</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 10.0.0.3</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 10.0.0.4</b><br/>R1(konfigurasi)#<b>daftar akses 1 izin 10.0.0.5</b><br/>R1(konfigurasi)#<b>akhir</b><br/>R1#<b>tampilkan konfigurasi yang sedang berjalan | termasuk daftar akses 1</b><br/>daftar akses 1 izin 10.0.0.2<br/>daftar akses 1 izin 10.0.0.3<br/>daftar akses 1 izin 10.0.0.1<br/>daftar akses 1 izin 10.0.0.4<br/>daftar akses 1 izin 10.0.0.5<br/>daftar akses 1 ditolak   192.168.10.0 0.0.0.255<br/>daftar akses 1 ditolak   192.168.20.0 0.0.0.255<br/>daftar akses 1 ditolak   192.168.30.0 0.0.0.255<br/>R1#<img height="51.2" id="ima1" src="9.2.2.6_s1_A.png" width="26.65"/>
+<img height="115" id="ima2" src="9.2.2.6_s1_B.png" width="51"/>
+]]></text>
+		
+		<text id="ID_r2_txt01"><![CDATA[R1#<b>tampilkan daftar akses 1</b><br/>Daftar akses IP standar 1<br/>50 izin 10.0.0.2<br/>60 izin 10.0.0.3<br/>40 izin 10.0.0.1<br/>70 izin 10.0.0.4<br/>80 izin 10.0.0.5<br/>10 penolakan  192.168.10.0, bit karakter pengganti 0.0.0.255<br/>20 penolakan  192.168.20.0, bit karakter pengganti 0.0.0.255<br/>30 penolakan  192.168.30.0, bit karakter pengganti 0.0.0.255<br/>R1#<b>salin menjalankan-config startup-config</b><br/>R1#<b>memuat ulang</b><br/>R1#<b>tampilkan daftar akses 1</b><br/>Daftar akses IP standar 1<br/>10 izin 10.0.0.2<br/>20 izin 10.0.0.3<br/>30 izin 10.0.0.1<br/>40 izin 10.0.0.4<br/>50 izin 10.0.0.5<br/>60 penolakan   192.168.10.0, bit karakter pengganti 0.0.0.255<br/>70 penolakan   192.168.20.0, bit karakter pengganti 0.0.0.255<br/>80 penolakan   192.168.30.0, bit karakter pengganti 0.0.0.255<br/>R1#<img height="66" id="ima4" src="9.2.2.6_s2_B.png" width="27"/>
+<img height="69.75" id="ima3" src="9.2.2.6_s2_A.png" width="21.8"/>
+]]></text>
+</data>

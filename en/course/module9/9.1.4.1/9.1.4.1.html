@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>9.1.4.1 General Guidelines for Creating ACLs</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="../../common/styles/course.css"/>
+	<script type="text/javascript" src="../../common/scripts/jquery_bundle.min.js"></script>
+	<script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.1.4.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn" onLoad="resizeTextDiv()">
+    <div class="ui-layout-west">
+      <div id="header">
+        <h1>IP ACL Operation</h1>
+        <h2>Guidelines for ACL creation</h2>
+      </div>
+      <div id="content">
+          <p>Writing ACLs can be a complex task. For every interface there may be multiple policies needed to manage the type of traffic allowed to enter or exit that interface. The router in the figure has two interfaces configured for IPv4 and IPv6. If we needed ACLs for both protocols, on both interfaces and in both directions, this would require eight separate ACLs. Each interface would have four ACLs; two ACLs for IPv4 and two ACLs for IPv6. For each protocol, one ACL is for inbound traffic and one for outbound traffic.  </p>
+          <p></p>
+          <p>
+            <b>Note</b>: ACLs do not have to be configured in both directions. The number of ACLs and their direction applied to the interface will depend on the requirements being implemented.</p>
+          <p></p>
+          <p>Here are some guidelines for using ACLs:</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Use ACLs in firewall routers positioned between your internal network and an external network such as the Internet. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Use ACLs on a router positioned between two parts of your network to control traffic entering or exiting a specific part of your internal network. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configure ACLs on border routers, that is, routers situated at the edges of your networks. This provides a very basic buffer from the outside network, or between a less controlled area of your own network and a more sensitive area of your network. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configure ACLs for each network protocol configured on the border router interfaces. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>The Three Ps</b>
+          </p>
+          <p></p>
+          <p>A general rule for applying ACLs on a router can be recalled by remembering the three Ps. You can configure one ACL per protocol, per direction, per interface: </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>One ACL per protocol </b>- To control traffic flow on an interface, an ACL must be defined for each protocol enabled on the interface. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>One ACL per direction </b>- ACLs control traffic in one direction at a time on an interface. Two separate ACLs must be created to control inbound and outbound traffic. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>One ACL per interface </b>- ACLs control traffic for an interface, for example, GigabitEthernet 0/0.</li>
+            </ul>
+          </p>
+        </div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center" alt="interactive graphic"></iframe>
+  </body>
+</html>

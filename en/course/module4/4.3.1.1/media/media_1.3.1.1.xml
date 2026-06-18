@@ -1,0 +1,21 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Directly Connected and Remote Network Routes</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Directly connected network</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Directly connected network</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Directly connected network</b>]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Remote networks</b/>]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[R1 has three directly connected networks: 192.168.10.0/24, 192.168.11.0/24, and 209.165.200.224/30. R1 also has two remote networks that it can learn about from R2: 10.1.1.0/24 and 10.1.2.0/24.]]></text>
+	</component>
+</textcomponents>

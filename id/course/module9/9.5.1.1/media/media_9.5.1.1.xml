@@ -1,0 +1,11 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>ACL IPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<div><span></span><b>ACL IPv4</b><ul><textformat blockindent="-14"><li class="parent">Standar</li></textformat><li>Bernomor</li><li>Bernama</li><textformat blockindent="-14"><li class="parent">Diperpanjang</li></textformat><li>Bernomor</li><li>Bernama</li></ul></div>]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[<div><span></span><b>ACL IPv6</b><ul><textformat blockindent="-14"><li class="parent">Hanya diberi nama</li><li class="parent">Mirip fungsinya dengan IPv4 Extended ACL</li></textformat></ul></div>]]></text> 
+  </component>
+</textcomponents>

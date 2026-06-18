@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>8.2.3.6 Mengatur Biaya OSPF Secara Manual</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_8.2.3.6_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Mengonfigurasi OSPFv2 Area Tunggal</h1>
+<h2>Biaya OSPF</h2>
+</div>
+<div id="content">
+<p>Sebagai alternatif untuk mengatur bandwidth antarmuka default, biaya dapat dikonfigurasi secara manual pada antarmuka menggunakan<span class="cmd"><b>biaya ip ospf</b></span><span class="cmd"><i>nilai</i></span>perintah konfigurasi antarmuka.</p>
+<p></p>
+<p>Keuntungan mengkonfigurasi biaya dibandingkan mengatur bandwidth antarmuka adalah bahwa router tidak perlu menghitung metrik ketika biaya dikonfigurasi secara manual. Sebaliknya, ketika bandwidth antarmuka dikonfigurasi, router harus menghitung biaya OSPF berdasarkan bandwidth. Itu<span class="cmd"><b>biaya ip ospf</b></span>Perintah ini berguna dalam lingkungan multi-vendor di mana router non-Cisco dapat menggunakan metrik selain bandwidth untuk menghitung biaya OSPF.</p>
+<p></p>
+<p>Keduanya<span class="cmd"><b>lebar pita</b></span>perintah antarmuka dan<span class="cmd"><b>biaya ip ospf</b></span>perintah antarmuka mencapai hasil yang sama, yaitu memberikan nilai akurat untuk digunakan oleh OSPF dalam menentukan rute terbaik.</p>
+<p></p>
+<p>Misalnya, dalam contoh di Gambar 1, bandwidth antarmuka serial 0/0/1 diatur ulang ke nilai default dan biaya OSPF diatur secara manual ke 15,625. Meskipun bandwidth antarmuka diatur ulang ke nilai default, biaya OSPF diatur seolah-olah bandwidth masih dihitung.</p>
+<p></p>
+<p>Gambar 2 menunjukkan dua alternatif yang dapat digunakan dalam memodifikasi biaya link serial dalam topologi. Sisi kanan gambar menunjukkan<span class="cmd"><b>biaya ip ospf</b></span>perintah yang setara dengan<span class="cmd"><b>lebar pita</b></span>perintah di sebelah kiri.</p>
+<p></p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

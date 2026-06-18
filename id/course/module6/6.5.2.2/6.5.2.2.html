@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.5.2.2 Mengatasi Masalah Konektivitas</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.5.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Memecahkan Masalah Rute Statis dan Default</h1>
+<h2>Memecahkan Masalah Konfigurasi Rute Statis dan Default IPv4</h2>
+</div>
+<div id="content">
+<p>Menemukan rute yang hilang (atau salah dikonfigurasi) adalah proses yang relatif mudah, jika alat yang tepat digunakan dengan cara yang metodis.</p>
+<p></p>
+<p>Misalnya, dalam contoh ini, pengguna di PC1 melaporkan bahwa dia tidak dapat mengakses sumber daya di LAN R3. Hal ini dapat dikonfirmasi dengan melakukan ping ke antarmuka LAN R3 menggunakan antarmuka LAN R1 sebagai sumbernya (lihat Gambar 1). Hasilnya menunjukkan bahwa tidak ada konektivitas antar LAN tersebut.</p>
+<p></p>
+<p>Traceroute pada Gambar 2 menunjukkan bahwa R2 tidak merespons seperti yang diharapkan. Untuk beberapa alasan, R2 meneruskan traceroute kembali ke R1. R1 mengembalikannya ke R2. Perulangan ini akan berlanjut hingga nilai time to live (TTL) berkurang menjadi nol, dalam hal ini, router kemudian akan mengirimkan pesan tujuan tidak dapat dijangkau Internet Control Message Protocol (ICMP) ke R1.</p>
+<p></p>
+<p>Langkah selanjutnya adalah menyelidiki tabel routing R2, karena router tersebut menampilkan pola penerusan yang aneh. Tabel perutean pada Gambar 3 menunjukkan bahwa jaringan 192.168.2.0/24 tidak dikonfigurasi dengan benar. Rute statis ke jaringan 192.168.2.0/24 telah dikonfigurasi menggunakan alamat hop berikutnya 172.16.2.1. Menggunakan alamat hop berikutnya yang dikonfigurasi, paket yang ditujukan untuk jaringan 192.168.2.0/24 dikirim kembali ke R1. Dari topologinya terlihat jelas bahwa jaringan 192.168.2.0/24 terhubung ke R3, bukan R1. Oleh karena itu, rute statis ke jaringan 192.168.2.0/24 di R2 harus menggunakan next-hop 192.168.1.1, bukan 172.16.2.1.</p>
+<p></p>
+<p>Gambar 4 menunjukkan keluaran dari konfigurasi yang berjalan yang menunjukkan kesalahan<span class="cmd"><b>rute ip</b></span>penyataan. Rute yang salah dihapus dan rute yang benar kemudian dimasukkan.</p>
+<p></p>
+<p>Gambar 5 memverifikasi bahwa R1 sekarang dapat mencapai antarmuka LAN R3. Sebagai langkah terakhir dalam konfirmasi, pengguna di PC1 juga harus menguji konektivitas ke LAN 192.168.2.0/24.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

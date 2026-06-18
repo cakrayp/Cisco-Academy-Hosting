@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>3.3.1.2 Serangan Pemberian Tag Ganda</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_3.3.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Keamanan dan Desain VLAN</h1>
+<h2>Serangan pada VLAN</h2>
+</div>
+<div id="content">
+<p>Jenis serangan VLAN lainnya adalah serangan VLAN hopping penandaan ganda (atau enkapsulasi ganda). Jenis serangan ini memanfaatkan cara perangkat keras pada sebagian besar switch beroperasi. Kebanyakan switch hanya melakukan satu tingkat de-enkapsulasi 802.1Q, yang memungkinkan penyerang menyematkan tag 802.1Q tersembunyi di dalam frame. Tag ini memungkinkan frame untuk diteruskan ke VLAN yang tidak ditentukan oleh tag 802.1Q asli. Karakteristik penting dari serangan hopping VLAN berkapsul ganda adalah bahwa ia bekerja bahkan jika port trunk dinonaktifkan, karena host biasanya mengirimkan frame pada segmen yang bukan merupakan link trunk.</p>
+<p></p>
+<p>Serangan hopping VLAN penandaan ganda mengikuti tiga langkah:</p>
+<p></p>
+<p>1. Penyerang mengirimkan frame 802.1Q yang diberi tag ganda ke switch. Header luar memiliki tag VLAN penyerang, yang sama dengan VLAN asli dari port trunk. Asumsinya adalah switch memproses frame yang diterima dari penyerang seolah-olah berada di port trunk atau port dengan VLAN suara (switch tidak boleh menerima frame Ethernet yang diberi tag pada port akses). Untuk keperluan contoh ini, asumsikan bahwa VLAN asli adalah VLAN 10. Tag bagian dalam adalah VLAN korban; dalam hal ini, VLAN 20.</p>
+<p></p>
+<p>2. Frame tiba di switch, yang terlihat pada tag 802.1Q 4-byte pertama. Switch melihat bahwa frame ditujukan untuk VLAN 10, yang merupakan VLAN asli. Switch meneruskan paket keluar pada semua port VLAN 10 setelah menghapus tag VLAN 10. Pada port trunk, tag VLAN 10 dihilangkan, dan paket tidak diberi tag ulang karena merupakan bagian dari VLAN asli. Pada titik ini, tag VLAN 20 masih utuh dan belum diperiksa oleh saklar pertama.</p>
+<p></p>
+<p>3. Switch kedua hanya melihat tag 802.1Q bagian dalam yang dikirim penyerang dan melihat bahwa frame tersebut ditujukan untuk VLAN 20, VLAN target. Switch kedua mengirimkan frame ke port korban atau membanjirinya, tergantung pada apakah ada entri tabel alamat MAC untuk host korban.</p>
+<p></p>
+<p>Jenis serangan ini bersifat searah dan hanya berfungsi ketika penyerang terhubung ke port yang berada di VLAN yang sama dengan VLAN asli dari port trunk. Menggagalkan serangan jenis ini tidak semudah menghentikan serangan dasar VLAN hopping.</p>
+<p></p>
+<p>Pendekatan terbaik untuk memitigasi serangan penandaan ganda adalah dengan memastikan bahwa VLAN asli dari port trunk berbeda dari VLAN dari port pengguna mana pun. Faktanya, ini dianggap sebagai praktik keamanan terbaik untuk menggunakan VLAN tetap yang berbeda dari semua VLAN pengguna di jaringan yang diaktifkan sebagai VLAN asli untuk semua trunk 802.1Q.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

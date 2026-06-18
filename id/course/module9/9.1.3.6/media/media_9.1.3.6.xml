@@ -1,0 +1,93 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Aktivitas – Tentukan Wildcard Mask yang Benar</b><br/><br/>Tarik masker wildcard ke pernyataan ACL yang sesuai. Beberapa jawaban akan digunakan berkali-kali dan beberapa jawaban tidak akan digunakan sama sekali.]]></text>
+</component>
+
+<component id='ID_drag_header01'>
+	<text><![CDATA[<b>Pernyataan ACL</b>]]></text>
+</component>
+<component id='ID_drag_header02'>
+	<text><![CDATA[<b>Masker Wildcard</b>]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Tolak semua host dari jaringan 10.10.10.0/24.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Tolak tuan rumah 192.168.5.7.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Izinkan semua host dari subjaringan 172.18.15.0/24.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Izin tuan rumah 10.10.10.1.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Izinkan semua host dari jaringan 10.0.0.0/8.]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[Tolak tuan rumah 172.18.33.1.]]></text>
+</component>
+
+<component id='ID_txt07'>
+	<text><![CDATA[Izinkan semua host dari subjaringan 192.168.5.0/27.]]></text>
+</component>
+
+<component id='ID_txt08'>
+	<text><![CDATA[Tolak semua host di jaringan 172.18.0.0/16.]]></text>
+</component>
+
+<!--Drag and Drop-->
+<component id='ID_ip1_DS'>
+	<text><![CDATA[0.0.0.255]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[0.0.0.0]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[0.255.255.255]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[0.0.0.31]]></text>
+</component>
+
+<component id='ID_ip5_DS'>
+	<text><![CDATA[0.0.255.255]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Anda telah berhasil menentukan wildcard mask untuk setiap pernyataan ACL.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Anda belum berhasil menentukan wildcard mask untuk setiap pernyataan ACL. Silakan klik Reset untuk mencoba lagi.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Mengatur ulang</b>]]></text>
+</component>
+
+</textcomponents>

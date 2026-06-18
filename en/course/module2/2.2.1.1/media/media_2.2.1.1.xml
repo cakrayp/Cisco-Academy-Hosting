@@ -1,0 +1,18 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Wireshark Telnet Capture</b>]]></text>
+</component>
+<component id="ID_s2_title">
+<text><![CDATA[<b>Plaintext Username and Password Captured</b>]]></text>
+</component>
+<component id="ID_s3_title">
+<text><![CDATA[<b>Wireshark SSH Capture</b>]]></text>
+</component>
+<component id="ID_s4_title">
+<text><![CDATA[<b>Username and Password Encrypted</b>]]></text>
+</component>
+<component id="ID_s5_txt01">
+<text><![CDATA[&lt;output omitted>]]></text>
+</component>
+
+</textcomponents>

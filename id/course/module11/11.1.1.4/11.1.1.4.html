@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>11.1.1.4 Terminologi NAT (Lanjutan)</title>
+<!-- -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_11.1.1.4_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Operasi NAT</h1>
+<h2>Karakteristik NAT</h2>
+</div>
+<div id="content">
+<p>Istilah-istilah tersebut, di dalam dan di luar, digabungkan dengan istilah lokal dan global untuk merujuk pada alamat tertentu. Pada gambar, router R2 telah dikonfigurasi untuk menyediakan NAT. Ia memiliki kumpulan alamat publik untuk ditetapkan ke host dalam.</p>
+<p>
+<ul>
+<li>
+<b>Di dalam alamat lokal</b>- Alamat sumber dilihat dari dalam jaringan. Pada gambar, alamat IPv4 192.168.10.10 diberikan ke PC1. Ini adalah alamat lokal dalam PC1.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Di dalam alamat global</b>- Alamat sumber dilihat dari jaringan luar. Pada gambar, ketika lalu lintas dari PC1 dikirim ke server web di 209.165.201.1, R2 menerjemahkan alamat lokal dalam ke alamat global dalam. Dalam hal ini, R2 mengubah alamat sumber IPv4 dari 192.168.10.10 menjadi 209.165.200.226. Dalam terminologi NAT, alamat lokal dalam 192.168.10.10 diterjemahkan ke alamat global dalam 209.165.200.226.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Di luar alamat global</b>- Alamat tujuan dilihat dari jaringan luar. Ini adalah alamat IPv4 yang dapat dirutekan secara global yang ditetapkan ke host di Internet. Misalnya, server web dapat dijangkau di alamat IPv4 209.165.201.1. Seringkali alamat luar lokal dan luar global sama.</li>
+</ul>
+</p>
+<p>
+<ul>
+<li>
+<b>Di luar alamat lokal</b>- Alamat tujuan dilihat dari dalam jaringan. Dalam contoh ini, PC1 mengirimkan lalu lintas ke server web di alamat IPv4 209.165.201.1. Meskipun jarang terjadi, alamat ini mungkin berbeda dengan alamat tujuan yang dapat dirutekan secara global.</li>
+</ul>
+</p>
+<p></p>
+<p>Gambar tersebut menunjukkan bagaimana lalu lintas ditangani yang dikirim dari PC internal ke server web eksternal, melalui router yang mendukung NAT. Hal ini juga menunjukkan bagaimana lalu lintas kembali pada awalnya ditangani dan diterjemahkan.</p>
+<p></p>
+<p>
+<b>Catatan</b>: Penggunaan alamat lokal luar berada di luar cakupan kursus ini.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<textcomponents>
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Activity - Identify the VLAN Attack Types, Attack Mitigation Techniques, and Security Features</b><br/><br/>Drag the VLAN attack type, attack mitigation technique, or security feature to its corresponding description. Not all terms will be used.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[A user is attacking other user PCs in a coffee shop environment. User PCs still need to be granted access to the Internet and print server.]]></text>
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Disable DTP on all ports, and statically assign ports as Access or Trunk.]]></text>
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[Ensure that the native VLAN of trunk ports are distinct from access port VLANs.]]></text>
+</component>
+
+<component id='ID_drag01'>
+	<text><![CDATA[PVLAN Edge]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[VLAN Hopping Attack]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[Double-Tagging Attack]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[Enable the SSH Secure Shell]]></text>
+</component>
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[You have successfully matched each description with its VLAN attack type, attack mitigation technique, or security feature.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[You have not successfully matched each description with its VLAN attack type, attack mitigation technique, or security feature.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Check</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Reset</b>]]></text>
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>6.2.1.3 Konfigurasikan Rute Statis Hop Berikutnya</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_6.2.1.3_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Konfigurasikan Rute Statis dan Default</h1>
+<h2>Konfigurasikan Rute Statis IPv4</h2>
+</div>
+<div id="content">
+<p>Dalam rute statis hop berikutnya, hanya alamat IP hop berikutnya yang ditentukan. Antarmuka keluaran berasal dari hop berikutnya. Misalnya, pada Gambar 1, tiga rute statis hop berikutnya dikonfigurasi pada R1 menggunakan alamat IP hop berikutnya, R2.</p>
+<p></p>
+<p>Sebelum paket apa pun diteruskan oleh router, proses tabel routing harus menentukan antarmuka keluar yang akan digunakan untuk meneruskan paket. Hal ini dikenal sebagai resolusi rute. Proses penyelesaian rute akan bervariasi tergantung pada jenis mekanisme penerusan yang digunakan oleh router. CEF (Cisco Express Forwarding) adalah perilaku default pada sebagian besar platform yang menjalankan IOS 12.0 atau lebih baru.</p>
+<p></p>
+<p>Gambar 2 merinci proses penerusan paket dasar dalam tabel routing untuk R1 tanpa menggunakan CEF. Ketika sebuah paket ditujukan ke jaringan 192.168.2.0/24, R1:</p>
+<p></p>
+<p>1. Mencari kecocokan pada tabel routing dan menemukan bahwa tabel tersebut harus meneruskan paket ke alamat IPv4 hop berikutnya 172.16.2.2, seperti yang ditunjukkan oleh label 1 pada gambar. Setiap rute yang hanya mereferensikan alamat IPv4 hop berikutnya dan tidak mereferensikan antarmuka keluar harus memiliki alamat IPv4 hop berikutnya yang diselesaikan menggunakan rute lain dalam tabel perutean dengan antarmuka keluar.</p>
+<p></p>
+<p>2. R1 sekarang harus menentukan cara mencapai 172.16.2.2; oleh karena itu, ia mencari kecocokan 172.16.2.2 untuk kedua kalinya. Dalam hal ini, alamat IPv4 cocok dengan rute untuk jaringan yang terhubung langsung 172.16.2.0/24 dengan antarmuka keluar Serial 0/0/0, seperti yang ditunjukkan oleh label 2 pada gambar. Pencarian ini memberitahu proses tabel routing bahwa paket ini diteruskan keluar dari antarmuka tersebut.</p>
+<p></p>
+<p>Sebenarnya diperlukan dua proses pencarian tabel perutean untuk meneruskan paket apa pun ke jaringan 192.168.2.0/24. Ketika router melakukan beberapa pencarian di tabel routing sebelum meneruskan paket, ia melakukan proses yang dikenal sebagai pencarian rekursif. Karena pencarian rekursif menghabiskan sumber daya router, hal ini harus dihindari sebisa mungkin.</p>
+<p></p>
+<p>Rute statis rekursif valid (yaitu, kandidat untuk dimasukkan ke dalam tabel routing) hanya ketika hop berikutnya yang ditentukan, baik secara langsung atau tidak langsung, menjadi antarmuka keluar yang valid.</p>
+<p></p>
+<p>
+<b>Catatan</b>: CEF menyediakan pencarian yang dioptimalkan untuk penerusan paket yang efisien dengan menggunakan dua struktur data utama yang disimpan dalam bidang data: FIB (Forwarding Information Base), yang merupakan salinan tabel perutean dan tabel kedekatan yang mencakup informasi pengalamatan Lapisan 2. Informasi yang digabungkan dalam kedua tabel ini bekerja sama sehingga tidak diperlukan pencarian rekursif untuk pencarian alamat IP hop berikutnya. Dengan kata lain, rute statis yang menggunakan IP hop berikutnya hanya memerlukan satu pencarian ketika CEF diaktifkan di router.</p>
+<p></p>
+<p>Gunakan Pemeriksa Sintaks pada Gambar 3 dan 4 untuk mengonfigurasi dan memverifikasi rute statis hop berikutnya pada R2 dan R3.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

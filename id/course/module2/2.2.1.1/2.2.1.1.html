@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>2.2.1.1 Operasi SSH</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_2.2.1.1_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>Switch Keamanan: Manajemen dan Implementasi</h1>
+<h2>Akses Jarak Jauh yang Aman</h2>
+</div>
+<div id="content">
+<p>Secure Shell (SSH) adalah protokol yang menyediakan koneksi manajemen yang aman (terenkripsi) ke perangkat jarak jauh. SSH harus menggantikan Telnet untuk koneksi manajemen. Telnet adalah protokol lama yang menggunakan transmisi teks biasa yang tidak aman untuk otentikasi login (nama pengguna dan kata sandi) dan data yang dikirimkan antara perangkat yang berkomunikasi. SSH memberikan keamanan untuk koneksi jarak jauh dengan menyediakan enkripsi yang kuat ketika perangkat diautentikasi (nama pengguna dan kata sandi) dan juga untuk data yang dikirimkan antar perangkat yang berkomunikasi. SSH ditugaskan ke port TCP 22. Telnet ditugaskan ke port TCP 23.</p>
+<p></p>
+<p>Pada Gambar 1, penyerang dapat memantau paket menggunakan Wireshark. Aliran Telnet dapat ditargetkan untuk menangkap nama pengguna dan kata sandi.</p>
+<p></p>
+<p>Pada Gambar 2, penyerang dapat menangkap nama pengguna dan kata sandi administrator dari sesi Telnet teks biasa.</p>
+<p></p>
+<p>Gambar 3 menunjukkan tampilan Wireshark dari sesi SSH. Penyerang dapat melacak sesi menggunakan alamat IP perangkat administrator.</p>
+<p></p>
+<p>Namun pada Gambar 4, username dan password dienkripsi.</p>
+<p></p>
+<p>Untuk mengaktifkan SSH pada switch Catalyst 2960, switch harus menggunakan versi perangkat lunak IOS termasuk fitur dan kemampuan kriptografi (terenkripsi). Pada Gambar 5, gunakan<span class="cmd"><b>versi pertunjukan</b></span>perintah pada sakelar untuk melihat IOS mana yang sedang dijalankan sakelar, dan nama file IOS yang menyertakan kombinasi “k9” mendukung fitur dan kemampuan kriptografi (terenkripsi).</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>

@@ -1,0 +1,192 @@
+﻿<textcomponents>
+<!--Slide 1-->
+
+<!-- instructions -->
+<component id="ID_inst">
+	<text><![CDATA[<b>Aktivitas – Identifikasi Terminologi Jaringan Switched – Bagian A</b><br/>Cocokkan karakteristik hierarki hierarki dengan istilahnya. Klik Tombol 2 untuk melanjutkan.]]></text>
+</component>
+
+<!-- buttons -->
+<component id="ID_Button01">
+	<text><![CDATA[<b>Memeriksa</b>]]></text>
+</component>
+
+<component id="ID_Button02">
+	<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+<!--Number of rows in the table-->
+<component id="txt_numrows">
+	<text><![CDATA[4]]></text>
+</component>
+
+<!--Number of columns for the answers in the table. Do not count the question column-->
+<component id="txt_numcols">
+	<text><![CDATA[4]]></text>
+</component>
+
+
+<!--Answer column headers-->
+<component id="txt_col1">
+	<text><![CDATA[<b>hierarki</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Modularitas</b>]]></text>
+</component>
+
+<component id="txt_col3">
+	<text><![CDATA[<b>Kegembiraan</b>]]></text>
+</component>
+
+<component id="txt_col4">
+	<text><![CDATA[<b>Fleksibilitas</b>]]></text>
+</component>
+
+<!--Question text - blockindent code moves the text away from the left edge a bit-->
+<!--Question text - If questions are numbered, use blockindent for hanging indents-->
+<component id="txt_q1">
+	<text><![CDATA[Menyediakan cara agar jaringan selalu dapat diakses.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Perencanaan jaringan untuk memperluas dan menyediakan layanan sesuai permintaan.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Membantu setiap perangkat di setiap tingkatan untuk menggunakan peran tertentu.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Menggunakan semua sumber daya jaringan yang tersedia untuk menyediakan pembagian beban lalu lintas data.]]></text>
+</component>
+
+<!--Answers - Give the column number(s), column numbering start with 1 not 0-->
+<!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] -->
+<component id="txt_a1">
+	<text><![CDATA[3]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[4]]></text>
+</component>
+
+<!-- Correct Feedback -->
+<component id="ID_titleCorrect">
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Anda telah mengidentifikasi istilah desain jaringan yang diterjemahkan dengan benar.]]></text>
+</component>
+
+<!-- Incorrect Feedback -->
+<component id="ID_titleIncorrect">
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[Anda belum mengidentifikasi istilah desain jaringan yang diaktifkan dengan benar. Silakan<b>mengatur ulang</b>dan coba lagi.]]></text>
+</component>
+
+<!--Slide 2-->
+
+
+<component id="ID_s2_inst">
+	<text><![CDATA[<b>Aktivitas – Identifikasi Fungsi Lapisan Jaringan yang Diaalihkan – Bagian B</b><br/>Klik pada bidang lapisan Inti, Distribusi, atau Akses untuk mengidentifikasi fungsi saklar yang dijelaskan.]]></text>
+</component>
+ 
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Pengidentifikasi Platform Jaringan Beralih Hierarki</b>]]></text>
+</component>
+
+<!--Characteristics-->
+<component id="ID_s2_ans01">
+<text><![CDATA[Area tulang punggung jaringan untuk pelestarian]]></text>
+</component>
+
+<component id="ID_s2_ans02">
+<text><![CDATA[Menyediakan isolasi kesalahan dan konektor saklar backbone berkecepatan tinggi]]></text>
+</component>
+
+<component id="ID_s2_ans03">
+<text><![CDATA[Antarmuka dengan tulang punggung dan pengguna untuk menyediakan pelestarian, perutean, dan keamanan yang cerdas]]></text>
+</component>
+
+<component id="ID_s2_ans04">
+<text><![CDATA[Urutan data mengalir pada jalur peralihan dengan biaya yang sama ke tulang punggung]]></text>
+</component>
+
+<component id="ID_s2_ans05">
+<text><![CDATA[Menyertakan redundansi sebagai fitur penting untuk mengakses jaringan yang dialihkan]]></text>
+</component>
+
+<component id="ID_s2_ans06">
+<text><![CDATA[Menyediakan konektivitas jaringan langsung dan beralih ke pengguna]]></text>
+</component>
+
+<component id="ID_s2_ans07">
+<text><![CDATA[Membantu aplikasi untuk beroperasi di jaringan yang dialihkan dengan lebih aman dan terjamin]]></text>
+</component>
+
+<component id="ID_s2_ans08">
+<text><![CDATA[Mendukung domain siaran Layer 2 dan batas perutean Layer 3]]></text>
+</component>
+
+<component id="ID_s2_ans09">
+<text><![CDATA[Dapat dikombinasikan dengan Lapisan Distribusi untuk menyediakan desain yang diciutkan]]></text>
+</component>
+
+<component id='ID_s2_break'>
+	<text><![CDATA[<br><br>]]></text>
+</component>
+
+<!--buttons-->
+<component id="ID_s2_btn01">
+<text><![CDATA[<b>mengatur ulang</b>]]></text>
+</component>
+
+<!-- Terms -->
+<component id="ID_s2_term01">
+<text><![CDATA[<b>Lapisan Inti</b>]]></text>
+</component>
+
+<component id="ID_s2_term02">
+<text><![CDATA[<b>Lapisan Distribusi</b>]]></text>
+</component>
+
+<component id="ID_s2_term03">
+<text><![CDATA[<b>Lapisan Akses</b>]]></text>
+</component>
+
+<!--feedback-->
+<component id='ID_s2_titleCorrect'>
+	<text><![CDATA[<b>Benar</b>]]></text>
+</component>
+
+<component id='ID_s2_correctText'>
+	<text><![CDATA[Anda telah mencocokkan deskripsi dengan lapisan desain jaringan yang diaktifkan dengan benar.]]></text>
+</component>
+
+<component id='ID_s2_titleIncorrect'>
+	<text><![CDATA[<b>Salah</b>]]></text>
+</component>
+
+<component id='ID_s2_incorrectText'>
+	<text><![CDATA[Anda belum mengidentifikasi dengan benar lapisan desain jaringan yang dialihkan seperti yang dijelaskan. Silakan<b>mengatur ulang</b>dan coba lagi.]]></text>
+</component>
+
+<component id='ID_break'>
+	<text><![CDATA[<br><br>]]></text>
+</component>
+
+</textcomponents>

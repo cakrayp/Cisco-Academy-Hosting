@@ -1,0 +1,144 @@
+ <textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>Konten Paket Halo OSPF</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Tajuk Bingkai Tautan Tanggal]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Tajuk Paket IP]]></text> 
+</component>
+<component id="ID_txt03">
+  <text><![CDATA[Header Paket OSPF]]></text> 
+</component>
+<component id="ID_txt04">
+  <text><![CDATA[Data Spesifik Tipe Paket OSPF<br/><font color="#F68026"><b>Halo Paket</b></font>]]></text> 
+</component>
+  
+<component id="ID_txt05">
+  <text><![CDATA[<b>Sedikit:</b>]]></text> 
+</component>
+  
+<component id="ID_txt06">
+  <text><![CDATA[Header Paket OSPF]]></text> 
+</component>
+  
+<component id="ID_txt07">
+  <text><![CDATA[Paket Halo OSPF]]></text> 
+</component>
+  
+<component id="ID_txt08">
+  <text><![CDATA[Versi]]></text> 
+</component>
+  
+<component id="ID_txt09">
+  <text><![CDATA[Jenis = 1]]></text> 
+</component>
+  
+<component id="ID_txt10">
+  <text><![CDATA[Panjang Paket]]></text> 
+</component>
+  
+<component id="ID_txt11">
+  <text><![CDATA[ID Perute]]></text> 
+</component>
+  
+<component id="ID_txt12">
+  <text><![CDATA[ID Daerah]]></text> 
+</component>
+  
+<component id="ID_txt13">
+  <text><![CDATA[Jumlah pemeriksaan]]></text> 
+</component>
+  
+<component id="ID_txt14">
+  <text><![CDATA[Tipe Au]]></text> 
+</component>
+  
+<component id="ID_txt15">
+  <text><![CDATA[Otentikasi]]></text> 
+</component>
+  
+<component id="ID_txt16">
+  <text><![CDATA[Otentikasi]]></text> 
+</component>
+  
+<component id="ID_txt17">
+  <text><![CDATA[Masker Jaringan]]></text> 
+</component>
+  
+<component id="ID_txt18">
+  <text><![CDATA[Halo Interval]]></text> 
+</component>
+  
+<component id="ID_txt19">
+  <text><![CDATA[Pilihan]]></text> 
+</component>
+  
+<component id="ID_txt20">
+  <text><![CDATA[Prioritas Router]]></text> 
+</component>
+  
+<component id="ID_txt21">
+  <text><![CDATA[Interval Mati]]></text> 
+</component>
+  
+<component id="ID_txt22">
+  <text><![CDATA[Router yang Ditunjuk (DR)]]></text> 
+</component>
+  
+<component id="ID_txt23">
+  <text><![CDATA[Router Khusus Cadangan (BDR)]]></text> 
+</component>
+  
+<component id="ID_txt24">
+  <text><![CDATA[Daftar Tetangga]]></text> 
+</component>
+
+
+<!-- Type: -->
+<component id="ID_btn01_body">
+<text><![CDATA[Tipe Paket OSPF: Hello (1), DBD (2), LSR (3), LSU (4), LSAck (5)]]></text>
+</component>
+
+<!-- Router ID: -->
+<component id="ID_btn02_body">
+<text><![CDATA[ID router asal]]></text>
+</component>
+
+<!-- Area ID: -->
+<component id="ID_btn03_body">
+<text><![CDATA[Area asal paket]]></text>
+</component>
+
+<!-- Network Mask: -->
+<component id="ID_btn04_body">
+<text><![CDATA[Subnet mask terkait dengan antarmuka pengiriman]]></text>
+</component>
+
+<!-- Hello Interval: -->
+<component id="ID_btn05_body">
+<text><![CDATA[Jumlah detik sebelum menyatakan router tetangga tidak berfungsi]]></text>
+</component>
+
+<!-- Router Priority: -->
+<component id="ID_btn06_body">
+<text><![CDATA[Digunakan pada pemilu DR/BDR]]></text>
+</component>
+
+<!-- Designated Router (DR): -->
+<component id="ID_btn07_body">
+<text><![CDATA[ID Router dari DR]]></text>
+</component>
+
+<!-- Backup Designated Router (BDR): -->
+<component id="ID_btn08_body">
+<text><![CDATA[ID Router BDR]]></text>
+</component>
+
+<!-- List of Neighbors: -->
+<component id="ID_btn09_body">
+<text><![CDATA[Mencantumkan ID Router OSPF dari router tetangga]]></text>
+</component>
+
+</textcomponents>

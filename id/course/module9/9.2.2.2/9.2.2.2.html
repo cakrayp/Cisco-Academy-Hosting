@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html dir="ltr">
+<head>
+<meta charset="utf-8"/>
+<title>9.2.2.2 Mengedit ACL Bernomor Standar (Lanjutan)</title>
+<!-- Content -->
+<link href="../../common/styles/course.css" rel="stylesheet" type="text/css"/>
+<script src="../../common/scripts/jquery_bundle.min.js" type="text/javascript"></script>
+<script src="../../common-ext/scripts/page.js" type="text/javascript"></script>
+<script>
+      var myLayout; 
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_9.2.2.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+    	myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+</head>
+<body class="onecolumn" onload="resizeTextDiv()">
+<div class="ui-layout-west">
+<div id="header">
+<h1>ACL IPv4 standar</h1>
+<h2>Ubah ACL IPv4</h2>
+</div>
+<div id="content">
+<p>
+<b>Metode 2: Menggunakan Nomor Urut</b>
+</p>
+<p></p>
+<p>Seperti yang ditunjukkan pada gambar, konfigurasi awal ACL 1 menyertakan pernyataan host untuk host 192.168.10.99. Ini adalah sebuah kesalahan. Host seharusnya dikonfigurasi sebagai 192.168.10.10. Untuk mengedit ACL menggunakan nomor urut ikuti langkah-langkah berikut:</p>
+<p></p>
+<p>
+<b>Langkah 1.</b>Tampilkan ACL saat ini menggunakan<span class="cmd"><b>tampilkan daftar akses 1</b></span>memerintah. Output dari perintah ini akan dibahas lebih rinci nanti di bagian ini. Nomor urut ditampilkan di awal setiap pernyataan. Nomor urut secara otomatis ditetapkan ketika pernyataan daftar akses dimasukkan. Perhatikan bahwa pernyataan yang salah dikonfigurasi memiliki nomor urut 10.</p>
+<p></p>
+<p>
+<b>Langkah 2.</b>Masukkan<span class="cmd"><b>standar daftar akses ip</b></span>perintah yang digunakan untuk mengkonfigurasi ACL bernama. Nomor ACL, 1, digunakan sebagai namanya. Pertama, pernyataan yang salah dikonfigurasi perlu dihapus menggunakan<span class="cmd"><b>tidak 10</b></span>perintah dengan 10 mengacu pada nomor urut. Selanjutnya, pernyataan nomor urut 10 baru ditambahkan menggunakan perintah,<span class="cmd"><b>10 menolak tuan rumah 192.168.10.10</b></span>.  </p>
+<p></p>
+<p>
+<b>Catatan</b>: Pernyataan tidak dapat ditimpa menggunakan nomor urut yang sama dengan pernyataan yang sudah ada. Pernyataan saat ini harus dihapus terlebih dahulu, baru kemudian pernyataan baru dapat ditambahkan.</p>
+<p></p>
+<p>
+<b>Langkah 3.</b>Verifikasi perubahan menggunakan<span class="cmd"><b>tampilkan daftar akses</b></span>memerintah.</p>
+<p></p>
+<p>Seperti dibahas sebelumnya, Cisco IOS mengimplementasikan logika internal ke daftar akses standar. Urutan pemasukan ACE standar mungkin bukan urutan penyimpanan, tampilan, atau pemrosesannya oleh router. Itu<span class="cmd"><b>tampilkan daftar akses</b></span>perintah menampilkan ACE dengan nomor urutnya.</p>
+</div>
+</div>
+<iframe alt="interactive graphic" class="ui-layout-center" frameborder="0" id="mainFrame" name="mainFrame"></iframe>
+</body>
+</html>
